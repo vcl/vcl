@@ -1,0 +1,63 @@
+{
+  "name": "@vcl/go-to-top",
+  "description": "A fix positioned control to jump to the top of a scrolled viewport",
+  "version": "0.2.0",
+  "main": "package.json",
+  "scripts": {
+    "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
+    "start": "node ./node_modules/gulp/bin/gulp dev"
+  },
+  "style": "index.styl",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.de",
+    "url": "www.n-fuse.de"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Hoppe",
+      "email": "thomas.hoppe@n-fuse.de"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "@vcl/gulp-vcl-preprocessor": "^0.2.1",
+    "normalize.css": "^7.0.0",
+    "pre-commit": "^1.1.2",
+    "@vcl/build-demo": "^0.2.0",
+    "@vcl/button": "^0.2.0",
+    "@vcl/default-theme": "^0.2.0",
+    "@vcl/default-theme-terms": "^0.2.0",
+    "@vcl/font-awesome": "^0.2.0",
+    "@vcl/icogram": "^0.2.0",
+    "@vcl/icon": "^0.2.0",
+    "@vcl/preprocessor": "^0.2.2",
+    "@vcl/size-modulation": "^0.2.0",
+    "@vcl/typography": "^0.2.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vcl/go-to-top.git"
+  },
+  "keywords": [
+    "css",
+    "vcl",
+    "component",
+    "go-to-top"
+  ],
+  "vcl": {
+    "needs": [
+      "theme"
+    ],
+    "provides": [],
+    "categories": [
+      {
+        "title": "Navigations",
+        "itemPriority": 70,
+        "priority": 50
+      }
+    ]
+  }
+}

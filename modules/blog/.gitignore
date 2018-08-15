@@ -1,0 +1,8 @@
+.project
+.svn
+*.log
+bower_components
+build
+components
+node_modules
+Gulpfile.js

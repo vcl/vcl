@@ -1,0 +1,89 @@
+<doc-metadata>
+  <div class="docMetadataControls">
+    <button onclick={ toggle } class="vclButton vclHalfTransparent" type="button" name="button" title="Package information">
+      <span if={ this.hidden } class="vclIcon fa fa-chevron-left"></span>
+      <span if={ !this.hidden } class="vclIcon fa fa-chevron-right"></span>
+      <span class="vclIcon fa fa-info"></span>
+    </button>
+  </div>
+  <aside class="vclDataList docMetadata {vclDisplayNone: this.hidden}">
+    <header class="vclDataListHeader vclNoPadding">
+      <h3>Package Information</h3>
+    </header>
+    <ul class="vclDataListBody" role="listbox">
+      <li class="vclDataListItem" horizontal center layout>
+        <span class="vclGridSpan-gcb" role="gridcell"><b>Name</b></span>
+        <span class="vclGridSpan-gca" role="gridcell">{ this.pack.name }</span>
+      </li>
+      <li class="vclDataListItem" horizontal center layout if={ this.pack.repository }>
+        <span class="vclGridSpan-gcb" role="gridcell"><b>Repository</b></span>
+        <span class="vclGridSpan-gca" role="gridcell">
+          <a href={ this.pack.repository } target="_blank">{ this.pack.repository }</a>
+        </span>
+      </li>
+      <li class="vclDataListItem" horizontal center layout if={ this.pack.author }>
+        <span class="vclGridSpan-gcb" role="gridcell"><b>Author</b></span>
+        <span class="vclGridSpan-gca" role="gridcell">{ this.pack.author }</span>
+      </li>
+      <li class="vclDataListItem" horizontal center layout if={ this.pack.version }>
+        <span class="vclGridSpan-gcb" role="gridcell"><b>Version</b></span>
+        <span class="vclGridSpan-gca" role="gridcell">{ this.pack.version }</span>
+      </li>
+      <li class="vclDataListItem" horizontal center layout if={ this.pack.license }>
+        <span class="vclGridSpan-gcb" role="gridcell"><b>License</b></span>
+        <span class="vclGridSpan-gca" role="gridcell">{ this.pack.license }</span>
+      </li>
+      <li class="vclDataListItem" horizontal center layout if={ false }>
+        <span class="vclGridSpan-gcb" role="gridcell"><b>Aprox. size</b></span>
+        <span class="vclGridSpan-gca" role="gridcell">2kb</span>
+      </li>
+      <li class="vclDataListItem" horizontal center layout if={ this.pack.docgen }>
+        <span class="vclGridSpan-gcb" role="gridcell"><b>Categories</b></span>
+        <span class="vclGridSpan-gca" role="gridcell">
+          <span class="vclLabel" each={ cat in this.pack.docgen.categories }>{ cat.title }</span>
+        </span>
+      </li>
+      <li if={ false }>
+        <span class="vclGridSpan-gcb" role="gridcell"><b>Description</b></span>
+        <span class="vclGridSpan-gca" role="gridcell">{ this.pack.description }</span>
+      </li>
+    </ul>
+  </aside>
+
+  <script>
+    this.hidden = true;
+    this.pack = opts.pack || {};
+
+    this.toggle = function() {
+      this.hidden = !this.hidden;
+    }
+
+    this.on('update', function() {
+      this.pack = opts.pack;
+      if (!this.pack) return;
+      var repo = this.pack.repository;
+
+      if (this.pack.license && this.pack.license.type) {
+        this.pack.license = this.pack.license.type;
+      }
+
+      if (this.pack.author && this.pack.author.name) {
+        this.pack.author = this.pack.author.name;
+      }
+
+      if (this.pack.repository && this.pack.repository.url) {
+        this.pack.repository = this.pack.repository.url;
+      }
+
+      if (_.startsWith(repo, 'git://github.com')) {
+        // replace with https
+        this.pack.repository = this.pack.repository.replace('git', 'https');
+      }
+
+      if (_.startsWith(repo, 'git+https://github.com')) {
+        // replace with https
+        this.pack.repository = this.pack.repository.replace('git+https', 'https');
+      }
+    });
+  </script>
+</doc-metadata>

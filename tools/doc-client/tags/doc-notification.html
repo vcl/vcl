@@ -1,0 +1,35 @@
+<doc-notification>
+  <div if={ opts.noShadowDom } class="vclNotification vclError" role="alert">
+    <div class="vclNotificationHeader">
+      <span>No shadow DOM support detected.</span>
+    </div>
+    <div class="vclNotificationContent">
+      <i class="vclMessageIcon fa fa-exclamation-circle"></i>
+        The documentation client needs shadow DOM to render the examples. Please
+        use a browser that supports shadow DOM to view this.
+        <br /><br />
+        <button if={ !this.tried } onclick={ tryAnyway } type="button" class="vclButton">
+          Try Anyway (Polyfill)
+        </button>
+    </div>
+  </div>
+  <script>
+    var self = this;
+    this.tried = false;
+    this.tryAnyway = function(){
+      this.tried = true;
+      var polyfill = document.createElement('script');
+      polyfill.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.19/ShadowDOM.min.js');
+
+      // onload does not work in IE, duh
+      polyfill.onload = function() {
+        try{
+          window.init(self.opts.doc);
+        } catch (e){
+          console.error(e);
+        }
+      }
+      document.head.appendChild(polyfill);
+    }
+  </script>
+</doc-notification>

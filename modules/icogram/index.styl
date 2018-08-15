@@ -1,0 +1,21 @@
+.vclIcogram
+  white-space: nowrap
+  position: relative
+  align-items: baseline
+  &> *
+    display: inline-block
+    vertical-align: middle
+    margin: 0 0.25em 0 0
+  &> *:first-child
+    margin-left: 0
+  &> *:last-child
+    margin-right: 0
+  &> *:only-child
+    margin: 0
+  & .vclText
+    vertical-align: middle
+  & a.vclText
+    color: inherit
+  &.vclLayoutVertical
+    &> *
+      margin: 0

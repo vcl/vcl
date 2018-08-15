@@ -1,0 +1,173 @@
+table
+  border-collapse: collapse
+  border-spacing: 0
+  border: 0
+
+.vclFixed
+  table-layout: fixed
+  &.vclNoWrap,
+  &.vclNoWrap td,
+  &.vclNoWrap th
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+
+.vclTable
+  font-size: inherit
+  &.vclCondensed
+    & td
+      padding: 0.2em 0.3em
+  &.vclNoBorder
+    border: 0
+
+.vclTable
+  width: 100%
+  margin-top: 0
+  margin-bottom: var(--block-elem-vertical-gap)
+  &.vclRowSelectability
+    & tbody
+      & tr
+        cursor: pointer
+  & thead
+    & tr
+      text-align: left
+      border-width: 0
+      border-style: solid
+      border-color: var(--table-header-bg-color)
+      background-color: var(--table-header-bg-color)
+      color: var(--table-header-color)
+      & th
+        line-height: 1.5em
+        padding: 0.2em 0.4em
+        & > *
+          line-height: 2em
+          font-size: 0.96em
+          font-weight: 600
+          vertical-align: middle
+  & tr.vclDisabled
+    & td
+      cursor: default
+      color: var(--table-disabled-color)
+  & td
+    padding-top: 0.3em
+    padding-left: 0.4em
+    padding-bottom: 0.3em
+    padding-right: 0.4em
+    vertical-align: top
+  & tbody
+    & tr
+      border-width: 0 0 1px
+      border-style: solid
+      border-color: var(--table-border-color)
+  & tfoot
+    & td
+      font-weight: bold
+      background-color: var(--table-footer-bg-color)
+      color: var(--table-footer-color)
+  & .vclSelected
+    & td >
+      & a
+        text-decoration: underline
+        color: var(--table-row-selected-color)
+  & .vclSortableCol
+    cursor: pointer
+    & a
+      margin-right: 1em
+
+/* Input fields in tables */
+
+table.vclTable select,
+table.vclTable textarea,
+table.vclTable input,
+.vclTable .vclInput,
+.vclTable vclInputGroupEmb
+  margin-bottom: 0
+
+/* Alignment modifiers, required to override default td alignment */
+
+.vclTable td.vclAlignRight,
+.vclTable th.vclAlignRight,
+.vclTable .vclAlignRight td
+  text-align: right
+
+.vclTable td.vclAlignLeft,
+.vclTable th.vclAlignLeft,
+.vclTable .vclAlignLeft td
+  text-align: left
+
+.vclTable td.vclAlignCentered,
+.vclTable th.vclAlignCentered,
+.vclTable .vclAlignCentered td
+  text-align: center
+
+.vclVAlignMiddle
+  & td
+    vertical-align: middle
+
+.vclVAlignBottom
+  & td
+    vertical-align: bottom
+
+/* Modifiers for borders */
+
+.vclDottedBorder,
+.vclTable.vclDottedBorder td
+  border-style: dotted
+
+.vclTable.vclVerticalBorder td,
+.vclTable.vclVerticalBorder th
+  border-width: 0 1px 1px 0
+
+.vclTable.vclVerticalBorder td:last-child,
+.vclTable.vclVerticalBorder th:last-child
+  border-right-width: 0
+
+.vclStickedTable table.vclTable.vclVerticalBorder td:last-child,
+.vclStickedTable table.vclTable.vclVerticalBorder th:last-child
+  border-right-width: 1px
+
+.vclTable .vclSelected,
+.vclTable .vclSelected:hover,
+.vclTable .vclSelected:active
+  border-style: solid
+  border-width: 0
+
+.vclTable input,
+.vclTable .vclInput,
+.vclTable select,
+.vclTable textarea,
+.vclTable .vclInputGroup
+  margin-bottom: 0
+
+.vclTable .vclSortableCol.vclSortAsc button.vclButton i,
+.vclTable .vclSortableCol.vclSortDesc button.vclButton i
+  color: var(--table-header-button-hover-color)
+
+/* Alternating row colors */
+
+.vclAltRowColor tbody tr:nth-child(2n+1),
+.vclAltRowColor tbody tr:nth-child(2n+1)
+  background-color: var(--table-alt-bg-color)
+
+/* Row highlighting on hover */
+
+.vclTable
+  &.vclRowHoverHighlight
+    & tbody
+      & tr
+        &:hover
+          background-color: var(--table-highlight-hover-bg-color)
+
+/* Single cell highlighting */
+
+.vclCellHighlight
+  background-color: var(--table-highlight-bg-color)
+
+/* Selected cell and row coloring */
+
+.vclTable tr.vclSelected td,
+.vclTable tr.vclSelected:hover td,
+.vclTable tr.vclSelected:active td,
+.vclTable tr td.vclSelected
+  color: var(--table-row-selected-color)
+  background-color: var(--table-row-selected-bg-color)

@@ -1,0 +1,53 @@
+.vclFlipSwitch
+  display: block
+  outline: none
+  background-color: var(--flip-switch-bg-color)
+  position: relative
+  width: 5em
+  user-select: none
+  &.vclFlipSwitchPressed
+    & .vclFlipSwitchTrack
+      margin-left: 0
+    & .vclFlipSwitchKnob
+      left: calc(100% - 1.8em)
+  & .vclFlipSwitchKnob
+    width: 1.1em
+    margin: 0.3em
+    background-color: var(--flip-switch-knob-bg-color)
+    border: 0
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    transition: all 0.2s ease-in 0s
+
+.vclFlipSwitchLabel
+  display: block
+  overflow: hidden
+  cursor: pointer
+  border: 0
+
+.vclFlipSwitchTrack
+  width: 200%
+  margin-left: -100%
+  transition: margin 0.2s ease-in 0s
+  display: flex
+  flex-direction: row
+
+  & .vclFlipSwitchActive,
+  & .vclFlipSwitchInactive
+    width: 50%
+    padding: 0 0.5em
+    line-height: var(--flip-switch-height)
+    font-weight: bold
+    box-sizing: border-box
+    border-width: 1px
+    border-style: solid
+  & .vclFlipSwitchActive
+    border-color: var(--flip-switch-border-color)
+    background-color: var(--flip-switch-active-bg-color)
+    color: var(--flip-switch-active-color)
+    text-align: left
+  & .vclFlipSwitchInactive
+    border-color: var(--flip-switch-border-color)
+    text-align: right

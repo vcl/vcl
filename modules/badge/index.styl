@@ -1,0 +1,38 @@
+.vclBadge
+  display: inline-block
+  padding-top: 0.2em
+  padding-right: 0.5em
+  padding-bottom: 0.2em
+  padding-left: 0.5em
+  font-weight: bold
+  font-size: 80%
+  line-height: 1
+  white-space: nowrap
+  vertical-align: baseline
+  border-radius: 2.5em
+  color: var(--badge-default-color)
+  background-color: var(--badge-default-bg-color)
+  &:empty
+    display: none
+
+.vclBadge.vclPrimary
+  color: var(--badge-primary-color)
+  background-color: var(--badge-primary-bg-color)
+
+.vclBadge.vclSuccess
+  color: var(--badge-success-color)
+  background-color: var(--badge-success-bg-color)
+
+.vclBadge.vclInfo
+  color: var(--badge-info-color)
+  background-color: var(--badge-info-bg-color)
+
+.vclBadge.vclWarning
+  color: var(--badge-warning-color)
+  background-color: var(--badge-warning-bg-color)
+
+.vclBadge.vclDanger,
+.vclBadge.vclError,
+.vclBadge.vclImportant
+  color: var(--badge-danger-color)
+  background-color: var(--badge-danger-bg-color)

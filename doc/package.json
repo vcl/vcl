@@ -1,0 +1,39 @@
+{
+  "name": "@vcl/doc",
+  "description": "Conceputal VCL documentation",
+  "version": "0.2.2",
+  "main": "package.json",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.co",
+    "url": "www.n-fuse.co"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Hoppe",
+      "email": "thomas.hoppe@n-fuse.co"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vcl/doc.git"
+  },
+  "keywords": [
+    "css",
+    "vcl",
+    "index",
+    "documentation"
+  ],
+  "vcl": {
+    "needs": [],
+    "provides": [
+      "doc-index"
+    ],
+    "categories": []
+  }
+}

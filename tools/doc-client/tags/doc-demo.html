@@ -1,0 +1,97 @@
+<doc-demo>
+  <div class="docDemo">
+    <div class="vclTabbable">
+      <div class="vclTabs vclTabStyleUni" role="tablist">
+        <div class="vclTab { vclSelected: this.demoVisible }" role="tab">
+          <span class="vclTabLabel vclIcon fa fa-eye"></span>
+          <span class="vclTabLabel" onclick={ showDemo }>Demo</span>
+        </div>
+        <div class="vclTab { vclSelected: this.codeVisible }" onclick={ showCode } role="tab">
+          <span class="vclTabLabel vclIcon fa fa-code"></span>
+          <span class="vclTabLabel">Code</span>
+        </div>
+
+        <form class="docEditDemoButton {vclDisplayNone: !this.codeVisible}" action="https://codepen.io/pen/define" method="POST" target="_blank">
+          <input type="hidden" name="data" value={ JSON.stringify(codePen) }>
+          <button class="vclButton vclHalfTransparent">
+            <div class="vclIcogram">
+              <div class="vclIcon fa fa-codepen" aria-hidden="true" role="img"></div>
+              <span class="vclText">Edit on CodePen</span>
+            </div>
+          </button>
+        </form>
+      </div>
+      <div class="vclTabContent">
+        <div onclick={ demoClick } ref="ninja" name="ninja" role="tabpanel" class="vclTabPanel docDemoContent vclTransparent shadow {vclDisplayNone: !this.demoVisible}"></div>
+        <div role="tabpanel" class="vclTabPanel code {vclDisplayNone: !this.codeVisible}">
+          <pre ref="source" name="source">{ code }</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // TODO: check url if code should be visible
+    this.demoVisible = true;
+    this.codeVisible = false;
+
+    // stupid simple toggle
+    this.showCode = function() {
+      this.demoVisible = false;
+      this.codeVisible = true;
+    };
+
+    this.showDemo = function() {
+      this.demoVisible = true;
+      this.codeVisible = false;
+    }
+
+    this.demoClick = function(event) {
+      // prevent navigation from demos
+      var input = event.path[0];
+      var tagName = input.tagName.toLowerCase();
+      if (/vclInput/.test(input.className)) return true;
+      if (tagName === 'input') return true;
+      if (tagName === 'textarea') return true;
+      if (tagName === 'label') return true;
+      if (tagName === 'select') return true;
+      event.preventDefault();
+    }
+
+    this.code = opts.code;
+    var code = this.code;
+    var css = opts.css;
+
+    // for codepen
+    this.codePen = {
+      html: opts.code,
+      css: opts.css
+    };
+
+    // This is the magic:
+
+     this.on('mount', function() {
+
+      var wrap = document.createElement('div');
+      this.refs.ninja.appendChild(wrap);
+
+      var templateEl = document.createElement('template');
+      var cssEl = document.createElement('style');
+      cssEl.innerHTML = css;
+      templateEl.innerHTML = cssEl.outerHTML + code;
+
+      var shadowWrap = wrap.createShadowRoot();
+      var clone = document.importNode(templateEl.content, true);
+      shadowWrap.appendChild(clone);
+
+      this.refs.source.innerText = code;
+      var sourceEl = this.source;
+    });
+
+
+    this.on('mount update', function() {
+      // highlight the source after update
+      hljs.highlightBlock(sourceEl);
+    });
+  </script>
+</doc-demo>

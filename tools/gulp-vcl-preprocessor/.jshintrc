@@ -1,0 +1,15 @@
+{
+  "freeze": true,
+  "indent": 2,
+  "maxdepth": 4,
+  "maxlen": 90,
+  "eqeqeq": true,
+  "newcap": true,
+  "noarg" : true,
+  "node"  : true,
+  "nonbsp": true,
+  "strict": true,
+  "undef" : true,
+  "unused": true,
+  "newcap": true
+}

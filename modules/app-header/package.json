@@ -1,0 +1,62 @@
+{
+  "name": "@vcl/app-header",
+  "description": "The area on the top of an app, usually containing a brand mark and the main navigation",
+  "version": "0.2.0",
+  "main": "package.json",
+  "scripts": {
+    "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
+    "start": "node ./node_modules/gulp/bin/gulp dev"
+  },
+  "style": "index.styl",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.de",
+    "url": "www.n-fuse.de"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Hoppe",
+      "email": "thomas.hoppe@n-fuse.de"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "@vcl/gulp-vcl-preprocessor": "^0.2.1",
+    "pre-commit": "^1.1.2",
+    "@vcl/build-demo": "^0.2.0",
+    "@vcl/default-theme": "^0.2.0",
+    "@vcl/default-theme-terms": "^0.2.0",
+    "@vcl/flex-layout": "^0.2.0",
+    "@vcl/logo": "^0.2.0",
+    "@vcl/preprocessor": "^0.2.2",
+    "@vcl/typography": "^0.2.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vcl/app-header.git"
+  },
+  "keywords": [
+    "css",
+    "vcl",
+    "component",
+    "application",
+    "header"
+  ],
+  "vcl": {
+    "needs": [
+      "theme"
+    ],
+    "provides": [
+      "app-area-header"
+    ],
+    "categories": [
+      {
+        "title": "Areas",
+        "itemPriority": 30,
+        "priority": 30
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+.project
+.settings
+npm-debug.log
+node_modules
+Gulpfile.js

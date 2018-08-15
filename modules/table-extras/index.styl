@@ -1,0 +1,29 @@
+.vclTable
+  & .vclTableToolBar
+    background-color: var(--table-tool-bar-bg-color)
+    & th
+      padding: 0
+  & .vclTableFilterBar
+    background-color: var(--table-filter-bar-bg-color)
+    padding: 0
+    border-color: var(--table-border-color)
+    border-top-width: 0
+    border-bottom-width: 1px
+    & th
+      padding: 0
+      border-style: solid
+      border-color: var(--table-border-color)
+      border-right-width: 1px
+      border-left-width: 0
+    & input
+      font-weight: normal
+      font-size: 0.95em
+      padding: 0 0.4em
+      border: 0
+      width: 100%
+      color: black
+
+.vclTable .vclTableFilter th > *,
+.vclTable .vclTableFilter th > *:hover
+  font-weight: normal
+  line-height: normal

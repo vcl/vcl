@@ -1,0 +1,61 @@
+{
+  "name": "@vcl/app-footer",
+  "description": "The area on the bottom of an app, usually containing links and content info",
+  "version": "0.2.1",
+  "main": "package.json",
+  "scripts": {
+    "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
+    "start": "node ./node_modules/gulp/bin/gulp dev"
+  },
+  "style": "index.styl",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.de",
+    "url": "www.n-fuse.de"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Hoppe",
+      "email": "thomas.hoppe@n-fuse.co"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "@vcl/gulp-vcl-preprocessor": "^0.2.1",
+    "pre-commit": "^1.1.2",
+    "@vcl/build-demo": "^0.2.0",
+    "@vcl/default-theme": "^0.2.0",
+    "@vcl/default-theme-terms": "^0.2.0",
+    "@vcl/preprocessor": "^0.2.2",
+    "@vcl/typography": "^0.2.0",
+    "@vcl/list": "^0.2.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vcl/app-footer.git"
+  },
+  "keywords": [
+    "css",
+    "vcl",
+    "component",
+    "application",
+    "footer"
+  ],
+  "vcl": {
+    "needs": [
+      "theme"
+    ],
+    "provides": [
+      "app-area-footer"
+    ],
+    "categories": [
+      {
+        "title": "Areas",
+        "itemPriority": 40,
+        "priority": 30
+      }
+    ]
+  }
+}

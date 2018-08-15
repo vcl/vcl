@@ -1,0 +1,7 @@
+.project
+.settings
+npm-debug.log
+node_modules
+tmp
+coverage
+gulpfile.js

@@ -1,0 +1,62 @@
+{
+  "name": "@vcl/progress-bar",
+  "description": "Show the progress of an operation",
+  "version": "0.2.0",
+  "main": "package.json",
+  "scripts": {
+    "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
+    "start": "node ./node_modules/gulp/bin/gulp dev"
+  },
+  "style": "index.styl",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.co",
+    "url": "www.n-fuse.co"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Hoppe",
+      "email": "thomas.hoppe@n-fuse.co"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "@vcl/gulp-vcl-preprocessor": "^0.2.1",
+    "normalize.css": "^7.0.0",
+    "pre-commit": "^1.1.2",
+    "@vcl/build-demo": "^0.2.0",
+    "@vcl/default-theme": "^0.2.0",
+    "@vcl/default-theme-terms": "^0.2.0",
+    "@vcl/flex-layout": "^0.2.0",
+    "@vcl/preprocessor": "^0.2.2",
+    "@vcl/typography": "^0.2.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vcl/progress-bar.git"
+  },
+  "keywords": [
+    "css",
+    "vcl",
+    "component",
+    "progress",
+    "bar"
+  ],
+  "vcl": {
+    "needs": [
+      "theme"
+    ],
+    "provides": [
+      "progress-bar"
+    ],
+    "categories": [
+      {
+        "title": "Status Information",
+        "itemPriority": 30,
+        "priority": 110
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "@vcl/gulp-vcl-preprocessor",
+  "version": "0.2.1",
+  "description": "The VCL preprocessor as a gulp task",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vcl/gulp-vcl-preprocessor"
+  },
+  "keywords": [
+    "gulp",
+    "vcl",
+    "preprocessor",
+    "css"
+  ],
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.co",
+    "url": "www.n-fuse.co"
+  },
+  "contributors": [
+    {
+      "name": "Filip Weiss",
+      "email": "me@fiws.net"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vcl/gulp-vcl-preprocessor/issues"
+  },
+  "homepage": "https://github.com/vcl/gulp-vcl-preprocessor",
+  "dependencies": {
+    "gulp-util": "^3.0.8",
+    "through2": "^2.0.3",
+    "@vcl/preprocessor": "^0.2.2"
+  },
+  "devDependencies": {
+    "event-stream": "^3.3.4",
+    "mocha": "^3.4.2",
+    "pre-commit": "^1.2.2",
+    "@vcl/default-theme": "^0.2.0",
+    "@vcl/default-theme-terms": "^0.2.0",
+    "vinyl": "^2.0.2"
+  }
+}

@@ -1,0 +1,45 @@
+<div class="vclContainer">
+  <div class="vclLayoutHorizontal vclLayoutGridRow demoGridN">
+    <div class="vclLayoutGridCell vclLayoutFlex">
+      <div class="vclLayoutHorizontal vclLayoutGridRow demoGridN">
+        <div class="vclLayoutGridCell vclLayoutFlex">
+          <div>Nested container A, cell Alpha</div>
+        </div>
+        <div class="vclLayoutGridCell">
+          <div>Nested container A, cell Beta</div>
+        </div>
+      </div>
+    </div>
+    <div class="vclLayoutGridCell vclLayoutFlex">
+      <div class="vclLayoutHorizontal vclLayoutGridRow demoGridN">
+        <div class="vclLayoutGridCell vclLayoutFlex">
+          <div>Nested container B, cell Alpha</div>
+        </div>
+        <div class="vclLayoutGridCell">
+          <div>Nested container B, cell Beta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+.vclContainer {
+  border: 0
+}
+
+.demoGridN > .vclLayoutGridCell > dev {
+  background-color: rgba(147, 128, 108, 0.1);
+  padding: 12px;
+}
+
+.demoGridN .demoGridN > .vclLayoutGridCell {
+  background-color: rgba(147, 128, 108, 0.1);
+  padding: 12px;
+}
+
+.demoGridN > .vclLayoutGridCell > .demoGridN > .vclLayoutGridCell > div {
+  background-color: #FFF;
+  padding: 12px;
+}
+</style>

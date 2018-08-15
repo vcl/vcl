@@ -1,0 +1,58 @@
+.vclCalendar
+  background-color: var(--calendar-bg-color)
+  height: 100%
+  overflow: hidden
+
+.vclCalHeaderLabel
+  font-weight: 600
+  font-size: 0.85em
+  line-height: 2em
+
+.vclWeekdayLabel
+  font-size: 0.85em
+  min-height: 2em
+
+.vclCalItem
+  cursor: pointer
+  color: var(--calendar-item-color)
+  background-color: var(--calendar-item-bg-color)
+  transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out
+  min-height: 2.5em
+  outline: 0
+
+.vclCalendar.vclCalInput
+  user-select: none
+  outline: 0
+
+.vclCalendar.vclCalInput .vclCalItem:hover
+  color: var(--calendar-item-hover-color)
+  background-color: var(--calendar-item-hover-bg-color)
+
+.vclCalItem.vclToday,
+.vclCalendar.vclCalInput .vclCalItem.vclToday:hover
+  font-weight: 500
+  color: var(--calendar-item-today-color)
+
+.vclCalItem.vclOtherMonth,
+.vclCalendar.vclCalInput .vclCalItem.vclOtherMonth:hover
+  color: var(--calendar-otherm-day-color)
+
+.vclCalItem.vclDisabled,
+.vclCalendar.vclCalInput .vclCalItem.vclDisabled:hover
+  color: var(--calendar-disabled-item-color)
+  background-color: var(--calendar-disabled-item-bg-color)
+  cursor: default
+
+.vclCalItem.vclAvailable,
+.vclCalendar.vclCalInput .vclCalItem.vclAvailable:hover
+  background-color: var(--calendar-available-item-bg-color)
+
+.vclCalItem.vclUnavailable,
+.vclCalendar.vclCalInput .vclCalItem.vclUnavailable:hover
+  background-color: var(--calendar-unavailable-item-bg-color)
+
+.vclCalItem.vclSelected,
+.vclCalendar.vclCalInput .vclCalItem.vclSelected:hover
+  color: var(--calendar-selected-item-color)
+  background-color: var(--calendar-selected-item-bg-color)
+  font-weight: 500

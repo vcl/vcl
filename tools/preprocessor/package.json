@@ -1,0 +1,81 @@
+{
+  "name": "@vcl/preprocessor",
+  "version": "0.2.5",
+  "description": "The VCL preprocessor",
+  "main": "lib/index.js",
+  "homepage": "https://github.com/vcl/preprocessor",
+  "keywords": [
+    "vcl",
+    "modular",
+    "css",
+    "preprocessor",
+    "postcss",
+    "npm"
+  ],
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.co",
+    "url": "www.n-fuse.co"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Hoppe",
+      "email": "thomas.hoppe@n-fuse.co"
+    }
+  ],
+  "license": "MIT",
+  "bin": {
+    "vcl-preprocessor": "bin/vcl.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vcl/preprocessor.git"
+  },
+  "scripts": {
+    "test": "mocha ./test",
+    "cover": "istanbul cover _mocha -- -R spec",
+    "cover-lcov": "istanbul cover _mocha --report lcovonly"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.1.1",
+    "chalk": "^2.4.1",
+    "css-whitespace": "^1.1.1",
+    "cssnano": "^4.0.5",
+    "debug": "^3.1.0",
+    "import-postcss": "8.0.2",
+    "lodash": "^4.17.10",
+    "mkdirp": "^0.5.1",
+    "mq4-hover-shim": "^0.3.0",
+    "postcss": "^7.0.2",
+    "postcss-add-namespace": "^1.0.3",
+    "postcss-color-function": "^4.0.1",
+    "postcss-css-variables": "^0.9.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-import": "^12.0.0",
+    "postcss-namespace": "^1.1.1",
+    "postcss-nested": "^3.0.0",
+    "postcss-nesting": "^6.0.0",
+    "postcss-npm": "^1.1.0",
+    "postcss-partial-import": "^4.1.0",
+    "postcss-safe-parser": "^4.0.1",
+    "postcss-scss": "^2.0.0",
+    "postcss-selector-namespace": "^1.5.0",
+    "postcss-whitespace": "^1.1.0",
+    "resolve": "^1.8.1",
+    "rucksack-css": "^1.0.2",
+    "sugarss": "^2.0.0",
+    "yargs": "^12.0.1"
+  },
+  "devDependencies": {
+    "@vcl/button": "^0.2.1",
+    "@vcl/default-theme": "^0.2.3",
+    "@vcl/default-theme-terms": "^0.2.2",
+    "coveralls": "^3.0.2",
+    "istanbul": "^0.4.4",
+    "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
+    "normalize.css": "^8.0.0",
+    "pre-commit": "^1.2.2"
+  }
+}

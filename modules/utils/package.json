@@ -1,0 +1,63 @@
+{
+  "name": "@vcl/utils",
+  "description": "Basic utility classes",
+  "version": "0.2.0",
+  "main": "package.json",
+  "scripts": {
+    "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
+    "start": "node ./node_modules/gulp/bin/gulp dev"
+  },
+  "style": "index.styl",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.de",
+    "url": "www.n-fuse.de"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Hoppe",
+      "email": "thomas.hoppe@n-fuse.de"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "@vcl/gulp-vcl-preprocessor": "^0.2.1",
+    "normalize.css": "^7.0.0",
+    "pre-commit": "^1.1.2",
+    "@vcl/build-demo": "^0.2.0",
+    "@vcl/container": "^0.2.0",
+    "@vcl/default-theme": "^0.2.0",
+    "@vcl/default-theme-terms": "^0.2.0",
+    "@vcl/flex-layout": "^0.2.0",
+    "@vcl/preprocessor": "^0.2.2",
+    "@vcl/typography": "^0.2.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vcl/utils.git"
+  },
+  "keywords": [
+    "css",
+    "vcl",
+    "component",
+    "basic",
+    "utilities"
+  ],
+  "vcl": {
+    "needs": [
+      "theme"
+    ],
+    "provides": [
+      "utils"
+    ],
+    "categories": [
+      {
+        "title": "Utilities",
+        "itemPriority": 10,
+        "priority": 130
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "vcl-tutorial",
+  "description": "VCL tutorial",
+  "scripts": {
+    "build-css": "vcl-preprocessor index.styl vcl.css",
+    "doc-gen": "vcl-doc-gen && opn ./vcl-documentation.html",
+    "start": "opn ./index.html"
+  },
+  "devDependencies": {
+    "@vcl/adv-text-structure": "^0.2.0",
+    "@vcl/core-modules": "^0.2.10",
+    "@vcl/default-theme": "^0.2.3",
+    "@vcl/default-theme-terms": "^0.2.2",
+    "@vcl/doc": "vcl/doc",
+    "@vcl/doc-gen": "^0.2.6",
+    "@vcl/font-awesome": "^0.2.0",
+    "@vcl/preprocessor": "^0.2.5",
+    "normalize.css": "^8.0.0",
+    "opn-cli": "^3.1.0"
+  }
+}

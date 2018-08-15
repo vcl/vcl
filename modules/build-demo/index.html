@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><%- title %></title>
+  <% _.forEach(styles, function(href) { %>
+    <link rel="stylesheet" href="<%- href %>">
+  <% }); %>
+  <script>
+  // Function to inline HTML imports
+  function inlineHtmlImports() {
+    var nl = document.querySelectorAll('link[rel="import"]');
+    for (var i = 0; i < nl.length; ++i) {
+      var node = nl[i];
+      var content = node.import.querySelectorAll('body > *');
+      // Hack to convert nodelist to real JS-array
+      content = Array.prototype.slice.call(content);
+      content.map(function(node) {
+        document.body.appendChild(node.cloneNode(true));
+      });
+      if (i + 1 < nl.length) {
+        document.body.appendChild(document.createElement('br'));
+        document.body.appendChild(document.createElement('br'));
+      }
+    }
+  }
+  </script>
+</head>
+<body onload="inlineHtmlImports();">
+  <%= content %>
+</body>
+</html>

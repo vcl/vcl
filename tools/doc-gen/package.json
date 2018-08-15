@@ -1,0 +1,44 @@
+{
+  "name": "@vcl/doc-gen",
+  "version": "0.2.6",
+  "description": "VCL Documentation Generator",
+  "main": "docgen.js",
+  "bin": {
+    "vcl-doc-gen": "./bin/docgen.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vcl/doc-gen.git"
+  },
+  "keywords": [
+    "vcl",
+    "doc-gen"
+  ],
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.co",
+    "url": "www.n-fuse.co"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Hoppe",
+      "email": "thomas.hoppe@n-fuse.co"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vcl/doc-gen/issues"
+  },
+  "dependencies": {
+    "@vcl/doc-client": "^0.2.8",
+    "@vcl/preprocessor": "^0.2.5",
+    "debug": "^3.1.0",
+    "lodash": "^4.17.10",
+    "marked": "^0.4.0",
+    "minimist": "^1.2.0",
+    "resolve": "^1.8.1"
+  }
+}

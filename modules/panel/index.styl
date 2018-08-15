@@ -1,0 +1,52 @@
+.vclPanel
+  background-color: var(--panel-bg-color)
+  margin-bottom: var(--block-elem-vertical-gap)
+  overflow: overlay
+  &.vclPanelCard
+    border-width: 1px
+    border-style: solid
+    border-color: var(--panel-border-color)
+    border-radius: var(--panel-border-radius--card)
+
+.vclPanelHeader,
+.vclPanelFooter
+  position: relative
+  color: var(--panel-header-color)
+  background-color: var(--panel-header-bg-color)
+  border-style: solid
+  border-width: 0 0 2px 0
+  border-color: var(--panel-border-color)
+
+.vclPanelFooter
+  border-width: 0
+  color: var(--panel-footer-color)
+  background-color: var(--panel-footer-bg-color)
+
+.vclPanelTitle,
+.vclPanelHeading
+  padding: 0 0.8rem
+  font-weight: bold
+  line-height: var(--panel-hf-line-height)
+  margin-top: 0
+  margin-bottom: 0
+  font-size: 0.96em
+  color: inherit
+
+.vclPanelTitle
+  font-size: 1.08em
+
+.vclPanelBody
+  border-style: solid
+  border-width: 1px
+  border-color: var(--panel-border-color)
+
+.vclPanelBody > *:first-child
+  margin-top: 0
+
+.vclPanelBody > *:last-child
+  margin-bottom: 0
+
+.vclPanelContent
+  padding: 0.8rem 0.8rem
+  margin-bottom: 0
+

@@ -1,0 +1,67 @@
+{
+  "name": "@vcl/button",
+  "description": "The main control for triggering actions",
+  "version": "0.2.1",
+  "main": "package.json",
+  "scripts": {
+    "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
+    "start": "node ./node_modules/gulp/bin/gulp dev"
+  },
+  "style": "index.styl",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.de",
+    "url": "www.n-fuse.de"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Hoppe",
+      "email": "thomas.hoppe@n-fuse.de"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@vcl/build-demo": "^0.2.0",
+    "@vcl/default-theme": "^0.2.2",
+    "@vcl/default-theme-terms": "^0.2.2",
+    "@vcl/dropdown": "^0.2.1",
+    "@vcl/flex-layout": "^0.2.1",
+    "@vcl/font-awesome": "^0.2.0",
+    "@vcl/gulp-vcl-preprocessor": "^0.2.1",
+    "@vcl/icogram": "^0.2.3",
+    "@vcl/icon": "^0.2.0",
+    "@vcl/layout-spans": "^0.2.0",
+    "@vcl/preprocessor": "^0.2.4",
+    "@vcl/size-modulation": "^0.2.1",
+    "@vcl/typography": "^0.2.2",
+    "gulp": "^3.9.0",
+    "normalize.css": "^8.0.0",
+    "pre-commit": "^1.1.2"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vcl/button.git"
+  },
+  "keywords": [
+    "css",
+    "vcl",
+    "component",
+    "button"
+  ],
+  "vcl": {
+    "needs": [
+      "theme"
+    ],
+    "provides": [
+      "button"
+    ],
+    "categories": [
+      {
+        "title": "Buttons",
+        "itemPriority": 10,
+        "priority": 80
+      }
+    ]
+  }
+}
