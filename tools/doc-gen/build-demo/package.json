@@ -18,10 +18,6 @@
       "email": "thomas.hoppe@n-fuse.co"
     }
   ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/vcl/build-demo.git"
-  },
   "license": "MIT",
   "dependencies": {
     "cpx": "^1.5.0",

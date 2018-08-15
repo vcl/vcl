@@ -31,10 +31,6 @@
     "@vcl/utils": "^0.2.0"
   },
   "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vcl/scrollbar.git"
-  },
   "keywords": [
     "css",
     "vcl",

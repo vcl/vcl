@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) gallery
+# [VCL](https://github.com/vcl/vcl/doc) gallery
 
 Image gallery.
 

@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) preprocessor
+# [VCL](https://github.com/vcl/vcl/doc) preprocessor
 
 [![Build Status](http://img.shields.io/travis/vcl/preprocessor.svg?style=flat)](https://travis-ci.org/vcl/preprocessor)
 [![Coverage Status](https://coveralls.io/repos/vcl/preprocessor/badge.svg?branch=master)](https://coveralls.io/r/vcl/preprocessor?branch=master)

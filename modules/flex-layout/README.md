@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) flex-layout
+# [VCL](https://github.com/vcl/vcl/doc) flex-layout
 
 Flexbox based layout system.
 

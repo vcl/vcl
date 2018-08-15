@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) notification
+# [VCL](https://github.com/vcl/vcl/doc) notification
 
 Notification messages for events.
 

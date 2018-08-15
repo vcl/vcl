@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) data-grid
+# [VCL](https://github.com/vcl/vcl/doc) data-grid
 
 Data grid to display tabular data.
 

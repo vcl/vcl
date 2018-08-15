@@ -38,10 +38,6 @@
     "pre-commit": "^1.1.2"
   },
   "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vcl/email.git"
-  },
   "keywords": [
     "css",
     "vcl",

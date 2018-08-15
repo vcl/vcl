@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) webpack loader
+# [VCL](https://github.com/vcl/vcl/doc) webpack loader
 
 ## Usage
 

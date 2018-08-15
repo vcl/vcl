@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) image-shapes
+# [VCL](https://github.com/vcl/vcl/doc) image-shapes
 
 Decorations for images.
 

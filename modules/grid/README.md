@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) grid
+# [VCL](https://github.com/vcl/vcl/doc) grid
 
 Classical float based fluid grid system.
 

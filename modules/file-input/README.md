@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) file-input
+# [VCL](https://github.com/vcl/vcl/doc) file-input
 
 File input for selecting one or multiple files via tap and drag-and-drop
 gestures.

@@ -39,10 +39,6 @@
     "pre-commit": "^1.1.2"
   },
   "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vcl/button.git"
-  },
   "keywords": [
     "css",
     "vcl",

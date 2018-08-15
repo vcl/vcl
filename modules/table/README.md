@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) table
+# [VCL](https://github.com/vcl/vcl/doc) table
 
 Display tabular data.
 

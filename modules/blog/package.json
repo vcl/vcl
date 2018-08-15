@@ -39,10 +39,6 @@
     "vcl-typography": "^0.1.0"
   },
   "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vcl/blog.git"
-  },
   "keywords": [
     "css",
     "vcl",

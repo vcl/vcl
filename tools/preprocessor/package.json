@@ -27,10 +27,6 @@
   "bin": {
     "vcl-preprocessor": "bin/vcl.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vcl/preprocessor.git"
-  },
   "scripts": {
     "test": "mocha ./test",
     "cover": "istanbul cover _mocha -- -R spec",

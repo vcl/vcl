@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) font-awesome
+# [VCL](https://github.com/vcl/vcl/doc) font-awesome
 
 Integration with the [font awesome](http://fontawesome.io/) icon font.
 

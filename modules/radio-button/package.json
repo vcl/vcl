@@ -37,10 +37,6 @@
     "@vcl/typography": "^0.2.0"
   },
   "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vcl/radio-button.git"
-  },
   "keywords": [
     "css",
     "vcl",

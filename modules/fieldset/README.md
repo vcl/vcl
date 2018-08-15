@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) fieldset
+# [VCL](https://github.com/vcl/vcl/doc) fieldset
 
 Enclose forms or areas within complex forms for visual grouping.
 

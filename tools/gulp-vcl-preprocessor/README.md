@@ -1,8 +1,8 @@
-# [VCL](https://github.com/vcl/doc) gulp-vcl-preprocessor
+# [VCL](https://github.com/vcl/vcl/doc) gulp-vcl-preprocessor
 
 [![Build Status](http://img.shields.io/travis/vcl/gulp-vcl-preprocessor.svg?style=flat)](https://travis-ci.org/vcl/gulp-vcl-preprocessor)
 
-The [VCL preprocessor](https://github.com/vcl/gulp-vcl-preprocessor)
+The [VCL preprocessor](https://github.com/vcl/vcl/tools/gulp-vcl-preprocessor)
 as a Gulp task.
 
 ## Usage

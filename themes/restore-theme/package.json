@@ -1,6 +1,6 @@
 {
-  "name": "@vcl/bw-theme",
-  "description": "The VCL BW theme",
+  "name": "@vcl/restore-theme",
+  "description": "The VCL Restore theme",
   "version": "0.2.0",
   "main": "package.json",
   "scripts": {
@@ -30,10 +30,6 @@
     "@vcl/default-theme": "^0.2.0",
     "@vcl/default-theme-terms": "^0.2.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vcl/bw-theme.git"
-  },
   "keywords": [
     "css",
     "vcl",
@@ -52,7 +48,7 @@
     "categories": [
       {
         "title": "Themes",
-        "itemPriority": 30,
+        "itemPriority": 40,
         "priority": 180
       }
     ]

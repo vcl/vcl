@@ -8,10 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "style": "./main.styl",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vcl/doc-client.git"
-  },
   "keywords": [
     "vcl",
     "doc-client"

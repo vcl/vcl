@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) drawer
+# [VCL](https://github.com/vcl/vcl/doc) drawer
 
 Sliding sidebar.
 

@@ -6,7 +6,7 @@ also vital to understand how VCL modules work.
 
 ## Structure
 
-Use the [vcl-list](https://github.com/vcl/list) as a prototype.
+Use the [vcl-list](https://github.com/vcl/vcl/modules/list) as a prototype.
 
 ## package.json
 
@@ -35,7 +35,7 @@ Have the following custom fields in the `package.json` file:
   Examples: `theme`, `theme-terms`, `button`.
 
 The categorization is used for the documentation generator
-[doc-gen](https://github.com/vcl/doc-gen) to generate a static documentation
+[doc-gen](https://github.com/vcl/vcl/tools/doc-gen) to generate a static documentation
 including demos of your modules.
 
 ### Soft Dependencies
@@ -47,7 +47,7 @@ dependencies of modules to run the demos.
 
 `vcl.needs` and `vcl.provides` are used for package ordering when using the
 package compile feature of the
-[vcl-preprocessor](https://github.com/vcl/preprocessor) which is also used by
+[vcl-preprocessor](https://github.com/vcl/vcl/tools/preprocessor) which is also used by
 the documentation generator.
 Packages which are needed by others are put before them while pre-processing.
 
@@ -117,7 +117,7 @@ Example:
 
 ## Usable CSS Features
 
-Use the [flexbox based layout attributes](https://github.com/vcl/layout)
+Use the [flexbox based layout attributes](https://github.com/vcl/vcl/modules/layout)
 to realize complex layouts or flexbox based rules in the module itself.
 Apart from that, try to stick to the browser compatibility statement below.
 
@@ -183,12 +183,12 @@ GIT clone a module and use the following npm scripts:
 
 # Theming
 
-Themes like the [default theme](https://github.com/vcl/default-theme) just
+Themes like the [default theme](https://github.com/vcl/vcl/themes/default-theme) just
 define variables which are expected to be set by the modules in scope of it.
 A theme can be for a single module or a collection of modules.
 In order to create a new theme it may be sensible to just extend/ override
 the default theme as done in the
-[bw theme](https://github.com/vcl/bw-theme)
+[bw theme](https://github.com/vcl/vcl/themes/bw-theme)
 
 # Browser Compatibility
 

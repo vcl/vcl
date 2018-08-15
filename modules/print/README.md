@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) print
+# [VCL](https://github.com/vcl/vcl/doc) print
 
 Implicit optimizations for print media output and utility classes for explicit
 control.

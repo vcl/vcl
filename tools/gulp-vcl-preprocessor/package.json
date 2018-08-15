@@ -6,10 +6,6 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/vcl/gulp-vcl-preprocessor"
-  },
   "keywords": [
     "gulp",
     "vcl",
@@ -29,9 +25,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vcl/gulp-vcl-preprocessor/issues"
+    "url": "https://github.com/vcl/vcl/gulp-vcl-preprocessor/issues"
   },
-  "homepage": "https://github.com/vcl/gulp-vcl-preprocessor",
+  "homepage": "https://github.com/vcl/vcl/gulp-vcl-preprocessor",
   "dependencies": {
     "gulp-util": "^3.0.8",
     "through2": "^2.0.3",

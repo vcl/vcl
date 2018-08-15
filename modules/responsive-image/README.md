@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) responsive-image
+# [VCL](https://github.com/vcl/vcl/doc) responsive-image
 
 Let images fill up the available horizontal space of its container if it is at
 least as wide.

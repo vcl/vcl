@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) rating
+# [VCL](https://github.com/vcl/vcl/doc) rating
 
 Rating.
 

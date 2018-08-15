@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) core-modules
+# [VCL](https://github.com/vcl/vcl/doc) core-modules
 
 A collection of [VCL modules](https://github.com/vcl) that we consider core.
 _Core_ includes the components that 80% of all reasonable complex Web apps need.

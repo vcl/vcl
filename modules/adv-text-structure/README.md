@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) adv-text-structure
+# [VCL](https://github.com/vcl/vcl/doc) adv-text-structure
 
 Primitives to style textual content.
 

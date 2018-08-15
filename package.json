@@ -1,0 +1,29 @@
+{
+    "name": "@vcl/vcl",
+    "description": "A monorepo containing vcl",
+    "version": "0.2.0",
+    "main": "package.json",
+    "author": {
+      "name": "n-fuse GmbH",
+      "email": "info@n-fuse.de",
+      "url": "www.n-fuse.de"
+    },
+    "contributors": [
+      {
+        "name": "Beniamin Bruda",
+        "email": "beniamin.bruda@n-fuse.de"
+      }
+    ],
+    "license": "MIT",
+    "devDependencies": {
+    },
+    "dependencies": {},
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/vcl/vcl.git"
+    },
+    "keywords": [
+      "vcl"
+    ]
+  }
+  

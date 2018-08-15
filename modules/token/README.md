@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) token
+# [VCL](https://github.com/vcl/vcl/doc) token
 
 A atomic input element that can be interacted upon.
 

@@ -103,10 +103,6 @@
     "@vcl/zoom-box": "^0.2.3",
     "normalize.css": "^8.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vcl/core-modules.git"
-  },
   "keywords": [
     "css",
     "vcl",

@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) layer
+# [VCL](https://github.com/vcl/vcl/doc) layer
 
 Show content or dialogs on top of the current view.
 

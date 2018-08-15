@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) transitions
+# [VCL](https://github.com/vcl/vcl/doc) transitions
 
 **DEPRECATED** because JS driven animations should be used.
 Diverse transitions.

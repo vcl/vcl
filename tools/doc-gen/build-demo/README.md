@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) build-demo
+# [VCL](https://github.com/vcl/vcl/doc) build-demo
 
 This module contains:
 

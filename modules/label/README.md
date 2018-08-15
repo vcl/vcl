@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) label
+# [VCL](https://github.com/vcl/vcl/doc) label
 
 A visually highlighted tag to attribute items.
 

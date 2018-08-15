@@ -22,9 +22,9 @@ All modules with version level `>= 0.1.0` are ready for production use.
 - JS framework agnostic ‒ use it with EmberJS, Angular, React and the like.
 - For ambitious mobile and desktop applications.
 - Theming through modules which can inherit from each other.
-- Collection of [core modules](https://github.com/vcl/core-modules)
+- Collection of [core modules](https://github.com/vcl/vcl//modules/core-modules)
   to handle the bulk of styling needs.
-- [Default theme](https://github.com/vcl/default-theme)
+- [Default theme](https://github.com/vcl/vcl/themes/default-theme)
   for core modules with ~500 variables.
 - Extensible through custom modules or just project local styles.
 - Integrates seamlessly with a gulp based build process.
@@ -48,12 +48,12 @@ All modules with version level `>= 0.1.0` are ready for production use.
 
 ### Run a Module's Demos
 
-    $ git clone vcl/button
+    $ git clone vcl/modules/button
     $ npm start
 
 ### Example Project
 
-See [the tutorial](https://github.com/vcl/doc/tree/master/tutorial) for
+See [the tutorial](https://github.com/vcl/vcl/doc/tree/master/tutorial) for
 how to use VCL modules in a Web project and how to make it part of its
 build process.
 
@@ -62,11 +62,10 @@ build process.
 If you are a developer, see below how to create one.
 We are willed to add new modules to the VCL org's range of modules
 if they fit.
-Otherwise [create an issue](https://github.com/vcl/doc/issues)
-in the _doc_ repo.
+Otherwise [create an issue](https://github.com/vcl/vcl/doc/issues).
 
 ### Development
 
-See [DEVELOPMENT.md](https://github.com/vcl/doc/blob/master/DEVELOPMENT.md)
+See [DEVELOPMENT.md](https://github.com/vcl/vcl/doc/blob/master/DEVELOPMENT.md)
 for the mechanics and philosophy behind VCL modules.
 

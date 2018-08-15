@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) tab-nav
+# [VCL](https://github.com/vcl/vcl/doc) tab-nav
 
 List of navigation items arranged as tabs.
 

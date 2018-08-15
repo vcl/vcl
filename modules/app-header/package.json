@@ -33,10 +33,6 @@
     "@vcl/typography": "^0.2.0"
   },
   "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vcl/app-header.git"
-  },
   "keywords": [
     "css",
     "vcl",

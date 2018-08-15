@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) loose-button-group
+# [VCL](https://github.com/vcl/vcl/doc) loose-button-group
 
 A button group with margins between the group items.
 

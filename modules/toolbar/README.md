@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) toolbar
+# [VCL](https://github.com/vcl/vcl/doc) toolbar
 
 Horizontal bar which can contain navigation elements,
 buttons, form controls etc.

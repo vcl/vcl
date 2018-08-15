@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) token-input
+# [VCL](https://github.com/vcl/vcl/doc) token-input
 
 Multiple item input based on tokens.
 

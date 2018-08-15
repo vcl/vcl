@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) container
+# [VCL](https://github.com/vcl/vcl/doc) container
 
 A visually differentiated container element.
 

@@ -32,10 +32,6 @@
     "gulp": "^3.9.0",
     "pre-commit": "^1.1.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vcl/coarse-pointer.git"
-  },
   "keywords": [
     "css",
     "vcl",

@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) flip-switch
+# [VCL](https://github.com/vcl/vcl/doc) flip-switch
 
 A switch that can be toggled between two states.
 

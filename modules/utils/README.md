@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) utils
+# [VCL](https://github.com/vcl/vcl/doc) utils
 
 Basic utility classes.
 

@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) email
+# [VCL](https://github.com/vcl/vcl/doc) email
 
 Basic HTML email styling.
 
