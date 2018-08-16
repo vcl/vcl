@@ -48,7 +48,9 @@ All modules with version level `>= 0.1.0` are ready for production use.
 
 ### Run a Module's Demos
 
-    $ git clone vcl/modules/button
+    $ git clone https://github.com/vcl/vcl.git
+    $ cd vcl/modules/button
+    $ npm install
     $ npm start
 
 ### Example Project

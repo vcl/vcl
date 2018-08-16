@@ -11,7 +11,7 @@ how to style a web page with it and how to run a single component demo.
 
 1.  Clone the doc repo from Github and navigate to the `tutorial` directory.
 
-    `$ git clone https://github.com/vcl/vcl/doc.git && cd doc/tutorial`
+    `$ git clone https://github.com/vcl/vcl.git && cd vcl/doc/tutorial`
 
 2.  As you can see the folder contains several files and a folder:
   * `package.json` for this tutorial listing all required VCL and other NPM modules.

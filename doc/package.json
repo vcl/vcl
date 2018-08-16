@@ -15,10 +15,8 @@
     }
   ],
   "license": "MIT",
-  "devDependencies": {
-  },
-  "dependencies": {
-  },
+  "devDependencies": {},
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/vcl/vcl/doc.git"

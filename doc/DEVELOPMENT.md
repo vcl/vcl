@@ -175,7 +175,7 @@ level variant. The primary variant always goes without modifier.
 
 # Development
 
-GIT clone a module and use the following npm scripts:
+GIT clone vcl and use the following npm scripts:
 
 * `npm start` - starts a web server and opens the examples
   (browsersync enabled).
