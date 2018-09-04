@@ -12,13 +12,13 @@ The main purpose of this module is to generate a JSON data structure
 in which all information is held.
 Modules considered need to have a `vcl` property in the `package.json` file
 according to the structure
-[explained here](https://github.com/vcl/vcl/doc/blob/master/DEVELOPMENT.md#packagejson).
+[explained here](https://github.com/vcl/doc/blob/master/DEVELOPMENT.md#packagejson).
 
 Each module's documentation file (default is `README.md`) is picked and
 copied into the JSON structure as well as the meta data from `package.json`.
 
 The JSON data is rendered into a browsable documentation based on HTML by
-the [vcl-doc-client](https://github.com/vcl/vcl/tools/doc-client)
+the [vcl-doc-client](https://github.com/vcl/doc-client)
 module.
 
 ## Usage
@@ -42,7 +42,7 @@ Option      | Default                 | Description
 `--entry`   | `./package.json`        | Entry file.
 `--basePath`| current working dir     |
 
-See [Options](https://github.com/vcl/vcl/tools/doc-gen#options) for a more detailed description.
+See [Options](https://github.com/vcl/doc-gen#options) for a more detailed description.
 
 #### Local CLI
 

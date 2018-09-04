@@ -17,6 +17,6 @@ if (argv.basePath) argv.basePath = resolve(argv.basePath);
 docGenerator.generateHtml({
   name: argv.name || 'VCL Documentation',
   entryPackage: argv.entry || (process.cwd() + '/package.json'),
-  output: argv.output || './vcl-documentation.html',
+  outputFolder: argv.outputFolder || './vcl-documentation',
   basePath: argv.basePath || process.cwd()
 });

@@ -1,6 +1,7 @@
 'use strict';
 
 var fs = require('fs');
+var mkdirp = require('mkdirp');
 var path = require('path');
 var debug = require('debug')('vcldoc');
 var _ = require('lodash');
@@ -249,10 +250,19 @@ function generateHtml(options) {
   _.defaults(options, {
     output: process.cwd() + '/./somedoc.html'
   });
+  var outputFolder = options.outputFolder;
+      
+  doc.then((data) => {
+    docClient.getBuild(data, function(output) {
+      var html = output.html;
+      var css = output.css;
 
-    doc.then((data) => {
-    docClient.getBuild(data, function(html) {
-      fs.writeFileSync(options.output, html);
+      mkdirp(outputFolder, function (err) {
+        if (err) return cb(err);
+        fs.writeFileSync(outputFolder+'/index.html', html);
+        fs.writeFileSync(outputFolder+'/vcl.css', css);
+      });
+     
     });
   });
 
