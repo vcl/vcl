@@ -5,7 +5,8 @@
   "main": "package.json",
   "scripts": {
     "test": "./scripts/test.sh",
-    "gen-doc-github-io": "cd vcl.github.io && npm install && node generateDoc.js "
+    "update-github-io": "cd vcl.github.io && npm run update",
+    "push-github-io": "cd vcl.github.io && npm run push"
   },
   "author": {
     "name": "n-fuse GmbH",
