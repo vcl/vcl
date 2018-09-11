@@ -6,7 +6,7 @@
   "scripts": {
     "css": "gulp css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "polymer build"
+    "bundle-webcomponents": "polymer build"
   },
   "style": "./main.styl",
   "keywords": [
@@ -61,7 +61,9 @@
     "@vcl/utils": "^0.2.0",
     "gulp": "^3.9.0",
     "gulp-webserver": "^0.9.1",
-    "normalize.css": "^8.0.0"
+    "normalize.css": "^8.0.0",
+    "polymer-cli":"^1.8.0"
+
   },
   "dependencies": {
     "@polymer/app-route": "^3.0.0-pre.21",

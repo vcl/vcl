@@ -60,18 +60,18 @@ export default class DocContent extends PolymerElement {
       demoNode.markdown = markdown;
       demoNode.style = style;
       this.$.readme.querySelector(`#demo-${demoName}`).appendChild(demoNode);
-      const lists = this.$.readme.querySelectorAll('ul')
-      lists.forEach(listElem => {
-        listElem.classList.add('vclList')
-        const listItems = listElem.querySelectorAll('li')
-        listItems.forEach(listItem => {
-          listItem.classList.add('vclListItem')
-        });
+    });
+    const lists = this.$.readme.querySelectorAll('ul')
+    lists.forEach(listElem => {
+      listElem.classList.add('vclList')
+      const listItems = listElem.querySelectorAll('li')
+      listItems.forEach(listItem => {
+        listItem.classList.add('vclListItem')
       });
-      const tables = this.$.readme.querySelectorAll('table')
-      tables.forEach(table => {
-        table.classList.add('vclTable')
-      });
+    });
+    const tables = this.$.readme.querySelectorAll('table')
+    tables.forEach(table => {
+      table.classList.add('vclTable')
     });
   }
 

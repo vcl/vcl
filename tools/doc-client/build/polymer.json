@@ -1,0 +1,42 @@
+{
+  "entrypoint": "index.html",
+  "shell": "web-components/doc-index.js",
+  "fragments": [],
+  "sources": [
+    "src/**/*",
+    "index.html",
+    "web-components/doc-index.js"
+  ],
+  "extraDependencies": [
+    "bower_components/webcomponentsjs/*.js",
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
+  "builds": [
+    {
+      "name": "dist",
+      "js": {
+        "minify": false,
+        "compile": false,
+        "transformModulesToAmd": true
+      },
+      "css": {
+        "minify": false
+      },
+      "html": {
+        "minify": false
+      },
+      "bundle": {
+        "inlineCss": true,
+        "inlineScripts": false,
+        "rewriteUrlsInTemplates": false,
+        "sourcemaps": true
+      },
+      "addServiceWorker": false,
+      "addPushManifest": false,
+      "preset": "es5-bundled"
+    }
+  ],
+  "npm": true,
+  "componentDir": "node_modules/",
+  "moduleResolution": "node"
+}

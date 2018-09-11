@@ -4,7 +4,8 @@ var fs = require('fs');
 
 var rawHtml = exports.rawHtml = fs.readFileSync(__dirname + '/build/dist/index.html', 'utf8')
 .split('<script>define([\'web-components/doc-index.js\']);</script>').join('');
-var bundle =  fs.readFileSync(__dirname + '/build/dist/web-components/doc-index.js', 'utf8');
+var appBundle =  fs.readFileSync(__dirname + '/build/dist/web-components/doc-index.js', 'utf8');
+var polyfillBundle =  fs.readFileSync(__dirname + '/build/dist/node_modules/@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce.js', 'utf8');
 
 // TODO: document this better
 exports.getBuild = function(doc, cb) {
@@ -25,7 +26,10 @@ exports.getBuild = function(doc, cb) {
       inlineScript,
       '</script>',
       '<script>',
-      bundle,
+      polyfillBundle,
+      '</script>',
+      '<script>',
+      appBundle,
       '</script>'
     ]
 

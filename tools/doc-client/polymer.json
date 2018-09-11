@@ -5,6 +5,9 @@
   "moduleResolution": "node",
   "npm": true,
   "autoBasePath": false,
+  "extraDependencies": [
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
   "builds": [
     { 
       "name": "dist",
