@@ -6,7 +6,7 @@
   "main": "package.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "init-gh-pages-git": "cd dist && git init && git remote add origin https://github.com/vcl/vcl.github.io.git",
+    "init-git": "cd dist && git init && git remote add origin https://github.com/vcl/vcl.github.io.git",
     "update": "rm -rf node_modules package-lock.json && npm install && node generateDoc.js",
     "push": "git add . git commit git push"
   },

@@ -5,6 +5,7 @@
   "main": "package.json",
   "scripts": {
     "test": "./scripts/test.sh",
+    "init-git-github-io": "cd vcl.github.io && npm run init-git",
     "update-github-io": "cd vcl.github.io && npm run update",
     "push-github-io": "cd vcl.github.io && npm run push"
   },

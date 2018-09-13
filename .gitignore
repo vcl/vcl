@@ -6,6 +6,9 @@
 .settings
 .project
 .vscode
+.editorconfig
+.eslintignore
+.eslintrc
 npm-debug.log
 node_modules
 localhost_*
