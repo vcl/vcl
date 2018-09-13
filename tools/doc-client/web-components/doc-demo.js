@@ -68,8 +68,9 @@ export default class DocDemo extends PolymerElement {
     return codePen;
   }
   updateCss(style){
+    const celanStyle = this.removeBodyProps(style); // fix for firefox 
     const cont = document.createElement('template');
-    cont.innerHTML = `<style>${style}</style> `
+    cont.innerHTML = `<style>${celanStyle}</style> `
     this.$.docDemo.appendChild(cont.content);
   }
 
@@ -99,6 +100,12 @@ export default class DocDemo extends PolymerElement {
 
   showDemo() {
     this.codeVisible = false;
+  }
+  removeBodyProps(styles){
+    const cleanStyles = styles.replace(/body {([\s\S]*?)}/, '')
+    .replace(/.vclViewport {([\s\S]*?)}/, '');
+    return cleanStyles
+
   }
 }
 customElements.define(DocDemo.is, DocDemo);
