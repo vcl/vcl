@@ -4,6 +4,7 @@ const mkdirp = require('mkdirp');
 const vcl = require('./node_modules/@vcl/preprocessor');
 const pack = require('./package.json');
 
+const process = vcl.package('./package.json', { includeDevDependencies: true });
 
 mkdirp('build', (errr) => {
   if (errr) console.log(errr);
@@ -12,9 +13,6 @@ mkdirp('build', (errr) => {
   const title = pack.name ? 'Demo of: ' + pack.name : 'VCL Demo Page';
   const finalContent = indexHTML.split('<%- title %>').join(title);
   fs.writeFileSync('build/index.html', finalContent);
-
-  console.log(vcl);
-  const process = vcl.package('./package.json', { includeDevDependencies: true });
 
   process.then((result) => {
     fs.writeFileSync('build/index.css', result.css);
@@ -26,7 +24,6 @@ mkdirp('build', (errr) => {
 
 fs.watch('./index.styl', { encoding: 'buffer' }, (eventType, filename) => {
   if (filename) {
-    const process = vcl.package('./package.json');
     process.then((result) => {
       fs.writeFileSync('build/index.css', result.css);
     }).catch((e) => {
