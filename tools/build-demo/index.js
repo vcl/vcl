@@ -13,8 +13,9 @@ mkdirp('build', (errr) => {
   const finalContent = indexHTML.split('<%- title %>').join(title);
   fs.writeFileSync('build/index.html', finalContent);
 
+  console.log(vcl);
+  const process = vcl.package('./package.json', { includeDevDependencies: true });
 
-  const process = vcl.package('./package.json');
   process.then((result) => {
     fs.writeFileSync('build/index.css', result.css);
   }).catch((e) => {
