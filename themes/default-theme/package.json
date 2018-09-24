@@ -4,8 +4,7 @@
   "version": "0.2.3",
   "main": "package.json",
   "scripts": {
-    "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
-    "start": "node ./node_modules/gulp/bin/gulp dev"
+    "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css"
   },
   "style": "index.styl",
   "author": {

@@ -42,7 +42,6 @@
     "@vcl/responsive-image": "^0.2.0",
     "@vcl/size-modulation": "^0.2.0",
     "@vcl/typography": "^0.2.0",
-    "gulp": "^3.9.0",
     "normalize.css": "^8.0.0",
     "pre-commit": "^1.1.2",
     "browser-sync": "^2.24.7"

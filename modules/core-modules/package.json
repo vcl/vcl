@@ -24,7 +24,7 @@
     "@vcl/build-demo": "^0.2.0",
     "@vcl/default-theme": "^0.2.3",
     "@vcl/default-theme-terms": "^0.2.2",
-    "gulp": "^3.9.0"
+
   },
   "dependencies": {
     "@vcl/app-area": "^0.2.0",

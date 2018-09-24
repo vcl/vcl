@@ -27,11 +27,9 @@
     "@vcl/container": "^0.2.0",
     "@vcl/default-theme": "^0.2.0",
     "@vcl/default-theme-terms": "^0.2.0",
-    "@vcl/gulp-vcl-preprocessor": "^0.2.1",
     "@vcl/layout-spans": "^0.2.0",
     "@vcl/preprocessor": "^0.2.2",
     "@vcl/typography": "^0.2.0",
-    "gulp": "^3.9.0",
     "normalize.css": "^8.0.0",
     "pre-commit": "^1.1.2",
     "browser-sync": "^2.24.7"

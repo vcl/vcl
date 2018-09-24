@@ -28,13 +28,11 @@
     "@vcl/default-theme": "^0.2.1",
     "@vcl/default-theme-terms": "^0.2.1",
     "@vcl/font-awesome": "^0.2.0",
-    "@vcl/gulp-vcl-preprocessor": "^0.2.1",
     "@vcl/icogram": "^0.2.3",
     "@vcl/icon": "^0.2.1",
     "@vcl/input": "^0.2.0",
     "@vcl/preprocessor": "^0.2.3",
     "@vcl/typography": "^0.2.1",
-    "gulp": "^3.9.0",
     "normalize.css": "^7.0.0",
     "pre-commit": "^1.1.2",
     "browser-sync": "^2.24.7"

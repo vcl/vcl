@@ -32,7 +32,6 @@
     "@vcl/font-awesome": "^0.2.0",
     "@vcl/form": "^0.2.1",
     "@vcl/form-control-label": "^0.2.0",
-    "@vcl/gulp-vcl-preprocessor": "^0.2.1",
     "@vcl/icogram": "^0.2.0",
     "@vcl/icon": "^0.2.0",
     "@vcl/input": "^0.2.1",
@@ -41,7 +40,6 @@
     "@vcl/size-modulation": "^0.2.0",
     "@vcl/typography": "^0.2.2",
     "@vcl/utils": "^0.2.0",
-    "gulp": "^3.9.0",
     "normalize.css": "^8.0.0",
     "pre-commit": "^1.1.2",
     "browser-sync": "^2.24.7"

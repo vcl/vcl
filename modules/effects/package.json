@@ -23,8 +23,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "@vcl/gulp-vcl-preprocessor": "^0.2.1",
     "pre-commit": "^1.1.2",
     "@vcl/build-demo": "^0.2.0",
     "@vcl/container": "^0.2.0",
