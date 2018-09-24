@@ -1,65 +1,35 @@
-'use strict';
 
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const mkdirp = require('mkdirp');
+const vcl = require('./node_modules/@vcl/preprocessor');
+const pack = require('./package.json');
 
-var _ = require('lodash');
-var gutil = require('gulp-util');
-var through = require('through2');
-var opn = require('opn');
-var connect = require('gulp-connect');
 
-var PluginError = gutil.PluginError;
-var mainModule = path.dirname(module.parent.filename);
+mkdirp('build', (errr) => {
+  if (errr) console.log(errr);
 
-var tasks = {};
+  const indexHTML = fs.readFileSync(__dirname + '/index.html', 'utf8');
+  const title = pack.name ? 'Demo of: ' + pack.name : 'VCL Demo Page';
+  const finalContent = indexHTML.split('<%- title %>').join(title);
+  fs.writeFileSync('build/index.html', finalContent);
 
-var rPath = function realPath(path){
-  return mainModule + '/' + path;
-};
 
-tasks.connect = connect;
-
-tasks.server = function(){
-  return function server(){
-    connect.server({
-      root: [ rPath(''), rPath('build'), rPath('node_modules') ],
-      port: 8077,
-      livereload: true
-    });
-    opn('http://localhost:8077/example.html');
-  };
-};
-
-tasks.wrapHtml = function(options){
-  options = options || {};
-  var template = _.template(fs.readFileSync(__dirname + '/index.html'));
-  var stream = through.obj(function(file, enc, cb) {
-    if (file.isBuffer()) {
-      var html = file.contents.toString('utf8');
-      var title = 'Demo of: ' + options.title || 'VCL Demo Page';
-      if (options.styles && options.styles.indexOf('index.css') === -1) {
-        options.styles.push('index.css');
-      }
-      var result = template({
-        content: html,
-        styles: options.styles || ['index.css'],
-        title: title
-      });
-      file.contents = new Buffer(result);
-    }
-
-    if (file.isStream()) {
-      var err = new PluginError('vcl-build-demo', 'Streams are not supported!');
-      this.emit('error', err);
-    }
-
-    this.push(file);
-    return cb();
+  const process = vcl.package('./package.json');
+  process.then((result) => {
+    fs.writeFileSync('build/index.css', result.css);
+  }).catch((e) => {
+    console.log(e);
   });
+});
 
-  // returning the file stream
-  return stream;
-};
 
-module.exports = tasks;
+fs.watch('./index.styl', { encoding: 'buffer' }, (eventType, filename) => {
+  if (filename) {
+    const process = vcl.package('./package.json');
+    process.then((result) => {
+      fs.writeFileSync('build/index.css', result.css);
+    }).catch((e) => {
+      console.log(e);
+    });
+  }
+});
