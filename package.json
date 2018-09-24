@@ -5,9 +5,12 @@
   "main": "package.json",
   "scripts": {
     "test": "./scripts/test.sh",
-    "init-git-github-io": "cd vcl.github.io && npm run init-git",
-    "update-github-io": "cd vcl.github.io && npm run update",
-    "push-github-io": "cd vcl.github.io && npm run push"
+    "git-init-github-io": "cd vcl.github.io && npm run git-init",
+    "gen-github-io": "cd vcl.github.io && npm run gen-doc",
+    "push-github-io": "cd vcl.github.io && npm run git-push",
+    "git-init-presentation": "cd doc && npm run git-init-presentation",
+    "push-presentation": "cd doc && npm run git-push-presentation"
+
   },
   "author": {
     "name": "n-fuse GmbH",

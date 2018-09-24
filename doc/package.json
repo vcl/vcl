@@ -8,6 +8,11 @@
     "email": "info@n-fuse.co",
     "url": "www.n-fuse.co"
   },
+  "scripts": {
+    "git-init-presentation": "cd presentation && git init && git remote add origin https://github.com/vcl/presentation.git",
+    "git-push-presentation": "cd presentation && git add -A . && git commit -a -m 'presentation update' && git push --force"
+  },
+ 
   "contributors": [
     {
       "name": "Thomas Hoppe",
