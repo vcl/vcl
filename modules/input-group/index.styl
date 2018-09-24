@@ -1,0 +1,31 @@
+.vclInputGroup
+  display: flex
+  width: 100%
+  flex: 1 1 auto
+  margin-bottom: var(--form-control-vertical-gap)
+  & > .vclInput,
+  & > .vclInputGroupEmb
+    margin-bottom: 0
+  & > .vclIcogram
+    display: flex
+    padding: 0 0.7rem
+    align-items: center
+    font-size: 1em
+    box-sizing: border-box
+    text-align: center
+    white-space: nowrap
+    border-width: 0
+    height: auto
+    background-color: var(--button-bg-color)
+    color: var(--input-group-color)
+    border-color: var(--button-border-color)
+  & > .vclButton
+    flex: 1 0 auto
+    display: block
+    height: auto
+
+.vclInputGroup .vclInput,
+.vclInputGroup select
+  display: flex
+  border-style: solid
+  box-sizing: border-box

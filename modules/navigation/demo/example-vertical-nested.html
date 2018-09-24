@@ -1,0 +1,40 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<nav class="vclNavigation">
+  <ul role="presentation">
+    <li class="vclNavigationItem" role="presentation" aria-selected="false" tabindex="0">
+      <a class="vclNavigationItemLabel vclIcogram" href="#" tabindex="-1">
+        <span class="vclText">Level 1 item</span>
+      </a>
+    </li>
+    <li class="vclNavigationItem" role="presentation" aria-selected="false" tabindex="0">
+      <a class="vclNavigationItemLabel vclLayoutHorizontal vclIcogram" href="#" tabindex="-1">
+        <span class="vclText" flex>Level 1 item</span>
+        <span class="vclIcon fa fa-chevron-down" aria-hidden="true" aria-label="chevron-down" role="img"></span>
+      </a>
+      <nav class="vclNavigation">
+        <ul>
+          <li class="vclNavigationItem" role="presentation" aria-selected="false" tabindex="0">
+            <a class="vclNavigationItemLabel vclIcogram" href="#" tabindex="-1">
+              <span class="vclText">Level 2 item</span>
+            </a>
+            <nav class="vclNavigation">
+              <ul>
+                <li class="vclNavigationItem" role="presentation" aria-selected="false" tabindex="0">
+                  <a class="vclNavigationItemLabel vclIcogram" href="#" tabindex="-1">
+                    <span class="vclText">Level 3 item</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </li>
+          <li class="vclNavigationItem vclSelected" role="presentation" aria-selected="true" tabindex="0">
+            <a class="vclNavigationItemLabel vclIcogram" href="#" tabindex="-1">
+              <span class="vclText">Selected level 2 item</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </li>
+  </ul>
+</nav>
