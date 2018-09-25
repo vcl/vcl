@@ -12,7 +12,7 @@
     "@vcl/default-theme": "^0.2.3",
     "@vcl/default-theme-terms": "^0.2.2",
     "@vcl/doc": "vcl/doc",
-    "@vcl/doc-gen": "file:../../tools/doc-gen",
+    "@vcl/doc-gen": "0.2.6",
     "@vcl/font-awesome": "^0.2.0",
     "@vcl/preprocessor": "^0.2.5",
     "http-server": "^0.11.1",

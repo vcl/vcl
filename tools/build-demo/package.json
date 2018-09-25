@@ -19,6 +19,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@vcl/preprocessor": "file:../preprocessor"
+    "@vcl/preprocessor": "0.2.5"
   }
 }
