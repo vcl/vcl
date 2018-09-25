@@ -59,8 +59,6 @@
     "@vcl/toolbar": "^0.2.0",
     "@vcl/typography": "^0.2.2",
     "@vcl/utils": "^0.2.0",
-    "gulp": "^3.9.0",
-    "gulp-webserver": "^0.9.1",
     "normalize.css": "^8.0.0",
     "polymer-cli":"^1.8.0"
 
