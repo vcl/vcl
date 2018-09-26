@@ -5,6 +5,7 @@
   "main": "package.json",
   "scripts": {
     "test": "./scripts/test.sh",
+    "npm-mass-operations": "node scripts/npm_mass_operations.js",
     "git-init-github-io": "cd vcl.github.io && npm run git-init",
     "gen-github-io": "cd vcl.github.io && npm run gen-doc",
     "push-github-io": "cd vcl.github.io && npm run git-push",
