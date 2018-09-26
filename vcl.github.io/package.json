@@ -6,9 +6,9 @@
   "main": "package.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "git-init": "cd dist && git init && git remote add origin https://github.com/vcl/vcl.github.io.git",
+    "git-init": "mkdir dist && cd dist && git init && git remote add origin https://github.com/vcl/vcl.github.io.git",
     "gen-doc": "rm -rf node_modules package-lock.json && npm install && node generateDoc.js",
-    "git-push": "cd dist && git add -A . && git commit -a -m 'doc update' && git push --force"
+    "git-push": "cd dist && git add -A . && git commit -a -m 'doc update' && git push --set-upstream origin master --force"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,6 @@
     "@vcl/app-footer": "^0.2.1",
     "@vcl/app-header": "^0.2.0",
     "@vcl/badge": "^0.2.0",
-    "@vcl/blog": "^0.1.1",
     "@vcl/breadcrumb": "^0.2.0",
     "@vcl/breakpoints": "^0.2.0",
     "@vcl/busy-indicator": "^0.2.2",
@@ -68,7 +67,6 @@
     "@vcl/loading-layer": "^0.2.0",
     "@vcl/logo": "^0.2.0",
     "@vcl/loose-button-group": "^0.2.1",
-    "@vcl/material-design-icons": "^0.2.0",
     "@vcl/nag": "^0.2.0",
     "@vcl/navigation": "^0.2.5",
     "@vcl/notification": "^0.2.0",

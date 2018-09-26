@@ -1,7 +1,7 @@
 {
   "name": "@vcl/blog",
   "description": "Everything that makes up a blog",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
