@@ -99,6 +99,7 @@
     "@vcl/utils": "^0.2.0",
     "@vcl/value-unit-anagram": "^0.2.0",
     "@vcl/zoom-box": "^0.2.3",
+    "@vcl/material-design-icons": "^0.2.2",
     "normalize.css": "^8.0.0"
   },
   "keywords": [
