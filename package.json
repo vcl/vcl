@@ -1,7 +1,7 @@
 {
   "name": "@vcl/vcl",
   "description": "The Visual Component Library",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "package.json",
   "scripts": {
     "test": "./scripts/test.sh",
@@ -10,7 +10,6 @@
     "push-github-io": "cd vcl.github.io && npm run git-push",
     "git-init-presentation": "cd doc && npm run git-init-presentation",
     "push-presentation": "cd doc && npm run git-push-presentation"
-
   },
   "author": {
     "name": "n-fuse GmbH",
