@@ -1,0 +1,56 @@
+{
+  "name": "@vcl/zoom-box",
+  "description": "Zoom into areas of images",
+  "version": "0.2.4",
+  "main": "package.json",
+  "scripts": {
+    "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
+    "browsersync": "node_modules/.bin/browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
+    "build-demo": "node node_modules/@vcl/build-demo/index.js",
+    "start": "npm run browsersync & npm run build-demo"
+  },
+  "style": "index.styl",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.de",
+    "url": "www.n-fuse.de"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Hoppe",
+      "email": "thomas.hoppe@n-fuse.de"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "normalize.css": "^7.0.0",
+    "pre-commit": "^1.1.2",
+    "@vcl/build-demo": "^0.3.0",
+    "@vcl/default-theme": "^0.2.0",
+    "@vcl/default-theme-terms": "^0.2.0",
+    "@vcl/preprocessor": "^0.2.2",
+    "@vcl/typography": "^0.2.0",
+    "browser-sync": "^2.24.7"
+  },
+  "dependencies": {},
+  "keywords": [
+    "css",
+    "vcl",
+    "component",
+    "zoom",
+    "box"
+  ],
+  "vcl": {
+    "needs": [
+      "theme"
+    ],
+    "provides": [],
+    "categories": [
+      {
+        "title": "Media",
+        "itemPriority": 50,
+        "priority": 120
+      }
+    ]
+  }
+}
