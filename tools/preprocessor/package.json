@@ -1,6 +1,6 @@
 {
   "name": "@vcl/preprocessor",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "The VCL preprocessor",
   "main": "lib/index.js",
   "homepage": "https://github.com/vcl/preprocessor",

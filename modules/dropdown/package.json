@@ -1,12 +1,12 @@
 {
   "name": "@vcl/dropdown",
   "description": "A dropdown menu consisting of a list of items which can be selected",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
-    "browsersync": "node_modules/.bin/browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ", 
-    "build-demo": "node node_modules/@vcl/build-demo/index.js",     
+    "browsersync": "node_modules/.bin/browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
+    "build-demo": "node node_modules/@vcl/build-demo/index.js",
     "start": "npm run browsersync & npm run build-demo"
   },
   "style": "index.styl",
@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.2.0",
+    "@vcl/build-demo": "^0.3.0",
     "@vcl/default-theme": "^0.2.0",
     "@vcl/default-theme-terms": "^0.2.0",
     "@vcl/font-awesome": "^0.2.0",

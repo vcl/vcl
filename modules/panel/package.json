@@ -1,13 +1,13 @@
 {
   "name": "@vcl/panel",
   "description": "Container element to group and highlight content",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
-     "browsersync": "node_modules/.bin/browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
-     "build-demo": "node node_modules/@vcl/build-demo/index.js",
-     "start": "npm run browsersync & npm run build-demo"
+    "browsersync": "node_modules/.bin/browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
+    "build-demo": "node node_modules/@vcl/build-demo/index.js",
+    "start": "npm run browsersync & npm run build-demo"
   },
   "style": "index.styl",
   "author": {
@@ -26,7 +26,7 @@
     "normalize.css": "^7.0.0",
     "pre-commit": "^1.1.2",
     "@vcl/app-content-area": "^0.2.0",
-    "@vcl/build-demo": "^0.2.0",
+    "@vcl/build-demo": "^0.3.0",
     "@vcl/button": "^0.2.0",
     "@vcl/default-theme": "^0.2.0",
     "@vcl/default-theme-terms": "^0.2.0",

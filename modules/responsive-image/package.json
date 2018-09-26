@@ -1,12 +1,12 @@
 {
   "name": "@vcl/responsive-image",
   "description": "Let images fill up the available horizontal space of its container if it is at least as wide",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
-    "browsersync": "node_modules/.bin/browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ", 
-    "build-demo": "node node_modules/@vcl/build-demo/index.js",     
+    "browsersync": "node_modules/.bin/browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
+    "build-demo": "node node_modules/@vcl/build-demo/index.js",
     "start": "npm run browsersync & npm run build-demo"
   },
   "style": "index.styl",
@@ -25,13 +25,12 @@
   "devDependencies": {
     "normalize.css": "^7.0.0",
     "pre-commit": "^1.1.2",
-    "@vcl/build-demo": "^0.2.0",
+    "@vcl/build-demo": "^0.3.0",
     "@vcl/default-theme": "^0.2.0",
     "@vcl/default-theme-terms": "^0.2.0",
     "@vcl/flex-layout": "^0.2.0",
     "@vcl/preprocessor": "^0.2.2",
     "@vcl/typography": "^0.2.0",
-    "browser-sync": "^2.24.7",
     "browser-sync": "^2.24.7"
   },
   "dependencies": {},

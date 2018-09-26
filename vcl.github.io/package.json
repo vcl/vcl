@@ -117,7 +117,7 @@
     "@vcl/core-modules": "^0.2.10",
     "@vcl/default-theme": "^0.2.3",
     "@vcl/default-theme-terms": "^0.2.2",
-    "@vcl/doc-gen": "0.2.6",
+    "@vcl/doc-gen": "0.2.7",
     "@vcl/preprocessor": "^0.2.5"
   }
 }

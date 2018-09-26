@@ -1,6 +1,6 @@
 {
   "name": "@vcl/gulp-vcl-preprocessor",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "The VCL preprocessor as a gulp task",
   "main": "index.js",
   "scripts": {

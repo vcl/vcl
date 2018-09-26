@@ -1,7 +1,7 @@
 {
   "name": "@vcl/blog",
   "description": "Everything that makes up a blog",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -25,7 +25,7 @@
   "devDependencies": {
     "normalize.css": "^8.0.0",
     "pre-commit": "^1.1.2",
-    "@vcl/build-demo": "^0.2.0",
+    "@vcl/build-demo": "^0.3.0",
     "vcl-button": "^0.1.0",
     "vcl-default-theme": "^0.1.0",
     "vcl-default-theme-terms": "^0.1.0",
