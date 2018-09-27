@@ -68,6 +68,6 @@ Otherwise [create an issue](https://github.com/vcl/vcl/doc/issues).
 
 ### Development
 
-See [DEVELOPMENT.md](https://github.com/vcl/vcl/doc/blob/master/DEVELOPMENT.md)
+See [DEVELOPMENT.md](DEVELOPMENT.md)
 for the mechanics and philosophy behind VCL modules.
 
