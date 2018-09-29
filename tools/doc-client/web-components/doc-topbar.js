@@ -13,7 +13,7 @@ export default class DocTopbar extends PolymerElement {
         <a href="#" title="to index">[[title]]</a>
       </h1>
       <div>
-        <a href="https://github.com/vcl/doc" target="_blank" title="to Github">
+        <a href="https://github.com/vcl/vcl" target="_blank" title="The VCL on Github">
           <span class="vclIcon fa fa-github fa-3x"></span>
         </a>
       </div>
