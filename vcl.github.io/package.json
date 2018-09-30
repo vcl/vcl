@@ -21,6 +21,7 @@
     "@vcl/app-footer": "^0.2.1",
     "@vcl/app-header": "^0.2.0",
     "@vcl/badge": "^0.2.0",
+    "@vcl/blog": "^0.1.3",
     "@vcl/breadcrumb": "^0.2.0",
     "@vcl/breakpoints": "^0.2.0",
     "@vcl/busy-indicator": "^0.2.2",
@@ -98,6 +99,8 @@
     "@vcl/typography": "^0.2.2",
     "@vcl/utils": "^0.2.0",
     "@vcl/value-unit-anagram": "^0.2.0",
+    "@vcl/zoom-box": "^0.2.3",
+    "@vcl/material-design-icons": "^0.2.2",
     "normalize.css": "^8.0.0"
   },
   "keywords": [
