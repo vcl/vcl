@@ -10,8 +10,8 @@ export default class DocContent extends PolymerElement {
   static get template() {
     return html`
     <link rel="stylesheet" href="../vcl.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
 
     <div class$="docPart vclLayoutHorizontal {{getContentClass(hasContent)}}">
       <div class="vclLayoutFlex">
@@ -20,13 +20,13 @@ export default class DocContent extends PolymerElement {
             <small class="vclArticleSubHeader">[[content.name]]</small>
         </h2>
         <div id="readme" name="readme" class="docText"></div>
-      
+
       </div>
       <template is="dom-if" if="{{hasContent}}">
         <doc-metadata class="docMetadata" package="{{content}}"></doc-metadata>
       </template>
     </div>
-    
+
     <div class$="docWelcome {{getDefTextClass(hasContent)}}">
       <h3>Welcome to the doc client</h3>
       <div>
