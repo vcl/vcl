@@ -1,6 +1,6 @@
 {
   "name": "@vcl/gulp-vcl-preprocessor",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "The VCL preprocessor as a gulp task",
   "main": "index.js",
   "scripts": {
@@ -29,16 +29,16 @@
   },
   "homepage": "https://github.com/vcl/vcl/gulp-vcl-preprocessor",
   "dependencies": {
+    "@vcl/preprocessor": "^0.2.7",
     "gulp-util": "^3.0.8",
-    "through2": "^2.0.3",
-    "@vcl/preprocessor": "^0.2.2"
+    "through2": "^2.0.3"
   },
   "devDependencies": {
-    "event-stream": "^3.3.4",
-    "mocha": "^3.4.2",
+    "@vcl/default-theme": "^0.2.4",
+    "@vcl/default-theme-terms": "^0.2.3",
+    "event-stream": "^4.0.1",
+    "mocha": "^5.2.0",
     "pre-commit": "^1.2.2",
-    "@vcl/default-theme": "^0.2.0",
-    "@vcl/default-theme-terms": "^0.2.0",
-    "vinyl": "^2.0.2"
+    "vinyl": "^2.2.0"
   }
 }

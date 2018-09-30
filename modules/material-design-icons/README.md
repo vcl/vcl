@@ -14,7 +14,7 @@ are simply realized by CSS styling.
 ## Usage
 
 This module just includes the original CSS from the
-[mdi module](https://www.npmjs.com/package/mdi).
+[mdi module](https://www.npmjs.com/package/@mdi/font).
 Make sure the font files are not located below a path `../fonts/`,
 or re-define the `src` properties in the `@font-face` definition.
 
