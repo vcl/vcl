@@ -21,7 +21,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.3.0",
+    "@vcl/build-demo": "^0.3.1",
     "@vcl/default-theme": "^0.2.3",
     "@vcl/default-theme-terms": "^0.2.2"
   },
