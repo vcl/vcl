@@ -12,9 +12,8 @@ import './doc-content.js';
 export default class DocIndex extends PolymerElement {
   static get template() {
     return html`
-
     <link rel="stylesheet" href="../vcl.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
       <app-location route="{{route}}"></app-location>
       <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
@@ -64,8 +63,8 @@ export default class DocIndex extends PolymerElement {
         const name = part.docgen.provides[0];
         return name === 'doc-index';
       });
-      const selectedItem = itemsMatchingRoute[0] 
-        ? itemsMatchingRoute[0] : itemsDocIndex[0]
+      const selectedItem = itemsMatchingRoute[0]
+        ? itemsMatchingRoute[0] : itemsDocIndex[0];
 
       return selectedItem;
     }
@@ -77,9 +76,9 @@ export default class DocIndex extends PolymerElement {
 
     const navItems = parts.map((item) => {
       const itemIsColection = item.docgen.categories === undefined;
-      const itemIsDocIndex = item.docgen.provides[0] === 'doc-index'; 
-      if (itemIsColection ||itemIsDocIndex) return undefined; 
-      
+      const itemIsDocIndex = item.docgen.provides[0] === 'doc-index';
+      if (itemIsColection || itemIsDocIndex) return undefined;
+
       const withoutPrefixName = /@vcl\/(.+)/.exec(item.name);
 
       const res = {
@@ -97,10 +96,7 @@ export default class DocIndex extends PolymerElement {
       return res;
     }).filter(part => part);
     return navItems;
-  
-   
   }
-
 }
 
 customElements.define(DocIndex.is, DocIndex);

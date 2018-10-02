@@ -5,7 +5,7 @@ export default class DocDemo extends PolymerElement {
   static get template() {
     return html`
     <link rel="stylesheet" href="../vcl.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <div id="docDemo">
       <div class="vclTabbable">
         <div class="vclTabs vclTabStyleUni" role="tablist">
@@ -17,7 +17,7 @@ export default class DocDemo extends PolymerElement {
             <span class="vclTabLabel vclIcon fa fa-code"></span>
             <span class="vclTabLabel">Code</span>
           </div>
-  
+
           <form class$="docEditDemoButton vclHalfTransparent {{getCodeTextClass(codeVisible)}}" action="https://codepen.io/pen/define" method="POST" target="_blank">
             <input type="hidden" name="data" value$="{{codePen}}">
             <button class="vclButton vclHalfTransparent">
@@ -68,7 +68,7 @@ export default class DocDemo extends PolymerElement {
     return codePen;
   }
   updateCss(style){
-    const celanStyle = this.removeBodyProps(style); // fix for firefox 
+    const celanStyle = this.removeBodyProps(style); // fix for firefox
     const cont = document.createElement('template');
     cont.innerHTML = `<style>${celanStyle}</style> `
     this.$.docDemo.appendChild(cont.content);

@@ -7,12 +7,11 @@ const KEYCODE_UP = 38;
 const KEYCODE_DOWN = 40;
 const KEYCODE_ENTER = 13;
 
- 
 export default class DocNav extends PolymerElement {
   static get template() {
     return html`
     <link rel="stylesheet" href="../vcl.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <nav class="docNav vclNavigation vclVertical vclLayoutVertical vclLayoutFlex">
             <div class="vclInputGroupEmb">
               <span class="vclPrepended">
@@ -72,7 +71,7 @@ export default class DocNav extends PolymerElement {
                 </template>
               </ul>
             </template>
-          
+
         </nav>
   `;
   }
@@ -122,7 +121,7 @@ export default class DocNav extends PolymerElement {
     }
     return undefined;
   }
-      
+
   computeGroupedOnCategories(initialItems) {
     const categories = initialItems.reduce((grouped, item) => {
       grouped[item.primaryCategory] = grouped[item.primaryCategory] || [];
@@ -141,7 +140,6 @@ export default class DocNav extends PolymerElement {
 
     return groupedOnCategories;
   }
-    
 
   getSelectedClass(itemName, selectedItem) {
     return itemName === selectedItem ? 'vclSelected' : '';
@@ -150,6 +148,7 @@ export default class DocNav extends PolymerElement {
   getCathegoryClass(index, openedCathegories) {
     return openedCathegories[index] ? 'fa-angle-down' : 'fa-angle-right';
   }
+
   getDisplayNoneClearBtn(searchedText) {
     return !searchedText ? 'vclDisplayNone' : '';
   }
@@ -172,7 +171,7 @@ export default class DocNav extends PolymerElement {
       const itsNotLast = selectedIndex !== (this.searchResults.length - 1);
       const nextIndex = (selectedIndex !== undefined) && itsNotLast
       ? selectedIndex + 1 : 0  ;
-   
+
       const nextItemName = this.searchResults[nextIndex].name;
       this.selectedItem = nextItemName;
 
@@ -190,7 +189,8 @@ export default class DocNav extends PolymerElement {
     }
 
   }
-  getSelectedItemIndex(){
+
+  getSelectedItemIndex() {
     return this.searchResults.map((item,index) => {
       if (item.name === this.selectedItem) {
         return index;
