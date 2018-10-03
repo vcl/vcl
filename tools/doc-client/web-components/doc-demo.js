@@ -102,10 +102,10 @@ export default class DocDemo extends PolymerElement {
     this.codeVisible = false;
   }
   removeBodyProps(styles){
-    const cleanStyles = styles.replace(/body {([\s\S]*?)}/, '')
-    .replace(/.vclViewport {([\s\S]*?)}/, '');
+    const cleanStyles = styles.replace(/body {([\s\S]*?)}/g, '')
+    .replace(/.vclViewport {([\s\S]*?)}/g, '');
     return cleanStyles
-
+    
   }
 }
 customElements.define(DocDemo.is, DocDemo);
