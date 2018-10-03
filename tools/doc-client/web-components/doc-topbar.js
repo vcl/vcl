@@ -14,7 +14,7 @@ export default class DocTopbar extends PolymerElement {
       </h1>
       <div>
         <a href="https://github.com/vcl/vcl" target="_blank" title="The VCL on Github">
-          <span class="vclIcon fa fa-github fa-3x"></span>
+          <span class="vclIcon fab fa-github fa-3x"></span>
         </a>
       </div>
     </div>`;
