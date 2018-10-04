@@ -3,26 +3,26 @@
   width: 100%
   flex: 1 1 auto
   margin-bottom: var(--form-control-vertical-gap)
+  & > :not(:first-child)
+    margin-left: -var(--input-border-width)
   & > .vclInput,
   & > .vclInputGroupEmb
     margin-bottom: 0
-  & > .vclIcogram
-    display: flex
-    padding: 0 0.7rem
-    align-items: center
-    font-size: 1em
-    box-sizing: border-box
-    text-align: center
-    white-space: nowrap
-    border-width: 0
-    height: auto
-    background-color: var(--button-bg-color)
-    color: var(--input-group-color)
-    border-color: var(--button-border-color)
+    &:focus
+      z-index: 1
   & > .vclButton
     flex: 1 0 auto
     display: block
     height: auto
+  & .vclInputGroupText
+    display: flex
+    align-items: center
+    background-color: hsl(0, 0%, 92%)
+    color: hsl(0, 0%, 20%)
+    font-weight: normal
+    border-color: var(--input-border-color)
+    border-width: var(--input-border-width)
+    border-style: solid
 
 .vclInputGroup .vclInput,
 .vclInputGroup select
