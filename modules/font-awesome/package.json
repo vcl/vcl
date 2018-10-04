@@ -1,7 +1,7 @@
 {
   "name": "@vcl/font-awesome",
   "description": "Integration with the font awesome icon font",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -25,7 +25,7 @@
   "devDependencies": {
     "normalize.css": "^7.0.0",
     "pre-commit": "^1.1.2",
-    "@vcl/build-demo": "^0.3.0",
+    "@vcl/build-demo": "^0.3.1",
     "@vcl/default-theme": "^0.2.0",
     "@vcl/default-theme-terms": "^0.2.0",
     "@vcl/preprocessor": "^0.2.2",

@@ -8,9 +8,13 @@ A chain of navigation items represented as links.
 
 The items are made up of a label (`vclBreadcrumbNavItemLabel`) and
 divider (`vclBreadcrumbNavDivider`). The label can be an anchor element
-or a span.
+or just a `div` if it can't be selected. The divider is a `vclIcon`.
 
-[basic example](/demo/example.html)
+[basic example](/demo/example-basic.html)
+
+Any icon can be used as divider:
+
+[basic example](/demo/example-basic-alt.html)
 
 ## Classes
 
