@@ -7240,7 +7240,7 @@ this.setProperties(propertyUpdates,true);}else{this.__setMulti(propertyUpdates);
 for(var property in setObj){this._propertySetter(property,setObj[property]);}// notify in a specific order
 if(setObj.data!==undefined){this._pathEffector('data',this.data);this._notifyChange('data');}if(setObj.active!==undefined){this._pathEffector('active',this.active);this._notifyChange('active');}if(setObj.tail!==undefined){this._pathEffector('tail',this.tail);this._notifyChange('tail');}}});class DocDemo extends PolymerElement{static get template(){return html`
     <link rel="stylesheet" href="../vcl.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <div id="docDemo">
       <div class="vclTabbable">
         <div class="vclTabs vclTabStyleUni" role="tablist">
@@ -7252,7 +7252,7 @@ if(setObj.data!==undefined){this._pathEffector('data',this.data);this._notifyCha
             <span class="vclTabLabel vclIcon fa fa-code"></span>
             <span class="vclTabLabel">Code</span>
           </div>
-  
+
           <form class$="docEditDemoButton vclHalfTransparent {{getCodeTextClass(codeVisible)}}" action="https://codepen.io/pen/define" method="POST" target="_blank">
             <input type="hidden" name="data" value$="{{codePen}}">
             <button class="vclButton vclHalfTransparent">
@@ -7270,11 +7270,11 @@ if(setObj.data!==undefined){this._pathEffector('data',this.data);this._notifyCha
           </div>
         </div>
       </div>
-    </div>`;}static get is(){return'doc-demo';}static get properties(){return{markdown:{type:Object,observer:'renderNinja'},style:{observer:'updateCss'},codePen:{computed:'computeCodePen(markdown,style)'}};}constructor(){super();this.codeVisible=false;}computeCodePen(markdown,style){const codePen={html:markdown,css:style};return codePen;}updateCss(style){const celanStyle=this.removeBodyProps(style);// fix for firefox 
-const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyle}</style> `;this.$.docDemo.appendChild(cont.content);}renderNinja(markdown){this.$.ninja.innerHTML=markdown;}getCodeTextClass(codeVisible){return!codeVisible?'vclDisplayNone':'';}getDemoClass(codeVisible){return codeVisible?'vclDisplayNone':'';}getDemoTabClass(codeVisible){return!codeVisible?'vclSelected':'';}getCodeTabClass(codeVisible){return codeVisible?'vclSelected':'';}showCode(){this.codeVisible=true;}showDemo(){this.codeVisible=false;}removeBodyProps(styles){const cleanStyles=styles.replace(/body {([\s\S]*?)}/,'').replace(/.vclViewport {([\s\S]*?)}/,'');return cleanStyles;}}_exports.$docDemoDefault=DocDemo;customElements.define(DocDemo.is,DocDemo);var docDemo={default:DocDemo};_exports.$docDemo=docDemo;class DocMetadata extends PolymerElement{static get template(){return html`
+    </div>`;}static get is(){return'doc-demo';}static get properties(){return{markdown:{type:Object,observer:'renderNinja'},style:{observer:'updateCss'},codePen:{computed:'computeCodePen(markdown,style)'}};}constructor(){super();this.codeVisible=false;}computeCodePen(markdown,style){const codePen={html:markdown,css:style};return codePen;}updateCss(style){const celanStyle=this.removeBodyProps(style);// fix for firefox
+const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyle}</style> `;this.$.docDemo.appendChild(cont.content);}renderNinja(markdown){this.$.ninja.innerHTML=markdown;}getCodeTextClass(codeVisible){return!codeVisible?'vclDisplayNone':'';}getDemoClass(codeVisible){return codeVisible?'vclDisplayNone':'';}getDemoTabClass(codeVisible){return!codeVisible?'vclSelected':'';}getCodeTabClass(codeVisible){return codeVisible?'vclSelected':'';}showCode(){this.codeVisible=true;}showDemo(){this.codeVisible=false;}removeBodyProps(styles){const cleanStyles=styles.replace(/body {([\s\S]*?)}/g,'').replace(/.vclViewport {([\s\S]*?)}/g,'');return cleanStyles;}}_exports.$docDemoDefault=DocDemo;customElements.define(DocDemo.is,DocDemo);var docDemo={default:DocDemo};_exports.$docDemo=docDemo;class DocMetadata extends PolymerElement{static get template(){return html`
     <link rel="stylesheet" href="../vcl.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
     <div class="docMetadataControls">
     <button on-click="toggle" class="vclButton vclHalfTransparent" type="button" name="button" title="Package information">
       <template is="dom-if" if="{{hidden}}">
@@ -7346,8 +7346,8 @@ const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyl
     </ul>
   </aside>`;}static get is(){return'doc-metadata';}static get properties(){return{package:{type:Object},hidden:{value:true}};}toggle(){this.hidden=!this.hidden;}getHidenCLass(hidden){return hidden?'vclDisplayNone':'';}}_exports.$docMetadataDefault=DocMetadata;customElements.define(DocMetadata.is,DocMetadata);var docMetadata={default:DocMetadata};_exports.$docMetadata=docMetadata;class DocContent extends PolymerElement{static get template(){return html`
     <link rel="stylesheet" href="../vcl.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
 
     <div class$="docPart vclLayoutHorizontal {{getContentClass(hasContent)}}">
       <div class="vclLayoutFlex">
@@ -7356,13 +7356,13 @@ const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyl
             <small class="vclArticleSubHeader">[[content.name]]</small>
         </h2>
         <div id="readme" name="readme" class="docText"></div>
-      
+
       </div>
       <template is="dom-if" if="{{hasContent}}">
         <doc-metadata class="docMetadata" package="{{content}}"></doc-metadata>
       </template>
     </div>
-    
+
     <div class$="docWelcome {{getDefTextClass(hasContent)}}">
       <h3>Welcome to the doc client</h3>
       <div>
@@ -7372,7 +7372,7 @@ const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyl
       </div>
     </div>`;}static get is(){return'doc-content';}static get properties(){return{content:{type:Object,observer:'renderReadme'},hasContent:{computed:'computeHasContent(content)'}};}renderReadme(content){const{readme,demos,style}=content;this.$.readme.innerHTML=readme;Object.keys(demos).forEach(demoName=>{const markdown=demos[demoName];const demoNode=new DocDemo();demoNode.markdown=markdown;demoNode.style=style;this.$.readme.querySelector(`#demo-${demoName}`).appendChild(demoNode);});const lists=this.$.readme.querySelectorAll('ul');lists.forEach(listElem=>{listElem.classList.add('vclList');const listItems=listElem.querySelectorAll('li');listItems.forEach(listItem=>{listItem.classList.add('vclListItem');});});const tables=this.$.readme.querySelectorAll('table');tables.forEach(table=>{table.classList.add('vclTable');});}computeHasContent(content){const has=content!==undefined;return has;}getDefTextClass(hasContent){return hasContent?'vclDisplayNone':'';}getContentClass(hasContent){return!hasContent?'vclDisplayNone':'';}}_exports.$docContentDefault=DocContent;customElements.define(DocContent.is,DocContent);var docContent={default:DocContent};_exports.$docContent=docContent;const KEYCODE_UP=38;const KEYCODE_DOWN=40;const KEYCODE_ENTER=13;class DocNav extends PolymerElement{static get template(){return html`
     <link rel="stylesheet" href="../vcl.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <nav class="docNav vclNavigation vclVertical vclLayoutVertical vclLayoutFlex">
             <div class="vclInputGroupEmb">
               <span class="vclPrepended">
@@ -7432,25 +7432,24 @@ const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyl
                 </template>
               </ul>
             </template>
-          
-        </nav>
-  `;}static get is(){return'doc-nav';}static get properties(){return{items:{type:Array},selectedItem:{type:String,notify:true},searchedText:{type:String,value:''},searchResults:{type:Array,readOnly:true,computed:'computeSearchResults(items,searchedText)'},groupedOnCategories:{type:Array,readOnly:true,computed:'computeGroupedOnCategories(items)'}};}constructor(){super();this.openedCathegories=[];}computeSearchResults(cats,searchedText){if(cats&&searchedText!==undefined){const searchResults=cats.filter(cat=>{const{title,description}=cat;const descriptionMatchesSearch=description.indexOf(searchedText)>=0;const titleMatchesSearch=title.indexOf(searchedText)>=0;return descriptionMatchesSearch||titleMatchesSearch;}).sort((a,b)=>a.itemPriority-b.itemPriority);return searchResults;}return undefined;}computeGroupedOnCategories(initialItems){const categories=initialItems.reduce((grouped,item)=>{grouped[item.primaryCategory]=grouped[item.primaryCategory]||[];grouped[item.primaryCategory].push(item);return grouped;},{});const groupedOnCategories=Object.keys(categories).map(title=>{const items=categories[title];const{priority}=items[0];return{title,priority,items};}).sort((a,b)=>a.priority-b.priority).map((elem,index)=>Object.assign({},elem,{index}));return groupedOnCategories;}getSelectedClass(itemName,selectedItem){return itemName===selectedItem?'vclSelected':'';}getCathegoryClass(index,openedCathegories){return openedCathegories[index]?'fa-angle-down':'fa-angle-right';}getDisplayNoneClearBtn(searchedText){return!searchedText?'vclDisplayNone':'';}getCathegoryIsOpen(index,openedCathegories){return!!openedCathegories[index];}toggleCathegory(e){const{category}=e.model.__data;const{index}=category;this.openedCathegories[index]=!this.openedCathegories[index];this.openedCathegories=[...this.openedCathegories];}searchKey(e){const{keyCode}=e;if(keyCode===KEYCODE_DOWN){const selectedIndex=this.getSelectedItemIndex();const itsNotLast=selectedIndex!==this.searchResults.length-1;const nextIndex=selectedIndex!==undefined&&itsNotLast?selectedIndex+1:0;const nextItemName=this.searchResults[nextIndex].name;this.selectedItem=nextItemName;}else if(keyCode===KEYCODE_UP){const selectedIndex=this.getSelectedItemIndex();const prevIndex=selectedIndex!==undefined&&selectedIndex!==0?selectedIndex-1:this.searchResults.length-1;const prevItemName=this.searchResults[prevIndex].name;this.selectedItem=prevItemName;}else if(keyCode===KEYCODE_ENTER){const firstItemName=this.searchResults[0].name;this.selectedItem=firstItemName;}}getSelectedItemIndex(){return this.searchResults.map((item,index)=>{if(item.name===this.selectedItem){return index;}return undefined;}).filter(i=>i!==undefined)[0];}searchUpdate(e){this.searchedText=e.target.value;}clearSearch(){this.searchedText='';this.$.search.value='';}}_exports.$docNavDefault=DocNav;customElements.define(DocNav.is,DocNav);var docNav={default:DocNav};_exports.$docNav=docNav;class DocTopbar extends PolymerElement{static get template(){return html`
-    <link rel="stylesheet" href="../vcl.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <div  class="vclLayoutHorizontal vclLayoutJustified"> 
+        </nav>
+  `;}static get is(){return'doc-nav';}static get properties(){return{items:{type:Array},selectedItem:{type:String,notify:true},searchedText:{type:String,value:''},searchResults:{type:Array,readOnly:true,computed:'computeSearchResults(items,searchedText)'},groupedOnCategories:{type:Array,readOnly:true,computed:'computeGroupedOnCategories(items)'}};}constructor(){super();this.openedCathegories=[];}computeSearchResults(cats,searchedText){if(cats&&searchedText!==undefined){const searchResults=cats.filter(cat=>{const{title,description}=cat;const lowerCaseText=searchedText.toLowerCase();const descriptionMatchesSearch=description.toLowerCase().indexOf(lowerCaseText)>=0;const titleMatchesSearch=title.toLowerCase().indexOf(lowerCaseText)>=0;return descriptionMatchesSearch||titleMatchesSearch;}).sort((a,b)=>a.itemPriority-b.itemPriority);return searchResults;}return undefined;}computeGroupedOnCategories(initialItems){const categories=initialItems.reduce((grouped,item)=>{grouped[item.primaryCategory]=grouped[item.primaryCategory]||[];grouped[item.primaryCategory].push(item);return grouped;},{});const groupedOnCategories=Object.keys(categories).map(title=>{const items=categories[title];const{priority}=items[0];return{title,priority,items};}).sort((a,b)=>a.priority-b.priority).map((elem,index)=>Object.assign({},elem,{index}));return groupedOnCategories;}getSelectedClass(itemName,selectedItem){return itemName===selectedItem?'vclSelected':'';}getCathegoryClass(index,openedCathegories){return openedCathegories[index]?'fa-angle-down':'fa-angle-right';}getDisplayNoneClearBtn(searchedText){return!searchedText?'vclDisplayNone':'';}getCathegoryIsOpen(index,openedCathegories){return!!openedCathegories[index];}toggleCathegory(e){const{category}=e.model.__data;const{index}=category;this.openedCathegories[index]=!this.openedCathegories[index];this.openedCathegories=[...this.openedCathegories];}searchKey(e){const{keyCode}=e;if(keyCode===KEYCODE_DOWN){const selectedIndex=this.getSelectedItemIndex();const itsNotLast=selectedIndex!==this.searchResults.length-1;const nextIndex=selectedIndex!==undefined&&itsNotLast?selectedIndex+1:0;const nextItemName=this.searchResults[nextIndex].name;this.selectedItem=nextItemName;}else if(keyCode===KEYCODE_UP){const selectedIndex=this.getSelectedItemIndex();const prevIndex=selectedIndex!==undefined&&selectedIndex!==0?selectedIndex-1:this.searchResults.length-1;const prevItemName=this.searchResults[prevIndex].name;this.selectedItem=prevItemName;}else if(keyCode===KEYCODE_ENTER){const firstItemName=this.searchResults[0].name;this.selectedItem=firstItemName;}}getSelectedItemIndex(){return this.searchResults.map((item,index)=>{if(item.name===this.selectedItem){return index;}return undefined;}).filter(i=>i!==undefined)[0];}searchUpdate(e){this.searchedText=e.target.value;}clearSearch(){this.searchedText='';this.$.search.value='';}}_exports.$docNavDefault=DocNav;customElements.define(DocNav.is,DocNav);var docNav={default:DocNav};_exports.$docNav=docNav;class DocTopbar extends PolymerElement{static get template(){return html`
+    <link rel="stylesheet" href="../vcl.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <div  class="vclLayoutHorizontal vclLayoutJustified">
       <h1 class="vclNoMargin">
         <a href="#" title="to index">[[title]]</a>
       </h1>
       <div>
-        <a href="https://github.com/vcl/doc" target="_blank" title="to Github">
+        <a href="https://github.com/vcl/vcl" target="_blank" title="The VCL on Github">
           <span class="vclIcon fa fa-github fa-3x"></span>
         </a>
       </div>
     </div>`;}static get is(){return'doc-topbar';}static get properties(){return{title:{type:String}};}}_exports.$docTopbarDefault=DocTopbar;customElements.define(DocTopbar.is,DocTopbar);var docTopbar={default:DocTopbar};_exports.$docTopbar=docTopbar;class DocIndex extends PolymerElement{static get template(){return html`
-
     <link rel="stylesheet" href="../vcl.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
       <app-location route="{{route}}"></app-location>
       <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route>

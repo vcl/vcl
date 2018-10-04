@@ -113,8 +113,9 @@ export default class DocNav extends PolymerElement {
     if (cats && searchedText !== undefined) {
       const searchResults = cats.filter((cat) => {
         const { title, description } = cat;
-        const descriptionMatchesSearch = description.indexOf(searchedText) >= 0;
-        const titleMatchesSearch = title.indexOf(searchedText) >= 0;
+        const lowerCaseText = searchedText.toLowerCase()
+        const descriptionMatchesSearch = description.toLowerCase().indexOf(lowerCaseText) >= 0;
+        const titleMatchesSearch = title.toLowerCase().indexOf(lowerCaseText) >= 0;
         return descriptionMatchesSearch || titleMatchesSearch;
       }).sort((a, b) => a.itemPriority - b.itemPriority);
       return searchResults;

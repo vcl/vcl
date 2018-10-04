@@ -38,7 +38,7 @@
     "@vcl/data-tree": "^0.2.0",
     "@vcl/date-picker": "^0.2.0",
     "@vcl/divider": "^0.2.1",
-    "@vcl/doc": "github:vcl/doc",
+    "@vcl/doc": "file:../doc",
     "@vcl/drawer": "^0.2.0",
     "@vcl/dropdown": "^0.2.1",
     "@vcl/effects": "^0.2.0",
@@ -118,7 +118,7 @@
     "@vcl/core-modules": "^0.2.10",
     "@vcl/default-theme": "^0.2.3",
     "@vcl/default-theme-terms": "^0.2.2",
-    "@vcl/doc-gen": "0.2.7",
+    "@vcl/doc-gen": "0.2.9",
     "@vcl/preprocessor": "^0.2.5"
   }
 }
