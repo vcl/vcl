@@ -21,9 +21,9 @@ or re-define the `src` properties in the `@font-face` definition.
 
 ## Classes
 
-Each icons has a unique identifier in the `fa-` namespace.
-See [font awesome cheatsheet](http://fontawesome.io/cheatsheet/) for a reference
-available icons.
+Each icons has a unique identifier in the `fa-`, `fas-`, `fab-` etc. namespaces.
+See [font awesome icon catalog](https://fontawesome.com/icons?d=gallery) for a reference
+of available icons.
 
 ## Demo
 

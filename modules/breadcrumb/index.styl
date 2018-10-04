@@ -6,13 +6,16 @@
     padding: 0
     margin: 0
     margin-bottom: var(--block-elem-vertical-gap)
+    display: flex
+    flex-direction: row
+    align-items: center
     & li
-      float: left
       font-weight: bold
       font-size: 0.98em
-      & a,
-      & .vclBreadcrumbNavItemLabel
+      & a
         color: var(--breadcrumb-label-color)
+        display: inline-block
+      & .vclBreadcrumbNavItemLabel
         display: inline-block
         & +.vclBreadcrumbNavDivider
           color: var(--breadcrumb-divider-color)
@@ -20,9 +23,7 @@
           padding-left: 0.2em
           padding-right: 0.2em
       & a:hover,
-      & .vclBreadcrumbNavItemLabel:hover,
-      & a:focus,
-      & .vclBreadcrumbNavItemLabel:focus
+      & a:focus
         color: var(--breadcrumb-label-hover-color)
       &.vclSelected
         cursor: default
