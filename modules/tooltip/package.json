@@ -1,7 +1,7 @@
 {
   "name": "@vcl/tooltip",
   "description": "Overlay carrying contextual, non-interactive content",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.2.2",
+    "@vcl/build-demo": "^0.3.1",
     "@vcl/default-theme": "^0.2.2",
     "@vcl/default-theme-terms": "^0.2.2",
     "@vcl/flex-layout": "^0.2.1",
@@ -32,10 +32,10 @@
     "@vcl/preprocessor": "^0.2.4",
     "@vcl/responsive-image": "^0.2.0",
     "@vcl/typography": "^0.2.2",
+    "browser-sync": "^2.24.7",
     "gulp": "^3.9.1",
     "normalize.css": "^8.0.0",
-    "pre-commit": "^1.2.2",
-    "browser-sync": "^2.24.7"
+    "pre-commit": "^1.2.2"
   },
   "dependencies": {},
   "repository": {
