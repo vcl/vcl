@@ -48,7 +48,7 @@ export default class DocNav extends PolymerElement {
                   <div class="vclAnimContainer" >
                     <template is="dom-repeat" items="{{category.items}}" as="item">
                       <li class$="vclNavigationItem docNavItem {{getSelectedClass(item.name,selectedItem)}}" role="presentation">
-                      <a class="vclNavigationItemLabel vclIcogram"  href$="{{item.name}}">
+                      <a class="vclNavigationItemLabel vclIcogram"  href$="#{{item.name}}">
                         <span class="vclText">[[item.title]]</span>
                       </a>
                       </li>

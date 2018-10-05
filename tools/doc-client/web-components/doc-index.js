@@ -15,14 +15,14 @@ export default class DocIndex extends PolymerElement {
     <link rel="stylesheet" href="../vcl.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-      <app-location route="{{route}}"></app-location>
-      <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
+      <app-location route="{{route}}" use-hash-as-path ></app-location>
+      <app-route route="{{route}}" pattern=":#page" ></app-route>
       <div class="vclApp vclLayoutVertical">
         <header class="vclToolbar">
           <doc-topbar title="{{doc.name}}"></doc-topbar>
         </header>
         <div class="vclContentArea vclLayoutHorizontal vclLayoutFlex">
-          <doc-nav class="vclLayoutVertical" items="{{navItems}}" selected-item="{{routeData.page}}" ></doc-nav>
+          <doc-nav class="vclLayoutVertical" items="{{navItems}}" selected-item="{{route.path}}" ></doc-nav>
           <div class="docContent vclScrollable vclLayoutFlex" id="elements">
             <doc-content content="[[content]]"></doc-content>
           </div>
@@ -47,17 +47,17 @@ export default class DocIndex extends PolymerElement {
       content: {
         type: Object,
         readOnly: true,
-        computed: 'computeContent(doc, routeData)'
+        computed: 'computeContent(doc, route)'
       }
     };
   }
 
-  computeContent(doc, routeData) {
-    if (doc && routeData && (routeData.hasOwnProperty('page'))) {
+  computeContent(doc, route) {
+    if (doc && route && (route.hasOwnProperty('path'))) {
       const { parts } = doc;
       const itemsMatchingRoute = parts.filter((part) => {
         const name = part.name.split('@vcl/').pop();
-        return name === routeData.page;
+        return name === route.path;
       });
       const itemsDocIndex = parts.filter((part) => {
         const name = part.docgen.provides[0];
