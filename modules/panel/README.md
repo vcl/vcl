@@ -8,7 +8,8 @@ A panel consisting a body, header and footer.
 All elements are optional.
 The panel body may for example hold textual content, tables, dividers etc.
 
-A card variant is an alternative visual appearance.
+There are two variants, a dialog variant optimized for modal dialogs
+and a card variant with a card like visual appearance.
 
 ## Usage
 
@@ -20,6 +21,10 @@ which adds padding.
 A Panel with text and a table as content.
 
 [table example](/demo/example-table.html)
+
+Panel variant.
+
+[panel example](/demo/example-panel.html)
 
 Card variant.
 
@@ -38,6 +43,11 @@ Card variant.
 ## Modifiers
 
 - `vclPanelCard`
+- `vclPanelDialog`
+
+Semantic coloring:
+
+- `vclDanger`
 
 ## Variables
 
