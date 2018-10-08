@@ -82,7 +82,7 @@ Web application development.
 __Component__: A self-contained UI element like a button
 
 __Module__: An NPM module containing 1 - n components
-
+-
 __Theme__: A module which only defines variables for other components
 
 __Theme terms__: High level theme defining colors, shades and fonts
@@ -91,9 +91,8 @@ __Theme terms__: High level theme defining colors, shades and fonts
 
 # Technical Basis
 
-- [Preprocessor](https://github.com/vcl/vcl/tools/preprocessor) based on
+- [Preprocessor](https://github.com/vcl/vcl/tree/master/tools/preprocessor) based on
 [postcss](http://postcss.org)
-  - [Gulp Task](https://github.com/vcl/vcl/tools/gulp-vcl-preprocessor) available
 
 - [npm](https://www.npmjs.org/) as
 package management vehicle and module registry
@@ -104,7 +103,7 @@ package management vehicle and module registry
 
 Because components are packaged as NPM modules which can be:
 
-- from the VCL org's repositories
+- from the VCL org's repository
 - third parties
 - your own ones
 
@@ -151,7 +150,7 @@ $ npm start
 
 This will:
 
-1. install the `gulp-vcl-preprocessor`
+1. install the `vcl-preprocessor`
 2. install all dependent VCL modules
 3. Build the styles and copy stuff to the `build` folder
 4. Start a web server, serving the `build` folder
@@ -181,7 +180,7 @@ Import a local file via
 
 See what makes up a module using the example of the _button_:
 
-[https://github.com/vcl/vcl/modules/button](https://github.com/vcl/vcl/modules/button)
+[https://github.com/vcl/vcl/tree/master/modules/button](https://github.com/vcl/vcl/tree/master/modules/button)
 
 This definition in `package.json` specifies the index style file:
 
@@ -198,8 +197,6 @@ dependencies of modules to run the demos. An example `package.json`:
 
 ```JavaScript
 "devDependencies": {
-  "gulp": "^3.9.0",
-  "@vcl/gulp-vcl-preprocessor": "^0.2.1",
   "normalize.css": "^7.0.0",
   "pre-commit": "^1.0.6",
   "@vcl/build-demo": "^0.3.1",
@@ -256,7 +253,7 @@ Check the
 
 - Embraces flexbox
 
-- More about this in the [guidelines](https://github.com/vcl/vcl/doc/blob/master/DEVELOPMENT.md)
+- More about this in the [guidelines](https://github.com/vcl/vcl/blob/master/doc/DEVELOPMENT.md)
 
 ---
 
@@ -294,13 +291,13 @@ $ vcl-preprocessor index.styl dist/compiled.css
 }
 ```
 
-3.) [Gulp task](https://github.com/vcl/vcl/tools/gulp-vcl-preprocessor)
+3.) [Gulp task](https://github.com/vcl/vcl/tree/master/tools/gulp-vcl-preprocessor)
 
 ---
 
 # The Doc Generator
 
-The [doc-gen](https://github.com/vcl/vcl/tools/doc-gen)
+The [doc-gen](https://github.com/vcl/vcl/tree/master/tools/doc-gen)
 allows to generate a browsable catalog of all VCL modules used
 in a project.
 
@@ -333,7 +330,7 @@ The doc-generator is fed by the `categories` part of the meta data.
 ```
 
 There is a
-[list of categories](https://raw.githubusercontent.com/vcl/vcl/doc/master/component_categories.yml)
+[list of categories](https://raw.githubusercontent.com/vcl/vcl/master/doc/component_categories.yml)
 but it's not mandatory to use them.
 
 ---
@@ -352,7 +349,7 @@ $ vcl-doc-gen --entry ./package.json --output doc.html
 
 ```JavaScript
 "scripts": {
-  "doc-gen": "vcl-doc-gen && opn ./vcl-documentation.html",
+  "doc-gen": "vcl-doc-gen && http-server ./vcl-documentation",
 }
 ```
 
@@ -360,7 +357,7 @@ $ vcl-doc-gen --entry ./package.json --output doc.html
 
 class: center, middle
 
-Check the **[VCL tutorial](https://github.com/vcl/vcl/doc/tree/master/tutorial)**
+Check the **[VCL tutorial](https://github.com/vcl/vcl/tree/master/doc/tutorial)**
 project to see everything put together.
 
 ---
