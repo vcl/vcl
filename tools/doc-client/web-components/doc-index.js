@@ -47,17 +47,17 @@ export default class DocIndex extends PolymerElement {
       content: {
         type: Object,
         readOnly: true,
-        computed: 'computeContent(doc, route)'
+        computed: 'computeContent(doc, route.path)'
       }
     };
   }
 
-  computeContent(doc, route) {
-    if (doc && route && (route.hasOwnProperty('path'))) {
+  computeContent(doc, path) {
+    if (doc && path !==undefined) {
       const { parts } = doc;
       const itemsMatchingRoute = parts.filter((part) => {
         const name = part.name.split('@vcl/').pop();
-        return name === route.path;
+        return name === path;
       });
       const itemsDocIndex = parts.filter((part) => {
         const name = part.docgen.provides[0];

@@ -360,26 +360,39 @@ class MixinMap{constructor(){/** @type {!Object<string, !MixinMapEntry>} */this.
      * @param {string} elementName
      */transformRules(rules,elementName){this._currentElement=elementName;forEachRule(rules,r=>{this.transformRule(r);});this._currentElement=null;}/**
      * @param {!StyleNode} rule
-     */transformRule(rule){rule['cssText']=this.transformCssText(rule['parsedCssText']);// :root was only used for variable assignment in property shim,
+     */transformRule(rule){rule['cssText']=this.transformCssText(rule['parsedCssText'],rule);// :root was only used for variable assignment in property shim,
 // but generates invalid selectors with real properties.
 // replace with `:host > *`, which serves the same effect
 if(rule['selector']===':root'){rule['selector']=':host > *';}}/**
      * @param {string} cssText
+     * @param {!StyleNode} rule
      * @return {string}
-     */transformCssText(cssText){// produce variables
-cssText=cssText.replace(VAR_ASSIGN,(matchText,propertyName,valueProperty,valueMixin)=>this._produceCssProperties(matchText,propertyName,valueProperty,valueMixin));// consume mixins
-return this._consumeCssProperties(cssText);}/**
+     */transformCssText(cssText,rule){// produce variables
+cssText=cssText.replace(VAR_ASSIGN,(matchText,propertyName,valueProperty,valueMixin)=>this._produceCssProperties(matchText,propertyName,valueProperty,valueMixin,rule));// consume mixins
+return this._consumeCssProperties(cssText,rule);}/**
      * @param {string} property
      * @return {string}
      */_getInitialValueForProperty(property){if(!this._measureElement){this._measureElement=/** @type {HTMLMetaElement} */document.createElement('meta');this._measureElement.setAttribute('apply-shim-measure','');this._measureElement.style.all='initial';document.head.appendChild(this._measureElement);}return window.getComputedStyle(this._measureElement).getPropertyValue(property);}/**
+     * Walk over all rules before this rule to find fallbacks for mixins
+     *
+     * @param {!StyleNode} startRule
+     * @return {!Object}
+     */_fallbacksFromPreviousRules(startRule){// find the "top" rule
+let topRule=startRule;while(topRule['parent']){topRule=topRule['parent'];}const fallbacks={};let seenStartRule=false;forEachRule(topRule,r=>{// stop when we hit the input rule
+seenStartRule=seenStartRule||r===startRule;if(seenStartRule){return;}// NOTE: Only matching selectors are "safe" for this fallback processing
+// It would be prohibitive to run `matchesSelector()` on each selector,
+// so we cheat and only check if the same selector string is used, which
+// guarantees things like specificity matching
+if(r['selector']===startRule['selector']){Object.assign(fallbacks,this._cssTextToMap(r['parsedCssText']));}});return fallbacks;}/**
      * replace mixin consumption with variable consumption
      * @param {string} text
+     * @param {!StyleNode=} rule
      * @return {string}
-     */_consumeCssProperties(text){/** @type {Array} */let m=null;// loop over text until all mixins with defintions have been applied
+     */_consumeCssProperties(text,rule){/** @type {Array} */let m=null;// loop over text until all mixins with defintions have been applied
 while(m=MIXIN_MATCH.exec(text)){let matchText=m[0];let mixinName=m[1];let idx=m.index;// collect properties before apply to be "defaults" if mixin might override them
 // match includes a "prefix", so find the start and end positions of @apply
 let applyPos=idx+matchText.indexOf('@apply');let afterApplyPos=idx+matchText.length;// find props defined before this @apply
-let textBeforeApply=text.slice(0,applyPos);let textAfterApply=text.slice(afterApplyPos);let defaults=this._cssTextToMap(textBeforeApply);let replacement=this._atApplyToCssProperties(mixinName,defaults);// use regex match position to replace mixin, keep linear processing time
+let textBeforeApply=text.slice(0,applyPos);let textAfterApply=text.slice(afterApplyPos);let defaults=rule?this._fallbacksFromPreviousRules(rule):{};Object.assign(defaults,this._cssTextToMap(textBeforeApply));let replacement=this._atApplyToCssProperties(mixinName,defaults);// use regex match position to replace mixin, keep linear processing time
 text=`${textBeforeApply}${replacement}${textAfterApply}`;// move regex search to _after_ replacement
 MIXIN_MATCH.lastIndex=idx+replacement.length;}return text;}/**
      * produce variable consumption at the site of mixin consumption
@@ -417,10 +430,11 @@ value=this._replaceInitialOrInherit(property,sp.slice(1).join(':'));out[property
      * @param {string} propertyName
      * @param {?string} valueProperty
      * @param {?string} valueMixin
+     * @param {!StyleNode} rule
      * @return {string}
-     */_produceCssProperties(matchText,propertyName,valueProperty,valueMixin){// handle case where property value is a mixin
+     */_produceCssProperties(matchText,propertyName,valueProperty,valueMixin,rule){// handle case where property value is a mixin
 if(valueProperty){// form: --mixin2: var(--mixin1), where --mixin1 is in the map
-processVariableAndFallback(valueProperty,(prefix,value)=>{if(value&&this._map.get(value)){valueMixin=`@apply ${value};`;}});}if(!valueMixin){return matchText;}let mixinAsProperties=this._consumeCssProperties(''+valueMixin);let prefix=matchText.slice(0,matchText.indexOf('--'));let mixinValues=this._cssTextToMap(mixinAsProperties);let combinedProps=mixinValues;let mixinEntry=this._map.get(propertyName);let oldProps=mixinEntry&&mixinEntry.properties;if(oldProps){// NOTE: since we use mixin, the map of properties is updated here
+processVariableAndFallback(valueProperty,(prefix,value)=>{if(value&&this._map.get(value)){valueMixin=`@apply ${value};`;}});}if(!valueMixin){return matchText;}let mixinAsProperties=this._consumeCssProperties(''+valueMixin,rule);let prefix=matchText.slice(0,matchText.indexOf('--'));let mixinValues=this._cssTextToMap(mixinAsProperties);let combinedProps=mixinValues;let mixinEntry=this._map.get(propertyName);let oldProps=mixinEntry&&mixinEntry.properties;if(oldProps){// NOTE: since we use mixin, the map of properties is updated here
 // and this is what we want.
 combinedProps=Object.assign(Object.create(oldProps),mixinValues);}else{this._map.set(propertyName,combinedProps);}let out=[];let p,v;// set variables defined by current mixin
 let needToInvalidate=false;for(p in combinedProps){v=mixinValues[p];// if property not defined by current mixin, set initial
@@ -7425,7 +7439,7 @@ const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyl
               <ul class="vclScrollable vclYOnHover vclLayoutFlex"id="nav-items">
                 <template is="dom-repeat" items="{{searchResults}}" as="item">
                   <li class$="vclNavigationItem {{getSelectedClass(item.name,selectedItem)}}" role="presentation">
-                    <a class="vclNavigationItemLabel vclIcogram"  href$="{{item.name}}" >
+                    <a class="vclNavigationItemLabel vclIcogram"  href$="#{{item.name}}" >
                       <span class="vclText">[[item.title]]</span>
                     </a>
                   </li>
@@ -7464,4 +7478,4 @@ const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyl
           </div>
         </div>
       </div>
-      `;}static get is(){return'doc-index';}static get properties(){return{doc:{type:Object,value:doc},navItems:{type:Array,readOnly:true,computed:'computeNavItems(doc)'},content:{type:Object,readOnly:true,computed:'computeContent(doc, route)'}};}computeContent(doc,route){if(doc&&route&&route.hasOwnProperty('path')){const{parts}=doc;const itemsMatchingRoute=parts.filter(part=>{const name=part.name.split('@vcl/').pop();return name===route.path;});const itemsDocIndex=parts.filter(part=>{const name=part.docgen.provides[0];return name==='doc-index';});const selectedItem=itemsMatchingRoute[0]?itemsMatchingRoute[0]:itemsDocIndex[0];return selectedItem;}return undefined;}computeNavItems(doc){const{parts}=doc;const navItems=parts.map(item=>{const itemIsColection=item.docgen.categories===undefined;const itemIsDocIndex=item.docgen.provides[0]==='doc-index';if(itemIsColection||itemIsDocIndex)return undefined;const withoutPrefixName=/@vcl\/(.+)/.exec(item.name);const res={title:item.title||item.name,name:withoutPrefixName[1],description:item.description};if(item.docgen.categories&&item.docgen.categories.length>0){res.primaryCategory=item.docgen.categories[0].title;res.priority=item.docgen.categories[0].priority;res.itemPriority=item.docgen.categories[0].itemPriority||0;}return res;}).filter(part=>part);return navItems;}}_exports.$docIndexDefault=DocIndex;customElements.define(DocIndex.is,DocIndex);var docIndex={default:DocIndex};_exports.$docIndex=docIndex;});
+      `;}static get is(){return'doc-index';}static get properties(){return{doc:{type:Object,value:doc},navItems:{type:Array,readOnly:true,computed:'computeNavItems(doc)'},content:{type:Object,readOnly:true,computed:'computeContent(doc, route.path)'}};}computeContent(doc,path){if(doc&&path!==undefined){const{parts}=doc;const itemsMatchingRoute=parts.filter(part=>{const name=part.name.split('@vcl/').pop();return name===path;});const itemsDocIndex=parts.filter(part=>{const name=part.docgen.provides[0];return name==='doc-index';});const selectedItem=itemsMatchingRoute[0]?itemsMatchingRoute[0]:itemsDocIndex[0];return selectedItem;}return undefined;}computeNavItems(doc){const{parts}=doc;const navItems=parts.map(item=>{const itemIsColection=item.docgen.categories===undefined;const itemIsDocIndex=item.docgen.provides[0]==='doc-index';if(itemIsColection||itemIsDocIndex)return undefined;const withoutPrefixName=/@vcl\/(.+)/.exec(item.name);const res={title:item.title||item.name,name:withoutPrefixName[1],description:item.description};if(item.docgen.categories&&item.docgen.categories.length>0){res.primaryCategory=item.docgen.categories[0].title;res.priority=item.docgen.categories[0].priority;res.itemPriority=item.docgen.categories[0].itemPriority||0;}return res;}).filter(part=>part);return navItems;}}_exports.$docIndexDefault=DocIndex;customElements.define(DocIndex.is,DocIndex);var docIndex={default:DocIndex};_exports.$docIndex=docIndex;});

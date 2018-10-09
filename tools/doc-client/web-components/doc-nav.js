@@ -64,7 +64,7 @@ export default class DocNav extends PolymerElement {
               <ul class="vclScrollable vclYOnHover vclLayoutFlex"id="nav-items">
                 <template is="dom-repeat" items="{{searchResults}}" as="item">
                   <li class$="vclNavigationItem {{getSelectedClass(item.name,selectedItem)}}" role="presentation">
-                    <a class="vclNavigationItemLabel vclIcogram"  href$="{{item.name}}" >
+                    <a class="vclNavigationItemLabel vclIcogram"  href$="#{{item.name}}" >
                       <span class="vclText">[[item.title]]</span>
                     </a>
                   </li>
