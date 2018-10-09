@@ -1,7 +1,7 @@
 {
   "name": "@vcl/font-awesome",
   "description": "Integration with the font awesome icon font",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -33,7 +33,7 @@
     "browser-sync": "^2.24.7"
   },
   "dependencies": {
-    "font-awesome": "^4.6.3"
+    "@fortawesome/fontawesome-free": "^5.3.0"
   },
   "keywords": [
     "css",
