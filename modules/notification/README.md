@@ -8,7 +8,6 @@ The notifications may have header, a body and a footer while
 the latter both are optional. They can semantically colored through
 modifiers.
 
-
 ## Usage
 
 Nested lists are also possible as shown in the warning-example.

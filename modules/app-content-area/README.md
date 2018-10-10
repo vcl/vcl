@@ -31,7 +31,7 @@ A simple content area:
 
 - `vclTransparent`: Make the background color transparent.
 
-### For `vclContentBgColor`
+### For `vclContentAreaBgColor`
 
 - `vclSecondary`: Set the background color to the secondary content
   background color.
