@@ -22,7 +22,7 @@ export default class DocDemo extends PolymerElement {
             <input type="hidden" name="data" value$="{{codePen}}">
             <button class="vclButton vclHalfTransparent">
               <div class="vclIcogram">
-                <div class="vclIcon fa fa-codepen" aria-hidden="true" role="img"></div>
+                <div class="vclIcon fab fa-codepen" aria-hidden="true" role="img"></div>
                 <span class="vclText">Edit on CodePen</span>
               </div>
             </button>

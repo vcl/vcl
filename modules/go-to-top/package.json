@@ -1,7 +1,7 @@
 {
   "name": "@vcl/go-to-top",
   "description": "A fix positioned control to jump to the top of a scrolled viewport",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",

@@ -7271,7 +7271,7 @@ if(setObj.data!==undefined){this._pathEffector('data',this.data);this._notifyCha
             <input type="hidden" name="data" value$="{{codePen}}">
             <button class="vclButton vclHalfTransparent">
               <div class="vclIcogram">
-                <div class="vclIcon fa fa-codepen" aria-hidden="true" role="img"></div>
+                <div class="vclIcon fab fa-codepen" aria-hidden="true" role="img"></div>
                 <span class="vclText">Edit on CodePen</span>
               </div>
             </button>
@@ -7291,13 +7291,15 @@ const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyl
 
     <div class="docMetadataControls">
     <button on-click="toggle" class="vclButton vclHalfTransparent" type="button" name="button" title="Package information">
-      <template is="dom-if" if="{{hidden}}">
-        <span class="vclIcon fa fa-chevron-left"></span>
-      </template >
-      <template is="dom-if" if="{{!hidden}}">
-        <span class="vclIcon fa fa-chevron-right"></span>
-      </template >
-      <span class="vclIcon fa fa-info"></span>
+      <div class="vclIcogram">
+        <template is="dom-if" if="{{hidden}}">
+          <span class="vclIcon fa fa-chevron-left"></span>
+        </template >
+        <template is="dom-if" if="{{!hidden}}">
+          <span class="vclIcon fa fa-chevron-right"></span>
+        </template >
+        <span class="vclIcon fa fa-info"></span>
+      </div>
     </button>
   </div>
   <aside class$="vclDataList docMetadata {{getHidenCLass(hidden)}}">

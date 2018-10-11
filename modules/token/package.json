@@ -1,7 +1,7 @@
 {
   "name": "@vcl/token",
   "description": "A atomic input element that can be interacted upon",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
