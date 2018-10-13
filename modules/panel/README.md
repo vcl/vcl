@@ -22,9 +22,9 @@ A Panel with text and a table as content.
 
 [table example](/demo/example-table.html)
 
-Panel variant.
+Dialog variant.
 
-[panel example](/demo/example-panel.html)
+[panel example](/demo/example-dialog.html)
 
 Card variant.
 
