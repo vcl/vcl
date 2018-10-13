@@ -73,7 +73,7 @@
     "@vcl/notification": "^0.2.0",
     "@vcl/pager": "^0.2.0",
     "@vcl/pagination": "^0.2.2",
-    "@vcl/panel": "0.2.1",
+    "@vcl/panel": "^0.2.1",
     "@vcl/popover": "^0.2.0",
     "@vcl/process-nav": "^0.2.1",
     "@vcl/product-list": "^0.2.1",
