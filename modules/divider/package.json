@@ -29,7 +29,7 @@
     "@vcl/default-theme-terms": "^0.2.2",
     "@vcl/fieldset": "^0.2.0",
     "@vcl/flex-layout": "^0.2.1",
-    "@vcl/font-awesome": "^0.2.0",
+    "@vcl/font-awesome": "^0.3.0",
     "@vcl/form": "^0.2.1",
     "@vcl/form-control-label": "^0.2.0",
     "@vcl/icogram": "^0.2.0",

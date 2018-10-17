@@ -13,7 +13,7 @@
     "@vcl/default-theme-terms": "^0.2.2",
     "@vcl/doc": "vcl/doc",
     "@vcl/doc-gen": "0.2.7",
-    "@vcl/font-awesome": "^0.2.0",
+    "@vcl/font-awesome": "^0.3.0",
     "@vcl/preprocessor": "^0.2.5",
     "http-server": "^0.11.1",
     "normalize.css": "^8.0.0",
