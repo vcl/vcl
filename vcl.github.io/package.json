@@ -68,7 +68,7 @@
     "@vcl/loading-layer": "^0.2.0",
     "@vcl/logo": "^0.2.0",
     "@vcl/loose-button-group": "^0.2.1",
-    "@vcl/material-design-icons": "^0.2.2",
+    "@vcl/material-design-icons": "^0.2.4",
     "@vcl/nag": "^0.2.0",
     "@vcl/navigation": "^0.2.5",
     "@vcl/notification": "^0.2.0",

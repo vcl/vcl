@@ -1,7 +1,7 @@
 {
   "name": "@vcl/material-design-icons",
   "description": "Integration with the material design icons",
-  "version": "0.2.2",
+  "version": "0.2.5",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -33,7 +33,7 @@
     "browser-sync": "^2.24.7"
   },
   "dependencies": {
-    "@mdi/font": "*"
+    "@mdi/font": "^2.8.94"
   },
   "keywords": [
     "css",
