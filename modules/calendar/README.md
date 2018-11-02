@@ -4,7 +4,7 @@ Calendar to display and select date and time.
 
 ## Features
 
-The calendar can be used to show typical representations of time frames like:
+The calendar can be used to show typical representations of time unit like:
 
 - Day (hours in a day).
 - Month (days in a month).
@@ -18,6 +18,9 @@ Styling for the following kind of days or special days exist:
 - Disabled (for example for data ranges outside a valid range)
 - Unavailable (for example for a schedule).
 - Available (for example for a schedule).
+
+Also styles to represent the selection of a time unit and ranges of time units
+exist.
 
 ## Usage
 
@@ -51,7 +54,9 @@ Years view:
 - `vclToday`
 - `vclOtherMonth`
 - `vclDisabled`
-- `vclSelected`
+- `vclSelected`: Mark a time unit as selected
+- `vclSelectedBeg`: Mark the beginning of a time unit range
+- `vclSelectedEnd`: Mark the end of a time unit range
 - `vclAvailable`
 - `vclUnavailable`
 
