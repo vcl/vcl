@@ -47,7 +47,7 @@ Years view:
 
 ### For `vclCalendar`
 
-- `vclCalInput` hint for possibility to select a date.
+- `vclCalInput` make the calendar appear as input for date selections.
 
 ### For `vclCalItem`
 
@@ -55,6 +55,7 @@ Years view:
 - `vclOtherMonth`
 - `vclDisabled`
 - `vclSelected`: Mark a time unit as selected
+- `vclSelectedAlt`: Mark a time unit as selected with alternative style
 - `vclSelectedBeg`: Mark the beginning of a time unit range
 - `vclSelectedEnd`: Mark the end of a time unit range
 - `vclAvailable`

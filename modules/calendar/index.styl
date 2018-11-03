@@ -24,41 +24,57 @@
   user-select: none
   outline: 0
 
-.vclCalendar.vclCalInput .vclCalItem:hover
+.vclCalendar.vclCalInput .vclCalItem:hover,
+.vclCalendar.vclCalInput .vclCalItem:focus
   color: var(--calendar-item-hover-color)
   background-color: var(--calendar-item-hover-bg-color)
 
 .vclCalItem.vclToday,
-.vclCalendar.vclCalInput .vclCalItem.vclToday:hover
+.vclCalendar.vclCalInput .vclCalItem.vclToday:hover,
+.vclCalendar.vclCalInput .vclCalItem.vclToday:focus
   font-weight: 500
   color: var(--calendar-item-today-color)
 
 .vclCalItem.vclOtherMonth,
-.vclCalendar.vclCalInput .vclCalItem.vclOtherMonth:hover
+.vclCalendar.vclCalInput .vclCalItem.vclOtherMonth:hover,
+.vclCalendar.vclCalInput .vclCalItem.vclOtherMonth:focus
   color: var(--calendar-otherm-day-color)
 
 .vclCalItem.vclDisabled,
-.vclCalendar.vclCalInput .vclCalItem.vclDisabled:hover
+.vclCalendar.vclCalInput .vclCalItem.vclDisabled:hover,
+.vclCalendar.vclCalInput .vclCalItem.vclDisabled:focus
   color: var(--calendar-disabled-item-color)
   background-color: var(--calendar-disabled-item-bg-color)
   cursor: default
 
 .vclCalItem.vclAvailable,
-.vclCalendar.vclCalInput .vclCalItem.vclAvailable:hover
+.vclCalendar.vclCalInput .vclCalItem.vclAvailable:hover,
+.vclCalendar.vclCalInput .vclCalItem.vclAvailable:focus
   background-color: var(--calendar-available-item-bg-color)
 
 .vclCalItem.vclUnavailable,
-.vclCalendar.vclCalInput .vclCalItem.vclUnavailable:hover
+.vclCalendar.vclCalInput .vclCalItem.vclUnavailable:hover,
+.vclCalendar.vclCalInput .vclCalItem.vclUnavailable:focus
   background-color: var(--calendar-unavailable-item-bg-color)
 
 .vclCalItem.vclSelected,
-.vclCalendar.vclCalInput .vclCalItem.vclSelected:hover
+.vclCalendar.vclCalInput .vclCalItem.vclSelected:hover,
+.vclCalendar.vclCalInput .vclCalItem.vclSelected:focus
   color: var(--calendar-selected-item-color)
   background-color: var(--calendar-selected-item-bg-color)
   font-weight: 500
 
+.vclCalItem.vclSelectedAlt,
+.vclCalendar.vclCalInput .vclCalItem.vclSelectedAlt:hover,
+.vclCalendar.vclCalInput .vclCalItem.vclSelectedAlt:focus
+  color: var(--calendar-selected-item-color)
+  background-color: var(--calendar-selected-item-bg-color)
+  font-weight: 500
+  border-radius: 50%
+
 .vclCalItem.vclSelectedBeg,
-.vclCalendar.vclCalInput .vclCalItem.vclSelectedBeg:hover
+.vclCalendar.vclCalInput .vclCalItem.vclSelectedBeg:hover,
+.vclCalendar.vclCalInput .vclCalItem.vclSelectedBeg:focus
   color: var(--calendar-selected-item-color)
   background-color: var(--calendar-selected-item-bg-color)
   font-weight: 500
@@ -66,7 +82,8 @@
   border-bottom-left-radius: 0.5em
 
 .vclCalItem.vclSelectedEnd,
-.vclCalendar.vclCalInput .vclCalItem.vclSelectedEnd:hover
+.vclCalendar.vclCalInput .vclCalItem.vclSelectedEnd:hover,
+.vclCalendar.vclCalInput .vclCalItem.vclSelectedEnd:focus
   color: var(--calendar-selected-item-color)
   background-color: var(--calendar-selected-item-bg-color)
   font-weight: 500
