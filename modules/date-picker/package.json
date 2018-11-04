@@ -1,7 +1,7 @@
 {
   "name": "@vcl/date-picker",
   "description": "Lets users pick dates and points in time comfortably",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -12,35 +12,35 @@
   "style": "index.styl",
   "author": {
     "name": "n-fuse GmbH",
-    "email": "info@n-fuse.de",
-    "url": "www.n-fuse.de"
+    "email": "info@n-fuse.co",
+    "url": "www.n-fuse.co"
   },
   "contributors": [
     {
       "name": "Thomas Hoppe",
-      "email": "thomas.hoppe@n-fuse.de"
+      "email": "thomas.hoppe@n-fuse.co"
     }
   ],
   "license": "MIT",
   "devDependencies": {
-    "normalize.css": "^7.0.0",
-    "pre-commit": "^1.1.2",
     "@vcl/build-demo": "^0.3.1",
-    "@vcl/button": "^0.2.0",
-    "@vcl/calendar": "^0.2.0",
-    "@vcl/data-grid": "^0.2.0",
-    "@vcl/default-theme": "^0.2.0",
-    "@vcl/default-theme-terms": "^0.2.0",
-    "@vcl/flex-layout": "^0.2.0",
+    "@vcl/button": "^0.2.3",
+    "@vcl/calendar": "^0.2.4",
+    "@vcl/data-grid": "^0.2.1",
+    "@vcl/default-theme": "^0.2.4",
+    "@vcl/default-theme-terms": "^0.2.3",
+    "@vcl/flex-layout": "^0.2.2",
     "@vcl/font-awesome": "^0.3.0",
-    "@vcl/icogram": "^0.2.0",
-    "@vcl/icon": "^0.2.0",
-    "@vcl/popover": "^0.2.0",
-    "@vcl/preprocessor": "^0.2.2",
-    "@vcl/toolbar": "^0.2.0",
-    "@vcl/typography": "^0.2.0",
-    "@vcl/utils": "^0.2.0",
-    "browser-sync": "^2.24.7"
+    "@vcl/icogram": "^0.2.5",
+    "@vcl/icon": "^0.2.3",
+    "@vcl/popover": "^0.2.1",
+    "@vcl/preprocessor": "^0.2.7",
+    "@vcl/toolbar": "^0.2.3",
+    "@vcl/typography": "^0.2.4",
+    "@vcl/utils": "^0.2.1",
+    "browser-sync": "^2.24.7",
+    "normalize.css": "^8.0.0",
+    "pre-commit": "^1.1.2"
   },
   "dependencies": {},
   "keywords": [
