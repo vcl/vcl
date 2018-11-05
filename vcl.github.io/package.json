@@ -115,7 +115,7 @@
   },
   "homepage": "https://github.com/vcl/vcl.github.io",
   "devDependencies": {
-    "@vcl/core-modules": "^0.2.10",
+    "@vcl/core-modules": "0.2.13",
     "@vcl/default-theme": "^0.2.3",
     "@vcl/default-theme-terms": "^0.2.2",
     "@vcl/doc-gen": "0.2.10",
