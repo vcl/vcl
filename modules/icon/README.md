@@ -41,7 +41,7 @@ Inline SVG based.
 
 ## Modifiers
 
-- `vclIconSize1`: Default size for non font-size controlled sizing ~24px.
+- `vclIconSize1`: Default size for non icon-font based icons ~24px.
 - `vclIconSize2`: ~36px.
 - `vclIconSize3`: ~48px.
 
