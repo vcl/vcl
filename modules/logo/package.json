@@ -1,7 +1,7 @@
 {
   "name": "@vcl/logo",
   "description": "The logo representing the application or web site",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -23,14 +23,14 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "pre-commit": "^1.1.2",
-    "@vcl/build-demo": "^0.3.1",
-    "@vcl/default-theme": "^0.2.0",
-    "@vcl/default-theme-terms": "^0.2.0",
-    "@vcl/preprocessor": "^0.2.2",
-    "@vcl/responsive-image": "^0.2.0",
-    "@vcl/typography": "^0.2.0",
-    "browser-sync": "^2.24.7"
+    "@vcl/build-demo": "0.3.2",
+    "@vcl/default-theme": "0.2.4",
+    "@vcl/default-theme-terms": "0.2.4",
+    "@vcl/preprocessor": "0.2.7",
+    "@vcl/responsive-image": "0.2.1",
+    "@vcl/typography": "0.2.4",
+    "browser-sync": "2.26.3",
+    "pre-commit": "1.2.2"
   },
   "dependencies": {},
   "keywords": [
