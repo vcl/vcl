@@ -18,7 +18,9 @@ table
     & td
       padding: 0.2em 0.3em
   &.vclNoBorder
-    border: 0
+    & tbody
+      & tr
+        border-width: 0
 
 .vclTable
   width: 100%
@@ -109,10 +111,6 @@ table.vclTable input,
     vertical-align: bottom
 
 /* Modifiers for borders */
-
-.vclDottedBorder,
-.vclTable.vclDottedBorder td
-  border-style: dotted
 
 .vclTable.vclVerticalBorder td,
 .vclTable.vclVerticalBorder th

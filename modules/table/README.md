@@ -58,9 +58,7 @@ Optionally an alternating row color can be defined by using the modifier
 
 _Border configuration_
 
-The cell borders are removed with `vclNoBorder`.
-The border style can be changed from solid to dotted by using the
-`vclDottedBorder` modifier.
+The row borders are removed with `vclNoBorder`.
 
 _Padding style_
 
