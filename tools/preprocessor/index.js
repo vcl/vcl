@@ -17,12 +17,11 @@ var vars = require('postcss-css-variables');
 var rucksack = require('rucksack-css');
 var cssnano = require('cssnano');
 var autoprefixer = require('autoprefixer');
-var cssnext = require("postcss-cssnext");
+var postcssPreset = require('postcss-preset-env');
 var namespace = require('postcss-add-namespace');
 var selectorNamespace = require('postcss-selector-namespace');
 var postcssNesting = require('postcss-nesting');
 var safe = require('postcss-safe-parser');
-
 
 var Processor = function Processor(css, opts) {
   opts = opts || {};
@@ -61,9 +60,9 @@ var Processor = function Processor(css, opts) {
    compiler.use(postcssNesting());
    compiler.use(vars()); // CSS4 compatible variable support
    compiler.use(colors()); // W3C CSS4 Color functions
-   compiler.use(cssnext()); // postcss-cssnext
-   compiler.use(rucksack()); // rucksack css
-   // compiler.use(autoprefixer()); // autoprefixer Not needed due to cssnext()
+   compiler.use(postcssPreset());
+   compiler.use(rucksack());
+   // compiler.use(autoprefixer()); // autoprefixer Not needed due to postcssPreset
 
    // compiler.use(cssnano()); // cssnano 4 production
 

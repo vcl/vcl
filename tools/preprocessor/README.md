@@ -91,4 +91,4 @@ The following ways to import CSS files are supported:
 - Simple `clear: fix` construct via [rucksack-css](https://www.rucksackcss.org/).
 - Namespacing via [postcss-add-namespace](https://github.com/GarthDB/postcss-add-namespace).
 - Media queries level 4 shim prevents unwanted hover behavior on touch devices via [mq4-hover-shim](https://github.com/twbs/mq4-hover-shim).
-- Next gen CSS features via [css-next](http://cssnext.io/).
+- Next gen CSS features via [postcss-preset-env](https://preset-env.cssdb.org/).
