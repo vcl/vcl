@@ -5,7 +5,10 @@
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
-    "start": "node ./node_modules/gulp/bin/gulp dev"
+    "browsersync": "node_modules/.bin/browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
+    "build-demo": "node node_modules/@vcl/build-demo/index.js",
+    "democss": "node_modules/.bin/ vcl-preprocessor demo.styl demo/demo.css",
+    "start": "npm run browsersync & npm run build-demo"
   },
   "style": "index.styl",
   "author": {
@@ -25,12 +28,13 @@
     "@vcl/container": "0.2.1",
     "@vcl/default-theme": "0.2.4",
     "@vcl/flex-layout": "0.2.2",
-    "@vcl/preprocessor": "0.2.7",
+    "@vcl/preprocessor": "0.2.8",
     "@vcl/typography": "0.2.4",
+    "browser-sync": "2.26.3",
     "gulp": "3.9.1",
     "gulp-concat": "2.6.1",
     "merge2": "1.2.3",
-    "normalize.css": "8.0.0",
+    "normalize.css": "8.0.1",
     "pre-commit": "1.2.2"
   },
   "dependencies": {},
