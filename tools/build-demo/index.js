@@ -18,7 +18,6 @@ mkdirp('build', (errr) => {
   });
 });
 
-
 fs.watch('./index.styl', { encoding: 'buffer' }, (eventType, buffer) => {
   const process = vcl.package('./package.json', { includeDevDependencies: true });
   process.then((result) => {

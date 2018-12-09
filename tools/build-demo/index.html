@@ -17,7 +17,6 @@
       // Hack to convert nodelist to real JS-array
       content = Array.prototype.slice.call(content);
       content.map(function(node) {
-
         parentNode.body.appendChild(node.cloneNode(true));
       });
       if (i + 1 < nl.length) {
@@ -29,9 +28,8 @@
   </script>
 </head>
 <body onload="inlineHtmlImports(document);">
-  
+
 <link rel="import" href="demo/example.html">
 
 </body>
 </html>
-
