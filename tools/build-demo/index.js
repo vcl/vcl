@@ -1,7 +1,7 @@
 
 const fs = require('fs');
 const mkdirp = require('mkdirp');
-const vcl = require('./node_modules/@vcl/preprocessor');
+const vcl = require('@vcl/preprocessor');
 
 const pack = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 mkdirp('build', (errr) => {
