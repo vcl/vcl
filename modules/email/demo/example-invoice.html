@@ -5,25 +5,23 @@
     <br>
   </div>
   <div class="vclEmailBody">
-    <br><br>
-
     <div class="vclFloatLeft">
-      <img class="vclResponsiveImage vclLogo" role="presentation" src="https://cdn.jsdelivr.net/gh/vcl/vcl/gfx/vcl_logo_square-bw.svg" style="width: 9em;">
-      <div>
+      <img class="vclResponsiveImage vclLogo" role="presentation" src="https://cdn.jsdelivr.net/gh/vcl/vcl/gfx/vcl_logo_square-bw.svg" style="width: 9em; margin-top: 1em;">
+      <div style="margin-bottom: 1em;">
         <span class="vclText">VCL Company SE</span>&nbsp;·&nbsp;
         <span class="vclText">Somestreet 45</span>&nbsp;·&nbsp;
         <span class="vclText">70174 Stuttgart</span>
       </div>
     </div>
 
-    <table class="vclNoBorder vclCondensed vclFloatRight invoicemeta" style="min-width: 18em;">
+    <table class="vclTable vclCondensed vclFloatRight invoicemeta" style="width: 20em; margin-top: 1.5em;">
       <tr>
         <td><b>Invoice No.</b></td>
         <td class="vclAlignRight">2017110800169</td>
       </tr>
       <tr>
         <td><b>Date</b></td>
-        <td class="vclAlignRight">19.09.2015</td>
+        <td class="vclAlignRight">19.09.2019</td>
       </tr>
       <tr>
         <td><b>Payment Status</b></td>
@@ -43,7 +41,7 @@
     <div class="vclClearFix"></div>
     <br>
 
-    <table class="vclNoBorder vclFloatLeft billingAddress" style="width: 100%; max-width:50%;">
+    <table class="vclTable vclNoBorder vclFloatLeft billingAddress" style="width: 100%; max-width:50%;">
        <tbody>
         <tr>
           <td><b>Rechnungsadresse</b></td>
@@ -64,7 +62,7 @@
       </tbody>
     </table>
 
-    <table class="vclNoBorder vclFloatLeft shippingAddress" style="width: 100%; max-width:50%;">
+    <table class="vclTable vclNoBorder vclFloatLeft shippingAddress" style="width: 100%; max-width:50%;">
       <tbody>
         <tr>
           <td><b>Lieferadresse</b></td>
@@ -86,63 +84,65 @@
     </table>
     <div class="vclClearFix"></div>
     <br>
-    <table class="vclTable vclSumTable items">
-      <thead>
-        <tr>
-          <th><div>Position</div></th>
-          <th><div>Description</div></th>
-          <th class="vclAlignRight"><div>Quantity</div></th>
-          <th class="vclAlignRight"><div>VAT</div></th>
-          <th class="vclAlignRight"><div>Amount (€)</div></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Article 23784628</td>
-          <td class="vclAlignRight">1</td>
-          <td class="vclAlignRight">19%</td>
-          <td class="vclAlignRight">12.00</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Article 34895789</td>
-          <td class="vclAlignRight">1 000</td>
-          <td class="vclAlignRight">19%</td>
-          <td class="vclAlignRight">11,111.11</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Article 89054373</td>
-          <td class="vclAlignRight">2</td>
-          <td class="vclAlignRight">7%</td>
-          <td class="vclAlignRight">1.15</td>
-        </tr>
-        <tr class="vclSumTableSubTotal">
-          <td colspan="3">Sub-Total (gross)</td>
-          <td colspan="2" class="vclAlignRight">27,689.22 <small>€</small></td>
-        </tr>
-        <tr class="vclNoBorder">
-          <td colspan="3">Sub-Total (net)</td>
-          <td colspan="2" class="vclAlignRight">23,384.22 <small>€</small></td>
-        </tr>
-        <tr class="vclNoBorder">
-          <td colspan="5">&nbsp;</td>
-        </tr>
-        <tr class="vclNoBorder">
-          <td colspan="3">+ VAT 19%</td>
-          <td colspan="2" class="vclAlignRight">4,224.50 <small>€</small></td>
-        </tr>
-        <tr class="vclNoBorder">
-          <td colspan="3">+ VAT 7%</td>
-          <td colspan="2" class="vclAlignRight">80.50 <small>€</small></td>
-        </tr>
-        <tr class="vclSumTableTotal">
-          <td colspan="3">To be paid</td>
-          <td colspan="2" class="vclAlignRight">27,689.22 <small>€</small></td>
-        </tr>
-      </tbody>
-    </table>
+    <div style="width: 100%; overflow: auto;">
+      <table class="vclTable vclSumTable items">
+        <thead>
+          <tr>
+            <th><div>Position</div></th>
+            <th><div>Description</div></th>
+            <th class="vclAlignRight"><div>Quantity</div></th>
+            <th class="vclAlignRight"><div>VAT</div></th>
+            <th class="vclAlignRight"><div>Amount (€)</div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Article 23784628</td>
+            <td class="vclAlignRight">1</td>
+            <td class="vclAlignRight">19%</td>
+            <td class="vclAlignRight">12.00</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Article 34895789</td>
+            <td class="vclAlignRight">1 000</td>
+            <td class="vclAlignRight">19%</td>
+            <td class="vclAlignRight">11,111.11</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Article 89054373</td>
+            <td class="vclAlignRight">2</td>
+            <td class="vclAlignRight">7%</td>
+            <td class="vclAlignRight">1.15</td>
+          </tr>
+          <tr class="vclSumTableSubTotal">
+            <td colspan="3">Sub-Total (gross)</td>
+            <td colspan="2" class="vclAlignRight">27,689.22 <small>€</small></td>
+          </tr>
+          <tr class="vclNoBorder">
+            <td colspan="3">Sub-Total (net)</td>
+            <td colspan="2" class="vclAlignRight">23,384.22 <small>€</small></td>
+          </tr>
+          <tr class="vclNoBorder">
+            <td colspan="5">&nbsp;</td>
+          </tr>
+          <tr class="vclNoBorder">
+            <td colspan="3">+ VAT 19%</td>
+            <td colspan="2" class="vclAlignRight">4,224.50 <small>€</small></td>
+          </tr>
+          <tr class="vclNoBorder">
+            <td colspan="3">+ VAT 7%</td>
+            <td colspan="2" class="vclAlignRight">80.50 <small>€</small></td>
+          </tr>
+          <tr class="vclSumTableTotal">
+            <td colspan="3">To be paid</td>
+            <td colspan="2" class="vclAlignRight">27,689.22 <small>€</small></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <br>
     <p class="payment_instructions">
       Please transfer the money to the following account:
