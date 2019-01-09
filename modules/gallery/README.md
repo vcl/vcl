@@ -1,11 +1,11 @@
-# [VCL](https://github.com/vcl/vcl/doc) gallery
+# [VCL](https://vcl.github.io/) gallery
 
 Image gallery.
 
 ## Features
 
 Allows directionally browse in a list of images.
-The current image is shown at its native size with two button controls 
+The current image is shown at its native size with two button controls
 for forward and backward navigation.
 A transparent pane covering the clear diameter of the image can be used as
 active area for user interaction. The pane is splitted vertically in the middle

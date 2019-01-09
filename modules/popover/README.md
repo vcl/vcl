@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) popover
+# [VCL](https://vcl.github.io/) popover
 
 Contextual overlay.
 

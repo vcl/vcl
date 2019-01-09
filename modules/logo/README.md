@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) logo
+# [VCL](https://vcl.github.io/) logo
 
 The logo representing the application or web site.
 

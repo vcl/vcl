@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) layout-spans
+# [VCL](https://vcl.github.io/) layout-spans
 
 Percentage based sizing spans.
 

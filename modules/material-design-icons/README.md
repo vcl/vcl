@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) material-design-icons
+# [VCL](https://vcl.github.io/) material-design-icons
 
 Integration with the [material design icons](http://materialdesignicons.com/).
 

@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) breakpoints
+# [VCL](https://vcl.github.io/) breakpoints
 
 Descriptive breakpoints for responsive adaptation of components.
 
@@ -13,7 +13,7 @@ The following ranges of viewport widths are defined:
 ## Usage
 
 Warning: Try to prevent responsive components as much as you can,
-[see why](https://github.com/vcl/vcl/doc#responsive-css-via-media-queries).
+[see why](https://vcl.github.io/#responsive-css-via-media-queries).
 
 ```css
 @media (--sm-viewport)

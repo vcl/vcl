@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) progress-bar
+# [VCL](https://vcl.github.io/) progress-bar
 
 Show the progress of an operation.
 

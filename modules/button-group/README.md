@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) button-group
+# [VCL](https://vcl.github.io/) button-group
 
 Arrangement of multiple buttons as group.
 

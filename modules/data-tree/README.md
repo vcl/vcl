@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) data-tree
+# [VCL](https://vcl.github.io/) data-tree
 
 Tree structured data browser.
 

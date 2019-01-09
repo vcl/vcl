@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) default-theme
+# [VCL](https://vcl.github.io/) default-theme
 
 The VCL default theme for the core modules collection.
 

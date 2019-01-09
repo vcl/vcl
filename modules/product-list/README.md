@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) process-nav
+# [VCL](https://vcl.github.io/) process-nav
 
 Display tabular product data.
 

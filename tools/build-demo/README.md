@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) build-demo
+# [VCL](https://vcl.github.io/) build-demo
 
 This module contains a HTML scaffold used for all demos.
 

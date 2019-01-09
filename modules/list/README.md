@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) list
+# [VCL](https://vcl.github.io/) list
 
 List without interaction.
 

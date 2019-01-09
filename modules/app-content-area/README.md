@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) app-content-area
+# [VCL](https://vcl.github.io/) app-content-area
 
 The area which houses the main content.
 

@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) form-control-label
+# [VCL](https://vcl.github.io/) form-control-label
 
 Label to describe form controls.
 

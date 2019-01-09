@@ -55,7 +55,7 @@ All modules with version level `>= 0.1.0` are ready for production use.
 
 ### Example Project
 
-See [the tutorial](https://github.com/vcl/vcl/doc/tree/master/tutorial) for
+See [the tutorial](https://vcl.github.io//tree/master/tutorial) for
 how to use VCL modules in a Web project and how to make it part of its
 build process.
 
@@ -64,7 +64,7 @@ build process.
 If you are a developer, see below how to create one.
 We are willed to add new modules to the VCL org's range of modules
 if they fit.
-Otherwise [create an issue](https://github.com/vcl/vcl/doc/issues).
+Otherwise [create an issue](https://vcl.github.io//issues).
 
 ### Development
 

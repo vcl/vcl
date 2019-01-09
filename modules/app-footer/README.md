@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) app-footer
+# [VCL](https://vcl.github.io/) app-footer
 
 The area on the bottom of an app, usually containing links and content info.
 

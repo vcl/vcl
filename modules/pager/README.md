@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) pager
+# [VCL](https://vcl.github.io/) pager
 
 Previous and next links to directionally navigate through paged content.
 

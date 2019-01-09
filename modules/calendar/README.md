@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) calendar
+# [VCL](https://vcl.github.io/) calendar
 
 Calendar to display and select date and time.
 

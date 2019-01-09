@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) app-header
+# [VCL](https://vcl.github.io/) app-header
 
 The area on the top of an app, usually containing a brand mark and the main
 navigation.

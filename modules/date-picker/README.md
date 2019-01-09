@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) date-picker
+# [VCL](https://vcl.github.io/) date-picker
 
 Lets users pick dates and points in time comfortably.
 

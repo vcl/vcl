@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) tutorial
+# [VCL](https://vcl.github.io/) tutorial
 
 A short tutorial showing how to create VCL builds based on the collection of
 [core modules](https://github.com/vcl/vcl/modules/core-modules),
@@ -41,7 +41,7 @@ how to style a web page with it and how to run a single component demo.
 At this point, you should already have a functional page. If you open the index.html, while the file vcl.css
 is in the same directory, you should see an example blog-page.
 
-![picture alt](https://cdn.rawgit.com/vcl/vcl/master/doc/tutorial/screenshot.png)
+![picture alt](https://cdn.jsdelivr.net/gh/vcl/vcl/doc/tutorial/screenshot.png)
 
 Explanation of the `index.html` file:
 First, we include our compiled version of VCL using:

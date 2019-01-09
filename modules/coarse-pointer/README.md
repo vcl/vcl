@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) coarse-pointer
+# [VCL](https://vcl.github.io/) coarse-pointer
 
 Optimizations for coarse pointing devices such as touch based input devices.
 

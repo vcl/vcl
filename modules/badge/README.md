@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) badge
+# [VCL](https://vcl.github.io/) badge
 
 A visually highlighted tag to attribute items or show counts.
 

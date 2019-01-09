@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) gulp-vcl-preprocessor
+# [VCL](https://vcl.github.io/) gulp-vcl-preprocessor
 
 [![Build Status](http://img.shields.io/travis/vcl/gulp-vcl-preprocessor.svg?style=flat)](https://travis-ci.org/vcl/gulp-vcl-preprocessor)
 

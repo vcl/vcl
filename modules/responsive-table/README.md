@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) responsive-table
+# [VCL](https://vcl.github.io/) responsive-table
 
 Transposed variant of normal vcl-table optimized for narrow viewports
 

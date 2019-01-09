@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) size-modulation
+# [VCL](https://vcl.github.io/) size-modulation
 
 Scale the size of text and whole widgets.
 

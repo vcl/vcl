@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) bw-theme
+# [VCL](https://vcl.github.io/) bw-theme
 
 Black/ white theme.
 

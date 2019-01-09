@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) figure
+# [VCL](https://vcl.github.io/) figure
 
 A composition of a container for one or multiple images and a caption.
 

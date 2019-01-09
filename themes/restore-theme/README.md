@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) restore-theme
+# [VCL](https://vcl.github.io/) restore-theme
 
 Restore theme.
 

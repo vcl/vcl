@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) effects
+# [VCL](https://vcl.github.io/) effects
 
 A collection of effects such as 'blur' realized with CSS filters.
 

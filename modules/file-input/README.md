@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) file-input
+# [VCL](https://vcl.github.io/) file-input
 
 File input for selecting one or multiple files via tap and drag-and-drop
 gestures.
@@ -6,7 +6,7 @@ gestures.
 ## Features
 
 A dragged-over sensitive input control that is typically used in drag-and-drop
-scenarios such as file upload inputs. At the same time it can be focused 
+scenarios such as file upload inputs. At the same time it can be focused
 and and the main action triggered with the same gestures like applicable to
  a button.
 

@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/vcl/doc) sum-table
+# [VCL](https://vcl.github.io/) sum-table
 
 Table extensions for numeral and especially financial number display.
 
