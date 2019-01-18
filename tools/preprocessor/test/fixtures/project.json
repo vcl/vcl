@@ -2,7 +2,7 @@
   "name": "my-awesome-vcl-module",
   "version": "0.1.0",
   "main": "lib/index.js",
-  "style": "project.styl",
+  "style": "project.sss",
   "dependencies": {
     "@vcl/button": "git://github.com/vcl/button",
     "@vcl/default-theme": "git://github.com/vcl/default-theme",

@@ -37,7 +37,7 @@ describe('vcl object', function() {
 
   it('should return valid css', function() {
     compiler.then(function (result) {
-      assert.equal(result.css, 'body {\n  color: blue\n}');
+      assert.equal(result.css, 'body {\n  color: blue;\n}');
     });
 
   });
@@ -46,18 +46,18 @@ describe('vcl object', function() {
     let anotherCompiler = vcl('body\n  color: rgba(#ccc, .5)');
 
     anotherCompiler.then(function (result) {
-      assert.equal(result.css, 'body {\n  color: rgba(204,204,204, .5)\n}');
+      assert.equal(result.css, 'body {\n  color: rgba(204,204,204, .5);\n}');
     });
 
   });
 
   it('should return valid css, without using whitespace syntax', function() {
-    let anotherCompiler = vcl('body {\n  color: rgba(#ccc, .5)}', {
+    let anotherCompiler = vcl('body {\n  color: rgba(#ccc, .5);}', {
       whitespace: false
     });
 
     anotherCompiler.then(function (result) {
-      assert.equal(result.css, 'body {\n  color: rgba(204,204,204, .5)}');
+      assert.equal(result.css, 'body {\n  color: rgba(204,204,204, .5);}');
     });
 
   });
@@ -68,7 +68,7 @@ describe('vcl object', function() {
     anotherCompiler.then(function (result) {
       // console.log(result.css);
       assert.equal(typeof result.css, 'string');
-      assert.equal(result.css, 'body{\n  background: red\n}');
+      assert.equal(result.css, 'body{\n  background: red;\n}');
       done();
     });
 
@@ -77,7 +77,7 @@ describe('vcl object', function() {
   it('should include npm imports', function(done) {
     var anotherCompiler = vcl('@import "@vcl/default-theme-terms"', opts);
     anotherCompiler.then(function (result) {
-     // console.log('result.css', result.css);
+      // console.log('result.css', result.css);
       assert.equal(typeof result.css, 'string');
       done(null);
     });
@@ -96,7 +96,7 @@ describe('vcl object', function() {
     });
 
     anotherCompiler.then(function (result) {
-   // console.log(result.css.trim(), css_namespaces.trim());
+      // console.log(result.css.trim(), css_namespaces.trim());
       assert.equal(result.css.trim(), css_namespaces.trim());
       done(null);
     });
@@ -104,7 +104,7 @@ describe('vcl object', function() {
 
   });
 
- });
+});
 
 describe('compiling packages', function() {
 
@@ -120,13 +120,13 @@ describe('compiling packages', function() {
     var compiledPackage = vcl.package('./test/fixtures/project.json', {npm: {root: __dirname}});
 
     compiledPackage.then(function (result) {
-     // console.log(result.css);
+      // console.log(result.css);
       assert.ok(result.css.length > 100, 'result should be longer than 100 chars');
       done();
     })
-    .catch((error)=> {
-          console.log(error);
-        });
+      .catch((error)=> {
+        console.log(error);
+      });
   });
 
   it('should compile a valid package (object)', function(done) {
@@ -139,7 +139,7 @@ describe('compiling packages', function() {
     }, {npm: {root: __dirname}});
 
     compiledPackage.then(function (result) {
-    //  console.log('result', result.css);
+      //  console.log('result', result.css);
       assert.ok(result.css.length > 200, 'result should be longer than 200 chars');
       done();
     });
@@ -192,8 +192,8 @@ describe('compiling packages', function() {
       compiledPackage.then(function (result) {
         // console.log('result', result);
       }).catch((error)=> {
-          console.log(error);
-        });
+        console.log(error);
+      });;
     }, /No file or npm module.*/);
   });
 
@@ -238,7 +238,7 @@ describe('compiling packages', function() {
     }, {npm: {root: __dirname}});
 
     compiledPackage.then(function (result) {
-     // console.log(result.css);
+      // console.log(result.css);
       assert.ok(result.css.length > 200, 'result should be longer than 200 chars');
       done();
     });
@@ -300,7 +300,7 @@ describe('compiling packages', function() {
     }, {npm: {root: __dirname}});
 
     compiledPackage.then(function (result) {
-     // console.log(result.css);
+      // console.log(result.css);
       assert.ok(result.css.length > 200, 'result should be longer than 200 chars');
       done();
     });
@@ -339,7 +339,7 @@ describe('compiling packages', function() {
     }, opts);
 
     compiledPackage.then(function (result) {
-     // console.log(result.css);
+      // console.log(result.css);
       assert.ok(result.css.length > 200, 'result should be longer than 200 chars');
       done();
     });
@@ -360,7 +360,7 @@ describe('compiling packages', function() {
     }, opts);
 
     compiledPackage.then(function (result) {
-     // console.log(result.css);
+      // console.log(result.css);
       assert.ok(result.css.length > 200, 'result should be longer than 200 chars');
       done();
     });
