@@ -48,6 +48,9 @@ var vcl = require('@vcl/preprocessor');
 // Signature
 var process = vcl(css, opts);
 
+// will return an array of postCSS plugins
+var process = vcl.createPostCSSPlugins(opts);
+
 // will return promise on the compiled css
 var process = vcl('body\n  color: blue');
 process.then(result => result.css);

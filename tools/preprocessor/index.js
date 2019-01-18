@@ -15,26 +15,19 @@ var colors = require('postcss-color-function');
 var npmimport = require('postcss-import');
 var vars = require('postcss-css-variables');
 var rucksack = require('rucksack-css');
-var cssnano = require('cssnano');
-var autoprefixer = require('autoprefixer');
 var postcssPreset = require('postcss-preset-env');
 var namespace = require('postcss-add-namespace');
 var selectorNamespace = require('postcss-selector-namespace');
 var postcssNesting = require('postcss-nesting');
 var safe = require('postcss-safe-parser');
 
-var Processor = function Processor(css, opts) {
+/**
+ * Creates and return a list of postCSS plugins required for the VCL
+ * @param {string} opts - The title of the book.
+ * @return Array of postCSS plugins
+ */
+var createPostCSSPlugins = function (opts) {
   opts = opts || {};
-
-  if (css === undefined) {
-    throw new Error('Got no css input');
-  }
-
-  if (opts.whitespace !== false) {
-    css = whitespace(css); // convert to normal css
-  }
-
-  const compiler = postcss();
 
   let npmOptions = {
     // addModulesDirectories: ["node_modules"],
@@ -51,33 +44,51 @@ var Processor = function Processor(css, opts) {
      root: opts.root || process.cwd()
   };
 
-
   if (opts.npm !== undefined) {
     _.extend(npmOptions, opts.npm);
   }
 
-   compiler.use(npmimport(npmOptions));
-   compiler.use(postcssNesting());
-   compiler.use(vars()); // CSS4 compatible variable support
-   compiler.use(colors()); // W3C CSS4 Color functions
-   compiler.use(postcssPreset());
-   compiler.use(rucksack());
-   // compiler.use(autoprefixer()); // autoprefixer Not needed due to postcssPreset
-
-   // compiler.use(cssnano()); // cssnano 4 production
+  const plugins = [
+    npmimport(npmOptions),
+    postcssNesting(),
+    vars(), // CSS4 compatible variable suppot
+    colors(), // W3C CSS4 Color functios
+    postcssPreset(),
+    rucksack()
+    // autoprefixer()); // autoprefixer Not needed due to postcssPrest
+    // cssnano()); // cssnano 4 productin
+  ];
 
   if (opts.namespaceOptions) {
-    compiler.use(namespace(opts.namespaceOptions.class));
-    compiler.use(selectorNamespace({ selfSelector: ':--component', namespace: opts.namespaceOptions.selector }));
+    plugins.push(namespace(opts.namespaceOptions.class));
+    plugins.push(selectorNamespace({ selfSelector: ':--component', namespace: opts.namespaceOptions.selector }));
   }
 
   if (opts.useMq4HoverShim) {
-    compiler.use(mq4HoverShim.postprocessorFor({hoverSelectorPrefix: opts.mq4HoverShimOptions && opts.mq4HoverShimOptions.shimPrefixClass || '.vclHoverSupport'}));
+    plugins.push(mq4HoverShim.postprocessorFor({hoverSelectorPrefix: opts.mq4HoverShimOptions && opts.mq4HoverShimOptions.shimPrefixClass || '.vclHoverSupport'}));
   }
+  return plugins;
+}
+
+var Processor = function Processor(css, opts) {
+  opts = opts || {};
+
+  if (css === undefined) {
+    throw new Error('Got no css input');
+  }
+
+  if (opts.whitespace !== false) {
+    css = whitespace(css); // convert to normal css
+  }
+
+  const plugins = createPostCSSPlugins(opts);
+
+  const compiler = postcss(plugins);
+
   opts.parser = safe;
   opts.from = undefined;
 
-   return compiler.process(css, opts);
+  return compiler.process(css, opts);
 };
 
 var createProcessor = function cProcessor(css, opts) {
@@ -300,3 +311,4 @@ var preProcessPackage = function(pack, opts) {
 
 module.exports = createProcessor;
 module.exports.package = preProcessPackage;
+module.exports.createPostCSSPlugins = createPostCSSPlugins;
