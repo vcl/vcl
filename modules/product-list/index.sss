@@ -1,0 +1,61 @@
+.vclProductList
+  width: 100%
+  padding: 0
+  & > tbody tr
+    border-bottom-style: solid
+    border-bottom-width: 1px
+    border-bottom-color: var(--product-list-border-color)
+    color: var(--product-list-color)
+    padding-bottom: 10px
+  & .vclPLName
+    font-weight: bold
+    color: var(--product-list-name-color)
+  & .vclPLData
+    white-space: nowrap
+  & .vclPLPrice
+    text-align: right
+  & .vclPLControls
+    text-align: right
+    & .vclInput
+      width: 4em
+  & .vclProductImage img
+    width: 100%
+    max-width: 8em
+
+.vclProduct
+  & img
+    display: flex
+    width: 50%
+  & table
+    width: 50%
+    margin-top: 5em
+
+@media (--sm-viewport)
+  table.vclProductList,
+  .vclProductList thead,
+  .vclProductList tbody,
+  .vclProductList th,
+  .vclProductList td,
+  .vclProductList tr
+    display: block
+
+  .vclProductList thead tr
+    position: absolute
+    top: -9999em
+    left: -9999em
+
+  .vclProductList td
+    border: none
+    position: relative
+    &:before
+      position: absolute
+      top: 1em
+      left: 1em
+      width: 45%
+      padding-right: 1em
+      white-space: nowrap
+
+  .vclProductImage img
+    width: 100%
+    max-width: none !important
+

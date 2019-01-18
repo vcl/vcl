@@ -1,0 +1,90 @@
+.vclDropdown
+  user-select: none
+  box-sizing: border-box
+  display: none
+  position: absolute
+  z-index: 60
+  min-width: 13em
+  max-height: 25em
+  margin: 0
+  padding: 0
+  list-style: none
+  text-align: left
+  border-color: var(--dropdown-border-color)
+  border-width: var(--dropdown-border-width)
+  border-style: solid
+  background-color: var(--dropdown-bg-color)
+  overflow-x: hidden
+  overflow-y: auto
+  outline: 0
+  & .vclDropdownItem
+    outline: 0
+    line-height: 1.6
+    padding-top: 0.38em
+    padding-bottom: 0.38em
+    cursor: pointer
+    color: var(--dropdown-item-color)
+    & > .vclDropdownItemLabel,
+    & > .vclDropdownItemSubLabel
+      display: block
+      padding-left: 0.9rem
+      padding-right: 0.9rem
+      padding-bottom: 0.1em
+      white-space: nowrap
+      text-decoration: none
+      overflow: hidden
+      text-overflow: ellipsis
+    &:hover,
+    &:focus
+      background-color: var(--dropdown-item-bg-hover-color)
+      & > .vclDropdownItemLabel
+        color: var(--dropdown-item-hover-color)
+      & > .vclDropdownItemSubLabel
+        color: var(--dropdown-item-sub-label-hover-color)
+    & > .vclDropdownItemSubLabel
+      font-size: 0.95em
+      padding-top: 0
+      color: var(--dropdown-item-sub-label-color)
+    &.vclSelected,
+    &.vclSelected:hover,
+    &.vclSelected:focus
+      background-color: var(--dropdown-selected-item-bg-color)
+      & > .vclDropdownItemLabel,
+      & > .vclDropdownItemSubLabel
+        color: var(--dropdown-selected-item-color)
+    &.vclHighlighted,
+    &.vclHighlighted:hover,
+    &.vclHighlighted:focus
+      background-color: var(--dropdown-highlighted-item-bg-color)
+      & > .vclDropdownItemLabel
+        color: var(--dropdown-highlighted-item-color)
+    &.vclDisabled,
+    &.vclDisabled:hover,
+    &.vclDisabled:focus
+      background-color: var(--dropdown-disabled-item-bg-color)
+      cursor: default
+      & > .vclDropdownItemLabel,
+      & > .vclDropdownItemSubLabel
+        color: var(--dropdown-disabled-item-color)
+  & .vclSeparator
+    margin-top: 0.5em
+    margin-bottom: 0.5em
+    border-bottom-color: var(--dropdown-separator-item-border-color)
+    border-bottom-width: 1px
+    border-bottom-style: solid
+    &:hover,
+    &:focus
+      background-color: transparent
+  & .vclDropdownItemGroupHeader
+    line-height: 1.4
+    padding-top: 0.1em
+    padding-bottom: 0.1em
+    & > .vclDropdownItemGroupHeaderLabel
+      line-height: 1.6
+      padding-top: 0.2em
+      padding-bottom: 0.2em
+      padding-left: 0.5em
+      font-weight: 600
+      cursor: default
+  &.vclOpen
+    display: block

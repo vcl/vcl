@@ -1,0 +1,271 @@
+.vclButtonDim
+  display: inline
+  vertical-align: middle
+  border-width: var(--button-border-width)
+  line-height: var(--button-line-height)
+  height: var(--button-height)
+  font-weight: bolder
+  box-sizing: border-box
+  padding-right: 0.8em
+  padding-left: 0.8em
+  padding-top: 0
+  padding-bottom: 0
+  &.vclSquare
+    min-width: var(--button-height)
+
+.vclButton,
+.vclButton[disabled]
+  border-width: var(--button-border-width)
+  border-color: var(--button-border-color)
+  border-style: solid
+  border-radius: var(--button-border-radius)
+  padding-right: 0.8em
+  padding-left: 0.8em
+  padding-top: 0
+  padding-bottom: 0
+  line-height: var(--button-line-height)
+  text-decoration: none
+  font-weight: bolder
+  vertical-align: middle
+  display: inline-block
+  height: var(--button-height)
+  box-sizing: border-box
+  user-select: none
+  white-space: normal
+  clear: fix
+  cursor: pointer
+  transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out
+
+.vclButton
+  > .vclIcogram
+    font-size: var(--button-label-font-size)
+    line-height: var(--button-line-height)
+
+a.vclButton
+  > .vclIcogram
+    display: inline-block
+
+.vclButton.vclOverflowEllipsis > .vclIcogram > .vclText
+  text-overflow: ellipsis
+  overflow: hidden
+  white-space: nowrap
+
+a.vclButton,
+a.vclButton[disabled]
+  line-height: var(--input-elem-height)
+  & > .vclIcogram
+    line-height: inherit
+
+span.vclButton,
+span.vclButton[disabled]
+  display: inline-block
+  line-height: var(--button-line-height)
+
+.vclButton
+  &:focus
+    outline: none
+  &:active
+    outline: none
+  &.vclSquare
+    min-width: var(--button-height)
+    padding-right: 0
+    padding-left: 0
+    text-align: center
+
+.vclButton.vclDisabled,
+.vclButton[disabled]
+  pointer-events: none
+  opacity: .75
+  cursor: default
+
+/* Standard variant */
+.vclButton
+  border-color: var(--button-border-color)
+  background-color: var(--button-bg-color)
+  color: var(--button-label-color)
+  text-transform: var(--button-label-text-transform)
+
+.vclButton.vclSelected
+  color: var(--button-label-selected-color)
+  background-color: var(--button-bg-selected-color)
+
+.vclButton:active,
+.vclButton.vclPressed,
+.vclButton.vclActive
+  background-color: var(--button-bg-hover-color)
+  color: var(--button-label-hover-color)
+
+.vclButton.vclDisabled,
+.vclButton[disabled]
+  color: var(--button-label-disabled-color)
+
+/* Emphasized variant */
+.vclButton.vclEmphasized
+  border-color: var(--button-border-color--emphasized)
+  background-color: var(--button-bg-color--emphasized)
+  color: var(--button-label-color--emphasized)
+
+.vclButton.vclEmphasized:active,
+.vclButton.vclEmphasized.vclPressed,
+.vclButton.vclEmphasized.vclActive
+  background-color: var(--button-bg-hover-color--emphasized)
+  color: var(--button-label-hover-color--emphasized)
+
+/* Emphasized & transparent variant */
+.vclButton.vclEmphasizedTransparent
+  color: var(--button-label-color--emphasized-transparent)
+  background: none
+
+.vclButton.vclEmphasizedTransparent.vclDisabled,
+.vclButton.vclEmphasizedTransparent[disabled]
+  color: var(--button-label-disabled-color--emphasized-transparent)
+
+.vclButton.vclEmphasizedTransparent:active,
+.vclButton.vclEmphasizedTransparent.vclPressed,
+.vclButton.vclEmphasizedTransparent.vclActive
+  background: none
+  color: var(--button-label-hover-color--emphasized-transparent)
+
+/* Transparent variant */
+.vclButton.vclTransparent
+  color: var(--button-label-color--transparent)
+  background: none
+
+.vclButton.vclTransparent.vclDisabled,
+.vclButton.vclTransparent[disabled]
+  color: var(--button-label-disabled-color--transparent)
+
+.vclButton.vclTransparent:active,
+.vclButton.vclTransparent.vclPressed,
+.vclButton.vclTransparent.vclActive
+  background: none
+  color: var(--button-label-hover-color--transparent)
+
+/* Transparent alternative variant */
+.vclButton.vclTransparentAlt
+  background: none
+  background-color: transparent
+  color: var(--button-label-color--transparentalt)
+
+.vclButton.vclTransparentAlt.vclDisabled,
+.vclButton.vclTransparentAlt[disabled]
+  color: var(--button-label-disabled-color--transparentalt)
+
+.vclButton.vclTransparentAlt:active,
+.vclButton.vclTransparentAlt.vclPressed,
+.vclButton.vclTransparentAlt.vclActive
+  background: none
+  color: var(--button-label-hover-color--transparentalt)
+
+/* Half transparent variant */
+.vclButton.vclHalfTransparent
+  background: none
+  background-color: transparent
+  color: var(--button-label-color--half-transparent)
+
+.vclButton.vclHalfTransparent.vclDisabled,
+.vclButton.vclHalfTransparent[disabled]
+  color: var(--button-label-disabled-color--half-transparent)
+
+.vclButton.vclHalfTransparent:active,
+.vclButton.vclHalfTransparent.vclPressed,
+.vclButton.vclHalfTransparent.vclActive
+  background-color: var(--button-bg-hover-color--half-transparent)
+  color: var(--button-label-hover-color--half-transparent)
+
+/* Danger variant */
+.vclButton.vclDanger
+  color: var(--button-label-color--danger)
+  background-color: var(--button-bg-color--danger)
+
+.vclButton.vclDanger:active,
+.vclButton.vclDanger.vclPressed,
+.vclButton.vclDanger.vclActive
+  color: var(--button-label-hover-color--danger)
+  background-color: var(--button-bg-hover-color--danger)
+
+.vclButton.vclDanger.vclDisabled,
+.vclButton.vclDanger[disabled]
+  color: var(--button-label-disabled-color--danger)
+
+/* Suggestive variant */
+.vclButton.vclSuggestive
+  color: var(--button-label-color--suggestive)
+  background-color: var(--button-bg-color--suggestive)
+
+.vclButton.vclSuggestive:active,
+.vclButton.vclSuggestive.vclPressed,
+.vclButton.vclSuggestive.vclActive
+  color: var(--button-label-hover-color--suggestive)
+  background-color: var(--button-bg-hover-color--suggestive)
+
+.vclButton.vclSuggestive.vclDisabled,
+.vclButton.vclSuggestive[disabled]
+  color: var(--button-label-disabled-color--suggestive)
+
+/* Outline modifier */
+.vclOutline
+  border-color: var(--button-bg-color)
+  border-width: 2px
+
+/* Circular modifier */
+.vclCircular
+  border-radius: 50%
+
+/* Hover support */
+@media (hover: hover)
+  .vclButton:hover,
+  .vclButton:focus,
+  .vclButton.vclHover,
+  .vclButton.vclFocused
+    background-color: var(--button-bg-hover-color)
+    color: var(--button-label-hover-color)
+
+  .vclButton.vclEmphasized:hover,
+  .vclButton.vclEmphasized:focus,
+  .vclButton.vclEmphasized.vclHover,
+  .vclButton.vclEmphasized.vclFocused
+    background-color: var(--button-bg-hover-color--emphasized)
+    color: var(--button-label-hover-color--emphasized)
+
+  .vclButton.vclEmphasizedTransparent:hover,
+  .vclButton.vclEmphasizedTransparent:focus,
+  .vclButton.vclEmphasizedTransparent.vclHover,
+  .vclButton.vclEmphasizedTransparent.vclFocused
+    background: none
+    color: var(--button-label-hover-color--emphasized-transparent)
+
+  .vclButton.vclTransparent:hover,
+  .vclButton.vclTransparent:focus,
+  .vclButton.vclTransparent.vclHover,
+  .vclButton.vclTransparent.vclFocused
+    background: none
+    color: var(--button-label-hover-color--transparent)
+
+  .vclButton.vclTransparentAlt:hover,
+  .vclButton.vclTransparentAlt:focus,
+  .vclButton.vclTransparentAlt.vclHover,
+  .vclButton.vclTransparentAlt.vclFocused
+    background: none
+    color: var(--button-label-hover-color--transparentalt)
+
+  .vclButton.vclHalfTransparent:hover,
+  .vclButton.vclHalfTransparent:focus,
+  .vclButton.vclHalfTransparent.vclHover,
+  .vclButton.vclHalfTransparent.vclFocused
+    background-color: var(--button-bg-hover-color--half-transparent)
+    color: var(--button-label-hover-color--half-transparent)
+
+  .vclButton.vclDanger:hover,
+  .vclButton.vclDanger:focus,
+  .vclButton.vclDanger.vclHover,
+  .vclButton.vclDanger.vclFocused
+    color: var(--button-label-hover-color--danger)
+    background-color: var(--button-bg-hover-color--danger)
+
+  .vclButton.vclSuggestive:hover,
+  .vclButton.vclSuggestive:focus,
+  .vclButton.vclSuggestive.vclHover,
+  .vclButton.vclSuggestive.vclFocused
+    color: var(--button-label-hover-color--suggestive)
+    background-color: var(--button-bg-hover-color--suggestive)

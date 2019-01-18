@@ -1,0 +1,83 @@
+.vclPanel
+  background-color: var(--panel-bg-color)
+  margin-bottom: var(--block-elem-vertical-gap)
+  overflow: overlay
+  &.vclPanelCard
+    border-width: 1px
+    border-style: solid
+    border-color: var(--panel-border-color)
+    border-radius: var(--panel-border-radius--card)
+  &.vclPanelDialog
+    border-width: 1px
+    border-style: solid
+    border-color: var(--gray-light-5)
+    &.vclDanger
+      color: var(--danger-medium-color)
+    &> .vclPanelHeader
+      padding-top: 0.7rem
+      padding-bottom: 0.7rem
+      border-bottom-width: 0
+      background-color: var(--gray-light-5)
+      &.vclNoBg
+        background-color: transparent
+    &> .vclPanelBody
+      border-width: 0
+    &> .vclPanelFooter
+      padding-top: 0.7rem
+      padding-bottom: 0.7rem
+      border-top-width: 0
+      background-color: var(--gray-light-5)
+      &.vclNoBg
+        background-color: transparent
+
+.vclPanelHeader,
+.vclPanelFooter
+  display: flex
+  position: relative
+  color: var(--panel-header-color)
+  background-color: var(--panel-header-bg-color)
+  border-style: solid
+  border-width: 0 0 2px 0
+  border-color: var(--panel-border-color)
+
+.vclPanelHeader,
+.vclPanelFooter
+  & > *
+    margin-left: 0.8rem
+  &> :last-child
+    margin-right: 0.8rem
+  & > .vclPanelContent
+    margin: 0
+
+.vclPanelFooter
+  border-width: 0
+  color: var(--panel-footer-color)
+  background-color: var(--panel-footer-bg-color)
+
+.vclPanelTitle,
+.vclPanelHeading
+  font-weight: bold
+  line-height: var(--panel-hf-line-height)
+  margin-top: 0
+  margin-bottom: 0
+  font-size: 0.96em
+  color: inherit
+
+.vclPanelTitle
+  font-size: 1.08em
+
+.vclPanelBody
+  border-style: solid
+  border-width: 1px
+  border-color: var(--panel-border-color)
+
+.vclPanelBody > *:first-child
+  margin-top: 0
+
+.vclPanelBody > *:last-child
+  margin-bottom: 0
+
+.vclPanelContent
+  padding: 0.8rem 0.8rem
+  margin-bottom: 0
+

@@ -1,0 +1,59 @@
+.vclDivider
+  user-select: none
+  color: var(--divider-color)
+  &> .vclDividerElement
+    padding-left: 1em
+    padding-right: 1em
+    background-color: var(--divider-fill-color)
+    z-index: 1
+    &.vclDividerBeginElement
+      padding-left: 0.5em
+    &.vclDividerEndElement
+      padding-right: 0.5em
+  &.vclDividerHorizontal
+    margin: 1rem 0
+    &> .vclDividerRule
+      border-bottom: 1px solid var(--divider-border-color)
+      position: absolute
+      left: 0
+      top: 50%
+      right: 0
+  &.vclDividerVertical
+    &> .vclDividerRule
+      border-left: 1px solid var(--divider-border-color)
+      position: absolute
+      left: 50%
+      top: 0
+      bottom: 0
+      height: 100%
+    &> .vclDividerElement
+      padding-top: 0.5em
+      padding-bottom: 0.5em
+  &> .vclIcogram
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    display: inline-block
+  &.vclDividerHeading
+    text-transform: none
+  &:not(.vclDividerHeading)
+    font-size: 0.85em
+  &:empty
+    border-bottom: 1px solid var(--divider-border-color)
+  &.vclDividerHorizontal
+    position: relative
+  &.vclDividerVertical
+    position: relative
+
+/* HTML based divider should just look the same as the vclDivider */
+
+hr
+  border-top-color: var(--divider-border-color)
+  border-top-width: 1px
+  border-top-style: solid
+  border-bottom: 0
+  border-left: 0
+  border-right: 0
+  height: 0
+  margin-top: 1em
+  margin-bottom: 1em

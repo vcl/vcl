@@ -1,0 +1,58 @@
+.vclEmailViewport
+  display: block !important
+  width: 100%
+  line-height: 1.6em
+  color: var(--email-viewport-color)
+  background-color: var(--email-viewport-bg-color)
+  padding-top: 0.5em
+  padding-bottom: 0.5em
+  box-sizing: border-box
+
+.vclEmailBody
+  background-color: var(--email-body-bg-color)
+  width: 60%
+  max-width: 820px
+  margin: 0 auto
+  padding: 0 3em
+  border: 1px solid var(--email-body-border-color)
+  border-radius: 3px
+
+.vclEmailFooter
+  color: var(--email-footer-color)
+  padding-top: 0.6em
+  padding-bottom: 1em
+  font-size: 0.9em
+  text-align: center
+
+@media only screen and (max-width: 1024px)
+  .vclEmailBody
+    width: 80% !important
+
+@media only screen and (max-width: 640px)
+  body
+    padding: 0 !important
+
+  .vclEmailViewport
+    background-color: var(--email-body-bg-color)
+    padding: 0
+
+  .vclEmailBody
+    background-color: var(--email-body-bg-color)
+    width: 100% !important
+    margin: 0 auto !important
+    padding: 0 !important
+    border: none !important
+
+@media print
+  body
+    margin: 0 !important
+    padding: 0 !important
+
+  .vclEmailViewport
+    padding: 0 !important
+
+  .vclEmailBody
+    width: 100% !important
+    margin: 0 auto !important
+    padding: 0 !important
+    border: none !important

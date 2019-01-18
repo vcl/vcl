@@ -1,0 +1,28 @@
+.vclCheckbox
+  cursor: pointer
+  outline: none
+  display: inline-block
+  & > .vclFormControlLabel
+    display: inline-block
+  & > .vclIcon
+    color: var(--checkbox-color)
+    display: inline-block
+    min-width: 1.5em
+    text-align: center
+    padding-right: 0.4em
+    padding-left: 0.4em
+    font-size: var(--checkbox-icon-size)
+  &:hover
+    & > .vclIcon
+      color: var(--checkbox-hover-color)
+  &:focus
+    & > .vclIcon
+      color: var(--checkbox-focus-color)
+  &.vclDisabled
+    & > .vclIcon
+      color: var(--checkbox-disabled-color)
+
+.vclFormControlLabel:hover
+  & .vclCheckbox:not(.vclDisabled)
+    & .vclIcon
+      color: var(--radio-button-focus-color)
