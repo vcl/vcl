@@ -37,7 +37,7 @@ describe('vcl object', function() {
 
   it('should return valid css', function() {
     compiler.then(function (result) {
-      assert.equal(result.css, 'body {\n  color: blue;\n}');
+      assert.equal(result.css, 'body {\n  color: blue\n}');
     });
 
   });
@@ -46,18 +46,18 @@ describe('vcl object', function() {
     let anotherCompiler = vcl('body\n  color: rgba(#ccc, .5)');
 
     anotherCompiler.then(function (result) {
-      assert.equal(result.css, 'body {\n  color: rgba(204,204,204, .5);\n}');
+      assert.equal(result.css, 'body {\n  color: rgba(204,204,204, .5)\n}');
     });
 
   });
 
   it('should return valid css, without using whitespace syntax', function() {
-    let anotherCompiler = vcl('body {\n  color: rgba(#ccc, .5);}', {
+    let anotherCompiler = vcl('body {\n  color: rgba(#ccc, .5)}', {
       whitespace: false
     });
 
     anotherCompiler.then(function (result) {
-      assert.equal(result.css, 'body {\n  color: rgba(204,204,204, .5);}');
+      assert.equal(result.css, 'body {\n  color: rgba(204,204,204, .5)}');
     });
 
   });
@@ -68,7 +68,7 @@ describe('vcl object', function() {
     anotherCompiler.then(function (result) {
       // console.log(result.css);
       assert.equal(typeof result.css, 'string');
-      assert.equal(result.css, 'body{\n  background: red;\n}');
+      assert.equal(result.css, 'body{\n  background: red\n}');
       done();
     });
 
