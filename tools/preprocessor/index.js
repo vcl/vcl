@@ -19,7 +19,7 @@ var postcssPreset = require('postcss-preset-env');
 var namespace = require('postcss-add-namespace');
 var selectorNamespace = require('postcss-selector-namespace');
 var postcssNesting = require('postcss-nesting');
-var safe = require('postcss-safe-parser');
+var safe = require('sugarss');
 
 /**
  * Creates and return a list of postCSS plugins required for the VCL
@@ -36,12 +36,12 @@ var createPostCSSPlugins = function (opts) {
     // },
     load: (filename, importOptions) => {
       let css = fs.readFileSync(filename, 'utf8');
-      if (path.extname(filename) === '.styl') {
-        css = whitespace(css);
-      }
+      // if (path.extname(filename) === '.sss') {
+      //   css = whitespace(css);
+      // }
       return css;
     },
-     root: opts.root || process.cwd()
+    root: opts.root || process.cwd()
   };
 
   if (opts.npm !== undefined) {
@@ -61,7 +61,7 @@ var createPostCSSPlugins = function (opts) {
 
   if (opts.namespaceOptions) {
     plugins.push(namespace(opts.namespaceOptions.class));
-    plugins.push(selectorNamespace({ selfSelector: ':--component', namespace: opts.namespaceOptions.selector }));
+    plugins.push(selectorNamespace({selfSelector: ':--component', namespace: opts.namespaceOptions.selector}));
   }
 
   if (opts.useMq4HoverShim) {
@@ -77,9 +77,9 @@ var Processor = function Processor(css, opts) {
     throw new Error('Got no css input');
   }
 
-  if (opts.whitespace !== false) {
-    css = whitespace(css); // convert to normal css
-  }
+  // if (opts.whitespace !== false) {
+  //   css = whitespace(css); // convert to normal css
+  // }
 
   const plugins = createPostCSSPlugins(opts);
 
@@ -97,13 +97,14 @@ var createProcessor = function cProcessor(css, opts) {
 
 // TODO: move advanced functions to seperate file
 
-var fetchPackage = function(name) {
+var fetchPackage = function (name) {
 
   function fixNoMain(pkg) {
     // make all modules require-able
     pkg.main = 'package.json';
     return pkg;
   }
+
   var npmModule = null;
   // get module information
 
@@ -122,13 +123,13 @@ var fetchPackage = function(name) {
 
 // TODO: clean this up!
 // TODO: split into smaller testable functions
-var getVclDeps = function(pack, opts) {
+var getVclDeps = function (pack, opts) {
   var deps = {};
 
   if (opts.includeDevDependencies === true) {
     // merge normal & dev dependencies
     debug('including dev depdencies');
-    deps = _.merge(pack.dependencies || {} , pack.devDependencies || {});
+    deps = _.merge(pack.dependencies || {}, pack.devDependencies || {});
   } else {
     // only normal dependencies
     deps = pack.dependencies;
@@ -144,22 +145,22 @@ var getVclDeps = function(pack, opts) {
   addProvider(pack); // providers from root module
 
   // checking deps for vcl property
-  _.each(deps, function(version, name) {
+  _.each(deps, function (version, name) {
     debug('%s dependency: %s', pack.name, name);
     var npmModule = null;
     try {
       npmModule = fetchPackage(name);
-    } catch(e){
-      if (pack.devDependencies && pack.devDependencies[name] !== undefined){
+    } catch (e) {
+      if (pack.devDependencies && pack.devDependencies[name] !== undefined) {
         return debug('module %s not found (skipping - dev depdency)', name);
-      } else{
+      } else {
         if (opts.ignoreMissingDependencies || opts.docGenMode) {
           return debug('No file or npm module named ' +
-            name + ' found in '+ process.cwd());
+            name + ' found in ' + process.cwd());
         } else {
 
           throw new Error('No file or npm module named ' +
-            name + ' found in '+ process.cwd());
+            name + ' found in ' + process.cwd());
         }
       }
     }
@@ -187,7 +188,7 @@ var getVclDeps = function(pack, opts) {
   var orderedDeps = [];
 
   // cheap sorting algorithm
-  _.each(unorderedDeps, function(dep) {
+  _.each(unorderedDeps, function (dep) {
     debug('ordering %s', dep.name);
     satisfy(dep);
   });
@@ -200,7 +201,7 @@ var getVclDeps = function(pack, opts) {
       if (_.isString(npmModule.vcl.provides)) {
         npmModule.vcl.provides = [npmModule.vcl.provides];
       }
-      npmModule.vcl.provides.forEach(function(provides) {
+      npmModule.vcl.provides.forEach(function (provides) {
         debug('adding provider: %s', provides);
         if (providers[provides] !== undefined) {
           throw new Error('There can only be one ' + provides + ' provider');
@@ -216,7 +217,7 @@ var getVclDeps = function(pack, opts) {
     // allow one string only
     if (_.isString(needs)) needs = [needs];
     // already in list
-    if (_.some(orderedDeps, { name: dep.name })) {
+    if (_.some(orderedDeps, {name: dep.name})) {
       return debug('%s already sorted', dep.name);
     }
     if (isSatisfied(needs)) {
@@ -224,7 +225,7 @@ var getVclDeps = function(pack, opts) {
       debug('+ adding %s to ordered list.', dep.name);
       return;
     } else debug('%s is not satisfied', dep.name);
-    _.forEach(needs, function(need) {
+    _.forEach(needs, function (need) {
       // get provider
       var provider = providers[need];
       if (provider === undefined) {
@@ -246,12 +247,12 @@ var getVclDeps = function(pack, opts) {
   function isSatisfied(needs) {
     if (needs.length === 0) return true;
     if (orderedDeps.length === 0) return false;
-    return _.includes(orderedDeps, { provides: needs });
+    return _.includes(orderedDeps, {provides: needs});
   }
 };
 
 
-var preProcessPackage = function(pack, opts) {
+var preProcessPackage = function (pack, opts) {
   opts = opts || {};
   debug('cwd: %s', process.cwd());
 
@@ -280,7 +281,7 @@ var preProcessPackage = function(pack, opts) {
 
   // fetch the entry css
   // TODO: allow plain css
-  var entryPack = _.remove(deps, { name: npmModule.name })[0];
+  var entryPack = _.remove(deps, {name: npmModule.name})[0];
   var entryPath = path.resolve(entryPack.baseDir, entryPack.style);
   var entryCss;
   if (entryPack.style) {
@@ -288,9 +289,9 @@ var preProcessPackage = function(pack, opts) {
   }
 
   // finally fetch the css and process it
-  _.each(deps, function(dep) {
+  _.each(deps, function (dep) {
     var depPath = path.resolve(dep.baseDir, dep.style);
-    if (path.extname(depPath) === '.css'){
+    if (path.extname(depPath) === '.css') {
       var depCss = fs.readFileSync(depPath, 'utf8');
       return pureCss.push(depCss);
     }

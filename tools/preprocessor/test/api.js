@@ -85,7 +85,7 @@ describe('vcl object', function() {
   });
 
   it('should namespace css', function(done) {
-    var namespace = fs.readFileSync('./test/fixtures/namespace.styl', 'utf-8');
+    var namespace = fs.readFileSync('./test/fixtures/namespace.sss', 'utf-8');
     var css_namespaces = fs.readFileSync('./test/fixtures/namespaced.css', 'utf-8');
 
     var anotherCompiler = vcl(namespace, {
@@ -135,7 +135,7 @@ describe('compiling packages', function() {
       dependencies: {
         '@vcl/default-theme-terms': 'some-version'
       },
-      style: './test/fixtures/project.styl'
+      style: './test/fixtures/project.sss'
     }, {npm: {root: __dirname}});
 
     compiledPackage.then(function (result) {
@@ -152,7 +152,7 @@ describe('compiling packages', function() {
         '@vcl/default-theme-terms': 'some-version',
         'normalize.css': '*'
       },
-      style: './test/fixtures/project.styl'
+      style: './test/fixtures/project.sss'
     }, {npm: {root: __dirname}});
 
     compiledPackage.then(function (result) {
@@ -168,7 +168,7 @@ describe('compiling packages', function() {
       dependencies: {
         '@vcl/default-theme-terms': 'some-version'
       },
-      style: './test/fixtures/project.styl'
+      style: './test/fixtures/project.sss'
     });
 
     compiledPackage.then(function (result) {
@@ -186,14 +186,14 @@ describe('compiling packages', function() {
         dependencies: {
           'missing': '^3.4.5'
         },
-        style: './test/fixtures/project.styl'
+        style: './test/fixtures/project.sss'
       }, {npm: {root: __dirname}});
 
       compiledPackage.then(function (result) {
         // console.log('result', result);
       }).catch((error)=> {
           console.log(error);
-        });;
+        });
     }, /No file or npm module.*/);
   });
 
@@ -213,7 +213,7 @@ describe('compiling packages', function() {
         dependencies: {
           '@vcl/default-theme-terms': '^3.4.5',
         },
-        style: './test/fixtures/project.styl'
+        style: './test/fixtures/project.sss'
       }, opts);
 
       compiledPackage.then(function (result) {
@@ -231,7 +231,7 @@ describe('compiling packages', function() {
       dependencies: {
         '@vcl/default-theme-terms': 'some-version',
       },
-      style: './test/fixtures/project.styl',
+      style: './test/fixtures/project.sss',
       vcl: {
         provides: 'awesome-stuff'
       }
@@ -251,7 +251,7 @@ describe('compiling packages', function() {
       dependencies: {
         '@vcl/default-theme-terms': 'some-version',
       },
-      style: './test/fixtures/project.styl',
+      style: './test/fixtures/project.sss',
       vcl: {
         provides: 'awesome-stuff',
         needs: 'theme-terms'
@@ -274,7 +274,7 @@ describe('compiling packages', function() {
         dependencies: {
           '@vcl/default-theme-terms': 'some-version',
         },
-        style: './test/fixtures/project.styl',
+        style: './test/fixtures/project.sss',
         vcl: {
           provides: 'awesome-stuff',
           needs: 'not-there'
@@ -296,7 +296,7 @@ describe('compiling packages', function() {
         '@vcl/default-theme-terms': 'some-version',
         'mocha': '*'
       },
-      style: './test/fixtures/project.styl'
+      style: './test/fixtures/project.sss'
     }, {npm: {root: __dirname}});
 
     compiledPackage.then(function (result) {
@@ -316,7 +316,7 @@ describe('compiling packages', function() {
       devDependencies: {
         '@vcl/default-theme-terms': 'some-version'
       },
-      style: './test/fixtures/project.styl'
+      style: './test/fixtures/project.sss'
     }, opts);
 
     compiledPackage.then(function (result) {
@@ -335,7 +335,7 @@ describe('compiling packages', function() {
       dependencies: {
         '@vcl/default-theme-terms': 'some-version'
       },
-      style: './test/fixtures/project.styl'
+      style: './test/fixtures/project.sss'
     }, opts);
 
     compiledPackage.then(function (result) {
@@ -356,7 +356,7 @@ describe('compiling packages', function() {
       devDependencies: {
         '@vcl/default-theme-terms': 'some-version'
       },
-      style: './test/fixtures/project.styl'
+      style: './test/fixtures/project.sss'
     }, opts);
 
     compiledPackage.then(function (result) {
@@ -378,7 +378,7 @@ describe('compiling packages', function() {
         'does-not-exist': '1.0',
         'half-life': '3'
       },
-      style: './test/fixtures/project.styl'
+      style: './test/fixtures/project.sss'
     }, opts);
 
 
@@ -399,7 +399,7 @@ describe('compiling packages', function() {
       dependencies: {
         'not-found': 'some-version'
       },
-      style: './test/fixtures/project.styl'
+      style: './test/fixtures/project.sss'
     }, opts);
 
     compiledPackage.then(function (result) {
@@ -422,7 +422,7 @@ describe('compiling packages', function() {
         devDependencies: {
           '@vcl/default-theme-terms': 'some-version',
         },
-        style: './test/fixtures/project.styl',
+        style: './test/fixtures/project.sss',
         vcl: {
           needs: ['some-provider']
         }
@@ -445,7 +445,7 @@ describe('compiling packages', function() {
       devDependencies: {
         '@vcl/default-theme-terms': 'some-version'
       },
-      style: './test/fixtures/project.styl'
+      style: './test/fixtures/project.sss'
     }, opts);
 
     compiledPackage.then(function (result) {
