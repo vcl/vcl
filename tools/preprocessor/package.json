@@ -1,6 +1,6 @@
 {
   "name": "@vcl/preprocessor",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "description": "The VCL preprocessor",
   "main": "index.js",
   "homepage": "https://github.com/vcl/preprocessor",
@@ -21,6 +21,10 @@
     {
       "name": "Thomas Hoppe",
       "email": "thomas.hoppe@n-fuse.co"
+    },
+    {
+      "name": "Daniel Hartmann",
+      "email": "daniel.hartmann@n-fuse.co"
     }
   ],
   "license": "MIT",
@@ -33,23 +37,27 @@
     "cover-lcov": "istanbul cover _mocha --report lcovonly"
   },
   "dependencies": {
+    "@vcl/core-modules": "^0.2.14",
     "chalk": "^2.4.1",
-    "css-whitespace": "^1.1.1",
+    "css-loader": "^2.1.0",
     "debug": "4.1.0",
-    "lodash": "^4.17.11",
-    "mkdirp": "^0.5.1",
-    "mq4-hover-shim": "^0.3.0",
+    "memory-fs": "^0.4.1",
+    "mini-css-extract-plugin": "^0.5.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss": "7.0.6",
-    "postcss-add-namespace": "^1.0.3",
     "postcss-color-function": "^4.0.1",
     "postcss-css-variables": "0.11.0",
-    "postcss-preset-env": "^6.4.0",
     "postcss-import": "12.0.1",
+    "postcss-loader": "^3.0.0",
     "postcss-nesting": "^7.0.0",
-    "postcss-safe-parser": "^4.0.1",
-    "postcss-selector-namespace": "^1.5.0",
+    "postcss-preset-env": "^6.4.0",
     "resolve": "^1.8.1",
-    "rucksack-css": "^1.0.2"
+    "rucksack-css": "^1.0.2",
+    "sugarss": "^2.0.0",
+    "unionfs": "^3.0.2",
+    "webpack": "^4.29.0",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^12.0.5"
   },
   "devDependencies": {
     "@vcl/button": "0.2.3",
@@ -60,7 +68,6 @@
     "mocha": "^5.2.0",
     "mocha-lcov-reporter": "^1.3.0",
     "normalize.css": "8.0.1",
-    "pre-commit": "^1.2.2",
-    "sugarss": "^2.0.0"
+    "pre-commit": "^1.2.2"
   }
 }

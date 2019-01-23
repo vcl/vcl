@@ -1,314 +1,257 @@
 'use strict';
 
 var path = require('path');
+var webpack = require('webpack');
+var MemoryFS = require('memory-fs');
+var { Union } = require('unionfs');
 var fs = require('fs');
-var _ = require('lodash');
-var resolve = require('resolve');
-var debug = require('debug')('vcl-preprocessor');
-var whitespace = require('css-whitespace');
-var mq4HoverShim = require('mq4-hover-shim');
 
-// PostCSS Modules
-
-var postcss = require('postcss');
+// PostCSS plugins
 var colors = require('postcss-color-function');
 var npmimport = require('postcss-import');
 var vars = require('postcss-css-variables');
 var rucksack = require('rucksack-css');
 var postcssPreset = require('postcss-preset-env');
-var namespace = require('postcss-add-namespace');
-var selectorNamespace = require('postcss-selector-namespace');
 var postcssNesting = require('postcss-nesting');
-var safe = require('postcss-safe-parser');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 /**
  * Creates and return a list of postCSS plugins required for the VCL
- * @param {string} opts - The title of the book.
+ * @param {object} [opts] - postCSS plugin options.
+ * @param {string} [opts.root=process.cwd()] - base directory
  * @return Array of postCSS plugins
  */
-var createPostCSSPlugins = function (opts) {
-  opts = opts || {};
-
-  let npmOptions = {
-    // addModulesDirectories: ["node_modules"],
-    // onImport: function(files) {
-    //   console.log('file', files);
-    // },
-    load: (filename, importOptions) => {
-      let css = fs.readFileSync(filename, 'utf8');
-      if (path.extname(filename) === '.styl') {
-        css = whitespace(css);
-      }
-      return css;
-    },
-    root: opts.root || process.cwd()
-  };
-
-  if (opts.npm !== undefined) {
-    _.extend(npmOptions, opts.npm);
-  }
-
-  const plugins = [
-    npmimport(npmOptions),
+function createPostCSSPlugins (opts = {}) {
+  return [
+    npmimport({
+      root: opts.root || process.cwd(),
+      ...(opts.npm || {}),
+    }),
     postcssNesting(),
     vars(), // CSS4 compatible variable suppot
     colors(), // W3C CSS4 Color functios
     postcssPreset(),
     rucksack()
-    // autoprefixer()); // autoprefixer Not needed due to postcssPrest
-    // cssnano()); // cssnano 4 productin
   ];
-
-  if (opts.namespaceOptions) {
-    plugins.push(namespace(opts.namespaceOptions.class));
-    plugins.push(selectorNamespace({ selfSelector: ':--component', namespace: opts.namespaceOptions.selector }));
-  }
-
-  if (opts.useMq4HoverShim) {
-    plugins.push(mq4HoverShim.postprocessorFor({hoverSelectorPrefix: opts.mq4HoverShimOptions && opts.mq4HoverShimOptions.shimPrefixClass || '.vclHoverSupport'}));
-  }
-  return plugins;
 }
 
-var Processor = function Processor(css, opts) {
-  opts = opts || {};
+/**
+*  Creates a rule for .sss files usable in webpack
+* @param {Object} [opts] - compiler options
+* @param {string} [opts.root=process.cwd()] - base directory
+* @param [opts.include] - rule includes
+* @param [opts.exclude] - rule excludes
+* @param {string} [opts.loader] - Top loader to handle the css output (extract, raw or style)
+* @param {boolean} [opts.sourceMap] - Generate a source map
+*/
+function createWebpackSSSRule(opts = {}) {
 
-  if (css === undefined) {
-    throw new Error('Got no css input');
-  }
-
-  if (opts.whitespace !== false) {
-    css = whitespace(css); // convert to normal css
-  }
-
-  const plugins = createPostCSSPlugins(opts);
-
-  const compiler = postcss(plugins);
-
-  opts.parser = safe;
-  opts.from = undefined;
-
-  return compiler.process(css, opts);
-};
-
-var createProcessor = function cProcessor(css, opts) {
-  return new Processor(css, opts);
-};
-
-// TODO: move advanced functions to seperate file
-
-var fetchPackage = function(name) {
-
-  function fixNoMain(pkg) {
-    // make all modules require-able
-    pkg.main = 'package.json';
-    return pkg;
-  }
-  var npmModule = null;
-  // get module information
-
-  debug('fetching %s from %s', name, process.cwd());
-
-  // TODO: fix loading relative from other module
-  var npmModulePath = resolve.sync(name, {
-    basedir: process.cwd(),
-    packageFilter: fixNoMain
-  });
-  var npmModuleBaseDir = path.dirname(npmModulePath);
-  npmModule = JSON.parse(fs.readFileSync(npmModulePath, 'utf8'));
-  npmModule.baseDir = npmModuleBaseDir;
-  return npmModule;
-};
-
-// TODO: clean this up!
-// TODO: split into smaller testable functions
-var getVclDeps = function(pack, opts) {
-  var deps = {};
-
-  if (opts.includeDevDependencies === true) {
-    // merge normal & dev dependencies
-    debug('including dev depdencies');
-    deps = _.merge(pack.dependencies || {} , pack.devDependencies || {});
+  let loader;
+  let extractCss = false;
+  if (opts.loader === 'raw') {
+    loader =  'raw-loader'
+  } else if (opts.loader === 'style') {
+    loader =  'style-loader'
   } else {
-    // only normal dependencies
-    deps = pack.dependencies;
+    extractCss = true;
+    loader = MiniCssExtractPlugin.loader;
   }
 
-  pack.vcl = pack.vcl || {};
-
-  debug('checking dependencies for %s', pack.name);
-
-  var providers = opts.providers || {};
-  var unorderedDeps = [];
-
-  addProvider(pack); // providers from root module
-
-  // checking deps for vcl property
-  _.each(deps, function(version, name) {
-    debug('%s dependency: %s', pack.name, name);
-    var npmModule = null;
-    try {
-      npmModule = fetchPackage(name);
-    } catch(e){
-      if (pack.devDependencies && pack.devDependencies[name] !== undefined){
-        return debug('module %s not found (skipping - dev depdency)', name);
-      } else{
-        if (opts.ignoreMissingDependencies || opts.docGenMode) {
-          return debug('No file or npm module named ' +
-            name + ' found in '+ process.cwd());
-        } else {
-
-          throw new Error('No file or npm module named ' +
-            name + ' found in '+ process.cwd());
+  return {
+    test: /\.sss$/,
+    include: opts.include,
+    exclude: opts.exclude,
+    use: [
+      loader,
+      {
+        loader: 'css-loader',
+        options: {
+          importLoaders: 1,
         }
-      }
-    }
-    if (npmModule.style === undefined && npmModule.vcl === undefined) {
-      // not a vcl module, skip
-      return;
-    }
-
-    if (npmModule.vcl === undefined) {
-      debug('warning: no vcl meta data for ' + npmModule.name);
-      // patchin
-      npmModule.vcl = {};
-    }
-
-    // add providers
-    addProvider(npmModule);
-
-    unorderedDeps.push(npmModule);
-  });
-
-  unorderedDeps.push(pack);
-
-  // order
-  debug('== ordering packages ==');
-  var orderedDeps = [];
-
-  // cheap sorting algorithm
-  _.each(unorderedDeps, function(dep) {
-    debug('ordering %s', dep.name);
-    satisfy(dep);
-  });
-
-  return orderedDeps;
-
-  function addProvider(npmModule) {
-    if (npmModule.vcl && npmModule.vcl.provides) {
-      // allow one string only
-      if (_.isString(npmModule.vcl.provides)) {
-        npmModule.vcl.provides = [npmModule.vcl.provides];
-      }
-      npmModule.vcl.provides.forEach(function(provides) {
-        debug('adding provider: %s', provides);
-        if (providers[provides] !== undefined) {
-          throw new Error('There can only be one ' + provides + ' provider');
+      },
+      {
+        loader: 'postcss-loader',
+        options: {
+          parser: 'sugarss',
+          plugins: createPostCSSPlugins(opts),
+          sourceMap: opts.sourceMap ? (!extractCss ? 'inline' : opts.sourceMap) : false
         }
-        providers[provides] = npmModule;
-      });
-    }
-  }
+      },
+    ]
+  };
+}
 
-  function satisfy(dep) {
-    var needs = dep.vcl.needs || [];
+/**
+* Creates a webpack compiler
+* @param {string} [inputFile] - Input file
+* @param {string} [outputFile] - Output file
+* @param {Object} [opts] - compiler options
+* @param {string} [opts.root=process.cwd()] - base directory
+* @param {boolean} [opts.sourceMap] - Generate a source map
+* @param {boolean} [opts.optimize] - Optimize css
+*/
+function createWebpackCompiler(inputFile, outputFile, opts = {}) {
+  const root = opts.root || process.cwd();
+  const outputFileDir = path.resolve(path.dirname(outputFile));
+  const outputFileBase = path.basename(outputFile);
 
-    // allow one string only
-    if (_.isString(needs)) needs = [needs];
-    // already in list
-    if (_.some(orderedDeps, { name: dep.name })) {
-      return debug('%s already sorted', dep.name);
-    }
-    if (isSatisfied(needs)) {
-      orderedDeps.push(dep);
-      debug('+ adding %s to ordered list.', dep.name);
-      return;
-    } else debug('%s is not satisfied', dep.name);
-    _.forEach(needs, function(need) {
-      // get provider
-      var provider = providers[need];
-      if (provider === undefined) {
-        throw new Error('module ' + dep.name +
-          ' needs ' + need + ', but its not provided by any module');
+  const inputFileFull = path.resolve(root, inputFile);
+
+  const config = {
+    mode: 'none',
+    devtool: opts.sourceMap ? 'source-map': undefined,
+    entry: {
+      'styles': inputFileFull
+    },
+    output: {
+      path: outputFileDir
+    },
+    module: {
+      rules: [
+        createWebpackSSSRule(opts),
+        {
+          test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+          loader: 'file-loader'
+        }
+      ]
+    },
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: outputFileBase
+      }),
+      ...(opts.optimize ? [new OptimizeCssAssetsPlugin] : []),
+      // The following plugin blocks all non .css and .css.map files from the result
+      // This is to avoid having pointless javascript files in the output folder
+      (compiler) => {
+        compiler.hooks.emit.tapAsync('DisableNonCssOutputWebpackPlugin', (compilation, callback) => {
+          Object.keys(compilation.assets).forEach(asset => {
+            if (!asset.endsWith('.css') && !asset.endsWith('.css.map')) {
+              delete compilation.assets[asset];
+            }
+          });
+          callback();
+        });
       }
+    ]
+  };
 
-      satisfy(provider);
-      // if (_.some(orderedDeps, { name: provider.name })) return;
-      //  debug('+ adding %s to ordered list', provider.name);
-      //  orderedDeps.push(provider);
+  return webpack(config);
+}
+
+/**
+* Converts a sss string into css
+* @param {string} [sss] - sss style
+* @param {Object} [opts] - compiler options
+* @param {string} [opts.root=process.cwd()] - base directory
+* @param {boolean} [opts.sourceMap] - Generate a source map
+* @param {boolean} [opts.optimize] - Optimize css
+* @return {Promise} - Converted css
+*/
+function compileString(sss, opts = {}) {
+
+  const root = opts.root || process.cwd();
+
+  const src = path.resolve(root, '_tmp_vcl.sss');
+  const dest = path.resolve(root, '_tmp_vcl.css');
+
+  // Create a in-mem fs for input and output
+  const mfs = new MemoryFS();
+
+  // Create a union fs for input, output and resolved files
+  const ufs = new Union().use(fs).use(mfs);
+
+  // Write input to in-mem fs
+  mfs.mkdirpSync(root);
+  mfs.writeFileSync(src, sss);
+
+  const compiler = createWebpackCompiler(src, dest, opts);
+
+  // use the union fs for reading stuff
+  compiler.inputFileSystem = ufs;
+  compiler.resolvers.normal.fileSystem = ufs;
+  compiler.resolvers.context.fileSystem = ufs;
+
+  // use the in-mem fs to write stuff
+  compiler.outputFileSystem = mfs;
+
+  return new Promise((resolve) => {
+    compiler.run((err, stats) => {
+      compiler.purgeInputFileSystem();
+      if (err) {
+        lastHash = null;
+        reject(err);
+      }
+      resolve(stats.toJson());
     });
-
-    debug('done with depdendencies for %s', dep.name);
-    orderedDeps.push(dep);
-    debug('+ adding %s to ordered list', dep.name);
-  }
-
-  function isSatisfied(needs) {
-    if (needs.length === 0) return true;
-    if (orderedDeps.length === 0) return false;
-    return _.includes(orderedDeps, { provides: needs });
-  }
-};
-
-
-var preProcessPackage = function(pack, opts) {
-  opts = opts || {};
-  debug('cwd: %s', process.cwd());
-
-  // get the package.json
-  var npmModule = null;
-  if (_.isString(pack)) {
-    npmModule = fetchPackage(pack);
-  } else {
-    npmModule = pack;
-    npmModule.baseDir = process.cwd();
-  }
-
-  if (npmModule.style === undefined) {
-    throw new Error('npm module "' + npmModule.name +
-      '" needs a style property in order to be compiled');
-  }
-
-  debug('processing npm package');
-
-  var pureCss = [];
-  var deps = getVclDeps(npmModule, opts);
-  debug('final list:');
-
-
-  var virtualImport = [];
-
-  // fetch the entry css
-  // TODO: allow plain css
-  var entryPack = _.remove(deps, { name: npmModule.name })[0];
-  var entryPath = path.resolve(entryPack.baseDir, entryPack.style);
-  var entryCss;
-  if (entryPack.style) {
-    entryCss = fs.readFileSync(entryPath, 'utf8');
-  }
-
-  // finally fetch the css and process it
-  _.each(deps, function(dep) {
-    var depPath = path.resolve(dep.baseDir, dep.style);
-    if (path.extname(depPath) === '.css'){
-      var depCss = fs.readFileSync(depPath, 'utf8');
-      return pureCss.push(depCss);
-    }
-    debug(dep.name);
-    virtualImport.push('@import "' + dep.name + '"');
+  }).then(() => {
+    // After compiling is done, read from the in-mem fs
+    return {
+      css: mfs.readFileSync(dest).toString()
+    };
   });
+}
 
-  // the newline is important!
-  var everything = virtualImport.join('\n');
-  if (opts.docGenMode === true) everything += '\n@import "' + npmModule.name + '"';
-  else everything += '\n' + entryCss;
-  if (!opts.npm) opts.npm = {};
-  opts.npm.root = path.dirname(path.resolve(entryPath));
+/**
+* Converts a sss file into a css file
+* @param {string} [inputFile] - input file
+* @param {string} [outputFile] - output file
+* @param {Object} [opts] - compiler options
+* @param {string} [opts.watch=false] - watch mode
+* @param {string} [opts.root=process.cwd()] - base directory
+* @param {boolean} [opts.sourceMap] - Generate a source map
+* @param {boolean} [opts.optimize] - Optimize css
+* @return {Promise} - Converted css
+*/
+function compileFile(inputFile, outputFile = 'vcl.css', opts = {}) {
+  const compiler = createWebpackCompiler(inputFile, outputFile, opts);
+  let lastHash;
 
-  var done = new Processor(everything, opts);
-  return done;
-};
+  const handler = (err, stats) => {
+    if (!opts.watch || err) {
+      // Do not keep cache anymore
+      compiler.purgeInputFileSystem();
+    }
 
-module.exports = createProcessor;
-module.exports.package = preProcessPackage;
+    if (err) {
+      lastHash = null;
+      console.error(err.stack || err);
+      if (err.details) {
+        console.error(err.details);
+      }
+      process.exit(1);
+      return;
+    }
+
+    if (stats.hash !== lastHash) {
+      lastHash = stats.hash;
+      const statsString = stats.toString({
+        colors: { level: 3, hasBasic: true, has256: true, has16m: true },
+        cached: false,
+        cachedAssets: false,
+        exclude: [ 'node_modules' ],
+        infoVerbosity: 'info'
+      });
+      if (statsString) {
+        console.log(`${statsString}`);
+      }
+    }
+    if (!opts.watch && stats.hasErrors()) {
+      process.exitCode = 2;
+    }
+  }
+
+  if (opts.watch) {
+    return compiler.watch({
+      aggregateTimeout: 300,
+      poll: undefined
+    }, handler);
+  } else {
+    compiler.run(handler);
+  }
+}
+
+module.exports = compileString;
+module.exports.compileFile = compileFile;
 module.exports.createPostCSSPlugins = createPostCSSPlugins;
+module.exports.createWebpackSSSRule = createWebpackSSSRule;
