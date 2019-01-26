@@ -29,7 +29,7 @@ Options:
   --source-map              generate source maps
 
 Examples:
-  vcl-preprocessor index.styl dist/compiled.css     Compile index.styl and output to
+  vcl-preprocessor index.sss dist/compiled.css     Compile index.sss and output to
                                                     dist/compiled.css
 ```
 The VCL CLI will create the destination directory if it does not exist.
