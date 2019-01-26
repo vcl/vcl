@@ -42,10 +42,11 @@ function createPostCSSPlugins (opts = {}) {
 * @param {string} [opts.root=process.cwd()] - base directory
 * @param [opts.include] - rule includes
 * @param [opts.exclude] - rule excludes
-* @param {string} [opts.loader] - Top loader to handle the css output (extract, raw or style)
-* @param {boolean} [opts.sourceMap] - Generate a source map
+* @param {string} [opts.loader="extract"] - Top loader to handle the css output (extract, raw or style)
+* @param {boolean} [opts.sourceMap=false] - Generate a source map
+* @param {boolean} [opts.url=false] - Enable/Disable url() handling
 */
-function createWebpackSSSRule(opts = {}) {
+function createWebpackRule(opts = {}) {
 
   let loader;
   let extractCss = false;
@@ -68,6 +69,7 @@ function createWebpackSSSRule(opts = {}) {
         loader: 'css-loader',
         options: {
           importLoaders: 1,
+          url: opts.url === false ? false : true
         }
       },
       {
@@ -88,8 +90,9 @@ function createWebpackSSSRule(opts = {}) {
 * @param {string} [outputFile] - Output file
 * @param {Object} [opts] - compiler options
 * @param {string} [opts.root=process.cwd()] - base directory
-* @param {boolean} [opts.sourceMap] - Generate a source map
-* @param {boolean} [opts.optimize] - Optimize css
+* @param {boolean} [opts.sourceMap=false] - Generate a source map
+* @param {boolean} [opts.url=true] - Enable/Disable url() handling
+* @param {boolean} [opts.optimize=false] - Optimize css
 */
 function createWebpackCompiler(inputFile, outputFile, opts = {}) {
   const root = opts.root || process.cwd();
@@ -109,7 +112,7 @@ function createWebpackCompiler(inputFile, outputFile, opts = {}) {
     },
     module: {
       rules: [
-        createWebpackSSSRule(opts),
+        createWebpackRule(opts),
         {
           test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
           loader: 'file-loader'
@@ -144,8 +147,9 @@ function createWebpackCompiler(inputFile, outputFile, opts = {}) {
 * @param {string} [sss] - sss style
 * @param {Object} [opts] - compiler options
 * @param {string} [opts.root=process.cwd()] - base directory
-* @param {boolean} [opts.sourceMap] - Generate a source map
-* @param {boolean} [opts.optimize] - Optimize css
+* @param {boolean} [opts.sourceMap=false] - Generate a source map
+* @param {boolean=true} [opts.url=true] - Enable/Disable url() handling
+* @param {boolean} [opts.optimize=false] - Optimize css
 * @return {Promise} - Converted css
 */
 function compileString(sss, opts = {}) {
@@ -175,20 +179,28 @@ function compileString(sss, opts = {}) {
   // use the in-mem fs to write stuff
   compiler.outputFileSystem = mfs;
 
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
       compiler.purgeInputFileSystem();
       if (err) {
-        lastHash = null;
         reject(err);
+      }
+      if (stats.hasErrors()) {
+        reject(stats.toJson({
+          errors: true
+        }));
       }
       resolve(stats.toJson());
     });
   }).then(() => {
     // After compiling is done, read from the in-mem fs
-    return {
-      css: mfs.readFileSync(dest).toString()
-    };
+    try {
+      return {
+        css: mfs.readFileSync(dest).toString()
+      };
+    } catch (ex) {
+      return Promise.reject(ex);
+    }
   });
 }
 
@@ -199,8 +211,9 @@ function compileString(sss, opts = {}) {
 * @param {Object} [opts] - compiler options
 * @param {string} [opts.watch=false] - watch mode
 * @param {string} [opts.root=process.cwd()] - base directory
-* @param {boolean} [opts.sourceMap] - Generate a source map
-* @param {boolean} [opts.optimize] - Optimize css
+* @param {boolean} [opts.sourceMap=false] - Generate a source map
+* @param {boolean=true} [opts.url=true] - Enable/Disable url() handling
+* @param {boolean} [opts.optimize=false] - Optimize css
 * @return {Promise} - Converted css
 */
 function compileFile(inputFile, outputFile = 'vcl.css', opts = {}) {
@@ -254,4 +267,4 @@ function compileFile(inputFile, outputFile = 'vcl.css', opts = {}) {
 module.exports = compileString;
 module.exports.compileFile = compileFile;
 module.exports.createPostCSSPlugins = createPostCSSPlugins;
-module.exports.createWebpackSSSRule = createWebpackSSSRule;
+module.exports.createWebpackRule = createWebpackRule;
