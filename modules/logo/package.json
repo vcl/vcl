@@ -9,7 +9,7 @@
     "build-demo": "node node_modules/@vcl/build-demo/index.js",
     "start": "npm run browsersync & npm run build-demo"
   },
-  "style": "index.styl",
+  "style": "index.sss",
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",
