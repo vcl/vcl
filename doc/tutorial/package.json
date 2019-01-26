@@ -2,7 +2,7 @@
   "name": "vcl-tutorial",
   "description": "VCL tutorial",
   "scripts": {
-    "build-css": "vcl-preprocessor index.styl vcl.css",
+    "build-css": "vcl-preprocessor index.sss vcl.css",
     "doc-gen": "./node_modules/.bin/vcl-doc-gen && http-server ./vcl-documentation",
     "start": "http-server"
   },

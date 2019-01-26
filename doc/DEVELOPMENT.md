@@ -10,7 +10,7 @@ Use the [vcl-list](https://github.com/vcl/vcl/modules/list) as a prototype.
 
 ## package.json
 
-Have an `index.styl` or `index.css` file per module which is referenced in
+Have an `index.sss` or `index.css` file per module which is referenced in
 the `package.json` in the `style` property.
 
 Have the following custom fields in the `package.json` file:
@@ -68,9 +68,9 @@ Results in the following order:
 ## CSS Syntax and Use
 
 Use the
-[white space significant syntax](https://www.npmjs.org/package/css-whitespace)
+[indent-based CSS syntax](https://github.com/postcss/sugarss)
 or plain CSS. Normal CSS files end with the `.css` suffix, white space files
-end with the `.styl` suffix.
+end with the `.sss` suffix.
 
 ## Selectors, Class Naming and Units
 

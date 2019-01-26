@@ -16,9 +16,9 @@ how to style a web page with it and how to run a single component demo.
 2.  As you can see the folder contains several files and a folder:
   * `package.json` for this tutorial listing all required VCL and other NPM modules.
   * `index.html` is an example website, you can use later.
-  * `index.styl` is the index file which just includes other modules and files using `@import`.
-  * `vcl-custom.styl` is a file where one can add custom rules or override VCL rules.
-  * `vcl-var-override.styl` is a file where variables of VCL modules can be re-defined before they are compiled.
+  * `index.sss` is the index file which just includes other modules and files using `@import`.
+  * `vcl-custom.sss` is a file where one can add custom rules or override VCL rules.
+  * `vcl-var-override.sss` is a file where variables of VCL modules can be re-defined before they are compiled.
 
 3.  Open a terminal and execute `npm install` from the `tutorial` folder.
     After that a folder `node_modules` is created which contains all VCL modules specified in the `package.json`.
@@ -29,7 +29,7 @@ how to style a web page with it and how to run a single component demo.
 
 5.  From the tutorial folder run the VCL preprocessor to create a VCL build:
 
-    `vcl-preprocessor index.styl vcl.css`
+    `vcl-preprocessor index.sss vcl.css`
 
     You should see "✔ Succesfully compiled input to vcl.css" in the terminal if everything is fine.
 

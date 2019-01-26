@@ -6,7 +6,7 @@
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css"
   },
-  "style": "index.styl",
+  "style": "index.sss",
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",

@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle-webcomponents": "polymer build"
   },
-  "style": "./main.styl",
+  "style": "./main.sss",
   "keywords": [
     "vcl",
     "doc-client"

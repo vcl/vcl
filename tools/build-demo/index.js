@@ -18,7 +18,7 @@ mkdirp('build', (errr) => {
   });
 });
 
-fs.watch('./index.styl', { encoding: 'buffer' }, (eventType, buffer) => {
+fs.watch('./index.sss', { encoding: 'buffer' }, (eventType, buffer) => {
   const process = vcl.package('./package.json', { includeDevDependencies: true });
   process.then((result) => {
     fs.writeFileSync('build/index.css', result.css);
