@@ -1,6 +1,6 @@
 {
   "name": "@vcl/doc-gen",
-  "version": "0.2.10",
+  "version": "0.3.0-1",
   "description": "VCL Documentation Generator",
   "main": "docgen.js",
   "bin": {
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@vcl/doc-client": "^0.3.4",
-    "@vcl/preprocessor": "^0.2.5",
+    "@vcl/preprocessor": "^0.3.0",
     "debug": "^3.1.0",
     "lodash": "^4.17.10",
     "marked": "^0.4.0",

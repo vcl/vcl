@@ -105,7 +105,7 @@ export default class DocDemo extends PolymerElement {
     const cleanStyles = styles.replace(/body {([\s\S]*?)}/g, '')
     .replace(/.vclViewport {([\s\S]*?)}/g, '');
     return cleanStyles
-    
+
   }
 }
 customElements.define(DocDemo.is, DocDemo);

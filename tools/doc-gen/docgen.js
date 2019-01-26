@@ -149,12 +149,36 @@ var renderPart = function(docPart, options) {
       debug('preprocessing %s', pack.name);
       debug('from %s', pack.basePath);
 
-      var css = preprocessor.package(pack.basePath, {
-        providers: ['@vcl/default-theme', '@vcl/default-theme-terms'],
-        includeDevDependencies: true,
-        docGenMode: true
+      const resolveImportsReducer = (importArr, need) => {
+        const pkg = options.packages.find(pkg => {
+          return (pkg.vcl && pkg.vcl.provides && pkg.vcl.provides.some(v => v === need));
+        })
+        if (pkg) {
+          const nestedNeeds = (pkg.vcl && pkg.vcl.needs) || [];
+          return [
+            ...nestedNeeds.reduce(resolveImportsReducer, importArr),
+            `@import "${pkg.name}"`
+          ];
+        } else {
+          return importArr;
+        }
+      }
+
+      let sss = '';
+      if (pack.docgen.needs) {
+        const imports = pack.docgen.needs.reduce(resolveImportsReducer, []);
+        const uniqueImports = [...new Set(imports)]
+        sss += uniqueImports.join(`\n`) + `\n`;
+      }
+      sss += `@import "${pack.name}"\n`;
+
+      var css = preprocessor(sss, {
+        url: false // do not follow urls
+        // includeDevDependencies: true,
+        // docGenMode: true
       });
-        return css;
+
+      return css;
     };
   }
 
@@ -166,7 +190,7 @@ return new Promise((resolve, reject) => {
         docPart.style = result.css;
         if (!docPart.style) docPart.style = '';
         resolve(docPart);
-    });
+    }).catch(ex => reject(ex));
   } else if (!docPart.style) {
     docPart.style = '';
     resolve(docPart);
@@ -220,10 +244,12 @@ function genJson(options) {
   var _packs = [];
   options.packages.forEach(function(name) {
     var pack = fetchPackage(name, options);
-     if (pack) _packs.push(pack);
-     pack.then((data) => {
-       if (data) options.parts.push(data);
-    });
+    if (pack) {
+      _packs.push(pack.then((data) => {
+        if (data) options.parts.push(data);
+        return data;
+      }));
+    }
   });
 
  return Promise.all(_packs)
@@ -239,7 +265,7 @@ function generateJson(options) {
     output: process.cwd() + '/./doc.json'
   });
 
-  doc.then((data) => {
+  return doc.then((data) => {
     fs.writeFileSync(options.output, JSON.stringify(data, null, 2));
   });
 }
@@ -251,8 +277,8 @@ function generateHtml(options) {
     output: process.cwd() + '/./somedoc.html'
   });
   var outputFolder = options.outputFolder;
-      
-  doc.then((data) => {
+
+  return doc.then((data) => {
     docClient.getBuild(data, function(output) {
       var html = output.html;
       var css = output.css;
@@ -262,7 +288,7 @@ function generateHtml(options) {
         fs.writeFileSync(outputFolder+'/index.html', html);
         fs.writeFileSync(outputFolder+'/vcl.css', css);
       });
-     
+
     });
   });
 
