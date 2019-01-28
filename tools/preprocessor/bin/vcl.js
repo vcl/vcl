@@ -24,6 +24,8 @@ var yargs = require('yargs')
   .alias('source-map', 's')
   .describe('optimize', 'optimize css')
   .alias('optimize', 'o')
+  .describe('theme', 'use theme')
+  .alias('theme', 't')
   .count('verbose')
   .alias('V', 'verbose');
 
@@ -67,6 +69,10 @@ if (argv['source-map']) {
 
 if (argv['watch']) {
   opts.watch = true;
+}
+
+if (argv['theme']) {
+  opts.theme = argv['theme'];
 }
 
 if (process.stdin.isTTY) {

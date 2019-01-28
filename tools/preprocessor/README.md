@@ -26,7 +26,8 @@ Options:
   --watch, -w                watches the input file for changes
   --import-root, -i          base directory for file based imports
   --optimize                 optimize css
-  --source-map              generate source maps
+  --theme                    use specified theme instead of "@vcl/theme"
+  --source-map               generate source maps
 
 Examples:
   vcl-preprocessor index.sss dist/compiled.css     Compile index.sss and output to

@@ -15,17 +15,26 @@ var postcssPreset = require('postcss-preset-env');
 var postcssNesting = require('postcss-nesting');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+var npmImportResolve = require('./npm-import-resolve');
+
 
 /**
  * Creates and return a list of postCSS plugins required for the VCL
  * @param {object} [opts] - postCSS plugin options.
  * @param {string} [opts.root=process.cwd()] - base directory
+ * @param {string} [opts.theme="@vcl/theme"] - theme to use
  * @return Array of postCSS plugins
  */
 function createPostCSSPlugins (opts = {}) {
   return [
     npmimport({
       root: opts.root || process.cwd(),
+      resolve: (id, base, options) => {
+        if (id === '@vcl/theme' && opts.theme) {
+          id = opts.theme;
+        }
+        return npmImportResolve(id, base, options);
+      },
       ...(opts.npm || {}),
     }),
     postcssNesting(),
@@ -45,6 +54,7 @@ function createPostCSSPlugins (opts = {}) {
 * @param {string} [opts.loader="extract"] - Top loader to handle the css output (extract, raw or style)
 * @param {boolean} [opts.sourceMap=false] - Generate a source map
 * @param {boolean} [opts.url=false] - Enable/Disable url() handling
+* @param {string} [opts.theme="@vcl/theme"] - theme to use
 */
 function createWebpackRule(opts = {}) {
 
@@ -93,6 +103,7 @@ function createWebpackRule(opts = {}) {
 * @param {boolean} [opts.sourceMap=false] - Generate a source map
 * @param {boolean} [opts.url=true] - Enable/Disable url() handling
 * @param {boolean} [opts.optimize=false] - Optimize css
+* @param {string} [opts.theme="@vcl/theme"] - theme to use
 */
 function createWebpackCompiler(inputFile, outputFile, opts = {}) {
   const root = opts.root || process.cwd();
@@ -150,6 +161,7 @@ function createWebpackCompiler(inputFile, outputFile, opts = {}) {
 * @param {boolean} [opts.sourceMap=false] - Generate a source map
 * @param {boolean=true} [opts.url=true] - Enable/Disable url() handling
 * @param {boolean} [opts.optimize=false] - Optimize css
+* @param {string} [opts.theme="@vcl/theme"] - theme to use
 * @return {Promise} - Converted css
 */
 function compileString(sss, opts = {}) {
@@ -214,6 +226,7 @@ function compileString(sss, opts = {}) {
 * @param {boolean} [opts.sourceMap=false] - Generate a source map
 * @param {boolean=true} [opts.url=true] - Enable/Disable url() handling
 * @param {boolean} [opts.optimize=false] - Optimize css
+* @param {string} [opts.theme="@vcl/theme"] - theme to use
 * @return {Promise} - Converted css
 */
 function compileFile(inputFile, outputFile = 'vcl.css', opts = {}) {
