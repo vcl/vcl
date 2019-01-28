@@ -5,6 +5,9 @@
   position: relative
   width: 5em
   user-select: none
+  border-width: 1px
+  border-style: solid
+  border-color: var(--flip-switch-border-color)
   &.vclFlipSwitchPressed
     & .vclFlipSwitchTrack
       margin-left: 0
@@ -33,7 +36,6 @@
   transition: margin 0.2s ease-in 0s
   display: flex
   flex-direction: row
-
   & .vclFlipSwitchActive,
   & .vclFlipSwitchInactive
     width: 50%
@@ -41,13 +43,9 @@
     line-height: var(--flip-switch-height)
     font-weight: bold
     box-sizing: border-box
-    border-width: 1px
-    border-style: solid
   & .vclFlipSwitchActive
-    border-color: var(--flip-switch-border-color)
     background-color: var(--flip-switch-active-bg-color)
     color: var(--flip-switch-active-color)
     text-align: left
   & .vclFlipSwitchInactive
-    border-color: var(--flip-switch-border-color)
     text-align: right
