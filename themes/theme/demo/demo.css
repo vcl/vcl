@@ -1,0 +1,217 @@
+/**
+ * The VCL default theme.
+ *
+ * Defines all variables required by modules in the VCL org's repository.
+ * The basic CI terms are defined in terms.sss.
+ */
+
+.vclContainer {
+  border: 0;
+}
+
+.demo .label {
+  min-width: 12rem;
+}
+
+.demo .color {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  width: 10rem;
+  height: 1.9rem;
+}
+
+.demo .color:empty {
+  display: block;
+}
+
+.demo .black {
+  background-color: undefined;
+}
+
+.demo .white {
+  background-color: undefined;
+}
+
+.demo .grayd5 {
+  background-color: undefined;
+}
+
+.demo .grayd4 {
+  background-color: undefined;
+}
+
+.demo .grayd3 {
+  background-color: undefined;
+}
+
+.demo .grayd2 {
+  background-color: undefined;
+}
+
+.demo .grayd1 {
+  background-color: undefined;
+}
+
+.demo .gray {
+  background-color: undefined;
+}
+
+.demo .grayl1 {
+  background-color: undefined;
+}
+
+.demo .grayl2 {
+  background-color: undefined;
+}
+
+.demo .grayl3 {
+  background-color: undefined;
+}
+
+.demo .grayl4 {
+  background-color: undefined;
+}
+
+.demo .grayl5 {
+  background-color: undefined;
+}
+
+.demo .grayl6 {
+  background-color: undefined;
+}
+
+.demo .badarker {
+  background-color: undefined;
+}
+
+.demo .badark {
+  background-color: undefined;
+}
+
+.demo .ba {
+  background-color: undefined;
+}
+
+.demo .balight {
+  background-color: undefined;
+}
+
+.demo .balighter {
+  background-color: undefined;
+}
+
+.demo .baoverlay {
+  background-color: undefined;
+}
+
+.demo .bprimary {
+  background-color: undefined;
+}
+
+.demo .bsuccess {
+  background-color: undefined;
+}
+
+.demo .binfo {
+  background-color: undefined;
+}
+
+.demo .bwarning {
+  background-color: undefined;
+}
+
+.demo .bdanger {
+  background-color: undefined;
+}
+
+.demo .glass1 {
+  background-color: undefined;
+}
+
+.demo .glass2 {
+  background-color: undefined;
+}
+
+.demo .empdc {
+  background-color: undefined;
+}
+
+.demo .empmc {
+  background-color: undefined;
+}
+
+.demo .emplc {
+  background-color: undefined;
+}
+
+.demo .primdc {
+  background-color: undefined;
+}
+
+.demo .primmc {
+  background-color: undefined;
+}
+
+.demo .primlc {
+  background-color: undefined;
+}
+
+.demo .succdc {
+  background-color: undefined;
+}
+
+.demo .succmc {
+  background-color: undefined;
+}
+
+.demo .succlc {
+  background-color: undefined;
+}
+
+.demo .infodc {
+  background-color: undefined;
+}
+
+.demo .infomc {
+  background-color: undefined;
+}
+
+.demo .infolc {
+  background-color: undefined;
+}
+
+.demo .warningdc {
+  background-color: undefined;
+}
+
+.demo .warningmc {
+  background-color: undefined;
+}
+
+.demo .warninglc {
+  background-color: undefined;
+}
+
+.demo .errordc {
+  background-color: undefined;
+}
+
+.demo .errormc {
+  background-color: undefined;
+}
+
+.demo .errorlc {
+  background-color: undefined;
+}
+
+.demo .dangerdc {
+  background-color: undefined;
+}
+
+.demo .dangermc {
+  background-color: undefined;
+}
+
+.demo .dangerlc {
+  background-color: undefined;
+}

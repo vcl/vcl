@@ -1,15 +1,24 @@
-# [VCL](https://vcl.github.io/) default-theme
+# [VCL](https://vcl.github.io/) theme
 
 The VCL default theme for the core modules collection.
 
 ## Features
 
-Defines all ~650 variables required to be set by the modules included in
-the core-module collection and narrows them down to the small set
-of variables defined below. These variables form the interface
-of this module.
+Definition of the theme terms which consist of:
+
+- colors.
+- font faces.
+
+These definitions are typically obtained from the color palette of a web site
+design or directly from the corporate identity or brand design stipulations
+of a corporation or a specific project.
+
+Based on these terms all ~650 variables required by the modules included in
+the official VCL module collection.
 
 ## Variables
+
+These term variables form the interface of this module.
 
 ### Grays
 

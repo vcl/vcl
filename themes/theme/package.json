@@ -1,7 +1,7 @@
 {
-  "name": "@vcl/default-theme-terms",
-  "description": "The terms of the VCL default theme",
-  "version": "0.2.5",
+  "name": "@vcl/theme",
+  "description": "The VCL default theme",
+  "version": "0.3.0-1",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -24,36 +24,25 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "0.3.2",
-    "@vcl/container": "0.2.1",
-    "@vcl/default-theme": "0.2.4",
-    "@vcl/flex-layout": "0.2.2",
-    "@vcl/preprocessor": "0.2.8",
-    "@vcl/typography": "0.2.4",
+    "@vcl/preprocessor": "^0.2.9",
     "browser-sync": "2.26.3",
-    "gulp": "3.9.1",
-    "gulp-concat": "2.6.1",
-    "merge2": "1.2.3",
     "normalize.css": "8.0.1",
-    "pre-commit": "1.2.2"
+    "pre-commit": "^1.2.2"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "keywords": [
     "css",
     "vcl",
     "component",
     "default",
-    "theme",
-    "terms"
+    "theme"
   ],
   "vcl": {
-    "provides": [
-      "theme-terms"
-    ],
     "categories": [
       {
         "title": "Themes",
-        "itemPriority": 20,
+        "itemPriority": 10,
         "priority": 180
       }
     ]
