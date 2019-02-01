@@ -25,12 +25,12 @@
   "license": "MIT",
   "devDependencies": {
     "@vcl/preprocessor": "^0.2.9",
+    "@vcl/typography": "^0.2.4",
     "browser-sync": "2.26.3",
-    "normalize.css": "8.0.1",
+    "normalize.css": "^8.0.1",
     "pre-commit": "^1.2.2"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "keywords": [
     "css",
     "vcl",
