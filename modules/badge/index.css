@@ -1,0 +1,296 @@
+/**
+ * The VCL default theme.
+ *
+ * Defines all variables required by modules in the VCL org's repository.
+ * The basic CI terms are defined in terms.sss. */
+
+/**
+ * The terms of the VCL default theme.
+ *
+ * Terms are colors, font faces etc.
+ * Typically these terms are derived from CI or design
+ * stipulations like a color palette in a style guide. */
+
+:root {
+  /* Colors
+     ====== */
+
+  /* Grays */
+
+  /* Brand Accent Colors */
+
+  /* Semantic Brand Colors */
+
+  /* Shadows, transparencies etc. */
+
+  /* Semantic Colors */
+
+  /* Fonts
+     ===== */
+}
+
+.body {
+  background-color: #d9534f
+}
+
+:root {
+  /* Theme internally shared Variables
+     --------------------------------- */
+
+  /* App
+     --- */
+
+  /* App Content Area
+     ---------------- */
+
+  /* App Header
+     ---------- */
+
+  /* App Footer
+     ---------- */
+
+  /* Grid
+     ---- */
+
+  /* Flex Layout
+     ----------- */
+
+  /* Typography
+     ---------- */
+  /* Font settings */
+
+  /* Modular scale variants */
+
+  /* Colors */
+
+  /* List
+     ---- */
+
+  /* Value Unit Anagram
+     ------------------ */
+
+  /* Label
+     ---- */
+
+  /* Badge
+     ----- */
+
+  /* Table
+     ----- */
+
+  /* Table Extras
+     ------------ */
+
+  /* Sum Table
+     ---------- */
+
+  /* Data List
+     --------- */
+
+  /* Data Tree
+     --------- */
+
+  /* Calendar
+     ----------- */
+
+  /* Pagination
+     ---------- */
+
+  /* Tab Navigation
+     -------------- */
+
+  /* Breadcrumb Navigation
+     --------------------- */
+
+  /* Navigation
+     ----------- */
+
+  /* Process Navigation
+     ------------------ */
+
+  /* Tooltip
+     ------- */
+
+  /* Popover
+     ------- */
+
+  /* Layer
+     ----- */
+
+  /* Nag
+     --- */
+
+  /* Scrollbar
+     --------- */
+
+  /* Ribbon
+     ------- */
+
+  /* Loading Layer
+     ------------- */
+
+  /* Container
+     --------- */
+
+  /* Go-to-top
+     --------- */
+
+  /* Divider
+     ------- */
+
+  /* Panel
+     ----- */
+
+  /* Toolbar
+     -------- */
+
+  /* Notification
+     ------------ */
+
+  /* Progress Bar
+     ------------ */
+
+  /* Callout
+     ------- */
+
+  /* Article Structuring
+     ------------------- */
+
+  /* Button
+     ------ */
+
+  /* Default variant */
+
+  /* Emphasized variant */
+
+  /* Transparent variant */
+
+  /* Emphasized & transparent variant */
+
+  /* Half transparent alternative variant */
+
+  /* Transparent alternative variant */
+
+  /* Danger variant */
+
+  /* Suggestive variant */
+
+  /* Form Control Label
+     ------------------ */
+
+  /* Fieldset
+     -------- */
+
+  /* Input
+     ----- */
+
+  /* File Input
+     ---------- */
+
+  /* Checkbox
+     -------- */
+
+  /* Radio Button
+     ------------ */
+
+  /* Input Group
+     ----------- */
+
+  /* Embedded Input Group
+     -------------------- */
+
+  /* Slider
+     ------ */
+
+  /* Rating
+     ------ */
+
+  /* Token
+     ----- */
+
+  /* Flip Switch
+     ----------- */
+
+  /* Drop Down
+     --------- */
+
+  /* Date Picker
+     ----------- */
+
+  /* Time Picker
+     ----------- */
+
+  /* Responsive Image
+     ---------------- */
+
+  /* Image Shapes
+     ------------ */
+
+  /* Gallery
+     ------- */
+
+  /* Drawer
+     ------ */
+
+  /* E-Mail
+     ------ */
+
+  /* Product List
+     ------------ */
+}
+
+.vclBadge {
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+  padding-bottom: 0.2em;
+  padding-left: 0.5em;
+  font-weight: bold;
+  font-size: 80%;
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 2.5em;
+  color: #FFFFFF;
+  background-color: rgb(38,38,38)
+}
+
+.vclBadge:empty {
+    display: none
+}
+
+.vclBadge.vclPrimary {
+  color: #FFFFFF;
+  background-color: rgb(71,71,71)
+}
+
+.vclBadge.vclSuccess {
+  color: #FFFFFF;
+  background-color: #5cb85c
+}
+
+.vclBadge.vclInfo {
+  color: #FFFFFF;
+  background-color: #5bc0de
+}
+
+.vclBadge.vclWarning {
+  color: #FFFFFF;
+  background-color: #f0ad4e
+}
+
+.vclBadge.vclDanger {
+  color: #FFFFFF;
+  background-color: #d9534f
+}
+
+.vclBadge.vclError {
+  color: #FFFFFF;
+  background-color: #d9534f
+}
+
+.vclBadge.vclImportant {
+  color: #FFFFFF;
+  background-color: #d9534f
+}
+
