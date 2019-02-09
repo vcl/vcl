@@ -24,7 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "@vcl/breakpoints": "^0.2.0",
-    "@vcl/build-demo": "^0.3.1",
+    "@vcl/build-demo": "^0.4.0-2",
     "@vcl/button": "^0.2.2",
     "@vcl/icogram": "^0.2.4",
     "@vcl/icon": "^0.2.2",
@@ -33,7 +33,7 @@
     "@vcl/loose-button-group": "^0.2.2",
     "@vcl/flex-layout": "^0.2.2",
     "@vcl/panel": "^0.2.2",
-    "@vcl/preprocessor": "^0.2.7",
+    "@vcl/preprocessor": "^0.3.0-2",
     "@vcl/typography": "^0.2.3",
     "@vcl/size-modulation": "^0.2.2",
     "@vcl/utils": "^0.2.1",

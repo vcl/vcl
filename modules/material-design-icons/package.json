@@ -23,10 +23,10 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "0.3.2",
+    "@vcl/build-demo": "^0.4.0-2",
     "@vcl/default-theme": "0.2.4",
     "@vcl/default-theme-terms": "0.2.4",
-    "@vcl/preprocessor": "0.2.7",
+    "@vcl/preprocessor": "^0.3.0-2",
     "@vcl/typography": "0.2.4",
     "browser-sync": "2.26.3",
     "normalize.css": "8.0.0",

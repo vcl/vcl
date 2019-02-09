@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.3.1",
+    "@vcl/build-demo": "^0.4.0-2",
     "@vcl/button": "^0.2.0",
     "@vcl/default-theme": "^0.2.2",
     "@vcl/default-theme-terms": "^0.2.2",
@@ -36,7 +36,7 @@
     "@vcl/icon": "^0.2.0",
     "@vcl/input": "^0.2.1",
     "@vcl/layout-spans": "^0.2.0",
-    "@vcl/preprocessor": "^0.2.4",
+    "@vcl/preprocessor": "^0.3.0-2",
     "@vcl/size-modulation": "^0.2.0",
     "@vcl/typography": "^0.2.2",
     "@vcl/utils": "^0.2.0",

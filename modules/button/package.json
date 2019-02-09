@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "0.3.5",
+    "@vcl/build-demo": "^0.4.0-2",
     "@vcl/default-theme": "0.2.4",
     "@vcl/default-theme-terms": "0.2.5",
     "@vcl/dropdown": "0.2.3",
@@ -32,7 +32,7 @@
     "@vcl/icogram": "0.2.5",
     "@vcl/icon": "0.2.4",
     "@vcl/layout-spans": "0.2.1",
-    "@vcl/preprocessor": "0.2.8",
+    "@vcl/preprocessor": "^0.3.0-2",
     "@vcl/size-modulation": "0.2.3",
     "@vcl/typography": "0.2.4",
     "browser-sync": "2.26.3",
