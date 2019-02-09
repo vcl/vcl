@@ -8,7 +8,7 @@
   "devDependencies": {
     "@vcl/default-theme": "^0.3.0",
     "@vcl/default-theme-terms": "^0.3.0",
-    "@vcl/preprocessor": "^0.3.0",
+    "@vcl/preprocessor": "^0.3.0-2",
     "@vcl/core-modules": "^0.3.0",
     "@vcl/font-awesome": "^0.4.0",
     "http-server": "^0.11.1",

@@ -119,6 +119,6 @@
     "@vcl/default-theme": "^0.2.3",
     "@vcl/default-theme-terms": "0.2.5",
     "@vcl/doc-gen": "0.2.10",
-    "@vcl/preprocessor": "0.2.8"
+    "@vcl/preprocessor": "^0.3.0-2"
   }
 }
