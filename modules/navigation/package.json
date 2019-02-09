@@ -49,13 +49,7 @@
     "navigation"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "navigation"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Navigations",
         "itemPriority": 50,

@@ -50,13 +50,7 @@
     "group"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "input-group"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Form Controls",
         "itemPriority": 50,

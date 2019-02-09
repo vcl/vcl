@@ -45,13 +45,7 @@
     "table"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "table"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Tabular Data",
         "itemPriority": 10,

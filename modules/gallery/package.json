@@ -48,13 +48,7 @@
     "gallery"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "gallery"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Media",
         "itemPriority": 40,

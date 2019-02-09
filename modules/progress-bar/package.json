@@ -42,13 +42,7 @@
     "bar"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "progress-bar"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Status Information",
         "itemPriority": 30,

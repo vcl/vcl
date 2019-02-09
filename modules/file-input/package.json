@@ -44,13 +44,7 @@
     "file-input"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "file-input"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Form Controls",
         "itemPriority": 80,

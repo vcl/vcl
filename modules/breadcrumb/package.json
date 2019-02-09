@@ -42,13 +42,7 @@
     "breadcrumb"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "breadcrumb"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Navigations",
         "itemPriority": 30,

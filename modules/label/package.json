@@ -40,13 +40,7 @@
     "label"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "label"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Typography",
         "itemPriority": 30,

@@ -54,13 +54,7 @@
     "panel"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "panel"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Containers",
         "itemPriority": 20,

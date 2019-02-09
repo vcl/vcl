@@ -45,12 +45,6 @@
     "area"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "app-area"
-    ],
     "categories": [
       {
         "title": "Areas",

@@ -43,13 +43,7 @@
     "footer"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "app-area-footer"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Areas",
         "itemPriority": 40,

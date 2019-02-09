@@ -41,13 +41,7 @@
     "effects"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "effects"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Effects",
         "itemPriority": 10,

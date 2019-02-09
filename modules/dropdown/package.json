@@ -47,13 +47,7 @@
     "dropdown"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "dropdown"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Overlays",
         "itemPriority": 50,

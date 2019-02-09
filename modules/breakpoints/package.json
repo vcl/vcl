@@ -39,13 +39,7 @@
     "breakpoints"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "breakpoints"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Utilities",
         "itemPriority": 30,

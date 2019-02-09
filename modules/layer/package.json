@@ -49,13 +49,7 @@
     "layer"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "layer"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Overlays",
         "itemPriority": 30,

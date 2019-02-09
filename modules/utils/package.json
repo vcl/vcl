@@ -43,13 +43,7 @@
     "utilities"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "utils"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Utilities",
         "itemPriority": 10,

@@ -52,13 +52,7 @@
     "spinner"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "spinner"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Form Controls",
         "itemPriority": 80,

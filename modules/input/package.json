@@ -49,13 +49,7 @@
     "input"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "input"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Form Controls",
         "itemPriority": 10,

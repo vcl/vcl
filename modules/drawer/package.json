@@ -41,13 +41,7 @@
     "drawer"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "drawer"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Areas",
         "itemPriority": 50,

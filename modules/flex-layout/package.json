@@ -43,13 +43,7 @@
     "flexbox"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "layout"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Layout",
         "itemPriority": 20,

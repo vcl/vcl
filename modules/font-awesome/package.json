@@ -43,13 +43,7 @@
     "awesome"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "icons"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Icons",
         "itemPriority": 40,

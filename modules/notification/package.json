@@ -46,13 +46,7 @@
     "notification"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "notification"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Status Information",
         "itemPriority": 10,

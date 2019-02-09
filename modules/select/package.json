@@ -52,13 +52,7 @@
     "select"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "select"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Form Controls",
         "itemPriority": 48,

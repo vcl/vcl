@@ -42,13 +42,7 @@
     "fluid"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "grid"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Layout",
         "itemPriority": 10,

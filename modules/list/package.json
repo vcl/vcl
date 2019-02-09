@@ -43,13 +43,7 @@
     "list"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "list"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Typography",
         "itemPriority": 20,

@@ -49,13 +49,7 @@
     "form"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "form"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Forms",
         "itemPriority": 10,

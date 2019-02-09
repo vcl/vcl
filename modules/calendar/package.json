@@ -41,13 +41,7 @@
     "calendar"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "calendar"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Tabular Data",
         "itemPriority": 50,

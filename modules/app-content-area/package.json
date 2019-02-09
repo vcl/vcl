@@ -43,13 +43,7 @@
     "area"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "app-content-area"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Areas",
         "itemPriority": 20,

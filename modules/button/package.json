@@ -47,13 +47,7 @@
     "button"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "button"
-    ],
-    "categories": [
+		"categories": [
       {
         "title": "Buttons",
         "itemPriority": 10,
