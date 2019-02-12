@@ -83,6 +83,9 @@ function createWebpackRule(opts = {}) {
         }
       },
       {
+        loader: 'resolve-url-loader'
+      },
+      {
         loader: 'postcss-loader',
         options: {
           parser: 'sugarss',

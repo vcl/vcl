@@ -63,6 +63,7 @@
     "polymer-cli": "^1.8.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.0",
     "@polymer/app-route": "^3.0.0-pre.21",
     "@polymer/polymer": "^3.0.5",
     "@webcomponents/webcomponentsjs": "^2.1.0"
