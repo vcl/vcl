@@ -25,11 +25,13 @@
   "devDependencies": {
     "pre-commit": "^1.1.2",
     "@vcl/build-demo": "^0.4.0-2",
-		"@vcl/preprocessor": "^0.3.0-2",
-    "@vcl/typography": "^0.2.0",
+    "@vcl/preprocessor": "^0.3.0-2",
     "browser-sync": "^2.24.7"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@vcl/typography": "^0.2.0",
+    "@vcl/theme": "^0.3.0-1"
+  },
   "keywords": [
     "css",
     "vcl",
@@ -38,10 +40,6 @@
     "transitions"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [],
     "categories": [
       {
         "title": "Transitions",
