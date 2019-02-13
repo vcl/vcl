@@ -25,8 +25,7 @@
   "devDependencies": {
     "@vcl/build-demo": "^0.4.0-2",
     "@vcl/container": "^0.2.0",
-    "@vcl/default-theme": "^0.2.0",
-    "@vcl/default-theme-terms": "^0.2.0",
+	"@vcl/default-theme-terms": "^0.2.0",
     "@vcl/layout-spans": "^0.2.0",
     "@vcl/preprocessor": "^0.3.0-2",
     "@vcl/typography": "^0.2.0",

@@ -25,7 +25,6 @@
   "devDependencies": {
     "pre-commit": "^1.2.2",
     "browser-sync": "^2.24.7",
-    "@vcl/default-theme": "^0.2.0",
     "@vcl/default-theme-terms": "^0.2.0",
     "@vcl/build-demo": "^0.4.0-2",
     "@vcl/preprocessor": "^0.3.0-2"

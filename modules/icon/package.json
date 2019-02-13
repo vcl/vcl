@@ -24,8 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "@vcl/build-demo": "^0.4.0-2",
-    "@vcl/default-theme": "0.2.4",
-    "@vcl/default-theme-terms": "0.2.4",
+	"@vcl/default-theme-terms": "0.2.4",
     "@vcl/flex-layout": "0.2.2",
     "@vcl/font-awesome": "0.3.0",
     "@vcl/preprocessor": "^0.3.0-2",
