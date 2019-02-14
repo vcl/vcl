@@ -23,21 +23,23 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-2",
-		"@vcl/dropdown": "0.2.3",
+    "@vcl/build-demo": "^0.4.0-3",
+    "@vcl/preprocessor": "^0.3.0-2",
+    "browser-sync": "2.26.3",
+    "pre-commit": "^1.1.2"
+  },
+  "dependencies": {
+    "normalize.css": "8.0.1",
+    "@vcl/theme": "^0.3.0-1",
+    "@vcl/typography": "0.2.4",
+    "@vcl/dropdown": "0.2.3",
     "@vcl/flex-layout": "0.2.2",
     "@vcl/font-awesome": "^0.3.0",
     "@vcl/icogram": "0.2.5",
     "@vcl/icon": "0.2.4",
     "@vcl/layout-spans": "0.2.1",
-    "@vcl/preprocessor": "^0.3.0-2",
-    "@vcl/size-modulation": "0.2.3",
-    "@vcl/typography": "0.2.4",
-    "browser-sync": "2.26.3",
-    "normalize.css": "8.0.1",
-    "pre-commit": "^1.1.2"
+    "@vcl/size-modulation": "0.2.3"
   },
-  "dependencies": {},
   "keywords": [
     "css",
     "vcl",
@@ -45,7 +47,7 @@
     "button"
   ],
   "vcl": {
-		"categories": [
+    "categories": [
       {
         "title": "Buttons",
         "itemPriority": 10,
