@@ -23,17 +23,19 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-2",
-		"@vcl/font-awesome": "^0.3.0",
-    "@vcl/icogram": "0.2.5",
-    "@vcl/icon": "0.2.4",
+    "@vcl/build-demo": "^0.4.0-3",
     "@vcl/preprocessor": "^0.3.0-2",
-    "@vcl/typography": "0.2.4",
     "browser-sync": "2.26.3",
-    "normalize.css": "8.0.1",
     "pre-commit": "^1.1.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "8.0.1",
+    "@vcl/theme": "^0.3.0-1",
+    "@vcl/typography": "0.2.4",
+    "@vcl/font-awesome": "^0.3.0",
+    "@vcl/icogram": "0.2.5",
+    "@vcl/icon": "0.2.4"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/vcl/dropdown.git"
@@ -45,7 +47,7 @@
     "dropdown"
   ],
   "vcl": {
-		"categories": [
+    "categories": [
       {
         "title": "Overlays",
         "itemPriority": 50,

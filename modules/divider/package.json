@@ -23,9 +23,16 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-2",
+    "@vcl/build-demo": "^0.4.0-3",
+    "@vcl/preprocessor": "^0.3.0-2",
+    "pre-commit": "^1.1.2",
+    "browser-sync": "^2.24.7"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "@vcl/theme": "^0.3.0-1",
     "@vcl/button": "^0.2.0",
-		"@vcl/fieldset": "^0.2.0",
+    "@vcl/fieldset": "^0.2.0",
     "@vcl/flex-layout": "^0.2.1",
     "@vcl/font-awesome": "^0.3.0",
     "@vcl/form": "^0.2.1",
@@ -34,15 +41,10 @@
     "@vcl/icon": "^0.2.0",
     "@vcl/input": "^0.2.1",
     "@vcl/layout-spans": "^0.2.0",
-    "@vcl/preprocessor": "^0.3.0-2",
     "@vcl/size-modulation": "^0.2.0",
     "@vcl/typography": "^0.2.2",
-    "@vcl/utils": "^0.2.0",
-    "normalize.css": "^8.0.0",
-    "pre-commit": "^1.1.2",
-    "browser-sync": "^2.24.7"
+    "@vcl/utils": "^0.2.0"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/vcl/divider.git"
@@ -54,10 +56,6 @@
     "divider"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [],
     "categories": [
       {
         "title": "Layout",

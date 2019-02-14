@@ -23,13 +23,16 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-2",
-    "@vcl/button": "^0.2.0",
-    "@vcl/core-modules": "^0.2.4",
-		"@vcl/preprocessor": "^0.3.0-2",
-    "@vcl/typography": "^0.2.0",
+    "@vcl/build-demo": "^0.4.0-3",
+    "@vcl/preprocessor": "^0.3.0-2",
     "pre-commit": "^1.1.2",
     "browser-sync": "^2.24.7"
+  },
+  "dependencies": {
+    "@vcl/button": "^0.2.0",
+    "@vcl/core-modules": "^0.2.4",
+    "@vcl/typography": "^0.2.0",
+    "@vcl/theme": "^0.3.0-1"
   },
   "keywords": [
     "css",
@@ -39,10 +42,6 @@
     "pointer"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [],
     "categories": [
       {
         "title": "Optimizations",

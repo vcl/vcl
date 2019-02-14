@@ -23,14 +23,16 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-2",
-		"@vcl/preprocessor": "^0.3.0-2",
-    "@vcl/responsive-image": "0.2.1",
-    "@vcl/typography": "0.2.4",
+    "@vcl/build-demo": "^0.4.0-3",
+    "@vcl/preprocessor": "^0.3.0-2",
     "browser-sync": "2.26.3",
     "pre-commit": "1.2.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@vcl/theme": "^0.3.0-1",
+    "@vcl/responsive-image": "0.2.1",
+    "@vcl/typography": "0.2.4"
+  },
   "keywords": [
     "css",
     "vcl",
@@ -38,10 +40,6 @@
     "logo"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [],
     "categories": [
       {
         "title": "Icons",

@@ -23,15 +23,17 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "normalize.css": "^7.0.0",
     "pre-commit": "^1.1.2",
-    "@vcl/build-demo": "^0.4.0-2",
-		"@vcl/preprocessor": "^0.3.0-2",
-    "@vcl/typography": "^0.2.0",
-    "@vcl/utils": "^0.2.0",
+    "@vcl/build-demo": "^0.4.0-3",
+    "@vcl/preprocessor": "^0.3.0-2",
     "browser-sync": "^2.24.7"
   },
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "^7.0.0",
+    "@vcl/theme": "^0.3.0-1",
+    "@vcl/typography": "^0.2.0",
+    "@vcl/utils": "^0.2.0"
+  },
   "keywords": [
     "css",
     "vcl",
@@ -40,10 +42,6 @@
     "layer"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [],
     "categories": [
       {
         "title": "Overlays",

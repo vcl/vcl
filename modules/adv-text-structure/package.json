@@ -28,7 +28,7 @@
     "@vcl/build-demo": "^0.4.0-2",
     "@vcl/preprocessor": "^0.3.0-2"
   },
-  "dependencies": {
+  "de pendencies": {
     "normalize.css": "^7.0.0",
     "@vcl/theme": "^0.3.0-1",
     "@vcl/typography": "^0.2.0"

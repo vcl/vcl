@@ -24,20 +24,22 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-2",
-		"@vcl/layout-spans": "0.2.1",
+    "@vcl/build-demo": "^0.4.0-3",
+    "browser-sync": "^2.24.7",
+    "pre-commit": "^1.1.2"
+  },
+  "dependencies": {
+    "normalize.css": "8.0.1",
+    "@vcl/theme": "^0.3.0-1",
+    "@vcl/layout-spans": "0.2.1",
     "@vcl/list": "0.2.3",
     "@vcl/print": "0.2.1",
     "@vcl/size-modulation": "0.2.3",
     "@vcl/sum-table": "0.2.1",
     "@vcl/table": "0.2.3",
     "@vcl/typography": "0.2.4",
-    "@vcl/utils": "0.2.1",
-    "browser-sync": "^2.24.7",
-    "normalize.css": "8.0.1",
-    "pre-commit": "^1.1.2"
+    "@vcl/utils": "0.2.1"
   },
-  "dependencies": {},
   "keywords": [
     "css",
     "vcl",
@@ -45,10 +47,6 @@
     "email"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [],
     "categories": [
       {
         "title": "Email",

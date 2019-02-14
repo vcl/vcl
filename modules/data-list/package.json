@@ -23,24 +23,26 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-2",
+    "@vcl/build-demo": "^0.4.0-3",
+    "@vcl/preprocessor": "^0.3.0-2",
+    "pre-commit": "^1.1.2",
+    "browser-sync": "^2.24.7"
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0",
+    "@vcl/theme": "^0.3.0-1",
     "@vcl/button": "^0.2.0",
-		"@vcl/flex-layout": "^0.2.0",
+    "@vcl/flex-layout": "^0.2.0",
     "@vcl/font-awesome": "^0.3.0",
     "@vcl/grid": "^0.2.1",
     "@vcl/icogram": "^0.2.3",
     "@vcl/icon": "^0.2.0",
     "@vcl/label": "^0.2.0",
     "@vcl/layout-spans": "^0.2.0",
-    "@vcl/preprocessor": "^0.3.0-2",
     "@vcl/responsive-image": "^0.2.0",
     "@vcl/typography": "^0.2.1",
-    "@vcl/utils": "^0.2.0",
-    "normalize.css": "^7.0.0",
-    "pre-commit": "^1.1.2",
-    "browser-sync": "^2.24.7"
+    "@vcl/utils": "^0.2.0"
   },
-  "dependencies": {},
   "keywords": [
     "css",
     "vcl",
@@ -51,10 +53,6 @@
     "table"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [],
     "categories": [
       {
         "title": "Tabular Data",

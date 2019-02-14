@@ -21,10 +21,11 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-2",
-	"@vcl/default-theme-terms": "0.2.5"
+    "@vcl/build-demo": "^0.4.0-3"
   },
   "dependencies": {
+    "normalize.css": "8.0.1",
+    "@vcl/theme": "^0.3.0-1",
     "@vcl/app-area": "^0.2.1",
     "@vcl/app-content-area": "^0.2.1",
     "@vcl/app-footer": "^0.2.3",
@@ -98,8 +99,7 @@
     "@vcl/tooltip": "^0.2.2",
     "@vcl/typography": "^0.2.4",
     "@vcl/utils": "^0.2.1",
-    "@vcl/zoom-box": "^0.2.4",
-    "normalize.css": "8.0.1"
+    "@vcl/zoom-box": "^0.2.4"
   },
   "keywords": [
     "css",
@@ -109,10 +109,5 @@
     "modules",
     "all",
     "include"
-  ],
-  "vcl": {
-    "provides": [
-      "core-modules"
-    ]
-  }
+  ]
 }
