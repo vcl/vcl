@@ -79,11 +79,8 @@ function createWebpackRule(opts = {}) {
         loader: 'css-loader',
         options: {
           importLoaders: 1,
-          url: opts.url === false ? false : true
+          url: opts.url !== false
         }
-      },
-      {
-        loader: 'resolve-url-loader'
       },
       {
         loader: 'postcss-loader',
@@ -268,7 +265,7 @@ function compileFile(inputFile, outputFile = 'vcl.css', opts = {}) {
     if (!opts.watch && stats.hasErrors()) {
       process.exitCode = 2;
     }
-  }
+  };
 
   if (opts.watch) {
     return compiler.watch({
