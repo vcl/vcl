@@ -1,7 +1,7 @@
 {
   "name": "@vcl/toolbar",
   "description": "Horizontal bar which can contain navigation elements, buttons, form controls etc",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -32,20 +32,20 @@
   "dependencies": {
     "normalize.css": "8.0.1",
     "@vcl/theme": "^0.3.0-1",
-    "@vcl/button": "0.2.3",
-    "@vcl/embedded-input-button": "0.2.4",
-    "@vcl/flex-layout": "0.2.2",
+    "@vcl/button": "^0.3.0",
+    "@vcl/embedded-input-button": "^0.3.0",
+    "@vcl/flex-layout": "^0.3.0",
     "@vcl/font-awesome": "^0.3.0",
-    "@vcl/icogram": "0.2.5",
-    "@vcl/icon": "0.2.4",
-    "@vcl/input": "0.2.2",
-    "@vcl/input-group": "0.2.9",
-    "@vcl/logo": "0.2.3",
-    "@vcl/loose-button-group": "0.2.2",
-    "@vcl/navigation": "0.2.7",
-    "@vcl/responsive-image": "0.2.1",
-    "@vcl/size-modulation": "0.2.3",
-    "@vcl/typography": "0.2.4"
+    "@vcl/icogram": "^0.3.0",
+    "@vcl/icon": "^0.3.0",
+    "@vcl/input": "^0.3.0",
+    "@vcl/input-group": "^0.3.0",
+    "@vcl/logo": "^0.3.0",
+    "@vcl/loose-button-group": "^0.3.0",
+    "@vcl/navigation": "^0.3.0",
+    "@vcl/responsive-image": "^0.3.0",
+    "@vcl/size-modulation": "^0.3.0",
+    "@vcl/typography": "^0.3.0"
   },
   "keywords": [
     "css",

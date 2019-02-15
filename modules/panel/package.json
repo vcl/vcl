@@ -1,7 +1,7 @@
 {
   "name": "@vcl/panel",
   "description": "Container element to group and highlight content",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -25,27 +25,27 @@
   "devDependencies": {
     "@vcl/build-demo": "^0.4.0-3",
     "@vcl/preprocessor": "^0.3.0-2",
-    "browser-sync": "^2.24.7",
-    "pre-commit": "^1.1.2"
+    "browser-sync": "^2.26.3",
+    "pre-commit": "^1.2.2"
   },
   "dependencies": {
-    "normalize.css": "^8.0.0",
+    "normalize.css": "^8.0.1",
     "@vcl/theme": "^0.3.0-1",
-    "@vcl/app-content-area": "^0.2.1",
-    "@vcl/button": "^0.2.3",
-    "@vcl/divider": "^0.2.2",
-    "@vcl/flex-layout": "^0.2.2",
-    "@vcl/form": "^0.2.2",
-    "@vcl/form-control-label": "^0.2.3",
-    "@vcl/icogram": "^0.2.4",
-    "@vcl/icon": "^0.2.2",
-    "@vcl/input": "^0.2.2",
-    "@vcl/loose-button-group": "^0.2.2",
-    "@vcl/responsive-image": "^0.2.0",
-    "@vcl/size-modulation": "^0.2.2",
-    "@vcl/table": "^0.2.1",
-    "@vcl/typography": "^0.2.3",
-    "@vcl/utils": "^0.2.1"
+    "@vcl/app-content-area": "^0.3.0",
+    "@vcl/button": "^0.3.0",
+    "@vcl/divider": "^0.3.0",
+    "@vcl/flex-layout": "^0.3.0",
+    "@vcl/form": "^0.3.0",
+    "@vcl/form-control-label": "^0.3.0",
+    "@vcl/icogram": "^0.3.0",
+    "@vcl/icon": "^0.3.0",
+    "@vcl/input": "^0.3.0",
+    "@vcl/loose-button-group": "^0.3.0",
+    "@vcl/responsive-image": "^0.3.0",
+    "@vcl/size-modulation": "^0.3.0",
+    "@vcl/table": "^0.3.0",
+    "@vcl/typography": "^0.3.0",
+    "@vcl/utils": "^0.3.0"
   },
   "keywords": [
     "css",

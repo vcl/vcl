@@ -1,7 +1,7 @@
 {
   "name": "@vcl/flex-layout",
   "description": "Flexbox based layout system",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -25,14 +25,14 @@
   "devDependencies": {
     "@vcl/build-demo": "^0.4.0-3",
     "@vcl/preprocessor": "^0.3.0-2",
-    "pre-commit": "^1.1.2",
-    "browser-sync": "^2.24.7"
+    "pre-commit": "^1.2.2",
+    "browser-sync": "^2.26.3"
   },
   "dependencies": {
-    "normalize.css": "^8.0.0",
-    "@vcl/typography": "^0.2.0",
-    "@vcl/container": "^0.2.0",
-    "@vcl/layout-spans": "^0.2.0",
+    "normalize.css": "^8.0.1",
+    "@vcl/typography": "^0.3.0",
+    "@vcl/container": "^0.3.0",
+    "@vcl/layout-spans": "^0.3.0",
     "@vcl/theme": "^0.3.0-1"
   },
   "keywords": [

@@ -1,7 +1,7 @@
 {
   "name": "@vcl/adv-text-structure",
   "description": "Primitives to style textual content",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -25,13 +25,13 @@
   "devDependencies": {
     "pre-commit": "^1.2.2",
     "browser-sync": "^2.24.7",
-    "@vcl/build-demo": "^0.4.0-2",
+    "@vcl/build-demo": "^0.4.0-3",
     "@vcl/preprocessor": "^0.3.0-2"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
     "@vcl/theme": "^0.3.0-1",
-    "@vcl/typography": "^0.2.0"
+    "@vcl/typography": "^0.3.0"
   },
   "keywords": [
     "css",

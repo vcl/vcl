@@ -1,7 +1,7 @@
 {
   "name": "@vcl/sum-table",
   "description": "Table extensions for numeral and especially financial number display",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -30,12 +30,12 @@
   },
   "dependencies": {
     "@vcl/theme": "^0.3.0-1",
-    "@vcl/button": "^0.2.0",
+    "@vcl/button": "^0.3.0",
     "@vcl/font-awesome": "^0.3.0",
-    "@vcl/icon": "^0.2.0",
-    "@vcl/table": "^0.2.0",
-    "@vcl/typography": "^0.2.0",
-    "@vcl/utils": "^0.2.0"
+    "@vcl/icon": "^0.3.0",
+    "@vcl/table": "^0.3.0",
+    "@vcl/typography": "^0.3.0",
+    "@vcl/utils": "^0.3.0"
   },
   "keywords": [
     "css",

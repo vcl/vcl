@@ -1,7 +1,7 @@
 {
   "name": "@vcl/email",
   "description": "Basic HTML email styling",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -31,14 +31,14 @@
   "dependencies": {
     "normalize.css": "8.0.1",
     "@vcl/theme": "^0.3.0-1",
-    "@vcl/layout-spans": "0.2.1",
-    "@vcl/list": "0.2.3",
-    "@vcl/print": "0.2.1",
-    "@vcl/size-modulation": "0.2.3",
-    "@vcl/sum-table": "0.2.1",
-    "@vcl/table": "0.2.3",
-    "@vcl/typography": "0.2.4",
-    "@vcl/utils": "0.2.1"
+    "@vcl/layout-spans": "^0.3.0",
+    "@vcl/list": "^0.3.0",
+    "@vcl/print": "^0.3.0",
+    "@vcl/size-modulation": "^0.3.0",
+    "@vcl/sum-table": "^0.3.0",
+    "@vcl/table": "^0.3.0",
+    "@vcl/typography": "^0.3.0",
+    "@vcl/utils": "^0.3.0"
   },
   "keywords": [
     "css",

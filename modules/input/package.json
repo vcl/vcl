@@ -1,7 +1,7 @@
 {
   "name": "@vcl/input",
   "description": "Standard HTML form input controls",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -25,18 +25,18 @@
   "devDependencies": {
     "@vcl/build-demo": "^0.4.0-3",
     "@vcl/preprocessor": "^0.3.0-2",
-    "autoprefixer": "^7.2.5",
-    "gulp-postcss": "^7.0.0",
+    "autoprefixer": "^9.4.7",
+    "gulp-postcss": "^8.0.0",
     "gulp-sourcemaps": "^2.6.4",
-    "pre-commit": "^1.1.2",
-    "browser-sync": "^2.24.7"
+    "pre-commit": "^1.2.2",
+    "browser-sync": "^2.26.3"
   },
   "dependencies": {
-    "normalize.css": "^7.0.0",
+    "normalize.css": "^8.0.1",
     "@vcl/theme": "^0.3.0-1",
-    "@vcl/form": "^0.2.1",
-    "@vcl/form-control-label": "^0.2.0",
-    "@vcl/typography": "^0.2.0"
+    "@vcl/form": "^0.3.0",
+    "@vcl/form-control-label": "^0.3.0",
+    "@vcl/typography": "^0.3.0"
   },
   "repository": {
     "type": "git",

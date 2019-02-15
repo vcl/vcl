@@ -1,7 +1,7 @@
 {
   "name": "@vcl/icon",
   "description": "Icon",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -30,11 +30,11 @@
   },
   "dependencies": {
     "normalize.css": "8.0.1",
-    "@vcl/size-modulation": "0.2.3",
+    "@vcl/size-modulation": "^0.3.0",
     "@vcl/theme": "^0.3.0-1",
-    "@vcl/flex-layout": "0.2.2",
-    "@vcl/font-awesome": "0.3.0",
-    "@vcl/typography": "0.2.4"
+    "@vcl/flex-layout": "^0.3.0",
+    "@vcl/font-awesome": "^0.3.0",
+    "@vcl/typography": "^0.3.0"
   },
   "keywords": [
     "css",

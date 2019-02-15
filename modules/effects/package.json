@@ -1,7 +1,7 @@
 {
   "name": "@vcl/effects",
   "description": "A collection of effects such as blur realized with CSS filters",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -30,9 +30,9 @@
   },
   "dependencies": {
     "@vcl/theme": "^0.3.0-1",
-    "@vcl/container": "^0.2.0",
-    "@vcl/flex-layout": "^0.2.0",
-    "@vcl/typography": "^0.2.0"
+    "@vcl/container": "^0.3.0",
+    "@vcl/flex-layout": "^0.3.0",
+    "@vcl/typography": "^0.3.0"
   },
   "keywords": [
     "css",

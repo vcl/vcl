@@ -1,7 +1,7 @@
 {
   "name": "@vcl/app-area",
   "description": "The background and layout of the app's viewport and app area",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -23,17 +23,17 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "pre-commit": "^1.1.2",
-    "@vcl/build-demo": "^0.4.0-2",
-		"@vcl/preprocessor": "^0.3.0-2",
-    "browser-sync": "^2.24.7"
+    "pre-commit": "^1.2.2",
+    "@vcl/build-demo": "^0.4.0-3",
+    "@vcl/preprocessor": "^0.3.0-2",
+    "browser-sync": "^2.26.3"
   },
   "dependencies": {
-    "normalize.css": "^7.0.0",
+    "normalize.css": "^8.0.1",
     "@vcl/theme": "^0.3.0-1",
-    "@vcl/typography": "^0.2.0",
-    "@vcl/app-content-area": "^0.2.0",
-    "@vcl/app-footer": "^0.2.0"
+    "@vcl/app-content-area": "^0.3.0",
+    "@vcl/app-footer": "^0.3.0",
+    "@vcl/typography": "^0.3.0"
   },
   "keywords": [
     "css",

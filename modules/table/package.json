@@ -1,7 +1,7 @@
 {
   "name": "@vcl/table",
   "description": "Display tabular data",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -31,12 +31,12 @@
   "dependencies": {
     "normalize.css": "8.0.1",
     "@vcl/theme": "^0.3.0-1",
-    "@vcl/flex-layout": "0.2.2",
-    "@vcl/font-awesome": "0.3.0",
-    "@vcl/icogram": "0.2.5",
-    "@vcl/icon": "0.2.4",
-    "@vcl/typography": "0.2.4",
-    "@vcl/utils": "0.2.1"
+    "@vcl/flex-layout": "^0.3.0",
+    "@vcl/font-awesome": "^0.3.0",
+    "@vcl/icogram": "^0.3.0",
+    "@vcl/icon": "^0.3.0",
+    "@vcl/typography": "^0.3.0",
+    "@vcl/utils": "0.3.0"
   },
   "keywords": [
     "css",

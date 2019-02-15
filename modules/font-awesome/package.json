@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "normalize.css": "^7.0.0",
-    "@vcl/typography": "^0.2.0",
+    "@vcl/typography": "^0.3.0",
     "@vcl/theme": "^0.3.0-1",
     "@fortawesome/fontawesome-free": "^5.3.0"
   },

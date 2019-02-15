@@ -1,7 +1,7 @@
 {
   "name": "@vcl/print",
   "description": "Implicit optimizations for print media output and utility classes for explicit control",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@vcl/theme": "^0.3.0-1",
-    "@vcl/typography": "^0.2.0"
+    "@vcl/typography": "^0.3.0"
   },
   "keywords": [
     "css",
