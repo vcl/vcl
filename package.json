@@ -24,8 +24,7 @@
     }
   ],
   "license": "MIT",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {},
   "repository": {
     "type": "git",
