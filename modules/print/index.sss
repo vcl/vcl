@@ -1,3 +1,6 @@
+@import "@vcl/theme"
+@import "@vcl/typography"
+
 @media print
   /* Largely inspired by https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
   *
@@ -30,14 +33,14 @@
     border: 1px solid #999999
     page-break-inside: avoid
 
-  thead 
+  thead
     display: table-header-group /* h5bp.com/t */
 
   tr,
   img
     page-break-inside: avoid
 
-  img 
+  img
     max-width: 100% !important
 
   p,
@@ -51,9 +54,8 @@
     page-break-after: avoid
 
   /* VCL specific utilities */
-  .vclVisible-print 
+  .vclVisible-print
     display: inherit !important
 
-  .vclHidden-print 
+  .vclHidden-print
     display: none !important
-    
