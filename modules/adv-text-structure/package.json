@@ -29,7 +29,7 @@
     "@vcl/preprocessor": "^0.3.0-2"
   },
   "dependencies": {
-    "normalize.css": "^7.0.0",
+    "normalize.css": "^8.0.1",
     "@vcl/theme": "^0.3.0-1",
     "@vcl/typography": "^0.2.0"
   },

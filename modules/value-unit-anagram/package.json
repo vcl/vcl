@@ -23,19 +23,21 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-2",
-		"@vcl/flex-layout": "^0.2.0",
-    "@vcl/font-awesome": "^0.3.0",
-    "@vcl/icon": "^0.2.1",
+    "@vcl/build-demo": "^0.4.0-3",
     "@vcl/preprocessor": "^0.3.0-2",
-    "@vcl/size-modulation": "^0.2.0",
-    "@vcl/typography": "^0.2.0",
-    "@vcl/utils": "^0.2.0",
-    "normalize.css": "^7.0.0",
     "pre-commit": "^1.1.2",
     "browser-sync": "^2.24.7"
   },
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "^7.0.0",
+    "@vcl/theme": "^0.3.0-1",
+    "@vcl/flex-layout": "^0.2.0",
+    "@vcl/font-awesome": "^0.3.0",
+    "@vcl/icon": "^0.2.1",
+    "@vcl/size-modulation": "^0.2.0",
+    "@vcl/typography": "^0.2.0",
+    "@vcl/utils": "^0.2.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/vcl/value-unit-anagram.git"
@@ -49,10 +51,6 @@
     "anagram"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [],
     "categories": [
       {
         "title": "Typography",

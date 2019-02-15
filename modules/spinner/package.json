@@ -23,22 +23,24 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-2",
+    "@vcl/build-demo": "^0.4.0-3",
+    "@vcl/preprocessor": "^0.3.0-2",
+    "pre-commit": "^1.1.2",
+    "browser-sync": "^2.24.7"
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0",
+    "@vcl/theme": "^0.3.0-1",
     "@vcl/button": "^0.2.0",
     "@vcl/button-group": "^0.2.0",
-		"@vcl/flex-layout": "^0.2.0",
+    "@vcl/flex-layout": "^0.2.0",
     "@vcl/font-awesome": "^0.3.0",
     "@vcl/icogram": "^0.2.0",
     "@vcl/icon": "^0.2.0",
     "@vcl/input": "^0.2.0",
     "@vcl/input-group": "^0.2.6",
-    "@vcl/preprocessor": "^0.3.0-2",
-    "@vcl/typography": "^0.2.0",
-    "normalize.css": "^7.0.0",
-    "pre-commit": "^1.1.2",
-    "browser-sync": "^2.24.7"
+    "@vcl/typography": "^0.2.0"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/vcl/spinner.git"
@@ -50,7 +52,7 @@
     "spinner"
   ],
   "vcl": {
-		"categories": [
+    "categories": [
       {
         "title": "Form Controls",
         "itemPriority": 80,

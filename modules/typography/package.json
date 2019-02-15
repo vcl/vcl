@@ -23,18 +23,20 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-2",
-    "@vcl/font-awesome": "^0.3.0",
+    "@vcl/build-demo": "^0.4.0-3",
     "@vcl/gulp-vcl-preprocessor": "^0.2.1",
-    "@vcl/icogram": "^0.2.3",
-    "@vcl/icon": "^0.2.1",
     "@vcl/preprocessor": "^0.3.0-2",
     "gulp": "^3.9.1",
-    "normalize.css": "^8.0.0",
     "pre-commit": "^1.2.2",
     "browser-sync": "^2.24.7"
   },
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "@vcl/theme": "^0.3.0-1",
+    "@vcl/icogram": "^0.2.3",
+    "@vcl/icon": "^0.2.1",
+    "@vcl/font-awesome": "^0.3.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/vcl/typography.git"
@@ -46,10 +48,6 @@
     "typography"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [],
     "categories": [
       {
         "title": "Typography",

@@ -23,23 +23,25 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "normalize.css": "^7.0.0",
     "pre-commit": "^1.1.2",
+    "@vcl/build-demo": "^0.4.0-3",
+    "@vcl/button": "^0.2.0",
+    "@vcl/preprocessor": "^0.3.0-2",
+    "browser-sync": "^2.24.7"
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0",
+    "@vcl/theme": "^0.3.0-1",
     "@vcl/app-area": "^0.2.0",
     "@vcl/app-content-area": "^0.2.0",
     "@vcl/badge": "^0.2.0",
-    "@vcl/build-demo": "^0.4.0-2",
-    "@vcl/button": "^0.2.0",
-		"@vcl/flex-layout": "^0.2.0",
+    "@vcl/flex-layout": "^0.2.0",
     "@vcl/font-awesome": "^0.3.0",
     "@vcl/icon": "^0.2.0",
     "@vcl/layout-spans": "^0.2.0",
-    "@vcl/preprocessor": "^0.3.0-2",
     "@vcl/typography": "^0.2.0",
-    "@vcl/utils": "^0.2.0",
-    "browser-sync": "^2.24.7"
+    "@vcl/utils": "^0.2.0"
   },
-  "dependencies": {},
   "keywords": [
     "css",
     "vcl",
@@ -47,10 +49,6 @@
     "tab"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [],
     "categories": [
       {
         "title": "Navigations",

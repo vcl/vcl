@@ -23,12 +23,19 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-2",
+    "@vcl/build-demo": "^0.4.0-3",
+    "@vcl/gulp-vcl-preprocessor": "0.2.3",
+    "@vcl/preprocessor": "^0.3.0-2",
+    "browser-sync": "^2.24.7",
+    "pre-commit": "^1.1.2"
+  },
+  "dependencies": {
+    "normalize.css": "8.0.1",
+    "@vcl/theme": "^0.3.0-1",
     "@vcl/button": "0.2.3",
-		"@vcl/embedded-input-button": "0.2.4",
+    "@vcl/embedded-input-button": "0.2.4",
     "@vcl/flex-layout": "0.2.2",
     "@vcl/font-awesome": "^0.3.0",
-    "@vcl/gulp-vcl-preprocessor": "0.2.3",
     "@vcl/icogram": "0.2.5",
     "@vcl/icon": "0.2.4",
     "@vcl/input": "0.2.2",
@@ -36,15 +43,10 @@
     "@vcl/logo": "0.2.3",
     "@vcl/loose-button-group": "0.2.2",
     "@vcl/navigation": "0.2.7",
-    "@vcl/preprocessor": "^0.3.0-2",
     "@vcl/responsive-image": "0.2.1",
     "@vcl/size-modulation": "0.2.3",
-    "@vcl/typography": "0.2.4",
-    "browser-sync": "^2.24.7",
-    "normalize.css": "8.0.1",
-    "pre-commit": "^1.1.2"
+    "@vcl/typography": "0.2.4"
   },
-  "dependencies": {},
   "keywords": [
     "css",
     "vcl",
@@ -53,10 +55,6 @@
     "bar"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [],
     "categories": [
       {
         "title": "Navigations",
