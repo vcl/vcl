@@ -35,7 +35,7 @@
     "@vcl/flex-layout": "^0.3.0",
     "@vcl/font-awesome": "^0.3.0",
     "@vcl/icogram": "^0.3.0",
-    "@vcl/icon": "^^0.3.0",
+    "@vcl/icon": "^0.3.0",
     "@vcl/typography": "^0.3.0"
   },
   "keywords": [
