@@ -1,7 +1,7 @@
 {
   "name": "@vcl/busy-indicator",
   "description": "Indicate that a long-lasting operation is currently in progress",
-  "version": "0.3.0",
+  "version": "0.3.0-2",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -32,9 +32,9 @@
     "normalize.css": "8.0.1",
     "@vcl/theme": "^0.3.0-1",
     "@vcl/typography": "^0.3.0",
-    "@vcl/button": "0.3.0",
-    "@vcl/flex-layout": "^0.3.0"
-    "@vcl/icogram": "^0.3.0"
+    "@vcl/button": "^0.3.0",
+    "@vcl/flex-layout": "^0.3.0",
+    "@vcl/icogram": "^0.3.0",
     "@vcl/icon": "0.3.0"
   },
   "keywords": [
