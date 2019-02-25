@@ -23,10 +23,10 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "pre-commit": "^1.1.2",
+    "pre-commit": "^1.2.2",
     "@vcl/build-demo": "^0.4.0-3",
     "@vcl/preprocessor": "^0.3.0-2",
-    "browser-sync": "^2.24.7"
+    "browser-sync": "^2.26.3"
   },
   "dependencies": {
     "@vcl/typography": "^0.3.0",
