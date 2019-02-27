@@ -21,7 +21,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-3"
+    "@vcl/build-demo": "0.4.0-4"
   },
   "dependencies": {
     "normalize.css": "8.0.1",
@@ -35,10 +35,10 @@
     "@vcl/breakpoints": "^0.3.0",
     "@vcl/busy-indicator": "^0.3.0",
     "@vcl/button": "^0.3.0",
-    "@vcl/button-group": "^0.3.0",
+    "@vcl/button-group": "0.3.0-2",
     "@vcl/calendar": "^0.3.0",
     "@vcl/checkbox": "^0.3.0",
-    "@vcl/coarse-pointer": "^0.3.0",
+    "@vcl/coarse-pointer": "0.3.0-2",
     "@vcl/container": "^0.3.0",
     "@vcl/data-grid": "^0.3.0",
     "@vcl/data-list": "^0.3.0",
@@ -89,10 +89,10 @@
     "@vcl/select": "^0.3.0",
     "@vcl/size-modulation": "^0.3.0",
     "@vcl/slider": "^0.3.0",
-    "@vcl/spinner": "^0.3.0 ",
+    "@vcl/spinner": "0.3.0-2",
     "@vcl/tab-nav": "^0.3.0",
     "@vcl/table": "^0.3.0",
-    "@vcl/table-extras": "^0.3.0",
+    "@vcl/table-extras": "0.3.0-2",
     "@vcl/token": "^0.3.0",
     "@vcl/token-input": "^0.3.0",
     "@vcl/toolbar": "^0.3.0",
