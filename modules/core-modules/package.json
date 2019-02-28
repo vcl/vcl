@@ -1,7 +1,7 @@
 {
   "name": "@vcl/core-modules",
   "description": "A collection of VCL modules that we consider core",
-  "version": "0.3.0",
+  "version": "0.3.0-8",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
@@ -21,7 +21,8 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "0.4.0-4"
+    "@vcl/build-demo": "0.4.0-8",
+    "@vcl/preprocessor": "0.3.0-8"
   },
   "dependencies": {
     "normalize.css": "8.0.1",
@@ -38,7 +39,7 @@
     "@vcl/button-group": "0.3.0-2",
     "@vcl/calendar": "^0.3.0",
     "@vcl/checkbox": "^0.3.0",
-    "@vcl/coarse-pointer": "0.3.0-2",
+    "@vcl/coarse-pointer": "0.3.0-4",
     "@vcl/container": "^0.3.0",
     "@vcl/data-grid": "^0.3.0",
     "@vcl/data-list": "^0.3.0",
@@ -89,7 +90,7 @@
     "@vcl/select": "^0.3.0",
     "@vcl/size-modulation": "^0.3.0",
     "@vcl/slider": "^0.3.0",
-    "@vcl/spinner": "0.3.0-2",
+    "@vcl/spinner": "0.3.0-4",
     "@vcl/tab-nav": "^0.3.0",
     "@vcl/table": "^0.3.0",
     "@vcl/table-extras": "0.3.0-2",

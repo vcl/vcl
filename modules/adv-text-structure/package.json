@@ -25,13 +25,13 @@
   "devDependencies": {
     "pre-commit": "^1.2.2",
     "browser-sync": "^2.26.3",
-    "@vcl/build-demo": "^0.4.0-3",
-    "@vcl/preprocessor": "^0.3.0-2"
+    "@vcl/build-demo": "^0.4.0-8",
+    "@vcl/preprocessor": "^0.3.0-8"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1",
     "@vcl/theme": "^0.3.0-1",
-    "@vcl/typography": "^0.3.0"
+    "@vcl/typography": "^0.3.0",
+    "normalize.css": "^8.0.1"
   },
   "keywords": [
     "css",

@@ -65,8 +65,8 @@
     "normalize.css": "8.0.1",
     "@vcl/button": "0.3.0",
     "@vcl/core-modules": "0.3.0-8",
-    "@vcl/default-theme": "^0.2.4",
-    "@vcl/default-theme-terms": "0.2.5",
+    "@vcl/default-theme": "^0.3.0-1",
+    "@vcl/default-theme-terms": "0.3.0-1",
     "@vcl/theme": "^0.3.0-3"
   }
 }
