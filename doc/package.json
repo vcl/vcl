@@ -1,7 +1,7 @@
 {
   "name": "@vcl/doc",
   "description": "Conceputal VCL documentation",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "main": "package.json",
   "author": {
     "name": "n-fuse GmbH",
@@ -12,7 +12,6 @@
     "git-init-presentation": "cd presentation && git init && git remote add origin https://github.com/vcl/presentation.git",
     "git-push-presentation": "cd presentation && git add -A . && git commit -a -m 'presentation update' && git push --set-upstream origin master --force"
   },
- 
   "contributors": [
     {
       "name": "Thomas Hoppe",
@@ -33,10 +32,6 @@
     "documentation"
   ],
   "vcl": {
-    "needs": [],
-    "provides": [
-      "doc-index"
-    ],
     "categories": []
   }
 }
