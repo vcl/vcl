@@ -8,7 +8,7 @@
     "browsersync": "node_modules/.bin/browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
     "build-demo": "node node_modules/@vcl/build-demo/index.js",
     "democss": "node_modules/.bin/ vcl-preprocessor demo.sss demo/demo.css",
-    "start": "npm run browsersync & npm run build-demo"
+    "start": "npm run build-demo &  npm run browsersync"
   },
   "style": "index.sss",
   "author": {
