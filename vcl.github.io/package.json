@@ -94,7 +94,7 @@
     "@vcl/tab-nav": "^0.3.0",
     "@vcl/table": "^0.3.0",
     "@vcl/table-extras": "0.3.0-2",
-    "@vcl/theme": "^0.3.0-1",
+    "@vcl/theme": "^0.3.0-3",
     "@vcl/token-input": "^0.3.0",
     "@vcl/toolbar": "^0.3.0",
     "@vcl/tooltip": "^0.3.0",

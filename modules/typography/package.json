@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "@vcl/theme": "^0.3.0-1"
+    "@vcl/theme": "^0.3.0-3"
   },
   "repository": {
     "type": "git",

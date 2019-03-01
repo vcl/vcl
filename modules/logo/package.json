@@ -29,7 +29,7 @@
     "pre-commit": "1.2.2"
   },
   "dependencies": {
-    "@vcl/theme": "^0.3.0-1",
+    "@vcl/theme": "^0.3.0-3",
     "@vcl/responsive-image": "^0.3.0",
     "@vcl/typography": "^0.3.0"
   },

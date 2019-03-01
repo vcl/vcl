@@ -29,7 +29,7 @@
     "browser-sync": "^2.26.3"
   },
   "dependencies": {
-    "@vcl/theme": "^0.3.0-1",
+    "@vcl/theme": "^0.3.0-3",
     "@vcl/typography": "^0.3.0",
     "normalize.css": "^8.0.1"
   },

@@ -9,7 +9,7 @@
     "normalize.css": "^8.0.1",
     "@vcl/core-modules": "0.3.0-8",
     "@vcl/font-awesome": "^0.3.0",
-    "@vcl/theme": "^0.3.0-1"
+    "@vcl/theme": "^0.3.0-3"
   },
   "devDependencies": {
     "@vcl/default-theme": "^0.3.0-1",

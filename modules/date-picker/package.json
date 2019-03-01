@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "@vcl/theme": "^0.3.0-1",
+    "@vcl/theme": "^0.3.0-3",
     "@vcl/button": "^0.3.0",
     "@vcl/calendar": "^0.3.0",
     "@vcl/data-grid": "^0.3.0",

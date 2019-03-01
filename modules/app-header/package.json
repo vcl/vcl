@@ -32,7 +32,7 @@
     "@vcl/flex-layout": "^0.3.0",
     "@vcl/logo": "^0.3.0",
     "@vcl/typography": "^0.3.0",
-    "@vcl/theme": "^0.3.0-1"
+    "@vcl/theme": "^0.3.0-3"
   },
   "keywords": [
     "css",
