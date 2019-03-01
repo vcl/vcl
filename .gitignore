@@ -1,6 +1,7 @@
 *.*~
 *.swp
 *.swo
+.idea
 .cache
 .DS_Store
 .settings
