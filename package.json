@@ -1,7 +1,7 @@
 {
   "name": "@vcl/vcl",
   "description": "The Visual Component Library",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "package.json",
   "scripts": {
     "test": "./scripts/test.sh",
