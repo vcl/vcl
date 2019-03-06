@@ -53,7 +53,7 @@ vcl.compileFile(inputFile, outputFile, opts);
 var plugins = vcl.createPostCSSPlugins(opts);
 
 // Will create a webpack rule for .sss files
-var rule = vcl.createWebpackSSSRule(opts);
+var rule = vcl.createWebpackRule(opts);
 ```
 
 This function returns the generated CSS code as string that
@@ -64,6 +64,8 @@ can be written to a file for example.
 - `root` [`process.cwd()`] base directory for file based imports.
 - `sourceMap` [false] creates a source map
 - `optimize` [false] optimizes css
+- `url` [true] follows urls
+- `theme` use specified theme instead of "@vcl/theme"
 - `watch` [false] enables watch mode
 - `include` [] includes for the webpack rule
 - `exclude` [] excludes for the webpack rule

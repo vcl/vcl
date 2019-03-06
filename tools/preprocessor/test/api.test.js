@@ -1,81 +1,69 @@
 'use strict';
-/* global describe, it */
 
-var assert = require('assert');
+// var assert = require('assert');
 var vcl = require('../index');
 
 var opts = {root: __dirname};
-// var opts = {root: process.cwd()};
 
-describe('vcl', function() {
-  it('should be a function', function() {
-    assert.equal(typeof vcl, 'function');
+describe('vcl', () => {
+  it('should be a function', () => {
+    expect(typeof vcl).toBe('function');
   });
 
-  it('should throw if there is no css input', function() {
-    assert.throws(function() {
-      vcl();
-    }, Error);
+  it('should throw if there is no css input', async () => {
+    return expect(vcl()).rejects.toBeInstanceOf(Error);
   });
-
 });
 
 describe('vcl object', function() {
-  var compiler = vcl('body\n  color: blue');
 
-  it('should be an object', function() {
-    assert.equal(typeof compiler, 'object');
-  });
-
-  it('should return the compiled css string', function() {
-    return compiler.then(function (result) {
-      assert.equal(typeof result.css, 'string');
-    });
+  it('should return valid css', async function() {
+    var result = await vcl('body\n  color: blue');
+    expect(typeof result.css).toBe('string');
+    expect(result.css).toMatchSnapshot();
 
   });
 
-  it('should return valid css', function() {
-    return compiler.then(function (result) {
-      assert.equal(result.css, 'body {\n  color: blue\n}\n');
-    });
-
+  it('should return valid css without any options set', async function() {
+    let result = await vcl('body\n  color: rgba(#ccc, .5)');
+    expect(result.css).toMatchSnapshot();
   });
 
-  it('should return valid css without any options set', function() {
-    let anotherCompiler = vcl('body\n  color: rgba(#ccc, .5)');
+  it('should include local files', async function() {
+    const result = await vcl(`@import "./fixtures/test.css"`, opts);
+    expect(typeof result.css).toBe('string');
+    expect(result.css).toMatchSnapshot();
+  });
 
-    return anotherCompiler.then(function (result) {
-      assert.equal(result.css, 'body {\n  color: rgba(204,204,204, .5)\n}\n');
-    });
-
+  it('should include npm imports', async function() {
+    const result = await vcl('@import "@vcl/theme"', opts);
+    expect(typeof result.css).toBe('string');
+    expect(result.css.length).toBeGreaterThan(100);
   });
 
 
-  it('should include local files', function() {
-
-    assert.equal(typeof compiler, 'object');
-
-
-    let anotherCompiler = vcl(`@import "./fixtures/test.css"`, opts);
-
-    return anotherCompiler.then(function (result) {
-      // console.log(result.css);
-      assert.equal(typeof result.css, 'string');
-      assert.equal(result.css, 'body{\n  background: red;\n}\n');
+  it('should optimize the css', async function() {
+    const result = await vcl('/* will be removed */\nbody\n  color: blue\n', {
+      ...opts,
+      optimize: true
     });
-
+    expect(typeof result.css).toBe('string');
+    expect(result.css).toMatchSnapshot();
   });
 
-  it('should include npm imports', function() {
-    var anotherCompiler = vcl('@import "@vcl/default-theme-terms"', opts);
-    return anotherCompiler.then(function (result) {
-      // console.log('result.css', result.css);
-      assert.equal(typeof result.css, 'string');
+  it('should override the default theme', async function() {
+    const result = await vcl('@import "@vcl/theme"\nbody\n  color: blue\n', {
+      ...opts,
+      theme: './fixtures/custom-theme.sss'
     });
 
+    expect(typeof result.css).toBe('string');
+    expect(result.css).toMatchSnapshot();
   });
 
 });
+
+
 
 // describe('compiling packages', function() {
 

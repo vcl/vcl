@@ -51,22 +51,22 @@ function createPostCSSPlugins (opts = {}) {
 * @param {string} [opts.root=process.cwd()] - base directory
 * @param [opts.include] - rule includes
 * @param [opts.exclude] - rule excludes
-* @param {string} [opts.loader="extract"] - Top loader to handle the css output (extract, raw or style)
+* @param {boolean} [opts.extractCSS=true] - Extract css to a seperate file
+* @param {string} [opts.loader=undefined] - Overrides top loader
 * @param {boolean} [opts.sourceMap=false] - Generate a source map
 * @param {boolean} [opts.url=false] - Enable/Disable url() handling
 * @param {string} [opts.theme="@vcl/theme"] - theme to use
 */
 function createWebpackRule(opts = {}) {
 
+  let extractCSS =  'extractCSS' in opts ? !!opts.extractCSS : true;
   let loader;
-  let extractCss = false;
-  if (opts.loader === 'raw') {
-    loader =  'raw-loader'
-  } else if (opts.loader === 'style') {
-    loader =  'style-loader'
-  } else {
-    extractCss = true;
+  if (opts.loader !== undefined) {
+    loader =  opts.loader;
+  } else if (extractCSS) {
     loader = MiniCssExtractPlugin.loader;
+  } else {
+    loader =  'style-loader'
   }
 
   return {
@@ -87,9 +87,9 @@ function createWebpackRule(opts = {}) {
         options: {
           parser: 'sugarss',
           plugins: createPostCSSPlugins(opts),
-          sourceMap: opts.sourceMap ? (!extractCss ? 'inline' : opts.sourceMap) : false
+          sourceMap: opts.sourceMap ? (!extractCSS ? 'inline' : opts.sourceMap) : false // Inline source maps if css not extracted
         }
-      },
+      }
     ]
   };
 }
@@ -159,12 +159,16 @@ function createWebpackCompiler(inputFile, outputFile, opts = {}) {
 * @param {Object} [opts] - compiler options
 * @param {string} [opts.root=process.cwd()] - base directory
 * @param {boolean} [opts.sourceMap=false] - Generate a source map
-* @param {boolean=true} [opts.url=true] - Enable/Disable url() handling
+* @param {boolean} [opts.url=true] - Enable/Disable url() handling
 * @param {boolean} [opts.optimize=false] - Optimize css
 * @param {string} [opts.theme="@vcl/theme"] - theme to use
 * @return {Promise} - Converted css
 */
-function compileString(sss, opts = {}) {
+async function compileString(sss, opts = {}) {
+
+  if (typeof sss !== 'string') {
+    return Promise.reject(new Error('Invalid sss input'));
+  }
 
   const root = opts.root || process.cwd();
 
@@ -181,7 +185,12 @@ function compileString(sss, opts = {}) {
   mfs.mkdirpSync(root);
   mfs.writeFileSync(src, sss);
 
-  const compiler = createWebpackCompiler(src, dest, opts);
+  const compiler = createWebpackCompiler(src, dest, {
+    ...opts,
+    // Make sure loader is not set and extractCSS is set to true
+    extractCSS: true,
+    loader: undefined
+  });
 
   // use the union fs for reading stuff
   compiler.inputFileSystem = ufs;
@@ -191,7 +200,7 @@ function compileString(sss, opts = {}) {
   // use the in-mem fs to write stuff
   compiler.outputFileSystem = mfs;
 
-  return new Promise((resolve, reject) => {
+  await new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
       compiler.purgeInputFileSystem();
       if (err) {
@@ -204,16 +213,17 @@ function compileString(sss, opts = {}) {
       }
       resolve(stats.toJson());
     });
-  }).then(() => {
-    // After compiling is done, read from the in-mem fs
-    try {
-      return {
-        css: mfs.readFileSync(dest).toString()
-      };
-    } catch (ex) {
-      return Promise.reject(ex);
-    }
   });
+
+  // After compiling is done, read from the in-mem fs
+  try {
+    return {
+      css: mfs.readFileSync(dest).toString()
+    };
+  }
+  catch (ex) {
+    return Promise.reject(ex);
+  }
 }
 
 /**
