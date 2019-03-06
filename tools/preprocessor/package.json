@@ -1,6 +1,6 @@
 {
   "name": "@vcl/preprocessor",
-  "version": "0.3.0-10",
+  "version": "0.3.0-12",
   "description": "The VCL preprocessor",
   "main": "index.js",
   "homepage": "https://github.com/vcl/preprocessor",
@@ -32,9 +32,10 @@
     "vcl-preprocessor": "bin/vcl.js"
   },
   "scripts": {
-    "test": "jest ./test",
-    "cover": "istanbul cover _mocha -- -R spec",
-    "cover-lcov": "istanbul cover _mocha --report lcovonly"
+    "test": "jest ./test --coverage"
+  },
+  "peerDependencies": {
+    "webpack": "^4.0.0"
   },
   "dependencies": {
     "chalk": "^2.4.1",
@@ -50,25 +51,18 @@
     "postcss-loader": "^3.0.0",
     "postcss-nesting": "^7.0.0",
     "postcss-preset-env": "^6.4.0",
-    "resolve": "^1.8.1",
     "rucksack-css": "^1.0.2",
     "style-loader": "^0.23.1",
     "sugarss": "^2.0.0",
     "unionfs": "^4.0.0",
-    "webpack": "^4.29.0",
-    "webpack-stream": "^5.2.1",
     "yargs": "^13.2.2"
   },
   "devDependencies": {
-    "@vcl/button": "0.3.0",
     "@vcl/core-modules": "0.3.0-8",
-    "@vcl/default-theme": "^0.3.0-1",
-    "@vcl/default-theme-terms": "0.3.0-1",
     "@vcl/theme": "^0.3.0-3",
-    "coveralls": "^3.0.2",
-    "istanbul": "^0.4.4",
     "jest": "^24.1.0",
     "normalize.css": "8.0.1",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "webpack": "^4.29.6"
   }
 }
