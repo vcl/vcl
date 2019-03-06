@@ -21,5 +21,6 @@
   "dependencies": {
     "@vcl/preprocessor": "^0.3.0-9",
     "@vcl/theme": "^0.3.0-3"
-  }
+  },
+  "devDependencies": {}
 }

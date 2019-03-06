@@ -20,13 +20,13 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "pre-commit": "^1.2.2",
     "@vcl/default-theme": "^0.3.0-1",
     "@vcl/default-theme-terms": "^0.3.0-1",
     "@vcl/gulp-vcl-preprocessor": "^0.2.3",
     "@vcl/preprocessor": "^0.3.0-9",
     "@vcl/theme": "^0.3.0-3",
-    "@vcl/typography": "^0.3.0"
+    "@vcl/typography": "^0.3.0",
+    "pre-commit": "^1.2.2"
   },
   "keywords": [
     "css",
