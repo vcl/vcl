@@ -23,19 +23,19 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "0.4.0-8",
-    "@vcl/preprocessor": "^0.3.0-9",
+    "@vcl/build-demo": "^0.4.0-9",
+    "@vcl/button": "^0.3.0",
+    "@vcl/font-awesome": "^0.3.0",
+    "@vcl/pagination": "^0.3.0",
+    "@vcl/preprocessor": "^0.3.0-10",
+    "@vcl/typography": "^0.3.0",
+    "@vcl/utils": "^0.3.0",
     "browser-sync": "^2.26.3",
     "pre-commit": "^1.2.2"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "@vcl/theme": "^0.3.0-3",
-    "@vcl/button": "^0.3.0",
-    "@vcl/font-awesome": "^0.3.0",
-    "@vcl/pagination": "^0.3.0",
-    "@vcl/typography": "^0.3.0",
-    "@vcl/utils": "^0.3.0"
+    "@vcl/theme": "^0.3.0-3"
   },
   "keywords": [
     "css",
