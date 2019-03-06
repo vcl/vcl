@@ -27,11 +27,12 @@
     "@vcl/button": "^0.3.0",
     "@vcl/font-awesome": "^0.3.0",
     "@vcl/pagination": "^0.3.0",
-    "@vcl/preprocessor": "^0.3.0-10",
+    "@vcl/preprocessor": "^0.3.0-11",
     "@vcl/typography": "^0.3.0",
     "@vcl/utils": "^0.3.0",
     "browser-sync": "^2.26.3",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "webpack": "^4.29.6"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
