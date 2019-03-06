@@ -22,7 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "@vcl/build-demo": "0.4.0-8",
-    "@vcl/preprocessor": "0.3.0-8"
+    "@vcl/preprocessor": "^0.3.0-9"
   },
   "dependencies": {
     "normalize.css": "8.0.1",

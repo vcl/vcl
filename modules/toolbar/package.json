@@ -25,7 +25,7 @@
   "devDependencies": {
     "@vcl/build-demo": "0.4.0-8",
     "@vcl/gulp-vcl-preprocessor": "0.2.3",
-    "@vcl/preprocessor": "0.3.0-8",
+    "@vcl/preprocessor": "^0.3.0-9",
     "browser-sync": "^2.26.3",
     "pre-commit": "^1.2.2"
   },

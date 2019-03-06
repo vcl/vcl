@@ -14,7 +14,7 @@
   "devDependencies": {
     "@vcl/default-theme": "^0.3.0-1",
     "@vcl/default-theme-terms": "^0.3.0-1",
-    "@vcl/preprocessor": "0.3.0-8",
+    "@vcl/preprocessor": "^0.3.0-9",
     "@vcl/build-demo": "^0.4.0-8",
     "http-server": "^0.11.1",
     "opn-cli": "^4.0.0"
