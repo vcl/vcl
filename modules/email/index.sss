@@ -13,6 +13,7 @@
 @import "@vcl/size-modulation"
 
 .vclEmailViewport
+  box-sizing: border-box
   display: block !important
   width: 100%
   line-height: 1.6em
@@ -23,6 +24,7 @@
   box-sizing: border-box
 
 .vclEmailBody
+  box-sizing: border-box
   background-color: var(--email-body-bg-color)
   width: 60%
   max-width: 820px
@@ -42,19 +44,22 @@
   .vclEmailBody
     width: 80% !important
 
-@media only screen and (max-width: 640px)
+@media only screen and (max-width: 768px)
   body
+    margin: 0 !important
     padding: 0 !important
 
   .vclEmailViewport
-    background-color: var(--email-body-bg-color)
-    padding: 0
+    background-color: var(--email-body-bg-color) !important
+    padding: 0 !important
 
   .vclEmailBody
-    background-color: var(--email-body-bg-color)
+    background-color: var(--email-body-bg-color) !important
     width: 100% !important
     margin: 0 auto !important
     padding: 0 !important
+    padding-left: 0.4rem !important
+    padding-right: 0.4rem !important
     border: none !important
 
 @media print
