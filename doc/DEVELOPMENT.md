@@ -69,8 +69,8 @@ Results in the following order:
 
 Use the
 [indent-based CSS syntax](https://github.com/postcss/sugarss)
-or plain CSS. Normal CSS files end with the `.css` suffix, white space files
-end with the `.sss` suffix.
+or plain CSS. Normal CSS files end with the `.css` suffix, sugar SS
+white space files end with the `.sss` suffix.
 
 ## Selectors, Class Naming and Units
 
@@ -129,12 +129,29 @@ For example the layout grid or input controls.
 
 ## Z-Indexes
 
-There is a carefully tuned order of z-indexes. Look at the modules sources
-for now to figure out what the right index is for new modules.
+There is a carefully tuned hierarchy of z-indexes as defined here:
+
+Value or Range             | Component or reserved Range
+---                        | ---
+1                          | divider
+1, 2, 3                    | gallery
+1                          | input group
+1, 2                       | process nav
+1, 2                       | progress bar
+5                          | popover
+9                          | process nav
+10                         | drawer
+10                         | info-overlay
+180, 199                   | zoom-index
+200 … 299                  | dropdown
+300 (backdrop), 401 … 498  | layer
+250                        | loading-layer
+499, 500                   | tooltip
+600                        | nag
 
 ## Responsive CSS via Media Queries
 
-Try to prevent them!
+Try to prevent them and let the app developer add them as needed!
 We believe that HTML structures and CSS rules should be as simple as possible
 to use and this requires them to have a deterministic behavior;
 In most cases the “automagical” nature of implicit media
@@ -175,7 +192,8 @@ level variant. The primary variant always goes without modifier.
 
 # Development
 
-GIT clone vcl and use the following npm scripts:
+Clone the VCL's monorepo, enter the folder of the module you want to work on
+and use the following npm scripts:
 
 * `npm start` - starts a web server and opens the examples
   (browsersync enabled).
@@ -206,8 +224,8 @@ In general, at least the following should be supported and tested:
 
 A similar and partly compatible approach is pursued by:
 
-- [atomify-css](https://github.com/atomify/atomify-css),
-- [SUITCSS](https://github.com/suitcss).
+- [atomify-css](https://github.com/atomify/atomify-css) which is abandoned,
+- [SUITCSS](https://github.com/suitcss) which is outdated.
 
 # Contributing
 
