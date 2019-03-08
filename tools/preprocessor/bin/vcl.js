@@ -7,6 +7,7 @@ var vcl = require('../index');
 var path = require('path');
 var info = require('../package.json');
 var chalk = require('chalk');
+var chokidar = require('chokidar');
 
 debug('cli time');
 
@@ -55,7 +56,7 @@ const opts = {};
 
 if (argv.root) {
   var root = path.resolve(argv.root);
-  console.log('using root: ' + root);
+  debug('using root: ' + root);
   opts.root = root;
 }
 
@@ -67,9 +68,7 @@ if (argv['source-map']) {
   opts.sourceMap = true;
 }
 
-if (argv['watch']) {
-  opts.watch = true;
-}
+
 
 if (argv['theme']) {
   opts.theme = argv['theme'];
@@ -82,12 +81,64 @@ if (process.stdin.isTTY) {
   if (!inputFile) {
     return yargs.showHelp();
   }
-  vcl.compileFile(inputFile, outputFile, opts);
+
+  (async () => {
+    const result = await vcl.compileFile(inputFile, outputFile, opts);
+
+    if (argv['watch']) {
+      const fileChangeNotify = () => console.log('\nWaiting for file changes...');
+
+      const extractImports = (result) => result.messages
+                                               .filter(msg => (msg.type === 'dependency'))
+                                               .map(dep => dep.file);
+
+      let watchlist = [ inputFile, ...extractImports(result) ];
+
+      const watcher = chokidar.watch(watchlist, {
+        usePolling: argv.poll,
+        interval: argv.poll && typeof argv.poll === 'number' ? argv.poll : 100,
+        awaitWriteFinish: {
+          stabilityThreshold: 50,
+          pollInterval: 10
+        }
+      })
+
+      console.log(chalk`{green Finished {bold ${result.outputFile}}}`);
+
+      watcher.on('ready', fileChangeNotify).on('change', file => {
+
+        console.log('Change detected in ' + file);
+
+        (async () => {
+          try {
+            const result = await vcl.compileFile(inputFile, outputFile, opts);
+            const updatedWatchlist = [ inputFile, ...extractImports(result) ];
+
+            // Find files that are not part of the updated watchlist
+            const toRemove = watchlist.filter(f => !updatedWatchlist.includes(f));
+            // Find files that are new in the updated watchlist
+            const toAdd = updatedWatchlist.filter(f => !watchlist.includes(f));
+            watcher.unwatch(toRemove);
+            watcher.add(toAdd);
+
+            watchlist = updatedWatchlist;
+
+            console.log(chalk`{green Updated {bold ${result.outputFile}}}`);
+
+            return result
+          } catch(ex) {
+            error(ex);
+          }
+        })();
+      })
+    }
+
+  })();
 } else {
   var buffers = [];
 
   process.stdin.on('data', function(data){
-    buffers.push(new Buffer(data));
+    buffers.push(Buffer.from(data));
   });
 
   process.stdin.on('end', function(){
@@ -99,6 +150,16 @@ if (process.stdin.isTTY) {
   });
 }
 
-
-
-
+function error(err, hold) {
+  if (typeof err === 'string') {
+    console.error(chalk.red(err))
+  } else if (err.name === 'CssSyntaxError') {
+    console.error(err.toString())
+  } else {
+    console.error(err)
+  }
+  if (hold) {
+    return;
+  }
+  process.exit(1)
+}

@@ -18,7 +18,8 @@ $ npm install -g @vcl/preprocessor
 ### Command Line
 
 ```sh
-Usage: vcl-preprocessor <input> [output]
+Usage: vcl-preprocessor <input> <output>
+```
 
 Options:
   --version, -v              Show version number
@@ -30,10 +31,14 @@ Options:
   --source-map               generate source maps
 
 Examples:
-  vcl-preprocessor index.sss dist/compiled.css     Compile index.sss and output to
-                                                    dist/compiled.css
+```sh
+vcl-preprocessor index.sss compiled.css     # Compile index.sss and output to compiled.css
 ```
 The VCL CLI will create the destination directory if it does not exist.
+
+```sh
+echo "a\n  color: green" | vcl-preprocessor # Pipe string through preprocessor
+```
 
 ### API
 
@@ -41,24 +46,17 @@ The VCL CLI will create the destination directory if it does not exist.
 var vcl = require('@vcl/preprocessor');
 
 // Will compile the input file and store the result in the output file
-vcl(inputFile, outputFile, opts).then(({css}) => {
-  ...
+vcl(inputFile, outputFile, opts).then((result) => {
+  result.css; // compiled css
 });
 
 // Will compile the input file and store the result in the output file
 // Also recompiles the output file on changes
-vcl.compileFile(inputFile, outputFile, opts);
+vcl.compileFile(inputFile, outputFile, opts).then(...);
 
 // Will return an array of postCSS plugins
 var plugins = vcl.createPostCSSPlugins(opts);
-
-// Will create a webpack rule for .sss files
-var rule = vcl.createWebpackRule(opts);
 ```
-
-This function returns the generated CSS code as string that
-can be written to a file for example.
-
 #### Options
 
 - `root` [`process.cwd()`] base directory for file based imports.
@@ -66,9 +64,6 @@ can be written to a file for example.
 - `optimize` [false] optimizes css
 - `url` [true] follows urls
 - `theme` use specified theme instead of "@vcl/theme"
-- `watch` [false] enables watch mode
-- `include` [] includes for the webpack rule
-- `exclude` [] excludes for the webpack rule
 
 ## Entry CSS File
 

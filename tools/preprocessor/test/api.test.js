@@ -29,20 +29,32 @@ describe('vcl object', function() {
     expect(result.css).toMatchSnapshot();
   });
 
-  it('should include local files', async function() {
-    const result = await vcl(`@import "./fixtures/test.css"`, opts);
+  it('should include local css files', async function() {
+    const result = await vcl(`@import "./fixtures/test-import.css"\na\n  color: green`, opts);
+    expect(typeof result.css).toBe('string');
+    expect(result.css).toMatchSnapshot();
+  });
+
+  it('should include local sss files', async function() {
+    const result = await vcl(`@import "./fixtures/test-import.css"\na\n  color: green`, opts);
     expect(typeof result.css).toBe('string');
     expect(result.css).toMatchSnapshot();
   });
 
   it('should include npm imports', async function() {
-    const result = await vcl('@import "@vcl/theme"', opts);
+    const result = await vcl('@import "@vcl/theme"\na\n  color: green', opts);
     expect(typeof result.css).toBe('string');
     expect(result.css.length).toBeGreaterThan(100);
   });
 
 
-  it('should optimize the css', async function() {
+  it('should have not removed the comment', async function() {
+    const result = await vcl('/* will not be removed */\nbody\n  color: blue\n', opts);
+    expect(typeof result.css).toBe('string');
+    expect(result.css).toMatchSnapshot();
+  });
+
+  it('should have removed the comment', async function() {
     const result = await vcl('/* will be removed */\nbody\n  color: blue\n', {
       ...opts,
       optimize: true

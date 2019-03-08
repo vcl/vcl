@@ -1,6 +1,6 @@
 {
   "name": "@vcl/preprocessor",
-  "version": "0.3.0-12",
+  "version": "0.3.0-15",
   "description": "The VCL preprocessor",
   "main": "index.js",
   "homepage": "https://github.com/vcl/preprocessor",
@@ -34,25 +34,22 @@
   "scripts": {
     "test": "jest ./test --coverage"
   },
-  "peerDependencies": {
-    "webpack": "^4.0.0"
-  },
   "dependencies": {
+    "autoprefixer": "^9.4.10",
     "chalk": "^2.4.1",
-    "css-loader": "^2.1.0",
+    "chokidar": "^2.1.2",
+    "cssnano": "^4.1.10",
     "debug": "^4.1.1",
     "memory-fs": "^0.4.1",
-    "mini-css-extract-plugin": "^0.5.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss": "^7.0.14",
+    "postcss-clearfix": "^2.0.1",
     "postcss-color-function": "^4.0.1",
     "postcss-css-variables": "0.12.0",
+    "postcss-hexrgba": "^1.0.1",
     "postcss-import": "12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-nesting": "^7.0.0",
     "postcss-preset-env": "^6.4.0",
-    "rucksack-css": "^1.0.2",
-    "style-loader": "^0.23.1",
     "sugarss": "^2.0.0",
     "unionfs": "^4.0.0",
     "yargs": "^13.2.2"
@@ -61,8 +58,6 @@
     "@vcl/core-modules": "0.3.0-8",
     "@vcl/theme": "^0.3.0-3",
     "jest": "^24.1.0",
-    "normalize.css": "8.0.1",
-    "pre-commit": "^1.2.2",
-    "webpack": "^4.29.6"
+    "normalize.css": "8.0.1"
   }
 }
