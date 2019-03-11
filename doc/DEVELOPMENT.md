@@ -29,41 +29,24 @@ Have the following custom fields in the `package.json` file:
      Determines the ordering of the menu item.
   - `category.ItemPriority`- Priority of the Item.
     Determines the display order within its category.
-- `vcl.needs` Specifies what this module needs.
-  (Most modules need a `theme` provider).
-- `vcl.provides` What this module provides.
-  Examples: `theme`, `theme-terms`, `button`.
 
 The categorization is used for the documentation generator
 [doc-gen](https://github.com/vcl/vcl/tools/doc-gen) to generate a static documentation
 including demos of your modules.
 
-### Soft Dependencies
+### Dependencies
 
-Soft dependencies via `devDependencies` are used to specify the
-dependencies of modules to run the demos.
+Use the `@import ...` syntax on top of ypur file if your module has dependencies to another module.
+Most modules need to import the `@vcl/theme`
 
-### Needs & Provides
+```sss
+@import "normalize.css"
+@import "@vcl/theme"
+@import "@vcl/button"
 
-`vcl.needs` and `vcl.provides` are used for package ordering when using the
-package compile feature of the
-[vcl-preprocessor](https://github.com/vcl/vcl/tools/preprocessor) which is also used by
-the documentation generator.
-Packages which are needed by others are put before them while pre-processing.
-
-#### Example
-
-Package           | `needs`         | `provides`
----               | ---              | ---
-vcl-button        | theme            | button
-vcl-dropdown      | theme, button    |
-vcl-default-theme |                  | theme
-
-Results in the following order:
-
-1. vcl-default-theme
-2. vcl-button
-3. vcl-dropdown
+.vclMyModule
+  color: green
+```
 
 ## CSS Syntax and Use
 
@@ -187,8 +170,17 @@ level variant. The primary variant always goes without modifier.
 - Have at least one example with proper
   [WAI-ARIA](http://www.w3.org/WAI/intro/aria) plumbing.
 - You can neglect semantic HTML due to that.
-- Use inline CSS via the `style` attribute for rules that are only
-  required for the demo and not intended to be applies by the user.
+- Create a `demo.css` in the module root for additional styling of the demo. 
+  Do not forget to import the module style in `index.sss` or `index.css`.
+
+```sss
+@import "@vcl/some-required-dep-for-the-demo"
+@import "./index.sss"
+
+.demoSpecificStuff
+  color: red
+```
+
 
 # Development
 
@@ -201,7 +193,7 @@ and use the following npm scripts:
 
 # Theming
 
-Themes like the [default theme](https://github.com/vcl/vcl/themes/default-theme) just
+Themes like the [default theme](https://github.com/vcl/vcl/themes/theme) just
 define variables which are expected to be set by the modules in scope of it.
 A theme can be for a single module or a collection of modules.
 In order to create a new theme it may be sensible to just extend/ override

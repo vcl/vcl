@@ -46,18 +46,18 @@ All modules with version level `>= 0.1.0` are ready for production use.
 
 ## Getting Started
 
+### Example Project
+
+See [the tutorial](https://github.com/vcl/vcl/tree/master/doc/tutorial) for
+how to use VCL modules in a Web project and how to make it part of its
+build process.
+
 ### Run a Module's Demos
 
     $ git clone https://github.com/vcl/vcl.git
     $ cd vcl/modules/button
     $ npm install
     $ npm start
-
-### Example Project
-
-See [the tutorial](https://github.com/vcl/vcl/tree/master/doc/tutorial) for
-how to use VCL modules in a Web project and how to make it part of its
-build process.
 
 ### Missing a Module?
 
