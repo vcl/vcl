@@ -7,8 +7,8 @@ how to style a web page with it and how to run a single component demo.
 
 ## Tutorials
 
-- [vcl preprocessor cli](preprocessor-cli/README.md)
-- [webpack](webpack/README.md)
+- [vcl preprocessor cli](preprocessor-cli)
+- [webpack](webpack)
 
 
 ## Styling a Web Page with the VCL
