@@ -1,7 +1,7 @@
 {
   "name": "@vcl/input-group",
   "description": "Buttons and icograms (label/ icons) prepended and/ or appended to an input control",
-  "version": "0.3.0",
+  "version": "0.4.0-0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",

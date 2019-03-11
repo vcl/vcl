@@ -1,7 +1,7 @@
 {
   "name": "@vcl/size-modulation",
   "description": "Scale the size of text and whole widgets",
-  "version": "0.3.0",
+  "version": "0.4.0-0",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
@@ -27,7 +27,7 @@
     "@vcl/button": "^0.3.0",
     "@vcl/font-awesome": "^0.3.0",
     "@vcl/pagination": "^0.3.0",
-    "@vcl/preprocessor": "^0.3.0-15",
+    "@vcl/preprocessor": "^0.3.0-16",
     "@vcl/typography": "^0.3.0",
     "@vcl/utils": "^0.3.0",
     "browser-sync": "^2.26.3",

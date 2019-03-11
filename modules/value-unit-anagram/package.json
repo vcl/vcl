@@ -1,7 +1,7 @@
 {
   "name": "@vcl/value-unit-anagram",
   "description": "The combination of value(s) with associated unit(s) in any permutation",
-  "version": "0.3.0",
+  "version": "0.4.0-0",
   "main": "package.json",
   "scripts": {
     "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
