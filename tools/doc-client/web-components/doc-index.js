@@ -60,8 +60,7 @@ export default class DocIndex extends PolymerElement {
         return name === path;
       });
       const itemsDocIndex = parts.filter((part) => {
-        const name = part.docgen.provides[0];
-        return name === 'doc-index';
+        return part.docgen.docIndex;
       });
       const selectedItem = itemsMatchingRoute[0]
         ? itemsMatchingRoute[0] : itemsDocIndex[0];
@@ -75,9 +74,9 @@ export default class DocIndex extends PolymerElement {
     const { parts } = doc;
 
     const navItems = parts.map((item) => {
-      const itemIsColection = item.docgen.categories === undefined;
-      const itemIsDocIndex = item.docgen.provides[0] === 'doc-index';
-      if (itemIsColection || itemIsDocIndex) return undefined;
+      const itemIsCollection = item.docgen.categories === undefined;
+      const itemIsDocIndex = item.docgen.docIndex === true;
+      if (itemIsCollection || itemIsDocIndex) return undefined;
 
       const withoutPrefixName = /@vcl\/(.+)/.exec(item.name);
 
