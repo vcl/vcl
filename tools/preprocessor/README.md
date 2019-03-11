@@ -10,7 +10,7 @@ processor framework.
 ## Installation
 
 ```sh
-$ npm install -g @vcl/preprocessor
+$ npm install @vcl/preprocessor
 ```
 
 ## Usage
@@ -26,9 +26,10 @@ Options:
   --help, -h                 Show help
   --watch, -w                watches the input file for changes
   --import-root, -i          base directory for file based imports
-  --optimize                 optimize css
-  --theme                    use specified theme instead of "@vcl/theme"
-  --source-map               generate source maps
+  --optimize, o              optimize css
+  --theme, t                 use specified theme instead of "@vcl/theme"
+  --source-map, -s           generate source maps
+  --source-map-inline, -si   generate source maps
 
 Examples:
 ```sh

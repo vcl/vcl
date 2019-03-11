@@ -14,6 +14,7 @@ debug('cli time');
 var yargs = require('yargs')
   .version(info.version, 'version')
   .help('help')
+  .demandCommand(2)
   .alias('version', 'v')
   .alias('help', 'h')
   .usage('Usage: vcl-preprocessor <input> <output>')
@@ -23,6 +24,7 @@ var yargs = require('yargs')
   .alias('import-root', 'i')
   .describe('source-map', 'enable source maps')
   .alias('source-map', 's')
+  .describe('source-map-inline', 'enable inline source maps')
   .describe('optimize', 'optimize css')
   .alias('optimize', 'o')
   .describe('theme', 'use theme')
@@ -64,7 +66,9 @@ if (argv.optimize) {
   opts.optimize = true;
 }
 
-if (argv['source-map']) {
+if (argv['source-map-inline']) {
+  opts.sourceMap = 'inline';
+} else if (argv['source-map']) {
   opts.sourceMap = true;
 }
 
@@ -85,6 +89,8 @@ if (process.stdin.isTTY) {
   (async () => {
     const result = await vcl.compileFile(inputFile, outputFile, opts);
 
+    console.log(chalk`{green Finished {bold ${result.outputFile}}}`);
+
     if (argv['watch']) {
       const fileChangeNotify = () => console.log('\nWaiting for file changes...');
 
@@ -103,7 +109,6 @@ if (process.stdin.isTTY) {
         }
       })
 
-      console.log(chalk`{green Finished {bold ${result.outputFile}}}`);
 
       watcher.on('ready', fileChangeNotify).on('change', file => {
 

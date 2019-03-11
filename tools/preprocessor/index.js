@@ -70,7 +70,7 @@ async function compileString(sss, opts = {}) {
     from: path.resolve(opts.root || process.cwd(), opts.from || 'vcl.sss'),
     to: path.resolve(opts.root || process.cwd(), opts.to || 'vcl.css'),
     map: opts.sourceMap ? {
-      inline: false
+      inline: true
     } : false,
     parser: sugarss
   });
@@ -83,7 +83,7 @@ async function compileString(sss, opts = {}) {
 * @param {Object} [opts] - compiler options
 * @param {string} [opts.root=process.cwd()] - base directory
 * @param {boolean} [opts.optimize=false] - optimize css
-* @param {boolean} [opts.sourceMap=false] - Generate a source map
+* @param {boolean|'inline'} [opts.sourceMap=false] - Generate a source map
 * @param {string} [opts.theme="@vcl/theme"] - theme to use
 * @return {Promise} - Converted css
 */
@@ -99,10 +99,15 @@ async function compileFile(inputFile, outputFile, opts = {}) {
   outputFile = path.resolve(opts.root || process.cwd(), outputFile);
 
   const sss = await readFileAsync(inputFile);
-  const result = await compileString(sss, {
-    from: inputFile,
-    to: outputFile,
-    ...opts
+
+  const processor = postCSS(createPostCSSPlugins(opts));
+  const result = await processor.process(sss, {
+    from: path.resolve(opts.root || process.cwd(), inputFile),
+    to: path.resolve(opts.root || process.cwd(), outputFile),
+    map: opts.sourceMap ? {
+      inline: opts.sourceMap === 'inline'
+    } : false,
+    parser: sugarss
   });
 
   await writeFileAsync(outputFile, result.css);
