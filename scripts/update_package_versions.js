@@ -42,33 +42,3 @@ scripts = {
 };
 
 fs.writeFileSync(path + "/package.json",JSON.stringify(package, null, 2));
-
-
-// todo before changing sss files sort all deps, so doing imports they be sorted too
-// Delete all unused imports of vcl modules from devDeps
-text = fs.readFileSync(path + "/index.sss", "utf-8");
-let arr = text.split("\n");
-
-arr.forEach((str,index) => {
-    if (str.includes("@import") && !(str.includes("normalize") || str.includes("theme"))) {
-        arr.splice(index,1);
-    }
-});
-
-fs.writeFileSync(path + "/index.sss", arr.join("\n"));
-
-
-// Add devDeps vcl modules to demo.sss
-arr = [];
-Object.keys(devDeps).forEach((str) => {
-    if (str.includes("@vcl") && !(str.includes("preprocessor") || str.includes("build-demo"))) {
-        arr.push("@import \"" + str + "\"");
-    }
-});
-
-arr.push("@import \"./index.sss\"");
-fs.writeFileSync(path + "/demo.sss", arr.join("\n"));
-
-
-
-
