@@ -27,7 +27,7 @@
     "@vcl/build-demo": "^0.4.0-12",
     "@vcl/flex-layout": "^0.4.0-0",
     "@vcl/font-awesome": "^0.4.0-0",
-    "@vcl/gulp-vcl-preprocessor": "^0.4.0-0",
+    "@vcl/gulp-vcl-preprocessor": "^0.2.3",
     "@vcl/preprocessor": "^0.4.0-0",
     "@vcl/size-modulation": "^0.4.0-0",
     "@vcl/typography": "^0.4.0-0",

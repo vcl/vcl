@@ -26,7 +26,7 @@
     "@vcl/build-demo": "^0.4.0-12",
     "@vcl/flex-layout": "^0.4.0-0",
     "@vcl/grid": "^0.4.0-0",
-    "@vcl/gulp-vcl-preprocessor": "^0.4.0-0",
+    "@vcl/gulp-vcl-preprocessor": "^0.2.3",
     "@vcl/preprocessor": "^0.4.0-0",
     "@vcl/responsive-image": "^0.4.0-0",
     "@vcl/typography": "^0.4.0-0",
