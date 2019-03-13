@@ -31,7 +31,6 @@
     "@vcl/icon": "^0.4.0-0",
     "@vcl/input": "^0.4.0-0",
     "@vcl/preprocessor": "^0.4.0-0",
-    "@vcl/table": "^0.4.0-0",
     "@vcl/typography": "^0.4.0-0",
     "@vcl/utils": "^0.4.0-0",
     "browser-sync": "^2.26.3",
@@ -39,6 +38,7 @@
     "pre-commit": "^1.2.2"
   },
   "dependencies": {
+    "@vcl/table": "^0.4.0-0",
     "@vcl/theme": "^0.4.0-0",
     "normalize.css": "^8.0.1"
   },
