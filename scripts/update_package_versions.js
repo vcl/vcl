@@ -1,9 +1,10 @@
-var fs = require("fs");
-let path = process.argv[2];
-let text = fs.readFileSync(path + "/package.json", "utf-8");
+const fs = require('fs');
+const path = require('path');
+
+let packagePath = path.resolve(process.cwd(), './package.json');
+let text = fs.readFileSync(packagePath, "utf-8");
 
 const package = JSON.parse(text);
-let scripts = package["scripts"];
 let deps = package["dependencies"];
 let devDeps = package["devDependencies"];
 
@@ -32,13 +33,23 @@ Object.keys(deps).forEach((val) => {
 // Add another dep
 devDeps["npm-run-all"] = "^4.1.5";
 
-
 // Update scripts
-scripts = {
+package["scripts"] = {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
     "browsersync": "browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
     "build-demo": "vcl-build-demo",
     "start": "npm-run-all --parallel build-demo browsersync"
 };
 
-fs.writeFileSync(path + "/package.json",JSON.stringify(package, null, 2));
+function sortByKey(obj) {
+    let tmp = {};
+    Object.keys(obj).sort().forEach((key) => {
+        tmp[key] = obj[key];
+    });
+    return tmp;
+}
+
+package["dependencies"] = sortByKey(package["dependencies"]);
+package["devDependencies"] = sortByKey(package["devDependencies"]);
+
+fs.writeFileSync(packagePath, JSON.stringify(package, null, 2));
