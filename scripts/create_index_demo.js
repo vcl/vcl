@@ -11,11 +11,15 @@ let devDeps = package["devDependencies"];
 text = fs.readFileSync(process.cwd() + "/index.sss", "utf-8");
 let arr = text.split("\n");
 
-arr.forEach((str, index) => {
+let i = 0;
+while (i < arr.length) {
+    let str = arr[i];
     if (str.includes("@import") && !(str.includes("normalize") || str.includes("theme"))) {
-        arr.splice(index, 1);
+        arr.splice(i, 1);
+        i--;
     }
-});
+    i++;
+}
 
 fs.writeFileSync(process.cwd() + "/index.sss", arr.join("\n"));
 
