@@ -1,10 +1,10 @@
 {
   "name": "@vcl/vcl",
   "description": "The Visual Component Library",
-  "version": "0.3.0",
+  "version": "0.4.0-0",
   "main": "package.json",
   "scripts": {
-    "install:packages":"node_modules/.bin/lerna bootstrap",
+    "install:packages": "node_modules/.bin/lerna bootstrap",
     "changed:packages": "node_modules/.bin/lerna changed",
     "git:tag:changed:packages": "node_modules/.bin/lerna version --no-push",
     "npm:publish:taged:packages": "node_modules/.bin/lerna publish from-git",
