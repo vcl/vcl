@@ -1,10 +1,10 @@
 {
   "name": "@vcl/bw-theme",
   "description": "The VCL BW theme",
-  "version": "0.3.0",
+  "version": "0.4.0-0",
   "main": "package.json",
   "scripts": {
-    "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css"
+    "test": "vcl-preprocessor ./index.sss ./build/test.css"
   },
   "style": "index.sss",
   "author": {
@@ -23,9 +23,9 @@
     "@vcl/default-theme": "^0.3.0-1",
     "@vcl/default-theme-terms": "^0.3.0-1",
     "@vcl/gulp-vcl-preprocessor": "^0.2.3",
-    "@vcl/preprocessor": "^0.3.0-9",
-    "@vcl/theme": "^0.3.0-3",
-    "@vcl/typography": "^0.3.0",
+    "@vcl/preprocessor": "^0.4.0-0",
+    "@vcl/theme": "^0.4.0-0",
+    "@vcl/typography": "^0.4.0-0",
     "pre-commit": "^1.2.2"
   },
   "keywords": [
