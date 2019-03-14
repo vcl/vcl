@@ -9,16 +9,13 @@ const PCK = path.resolve(process.cwd(), './package.json');
 const INDEX_SRC = path.resolve(__dirname, './index.html');
 const INDEX_TRG = path.resolve(process.cwd(), './build/index.html');
 
-const SSS_INDEX_SRC = path.resolve(process.cwd(), './index.sss');
-const SSS_DEMO_SRC = path.resolve(process.cwd(), './demo.sss');
-
 const PREPROCESSOR_SCRIPT_PATH = path.resolve(process.cwd(), 'node_modules/@vcl/preprocessor/bin/vcl.js');
 
-// Use demo.sss as primary source for demo but fallback to index.sss if it does not exist
-const SSS_SRC = fs.existsSync(SSS_DEMO_SRC) ? SSS_DEMO_SRC : SSS_INDEX_SRC;
-const SSS_TRG = path.resolve(process.cwd(), './build/index.css');
-
 const pack = JSON.parse(fs.readFileSync(PCK, 'utf8'));
+
+// Use pkg demoStyle as primary source for demo but fallback to style if it does not exist
+const SSS_SRC = path.resolve(process.cwd(), pack.demoStyle || pack.style);
+const SSS_TRG = path.resolve(process.cwd(), './build/index.css');
 
 mkdirp.sync('build');
 const indexHTML = fs.readFileSync(INDEX_SRC, 'utf8');
