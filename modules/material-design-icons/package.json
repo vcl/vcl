@@ -1,7 +1,7 @@
 {
   "name": "@vcl/material-design-icons",
   "description": "Integration with the material design icons",
-  "version": "0.4.0-0",
+  "version": "0.4.0-1",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
@@ -23,7 +23,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@mdi/font": "3.5.94",
     "@vcl/build-demo": "^0.4.0-12",
     "@vcl/preprocessor": "^0.4.0-0",
     "@vcl/typography": "^0.4.0-0",
@@ -32,6 +31,7 @@
     "pre-commit": "1.2.2"
   },
   "dependencies": {
+    "@mdi/font": "3.5.94",
     "@vcl/theme": "^0.4.0-0",
     "normalize.css": "8.0.1"
   },
