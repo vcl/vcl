@@ -4,6 +4,10 @@
   "version": "0.3.0",
   "main": "package.json",
   "scripts": {
+    "install:packages":"node_modules/.bin/lerna bootstrap",
+    "changed:packages": "node_modules/.bin/lerna changed",
+    "git:tag:changed:packages": "node_modules/.bin/lerna version --no-push",
+    "npm:publish:taged:packages": "node_modules/.bin/lerna publish from-git",
     "test": "./scripts/test.sh",
     "npm-mass-operations": "node scripts/npm_mass_operations.js",
     "git-init-github-io": "cd vcl.github.io && npm run git-init",
@@ -24,8 +28,9 @@
     }
   ],
   "license": "MIT",
-  "devDependencies": {},
-  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^3.13.1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/vcl/vcl.git"
