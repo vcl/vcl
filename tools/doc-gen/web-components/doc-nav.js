@@ -10,7 +10,7 @@ const KEYCODE_ENTER = 13;
 export default class DocNav extends PolymerElement {
   static get template() {
     return html`
-    <link rel="stylesheet" href="../vcl.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <nav class="docNav vclNavigation vclVertical vclLayoutVertical vclLayoutFlex">
             <div class="vclInputGroupEmb">
@@ -132,7 +132,7 @@ export default class DocNav extends PolymerElement {
 
     const groupedOnCategories = Object.keys(categories).map((title) => {
       const items = categories[title];
-      const { priority } = items[0];
+      const priority = Math.min(...items.map(i => i.priority));
       return {
         title, priority, items
       };

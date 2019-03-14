@@ -9,7 +9,7 @@
     "node_modules/@webcomponents/webcomponentsjs/**"
   ],
   "builds": [
-    { 
+    {
       "name": "dist",
       "addServiceWorker": false,
       "preset": "es5-bundled",
@@ -17,10 +17,10 @@
       "css": {"minify": false},
       "html": {"minify": false},
       "addPushManifest": false,
-      "bundle": {             
-        "inlineCss": true,          
-        "inlineScripts": false,      
-        "rewriteUrlsInTemplates": false, 
+      "bundle": {
+        "inlineCss": true,
+        "inlineScripts": false,
+        "rewriteUrlsInTemplates": false,
         "sourcemaps": true
       }
     }
