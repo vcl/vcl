@@ -98,7 +98,7 @@ async function compileFile(inputFile, outputFile, opts = {}) {
 
   inputFile = path.resolve(opts.root || process.cwd(), inputFile);
   outputFile = path.resolve(opts.root || process.cwd(), outputFile);
-  outputFolder = path.dirname(outputFile);
+  const outputFolder = path.dirname(outputFile);
 
   const sss = await readFileAsync(inputFile);
 
@@ -112,7 +112,9 @@ async function compileFile(inputFile, outputFile, opts = {}) {
     parser: sugarss
   });
 
-  await makeDir(outputFile);
+  if (!fs.existsSync(outputFolder)) {
+    await makeDir(outputFolder);
+  }
 
   await writeFileAsync(outputFile, result.css);
   if (result.map) {
