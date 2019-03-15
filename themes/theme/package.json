@@ -1,13 +1,10 @@
 {
   "name": "@vcl/theme",
-  "description": "The VCL default theme",
-  "version": "0.4.0-0",
+  "description": "Reference to the VCL default theme",
+  "version": "0.4.0-1",
   "main": "package.json",
   "scripts": {
-    "test": "vcl-preprocessor ./index.sss ./build/test.css",
-    "browsersync": "browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
-    "build-demo": "vcl-build-demo",
-    "start": "npm-run-all --parallel build-demo browsersync"
+    "test": "vcl-preprocessor ./index.sss ./build/test.css"
   },
   "style": "index.sss",
   "author": {
@@ -21,29 +18,18 @@
       "email": "thomas.hoppe@n-fuse.co"
     }
   ],
-  "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-12",
-    "@vcl/preprocessor": "^0.4.0-0",
-    "@vcl/typography": "^0.4.0-0",
-    "browser-sync": "2.26.3",
-    "normalize.css": "^8.0.1",
-    "pre-commit": "^1.2.2"
+    "@vcl/preprocessor": "^0.4.0-4"
   },
+  "dependencies": {
+    "@vcl/default-theme": "^0.4.0-0"
+  },
+  "license": "MIT",
   "keywords": [
     "css",
     "vcl",
     "component",
     "default",
     "theme"
-  ],
-  "vcl": {
-    "categories": [
-      {
-        "title": "Themes",
-        "itemPriority": 10,
-        "priority": 180
-      }
-    ]
-  }
+  ]
 }

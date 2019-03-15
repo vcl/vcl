@@ -1,7 +1,7 @@
 {
   "name": "@vcl/restore-theme",
   "description": "The VCL Restore theme",
-  "version": "0.4.0-0",
+  "version": "0.4.0-1",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"
@@ -20,15 +20,11 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/default-theme": "^0.3.0-1",
-    "@vcl/default-theme-terms": "^0.3.0-1",
-    "@vcl/gulp-vcl-preprocessor": "^0.2.3",
-    "@vcl/preprocessor": "^0.4.0-0",
-    "@vcl/theme": "^0.4.0-0",
-    "@vcl/typography": "^0.4.0-0",
-    "pre-commit": "^1.2.2"
+    "@vcl/preprocessor": "^0.4.0-4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@vcl/default-theme": "^0.4.0-0"
+  },
   "keywords": [
     "css",
     "vcl",

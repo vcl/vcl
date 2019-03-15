@@ -1,0 +1,638 @@
+/**
+ * The VCL default theme.
+ *
+ * Defines all variables required by modules in the VCL org's repository.
+ * The basic CI terms are defined in terms.sss.
+ */
+
+@import "./terms.sss"
+
+.body
+  background-color: var(--brand-danger)
+
+:root
+  /* Theme internally shared Variables
+     --------------------------------- */
+  --block-elem-vertical-gap: 1.3em
+  --form-control-vertical-gap: 1.0em
+  --input-elem-height: 2.65em
+  --text-primary-color: var(--gray-dark-3)
+  --text-secondary-color: var(--gray)
+  --content-primary-bg-color: var(--white)
+  --content-secondary-bg-color: var(--gray-light-5)
+  --content-ternary-bg-color: var(--gray-light-3)
+  --layout-half-gutter-width: 0.5rem
+
+  /* App
+     --- */
+  --app-viewport-bg-color: var(--gray-light-5)
+  --app-area-bg-color: transparent
+  --app-area-max-width: 95%
+  --app-area-min-width: 0
+
+  /* App Content Area
+     ---------------- */
+  --content-area-primary-bg-color: var(--content-primary-bg-color)
+  --content-area-secondary-bg-color: var(--content-secondary-bg-color)
+
+  /* App Header
+     ---------- */
+  --app-header-color: inherit
+  --app-header-bg-color: var(--white)
+  --app-header-logo-max-width: 4em
+
+  /* App Footer
+     ---------- */
+  --app-footer-color: inherit
+  --app-footer-bg-color: var(--white)
+
+  /* Grid
+     ---- */
+  --grid-half-gutter-width: var(--layout-half-gutter-width)
+
+  /* Flex Layout
+     ----------- */
+  --flex-layout-half-gutter-width: var(--layout-half-gutter-width)
+
+  /* Typography
+     ---------- */
+  /* Font settings */
+  --typography-font-family: var(--font-family-theme)
+  --typography-font-family-serif: var(--font-family-serif-theme)
+  --typography-font-family-monospace: var(--font-family-monospace-theme)
+  --typography-font-size: 0.875em
+  --typography-line-height: 1.428
+
+  /* Modular scale variants */
+  --typography-mod-scale-1: 2.08em
+  --typography-mod-scale-2: 1.7em
+  --typography-mod-scale-3: 1.27em
+  --typography-mod-scale-4: 1.1em
+  --typography-mod-scale-5: 0.95em
+  --typography-mod-scale-6: 0.82em
+
+  /* Colors */
+  --typography-text-color: var(--text-primary-color)
+  --typography-secondary-text-color: var(--text-secondary-color)
+  --typography-disabled-color: var(--text-secondary-color)
+  --typography-link-color: var(--brand-accent)
+  --typography-link-hover-color: var(--brand-accent-darker)
+  --typography-link-text-decoration: none
+  --typography-heading-color: var(--text-primary-color)
+  --typography-mark-color: var(--black)
+  --typography-mark-bg-color: #ffff00
+  --typography-code-border-color: var(--gray-light-3)
+  --typography-code-bg-color: var(--gray-light-4)
+  --typography-selected-text-bg-color: var(--black)
+  --typography-selected-text-color: var(--white)
+  --typography-blockquote-border-color: var(--gray-light-3)
+
+  /* List
+     ---- */
+  --list-separator-border-color: var(--gray-light-1)
+
+  /* Value Unit Anagram
+     ------------------ */
+  --vu-anagram-unit-font-size: 1em
+  --vu-anagram-unit-color: var(--gray-light-1)
+
+  /* Label
+     ---- */
+  --label-default-bg-color: var(--gray-dark-4)
+  --label-default-color: var(--white)
+  --label-primary-bg-color: var(--primary-medium-color)
+  --label-primary-color: var(--white)
+  --label-success-bg-color: var(--success-medium-color)
+  --label-success-color: var(--white)
+  --label-info-bg-color: var(--info-medium-color)
+  --label-info-color: var(--white)
+  --label-warning-bg-color: var(--warning-medium-color)
+  --label-warning-color: var(--white)
+  --label-danger-bg-color: var(--danger-medium-color)
+  --label-danger-color: var(--white)
+
+  /* Badge
+     ----- */
+  --badge-default-bg-color: var(--gray-dark-4)
+  --badge-default-color: var(--white)
+  --badge-primary-bg-color: var(--primary-medium-color)
+  --badge-primary-color: var(--white)
+  --badge-success-bg-color: var(--success-medium-color)
+  --badge-success-color: var(--white)
+  --badge-info-bg-color: var(--info-medium-color)
+  --badge-info-color: var(--white)
+  --badge-warning-bg-color: var(--warning-medium-color)
+  --badge-warning-color: var(--white)
+  --badge-danger-bg-color: var(--danger-medium-color)
+  --badge-danger-color: var(--white)
+
+  /* Table
+     ----- */
+  --table-bg-color: var(--black)
+  --table-color: var(--black)
+  --table-disabled-color: var(--text-secondary-color)
+  --table-border-color: var(--gray-light-3)
+  --table-header-bg-color: var(--gray-light-1)
+  --table-header-color: var(--white)
+  --table-header-button-hover-color: var(--brand-accent)
+  --table-footer-bg-color: var(--gray-light-1)
+  --table-footer-color: var(--white)
+  --table-alt-bg-color: var(--gray-light-4)
+  --table-highlight-bg-color: var(--brand-accent-lighter)
+  --table-highlight-hover-bg-color: var(--brand-accent-light)
+  --table-row-selected-color: var(--white)
+  --table-row-selected-bg-color: var(--brand-accent-dark)
+
+  /* Table Extras
+     ------------ */
+  --table-filter-bar-bg-color: transparent
+  --table-tool-bar-bg-color: var(--gray-light-3)
+
+  /* Sum Table
+     ---------- */
+  --sum-table-subtotal-color: inherit
+  --sum-table-subtotal-bg-color: transparent
+  --sum-table-total-color: inherit
+  --sum-table-total-bg-color: transparent
+
+  /* Data List
+     --------- */
+  --data-list-bg-color: transparent
+  --data-list-header-bg-color: transparent
+  --data-list-footer-bg-color: transparent
+  --data-list-border-color: var(--gray-light-2)
+  --data-list-item-separator-border-color: transparent
+  --data-list-item-hover-color: var(--text-primary-color)
+  --data-list-item-bg-hover-color: var(--gray-light-4)
+  --data-list-item-selected-color: var(--white)
+  --data-list-item-bg-selected-color: var(--brand-accent-dark)
+  --data-list-item-divider-border-color: var(--gray-light-3)
+  --data-list-item-disabled-color: var(--gray-light-2)
+
+  /* Data Tree
+     --------- */
+  --data-tree-bg-color: transparent
+  --data-tree-border-color: var(--gray-dark-4)
+  --data-tree-heading-color: var(--gray-dark-4)
+  --data-tree-heading-bg-color: var(--gray-light-1)
+  --data-tree-item-color: inherit
+  --data-tree-item-bg-color: transparent
+  --data-tree-item-hover-color: var(--white)
+  --data-tree-item-hover-bg-color: var(--gray-light-4)
+  --data-tree-selected-item-color: var(--white)
+  --data-tree-selected-item-bg-color: var(--brand-accent-dark)
+
+  /* Calendar
+     ----------- */
+  --calendar-bg-color: transparent
+  --calendar-item-color: inherit
+  --calendar-item-today-color: #FF6347
+  --calendar-item-bg-color: transparent
+  --calendar-item-hover-color: var(--text-primary-color)
+  --calendar-item-hover-bg-color: var(--gray-light-4)
+  --calendar-otherm-day-color: var(--gray-light-1)
+  --calendar-otherm-day-bg-color: transparent
+  --calendar-selected-item-color: var(--white)
+  --calendar-selected-item-bg-color: var(--brand-accent-dark)
+  --calendar-disabled-item-color: var(--text-secondary-color)
+  --calendar-disabled-item-bg-color: var(--gray-light-3)
+  --calendar-available-item-bg-color: var(--success-light-color)
+  --calendar-unavailable-item-bg-color: var(--danger-light-color)
+
+  /* Pagination
+     ---------- */
+  --pagination-selected-page-bg-color: var(--brand-accent)
+  --pagination-selected-page-color: var(--white)
+
+  /* Tab Navigation
+     -------------- */
+  --tab-nav-border-color: var(--gray-light-2)
+  --tab-nav-tab-bg-color: transparent
+  --tab-nav-tab-bg-hover-color: var(--gray-light-4)
+  --tab-nav-tab-bg-selected-color: transparent
+  --tab-nav-tab-bg-disabled-color: transparent
+  --tab-nav-tab-border-selected-color: var(--brand-accent)
+  --tab-nav-tab-color: var(--gray)
+  --tab-nav-tab-disabled-color: var(--gray-light-2)
+  --tab-nav-tab-selected-color: inherit
+  --tab-nav-tab-hover-color: var(--black)
+  --tab-nav-tab-button-label-color: var(--gray-light-1)
+  --tab-nav-tab-button-label-hover-color: var(--gray-dark-3)
+  --tab-nav-tab-button-selected-label-color: var(--gray-light-1)
+
+  --tab-nav-tab-bg-color--uni: transparent
+  --tab-nav-tab-bg-selected-color--uni: var(--white)
+  --tab-nav-tab-bg-disabled-color--uni: transparent
+  --tab-nav-tab-color--uni: var(--text-primary-color)
+  --tab-nav-tab-hover-color--uni: var(--black)
+  --tab-nav-tab-color-selected--uni: var(--gray)
+  --tab-nav-tab-disabled-color--uni: var(--gray-light-2)
+
+  /* Breadcrumb Navigation
+     --------------------- */
+  --breadcrumb-divider-color: inherit
+  --breadcrumb-label-color: var(--brand-accent-dark)
+  --breadcrumb-label-selected-color: inherit
+  --breadcrumb-label-hover-color: var(--brand-accent)
+
+  /* Navigation
+     ----------- */
+  --navigation-bg-color: transparent
+  --navigation-color: var(--gray-dark-4)
+  --navigation-heading-color: var(--gray-dark-4)
+  --navigation-heading-bg-color: transparent
+  --navigation-3rd-level-bg-color: var(--gray-dark-4)
+  --navigation-2nd-level-bg-color: var(--gray-dark-4)
+  --navigation-item-disabled-bg-color: transparent
+  --navigation-item-disabled-color: var(--gray-light-2)
+  --navigation-item-1st-level-bg-color: transparent
+  --navigation-item-1st-level-color: var(--gray-dark-4)
+  --navigation-item-1st-level-hover-bg-color: var(--gray-light-4)
+  --navigation-item-1st-level-hover-color: var(--black)
+  --navigation-item-1st-level-selected-bg-color: var(--brand-accent)
+  --navigation-item-1st-level-selected-color: var(--white)
+  --navigation-item-2nd-level-bg-color: transparent
+  --navigation-item-2nd-level-color: var(--gray-dark-4)
+  --navigation-item-2nd-level-hover-bg-color: var(--gray-light-1)
+  --navigation-item-2nd-level-hover-color: var(--black)
+  --navigation-item-2nd-level-selected-bg-color: var(--brand-accent)
+  --navigation-item-2nd-level-selected-color: var(--white)
+
+  /* Process Navigation
+     ------------------ */
+  --process-nav-arrow-border-width: 2px
+  --process-nav-arrow-border-color: var(--white)
+  --process-nav-item-bg-color: var(--gray-light-4)
+  --process-nav-item-color: var(--brand-accent)
+  --process-nav-item-hover-color: var(--brand-accent-darker)
+  --process-nav-disabled-bg-color: var(--gray-light-3)
+  --process-nav-disabled-color: var(--text-secondary-color)
+  --process-nav-selected-item-color: var(--white)
+  --process-nav-selected-item-bg-color: var(--brand-accent-dark)
+  --process-nav-completed-item-bg-color: var(--gray-light-4)
+
+  /* Tooltip
+     ------- */
+  --tooltip-color: var(--white)
+  --tooltip-bg-color: var(--gray-dark-4)
+  --tooltip-border-color: var(--gray-dark-4)
+  --tooltip-shadow-color: var(--glass-2)
+
+  /* Popover
+     ------- */
+  --popover-color: var(--text-primary-color)
+  --popover-bg-color: var(--white)
+  --popover-border-width: 1px
+  --popover-border-color: var(--glass-2)
+  --popover-shadow-color: var(--glass-2)
+
+  /* Layer
+     ----- */
+  --layer-color: var(--text-primary-color)
+  --layer-bg-color: var(--white)
+  --layer-cover-bg-color: var(--glass-1)
+  --layer-gutter-padding: var(--grid-half-gutter-width)
+
+  /* Nag
+     --- */
+  --nag-color: var(--text-primary-color)
+  --nag-bg-color: var(--white)
+
+  /* Scrollbar
+     --------- */
+  --scrollbar-width: 6px
+  --scrollbar-bg-color: transparent
+  --scrollbar-thumb-bg-color: var(--gray-light-1)
+  --scrollbar-track-bg-color: transparent
+
+  /* Ribbon
+     ------- */
+  --ribbon-color: var(--brand-accent-dark)
+  --ribbon-bg-color: var(--white)
+  --ribbon-shadow-color: var(--gray)
+
+  /* Loading Layer
+     ------------- */
+  --loading-layer-cover-bg-color: var(--glass-1)
+
+  /* Container
+     --------- */
+  --container-bg-color: var(--content-ternary-bg-color)
+  --container-border-color: var(--gray-light-2)
+  --container-border-radius: 0
+
+  /* Go-to-top
+     --------- */
+  --gototop-color: var(--gray-light-3)
+  --gototop-bg-color: var(--gray-dark-1)
+
+  /* Divider
+     ------- */
+  --divider-color: inherit
+  --divider-border-color: var(--gray-light-2)
+  --divider-fill-color: var(--content-primary-bg-color)
+
+  /* Panel
+     ----- */
+  --panel-bg-color: transparent
+  --panel-hf-line-height: 2em
+  --panel-border-color: var(--gray)
+  --panel-header-color: var(--text-primary-color)
+  --panel-header-bg-color: transparent
+  --panel-footer-color: var(--text-primary-color)
+  --panel-footer-bg-color: transparent
+  --panel-border-radius--card: 0.55em
+
+  /* Toolbar
+     -------- */
+  --toolbar-l1-bg-color: var(--gray-light-5)
+  --toolbar-l2-bg-color: var(--gray-light-6)
+
+  /* Notification
+     ------------ */
+  --notification-border-radius: 0.45em
+  --notification-color: inherit
+  --notification-bg-color: var(--content-secondary-bg-color)
+  --notification-hf-color: inherit
+  --notification-hf-bg-color: var(--gray-light-3)
+  --notification-success-color: var(--success-dark-color)
+  --notification-success-bg-color: var(--success-light-color)
+  --notification-success-hf-color: var(--white)
+  --notification-success-hf-bg-color: var(--success-dark-color)
+  --notification-info-color: var(--info-dark-color)
+  --notification-info-bg-color: var(--info-light-color)
+  --notification-info-hf-color: var(--white)
+  --notification-info-hf-bg-color: var(--info-dark-color)
+  --notification-warning-color: var(--warning-dark-color)
+  --notification-warning-bg-color: var(--warning-light-color)
+  --notification-warning-hf-color: var(--white)
+  --notification-warning-hf-bg-color: var(--warning-dark-color)
+  --notification-error-color: var(--danger-dark-color)
+  --notification-error-bg-color: var(--danger-light-color)
+  --notification-error-hf-color: var(--white)
+  --notification-error-hf-bg-color: var(--danger-dark-color)
+
+  /* Progress Bar
+     ------------ */
+  --progress-bar-progress-label-color: var(--gray-light-3)
+  --progress-bar-container-bg-color: var(--gray-light-5)
+  --progress-bar-primary-progress-bg-color: var(--brand-accent-light)
+  --progress-bar-secondary-progress-bg-color: var(--brand-accent-lighter)
+
+  /* Callout
+     ------- */
+  --callout-border-color: var(--gray-light-1)
+
+  /* Article Structuring
+     ------------------- */
+  --article-header-tagline-color: var(--gray-dark-1)
+  --article-header-border-color: var(--gray-light-2)
+
+  /* Button
+     ------ */
+  --button-height: var(--input-elem-height)
+  --button-line-height: initial
+
+  --button-outline-focus-color: var(--black)
+  --button-border-width: 0
+  --button-border-radius: 0
+  --button-border-color: transparent
+  --button-label-font-size: 0.96em
+  --button-label-text-transform: none
+
+  /* Default variant */
+  --button-label-color: var(--white)
+  --button-label-hover-color: var(--white)
+  --button-label-disabled-color: var(--gray-light-3)
+  --button-label-selected-color: var(--white)
+  --button-bg-color: var(--gray)
+  --button-bg-selected-color: var(--brand-accent-darker)
+  --button-bg-hover-color: var(--gray-dark-3)
+
+  /* Emphasized variant */
+  --button-border-color--emphasized: transparent
+  --button-label-color--emphasized: var(--white)
+  --button-label-hover-color--emphasized: var(--white)
+  --button-label-disabled-color--emphasized: var(--gray-light-3)
+  --button-bg-color--emphasized: var(--brand-accent)
+  --button-bg-hover-color--emphasized: var(--brand-accent-dark)
+
+  /* Transparent variant */
+  --button-label-color--transparent: var(--gray-dark-1)
+  --button-label-hover-color--transparent: var(--black)
+  --button-label-disabled-color--transparent: var(--gray-light-1)
+
+  /* Emphasized & transparent variant */
+  --button-label-color--emphasized-transparent: var(--brand-accent)
+  --button-label-hover-color--emphasized-transparent: var(--brand-accent-darker)
+  --button-label-disabled-color--emphasized-transparent: var(--gray-light-3)
+
+  /* Half transparent alternative variant */
+  --button-label-color--half-transparent: inherit
+  --button-label-hover-color--half-transparent: inherit
+  --button-label-disabled-color--half-transparent: var(--gray-light-1)
+  --button-bg-hover-color--half-transparent: var(--gray-light-4)
+
+  /* Transparent alternative variant */
+  --button-label-color--transparentalt: var(--gray-light-3)
+  --button-label-hover-color--transparentalt: var(--white)
+  --button-label-disabled-color--transparentalt: var(--gray-light-1)
+
+  /* Danger variant */
+  --button-label-color--danger: var(--white)
+  --button-bg-color--danger: var(--danger-medium-color)
+  --button-label-hover-color--danger: var(--white)
+  --button-label-disabled-color--danger: var(--gray-light-1)
+  --button-bg-hover-color--danger: var(--danger-dark-color)
+
+  /* Suggestive variant */
+  --button-label-color--suggestive: var(--white)
+  --button-bg-color--suggestive: var(--success-medium-color)
+  --button-label-hover-color--suggestive: var(--white)
+  --button-label-disabled-color--suggestive: var(--gray-light-3)
+  --button-bg-hover-color--suggestive: var(--success-dark-color)
+
+  /* Form Control Label
+     ------------------ */
+  --form-control-sublabel-color: var(--gray-dark-4)
+  --form-control-label-line-height: var(--input-elem-height)
+  --form-control-label-required-hint-color: var(--brand-accent-darker)
+  --form-control-label-font-size: inherit
+  --form-control-label-font-weight: inherit
+  --form-control-label-color: inherit
+  --form-control-hint-color: var(--gray)
+
+  /* Fieldset
+     -------- */
+  --fieldset-border-width: 1px
+  --fieldset-border-color: var(--gray-light-2)
+
+  /* Input
+     ----- */
+  --input-height: var(--input-elem-height)
+  --input-line-height: initial
+  --input-textarea-line-height: 1.52em
+  --input-outline-focus-color: var(--black)
+  --input-color: var(--black)
+  --input-text-placeholder-color: var(--gray-light-1)
+  --input-text-placeholder-font-style: normal
+  --input-border-width: 1px
+  --input-border-color: var(--gray-light-1)
+  --input-border-focus-color: var(--brand-accent)
+  --input-border-radius: 0
+  --input-bg-color: var(--white)
+  --input-bg-focus-color: var(--white)
+  --input-disabled-color: var(--gray-dark-4)
+  --input-disabled-border-color: var(--gray-light-1)
+  --input-disabled-bg-color: var(--gray-light-3)
+
+  /* File Input
+     ---------- */
+  --file-input-color: var(--input-outline-focus-color)
+  --file-input-bg-color: var(--input-bg-color)
+  --file-input-border-width: var(--input-border-width)
+  --file-input-border-color: var(--input-border-color)
+  --file-input-border-radius: var(--input-border-radius)
+  --file-input-border-focus-color: var(--input-border-focus-color)
+  --file-input-bg-focus-color: var(--input-bg-focus-color)
+  --file-input-disabled-color: var(--input-disabled-color)
+  --file-input-disabled-border-color: var(--input-disabled-border-color)
+  --file-input-disabled-bg-color: var(--input-disabled-bg-color)
+  --file-input-dragndrop-color: var(--input-color)
+  --file-input-dragndrop-border-color: var(--brand-accent-light)
+  --file-input-dragndrop-bg-color: var(--brand-accent-light)
+
+  /* Checkbox
+     -------- */
+  --checkbox-color: var(--input-border-color)
+  --checkbox-focus-color: var(--input-border-focus-color)
+  --checkbox-hover-color: var(--input-border-focus-color)
+  --checkbox-disabled-color: var(--gray-light-3)
+  --checkbox-icon-size: 1.16em
+
+  /* Radio Button
+     ------------ */
+  --radio-button-color: var(--input-border-color)
+  --radio-button-focus-color: var(--input-border-focus-color)
+  --radio-button-hover-color: var(--input-border-focus-color)
+  --radio-button-disabled-color: var(--gray-light-3)
+  --radio-button-icon-size: 1.16em
+
+  /* Input Group
+     ----------- */
+  --input-group-bg-color: var(--gray-dark-5)
+  --input-group-color: var(--gray-light-3)
+  --input-group-height: var(--input-elem-height)
+  --input-group-line-height: var(--input-elem-height)
+
+  /* Embedded Input Group
+     -------------------- */
+  --embedded-input-group-text-color: var(--gray-dark-1)
+  --embedded-input-group-text-bg-color: transparent
+
+  /* Slider
+     ------ */
+  --slider-rail-bg-color: var(--gray-light-3)
+  --slider-rail-border-color: transparent
+  --slider-knob-bg-color: var(--gray-light-1)
+  --slider-knob-bg-hover-color: var(--brand-accent-dark)
+  --slider-knob-border-color: transparent
+  --slider-scale-point-mark-bg-color: var(--gray-dark-1)
+
+  /* Rating
+     ------ */
+  --rating-item-color: inherit
+  --rating-item-disabled-color: var(--text-secondary-color)
+  --rating-item-highlighted-color: var(--brand-accent)
+
+  /* Token
+     ----- */
+  --token-bg-color: var(--gray-light-5)
+  --token-border-color: var(--gray-light-3)
+  --token-border-hover-color: var(--gray-light-1)
+  --token-border-selected-color: var(--brand-accent-dark)
+  --token-bg-selected-color: var(--brand-accent-dark)
+  --token-selected-color: var(--white)
+  --token-border-highlighted-color: var(--brand-accent-dark)
+  --token-bg-highlighted-color: var(--gray-light-5)
+  --token-highlighted-color: inherit
+  --token-color: inherit
+  --token-remove-button-label-color: var(--gray-light-1)
+
+  /* Flip Switch
+     ----------- */
+  --flip-switch-height: 2em
+  --flip-switch-bg-color: transparent
+  --flip-switch-border-color: var(--gray)
+  --flip-switch-active-bg-color: var(--brand-accent-dark)
+  --flip-switch-active-color: var(--white)
+  --flip-switch-knob-bg-color: var(--brand-accent-darker)
+
+  /* Drop Down
+     --------- */
+  --dropdown-border-color: var(--glass-1)
+  --dropdown-border-width: 1px
+  --dropdown-bg-color: var(--white)
+  --dropdown-item-color: var(--input-color)
+  --dropdown-item-sub-label-color: var(--text-secondary-color)
+  --dropdown-item-bg-hover-color: var(--gray-dark-1)
+  --dropdown-item-hover-color: var(--white)
+  --dropdown-item-sub-label-hover-color: var(--gray-light-2)
+  --dropdown-selected-item-bg-color: var(--brand-accent)
+  --dropdown-selected-item-color: var(--white)
+  --dropdown-highlighted-item-bg-color: var(--gray-dark-2)
+  --dropdown-highlighted-item-color: var(--white)
+  --dropdown-disabled-item-bg-color: transparent
+  --dropdown-disabled-item-color: var(--gray-dark-1)
+  --dropdown-separator-item-border-color: var(--gray-light-1)
+
+  /* Date Picker
+     ----------- */
+  --date-picker-border-color: transparent
+  --date-picker-bg-color: transparent
+
+  /* Time Picker
+     ----------- */
+  --time-picker-border-color: transparent
+  --time-picker-bg-color: transparent
+
+  /* Responsive Image
+     ---------------- */
+  --responsive-image-container-color: var(--gray-light-1)
+
+  /* Image Shapes
+     ------------ */
+  --thumbnail-bg-color: transparent
+  --thumbnail-border-color: var(--black)
+
+  /* Gallery
+     ------- */
+  --gallery-bg-color: transparent
+  --gallery-header-color: inherit
+  --gallery-header-bg-color: transparent
+  --gallery-footer-color: inherit
+  --gallery-footer-bg-color: transparent
+  --gallery-initial-buttons-opacity: .4
+  --gallery-thumbnail-selected-border-color: var(--brand-accent-dark)
+  --gallery-thumbnail-hover-bg-color: var(--brand-accent-overlay)
+
+  /* Drawer
+     ------ */
+  --drawer-drawer-panel-color: var(--text-primary-color)
+  --drawer-drawer-panel-bg-color: var(--app-viewport-bg-color)
+  --drawer-drawer-panel-width: 256px
+  --drawer-main-panel-cover-bg-color: var(--glass-1)
+
+  /* E-Mail
+     ------ */
+  --email-viewport-color: var(--text-primary-color)
+  --email-viewport-bg-color: #f6f6f6
+  --email-body-bg-color: var(--white)
+  --email-body-border-color: #e9e9e9
+  --email-footer-color: #999999
+
+  /* Product List
+     ------------ */
+  --product-list-color: var(--gray-dark-4)
+  --product-list-name-color: var(--black)
+  --product-list-border-color: var(--gray-light-3)
