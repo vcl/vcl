@@ -1,6 +1,6 @@
 {
   "name": "@vcl/preprocessor",
-  "version": "0.4.0-1",
+  "version": "0.4.0-2",
   "description": "The VCL preprocessor",
   "main": "index.js",
   "homepage": "https://github.com/vcl/preprocessor",
@@ -40,6 +40,7 @@
     "chokidar": "^2.1.2",
     "cssnano": "^4.1.10",
     "debug": "^4.1.1",
+    "make-dir": "^2.1.0",
     "memory-fs": "^0.4.1",
     "postcss": "^7.0.14",
     "postcss-clearfix": "^2.0.1",

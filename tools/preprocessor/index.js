@@ -3,6 +3,7 @@
 var { promisify } = require('util');
 var fs = require('fs');
 var path = require('path');
+var makeDir = require('make-dir');
 
 // PostCSS stuff
 var postCSS = require('postcss');
@@ -97,6 +98,7 @@ async function compileFile(inputFile, outputFile, opts = {}) {
 
   inputFile = path.resolve(opts.root || process.cwd(), inputFile);
   outputFile = path.resolve(opts.root || process.cwd(), outputFile);
+  outputFolder = path.dirname(outputFile);
 
   const sss = await readFileAsync(inputFile);
 
@@ -109,6 +111,8 @@ async function compileFile(inputFile, outputFile, opts = {}) {
     } : false,
     parser: sugarss
   });
+
+  await makeDir(outputFile);
 
   await writeFileAsync(outputFile, result.css);
   if (result.map) {
