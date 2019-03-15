@@ -37,5 +37,14 @@
     "component",
     "default",
     "theme"
-  ]
+  ],
+  "vcl": {
+    "categories": [
+      {
+        "title": "Themes",
+        "itemPriority": 10,
+        "priority": 180
+      }
+    ]
+  }
 }

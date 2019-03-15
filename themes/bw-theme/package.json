@@ -33,9 +33,6 @@
     "theme"
   ],
   "vcl": {
-    "overwrites": [
-      "theme"
-    ],
     "categories": [
       {
         "title": "Themes",
