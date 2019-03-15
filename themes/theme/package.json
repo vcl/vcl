@@ -1,7 +1,7 @@
 {
   "name": "@vcl/theme",
   "description": "Reference to the VCL default theme",
-  "version": "0.4.0-1",
+  "version": "0.4.0-beta.0",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"
@@ -19,10 +19,10 @@
     }
   ],
   "devDependencies": {
-    "@vcl/preprocessor": "^0.4.0-4"
+    "@vcl/preprocessor": "^0.4.0-beta.0"
   },
   "dependencies": {
-    "@vcl/default-theme": "^0.4.0-0"
+    "@vcl/default-theme": "^0.4.0-beta.0"
   },
   "license": "MIT",
   "keywords": [
