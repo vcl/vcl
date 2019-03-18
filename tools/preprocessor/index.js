@@ -18,8 +18,6 @@ var autoprefixer = require('autoprefixer');
 var postcssHexrgba = require('postcss-hexrgba');
 var postcssClearfix = require('postcss-clearfix');
 
-var npmImportResolve = require('./npm-import-resolve');
-
 const readFileAsync = promisify(fs.readFile);
 const writeFileAsync = promisify(fs.writeFile);
 
@@ -28,20 +26,12 @@ const writeFileAsync = promisify(fs.writeFile);
  * @param {object} [opts] - postCSS plugin options.
  * @param {string} [opts.root=process.cwd()] - base directory
  * @param {boolean} [opts.optimize=false] - optimize css
- * @param {string} [opts.theme="@vcl/theme"] - theme to use
  * @return Array of postCSS plugins
  */
 function createPostCSSPlugins (opts = {}) {
   return [
     npmimport({
       root: opts.root || process.cwd(),
-      resolve: async (id, base, options) => {
-        if (id === '@vcl/theme' && opts.theme) {
-          id = opts.theme;
-        }
-        return await npmImportResolve(id, base, options);
-      },
-      ...(opts.npm || {}),
     }),
     postcssNesting(),
     vars(), // CSS4 compatible variable suppot
@@ -62,7 +52,6 @@ function createPostCSSPlugins (opts = {}) {
 * @param {string} [opts.to="vcl.css"] - target file name
 * @param {boolean} [opts.optimize=false] - optimize css
 * @param {boolean} [opts.sourceMap=false] - Generate a source map
-* @param {string} [opts.theme="@vcl/theme"] - theme to use
 * @return {Promise} - Converted css
 */
 async function compileString(sss, opts = {}) {
@@ -85,7 +74,6 @@ async function compileString(sss, opts = {}) {
 * @param {string} [opts.root=process.cwd()] - base directory
 * @param {boolean} [opts.optimize=false] - optimize css
 * @param {boolean|'inline'} [opts.sourceMap=false] - Generate a source map
-* @param {string} [opts.theme="@vcl/theme"] - theme to use
 * @return {Promise} - Converted css
 */
 async function compileFile(inputFile, outputFile, opts = {}) {

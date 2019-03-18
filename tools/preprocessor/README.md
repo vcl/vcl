@@ -27,7 +27,6 @@ Options:
   --watch, -w                watches the input file for changes
   --import-root, -i          base directory for file based imports
   --optimize, o              optimize css
-  --theme, t                 use specified theme instead of "@vcl/theme"
   --source-map, -s           generate source maps
   --source-map-inline, -si   generate source maps
 
@@ -64,7 +63,6 @@ var plugins = vcl.createPostCSSPlugins(opts);
 - `sourceMap` [false] creates a source map
 - `optimize` [false] optimizes css
 - `url` [true] follows urls
-- `theme` use specified theme instead of "@vcl/theme"
 
 ## Entry CSS File
 
