@@ -1,7 +1,7 @@
 {
   "name": "@vcl/coarse-pointer",
   "description": "Optimizations for coarse pointing devices such as touch based input devices",
-  "version": "0.4.0-beta.0",
+  "version": "0.4.0-beta.1",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
@@ -24,17 +24,17 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-beta.0",
-    "@vcl/button": "^0.4.0-beta.0",
-    "@vcl/core-modules": "^0.4.0-beta.0",
-    "@vcl/preprocessor": "^0.4.0-beta.0",
-    "@vcl/typography": "^0.4.0-beta.0",
+    "@vcl/build-demo": "^0.4.0-beta.1",
+    "@vcl/button": "^0.4.0-beta.1",
+    "@vcl/core-modules": "^0.4.0-beta.1",
+    "@vcl/preprocessor": "^0.4.0-beta.1",
+    "@vcl/typography": "^0.4.0-beta.1",
     "browser-sync": "^2.26.3",
     "npm-run-all": "^4.1.5",
     "pre-commit": "^1.2.2"
   },
   "dependencies": {
-    "@vcl/theme": "^0.4.0-beta.0"
+    "@vcl/theme": "^0.4.0-beta.1"
   },
   "keywords": [
     "css",
