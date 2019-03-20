@@ -10,7 +10,7 @@
     "start": "npm-run-all clean install-modules gen-doc",
     "clean": "rm -rf node_modules package-lock.json",
     "install-modules": "npm install",
-    "gen-doc": "vcl-doc-gen package.json dist -name=\"VCL Documentation\"",
+    "gen-doc": "vcl-doc-gen package.json dist --name=\"VCL Documentation\"",
     "git-push": "cd dist && git add -A . && git commit -a -m 'doc update' && git push --set-upstream origin master --force"
   },
   "repository": {
