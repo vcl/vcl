@@ -1,10 +1,10 @@
 @import "normalize.css"
 @import "@vcl/theme"
 
-
 .vclInputGroupEmb
   margin-bottom: var(--form-control-vertical-gap)
   position: relative
+  width: 100%
   & .vclInput
     margin-bottom: 0
     &.vclPrepItem
@@ -20,13 +20,14 @@
     position: absolute
     top: 0
     color: var(--embedded-input-group-text-color)
-    background-color: var(--embedded-input-group-text-bg-color)
   & .vclPrepended
     left: 0
   & .vclAppended
     right: 0
   & button
-    &.vclButton
+    &.vclButton,
+    &.vclButton:hover
+      background-color: var(--embedded-input-group-text-bg-color)
       border-width: var(--input-border-width)
       border-style: solid
       border-color: transparent

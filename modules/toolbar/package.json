@@ -35,6 +35,7 @@
     "@vcl/input": "^0.4.0-beta.1",
     "@vcl/input-group": "^0.4.0-beta.1",
     "@vcl/logo": "^0.4.0-beta.1",
+    "@vcl/layout-spans": "^0.4.0-beta.1",
     "@vcl/loose-button-group": "^0.4.0-beta.1",
     "@vcl/navigation": "^0.4.0-beta.1",
     "@vcl/preprocessor": "^0.4.0-beta.1",
