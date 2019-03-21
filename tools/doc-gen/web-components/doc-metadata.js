@@ -14,12 +14,12 @@ export default class DocMetadata extends PolymerElement {
     <button on-click="toggle" class="vclButton vclHalfTransparent" type="button" name="button" title="Package information">
       <div class="vclIcogram">
         <template is="dom-if" if="{{hidden}}">
-          <span class="vclIcon fa fa-chevron-left"></span>
+          <span class="vclIcon fas fa-chevron-left"></span>
         </template >
         <template is="dom-if" if="{{!hidden}}">
-          <span class="vclIcon fa fa-chevron-right"></span>
+          <span class="vclIcon fas fa-chevron-right"></span>
         </template >
-        <span class="vclIcon fa fa-info"></span>
+        <span class="vclIcon fas fa-info"></span>
       </div>
     </button>
   </div>

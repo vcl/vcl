@@ -10,11 +10,11 @@ export default class DocDemo extends PolymerElement {
       <div class="vclTabbable">
         <div class="vclTabs vclTabStyleUni" role="tablist">
           <div class$="vclTab  {{getDemoTabClass(codeVisible)}}"  on-click="showDemo" role="tab">
-            <span class="vclTabLabel vclIcon fa fa-eye"></span>
+            <span class="vclTabLabel vclIcon fas fa-eye"></span>
             <span class="vclTabLabel">Demo</span>
           </div>
           <div class$="vclTab {{getCodeTabClass(codeVisible)}}" on-click="showCode" role="tab">
-            <span class="vclTabLabel vclIcon fa fa-code"></span>
+            <span class="vclTabLabel vclIcon fas fa-code"></span>
             <span class="vclTabLabel">Code</span>
           </div>
 

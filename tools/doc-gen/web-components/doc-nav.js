@@ -15,7 +15,7 @@ export default class DocNav extends PolymerElement {
         <nav class="docNav vclNavigation vclVertical vclLayoutVertical vclLayoutFlex">
             <div class="vclInputGroupEmb">
               <span class="vclPrepended">
-                  <div class="vclIcon fa fa-search"></div>
+                  <div class="vclIcon fas fa-search"></div>
               </span>
               <input
                   type="search"
@@ -30,7 +30,7 @@ export default class DocNav extends PolymerElement {
                   autofocus />
               <button on-click="clearSearch" class$="vclButton vclTransparent vclSquare vclAppended {{getDisplayNoneClearBtn(searchedText)}} ">
                   <div class="vclIcogram">
-                  <div class="vclIcon fa fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
+                  <div class="vclIcon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
                   </div>
               </button>
             </div>
@@ -40,7 +40,7 @@ export default class DocNav extends PolymerElement {
 
                 <li on-click="toggleCathegory" role="presentation" class="vclNavigationItem docNavHeading" >
                   <span style="font-weight: bold;"  class="vclNavigationItemLabel vclIcogram" href="#">
-                    <span class$="vclIcon fa {{getCathegoryClass(index,openedCathegories)}}" aria-hidden="true" aria-label="angle-right" role="img"></span>
+                    <span class$="vclIcon fas {{getCathegoryClass(index,openedCathegories)}}" aria-hidden="true" aria-label="angle-right" role="img"></span>
                     <span>[[category.title]]</span>
                   </span>
                 </li>

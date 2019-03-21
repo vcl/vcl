@@ -49,12 +49,12 @@ The search input is more complex and actually a mashup of multiple VCL component
 ```html
 <div class="vclInputGroupEmb">
   <span class="vclPrepended">
-    <div class="vclIcon fa fa-search"></div>
+    <div class="vclIcon fas fa-search"></div>
   </span>
   <input class="vclInput vclNoBorder vclPrepItem vclAppItem searchInput" placeholder="Search Posts" type="text">
   <button class="vclButton vclTransparent vclSquare vclAppended">
      <div class="vclIcogram">
-       <div class="vclIcon fa fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
+       <div class="vclIcon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
      </div>
   </button>
 </div>
