@@ -1,5 +1,7 @@
 @import "normalize.css"
 @import "@vcl/theme"
+@import "@vcl/icogram"
+@import "@vcl/icon"
 
 .vclButtonDim
   display: inline
@@ -40,12 +42,12 @@
   transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out
 
 .vclButton
-  > .vclIcogram
+  & > .vclIcogram
     font-size: var(--button-label-font-size)
     line-height: var(--button-line-height)
 
 a.vclButton
-  > .vclIcogram
+  & > .vclIcogram
     display: inline-block
 
 .vclButton.vclOverflowEllipsis > .vclIcogram > .vclText
