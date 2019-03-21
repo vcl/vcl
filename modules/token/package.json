@@ -29,7 +29,6 @@
     "@vcl/font-awesome": "^0.4.0-beta.1",
     "@vcl/icogram": "^0.4.0-beta.1",
     "@vcl/icon": "^0.4.0-beta.1",
-    "@vcl/input": "^0.4.0-beta.1",
     "@vcl/preprocessor": "^0.4.0-beta.1",
     "@vcl/typography": "^0.4.0-beta.1",
     "browser-sync": "^2.26.3",
