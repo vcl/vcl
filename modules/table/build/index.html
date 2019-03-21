@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Demo of: @vcl/table</title>
+    <link rel="stylesheet" href="build/index.css">
+  <script>
+  // Function to inline HTML imports recursively
+  function inlineHtmlImports(parentNode) {
+    var nl = parentNode.querySelectorAll('link[rel="import"]');
+    for (var i = 0; i < nl.length; ++i) {
+      var node = nl[i];
+      inlineHtmlImports(node.import)
+      var content = node.import.querySelectorAll('body > *');
+      // Hack to convert nodelist to real JS-array
+      content = Array.prototype.slice.call(content);
+      content.map(function(node) {
+        parentNode.body.appendChild(node.cloneNode(true));
+      });
+      if (i + 1 < nl.length) {
+        parentNode.body.appendChild(parentNode.createElement('br'));
+        parentNode.body.appendChild(parentNode.createElement('br'));
+      }
+    }
+  }
+  </script>
+</head>
+<body onload="inlineHtmlImports(document);">
+
+<link rel="import" href="demo/example.html">
+
+</body>
+</html>

@@ -1,0 +1,2818 @@
+/**/
+
+
+
+
+:root {
+  /* Colors
+     ====== */
+  /* Grays */
+  /* Brand Accent Colors */
+  /* Semantic Brand Colors */
+  /* Shadows, transparencies etc. */
+  /* Semantic Colors */
+  /* Fonts
+     ===== */
+}
+
+
+
+
+/**/
+
+
+
+
+:root {
+  /* Theme internally shared Variables
+     --------------------------------- */
+  /* App
+     --- */
+  /* App Content Area
+     ---------------- */
+  /* App Header
+     ---------- */
+  /* App Footer
+     ---------- */
+  /* Grid
+     ---- */
+  /* Flex Layout
+     ----------- */
+  /* Typography
+     ---------- */
+  /* Font settings */
+  /* Modular scale variants */
+  /* Colors */
+  /* List
+     ---- */
+  /* Value Unit Anagram
+     ------------------ */
+  /* Label
+     ---- */
+  /* Badge
+     ----- */
+  /* Table
+     ----- */
+  /* Table Extras
+     ------------ */
+  /* Sum Table
+     ---------- */
+  /* Data List
+     --------- */
+  /* Data Tree
+     --------- */
+  /* Calendar
+     ----------- */
+  /* Pagination
+     ---------- */
+  /* Tab Navigation
+     -------------- */
+  /* Breadcrumb Navigation
+     --------------------- */
+  /* Navigation
+     ----------- */
+  /* Process Navigation
+     ------------------ */
+  /* Tooltip
+     ------- */
+  /* Popover
+     ------- */
+  /* Layer
+     ----- */
+  /* Nag
+     --- */
+  /* Scrollbar
+     --------- */
+  /* Ribbon
+     ------- */
+  /* Loading Layer
+     ------------- */
+  /* Container
+     --------- */
+  /* Go-to-top
+     --------- */
+  /* Divider
+     ------- */
+  /* Panel
+     ----- */
+  /* Toolbar
+     -------- */
+  /* Notification
+     ------------ */
+  /* Progress Bar
+     ------------ */
+  /* Callout
+     ------- */
+  /* Article Structuring
+     ------------------- */
+  /* Button
+     ------ */
+  /* Default variant */
+  /* Emphasized variant */
+  /* Transparent variant */
+  /* Emphasized & transparent variant */
+  /* Half transparent alternative variant */
+  /* Transparent alternative variant */
+  /* Danger variant */
+  /* Suggestive variant */
+  /* Form Control Label
+     ------------------ */
+  /* Fieldset
+     -------- */
+  /* Input
+     ----- */
+  /* File Input
+     ---------- */
+  /* Checkbox
+     -------- */
+  /* Radio Button
+     ------------ */
+  /* Input Group
+     ----------- */
+  /* Embedded Input Group
+     -------------------- */
+  /* Slider
+     ------ */
+  /* Rating
+     ------ */
+  /* Token
+     ----- */
+  /* Flip Switch
+     ----------- */
+  /* Drop Down
+     --------- */
+  /* Date Picker
+     ----------- */
+  /* Time Picker
+     ----------- */
+  /* Responsive Image
+     ---------------- */
+  /* Image Shapes
+     ------------ */
+  /* Gallery
+     ------- */
+  /* Drawer
+     ------ */
+  /* E-Mail
+     ------ */
+  /* Product List
+     ------------ */
+}
+
+
+
+
+.vclButtonDim {
+  display: inline;
+  vertical-align: middle;
+  border-width: 0;
+  line-height: normal;
+  line-height: initial;
+  height: 2.65em;
+  font-weight: bolder;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+
+
+.vclButtonDim.vclSquare {
+  min-width: 2.65em;
+}
+
+
+
+
+.vclButton {
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 0;
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: normal;
+  line-height: initial;
+  text-decoration: none;
+  font-weight: bolder;
+  vertical-align: middle;
+  display: inline-block;
+  height: 2.65em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: normal;
+  cursor: pointer;
+  -webkit-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+  transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+}
+
+
+
+
+.vclButton:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+
+
+.vclButton[disabled] {
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 0;
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: normal;
+  line-height: initial;
+  text-decoration: none;
+  font-weight: bolder;
+  vertical-align: middle;
+  display: inline-block;
+  height: 2.65em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: normal;
+  cursor: pointer;
+  -webkit-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+  transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+}
+
+
+
+
+.vclButton[disabled]:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+
+
+.vclButton > .vclIcogram {
+  font-size: 0.96em;
+  line-height: normal;
+  line-height: initial;
+}
+
+
+
+
+a.vclButton > .vclIcogram {
+  display: inline-block;
+}
+
+
+
+
+.vclButton.vclOverflowEllipsis > .vclIcogram > .vclText {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+
+
+a.vclButton {
+  line-height: 2.65em;
+}
+
+
+
+
+a.vclButton[disabled] {
+  line-height: 2.65em;
+}
+
+
+
+
+a.vclButton > .vclIcogram {
+  color: #FFFFFF;
+  line-height: inherit;
+}
+
+
+
+
+a.vclButton[disabled] > .vclIcogram {
+  color: #FFFFFF;
+  line-height: inherit;
+}
+
+
+
+
+span.vclButton {
+  display: inline-block;
+  line-height: normal;
+  line-height: initial;
+}
+
+
+
+
+span.vclButton[disabled] {
+  display: inline-block;
+  line-height: normal;
+  line-height: initial;
+}
+
+
+
+
+.vclButton:focus {
+  outline: none;
+}
+
+
+
+
+.vclButton:active {
+  outline: none;
+}
+
+
+
+
+.vclButton.vclSquare {
+  min-width: 2.65em;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+}
+
+
+
+
+.vclButton.vclDisabled,
+.vclButton[disabled] {
+  pointer-events: none;
+  opacity: .75;
+  cursor: default;
+}
+
+
+
+
+/* Standard variant */
+
+
+
+
+.vclButton {
+  border-color: transparent;
+  background-color: rgb(127, 127, 127);
+  color: #FFFFFF;
+  text-transform: none;
+}
+
+
+
+
+.vclButton.vclSelected {
+  color: #FFFFFF;
+  background-color: #005F84;
+}
+
+
+
+
+.vclButton:active {
+  background-color: rgb(51, 51, 51);
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclPressed {
+  background-color: rgb(51, 51, 51);
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclActive {
+  background-color: rgb(51, 51, 51);
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclDisabled {
+  color: rgb(224, 224, 224);
+}
+
+
+
+
+.vclButton[disabled] {
+  color: rgb(224, 224, 224);
+}
+
+
+
+
+/* Emphasized variant */
+
+
+
+
+.vclButton.vclEmphasized {
+  border-color: transparent;
+  background-color: #00ADEF;
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclEmphasized:active {
+  background-color: #0888BF;
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclEmphasized.vclPressed {
+  background-color: #0888BF;
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclEmphasized.vclActive {
+  background-color: #0888BF;
+  color: #FFFFFF;
+}
+
+
+
+
+/* Emphasized & transparent variant */
+
+
+
+
+.vclButton.vclEmphasizedTransparent {
+  color: #00ADEF;
+  background: none;
+}
+
+
+
+
+.vclButton.vclEmphasizedTransparent.vclDisabled {
+  color: rgb(224, 224, 224);
+}
+
+
+
+
+.vclButton.vclEmphasizedTransparent[disabled] {
+  color: rgb(224, 224, 224);
+}
+
+
+
+
+.vclButton.vclEmphasizedTransparent:active {
+  background: none;
+  color: #005F84;
+}
+
+
+
+
+.vclButton.vclEmphasizedTransparent.vclPressed {
+  background: none;
+  color: #005F84;
+}
+
+
+
+
+.vclButton.vclEmphasizedTransparent.vclActive {
+  background: none;
+  color: #005F84;
+}
+
+
+
+
+/* Transparent variant */
+
+
+
+
+.vclButton.vclTransparent {
+  color: rgb(115, 115, 115);
+  background: none;
+}
+
+
+
+
+.vclButton.vclTransparent.vclDisabled {
+  color: rgb(161, 161, 161);
+}
+
+
+
+
+.vclButton.vclTransparent[disabled] {
+  color: rgb(161, 161, 161);
+}
+
+
+
+
+.vclButton.vclTransparent:active {
+  background: none;
+  color: #000000;
+}
+
+
+
+
+.vclButton.vclTransparent.vclPressed {
+  background: none;
+  color: #000000;
+}
+
+
+
+
+.vclButton.vclTransparent.vclActive {
+  background: none;
+  color: #000000;
+}
+
+
+
+
+/* Transparent alternative variant */
+
+
+
+
+.vclButton.vclTransparentAlt {
+  background: none;
+  background-color: transparent;
+  color: rgb(224, 224, 224);
+}
+
+
+
+
+.vclButton.vclTransparentAlt.vclDisabled {
+  color: rgb(161, 161, 161);
+}
+
+
+
+
+.vclButton.vclTransparentAlt[disabled] {
+  color: rgb(161, 161, 161);
+}
+
+
+
+
+.vclButton.vclTransparentAlt:active {
+  background: none;
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclTransparentAlt.vclPressed {
+  background: none;
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclTransparentAlt.vclActive {
+  background: none;
+  color: #FFFFFF;
+}
+
+
+
+
+/* Half transparent variant */
+
+
+
+
+.vclButton.vclHalfTransparent {
+  background: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+
+
+
+.vclButton.vclHalfTransparent.vclDisabled {
+  color: rgb(161, 161, 161);
+}
+
+
+
+
+.vclButton.vclHalfTransparent[disabled] {
+  color: rgb(161, 161, 161);
+}
+
+
+
+
+.vclButton.vclHalfTransparent:active {
+  background-color: rgb(235, 235, 235);
+  color: inherit;
+}
+
+
+
+
+.vclButton.vclHalfTransparent.vclPressed {
+  background-color: rgb(235, 235, 235);
+  color: inherit;
+}
+
+
+
+
+.vclButton.vclHalfTransparent.vclActive {
+  background-color: rgb(235, 235, 235);
+  color: inherit;
+}
+
+
+
+
+/* Danger variant */
+
+
+
+
+.vclButton.vclDanger {
+  color: #FFFFFF;
+  background-color: #d9534f;
+}
+
+
+
+
+.vclButton.vclDanger:active {
+  color: #FFFFFF;
+  background-color: rgb(138, 34, 30);
+}
+
+
+
+
+.vclButton.vclDanger.vclPressed {
+  color: #FFFFFF;
+  background-color: rgb(138, 34, 30);
+}
+
+
+
+
+.vclButton.vclDanger.vclActive {
+  color: #FFFFFF;
+  background-color: rgb(138, 34, 30);
+}
+
+
+
+
+.vclButton.vclDanger.vclDisabled {
+  color: rgb(161, 161, 161);
+}
+
+
+
+
+.vclButton.vclDanger[disabled] {
+  color: rgb(161, 161, 161);
+}
+
+
+
+
+/* Suggestive variant */
+
+
+
+
+.vclButton.vclSuggestive {
+  color: #FFFFFF;
+  background-color: #5cb85c;
+}
+
+
+
+
+.vclButton.vclSuggestive:active {
+  color: #FFFFFF;
+  background-color: rgb(45, 103, 45);
+}
+
+
+
+
+.vclButton.vclSuggestive.vclPressed {
+  color: #FFFFFF;
+  background-color: rgb(45, 103, 45);
+}
+
+
+
+
+.vclButton.vclSuggestive.vclActive {
+  color: #FFFFFF;
+  background-color: rgb(45, 103, 45);
+}
+
+
+
+
+.vclButton.vclSuggestive.vclDisabled {
+  color: rgb(224, 224, 224);
+}
+
+
+
+
+.vclButton.vclSuggestive[disabled] {
+  color: rgb(224, 224, 224);
+}
+
+
+
+
+/* Outline modifier */
+
+
+
+
+.vclOutline {
+  border-color: rgb(127, 127, 127);
+  border-width: 2px;
+}
+
+
+
+
+/* Circular modifier */
+
+
+
+
+.vclCircular {
+  border-radius: 50%;
+}
+
+
+
+
+/* Hover support */
+
+
+
+
+@media (hover: hover) {
+  .vclButton:hover {
+    background-color: rgb(51, 51, 51);
+    color: #FFFFFF;
+  }
+  .vclButton:focus {
+    background-color: rgb(51, 51, 51);
+    color: #FFFFFF;
+  }
+  .vclButton.vclHover {
+    background-color: rgb(51, 51, 51);
+    color: #FFFFFF;
+  }
+  .vclButton.vclFocused {
+    background-color: rgb(51, 51, 51);
+    color: #FFFFFF;
+  }
+  .vclButton.vclEmphasized:hover {
+    background-color: #0888BF;
+    color: #FFFFFF;
+  }
+  .vclButton.vclEmphasized:focus {
+    background-color: #0888BF;
+    color: #FFFFFF;
+  }
+  .vclButton.vclEmphasized.vclHover {
+    background-color: #0888BF;
+    color: #FFFFFF;
+  }
+  .vclButton.vclEmphasized.vclFocused {
+    background-color: #0888BF;
+    color: #FFFFFF;
+  }
+  .vclButton.vclEmphasizedTransparent:hover {
+    background: none;
+    color: #005F84;
+  }
+  .vclButton.vclEmphasizedTransparent:focus {
+    background: none;
+    color: #005F84;
+  }
+  .vclButton.vclEmphasizedTransparent.vclHover {
+    background: none;
+    color: #005F84;
+  }
+  .vclButton.vclEmphasizedTransparent.vclFocused {
+    background: none;
+    color: #005F84;
+  }
+  .vclButton.vclTransparent:hover {
+    background: none;
+    color: #000000;
+  }
+  .vclButton.vclTransparent:focus {
+    background: none;
+    color: #000000;
+  }
+  .vclButton.vclTransparent.vclHover {
+    background: none;
+    color: #000000;
+  }
+  .vclButton.vclTransparent.vclFocused {
+    background: none;
+    color: #000000;
+  }
+  .vclButton.vclTransparentAlt:hover {
+    background: none;
+    color: #FFFFFF;
+  }
+  .vclButton.vclTransparentAlt:focus {
+    background: none;
+    color: #FFFFFF;
+  }
+  .vclButton.vclTransparentAlt.vclHover {
+    background: none;
+    color: #FFFFFF;
+  }
+  .vclButton.vclTransparentAlt.vclFocused {
+    background: none;
+    color: #FFFFFF;
+  }
+  .vclButton.vclHalfTransparent:hover {
+    background-color: rgb(235, 235, 235);
+    color: inherit;
+  }
+  .vclButton.vclHalfTransparent:focus {
+    background-color: rgb(235, 235, 235);
+    color: inherit;
+  }
+  .vclButton.vclHalfTransparent.vclHover {
+    background-color: rgb(235, 235, 235);
+    color: inherit;
+  }
+  .vclButton.vclHalfTransparent.vclFocused {
+    background-color: rgb(235, 235, 235);
+    color: inherit;
+  }
+  .vclButton.vclDanger:hover {
+    color: #FFFFFF;
+    background-color: rgb(138, 34, 30);
+  }
+  .vclButton.vclDanger:focus {
+    color: #FFFFFF;
+    background-color: rgb(138, 34, 30);
+  }
+  .vclButton.vclDanger.vclHover {
+    color: #FFFFFF;
+    background-color: rgb(138, 34, 30);
+  }
+  .vclButton.vclDanger.vclFocused {
+    color: #FFFFFF;
+    background-color: rgb(138, 34, 30);
+  }
+  .vclButton.vclSuggestive:hover {
+    color: #FFFFFF;
+    background-color: rgb(45, 103, 45);
+  }
+  .vclButton.vclSuggestive:focus {
+    color: #FFFFFF;
+    background-color: rgb(45, 103, 45);
+  }
+  .vclButton.vclSuggestive.vclHover {
+    color: #FFFFFF;
+    background-color: rgb(45, 103, 45);
+  }
+  .vclButton.vclSuggestive.vclFocused {
+    color: #FFFFFF;
+    background-color: rgb(45, 103, 45);
+  }
+}
+
+
+
+
+.vclIcogram {
+  white-space: nowrap;
+  position: relative;
+}
+
+
+
+
+.vclIcogram> * {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.25em 0 0;
+}
+
+
+
+
+.vclIcogram> *:first-child {
+  margin-left: 0;
+}
+
+
+
+
+.vclIcogram> *:last-child {
+  margin-right: 0;
+}
+
+
+
+
+.vclIcogram> *:only-child {
+  margin: 0;
+}
+
+
+
+
+.vclIcogram .vclText {
+  vertical-align: middle;
+}
+
+
+
+
+.vclIcogram a.vclText {
+  color: inherit;
+}
+
+
+
+
+.vclIcogram.vclLayoutVertical> * {
+  margin: 0;
+}
+
+
+
+
+.vclIcon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  fill: currentcolor;
+  position: relative;
+  line-height: 1;
+}
+
+
+
+
+.vclIcon.vclIconSize1 {
+  width: 1.6em;
+  height: 1.6em;
+}
+
+
+
+
+.vclIcon.vclIconSize2 {
+  width: 2.37em;
+  height: 2.37em;
+}
+
+
+
+
+.vclIcon.vclIconSize3 {
+  width: 3.17em;
+  height: 3.17em;
+}
+
+
+
+
+.vclLooseButtonGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+
+
+
+.vclLooseButtonGroup button:first-of-type,
+.vclLooseButtonGroup .vclButton:first-of-type {
+  margin-left: 0;
+}
+
+
+
+
+.vclLooseButtonGroup button:last-of-type,
+.vclLooseButtonGroup .vclButton:last-of-type {
+  margin-right: 0;
+}
+
+
+
+
+.vclLooseButtonGroup button,
+.vclLooseButtonGroup .vclButton {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+
+
+
+/* flexbox based layout primitives */
+
+
+
+
+.vclLayoutHorizontal,
+.vclLayoutVertical,
+[layout][horizontal],
+[layout][vertical] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+
+
+
+.vclLayoutHorizontal.vclLayoutInline,
+.vclLayoutVertical.vclLayoutInline,
+[layout][horizontal][inline],
+[layout][vertical][inline] {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+
+
+
+.vclLayoutHorizontal,
+[layout][horizontal] {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+
+
+
+.vclLayoutHorizontal.vclLayoutReverse,
+[layout][horizontal][reverse] {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+
+
+
+.vclLayoutVertical,
+[layout][vertical] {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+
+
+
+.vclLayoutVertical.vclLayoutReverse,
+[layout][vertical][reverse] {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+
+
+
+.vclLayoutWrap,
+[layout][wrap] {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+
+
+
+.vclLayoutWrapReverse,
+[layout][wrap-reverse] {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+
+
+
+.vclLayoutFlex,
+[flex] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-preferred-size: 0.000000001px;
+      flex-basis: 0.000000001px;
+}
+
+
+
+
+.vclLayoutVertical > vclLayoutFlex.vclLayoutAutoVertical,
+[vertical][layout] > [flex][auto-vertical] {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+}
+
+
+
+
+.vclLayoutFlex.vclLayoutAuto,
+[flex][auto] {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+}
+
+
+
+
+.vclLayoutFlex.vclLayoutNone,
+[flex][none] {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
+
+
+
+.vclLayoutFlex.vclLayout1,
+[flex][one] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+
+
+
+.vclLayoutFlex.vclLayout2,
+[flex][two] {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+
+
+
+.vclLayoutFlex.vclLayout3,
+[flex][three] {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+
+
+
+.vclLayoutFlex.vclLayout4,
+[flex][four] {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+
+
+
+.vclLayoutFlex.vclLayout5,
+[flex][five] {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+
+
+
+.vclLayoutFlex.vclLayout6,
+[flex][six] {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+
+
+
+
+.vclLayoutFlex.vclLayout7,
+[flex][seven] {
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+}
+
+
+
+
+.vclLayoutFlex.vclLayout8,
+[flex][eight] {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+}
+
+
+
+
+.vclLayoutFlex.vclLayout9,
+[flex][nine] {
+  -webkit-box-flex: 9;
+      -ms-flex: 9;
+          flex: 9;
+}
+
+
+
+
+.vclLayoutFlex.vclLayout10,
+[flex][ten] {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+}
+
+
+
+
+.vclLayoutFlex.vclLayout11,
+[flex][eleven] {
+  -webkit-box-flex: 11;
+      -ms-flex: 11;
+          flex: 11;
+}
+
+
+
+
+.vclLayoutFlex.vclLayout12,
+[flex][twelve] {
+  -webkit-box-flex: 12;
+      -ms-flex: 12;
+          flex: 12;
+}
+
+
+
+
+/* alignment in cross axis */
+
+
+
+
+.vclLayoutStart,
+[layout][start] {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+
+
+
+.vclLayoutCenter,
+.vclLayoutCenterCenter,
+[layout][center],
+[layout][center-center] {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+
+
+
+.vclLayoutEnd,
+[layout][end] {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+
+
+
+/* alignment in main axis */
+
+
+
+
+.vclLayoutStartJustified,
+[layout][start-justified] {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+
+
+
+.vclLayoutCenterJustified,
+.vclLayoutCenterCenter,
+[layout][center-justified],
+[layout][center-center] {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
+
+
+.vclLayoutEndJustified,
+[layout][end-justified] {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+
+
+
+.vclLayoutAroundJustified,
+[layout][around-justified] {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+
+
+
+.vclLayoutEvenlyJustified,
+[layout][evenly-justified] {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+
+
+
+.vclLayoutJustified,
+[layout][justified] {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+
+
+
+/* self alignment */
+
+
+
+
+.vclLayoutSelfStart,
+[self-start] {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+
+
+
+.vclLayoutSelfCenter,
+[self-center] {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+
+
+
+.vclLayoutSelfEnd,
+[self-end] {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+
+
+
+.vclLayoutSelfStretch,
+[self-stretch] {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+
+
+
+/* flexbox based layout grid */
+
+
+
+
+.vclLayoutWrapContainer {
+  overflow: hidden;
+}
+
+
+
+
+.vclLayoutGridRow {
+  width: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+
+
+.vclLayoutGridRow .vclLayoutGridRow {
+  margin-left: -8px;
+  margin-left: -0.5rem;
+  margin-right: -8px;
+  margin-right: -0.5rem;
+}
+
+
+
+
+.vclLayoutGridRow > .vclLayoutGridCell:last-child {
+  padding-right: 0;
+}
+
+
+
+
+.vclLayoutGridRow > .vclLayoutGridCell:first-child {
+  padding-left: 0;
+}
+
+
+
+
+.vclLayoutGridRow > .vclLayoutGridCell {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 8px;
+  padding-left: 0.5rem;
+  padding-right: 8px;
+  padding-right: 0.5rem;
+}
+
+
+
+
+.vclLayoutGridRow.vclLayoutWrappingRow > .vclLayoutGridCell:last-child {
+  padding-right: 8px;
+  padding-right: 0.5rem;
+}
+
+
+
+
+.vclLayoutGridRow.vclLayoutWrappingRow > .vclLayoutGridCell:first-child {
+  padding-left: 8px;
+  padding-left: 0.5rem;
+}
+
+
+
+
+.vclLayoutGridRow.vclLayoutWrappingRow {
+  margin-left: -8px;
+  margin-left: -0.5rem;
+  width: calc(100% + 1rem);
+}
+
+
+
+
+/* other layout helpers */
+
+
+
+
+.vclLayoutBlock,
+[block] {
+  display: block;
+}
+
+
+
+
+/* other helpful properties */
+
+
+
+
+.vclLayoutInvisible {
+  visibility: hidden !important;
+}
+
+
+
+
+.vclLayoutHidden {
+  display: none !important;
+}
+
+
+
+
+.vclLayoutRelative {
+  position: relative;
+}
+
+
+
+
+.vclLayoutFit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+
+/* fixed positioning */
+
+
+
+
+.vclLayoutFixedBottom,
+.vclLayoutFixedLeft,
+.vclLayoutFixedRight,
+.vclLayoutFixedTop {
+  position: fixed;
+}
+
+
+
+
+.vclLayoutFixedTop {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+
+.vclLayoutFixedRight {
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+
+
+.vclLayoutFixedBottom {
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+
+.vclLayoutFixedLeft {
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+
+.vclLayoutFullBleed {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+
+.vclPanel {
+  background-color: transparent;
+  margin-bottom: 1.3em;
+  overflow: overlay;
+}
+
+
+
+
+.vclPanel.vclPanelCard {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(127, 127, 127);
+  border-radius: 0.55em;
+}
+
+
+
+
+.vclPanel.vclPanelDialog.vclDanger {
+  color: #d9534f;
+}
+
+
+
+
+.vclPanel.vclPanelDialog> .vclPanelHeader.vclNoBg {
+  background-color: transparent;
+}
+
+
+
+
+.vclPanel.vclPanelDialog> .vclPanelHeader {
+  padding-top: 11.2px;
+  padding-top: 0.7rem;
+  padding-bottom: 11.2px;
+  padding-bottom: 0.7rem;
+  border-bottom-width: 0;
+  background-color: rgb(242, 242, 242);
+}
+
+
+
+
+.vclPanel.vclPanelDialog> .vclPanelBody {
+  border-width: 0;
+}
+
+
+
+
+.vclPanel.vclPanelDialog> .vclPanelFooter.vclNoBg {
+  background-color: transparent;
+}
+
+
+
+
+.vclPanel.vclPanelDialog> .vclPanelFooter {
+  padding-top: 11.2px;
+  padding-top: 0.7rem;
+  padding-bottom: 11.2px;
+  padding-bottom: 0.7rem;
+  border-top-width: 0;
+  background-color: rgb(242, 242, 242);
+}
+
+
+
+
+.vclPanel.vclPanelDialog {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(242, 242, 242);
+}
+
+
+
+
+.vclPanelHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: rgb(51, 51, 51);
+  background-color: transparent;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  border-color: rgb(127, 127, 127);
+}
+
+
+
+
+.vclPanelFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: rgb(51, 51, 51);
+  background-color: transparent;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  border-color: rgb(127, 127, 127);
+}
+
+
+
+
+.vclPanelHeader > *,
+.vclPanelFooter > * {
+  margin-left: 12.8px;
+  margin-left: 0.8rem;
+}
+
+
+
+
+.vclPanelHeader> :last-child,
+.vclPanelFooter> :last-child {
+  margin-right: 12.8px;
+  margin-right: 0.8rem;
+}
+
+
+
+
+.vclPanelHeader > .vclPanelContent,
+.vclPanelFooter > .vclPanelContent {
+  margin: 0;
+}
+
+
+
+
+.vclPanelFooter {
+  border-width: 0;
+  color: rgb(51, 51, 51);
+  background-color: transparent;
+}
+
+
+
+
+.vclPanelTitle {
+  font-weight: bold;
+  line-height: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.96em;
+  color: inherit;
+}
+
+
+
+
+.vclPanelHeading {
+  font-weight: bold;
+  line-height: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.96em;
+  color: inherit;
+}
+
+
+
+
+.vclPanelTitle {
+  font-size: 1.08em;
+}
+
+
+
+
+.vclPanelBody {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(127, 127, 127);
+}
+
+
+
+
+.vclPanelBody > *:first-child {
+  margin-top: 0;
+}
+
+
+
+
+.vclPanelBody > *:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+.vclPanelContent {
+  padding: 12.8px 12.8px;
+  padding: 0.8rem 0.8rem;
+  margin-bottom: 0;
+}
+
+
+
+
+body {
+  font-size: 0.875em;
+  line-height: 1.428;
+  color: rgb(51, 51, 51);
+  font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+
+
+
+.vclViewport {
+  font-size: 0.875em;
+  line-height: 1.428;
+  color: rgb(51, 51, 51);
+  font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+
+
+
+abbr.vclInitialism {
+  font-size: 93%;
+  text-transform: uppercase;
+}
+
+
+
+
+mark {
+  background: #ffff00;
+  color: #000000;
+}
+
+
+
+
+/* Define quote characters for q element */
+
+
+
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+
+
+
+blockquote {
+  margin-top: 0;
+  margin-bottom: 1.3em;
+  margin-left: 1.8em;
+  margin-right: 1.8em;
+  padding-left: 1em;
+  border-left-width: 0.3em;
+  border-left-style: solid;
+  border-left-color: rgb(224, 224, 224);
+}
+
+
+
+
+address {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1.3em;
+  font-style: normal;
+}
+
+
+
+
+pre {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 93%;
+}
+
+
+
+
+code {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 93%;
+}
+
+
+
+
+kbd {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 93%;
+}
+
+
+
+
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 93%;
+}
+
+
+
+
+kbd {
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+  border-radius: 0.85em;
+  color: #FFF;
+  background-color: #333;
+  -webkit-box-shadow: 0px -1px 0px rgba(0, 0, 0, .25) inset;
+          box-shadow: 0px -1px 0px rgba(0, 0, 0, .25) inset;
+}
+
+
+
+
+/* Pre-formatted text. */
+
+
+
+
+pre {
+  margin-bottom: 1.1em;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+
+
+
+pre.vclCode > code {
+  padding: 0;
+  white-space: pre;
+}
+
+
+
+
+pre.vclCode {
+  border: 1px solid rgb(224, 224, 224);
+  line-height: 1.2em;
+  padding: 0.7em;
+  overflow: auto;
+  border-radius: 0;
+  background-clip: padding-box;
+  background-color: rgb(235, 235, 235);
+}
+
+
+
+
+code {
+  padding: 0.15em 0.25em;
+  white-space: nowrap;
+  background-color: rgb(235, 235, 235);
+}
+
+
+
+
+.vclCodeWrap {
+  white-space: pre-wrap;
+}
+
+
+
+
+h1 {
+  color: rgb(51, 51, 51);
+  font-family: inherit;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.428;
+}
+
+
+
+
+h2 {
+  color: rgb(51, 51, 51);
+  font-family: inherit;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.428;
+}
+
+
+
+
+h3 {
+  color: rgb(51, 51, 51);
+  font-family: inherit;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.428;
+}
+
+
+
+
+h4 {
+  color: rgb(51, 51, 51);
+  font-family: inherit;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.428;
+}
+
+
+
+
+h5 {
+  color: rgb(51, 51, 51);
+  font-family: inherit;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.428;
+}
+
+
+
+
+h6 {
+  color: rgb(51, 51, 51);
+  font-family: inherit;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.428;
+}
+
+
+
+
+h1 {
+  font-size: 2.08em;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+
+
+
+h2 {
+  font-size: 1.7em;
+  margin-top: 0.65em;
+  margin-bottom: 0.3em;
+}
+
+
+
+
+h3 {
+  font-size: 1.27em;
+  margin-top: 0.75em;
+  margin-bottom: 0.4em;
+}
+
+
+
+
+h4 {
+  font-size: 1.1em;
+  margin-top: 0.85em;
+  margin-bottom: 0.4em;
+}
+
+
+
+
+h5 {
+  font-size: 0.95em;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+
+
+
+
+h6 {
+  font-size: 0.82em;
+  margin-top: 1.1em;
+  margin-bottom: 0.5em;
+}
+
+
+
+
+p {
+  margin-top: 0em;
+  margin-bottom: 1.3em;
+}
+
+
+
+
+/* Anchors */
+
+
+
+
+a {
+  text-decoration: none;
+  color: #00ADEF;
+}
+
+
+
+
+a:visited {
+  text-decoration: none;
+  color: #00ADEF;
+}
+
+
+
+
+a:active {
+  text-decoration: none;
+  color: #00ADEF;
+}
+
+
+
+
+a:hover {
+  text-decoration: none;
+  color: #00ADEF;
+}
+
+
+
+
+a:hover {
+  color: #005F84;
+}
+
+
+
+
+a.vclDisabled {
+  cursor: default;
+}
+
+
+
+
+a.vclContentLink > .vclIcogram > *:first-child {
+  margin-left: 0.1em;
+}
+
+
+
+
+a.vclContentLink > .vclIcogram > * {
+  margin: 0 0.1em 0 0;
+}
+
+
+
+
+a.vclContentLink > .vclIcogram > *:last-child {
+  margin-right: 0.1em;
+}
+
+
+
+
+a.vclContentLink > .vclIcogram .vclText {
+  text-decoration: none;
+}
+
+
+
+
+a.vclContentLink > .vclIcogram .vclIcon {
+  text-decoration: none;
+}
+
+
+
+
+a.vclContentLink > .vclIcogram {
+  display: inline;
+}
+
+
+
+
+a.vclContentLink {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+  vertical-align: text-bottom;
+}
+
+
+
+
+.vclDisabled {
+  color: rgb(127, 127, 127);
+}
+
+
+
+
+a.vclDisabled {
+  color: rgb(127, 127, 127);
+}
+
+
+
+
+.vclSecondaryTextColor {
+  color: rgb(127, 127, 127);
+}
+
+
+
+
+/* Prevents sub and sup affecting line-height */
+
+
+
+
+sub,
+sup {
+  font-size: 80%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+
+
+
+sup {
+  top: -0.5em;
+}
+
+
+
+
+sub {
+  bottom: -0.25em;
+}
+
+
+
+
+/* Text selection coloring */
+
+
+
+
+*::-moz-selection {
+  background: #000000;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+
+
+
+*::selection {
+  background: #000000;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+
+
+
+*::-ms-selection {
+  background: #000000;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+
+
+
+*::-moz-selection {
+  background: #000000;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+
+
+
+/* Size modulation utils for text and block elements */
+
+
+
+
+.vclScale75p {
+  font-size: 0.75em;
+}
+
+
+
+
+.vclScale85p {
+  font-size: 0.85em;
+}
+
+
+
+
+.vclScale110p {
+  font-size: 1.10em;
+}
+
+
+
+
+.vclScale115p {
+  font-size: 1.15em;
+}
+
+
+
+
+.vclScale120p {
+  font-size: 1.20em;
+}
+
+
+
+
+.vclScale130p {
+  font-size: 1.3em;
+}
+
+
+
+
+.vclScale155p {
+  font-size: 1.55em;
+}
+
+
+
+
+.vclScale180p {
+  font-size: 1.8em;
+}
+
+
+
+
+.vclScale250p {
+  font-size: 2.5em;
+}
+
+
+
+
+.vclScale300p {
+  font-size: 3em;
+}
+
+
+
+
+/* Float helpers */
+
+
+
+
+.vclFloatLeft {
+  float: left;
+}
+
+
+
+
+.vclFloatRight {
+  float: right;
+}
+
+
+
+
+.vclFloatNone {
+  float: none;
+}
+
+
+
+
+/* Clearing helpers */
+
+
+
+
+.vclClearFix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+
+
+.vclClear {
+  clear: both;
+  float: none;
+}
+
+
+
+
+/* Block element alignment */
+
+
+
+
+.vclCenterBlock {
+  display: table;
+  margin: 0 auto;
+}
+
+
+
+
+/* Borders */
+
+
+
+
+.vclNoBorder {
+  border: 0 !important;
+}
+
+
+
+
+/* Padding */
+
+
+
+
+.vclNoPadding {
+  padding: 0 !important;
+}
+
+
+
+
+/* Margins */
+
+
+
+
+.vclNoMargin {
+  margin: 0 !important;
+}
+
+
+
+
+/* Inline element alignment */
+
+
+
+
+.vclAlignLeft {
+  text-align: left;
+}
+
+
+
+
+.vclAlignRight {
+  text-align: right;
+}
+
+
+
+
+.vclAlignCentered {
+  text-align: center;
+}
+
+
+
+
+.vclAlignJustified {
+  text-align: justify;
+}
+
+
+
+
+/* Overflowing text */
+
+
+
+
+.vclOverflowEllipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+
+
+/* Text and word wrapping */
+
+
+
+
+.vclBreakWords {
+  word-wrap: break-word;
+}
+
+
+
+
+.vclNoWrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+
+
+/* Visibility */
+
+
+
+
+.vclOverflowHidden {
+  overflow: hidden;
+}
+
+
+
+
+.vclDisplayNone {
+  display: none !important;
+}
+
+
+
+
+.vclVisibilityHidden {
+  visibility: hidden !important;
+}
+
+
+
+
+/* Scrollable containers */
+
+
+
+
+.vclScrollable {
+  -webkit-transform: translateZ(0);
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+
+
+
+.vclScrollable.vclX {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+
+
+
+.vclScrollable.vclXOnHover {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+
+
+.vclScrollable.vclXOnHover:hover {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+
+
+
+.vclScrollable.vclY {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+
+
+.vclScrollable.vclYOnHover {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+
+
+.vclScrollable.vclYOnHover:hover {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+
+
+/* Utility to enable disable selection of text */
+
+
+
+
+.vclDisableUserSelect {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+
+
+
+.vclEnableUserSelect {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+
+
+
+.vclLayerCover {
+  position: fixed;
+  z-index: 300;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+
+
+
+.vclLayer {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 401;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
+
+
+.vclLayer.vclTransparent .vclLayerBox {
+  background-color: transparent;
+}
+
+
+
+
+.vclLayer.vclLayerStickToBottom .vclLayerBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+
+
+
+.vclLayer.vclLayerFill .vclLayerBox {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  max-width: none;
+}
+
+
+
+
+.vclLayerBox {
+  max-height: 100%;
+  overflow-y: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  min-width: 25em;
+  max-width: 50em;
+  color: rgb(51, 51, 51);
+  background-color: #FFFFFF;
+}
+
+
+
+
+.vclLayerBox.vclLayerGutterPadding {
+  padding: 8px;
+  padding: 0.5rem;
+}
+
+
+
+
+@media (max-width: 390px) {
+  .vclLayer .vclLayerBox {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+}

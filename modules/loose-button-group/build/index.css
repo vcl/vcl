@@ -1,0 +1,1467 @@
+/**/
+
+
+
+
+:root {
+  /* Colors
+     ====== */
+  /* Grays */
+  /* Brand Accent Colors */
+  /* Semantic Brand Colors */
+  /* Shadows, transparencies etc. */
+  /* Semantic Colors */
+  /* Fonts
+     ===== */
+}
+
+
+
+
+/**/
+
+
+
+
+:root {
+  /* Theme internally shared Variables
+     --------------------------------- */
+  /* App
+     --- */
+  /* App Content Area
+     ---------------- */
+  /* App Header
+     ---------- */
+  /* App Footer
+     ---------- */
+  /* Grid
+     ---- */
+  /* Flex Layout
+     ----------- */
+  /* Typography
+     ---------- */
+  /* Font settings */
+  /* Modular scale variants */
+  /* Colors */
+  /* List
+     ---- */
+  /* Label
+     ---- */
+  /* Badge
+     ----- */
+  /* Table
+     ----- */
+  /* Table Extras
+     ------------ */
+  /* Sum Table
+     ---------- */
+  /* Data List
+     --------- */
+  /* Data Tree
+     --------- */
+  /* Calendar
+     ----------- */
+  /* Pagination
+     ---------- */
+  /* Tab Navigation
+     -------------- */
+  /* Breadcrumb Navigation
+     --------------------- */
+  /* Navigation
+     ----------- */
+  /* Process Navigation
+     ------------------ */
+  /* Tooltip
+     ------- */
+  /* Popover
+     ------- */
+  /* Layer
+     ----- */
+  /* Nag
+     --- */
+  /* Scrollbar
+     --------- */
+  /* Ribbon
+     ------- */
+  /* Loading Layer
+     ------------- */
+  /* Container
+     --------- */
+  /* Go-to-top
+     --------- */
+  /* Divider
+     ------- */
+  /* Panel
+     ----- */
+  /* Toolbar
+     -------- */
+  /* Notification
+     ------------ */
+  /* Progress Bar
+     ------------ */
+  /* Callout
+     ------- */
+  /* Article Structuring
+     ------------------- */
+  /* Button
+     ------ */
+  /* Default variant */
+  /* Emphasized variant */
+  /* Transparent variant */
+  /* Emphasized & transparent variant */
+  /* Half transparent alternative variant */
+  /* Transparent alternative variant */
+  /* Danger variant */
+  /* Suggestive variant */
+  /* Form Control Label
+     ------------------ */
+  /* Fieldset
+     -------- */
+  /* Input
+     ----- */
+  /* File Input
+     ---------- */
+  /* Checkbox
+     -------- */
+  /* Radio Button
+     ------------ */
+  /* Input Group
+     ----------- */
+  /* Embedded Input Group
+     -------------------- */
+  /* Slider
+     ------ */
+  /* Rating
+     ------ */
+  /* Token
+     ----- */
+  /* Flip Switch
+     ----------- */
+  /* Drop Down
+     --------- */
+  /* Date Picker
+     ----------- */
+  /* Time Picker
+     ----------- */
+  /* Responsive Image
+     ---------------- */
+  /* Image Shapes
+     ------------ */
+  /* Gallery
+     ------- */
+  /* Drawer
+     ------ */
+  /* E-Mail
+     ------ */
+  /* Product List
+     ------------ */
+}
+
+
+
+
+.vclButtonDim {
+  display: inline;
+  vertical-align: middle;
+  border-width: 0;
+  line-height: normal;
+  line-height: initial;
+  height: 2.5em;
+  font-weight: bolder;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+
+
+.vclButtonDim.vclSquare {
+  min-width: 2.5em;
+}
+
+
+
+
+.vclButton {
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 0;
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: normal;
+  line-height: initial;
+  text-decoration: none;
+  font-weight: bolder;
+  vertical-align: middle;
+  display: inline-block;
+  height: 2.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: normal;
+  cursor: pointer;
+  -webkit-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+  transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+}
+
+
+
+
+.vclButton:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+
+
+.vclButton[disabled] {
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 0;
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: normal;
+  line-height: initial;
+  text-decoration: none;
+  font-weight: bolder;
+  vertical-align: middle;
+  display: inline-block;
+  height: 2.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: normal;
+  cursor: pointer;
+  -webkit-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+  transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+}
+
+
+
+
+.vclButton[disabled]:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+
+
+.vclButton > span {
+  font-size: 0.96em;
+  line-height: normal;
+  line-height: initial;
+}
+
+
+
+
+.vclButton > .vclIcogram {
+  font-size: 0.96em;
+  line-height: normal;
+  line-height: initial;
+}
+
+
+
+
+a.vclButton > .vclIcogram {
+  display: inline-block;
+}
+
+
+
+
+.vclButton.vclOverflowEllipsis > .vclIcogram > .vclText {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+
+
+a.vclButton {
+  line-height: 2.5em;
+}
+
+
+
+
+a.vclButton[disabled] {
+  line-height: 2.5em;
+}
+
+
+
+
+a.vclButton > span,
+a.vclButton[disabled] > span {
+  line-height: inherit;
+}
+
+
+
+
+span.vclButton {
+  display: inline-block;
+  line-height: normal;
+  line-height: initial;
+}
+
+
+
+
+span.vclButton[disabled] {
+  display: inline-block;
+  line-height: normal;
+  line-height: initial;
+}
+
+
+
+
+.vclButton:focus {
+  outline: none;
+}
+
+
+
+
+.vclButton:active {
+  outline: none;
+}
+
+
+
+
+.vclButton.vclSquare {
+  min-width: 2.5em;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+}
+
+
+
+
+.vclButton.vclDisabled,
+.vclButton[disabled] {
+  pointer-events: none;
+  opacity: .75;
+  cursor: default;
+}
+
+
+
+
+/* Standard variant */
+
+
+
+
+.vclButton {
+  border-color: transparent;
+  background-color: hsl(0, 0%, 50%);
+  color: #FFFFFF;
+  text-transform: none;
+}
+
+
+
+
+.vclButton.vclSelected {
+  color: #FFFFFF;
+  background-color: #005F84;
+}
+
+
+
+
+.vclButton:active {
+  background-color: hsl(0, 0%, 20%);
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclPressed {
+  background-color: hsl(0, 0%, 20%);
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclActive {
+  background-color: hsl(0, 0%, 20%);
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclDisabled {
+  color: hsl(0, 0%, 88%);
+}
+
+
+
+
+.vclButton[disabled] {
+  color: hsl(0, 0%, 88%);
+}
+
+
+
+
+/* Emphasized variant */
+
+
+
+
+.vclButton.vclEmphasized {
+  border-color: transparent;
+  background-color: #00ADEF;
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclEmphasized:active {
+  background-color: #0888BF;
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclEmphasized.vclPressed {
+  background-color: #0888BF;
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclEmphasized.vclActive {
+  background-color: #0888BF;
+  color: #FFFFFF;
+}
+
+
+
+
+/* Emphasized & transparent variant */
+
+
+
+
+.vclButton.vclEmphasizedTransparent {
+  color: #00ADEF;
+  background: none;
+}
+
+
+
+
+.vclButton.vclEmphasizedTransparent.vclDisabled {
+  color: hsl(0, 0%, 88%);
+}
+
+
+
+
+.vclButton.vclEmphasizedTransparent[disabled] {
+  color: hsl(0, 0%, 88%);
+}
+
+
+
+
+.vclButton.vclEmphasizedTransparent:active {
+  background: none;
+  color: #005F84;
+}
+
+
+
+
+.vclButton.vclEmphasizedTransparent.vclPressed {
+  background: none;
+  color: #005F84;
+}
+
+
+
+
+.vclButton.vclEmphasizedTransparent.vclActive {
+  background: none;
+  color: #005F84;
+}
+
+
+
+
+/* Transparent variant */
+
+
+
+
+.vclButton.vclTransparent {
+  color: hsl(0, 0%, 45%);
+  background: none;
+}
+
+
+
+
+.vclButton.vclTransparent.vclDisabled {
+  color: hsl(0, 0%, 63%);
+}
+
+
+
+
+.vclButton.vclTransparent[disabled] {
+  color: hsl(0, 0%, 63%);
+}
+
+
+
+
+.vclButton.vclTransparent:active {
+  background: none;
+  color: #000000;
+}
+
+
+
+
+.vclButton.vclTransparent.vclPressed {
+  background: none;
+  color: #000000;
+}
+
+
+
+
+.vclButton.vclTransparent.vclActive {
+  background: none;
+  color: #000000;
+}
+
+
+
+
+/* Transparent alternative variant */
+
+
+
+
+.vclButton.vclTransparentAlt {
+  background: none;
+  background-color: transparent;
+  color: hsl(0, 0%, 88%);
+}
+
+
+
+
+.vclButton.vclTransparentAlt.vclDisabled {
+  color: hsl(0, 0%, 63%);
+}
+
+
+
+
+.vclButton.vclTransparentAlt[disabled] {
+  color: hsl(0, 0%, 63%);
+}
+
+
+
+
+.vclButton.vclTransparentAlt:active {
+  background: none;
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclTransparentAlt.vclPressed {
+  background: none;
+  color: #FFFFFF;
+}
+
+
+
+
+.vclButton.vclTransparentAlt.vclActive {
+  background: none;
+  color: #FFFFFF;
+}
+
+
+
+
+/* Half transparent variant */
+
+
+
+
+.vclButton.vclHalfTransparent {
+  background: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+
+
+
+.vclButton.vclHalfTransparent.vclDisabled {
+  color: hsl(0, 0%, 63%);
+}
+
+
+
+
+.vclButton.vclHalfTransparent[disabled] {
+  color: hsl(0, 0%, 63%);
+}
+
+
+
+
+.vclButton.vclHalfTransparent:active {
+  background-color: hsl(0, 0%, 92%);
+  color: inherit;
+}
+
+
+
+
+.vclButton.vclHalfTransparent.vclPressed {
+  background-color: hsl(0, 0%, 92%);
+  color: inherit;
+}
+
+
+
+
+.vclButton.vclHalfTransparent.vclActive {
+  background-color: hsl(0, 0%, 92%);
+  color: inherit;
+}
+
+
+
+
+/* Danger variant */
+
+
+
+
+.vclButton.vclDanger {
+  color: #FFFFFF;
+  background-color: #d9534f;
+}
+
+
+
+
+.vclButton.vclDanger:active {
+  color: #FFFFFF;
+  background-color: #a94442;
+}
+
+
+
+
+.vclButton.vclDanger.vclPressed {
+  color: #FFFFFF;
+  background-color: #a94442;
+}
+
+
+
+
+.vclButton.vclDanger.vclActive {
+  color: #FFFFFF;
+  background-color: #a94442;
+}
+
+
+
+
+.vclButton.vclDanger.vclDisabled {
+  color: hsl(0, 0%, 63%);
+}
+
+
+
+
+.vclButton.vclDanger[disabled] {
+  color: hsl(0, 0%, 63%);
+}
+
+
+
+
+/* Suggestive variant */
+
+
+
+
+.vclButton.vclSuggestive {
+  color: #FFFFFF;
+  background-color: #5cb85c;
+}
+
+
+
+
+.vclButton.vclSuggestive:active {
+  color: #FFFFFF;
+  background-color: #3c763d;
+}
+
+
+
+
+.vclButton.vclSuggestive.vclPressed {
+  color: #FFFFFF;
+  background-color: #3c763d;
+}
+
+
+
+
+.vclButton.vclSuggestive.vclActive {
+  color: #FFFFFF;
+  background-color: #3c763d;
+}
+
+
+
+
+.vclButton.vclSuggestive.vclDisabled {
+  color: hsl(0, 0%, 88%);
+}
+
+
+
+
+.vclButton.vclSuggestive[disabled] {
+  color: hsl(0, 0%, 88%);
+}
+
+
+
+
+/* Outline modifier */
+
+
+
+
+.vclOutline {
+  border-color: hsl(0, 0%, 50%);
+  border-width: 2px;
+}
+
+
+
+
+/* Circular modifier */
+
+
+
+
+.vclCircular {
+  border-radius: 50%;
+}
+
+
+
+
+/* Hover support */
+
+
+
+
+@media (hover: hover) {
+  .vclButton:hover {
+    background-color: hsl(0, 0%, 20%);
+    color: #FFFFFF;
+  }
+  .vclButton:focus {
+    background-color: hsl(0, 0%, 20%);
+    color: #FFFFFF;
+  }
+  .vclButton.vclHover {
+    background-color: hsl(0, 0%, 20%);
+    color: #FFFFFF;
+  }
+  .vclButton.vclFocused {
+    background-color: hsl(0, 0%, 20%);
+    color: #FFFFFF;
+  }
+  .vclButton.vclEmphasized:hover {
+    background-color: #0888BF;
+    color: #FFFFFF;
+  }
+  .vclButton.vclEmphasized:focus {
+    background-color: #0888BF;
+    color: #FFFFFF;
+  }
+  .vclButton.vclEmphasized.vclHover {
+    background-color: #0888BF;
+    color: #FFFFFF;
+  }
+  .vclButton.vclEmphasized.vclFocused {
+    background-color: #0888BF;
+    color: #FFFFFF;
+  }
+  .vclButton.vclEmphasizedTransparent:hover {
+    background: none;
+    color: #005F84;
+  }
+  .vclButton.vclEmphasizedTransparent:focus {
+    background: none;
+    color: #005F84;
+  }
+  .vclButton.vclEmphasizedTransparent.vclHover {
+    background: none;
+    color: #005F84;
+  }
+  .vclButton.vclEmphasizedTransparent.vclFocused {
+    background: none;
+    color: #005F84;
+  }
+  .vclButton.vclTransparent:hover {
+    background: none;
+    color: #000000;
+  }
+  .vclButton.vclTransparent:focus {
+    background: none;
+    color: #000000;
+  }
+  .vclButton.vclTransparent.vclHover {
+    background: none;
+    color: #000000;
+  }
+  .vclButton.vclTransparent.vclFocused {
+    background: none;
+    color: #000000;
+  }
+  .vclButton.vclTransparentAlt:hover {
+    background: none;
+    color: #FFFFFF;
+  }
+  .vclButton.vclTransparentAlt:focus {
+    background: none;
+    color: #FFFFFF;
+  }
+  .vclButton.vclTransparentAlt.vclHover {
+    background: none;
+    color: #FFFFFF;
+  }
+  .vclButton.vclTransparentAlt.vclFocused {
+    background: none;
+    color: #FFFFFF;
+  }
+  .vclButton.vclHalfTransparent:hover {
+    background-color: hsl(0, 0%, 92%);
+    color: inherit;
+  }
+  .vclButton.vclHalfTransparent:focus {
+    background-color: hsl(0, 0%, 92%);
+    color: inherit;
+  }
+  .vclButton.vclHalfTransparent.vclHover {
+    background-color: hsl(0, 0%, 92%);
+    color: inherit;
+  }
+  .vclButton.vclHalfTransparent.vclFocused {
+    background-color: hsl(0, 0%, 92%);
+    color: inherit;
+  }
+  .vclButton.vclDanger:hover {
+    color: #FFFFFF;
+    background-color: #a94442;
+  }
+  .vclButton.vclDanger:focus {
+    color: #FFFFFF;
+    background-color: #a94442;
+  }
+  .vclButton.vclDanger.vclHover {
+    color: #FFFFFF;
+    background-color: #a94442;
+  }
+  .vclButton.vclDanger.vclFocused {
+    color: #FFFFFF;
+    background-color: #a94442;
+  }
+  .vclButton.vclSuggestive:hover {
+    color: #FFFFFF;
+    background-color: #3c763d;
+  }
+  .vclButton.vclSuggestive:focus {
+    color: #FFFFFF;
+    background-color: #3c763d;
+  }
+  .vclButton.vclSuggestive.vclHover {
+    color: #FFFFFF;
+    background-color: #3c763d;
+  }
+  .vclButton.vclSuggestive.vclFocused {
+    color: #FFFFFF;
+    background-color: #3c763d;
+  }
+}
+
+
+
+
+html {
+  font-size: 0.875em;
+  line-height: 1.428;
+  color: hsl(0, 0%, 20%);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+
+
+
+abbr.vclInitialism {
+  font-size: 93%;
+  text-transform: uppercase;
+}
+
+
+
+
+mark {
+  background: #ffff00;
+  color: #000000;
+}
+
+
+
+
+/* Define quote characters for q element */
+
+
+
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+
+
+
+blockquote {
+  margin-top: 0;
+  margin-bottom: 1.3em;
+  margin-left: 1.8em;
+  margin-right: 1.8em;
+  padding-left: 1em;
+  border-left-width: 0.3em;
+  border-left-style: solid;
+  border-left-color: hsl(0, 0%, 88%);
+}
+
+
+
+
+address {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1.3em;
+  font-style: normal;
+}
+
+
+
+
+pre {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 93%;
+}
+
+
+
+
+code {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 93%;
+}
+
+
+
+
+kbd {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 93%;
+}
+
+
+
+
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 93%;
+}
+
+
+
+
+kbd {
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+  border-radius: 0.85em;
+  color: #FFF;
+  background-color: #333;
+  -webkit-box-shadow: 0px -1px 0px rgba(0, 0, 0, .25) inset;
+          box-shadow: 0px -1px 0px rgba(0, 0, 0, .25) inset;
+}
+
+
+
+
+/* Pre-formatted text. */
+
+
+
+
+pre {
+  margin-bottom: 1.1em;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+
+
+
+pre.vclCode > code {
+  padding: 0;
+  white-space: pre;
+}
+
+
+
+
+pre.vclCode {
+  border: 1px solid hsl(0, 0%, 88%);
+  line-height: 1.2em;
+  padding: 0.7em;
+  overflow: auto;
+  border-radius: 0;
+  background-clip: padding-box;
+  background-color: hsl(0, 0%, 92%);
+}
+
+
+
+
+code {
+  padding: 0.15em 0.25em;
+  white-space: nowrap;
+  background-color: hsl(0, 0%, 92%);
+}
+
+
+
+
+.vclCodeWrap {
+  white-space: pre-wrap;
+}
+
+
+
+
+h1 {
+  color: hsl(0, 0%, 20%);
+  font-family: inherit;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.428;
+}
+
+
+
+
+h2 {
+  color: hsl(0, 0%, 20%);
+  font-family: inherit;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.428;
+}
+
+
+
+
+h3 {
+  color: hsl(0, 0%, 20%);
+  font-family: inherit;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.428;
+}
+
+
+
+
+h4 {
+  color: hsl(0, 0%, 20%);
+  font-family: inherit;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.428;
+}
+
+
+
+
+h5 {
+  color: hsl(0, 0%, 20%);
+  font-family: inherit;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.428;
+}
+
+
+
+
+h6 {
+  color: hsl(0, 0%, 20%);
+  font-family: inherit;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.428;
+}
+
+
+
+
+h1 {
+  font-size: 2.08em;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+
+
+
+h2 {
+  font-size: 1.7em;
+  margin-top: 0.65em;
+  margin-bottom: 0.3em;
+}
+
+
+
+
+h3 {
+  font-size: 1.27em;
+  margin-top: 0.75em;
+  margin-bottom: 0.4em;
+}
+
+
+
+
+h4 {
+  font-size: 1.1em;
+  margin-top: 0.85em;
+  margin-bottom: 0.4em;
+}
+
+
+
+
+h5 {
+  font-size: 0.95em;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+
+
+
+
+h6 {
+  font-size: 0.82em;
+  margin-top: 1.1em;
+  margin-bottom: 0.5em;
+}
+
+
+
+
+p {
+  margin-top: 0em;
+  margin-bottom: 1.3em;
+}
+
+
+
+
+/* Anchors */
+
+
+
+
+a {
+  text-decoration: none;
+  color: #00ADEF;
+}
+
+
+
+
+a:visited {
+  text-decoration: none;
+  color: #00ADEF;
+}
+
+
+
+
+a:active {
+  text-decoration: none;
+  color: #00ADEF;
+}
+
+
+
+
+a:hover {
+  text-decoration: none;
+  color: #00ADEF;
+}
+
+
+
+
+a:hover {
+  color: #005F84;
+}
+
+
+
+
+a.vclDisabled {
+  cursor: default;
+}
+
+
+
+
+a.vclContentLink > .vclIcogram > *:first-child {
+  margin-left: 0.1em;
+}
+
+
+
+
+a.vclContentLink > .vclIcogram > * {
+  margin: 0 0.1em 0 0;
+}
+
+
+
+
+a.vclContentLink > .vclIcogram > *:last-child {
+  margin-right: 0.1em;
+}
+
+
+
+
+a.vclContentLink > .vclIcogram .vclText {
+  text-decoration: none;
+}
+
+
+
+
+a.vclContentLink > .vclIcogram .vclIcon {
+  text-decoration: none;
+}
+
+
+
+
+a.vclContentLink > .vclIcogram {
+  display: inline;
+}
+
+
+
+
+a.vclContentLink {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+  vertical-align: text-bottom;
+}
+
+
+
+
+.vclDisabled {
+  color: hsl(0, 0%, 50%);
+}
+
+
+
+
+a.vclDisabled {
+  color: hsl(0, 0%, 50%);
+}
+
+
+
+
+.vclSecondaryTextColor {
+  color: hsl(0, 0%, 50%);
+}
+
+
+
+
+/* Prevents sub and sup affecting line-height */
+
+
+
+
+sub,
+sup {
+  font-size: 80%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+
+
+
+sup {
+  top: -0.5em;
+}
+
+
+
+
+sub {
+  bottom: -0.25em;
+}
+
+
+
+
+/* Text selection coloring */
+
+
+
+
+*::-moz-selection {
+  background: #000000;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+
+
+
+*::selection {
+  background: #000000;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+
+
+
+*::-ms-selection {
+  background: #000000;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+
+
+
+*::-moz-selection {
+  background: #000000;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+
+
+
+.vclLooseButtonGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+
+
+
+.vclLooseButtonGroup button:first-of-type,
+.vclLooseButtonGroup .vclButton:first-of-type {
+  margin-left: 0;
+}
+
+
+
+
+.vclLooseButtonGroup button:last-of-type,
+.vclLooseButtonGroup .vclButton:last-of-type {
+  margin-right: 0;
+}
+
+
+
+
+.vclLooseButtonGroup button,
+.vclLooseButtonGroup .vclButton {
+  display: block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
