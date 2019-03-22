@@ -1,8 +1,5 @@
 # [VCL](https://vcl.github.io/) preprocessor
 
-[![Build Status](http://img.shields.io/travis/vcl/preprocessor.svg?style=flat)](https://travis-ci.org/vcl/preprocessor)
-[![Coverage Status](https://coveralls.io/repos/vcl/preprocessor/badge.svg?branch=master)](https://coveralls.io/r/vcl/preprocessor?branch=master)
-
 The VCL preprocessor allows to create builds from NPM based CSS modules.
 It is based on webpack and the [postcss](https://github.com/postcss/postcss)
 processor framework.
@@ -77,13 +74,9 @@ The following ways to import CSS files are supported:
 ## Features
 
 - Node module and local file imports via [postcss-import](https://github.com/postcss/postcss-import).
-- CSS level 4 variables syntax [postcss-css-variables](https://github.com/MadLittleMods/postcss-css-variables).
-- Support for color functions such as `rgba()` via [postcss-color-function](https://github.com/postcss/postcss-color-function).
 - Support for CSS level 4 proposed `color()` function via [postcss-color-function](https://github.com/postcss/postcss-color-function).
-- Support for `lighten|darken({color}, {amount}%)` function via [rucksack-css](https://www.rucksackcss.org/).
-- Inheritance support via [rucksack-css](https://www.rucksackcss.org/).
-- Custom media to do things like `@media (--narrow-window)` via [rucksack-css](https://www.rucksackcss.org/).
-- Easing functions via [rucksack-css](https://www.rucksackcss.org/).
-- Simple `clear: fix` construct via [rucksack-css](https://www.rucksackcss.org/).
-- Media queries level 4 shim prevents unwanted hover behavior on touch devices via [mq4-hover-shim](https://github.com/twbs/mq4-hover-shim).
+- CSS level 4 variables syntax [postcss-css-variables](https://github.com/MadLittleMods/postcss-css-variables).
 - Next gen CSS features via [postcss-preset-env](https://preset-env.cssdb.org/).
+- Support for nest style rules, following the CSS Nesting specification [postcss-nesting](https://github.com/jonathantneal/postcss-nesting/).
+- Support for color functions such as `rgba()` via [postcss-hexrgba](https://github.com/seaneking/postcss-hexrgba).
+- Simple `clear: fix` construct via [postcss-clearfix](https://github.com/seaneking/postcss-clearfix/).
