@@ -25,7 +25,6 @@
   "license": "MIT",
   "devDependencies": {
     "@vcl/build-demo": "^0.4.0-beta.3",
-    "@vcl/button": "^0.4.0-beta.3",
     "@vcl/flex-layout": "^0.4.0-beta.3",
     "@vcl/font-awesome": "^0.4.0-beta.3",
     "@vcl/icogram": "^0.4.0-beta.3",
@@ -40,7 +39,8 @@
   },
   "dependencies": {
     "@vcl/theme": "^0.4.0-beta.3",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "@vcl/button": "^0.4.0-beta.3"
   },
   "keywords": [
     "css",

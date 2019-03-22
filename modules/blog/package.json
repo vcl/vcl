@@ -31,7 +31,6 @@
     "@vcl/font-awesome": "^0.4.0-beta.3",
     "@vcl/icogram": "^0.4.0-beta.3",
     "@vcl/icon": "^0.4.0-beta.3",
-    "@vcl/pager": "^0.4.0-beta.3",
     "@vcl/preprocessor": "^0.4.0-beta.3",
     "@vcl/typography": "^0.4.0-beta.3",
     "browser-sync": "^2.26.3",

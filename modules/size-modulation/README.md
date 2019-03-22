@@ -16,7 +16,7 @@ Scale the size of simple text and whole widgets.
 [text example](/demo/example-text.html)
 
 The size modulation can be applied to whole widgets like this
-pagination at 115%.
+pagination at 130%.
 
 [widget example](/demo/example-widget.html)
 

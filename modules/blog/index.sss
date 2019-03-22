@@ -22,16 +22,17 @@
 
 .vclPost
   margin-bottom: var(--block-elem-vertical-gap)
-  .vclPostBody
-    line-height: 1.8em
-  .vclPostHeader
-    h2,
-    h3
+  & .vclPostHeader
+    & h1,
+    & h2,
+    & h3
       color: inherit
-  .vclPostMeta
+  & .vclPostMeta
     margin: 0
-  .vclPostTitle
+  & .vclPostTitle
     margin-top: 0.4rem
+  & .vclPostBody
+    line-height: 1.8em
 
 .vclPostMeta
   flex-direction: row
