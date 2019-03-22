@@ -17,4 +17,3 @@ lerna-debug.log
 /tools/preprocessor/coverage
 /themes/**/build
 /modules/**/build
-/xdoc/**/build
