@@ -1,7 +1,7 @@
 {
   "name": "@vcl/bw-theme",
   "description": "The VCL BW theme",
-  "version": "0.4.0-beta.1",
+  "version": "0.4.0-beta.2",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"
@@ -23,7 +23,7 @@
     "@vcl/default-theme": "^0.4.0-beta.0"
   },
   "devDependencies": {
-    "@vcl/preprocessor": "^0.4.0-beta.1"
+    "@vcl/preprocessor": "^0.4.0-beta.2"
   },
   "keywords": [
     "css",
