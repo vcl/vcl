@@ -6,19 +6,18 @@
     "start": "webpack-dev-server --open"
   },
   "dependencies": {
-    "@vcl/core-modules": "^0.4.0-beta.0",
-    "@vcl/font-awesome": "^0.3.0",
-    "@vcl/theme": "^0.3.0-3",
-    "normalize.css": "^8.0.1"
+    "@vcl/core-modules": "^0.4.0",
+    "@vcl/font-awesome": "^0.4.0",
+    "normalize.css": "^8.0.1",
+    "@vcl/theme": "^0.4.0"
   },
   "devDependencies": {
-    "@vcl/preprocessor": "^0.4.0-beta.0",
-    "@vcl/theme": "^0.3.0-1",
+    "@vcl/preprocessor": "^0.4.0",
     "css-loader": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.5.0",
     "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3",
+    "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
   }
 }
