@@ -32,7 +32,6 @@
     "@vcl/button-group": "^0.4.0-beta.3",
     "@vcl/calendar": "^0.4.0-beta.3",
     "@vcl/checkbox": "^0.4.0-beta.3",
-    "@vcl/coarse-pointer": "^0.4.0-beta.3",
     "@vcl/container": "^0.4.0-beta.3",
     "@vcl/data-grid": "^0.4.0-beta.3",
     "@vcl/data-list": "^0.4.0-beta.3",

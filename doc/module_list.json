@@ -15,7 +15,6 @@
   {"name": "busy-indicator",                       "description": "Busy indicator",                                      "homepage": "https://vcl.github.io/#vcl-busy-indicator"},
   {"name": "button",                               "description": "Button",                                              "homepage": "https://vcl.github.io/#vcl-button"},
   {"name": "button-group",                         "description": "Button group",                                        "homepage": "https://vcl.github.io/#vcl-button-group"},
-  {"name": "coarse-pointer",                       "description": "Coarse pointer utils and optimizations",              "homepage": "https://vcl.github.io/#vcl-coarse-pointer"},
   {"name": "container",                            "description": "Container",                                           "homepage": "https://vcl.github.io/#vcl-container"},
   {"name": "core-modules",                         "description": "Collection of what 80% of reasonable Web apps need",  "homepage": "https://vcl.github.io/#vcl-core-modules"},
   {"name": "data-list",                            "description": "Data list",                                           "homepage": "https://vcl.github.io/#vcl-data-list"},
