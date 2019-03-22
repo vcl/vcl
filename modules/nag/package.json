@@ -1,7 +1,7 @@
 {
   "name": "@vcl/nag",
   "description": "Overlay dialog which requires acknowledgement to go away",
-  "version": "0.4.0-beta.2",
+  "version": "0.4.0-beta.3",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
@@ -24,20 +24,20 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0-beta.2",
-    "@vcl/button": "^0.4.0-beta.2",
-    "@vcl/container": "^0.4.0-beta.2",
-    "@vcl/flex-layout": "^0.4.0-beta.2",
-    "@vcl/grid": "^0.4.0-beta.2",
-    "@vcl/preprocessor": "^0.4.0-beta.2",
-    "@vcl/typography": "^0.4.0-beta.2",
-    "@vcl/utils": "^0.4.0-beta.2",
+    "@vcl/build-demo": "^0.4.0-beta.3",
+    "@vcl/button": "^0.4.0-beta.3",
+    "@vcl/container": "^0.4.0-beta.3",
+    "@vcl/flex-layout": "^0.4.0-beta.3",
+    "@vcl/grid": "^0.4.0-beta.3",
+    "@vcl/preprocessor": "^0.4.0-beta.3",
+    "@vcl/typography": "^0.4.0-beta.3",
+    "@vcl/utils": "^0.4.0-beta.3",
     "browser-sync": "^2.26.3",
     "npm-run-all": "^4.1.5",
     "pre-commit": "^1.2.2"
   },
   "dependencies": {
-    "@vcl/theme": "^0.4.0-beta.2",
+    "@vcl/theme": "^0.4.0-beta.3",
     "normalize.css": "^8.0.1"
   },
   "repository": {
