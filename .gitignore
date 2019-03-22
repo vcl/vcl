@@ -14,3 +14,7 @@ npm-debug.log
 node_modules
 localhost_*
 lerna-debug.log
+/tools/preprocessor/coverage
+/themes/**/build
+/modules/**/build
+/xdoc/**/build
