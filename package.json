@@ -1,7 +1,7 @@
 {
   "name": "@vcl/vcl",
   "description": "The Visual Component Library",
-  "version": "0.4.0-beta.0",
+  "version": "0.4.0-beta.2",
   "main": "package.json",
   "scripts": {
     "install:packages": "node_modules/.bin/lerna bootstrap",
