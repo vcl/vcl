@@ -131,8 +131,10 @@ export default class DocNav extends PolymerElement {
     }, {});
 
     const groupedOnCategories = Object.keys(categories).map((title) => {
-      const items = categories[title];
+      const items = categories[title].sort((a, b) => a.itemPriority - b.itemPriority);
+
       const priority = Math.min(...items.map(i => i.priority));
+
       return {
         title, priority, items
       };
