@@ -4,7 +4,8 @@ Everything that makes up a blog.
 
 ## Features
 
-Post preview and post.
+Post preview as typically shown in the index page of a blog
+and post itself.
 
 ## Usage
 

@@ -1,15 +1,17 @@
 {
   "name": "@vcl/build-demo",
-  "version": "0.3.5",
+  "version": "0.4.0",
   "description": "Contains a HTML scaffold to build demo pages for VCL modules",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "vcl-build-demo": "index.js"
   },
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",
-    "url": "www.n-fuse.co"
+    "url": "https://www.n-fuse.co"
   },
   "contributors": [
     {
@@ -19,6 +21,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@vcl/preprocessor": "0.2.8"
+    "@vcl/preprocessor": "^0.4.0"
   }
 }

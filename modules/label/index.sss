@@ -1,0 +1,41 @@
+@import "normalize.css"
+@import "@vcl/theme"
+
+.vclLabel
+  display: inline-block
+  padding-top: 0.2em
+  padding-right: 0.5em
+  padding-bottom: 0.2em
+  padding-left: 0.5em
+  font-weight: bold
+  font-size: 80%
+  line-height: 1
+  white-space: nowrap
+  vertical-align: baseline
+  border-radius: 0.25em
+  color: var(--label-default-color)
+  background-color: var(--label-default-bg-color)
+  &:empty
+    display: none
+
+.vclLabel.vclPrimary
+  color: var(--label-primary-color)
+  background-color: var(--label-primary-bg-color)
+
+.vclLabel.vclSuccess
+  color: var(--label-success-color)
+  background-color: var(--label-success-bg-color)
+
+.vclLabel.vclInfo
+  color: var(--label-info-color)
+  background-color: var(--label-info-bg-color)
+
+.vclLabel.vclWarning
+  color: var(--label-warning-color)
+  background-color: var(--label-warning-bg-color)
+
+.vclLabel.vclDanger,
+.vclLabel.vclError,
+.vclLabel.vclImportant
+  color: var(--label-danger-color)
+  background-color: var(--label-danger-bg-color)

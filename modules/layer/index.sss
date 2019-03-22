@@ -1,0 +1,60 @@
+@import "normalize.css"
+@import "@vcl/theme"
+
+
+.vclLayerCover
+  position: fixed
+  z-index: 300
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: var(--layer-cover-bg-color)
+
+.vclLayer
+  position: fixed
+  display: flex
+  z-index: 401
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  outline: none
+  align-items: center
+  justify-content: center
+  &.vclTransparent
+    & .vclLayerBox
+      background-color: transparent
+  &.vclLayerStickToBottom
+    & .vclLayerBox
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      margin-bottom: 0
+  &.vclLayerFill
+    & .vclLayerBox
+      width: 100%
+      height: 100%
+      min-width: 0
+      max-width: none
+
+.vclLayerBox
+  max-height: 100%
+  overflow-y: auto
+  box-sizing: border-box
+  display: inline-block
+  min-width: 25em
+  max-width: 50em
+  color: var(--layer-color)
+  background-color: var(--layer-bg-color)
+  &.vclLayerGutterPadding
+    padding: var(--layer-gutter-padding)
+
+@media (--sm-viewport)
+  .vclLayer
+    & .vclLayerBox
+      width: 100%
+      height: 100%
+      min-width: 0
+      max-width: none

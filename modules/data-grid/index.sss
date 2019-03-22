@@ -1,0 +1,38 @@
+@import "normalize.css"
+@import "@vcl/theme"
+
+
+.vclDataGrid
+  margin-bottom: var(--block-elem-vertical-gap)
+  display: flex
+  flex-direction: column
+
+.vclCalendar
+  background-color: var(--calendar-bg-color)
+  height: 100%
+  overflow: hidden
+
+.vclDataGrid .vclDGRow,
+.vclDataGrid .vclDGCell
+  display: flex
+  flex: 1
+  border-collapse: collapse
+  user-select: none
+
+.vclDGAlignCentered .vclDGCell,
+.vclDGAlignCentered.vclDGCell
+  justify-content: center
+  text-align: center
+
+.vclDGAlignRight .vclDGCell,
+.vclDGAlignRight.vclDGCell
+  justify-content: flex-end
+  text-align: right
+
+.vclDGVAlignMiddle .vclDGCell,
+.vclDGVAlignMiddle.vclDGCell
+  align-items: center
+
+.vclDGVAlignBottom .vclDGCell,
+.vclDGVAlignBottom.vclDGCell
+  align-items: flex-end

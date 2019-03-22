@@ -1,0 +1,57 @@
+@import "normalize.css"
+@import "@vcl/theme"
+
+
+.vclDataList
+  margin-bottom: var(--block-elem-vertical-gap)
+  background-color: var(--data-list-bg-color)
+  & .vclDataListHeader
+    background-color: var(--data-list-header-bg-color)
+  & .vclDataListFooter
+    background-color: var(--data-list-footer-bg-color)
+  & > .vclDataListBody
+    width: 100%
+    padding: 0
+    margin-top: 0
+    margin-bottom: 0
+    list-style: none
+    list-style-type: none
+    border-top-width: 1px
+    border-top-style: solid
+    border-bottom-width: 1px
+    border-bottom-style: solid
+    border-top-color: var(--data-list-border-color)
+    border-bottom-color: var(--data-list-border-color)
+    & > .vclDataListItem
+      min-height: 3em
+      position: relative
+      &.vclDisabled
+        background-color: transparent
+        color: var(--data-list-item-disabled-color)
+        cursor: default
+        &:hover
+          color: var(--data-list-item-disabled-color)
+          background-color: transparent
+    & .vclDataListItem,
+    & .vclDataListItem:hover
+      &.vclSelected
+        color: var(--data-list-item-selected-color)
+        background-color: var(--data-list-item-bg-selected-color)
+  &.vclDivider
+    & .vclDataListItem
+      border-bottom-width: 1px
+      border-bottom-style: solid
+      border-bottom-color: var(--data-list-item-divider-border-color)
+      &:last-of-type
+        border-bottom: 0
+  & .vclNoBorder
+    & .vclDataListBody
+      border: 0
+  &.vclItemHoverHighlight
+    & .vclDataListItem
+      &:hover
+        color: var(--data-list-item-hover-color)
+        background-color: var(--data-list-item-bg-hover-color)
+  &.vclItemSelectability
+    & .vclDataListItem
+      cursor: pointer

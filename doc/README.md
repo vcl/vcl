@@ -12,14 +12,14 @@ introducing the VCL.
 
 ## Status
 
-The current modules are released in the **0.2.x version series** and adhere to
+The current modules are released in the **0.4.x version series** and adhere to
 [semver](http://semver.org/).
 All modules with version level `>= 0.1.0` are ready for production use.
 
 ## Features
 
 - Designed to style [Web Components](http://webcomponents.org/).
-- JS framework agnostic ‒ use it with EmberJS, Angular, React and the like.
+- JS framework agnostic ‒ use it with Angular, React and the like.
 - For ambitious mobile and desktop applications.
 - Theming through modules which can inherit from each other.
 - Collection of [core modules](https://github.com/vcl/vcl//modules/core-modules)
@@ -41,10 +41,16 @@ All modules with version level `>= 0.1.0` are ready for production use.
 - Future CSS features via [CSSNext](http://cssnext.io/).
   [Autoprefixer](https://github.com/postcss/autoprefixer).
 - Mostly independent of HTML structure and element names.
-- Generation of documentation like at [vcl.github.io](https://vcl.github.io/) only for modules **you** use.
+- Generation of interactive documentations like [vcl.github.io](https://vcl.github.io/) only for modules **you** use.
 - Embrace flex, no more float.
 
 ## Getting Started
+
+### Example Project
+
+See [the tutorial](https://github.com/vcl/vcl/tree/master/doc/tutorial) for
+how to use VCL modules in a Web project and how to make it part of its
+build process.
 
 ### Run a Module's Demos
 
@@ -52,12 +58,6 @@ All modules with version level `>= 0.1.0` are ready for production use.
     $ cd vcl/modules/button
     $ npm install
     $ npm start
-
-### Example Project
-
-See [the tutorial](https://github.com/vcl/vcl/tree/master/doc/tutorial) for
-how to use VCL modules in a Web project and how to make it part of its
-build process.
 
 ### Missing a Module?
 
@@ -70,4 +70,3 @@ Otherwise [create an issue](https://vcl.github.io//issues).
 
 See [DEVELOPMENT.md](DEVELOPMENT.md)
 for the mechanics and philosophy behind VCL modules.
-

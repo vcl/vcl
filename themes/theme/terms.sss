@@ -1,0 +1,81 @@
+/**
+ * The terms of the VCL default theme.
+ *
+ * Terms are colors, font faces etc.
+ * Typically these terms are derived from CI or design
+ * stipulations like a color palette in a style guide.
+ */
+
+:root
+  /* Colors
+     ====== */
+  --black: #000000
+  --white: #FFFFFF
+
+  /* Grays */
+  --gray-dark-5: gray(10)
+  --gray-dark-4: gray(15)
+  --gray-dark-3: gray(20)
+  --gray-dark-2: gray(30)
+  --gray-dark-1: gray(45)
+  --gray: gray(50)
+  --gray-light-1: gray(63)
+  --gray-light-2: gray(75)
+  --gray-light-3: gray(88)
+  --gray-light-4: gray(92)
+  --gray-light-5: gray(95)
+  --gray-light-6: gray(98)
+
+  /* Brand Accent Colors */
+  --brand-accent-darker: #005F84
+  --brand-accent-dark: #0888BF
+  --brand-accent: #00ADEF
+  --brand-accent-light: #96DCFA
+  --brand-accent-lighter: #c7d9f1
+  --brand-accent-overlay: hsla(197, 100%, 47%, 0.4)
+
+  /* Semantic Brand Colors */
+  --brand-primary: #428bca
+  --brand-success: #5cb85c
+  --brand-info: #5bc0de
+  --brand-warning: #f0ad4e
+  --brand-danger: #d9534f
+
+  /* Shadows, transparencies etc. */
+  --glass-1: rgba(0, 0, 0, 0.3)
+  --glass-2: rgba(0, 0, 0, 0.15)
+
+  /* Semantic Colors */
+  --emphasized-dark-color: color(var(--brand-primary) l(- 25%))
+  --emphasized-medium-color: var(--brand-primary)
+  --emphasized-light-color: color(var(--brand-primary) l(+ 30%))
+
+  --primary-dark-color: var(--black)
+  --primary-medium-color: var(--gray-dark-2)
+  --primary-light-color: var(--white)
+
+  --success-dark-color: color(var(--brand-success) l(- 25%))
+  --success-medium-color: var(--brand-success)
+  --success-light-color: color(var(--brand-success) l(+ 30%))
+
+  --info-dark-color: color(var(--brand-info) l(- 25%))
+  --info-medium-color: var(--brand-info)
+  --info-light-color: color(var(--brand-info) l(+ 30%))
+
+  --warning-dark-color: color(var(--brand-warning) l(- 25%))
+  --warning-medium-color: var(--brand-warning)
+  --warning-light-color: color(var(--brand-warning) l(+ 30%))
+
+  --error-dark-color: color(var(--brand-danger) l(- 25%))
+  --error-medium-color: var(--brand-danger)
+  --error-light-color: color(var(--brand-danger) l(+ 30%))
+
+  --danger-dark-color: color(var(--brand-danger) l(- 25%))
+  --danger-medium-color: var(--brand-danger)
+  --danger-light-color: color(var(--brand-danger) l(+ 30%))
+
+  /* Fonts
+     ===== */
+  --font-family-theme: "Helvetica Neue", Arial, "Lucida Grande", sans-serif
+  --font-family-serif-theme: Georgia, "Times New Roman", Times, serif
+  --font-family-monospace-theme: Menlo, Monaco, Consolas, "Courier New", monospace

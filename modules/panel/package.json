@@ -1,15 +1,16 @@
 {
   "name": "@vcl/panel",
   "description": "Container element to group and highlight content",
-  "version": "0.2.3",
+  "version": "0.4.0",
   "main": "package.json",
   "scripts": {
-    "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
-    "browsersync": "node_modules/.bin/browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
-    "build-demo": "node node_modules/@vcl/build-demo/index.js",
-    "start": "npm run browsersync & npm run build-demo"
+    "test": "vcl-preprocessor ./index.sss ./build/test.css",
+    "browsersync": "browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
+    "build-demo": "vcl-build-demo",
+    "start": "npm-run-all --parallel build-demo browsersync"
   },
-  "style": "index.styl",
+  "style": "index.sss",
+  "demoStyle": "demo.sss",
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",
@@ -23,30 +24,31 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/app-content-area": "^0.2.1",
-    "@vcl/build-demo": "^0.3.1",
-    "@vcl/button": "^0.2.3",
-    "@vcl/default-theme": "^0.2.4",
-    "@vcl/default-theme-terms": "^0.2.3",
-    "@vcl/divider": "^0.2.2",
-    "@vcl/flex-layout": "^0.2.2",
-    "@vcl/form": "^0.2.2",
-    "@vcl/form-control-label": "^0.2.3",
-    "@vcl/icogram": "^0.2.4",
-    "@vcl/icon": "^0.2.2",
-    "@vcl/input": "^0.2.2",
-    "@vcl/loose-button-group": "^0.2.2",
-    "@vcl/preprocessor": "^0.2.2",
-    "@vcl/responsive-image": "^0.2.0",
-    "@vcl/size-modulation": "^0.2.2",
-    "@vcl/table": "^0.2.1",
-    "@vcl/typography": "^0.2.3",
-    "@vcl/utils": "^0.2.1",
-    "browser-sync": "^2.24.7",
-    "normalize.css": "^8.0.0",
-    "pre-commit": "^1.1.2"
+    "@vcl/app-content-area": "^0.4.0",
+    "@vcl/build-demo": "^0.4.0",
+    "@vcl/button": "^0.4.0",
+    "@vcl/divider": "^0.4.0",
+    "@vcl/flex-layout": "^0.4.0",
+    "@vcl/form": "^0.4.0",
+    "@vcl/form-control-label": "^0.4.0",
+    "@vcl/icogram": "^0.4.0",
+    "@vcl/icon": "^0.4.0",
+    "@vcl/input": "^0.4.0",
+    "@vcl/loose-button-group": "^0.4.0",
+    "@vcl/preprocessor": "^0.4.0",
+    "@vcl/responsive-image": "^0.4.0",
+    "@vcl/size-modulation": "^0.4.0",
+    "@vcl/table": "^0.4.0",
+    "@vcl/typography": "^0.4.0",
+    "@vcl/utils": "^0.4.0",
+    "browser-sync": "^2.26.3",
+    "npm-run-all": "^4.1.5",
+    "pre-commit": "^1.2.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@vcl/theme": "^0.4.0",
+    "normalize.css": "^8.0.1"
+  },
   "keywords": [
     "css",
     "vcl",
@@ -54,12 +56,6 @@
     "panel"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "panel"
-    ],
     "categories": [
       {
         "title": "Containers",

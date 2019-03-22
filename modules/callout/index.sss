@@ -1,0 +1,37 @@
+@import "normalize.css"
+@import "@vcl/theme"
+
+/* Common styles for all types */
+
+.vclCallout
+  padding: 1.2em
+  margin-bottom: var(--block-elem-vertical-gap)
+  border: 1px solid var(--callout-border-color)
+  border-left-width: 0.35em
+  border-radius: 0.25em
+
+.vclCallout h4
+  margin-top: 0
+  margin-bottom: 0.25em
+
+.vclCallout p:last-child
+  margin-bottom: 0
+
+.vclCallout code
+  border-radius: 0.25em
+
+/* Semantic variations */
+
+.vclCallout
+  &.vclInfo
+    border-left-color: var(--info-dark-color)
+    & h4
+      color: var(--info-dark-color)
+  &.vclWarning
+    border-left-color: var(--warning-dark-color)
+    & h4
+      color: var(--warning-dark-color)
+  &.vclDanger
+    border-left-color: var(--danger-dark-color)
+    & h4
+      color: var(--danger-dark-color)

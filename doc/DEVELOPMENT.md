@@ -10,7 +10,7 @@ Use the [vcl-list](https://github.com/vcl/vcl/modules/list) as a prototype.
 
 ## package.json
 
-Have an `index.styl` or `index.css` file per module which is referenced in
+Have an `index.sss` or `index.css` file per module which is referenced in
 the `package.json` in the `style` property.
 
 Have the following custom fields in the `package.json` file:
@@ -29,48 +29,31 @@ Have the following custom fields in the `package.json` file:
      Determines the ordering of the menu item.
   - `category.ItemPriority`- Priority of the Item.
     Determines the display order within its category.
-- `vcl.needs` Specifies what this module needs.
-  (Most modules need a `theme` provider).
-- `vcl.provides` What this module provides.
-  Examples: `theme`, `theme-terms`, `button`.
 
 The categorization is used for the documentation generator
 [doc-gen](https://github.com/vcl/vcl/tools/doc-gen) to generate a static documentation
 including demos of your modules.
 
-### Soft Dependencies
+### Dependencies
 
-Soft dependencies via `devDependencies` are used to specify the
-dependencies of modules to run the demos.
+Use the `@import ...` syntax on top of ypur file if your module has dependencies to another module.
+Most modules need to import the `@vcl/theme`
 
-### Needs & Provides
+```sss
+@import "normalize.css"
+@import "@vcl/theme"
+@import "@vcl/button"
 
-`vcl.needs` and `vcl.provides` are used for package ordering when using the
-package compile feature of the
-[vcl-preprocessor](https://github.com/vcl/vcl/tools/preprocessor) which is also used by
-the documentation generator.
-Packages which are needed by others are put before them while pre-processing.
-
-#### Example
-
-Package           | `needs`         | `provides`
----               | ---              | ---
-vcl-button        | theme            | button
-vcl-dropdown      | theme, button    |
-vcl-default-theme |                  | theme
-
-Results in the following order:
-
-1. vcl-default-theme
-2. vcl-button
-3. vcl-dropdown
+.vclMyModule
+  color: green
+```
 
 ## CSS Syntax and Use
 
 Use the
-[white space significant syntax](https://www.npmjs.org/package/css-whitespace)
-or plain CSS. Normal CSS files end with the `.css` suffix, white space files
-end with the `.styl` suffix.
+[indent-based CSS syntax](https://github.com/postcss/sugarss)
+or plain CSS. Normal CSS files end with the `.css` suffix, sugar SS
+white space files end with the `.sss` suffix.
 
 ## Selectors, Class Naming and Units
 
@@ -129,12 +112,29 @@ For example the layout grid or input controls.
 
 ## Z-Indexes
 
-There is a carefully tuned order of z-indexes. Look at the modules sources
-for now to figure out what the right index is for new modules.
+There is a carefully tuned hierarchy of z-indexes as defined here:
+
+Value or Range             | Component or reserved Range
+---                        | ---
+1                          | divider
+1, 2, 3                    | gallery
+1                          | input group
+1, 2                       | process nav
+1, 2                       | progress bar
+5                          | popover
+9                          | process nav
+10                         | drawer
+10                         | info-overlay
+180, 199                   | zoom-index
+200 … 299                  | dropdown
+300 (backdrop), 401 … 498  | layer
+250                        | loading-layer
+499, 500                   | tooltip
+600                        | nag
 
 ## Responsive CSS via Media Queries
 
-Try to prevent them!
+Try to prevent them and let the app developer add them as needed!
 We believe that HTML structures and CSS rules should be as simple as possible
 to use and this requires them to have a deterministic behavior;
 In most cases the “automagical” nature of implicit media
@@ -170,12 +170,22 @@ level variant. The primary variant always goes without modifier.
 - Have at least one example with proper
   [WAI-ARIA](http://www.w3.org/WAI/intro/aria) plumbing.
 - You can neglect semantic HTML due to that.
-- Use inline CSS via the `style` attribute for rules that are only
-  required for the demo and not intended to be applies by the user.
+- Create a `demo.css` in the module root for additional styling of the demo. 
+  Do not forget to import the module style in `index.sss` or `index.css`.
+
+```sss
+@import "@vcl/some-required-dep-for-the-demo"
+@import "./index.sss"
+
+.demoSpecificStuff
+  color: red
+```
+
 
 # Development
 
-GIT clone vcl and use the following npm scripts:
+Clone the VCL's monorepo, enter the folder of the module you want to work on
+and use the following npm scripts:
 
 * `npm start` - starts a web server and opens the examples
   (browsersync enabled).
@@ -183,7 +193,7 @@ GIT clone vcl and use the following npm scripts:
 
 # Theming
 
-Themes like the [default theme](https://github.com/vcl/vcl/themes/default-theme) just
+Themes like the [default theme](https://github.com/vcl/vcl/themes/theme) just
 define variables which are expected to be set by the modules in scope of it.
 A theme can be for a single module or a collection of modules.
 In order to create a new theme it may be sensible to just extend/ override
@@ -206,8 +216,8 @@ In general, at least the following should be supported and tested:
 
 A similar and partly compatible approach is pursued by:
 
-- [atomify-css](https://github.com/atomify/atomify-css),
-- [SUITCSS](https://github.com/suitcss).
+- [atomify-css](https://github.com/atomify/atomify-css) which is abandoned,
+- [SUITCSS](https://github.com/suitcss) which is outdated.
 
 # Contributing
 

@@ -1,0 +1,77 @@
+@import "normalize.css"
+@import "@vcl/theme"
+
+
+/* Chapter level header */
+
+.vclMasterHeader
+  text-align: center
+  line-height: 1
+  margin: 0
+  margin-top: 3.3em
+  margin-bottom: 1em
+  margin-right: auto
+  margin-left: auto
+  & h1
+    font-size: 3em
+    font-weight: bold
+    line-height: 1
+    margin-bottom: 0.8em
+  & h2
+    font-size: 1.9em
+    font-weight: bold
+    line-height: 1
+    margin-bottom: 0.8em
+  & p
+    font-size: 1.8em
+    font-weight: bold
+    line-height: 1
+
+/* Article header */
+
+.vclArticleHeader
+  border-bottom-color: var(--article-header-border-color)
+  overflow: hidden /* Hide underline if floated elements are present */
+  margin-bottom: 0
+  line-height: 1.22em
+  display: block
+  border-bottom-width: 1px
+  border-bottom-style: solid
+  margin-top: 1.2em
+  margin-bottom: 1.2em
+  & .vclArticleSubHeader /* small sub header / tagline */
+    color: var(--article-header-tagline-color)
+    font-weight: 500
+    margin-left: 0.4em
+    margin-bottom: 0.1em
+    display: inline
+    font-size: 0.65em
+
+/* Article */
+
+.vclArticle
+  border: 0
+  margin-bottom: var(--block-elem-vertical-gap)
+
+/* Automatic numbering of sectionized content */
+
+.vclSectAutoNumbering,
+.vclSectAutoNumberingReset
+  counter-reset: sectCounterH1
+
+.vclSectAutoNumbering
+  & h1
+    counter-increment: sectCounterH1
+    counter-reset: sectCounterH2
+    &:before
+      content: counter(sectCounterH1) "\0000a0"
+  & h2
+    counter-increment: sectCounterH2
+    counter-reset: sectCounterH3
+    &:before
+      content: counter(sectCounterH1) "." counter(sectCounterH2) "\0000a0"
+  & h3
+    counter-increment: sectCounterH3
+    &:before
+      content: counter(sectCounterH1) "." counter(sectCounterH2) "." counter(sectCounterH3) "\0000a0"
+      counter-reset: sectCounterH4

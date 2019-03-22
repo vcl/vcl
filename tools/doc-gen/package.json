@@ -1,13 +1,14 @@
 {
   "name": "@vcl/doc-gen",
-  "version": "0.2.10",
+  "version": "0.4.0",
   "description": "VCL Documentation Generator",
   "main": "docgen.js",
   "bin": {
-    "vcl-doc-gen": "./bin/docgen.js"
+    "vcl-doc-gen": "./docgen-cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css": "vcl-preprocessor styles.sss styles.css",
+    "bundle-webcomponents": "polymer build"
   },
   "keywords": [
     "vcl",
@@ -29,12 +30,46 @@
     "url": "https://github.com/vcl/doc-gen/issues"
   },
   "dependencies": {
-    "@vcl/doc-client": "^0.3.4",
-    "@vcl/preprocessor": "^0.2.5",
-    "debug": "^3.1.0",
-    "lodash": "^4.17.10",
-    "marked": "^0.4.0",
-    "minimist": "^1.2.0",
-    "resolve": "^1.8.1"
+    "@vcl/preprocessor": "^0.4.0",
+    "debug": "^4.1.1",
+    "lodash": "^4.17.11",
+    "marked": "^0.6.1",
+    "resolve": "^1.10.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2",
+    "@polymer/app-route": "^3.0.2",
+    "@polymer/polymer": "^3.1.0",
+    "@vcl/adv-text-structure": "^0.4.0",
+    "@vcl/app-area": "^0.4.0",
+    "@vcl/app-content-area": "^0.4.0",
+    "@vcl/button": "^0.4.0",
+    "@vcl/container": "^0.4.0",
+    "@vcl/data-list": "^0.4.0",
+    "@vcl/embedded-input-button": "^0.4.0",
+    "@vcl/flex-layout": "^0.4.0",
+    "@vcl/font-awesome": "^0.4.0",
+    "@vcl/grid": "^0.4.0",
+    "@vcl/gulp-vcl-preprocessor": "^0.2.3",
+    "@vcl/icogram": "^0.4.0",
+    "@vcl/icon": "^0.4.0",
+    "@vcl/input": "^0.4.0",
+    "@vcl/input-group": "^0.4.0",
+    "@vcl/label": "^0.4.0",
+    "@vcl/layout-spans": "^0.4.0",
+    "@vcl/list": "^0.4.0",
+    "@vcl/logo": "^0.4.0",
+    "@vcl/navigation": "^0.4.0",
+    "@vcl/notification": "^0.4.0",
+    "@vcl/scrollbar": "^0.4.0",
+    "@vcl/tab-nav": "^0.4.0",
+    "@vcl/table": "^0.4.0",
+    "@vcl/theme": "^0.4.0",
+    "@vcl/toolbar": "^0.4.0",
+    "@vcl/typography": "^0.4.0",
+    "@vcl/utils": "^0.4.0",
+    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "normalize.css": "^8.0.1",
+    "polymer-cli": "^1.9.7"
   }
 }

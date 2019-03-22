@@ -1,39 +1,14 @@
 # [VCL](https://vcl.github.io/) tutorial
 
-A short tutorial showing how to create VCL builds based on the collection of
-[core modules](https://github.com/vcl/vcl/modules/core-modules),
+Short tutorials showing how to create VCL builds based on the collection of
+[core modules](../../modules),
 how to style a web page with it and how to run a single component demo.
 
-## How to build a set of VCL Modules
 
-0.  You will need a current version of node.JS and npm installed
-    because all VCL modules are managed through npm.
+## Tutorials
 
-1.  Clone the doc repo from Github and navigate to the `tutorial` directory.
-
-    `$ git clone https://github.com/vcl/vcl.git && cd vcl/doc/tutorial`
-
-2.  As you can see the folder contains several files and a folder:
-  * `package.json` for this tutorial listing all required VCL and other NPM modules.
-  * `index.html` is an example website, you can use later.
-  * `index.styl` is the index file which just includes other modules and files using `@import`.
-  * `vcl-custom.styl` is a file where one can add custom rules or override VCL rules.
-  * `vcl-var-override.styl` is a file where variables of VCL modules can be re-defined before they are compiled.
-
-3.  Open a terminal and execute `npm install` from the `tutorial` folder.
-    After that a folder `node_modules` is created which contains all VCL modules specified in the `package.json`.
-
-4.  Install the vcl-preprocessor command line tool:
-
-    `npm install -g vcl-preprocessor`
-
-5.  From the tutorial folder run the VCL preprocessor to create a VCL build:
-
-    `vcl-preprocessor index.styl vcl.css`
-
-    You should see "✔ Succesfully compiled input to vcl.css" in the terminal if everything is fine.
-
-6. Open the `index.html` to see the results. You can also run `npm start` to open it in your default browser.
+- [vcl preprocessor cli](preprocessor-cli)
+- [webpack](webpack)
 
 
 ## Styling a Web Page with the VCL
@@ -74,12 +49,12 @@ The search input is more complex and actually a mashup of multiple VCL component
 ```html
 <div class="vclInputGroupEmb">
   <span class="vclPrepended">
-    <div class="vclIcon fa fa-search"></div>
+    <div class="vclIcon fas fa-search"></div>
   </span>
   <input class="vclInput vclNoBorder vclPrepItem vclAppItem searchInput" placeholder="Search Posts" type="text">
   <button class="vclButton vclTransparent vclSquare vclAppended">
      <div class="vclIcogram">
-       <div class="vclIcon fa fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
+       <div class="vclIcon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
      </div>
   </button>
 </div>
@@ -88,26 +63,3 @@ The search input is more complex and actually a mashup of multiple VCL component
 In the same manner, all VCL styles are used.
 You can find out more on the available modules, their classes and
 purpose in the [module browser](https://vcl.github.io/).
-
-## How to run a Component's Demo
-
-You might want to know what a component might look like.
-Therefore you can build a component demo.
-In this tutorial d a demo for the vcl-gallery component is opened.
-
-0.  Switch to the directory of the component, you want to build.
-    For this example switch to:
-    `./tutorial/node_modules/vcl-gallery`
-
-1.  Now install the sub-packages needed for building a demo. Since these are
-   `devDependencies` they are not automatically downloaded in sub-folders.
-    To run the demo, run:
-
-    `npm install`
-
-2.  After installing the required packages, run from vcl-gallery, run:
-
-    `npm start`
-
-If it was successful, you should now have a folder build in vcl-gallery.
-You can now access the demo on [localhost](http://localhost:8077/example.html).

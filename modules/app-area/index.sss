@@ -1,0 +1,22 @@
+@import "normalize.css"
+@import "@vcl/theme"
+@import "./viewport.css"
+
+.vclViewport
+  margin: 0 /* override user agent style for body tag */
+  min-height: 100vh
+  background-color: var(--app-viewport-bg-color)
+
+.vclViewportBg
+  background-color: var(--app-viewport-bg-color)
+
+.vclApp
+  background-color: var(--app-area-bg-color)
+  max-width: var(--app-area-max-width)
+  min-width: var(--app-area-min-width)
+  margin-left: auto
+  margin-right: auto
+  clear: fix
+
+.vclLayoutWidth
+  max-width: var(--app-area-max-width)

@@ -1,0 +1,54 @@
+@import "normalize.css"
+@import "@vcl/theme"
+
+
+.vclTooltip
+  display: inline-block
+  position: absolute
+  & .vclTooltipContent
+    z-index: 500
+    font-size: 0.98em
+    border-style: solid
+    border-width: 1px
+    border-color: var(--tooltip-border-color)
+    border-radius: 4px
+    color: var(--tooltip-color)
+    background-color: var(--tooltip-bg-color)
+    box-shadow: 0px 0px 4px var(--tooltip-shadow-color)
+    padding: 0.3em 0.6em
+
+.vclArrowPointer
+  z-index: 499
+  position: absolute
+  background-color: var(--tooltip-bg-color)
+  margin: 0.5px 0px 0px
+  width: 0.56em
+  height: 0.56em
+  border-style: solid
+  border-color: var(--tooltip-border-color)
+  transform: translateX(-50%) translateY(-50%) rotate(45deg)
+  pointer-events: none
+
+.vclArrowPointerBottom
+  & .vclArrowPointer
+    left: 50%
+    top: 99%
+    border-width: 0 1px 1px 0
+
+.vclArrowPointerRight
+  & .vclArrowPointer
+    left: 99%
+    top: 50%
+    border-width: 1px 1px 0 0
+
+.vclArrowPointerLeft
+  & .vclArrowPointer
+    left: 1%
+    top: 50%
+    border-width: 0 0 1px 1px
+
+.vclArrowPointerTop
+  & .vclArrowPointer
+    left: 50%
+    top: 1%
+    border-width: 1px 0 0 1px

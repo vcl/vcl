@@ -1,0 +1,29 @@
+@import "normalize.css"
+@import "@vcl/theme"
+@import "@vcl/icogram"
+
+.vclRating
+  height: var(--input-height)
+  line-height: var(--input-line-height)
+  box-sizing: border-box
+  font-family: inherit
+  vertical-align: middle
+  display: inline-flex
+  align-items: baseline
+  vertical-align: middle
+  margin-bottom: var(--form-control-vertical-gap)
+  &.vclDisabled
+    & .vclRatingItem:hover
+      color: var(--rating-item-disabled-color)
+      cursor: initial
+  & .vclRatingItem
+    color: var(--rating-item-color)
+    padding: 0.4em 0.3em
+    font-size: 1.4em
+  & .vclRatingItem:hover
+    cursor: pointer
+  & .vclRatingItem:focus
+    color: var(--rating-item-highlighted-color)
+    outline: none
+  & .vclRatingItem.vclRatingItemHighlighted
+    color: var(--rating-item-highlighted-color)

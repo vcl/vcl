@@ -1,0 +1,46 @@
+@import "@vcl/theme"
+
+
+.vclCornerRibbon
+  width: 16em
+  position: absolute
+  top: 2.5em
+  left: -5em
+  text-align: center
+  line-height: 2.5em
+  letter-spacing: 1px
+  background-color: var(--ribbon-bg-color)
+  color: var(--ribbon-color)
+  transform: rotate(-45deg)
+
+.vclCornerRibbon.vclSticky
+  position: fixed
+
+.vclCornerRibbon.vclShadow
+  box-shadow: 0 0 3px var(--ribbon-shadow-color)
+
+/* Different positions */
+
+.vclCornerRibbon.vclTopLeft
+  top: 2.5em
+  left: -5em
+  transform: rotate(-45deg)
+
+.vclCornerRibbon.vclTopRight
+  top: 2.5em
+  right: -5em
+  left: auto
+  transform: rotate(45deg)
+
+.vclCornerRibbon.vclBottomLeft
+  top: auto
+  bottom: 2.5em
+  left: -5em
+  transform: rotate(45deg)
+
+.vclCornerRibbon.vclBottomRight
+  top: auto
+  right: -5em
+  bottom: 2.5em
+  left: auto
+  transform: rotate(-45deg)

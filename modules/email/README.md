@@ -8,6 +8,7 @@ Inspired by (https://github.com/mailgun/transactional-email-templates).
 
 - Is responsive with two break points 640px and 1024px viewport width.
 - Tries to address some of the infinite quirks of email clients.
+- All rules within media queries for smaller screens are `!important` to survive CSS inlining.
 
 ## Usage
 

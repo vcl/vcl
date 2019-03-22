@@ -1,0 +1,91 @@
+@import "normalize.css"
+@import "@vcl/theme"
+@import "@vcl/icogram"
+
+/* Commons */
+.vclNavigation
+  margin-bottom: var(--block-elem-vertical-gap)
+  background-color: var(--navigation-bg-color)
+  position: relative
+  & ul
+    flex-wrap: wrap
+    padding: 0
+    margin: 0
+    list-style: none
+  & .vclNavigationHeading,
+  & .vclNavigationHeading:hover
+    color: var(--navigation-heading-color)
+    background-color: var(--navigation-heading-bg-color)
+    padding: 0.85em 1em
+    overflow: hidden
+    & > span
+      display: inline-block
+      font-weight: bold
+      font-size: 0.86em
+      white-space: nowrap
+  & .vclNavigationItem,
+  & .vclNavigationItem:hover,
+  & .vclNavigationItem:active
+    outline: 0
+    &.vclDisabled
+      & .vclNavigationItemLabel
+        color: var(--navigation-item-disabled-color)
+        background-color: var(--navigation-item-disabled-bg-color)
+        cursor: default
+  & .vclNavigationItemLabel
+    margin-right: 0
+    color: inherit
+    outline: 0
+    text-decoration: none
+    display: block
+    padding: 0.85em 1.25em
+    cursor: pointer
+    font-size: 0.98em
+    font-weight: normal
+    overflow: hidden
+    & .vclText
+      letter-spacing: 1px
+      white-space: nowrap
+  & .vclClose
+    & .vclNavigation
+      display: none
+
+  /* Nested vertical menus */
+  & .vclNavigation
+    margin-bottom: 0
+    & .vclNavigationItem
+      & .vclNavigationItemLabel
+        font-size: 0.98em
+        padding-left: 1.5em
+      & .vclNavigation
+        & .vclNavigationItem
+          & .vclNavigationItemLabel
+            padding-left: 2.5em
+        & .vclNavigation
+          & .vclNavigationItem
+            & .vclNavigationItemLabel
+              padding-left: 3.5em
+
+/* Horizontal */
+.vclNavigation
+  & .vclLayoutHorizontal
+    flex-wrap: nowrap
+    & .vclNavigationItemLabel
+      padding: 0.85em 1em
+      & .vclText
+        letter-spacing: 1px
+
+/* 1st level coloring */
+.vclNavigation
+  & .vclNavigationItem
+    color: var(--navigation-item-1st-level-color)
+    background-color: var(--navigation-item-1st-level-bg-color)
+    & .vclNavigationItemLabel
+      &:hover,
+      &:focus
+        color: var(--navigation-item-1st-level-hover-color)
+        background-color: var(--navigation-item-1st-level-hover-bg-color)
+    &.vclSelected
+      & > .vclNavigationItemLabel
+        color: var(--navigation-item-1st-level-selected-color)
+        background-color: var(--navigation-item-1st-level-selected-bg-color)

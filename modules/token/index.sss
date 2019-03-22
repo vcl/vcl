@@ -1,0 +1,59 @@
+@import "normalize.css"
+@import "@vcl/theme"
+@import "@vcl/button"
+
+.vclToken
+  box-sizing: border-box
+  user-select: none
+  display: inline-flex
+  flex-direction: row
+  align-items: center
+  cursor: pointer
+  line-height: 2.1em
+  padding: 0
+  margin-top: 0
+  margin-right: 0.5em
+  margin-left: 0
+  margin-bottom: 0.3em
+  font-weight: normal
+  font-size: 95%
+  white-space: nowrap
+  border-radius: 0.25em
+  border-width: 1px
+  border-style: solid
+  border-color: var(--token-border-color)
+  color: var(--token-color)
+  background-color: var(--token-bg-color)
+  & .vclIcogram
+    line-height: 1
+  &:empty
+    display: none
+  &:hover
+    border-color: var(--token-border-hover-color)
+  &.vclSelected
+    border-color: var(--token-border-selected-color)
+    background-color: var(--token-bg-selected-color)
+    color: var(--token-selected-color)
+  &.vclHighlighted
+    border-color: var(--token-border-highlighted-color)
+    background-color: var(--token-bg-highlighted-color)
+    color: var(--token-highlighted-color)
+  & .vclTokenLabel:first-child
+    margin-left: 0.3em
+  & .vclTokenLabel:last-child
+    margin-right: 0.3em
+  & .vclButton
+    padding: 0 0.8em
+    height: 100%
+    font-size: 0.8em
+    min-width: 2em
+    min-height: 2em
+    color: var(--token-remove-button-label-color)
+
+.vclTokenContainer
+  line-height: initial
+  & > .vclToken
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0

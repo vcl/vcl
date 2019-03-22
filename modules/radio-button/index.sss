@@ -1,0 +1,32 @@
+@import "normalize.css"
+@import "@vcl/theme"
+@import "@vcl/icon"
+
+.vclRadioButton
+  cursor: pointer
+  outline: none
+  display: inline-block
+  & > .vclFormControlLabel
+    display: inline-block
+  & > .vclIcon
+    color: var(--radio-button-color)
+    display: inline-block
+    min-width: 1.5em
+    text-align: center
+    padding-right: 0.4em
+    padding-left: 0.4em
+    font-size: var(--radio-button-icon-size)
+  &:hover
+    & > .vclIcon
+      color: var(--radio-button-hover-color)
+  &:focus
+    & > .vclIcon
+      color: var(--radio-button-focus-color)
+  &.vclDisabled
+    & > .vclIcon
+      color: var(--radio-button-disabled-color)
+
+.vclFormControlLabel:hover
+  & .vclRadioButton:not(.vclDisabled)
+    & .vclIcon
+      color: var(--radio-button-focus-color)

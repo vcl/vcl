@@ -1,0 +1,38 @@
+@import "normalize.css"
+@import "@vcl/theme"
+@import "@vcl/icon"
+
+.vclBreadcrumbNav
+  & ol
+    list-style: none
+    list-style-type: none
+    overflow: hidden
+    padding: 0
+    margin: 0
+    margin-bottom: var(--block-elem-vertical-gap)
+    display: flex
+    flex-direction: row
+    align-items: center
+    & li
+      font-weight: bold
+      font-size: 0.98em
+      & a
+        color: var(--breadcrumb-label-color)
+        display: inline-block
+      & .vclBreadcrumbNavItemLabel
+        display: inline-block
+        & +.vclBreadcrumbNavDivider
+          color: var(--breadcrumb-divider-color)
+          display: inline-block
+          padding-left: 0.2em
+          padding-right: 0.2em
+      & a:hover,
+      & a:focus
+        color: var(--breadcrumb-label-hover-color)
+      &.vclSelected
+        cursor: default
+        background: transparent
+        border: 0
+        & a,
+        & .vclBreadcrumbNavItemLabel
+          color: var(--breadcrumb-label-selected-color)

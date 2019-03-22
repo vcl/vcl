@@ -1,15 +1,16 @@
 {
   "name": "@vcl/app-area",
   "description": "The background and layout of the app's viewport and app area",
-  "version": "0.2.1",
+  "version": "0.4.0",
   "main": "package.json",
   "scripts": {
-    "test": "VCL_NO_PIPE=1 vcl-preprocessor --verbose ./package.json ./build/test.css",
-    "browsersync": "node_modules/.bin/browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
-    "build-demo": "node node_modules/@vcl/build-demo/index.js",
-    "start": "npm run browsersync & npm run build-demo"
+    "test": "vcl-preprocessor ./index.sss ./build/test.css",
+    "browsersync": "browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
+    "build-demo": "vcl-build-demo",
+    "start": "npm-run-all --parallel build-demo browsersync"
   },
-  "style": "index.styl",
+  "style": "index.sss",
+  "demoStyle": "demo.sss",
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",
@@ -23,18 +24,19 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "normalize.css": "^7.0.0",
-    "pre-commit": "^1.1.2",
-    "@vcl/app-content-area": "^0.2.0",
-    "@vcl/app-footer": "^0.2.0",
-    "@vcl/build-demo": "^0.3.1",
-    "@vcl/default-theme": "^0.2.0",
-    "@vcl/default-theme-terms": "^0.2.0",
-    "@vcl/preprocessor": "0.2.2",
-    "@vcl/typography": "^0.2.0",
-    "browser-sync": "^2.24.7"
+    "@vcl/app-content-area": "^0.4.0",
+    "@vcl/app-footer": "^0.4.0",
+    "@vcl/build-demo": "^0.4.0",
+    "@vcl/preprocessor": "^0.4.0",
+    "@vcl/typography": "^0.4.0",
+    "browser-sync": "^2.26.3",
+    "npm-run-all": "^4.1.5",
+    "pre-commit": "^1.2.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@vcl/theme": "^0.4.0",
+    "normalize.css": "^8.0.1"
+  },
   "keywords": [
     "css",
     "vcl",
@@ -43,12 +45,6 @@
     "area"
   ],
   "vcl": {
-    "needs": [
-      "theme"
-    ],
-    "provides": [
-      "app-area"
-    ],
     "categories": [
       {
         "title": "Areas",

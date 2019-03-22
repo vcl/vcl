@@ -1,0 +1,253 @@
+@import "normalize.css"
+@import "@vcl/theme"
+
+/* flexbox based layout primitives */
+
+.vclLayoutHorizontal,
+.vclLayoutVertical,
+[layout][horizontal],
+[layout][vertical]
+  display: flex
+
+.vclLayoutHorizontal.vclLayoutInline,
+.vclLayoutVertical.vclLayoutInline,
+[layout][horizontal][inline],
+[layout][vertical][inline]
+  display: inline-flex
+
+.vclLayoutHorizontal,
+[layout][horizontal]
+  flex-direction: row
+
+.vclLayoutHorizontal.vclLayoutReverse,
+[layout][horizontal][reverse]
+  flex-direction: row-reverse
+
+.vclLayoutVertical,
+[layout][vertical]
+  flex-direction: column
+
+.vclLayoutVertical.vclLayoutReverse,
+[layout][vertical][reverse]
+  flex-direction: column-reverse
+
+.vclLayoutWrap,
+[layout][wrap]
+  flex-wrap: wrap
+
+.vclLayoutWrapReverse,
+[layout][wrap-reverse]
+  flex-wrap: wrap-reverse
+
+.vclLayoutFlex,
+[flex]
+  flex: 1
+  flex-basis: 0.000000001px
+
+.vclLayoutVertical > vclLayoutFlex.vclLayoutAutoVertical,
+[vertical][layout] > [flex][auto-vertical]
+  flex-basis: auto
+
+.vclLayoutFlex.vclLayoutAuto,
+[flex][auto]
+  flex-basis: auto
+
+.vclLayoutFlex.vclLayoutNone,
+[flex][none]
+  flex: none
+
+.vclLayoutFlex.vclLayout1,
+[flex][one]
+  flex: 1
+
+.vclLayoutFlex.vclLayout2,
+[flex][two]
+  flex: 2
+
+.vclLayoutFlex.vclLayout3,
+[flex][three]
+  flex: 3
+
+.vclLayoutFlex.vclLayout4,
+[flex][four]
+  flex: 4
+
+.vclLayoutFlex.vclLayout5,
+[flex][five]
+  flex: 5
+
+.vclLayoutFlex.vclLayout6,
+[flex][six]
+  flex: 6
+
+.vclLayoutFlex.vclLayout7,
+[flex][seven]
+  flex: 7
+
+.vclLayoutFlex.vclLayout8,
+[flex][eight]
+  flex: 8
+
+.vclLayoutFlex.vclLayout9,
+[flex][nine]
+  flex: 9
+
+.vclLayoutFlex.vclLayout10,
+[flex][ten]
+  flex: 10
+
+.vclLayoutFlex.vclLayout11,
+[flex][eleven]
+  flex: 11
+
+.vclLayoutFlex.vclLayout12,
+[flex][twelve]
+  flex: 12
+
+/* alignment in cross axis */
+
+.vclLayoutStart,
+[layout][start]
+  align-items: flex-start
+
+.vclLayoutCenter,
+.vclLayoutCenterCenter,
+[layout][center],
+[layout][center-center]
+  align-items: center
+
+.vclLayoutEnd,
+[layout][end]
+  align-items: flex-end
+
+/* alignment in main axis */
+
+.vclLayoutStartJustified,
+[layout][start-justified]
+  justify-content: flex-start
+
+.vclLayoutCenterJustified,
+.vclLayoutCenterCenter,
+[layout][center-justified],
+[layout][center-center]
+  justify-content: center
+
+.vclLayoutEndJustified,
+[layout][end-justified]
+  justify-content: flex-end
+
+.vclLayoutAroundJustified,
+[layout][around-justified]
+  justify-content: space-around
+
+.vclLayoutEvenlyJustified,
+[layout][evenly-justified]
+  justify-content: space-evenly
+
+.vclLayoutJustified,
+[layout][justified]
+  justify-content: space-between
+
+/* self alignment */
+
+.vclLayoutSelfStart,
+[self-start]
+  align-self: flex-start
+
+.vclLayoutSelfCenter,
+[self-center]
+  align-self: center
+
+.vclLayoutSelfEnd,
+[self-end]
+  align-self: flex-end
+
+.vclLayoutSelfStretch,
+[self-stretch]
+  align-self: stretch
+
+/* flexbox based layout grid */
+
+.vclLayoutWrapContainer
+  overflow: hidden
+
+.vclLayoutGridRow
+  width: auto
+  box-sizing: border-box
+  & .vclLayoutGridRow
+    margin-left: -var(--flex-layout-half-gutter-width)
+    margin-right: -var(--flex-layout-half-gutter-width)
+  & > .vclLayoutGridCell
+    box-sizing: border-box
+    padding-left: var(--flex-layout-half-gutter-width)
+    padding-right: var(--flex-layout-half-gutter-width)
+    &:last-child
+      padding-right: 0
+    &:first-child
+      padding-left: 0
+  &.vclLayoutWrappingRow
+    margin-left: -var(--flex-layout-half-gutter-width)
+    width: calc(100% + var(--flex-layout-half-gutter-width) + var(--flex-layout-half-gutter-width))
+    & > .vclLayoutGridCell
+      &:last-child
+        padding-right: var(--flex-layout-half-gutter-width)
+      &:first-child
+        padding-left: var(--flex-layout-half-gutter-width)
+
+/* other layout helpers */
+
+.vclLayoutBlock,
+[block]
+  display: block
+
+/* other helpful properties */
+
+.vclLayoutInvisible
+  visibility: hidden !important
+
+.vclLayoutHidden
+  display: none !important
+
+.vclLayoutRelative
+  position: relative
+
+.vclLayoutFit
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+/* fixed positioning */
+
+.vclLayoutFixedBottom,
+.vclLayoutFixedLeft,
+.vclLayoutFixedRight,
+.vclLayoutFixedTop
+  position: fixed
+
+.vclLayoutFixedTop
+  top: 0
+  left: 0
+  right: 0
+
+.vclLayoutFixedRight
+  top: 0
+  right: 0
+  bottom: 0
+
+.vclLayoutFixedBottom
+  right: 0
+  bottom: 0
+  left: 0
+
+.vclLayoutFixedLeft
+  top: 0
+  bottom: 0
+  left: 0
+
+.vclLayoutFullBleed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0

@@ -28,7 +28,6 @@ phrase for filtering the selectable items.
 ## Classes
 
 - `vclSelect`
-- `vclSelectCurrentValue`
 
 ## Modifiers
 
