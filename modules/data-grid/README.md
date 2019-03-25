@@ -6,7 +6,7 @@ Data grid to display tabular data.
 
 A grid for tabular data based on a CSS flexbox.
 The main limitation compared to the HTML `table` element is the
-absence of col- and rowspans.
+absence of col- and row-spans.
 
 ## Usage
 
