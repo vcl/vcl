@@ -31,7 +31,6 @@ Second level toolbar with textual title in the middle.
 
 [secondary example](/demo/example-secondary.html)
 
-
 ## Classes
 
 - `vclToolbar`
@@ -39,7 +38,7 @@ Second level toolbar with textual title in the middle.
 
 ## Modifiers
 
-- `vclSecondary`: Make is appear less important.
+- `vclSecondary`: Make is appear less important (level 2).
 - `vclTransparent`: Make the background color transparent.
 
 ## Variables
