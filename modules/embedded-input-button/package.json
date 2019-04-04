@@ -1,7 +1,7 @@
 {
   "name": "@vcl/embedded-input-button",
   "description": "Buttons, icons and plain text labels embeddable in text input elements",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
