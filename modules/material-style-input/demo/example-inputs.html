@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<input class="vclInput" type="text" autocomplete="off" value="I'm an HTML input">
+
+<input class="vclInput" type="text" disabled="disabled" autocomplete="off" value="I'm disabled">
+
+<input class="vclInput vclFocused" type="text" autocomplete="off" placeholder="I'm focused">
+
+<div class="vclInputControlGroup">
+  <input class="vclInput vclError" type="text" placeholder="I'm in an error state">
+  <div class="vclFormControlHint vclError">
+    Error Hint
+  </div>
+</div>
+
+<textarea class="vclInput">I'm a text area</textarea>
+
+<select>
+  <option selected="selected" value=""></option>
+  <option value="AT">Austria</option>
+  <option value="GE">Germany</option>
+  <option value="UK">United Kingdom</option>
+</select>
+
+<br>
+
+<select multiple="multiple" size="7">
+  <option>Wellness</option>
+  <option>Music</option>
+  <option>TV</option>
+  <option>Eating</option>
+  <option>Cars</option>
+  <option>Gaming</option>
+  <option>Diving</option>
+  <option>Cooking</option>
+</select>
+
+<div class="vclInputGroupEmb">
+  <div class="vclPrepended">
+    <div class="vclIcon fas fa-search"></div>
+  </div>
+  <input class="vclInput vclPrepItem vclAppItem" placeholder="Postcode, City, Name of the Workshop" type="text">
+  <button class="vclButton vclTransparent vclSquare vclAppended">
+    <div class="vclIcogram">
+      <div class="vclIcon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
+    </div>
+  </button>
+</div>
