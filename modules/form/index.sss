@@ -8,14 +8,9 @@
 
 /* Inline and horizontal layouts */
 
-.vclForm.vclFormInline > *:first-child,
-.vclForm.vclFormInline > .vclFormInline:first-child
+.vclForm.vclFormInline *:first-child,
+.vclForm.vclFormInline .vclFormInline:first-child
   margin-left: 0
-
-.vclForm
-  &.vclFormInline
-    & > *
-      margin-left: 1em
 
 .vclForm.vclFormInline input,
 .vclForm.vclFormInline .vclInput,
@@ -54,18 +49,16 @@
   vertical-align: middle
   margin-bottom: var(--form-control-vertical-gap)
 
-.vclFormInlineControlGroup > input:first-child,
-.vclFormInlineControlGroup > .vclInput:first-child,
-.vclFormInlineControlGroup > label:first-child,
-.vclFormInlineControlGroup > .vclFormControlLabel:first-child
+.vclFormInlineControlGroup input:first-child,
+.vclFormInlineControlGroup .vclInput:first-child,
+.vclFormInlineControlGroup label:first-child,
+.vclFormInlineControlGroup .vclFormControlLabel:first-child
   margin-left: 0
 
-.vclFormInlineControlGroup > input,
-.vclFormInlineControlGroup > .vclInput,
-.vclFormInlineControlGroup > label,
-.vclFormInlineControlGroup > label > input,
-.vclFormInlineControlGroup > label > .vclInput,
-.vclFormInlineControlGroup > .vclFormControlLabel
+.vclFormInlineControlGroup input,
+.vclFormInlineControlGroup .vclInput,
+.vclFormInlineControlGroup label,
+.vclFormInlineControlGroup .vclFormControlLabel
   display: inline-block
   width: auto
   margin-bottom: 0

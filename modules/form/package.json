@@ -1,7 +1,7 @@
 {
   "name": "@vcl/form",
   "description": "Basic form layout variants and arrangement of form elements with labels",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
