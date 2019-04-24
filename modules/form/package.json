@@ -38,6 +38,8 @@
   },
   "dependencies": {
     "@vcl/theme": "^0.4.0",
+    "@vcl/icon": "^0.4.0",
+    "@vcl/icogram": "^0.4.0",
     "normalize.css": "^8.0.1"
   },
   "repository": {
