@@ -1,7 +1,7 @@
 {
   "name": "@vcl/form-control-label",
   "description": "Labels to describe form controls",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
@@ -33,7 +33,7 @@
     "pre-commit": "^1.2.2"
   },
   "dependencies": {
-    "@vcl/form": "^0.4.0",
+    "@vcl/form": "^0.4.1",
     "@vcl/theme": "^0.4.0",
     "normalize.css": "^8.0.1"
   },
