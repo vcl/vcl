@@ -1,7 +1,6 @@
 @import "normalize.css"
 @import "@vcl/theme"
 
-
 .vclForm,
 .vclForm.vclFormInline,
 .vclForm.vclFormHorizontal
@@ -33,17 +32,17 @@
 .vclForm.vclFormInline select,
 .vclForm.vclFormHorizontal select,
 .vclForm.vclFormInline .vclButtonGroup,
-.vclForm.vclFormInline .vclInputControlGroup,
+.vclForm.vclFormInline .vclFormControlGroup,
 .vclForm.vclFormInline .vclFormInline,
-.vclForm.vclFormHorizontal .vclInputInlineControlGroup
+.vclForm.vclFormHorizontal .vclFormInlineControlGroup
   display: inline-block
   margin-bottom: 0
   vertical-align: middle
 
-/* Control groups combine input controls and labels so that they are aligned
+/* A control group combines input controls and labels so that they are aligned
    like an atomic control. */
 
-.vclInputControlGroup
+.vclFormControlGroup
   margin-bottom: var(--form-control-vertical-gap)
   & input,
   & .vclInput,
@@ -51,22 +50,22 @@
   & .vclFormControlHint
     margin-bottom: 0
 
-.vclInputInlineControlGroup
+.vclFormInlineControlGroup
   vertical-align: middle
   margin-bottom: var(--form-control-vertical-gap)
 
-.vclInputInlineControlGroup > input:first-child,
-.vclInputInlineControlGroup > .vclInput:first-child,
-.vclInputInlineControlGroup > label:first-child,
-.vclInputInlineControlGroup > .vclFormControlLabel:first-child
+.vclFormInlineControlGroup > input:first-child,
+.vclFormInlineControlGroup > .vclInput:first-child,
+.vclFormInlineControlGroup > label:first-child,
+.vclFormInlineControlGroup > .vclFormControlLabel:first-child
   margin-left: 0
 
-.vclInputInlineControlGroup > input,
-.vclInputInlineControlGroup > .vclInput,
-.vclInputInlineControlGroup > label,
-.vclInputInlineControlGroup > label > input,
-.vclInputInlineControlGroup > label > .vclInput,
-.vclInputInlineControlGroup > .vclFormControlLabel
+.vclFormInlineControlGroup > input,
+.vclFormInlineControlGroup > .vclInput,
+.vclFormInlineControlGroup > label,
+.vclFormInlineControlGroup > label > input,
+.vclFormInlineControlGroup > label > .vclInput,
+.vclFormInlineControlGroup > .vclFormControlLabel
   display: inline-block
   width: auto
   margin-bottom: 0
@@ -74,12 +73,12 @@
   margin-right: 0.5em
   padding-right: 0.4em
 
-.vclInputInlineControlGroup.vclFormControlLabel
+.vclFormInlineControlGroup.vclFormControlLabel
   margin-top: 0
 
 /* Integration with fieldset component */
 
 legend
-  & + .vclInputControlGroup
+  & + .vclFormControlGroup
     margin-top: 2.0em
     -webkit-margin-top-collapse: separate

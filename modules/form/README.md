@@ -17,14 +17,14 @@ combined with the grid system and mixed with each other.
 
 ### Control Group
 
-The concept of a control group with `vclInputControlGroup` which groups an
+The concept of a control group with `vclFormControlGroup` which groups an
 input element together with a label so that they make up an atomic control.
 For example a label and a checkbox if such a combination should behave
 like a single control. The elements are aligned vertically.
 
 ### Inline Control Group
 
-`vclInputInlineControlGroup` is the same as the previous class but
+`vclFormInlineControlGroup` is the same as the previous class but
 label and control are aligned horizontally.
 
 ## Usage
@@ -52,8 +52,8 @@ and is optional.
 ## Classes
 
 - `vclForm`
-- `vclInputControlGroup`
-- `vclInputInlineControlGroup`
+- `vclFormControlGroup`
+- `vclFormInlineControlGroup`
 - `vclFormActionArea`
 
 ## Modifiers
