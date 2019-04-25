@@ -1,7 +1,7 @@
 {
   "name": "@vcl/material-style-input",
   "description": "Material style input",
-  "version": "0.4.0",
+  "version": "0.4.2",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
@@ -24,13 +24,13 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.0",
-    "@vcl/form": "^0.4.0",
-    "@vcl/input": "^0.4.0",
-    "@vcl/form-control-label": "^0.4.0",
-    "@vcl/embedded-input-button": "^0.4.1",
-    "@vcl/preprocessor": "^0.4.0",
-    "@vcl/typography": "^0.4.0",
+    "@vcl/build-demo": "^0.4.2",
+    "@vcl/embedded-input-button": "^0.4.2",
+    "@vcl/form": "^0.4.2",
+    "@vcl/form-control-label": "^0.4.2",
+    "@vcl/input": "^0.4.2",
+    "@vcl/preprocessor": "^0.4.2",
+    "@vcl/typography": "^0.4.2",
     "autoprefixer": "^9.5.0",
     "browser-sync": "^2.26.3",
     "gulp-postcss": "^8.0.0",
@@ -39,7 +39,7 @@
     "pre-commit": "^1.2.2"
   },
   "dependencies": {
-    "@vcl/theme": "^0.4.0",
+    "@vcl/theme": "^0.4.2",
     "normalize.css": "^8.0.1"
   },
   "repository": {

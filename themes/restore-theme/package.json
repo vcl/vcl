@@ -1,7 +1,7 @@
 {
   "name": "@vcl/restore-theme",
   "description": "The VCL Restore theme",
-  "version": "0.4.0",
+  "version": "0.4.2",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"
@@ -20,7 +20,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/preprocessor": "^0.4.0"
+    "@vcl/preprocessor": "^0.4.2"
   },
   "dependencies": {
     "@vcl/default-theme": "^0.4.0-beta.0"
