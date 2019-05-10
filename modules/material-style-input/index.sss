@@ -25,3 +25,96 @@ input:focus,
   border-top-width: 0
   border-left-width: 0
   border-right-width: 0
+
+.vclMaterial
+
+  // Remove placeholders, they are replaced by animated labels
+  & ::-webkit-input-placeholder, &::-webkit-input-placeholder
+    opacity: 0
+  & :-moz-placeholder, &:-moz-placeholder
+    opacity: 0
+  & ::-moz-placeholder, &::-moz-placeholder
+    opacity: 0
+  & :-ms-input-placeholder, &:-ms-input-placeholder
+    opacity: 0
+
+  & .vclInput
+    padding-left: 0
+    padding-right: 0
+
+  // For consistency, textarea has to be padded
+  & textarea
+    padding-top: 7px
+
+  & .vclFormControlLabel, &.vclFormControlLabel
+    // Should be above most elements
+    z-index: 1
+    // Should have the collapsed height
+    line-height: 8px
+    // No spacing needed
+    margin: 0
+
+  // Initial state with the label overlaying the input
+  &:not(.vclMultiSelect)
+    & .vclFormControlLabel, &.vclFormControlLabel
+      &:not(.vclFormControlLabelWrapping), &.vclFormControlLabelWrapping:before
+        position: relative
+        top: 22px
+        transition: all 400ms cubic-bezier(.25, .8, .25, 1)
+        opacity: 0.6
+        pointer-events: none
+
+      &.vclFormControlLabelWrapping:before
+        content: attr(data-label)
+
+  &.vclSelect, &.vclMultiSelect
+    & .vclFormControlLabel, &.vclFormControlLabel
+      &.vclFormControlLabelWrapping
+        position: relative
+
+      &.vclFormControlLabelWrapping:before
+        position: absolute
+        content: attr(data-label)
+        top: 19px
+        line-height: 0
+
+  &.vclMultiSelect
+    & .vclFormControlLabel, &.vclFormControlLabel
+      &.vclFormControlLabelWrapping
+        padding-top: 21px
+
+      &:not(.vclFormControlLabelWrapping), &.vclFormControlLabelWrapping:before
+        font-size: 10px
+        opacity: 0.6
+        padding-bottom: 9px
+
+      &.vclFormControlLabelWrapping:before
+        transition: all 400ms cubic-bezier(.25, .8, .25, 1)
+        top: 8px
+
+  // Prepended inputs require padding from left
+  & .vclPrependedLabel, &.vclPrependedLabel
+    & .vclFormControlLabel, &.vclFormControlLabel
+      &:not(.vclFormControlLabelWrapping)
+        left: 35px
+
+  // State when label is floating above the input
+  &:not(.vclMultiSelect)
+    & .vclInputActive, &.vclInputActive
+      & .vclFormControlLabel, &.vclFormControlLabel
+        &:not(.vclFormControlLabelWrapping), &.vclFormControlLabelWrapping:before
+          font-size: 10px
+          top: 0
+          pointer-events: unset
+
+  & .vclInputFocused, &.vclInputFocused
+    & .vclFormControlLabel, &.vclFormControlLabel
+      &:not(.vclFormControlLabelWrapping), &.vclFormControlLabelWrapping:before
+        color: var(--input-border-focus-color)
+        opacity: 1
+
+
+  // Fix select button position
+  &.vclSelect button
+    margin-top: 7px
+
