@@ -27,8 +27,6 @@ var yargs = require('yargs')
   .describe('source-map-inline', 'enable inline source maps')
   .describe('optimize', 'optimize css')
   .alias('optimize', 'o')
-  .describe('theme', 'use theme')
-  .alias('theme', 't')
   .count('verbose')
   .alias('V', 'verbose');
 
@@ -72,11 +70,6 @@ if (argv['source-map-inline']) {
   opts.sourceMap = true;
 }
 
-
-
-if (argv['theme']) {
-  opts.theme = argv['theme'];
-}
 
 if (process.stdin.isTTY) {
   var inputFile = argv._[0];
