@@ -1,7 +1,7 @@
 {
   "name": "@vcl/token-input",
   "description": "Multiple item input based on tokens",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
