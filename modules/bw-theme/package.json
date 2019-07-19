@@ -23,7 +23,7 @@
     "@vcl/default-theme": "^0.4.0-beta.0"
   },
   "devDependencies": {
-    "@vcl/preprocessor": "^0.4.2"
+    "@vcl/preprocessor": "^0.4.3"
   },
   "keywords": [
     "css",

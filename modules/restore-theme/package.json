@@ -20,10 +20,10 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/preprocessor": "^0.4.2"
+    "@vcl/preprocessor": "^0.4.3"
   },
   "dependencies": {
-    "@vcl/default-theme": "^0.4.0-beta.0"
+    "@vcl/theme": "^0.4.2"
   },
   "keywords": [
     "css",
