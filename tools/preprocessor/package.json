@@ -35,9 +35,9 @@
     "test": "jest ./test --coverage"
   },
   "dependencies": {
-    "autoprefixer": "^9.6.0",
+    "autoprefixer": "^9.6.1",
     "chalk": "^2.4.1",
-    "chokidar": "^3.0.1",
+    "chokidar": "^3.0.2",
     "cssnano": "^4.1.10",
     "debug": "^4.1.1",
     "make-dir": "^3.0.0",
@@ -46,14 +46,14 @@
     "postcss-clearfix": "^2.0.1",
     "postcss-color-function": "^4.1.0",
     "postcss-css-variables": "^0.13.0",
-    "postcss-hexrgba": "^1.0.1",
+    "postcss-hexrgba": "^1.0.2",
     "postcss-import": "12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-nesting": "^7.0.0",
-    "postcss-preset-env": "^6.4.0",
+    "postcss-preset-env": "^6.7.0",
     "sugarss": "^2.0.0",
     "unionfs": "^4.0.0",
-    "yargs": "^13.2.4"
+    "yargs": "^13.3.0"
   },
   "devDependencies": {
     "@vcl/core-modules": "^0.4.5",
