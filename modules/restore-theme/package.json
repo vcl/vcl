@@ -1,7 +1,7 @@
 {
   "name": "@vcl/restore-theme",
   "description": "The VCL Restore theme",
-  "version": "0.4.6",
+  "version": "0.5.0",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"
@@ -23,7 +23,7 @@
     "@vcl/preprocessor": "^0.4.6"
   },
   "dependencies": {
-    "@vcl/theme": "^0.4.6"
+    "@vcl/theme": "^0.5.0"
   },
   "keywords": [
     "css",

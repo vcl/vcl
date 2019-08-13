@@ -1,7 +1,7 @@
 {
   "name": "@vcl/theme",
   "description": "The VCL default theme",
-  "version": "0.4.6",
+  "version": "0.5.0",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
