@@ -1,36 +1,18 @@
 {
-  "name": "@vcl/vcl",
   "description": "The Visual Component Library",
-  "version": "0.4.0",
   "scripts": {
-    "bootstrap": "node_modules/.bin/lerna bootstrap",
-    "changed": "node_modules/.bin/lerna changed",
-    "tag": "node_modules/.bin/lerna version --no-push",
-    "publish": "node_modules/.bin/lerna publish from-git",
-    "test": "./scripts/test.sh",
-    "npm-mass-operations": "node scripts/npm_mass_operations.js",
-    "git-init-github-io": "cd vcl.github.io && npm run git-init",
-    "gen-github-io": "cd vcl.github.io && npm run gen-doc",
-    "push-github-io": "cd vcl.github.io && npm run git-push",
-    "git-init-presentation": "cd doc && npm run git-init-presentation",
-    "push-presentation": "cd doc && npm run git-push-presentation"
+    "bootstrap": "lerna bootstrap",
+    "changed": "lerna changed",
+    "version": "lerna version --no-push --conventional-commits",
+    "publish": "lerna publish from-git",
+    "test": "./scripts/test.sh"
   },
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",
     "url": "https://www.n-fuse.co"
   },
-  "contributors": [
-    {
-      "name": "Beniamin Bruda",
-      "email": "beniamin.bruda@n-fuse.co"
-    }
-  ],
   "license": "MIT",
-  "devDependencies": {
-    "cz-conventional-changelog": "^3.0.2",
-    "lerna": "^3.13.1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/vcl/vcl.git"
@@ -40,5 +22,9 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.0.2",
+    "lerna": "^3.13.1"
+  }
 }
