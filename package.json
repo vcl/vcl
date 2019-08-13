@@ -2,7 +2,6 @@
   "name": "@vcl/vcl",
   "description": "The Visual Component Library",
   "version": "0.4.0",
-  "main": "package.json",
   "scripts": {
     "bootstrap": "node_modules/.bin/lerna bootstrap",
     "changed": "node_modules/.bin/lerna changed",
@@ -19,7 +18,7 @@
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",
-    "url": "www.n-fuse.co"
+    "url": "https://www.n-fuse.co"
   },
   "contributors": [
     {
@@ -29,10 +28,17 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "cz-conventional-changelog": "^3.0.2",
     "lerna": "^3.13.1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/vcl/vcl.git"
-  }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {}
 }
