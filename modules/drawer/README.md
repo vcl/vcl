@@ -34,16 +34,15 @@ using the `vclDrawerRight` modifier.
 
 - `vclDrawerContainer`
 - `vclDrawer`
-- `vclDrawerOpen`
 - `vclDrawerContent`
 - `vclDrawerBackdrop`
-- `vclDrawerBackdropVisible`
 
 ## Modifiers
 
 - `vclDrawerOpen`: To open the panel.
 - `vclDrawerBackdropVisible`: Must be toggled for backdrop animation
 - `vclDrawerRight`: Drawer is rendered on the right side
+- `vclDrawerAnimations`: Enables drawer animations
 
 ## Variables
 
