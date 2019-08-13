@@ -1,7 +1,7 @@
 {
   "name": "@vcl/core-modules",
   "description": "A collection of VCL modules that we consider core",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"
@@ -38,7 +38,7 @@
     "@vcl/data-tree": "^0.5.3",
     "@vcl/date-picker": "^0.5.3",
     "@vcl/divider": "^0.5.3",
-    "@vcl/drawer": "^0.5.3",
+    "@vcl/drawer": "^0.5.4",
     "@vcl/dropdown": "^0.5.3",
     "@vcl/effects": "^0.5.3",
     "@vcl/embedded-input-button": "^0.5.3",

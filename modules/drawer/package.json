@@ -1,7 +1,7 @@
 {
   "name": "@vcl/drawer",
   "description": "Sliding sidebar",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
