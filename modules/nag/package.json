@@ -1,7 +1,7 @@
 {
   "name": "@vcl/nag",
   "description": "Overlay dialog which requires acknowledgement to go away",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
@@ -24,13 +24,13 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.5",
-    "@vcl/preprocessor": "^0.4.5",
+    "@vcl/build-demo": "^0.4.6",
+    "@vcl/preprocessor": "^0.4.6",
     "browser-sync": "^2.26.3",
     "npm-run-all": "^4.1.5"
   },
   "dependencies": {
-    "@vcl/theme": "^0.4.5",
+    "@vcl/theme": "^0.4.6",
     "normalize.css": "^8.0.1"
   },
   "repository": {

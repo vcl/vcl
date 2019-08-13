@@ -1,6 +1,6 @@
 {
   "name": "@vcl/preprocessor",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "The VCL preprocessor",
   "main": "index.js",
   "homepage": "https://github.com/vcl/preprocessor",
@@ -56,8 +56,8 @@
     "yargs": "^13.3.0"
   },
   "devDependencies": {
-    "@vcl/core-modules": "^0.4.5",
-    "@vcl/theme": "^0.4.5",
+    "@vcl/core-modules": "^0.4.6",
+    "@vcl/theme": "^0.4.6",
     "jest": "^24.8.0",
     "normalize.css": "8.0.1"
   }
