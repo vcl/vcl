@@ -1,62 +1,59 @@
 # [VCL](https://vcl.github.io/) drawer
 
-Sliding sidebar.
+Sliding drawer.
 
 ## Features
 
-Sliding drawer panel and main panel. In closed state,
-only the main area is visible.
+Sliding drawer and main panel. In closed state, only the main area is visible.
 
-Visibility of the drawer is explicitly controlled via modifiers, no
-implicit media-query magic.
+Visibility of the drawer is controlled via modifiers. The margin of the content must be set programmatically
+according to the width of the drawer.
 
 The slide in/ out of the drawer is animated.
 
 ## Usage
 
-In this example, the drawer is closed and only the main panel is visible.
+In this example, the drawer panel is open via the `vclDrawerOpen` modifier
+and the inline style `margin-left: 256px;` on the `vclDrawerContent`.
 
-[closed example](/demo/example-closed.html)
+[wide example](/demo/example-side.html)
 
-In this example, the drawer panel is open via the `vclOpen` modifier
-and the inline style `left: 0;` on the `vclDrawerMainPanel`.
 This rule makes the main panel appear below the drawer panel.
 This is intended for narrow viewports.
 
-[narrow example](/demo/example-narrow.html)
+[side example](/demo/example-over.html)
 
-For wide viewports, the drawer can be shown next to the main panel just
-by removing the rule as in the example below.
+In this example, the drawer is closed and only the main panel is visible.
 
-[wide example](/demo/example-wide.html)
-
-There are no modifier classes for this as it requires highly dynamic control
-and should better handled programmatically  in the web component.
+[closed example](/demo/example-closed.html)
 
 The drawer panel can also be laid out to the right of the main panel
 using the `vclDrawerRight` modifier.
 
 ## Classes
 
+- `vclDrawerContainer`
 - `vclDrawer`
-- `vclDrawerDrawerPanel`
-- `vclDrawerMainPanel`
-- `vclDrawerMainPanelContent`
-- `vclDrawerMainPanelCover`
+- `vclDrawerOpen`
+- `vclDrawerContent`
+- `vclDrawerBackdrop`
+- `vclDrawerBackdropVisible`
 
 ## Modifiers
 
-- `vclOpen`: To open the panel.
-- `vclClose`: Must be toggled with `vclClose` to play animations properly.
-- `vclDrawerRight`: To lay-out the panel to the right of the main panel.
+- `vclDrawerOpen`: To open the panel.
+- `vclDrawerBackdropVisible`: Must be toggled for backdrop animation
+- `vclDrawerRight`: Drawer is rendered on the right side
 
 ## Variables
 
-- `--drawer-drawer-panel-color`
-- `--drawer-drawer-panel-bg-color`
-- `--drawer-drawer-panel-width`
-- `--drawer-main-panel-cover-bg-color`
+- `--drawer-color`
+- `--drawer-bg-color`
+- `--drawer-content-bg-color`
+
 
 ## Demo
 
 [example.html](/demo/example.html) on GH-pages.
+
+
