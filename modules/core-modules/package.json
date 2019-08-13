@@ -1,7 +1,7 @@
 {
   "name": "@vcl/core-modules",
   "description": "A collection of VCL modules that we consider core",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"
@@ -31,7 +31,7 @@
     "@vcl/button": "^0.5.1",
     "@vcl/button-group": "^0.5.1",
     "@vcl/calendar": "^0.5.1",
-    "@vcl/checkbox": "^0.5.1",
+    "@vcl/checkbox": "^0.5.2",
     "@vcl/container": "^0.5.1",
     "@vcl/data-grid": "^0.5.1",
     "@vcl/data-list": "^0.5.1",
