@@ -1,10 +1,12 @@
 {
+  "name": "vcl-monorepo",
   "description": "The Visual Component Library",
+  "version": "0.5.1",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "changed": "lerna changed",
-    "version": "lerna version --no-push --conventional-commits",
-    "publish": "lerna publish from-git",
+    "changed-modules": "lerna changed",
+    "tag-modules": "lerna version --no-push --conventional-commits",
+    "publish-modules": "lerna publish from-git",
     "test": "./scripts/test.sh"
   },
   "author": {
