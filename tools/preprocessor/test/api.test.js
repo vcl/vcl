@@ -1,9 +1,12 @@
 'use strict';
 
-// var assert = require('assert');
+var path = require('path');
 var vcl = require('../index');
 
-var opts = {root: __dirname};
+var opts = {
+  root: __dirname,
+  vclRoot: path.resolve(__dirname, '../../../modules')
+};
 
 describe('vcl', () => {
   it('should be a function', () => {

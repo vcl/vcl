@@ -30,16 +30,17 @@ const writeFileAsync = promisify(fs.writeFile);
  * @return Array of postCSS plugins
  */
 function createPostCSSPlugins (opts = {}) {
+  const root = opts.root || process.cwd();
   let resolve = (id, basedir, importOptions) => {
     if (opts.vclRoot && id.startsWith('@vcl')) {
-      return path.resolve(process.cwd(), opts.vclRoot, id.substr(5), 'index.sss');
+      return path.resolve(root, opts.vclRoot, id.substr(5), 'index.sss');
     }
     return resolveId(id, basedir, importOptions);
   };
 
   return [
     npmimport({
-      root: opts.root || process.cwd(),
+      root,
       resolve
     }),
     postcssNesting(),

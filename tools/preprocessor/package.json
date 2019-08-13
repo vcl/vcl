@@ -56,8 +56,6 @@
     "yargs": "^13.3.0"
   },
   "devDependencies": {
-    "@vcl/core-modules": "^0.4.6",
-    "@vcl/theme": "^0.4.6",
     "jest": "^24.8.0",
     "normalize.css": "8.0.1"
   }
