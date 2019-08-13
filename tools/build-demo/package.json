@@ -1,6 +1,6 @@
 {
   "name": "@vcl/build-demo",
-  "version": "0.4.6",
+  "version": "0.5.2",
   "description": "Contains a HTML scaffold to build demo pages for VCL modules",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +21,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@vcl/preprocessor": "^0.4.6"
+    "@vcl/preprocessor": "^0.5.2"
   }
 }

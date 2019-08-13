@@ -5,12 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.5.2](https://github.com/vcl/vcl/compare/v0.5.1...v0.5.2) (2019-08-13)
 
-**Note:** Version bump only for package @vcl/drawer
 
+### Features
 
-
-
-
-## [0.5.1](https://github.com/vcl/vcl/compare/v0.5.0...v0.5.1) (2019-08-13)
-
-**Note:** Version bump only for package @vcl/drawer
+* **material-style-inputs:** add material style inputs ([43029de](https://github.com/vcl/vcl/commit/43029de))
