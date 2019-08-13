@@ -1,7 +1,5 @@
 {
-  "name": "@vcl/vcl",
   "description": "The Visual Component Library",
-  "version": "0.4.0",
   "scripts": {
     "bootstrap": "node_modules/.bin/lerna bootstrap",
     "changed": "node_modules/.bin/lerna changed",
