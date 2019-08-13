@@ -9,12 +9,28 @@
     "git-init": "mkdir dist && cd dist && git init && git remote add origin git@github.com:vcl/vcl.github.io.git",
     "start": "npm-run-all clean install-modules gen-doc",
     "clean": "rm -rf node_modules package-lock.json",
-    "gen-doc": "vcl-doc-gen package.json dist --name=\"VCL Documentation\"",
-    "git-push": "cd dist && git add -A . && git commit -a -m 'doc update' && git push --set-upstream origin master --force"
+    "gen-doc": "./cli.js package.json dist --name=\"VCL Documentation\"",
+    "git-push": "cd dist && git add -A . && git commit -a -m 'doc update' && git push --set-upstream origin master --force",
+    "css": "vcl-preprocessor styles.sss styles.css",
+    "bundle-webcomponents": "polymer build"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/vcl/vcl.github.io.git"
+  },
+  "devDependencies": {
+    "@vcl/preprocessor": "^0.4.6",
+    "debug": "^4.1.1",
+    "lodash": "^4.17.11",
+    "marked": "^0.6.1",
+    "resolve": "^1.10.0",
+    "@fortawesome/fontawesome-free": "^5.7.2",
+    "@polymer/app-route": "^3.0.2",
+    "@polymer/polymer": "^3.1.0",
+    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "normalize.css": "^8.0.1",
+    "polymer-cli": "^1.9.7",
+    "npm-run-all": "^4.1.5"
   },
   "dependencies": {
     "@vcl/adv-text-structure": "^0.4.5",
@@ -40,7 +56,6 @@
     "@vcl/date-picker": "^0.4.5",
     "@vcl/divider": "^0.4.5",
     "@vcl/doc": "file:../doc",
-    "@vcl/doc-gen": "^0.4.5",
     "@vcl/drawer": "^0.4.5",
     "@vcl/dropdown": "^0.4.5",
     "@vcl/effects": "^0.4.5",
@@ -78,7 +93,6 @@
     "@vcl/pagination": "^0.4.5",
     "@vcl/panel": "^0.4.5",
     "@vcl/popover": "^0.4.5",
-    "@vcl/preprocessor": "^0.4.5",
     "@vcl/process-nav": "^0.4.5",
     "@vcl/product-list": "^0.4.5",
     "@vcl/progress-bar": "^0.4.5",
@@ -105,8 +119,7 @@
     "@vcl/utils": "^0.4.5",
     "@vcl/value-unit-anagram": "^0.4.5",
     "@vcl/zoom-box": "^0.4.5",
-    "normalize.css": "8.0.1",
-    "npm-run-all": "^4.1.5"
+    "normalize.css": "8.0.1"
   },
   "keywords": [
     "vcl",
