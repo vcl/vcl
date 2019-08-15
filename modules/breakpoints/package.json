@@ -7,7 +7,9 @@
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
     "browsersync": "browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
     "build-demo": "vcl-build-demo --watch --vcl-root=..",
-    "start": "npm-run-all --parallel build-demo browsersync"
+    "start": "npm-run-all --parallel build-demo browsersync",
+    "generate": "node ./generate.js > breakpoints.generated.sss",
+    "prepublish": "npm-run-all generate"
   },
   "style": "index.sss",
   "demoStyle": "demo.sss",
