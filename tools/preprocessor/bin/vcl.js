@@ -86,11 +86,18 @@ if (process.stdin.isTTY) {
   }
 
   (async () => {
-    const result = await vcl.compileFile(inputFile, outputFile, opts);
+    const watch = !!argv['watch'];
 
-    console.log(chalk`{green Finished {bold ${result.outputFile}}}`);
+    let result;
 
-    if (argv['watch']) {
+    try {
+      result = await vcl.compileFile(inputFile, outputFile, opts);
+      console.log(chalk`{green Finished {bold ${result.outputFile}}}`);
+    } catch (ex) {
+      error(ex, false);
+    }
+
+    if (watch) {
       const fileChangeNotify = () => console.log('\nWaiting for file changes...');
 
       const extractImports = (result) => result.messages
@@ -131,7 +138,7 @@ if (process.stdin.isTTY) {
 
             return result
           } catch(ex) {
-            error(ex);
+            error(ex, true);
           }
         })();
       })
