@@ -6,15 +6,24 @@ Basic utility classes.
 
 Utility classes for:
 
+- Spacing
+- Breakpoint aware visibility control
 - Floated elements
 - Box model manipulation
 - Alignment of inline elements
 - Text and word wrapping
-- Visibility control
 - Scrollable containers
 - Text selection by users
 
 ## Usage
+
+### Spacing
+
+[spacing example](/demo/example-spacing.html)
+
+### Visibility
+
+[visibility example](/demo/example-visibility.html)
 
 ### Inline Element Alignment
 
@@ -46,13 +55,25 @@ Utility classes for:
 
 - `vclNoBorder`
 
-### Padding
+### Spacing
 
-- `vclNoPadding`
+- `vcl[P|M][T|R|B|L|X|Y]-[0|1|2|3|4|5]`
+ 
 
-### Margin
+- type
+  - values: P (padding), M (margin)
 
-- `vclNoMargin`
+- direction (optional. All if not provided)
+  - values:
+      R (right), B (bottom), L (left), X (left and right), Y (top and bottom), Auto (margin only)
+
+- size
+  - values 0 to 5 (from none to large)
+
+Examples:
+
+vclP-3, vclPX-1, vclM-3, vclMy-auto
+
 
 ### Alignment of inline Elements
 
@@ -67,11 +88,13 @@ Utility classes for:
 - `vclNoWrap`
 - `vclOverflowEllipsis`
 
-### Visibility Control
+### Breakpoint aware visibility control
 
 - `vclOverflowHidden`
-- `vclDisplayNone`
-- `vclVisibilityHidden`
+- `vclHide`
+- `vclHide-[bp]`
+- `vclHide-from-[bp]`
+- `vclHide-to-[bp]`
 
 ### Scrollable Containers
 

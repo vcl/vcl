@@ -1,4 +1,20 @@
 @import "@vcl/container"
-@import "@vcl/flex-layout"
+@import "@vcl/flex-grid"
 @import "@vcl/typography"
+@import "@vcl/utils"
 @import "./index.sss"
+
+.demoSpacingContainer
+  box-sizing: border-box
+  background-color: rgb(221,221,221)
+  border-width: 1px
+  border-color: rgb(185,185,185)
+  border-style: solid
+  border-radius: 0
+  margin-bottom: 1.3em
+  width: 20em
+  height: 10em
+
+.demoSpacingContainer > *
+  background-color: rgba(58, 45, 79, 0.2)
+  border: 1px solid #000
