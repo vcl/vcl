@@ -39,7 +39,7 @@
   "vcl": {
     "categories": [
       {
-        "title": "Flex Grid",
+        "title": "Layout",
         "itemPriority": 10,
         "priority": 10
       }
