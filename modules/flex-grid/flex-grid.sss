@@ -1,0 +1,61 @@
+
+/* flexbox based layout primitives */
+.vclHor, .vclVer
+  display: flex
+  flex-wrap: wrap
+  box-sizing: border-box
+  &.vclWrapReverse
+    flex-wrap: wrap-reverse
+  &.vclInline
+    display: inline-flex
+  & > * 
+    box-sizing: border-box
+
+/* alignment in cross axis */
+.vclHor, .vclVer
+  &.vclStart
+    align-items: flex-start
+  &.vclCenter
+    align-items: center
+  &.vclEnd
+    align-items: flex-end
+
+/* alignment in main axis */
+.vclHor, .vclVer
+  &.vclJustifyStart
+    justify-content: flex-start
+  &.vclJustifyCenter
+    justify-content: center
+  &.vclJustifyEnd
+    justify-content: flex-end
+  &.vclJustifyAround
+    justify-content: space-around
+  &.vclJustifyEvenly
+    justify-content: space-evenly
+  &.vclJustifyBetween
+    justify-content: space-between
+
+.vclHor
+  flex-direction: row
+  &.vclReverse
+    flex-direction: row-reverse
+
+.vclVer
+  flex-direction: column
+  &.vclReverse 
+    flex-direction: column-reverse
+
+/* self alignment */
+
+.vclSelfStart
+  align-self: flex-start
+
+.vclSelfCenter
+  align-self: center
+
+.vclSelfEnd
+  align-self: flex-end
+
+.vclSelfStretch
+  align-self: stretch
+ 

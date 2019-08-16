@@ -1,0 +1,51 @@
+{
+  "name": "@vcl/flex-grid",
+  "description": "Flexbox based grid layout",
+  "version": "0.5.3",
+  "main": "package.json",
+  "scripts": {
+    "test": "vcl-preprocessor ./index.sss ./build/test.css",
+    "browsersync": "browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
+    "build-demo": "vcl-build-demo --watch --vcl-root=..",
+    "start": "npm-run-all --parallel build-demo browsersync",
+    "generate": "./generate.js"
+  },
+  "style": "index.sss",
+  "demoStyle": "demo.sss",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.co",
+    "url": "https://www.n-fuse.co"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vcl/build-demo": "^0.5.3",
+    "@vcl/preprocessor": "^0.5.3",
+    "browser-sync": "^2.26.3",
+    "npm-run-all": "^4.1.5",
+    "underscore": "^1.9.1"
+  },
+  "dependencies": {
+    "@vcl/theme": "^0.5.3",
+    "normalize.css": "^8.0.1"
+  },
+  "keywords": [
+    "css",
+    "vcl",
+    "component",
+    "layout",
+    "flexbox"
+  ],
+  "vcl": {
+    "categories": [
+      {
+        "title": "Flex Grid",
+        "itemPriority": 10,
+        "priority": 10
+      }
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
