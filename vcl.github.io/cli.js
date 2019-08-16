@@ -13,7 +13,7 @@ const yargs = require('yargs')
   .help('help')
   .alias('help', 'h')
   .demandCommand(2)
-  .usage('Usage: vcl-doc-gen <input package file> <output folder>')
+  .usage('Usage: vcl-doc-gen <module folder> <output folder>')
   .describe('root', 'base directory')
   .alias('root', 'i')
   .describe('name', 'doc name')
@@ -21,6 +21,10 @@ const yargs = require('yargs')
   .describe('verbose')
   .alias('v', 'verbose');
 
+const getModules = source => fs.readdirSync(source)
+  .map(name => ({ name, full: path.join(source, name)}))
+  .filter(d => fs.lstatSync(d.full).isDirectory())
+  .map(d => d.name);
 
 const argv = yargs.argv;
 
@@ -28,7 +32,7 @@ const verbose = argv.verbose;
 const root = path.resolve(process.cwd(), argv.root || '');
 const name = argv.name;
 
-const pkgFile = path.resolve(root, argv._[0]);
+const moduleFolder = path.resolve(root, argv._[0]);
 const outputFolder = path.join(root, argv._[1]);
 
 if (verbose) {
@@ -37,18 +41,16 @@ if (verbose) {
 
 (async () => {
   try {
-    debug('using entry package', pkgFile);
+    debug('using module folder', moduleFolder);
 
-    const pkg = require(pkgFile);
+    const modules = getModules(moduleFolder);
 
-    const deps = Object.keys(pkg.dependencies);
-
-    if (!Array.isArray(deps) || deps.length === 0) {
-      throw 'This package has no dependencies'
+    if (!Array.isArray(modules) || modules.length === 0) {
+      throw 'This folder has no modules'
     };
 
-    const packages = deps.reduce((packages, dep) => {
-      const json = getPackageJson(dep, root);
+    const packages = modules.reduce((packages, m) => {
+      const json = getPackageJson(m, moduleFolder);
       if (json.vcl === undefined || packages.some(pkg => pkg.name === json.name )) {
         return packages;
       }
@@ -88,17 +90,12 @@ if (verbose) {
 function getPackageJson(name, basedir) {
   debug('gettings package.json for %s from %s', name, basedir);
   // get module information
-  var npmModulePath = resolve.sync(name, {
-    basedir: basedir || process.cwd(),
-    packageFilter: (pkg) => {
-      // make all modules require-able
-      pkg.main = 'package.json';
-      return pkg;
-    }
-  });
-  const npmModule = JSON.parse(fs.readFileSync(npmModulePath, 'utf8'));
-  npmModule.basePath = path.dirname(npmModulePath) + '/';
-  return npmModule;
+  const modulePath = path.join(basedir, name);
+  const modulePkgFilePath = path.resolve(modulePath, 'package.json');
+
+  const pkg = JSON.parse(fs.readFileSync(modulePkgFilePath, 'utf8'));
+  pkg.basePath = modulePath + '/';
+  return pkg;
 };
 
 async function fetchPackage(pack) {
@@ -223,7 +220,10 @@ async function renderPart(docPart, options) {
 
     debug('preprocessing %s with import %s', docPart.name, sss);
 
-    const result = await vcl(sss);
+    const result = await vcl(sss, {
+      root: process.cwd(),
+      vclRoot: moduleFolder
+    });
 
     docPart.style = result.css || '';
   } else if (!docPart.styleFile) {
