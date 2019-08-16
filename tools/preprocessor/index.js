@@ -12,6 +12,7 @@ var colors = require('postcss-color-function');
 var npmimport = require('postcss-import');
 var resolveId = require("postcss-import/lib/resolve-id")
 var vars = require('postcss-css-variables');
+var postCssAtVars = require('postcss-at-rules-variables');
 var postcssPreset = require('postcss-preset-env');
 var postcssNesting = require('postcss-nesting');
 var cssnano = require('cssnano');
@@ -44,6 +45,7 @@ function createPostCSSPlugins (opts = {}) {
       resolve
     }),
     postcssNesting(),
+    postCssAtVars({ atRules: ['media'] }),
     vars(), // CSS4 compatible variable suppot
     colors(), // W3C CSS4 Color functios
     postcssPreset(),
