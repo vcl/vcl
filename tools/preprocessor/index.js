@@ -34,7 +34,11 @@ function createPostCSSPlugins (opts = {}) {
   const root = opts.root || process.cwd();
   let resolve = (id, basedir, importOptions) => {
     if (opts.vclRoot && id.startsWith('@vcl')) {
-      return path.resolve(root, opts.vclRoot, id.substr(5), 'index.sss');
+      let file = path.resolve(root, opts.vclRoot, id.substr(5));;
+      if (!fs.lstatSync(file).isFile()) {
+        file = path.resolve(file, 'index.sss');
+      }
+      return file;
     }
     return resolveId(id, basedir, importOptions);
   };
