@@ -8,8 +8,7 @@
     "browsersync": "browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
     "build-demo": "vcl-build-demo --watch --vcl-root=..",
     "start": "npm-run-all --parallel build-demo browsersync",
-    "prepublish": "npm-run-all prepublish",
-    "generate": "node ./generate.js --print > utils.generated.sss"    
+    "generate": "./generate.js"    
   },
   "style": "index.sss",
   "demoStyle": "demo.sss",

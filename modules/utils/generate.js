@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 const { BREAKPOINTS, queryAll } = require('../breakpoints/breakpoints');
 
 const TPL_HIDE = (query, suffix) => 
@@ -42,7 +45,7 @@ const TPL_SPACE_CONTENT = (idx, suffix) =>
 `;
 
 const TPL_SPACE = (query, suffix) => {
-  let style = 
+  let s = 
 `${query}
   .vclM-auto${suffix}
     margin: auto
@@ -62,9 +65,9 @@ const TPL_SPACE = (query, suffix) => {
     margin-bottom: auto
 `;
   for(let i = 1; i <=5; i++ ) {
-    style += TPL_SPACE_CONTENT(i, suffix);
+    s += TPL_SPACE_CONTENT(i, suffix);
   }
-  return style;
+  return s;
 }
 
 let style = '';
@@ -84,4 +87,5 @@ style += BREAKPOINTS.map(bp => {
   return s;
 }).join('');
 
-console.log(style);
+const outFile = path.resolve(__dirname, 'utils.generated.sss');
+fs.writeFileSync(outFile, style);

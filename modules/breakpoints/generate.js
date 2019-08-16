@@ -1,4 +1,7 @@
-
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 const { style } = require('./breakpoints');
 
-console.log(style);
+const outFile = path.resolve(__dirname, 'breakpoints.generated.sss');
+fs.writeFileSync(outFile, style);
