@@ -1,0 +1,44 @@
+{
+  "name": "@vcl/bw-theme",
+  "description": "The VCL BW theme",
+  "version": "0.5.3",
+  "main": "package.json",
+  "scripts": {
+    "test": "vcl-preprocessor ./index.sss ./build/test.css"
+  },
+  "style": "index.sss",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.co",
+    "url": "https://www.n-fuse.co"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Hoppe",
+      "email": "thomas.hoppe@n-fuse.co"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@vcl/default-theme": "^0.4.0-beta.0"
+  },
+  "devDependencies": {
+    "@vcl/preprocessor": "^0.5.3"
+  },
+  "keywords": [
+    "css",
+    "vcl",
+    "component",
+    "bw",
+    "theme"
+  ],
+  "vcl": {
+    "categories": [
+      {
+        "title": "Themes",
+        "itemPriority": 30,
+        "priority": 180
+      }
+    ]
+  }
+}

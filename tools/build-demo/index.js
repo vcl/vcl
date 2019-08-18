@@ -29,7 +29,7 @@ console.log('Building ' + SSS_SRC);
 const proc = childProcess.fork(PREPROCESSOR_SCRIPT_PATH, [
   SSS_SRC,
   SSS_TRG,
-  '--watch'
+  ...process.argv.slice(2)
 ]);
 
 // listen for errors as they may prevent the exit event from firing

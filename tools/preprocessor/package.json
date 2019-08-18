@@ -1,6 +1,6 @@
 {
   "name": "@vcl/preprocessor",
-  "version": "0.4.2",
+  "version": "0.5.3",
   "description": "The VCL preprocessor",
   "main": "index.js",
   "homepage": "https://github.com/vcl/preprocessor",
@@ -15,7 +15,7 @@
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",
-    "url": "www.n-fuse.co"
+    "url": "https://www.n-fuse.co"
   },
   "contributors": [
     {
@@ -35,30 +35,28 @@
     "test": "jest ./test --coverage"
   },
   "dependencies": {
-    "autoprefixer": "^9.4.10",
+    "autoprefixer": "^9.6.1",
     "chalk": "^2.4.1",
-    "chokidar": "^2.1.2",
+    "chokidar": "^3.0.2",
     "cssnano": "^4.1.10",
     "debug": "^4.1.1",
-    "make-dir": "^2.1.0",
+    "make-dir": "^3.0.0",
     "memory-fs": "^0.4.1",
-    "postcss": "^7.0.14",
+    "postcss": "^7.0.17",
     "postcss-clearfix": "^2.0.1",
-    "postcss-color-function": "^4.0.1",
-    "postcss-css-variables": "0.12.0",
-    "postcss-hexrgba": "^1.0.1",
+    "postcss-color-function": "^4.1.0",
+    "postcss-css-variables": "^0.13.0",
+    "postcss-hexrgba": "^1.0.2",
     "postcss-import": "12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-nesting": "^7.0.0",
-    "postcss-preset-env": "^6.4.0",
+    "postcss-preset-env": "^6.7.0",
     "sugarss": "^2.0.0",
     "unionfs": "^4.0.0",
-    "yargs": "^13.2.2"
+    "yargs": "^13.3.0"
   },
   "devDependencies": {
-    "@vcl/core-modules": "0.4.0-0",
-    "@vcl/theme": "^0.4.2",
-    "jest": "^24.1.0",
+    "jest": "^24.8.0",
     "normalize.css": "8.0.1"
   }
 }

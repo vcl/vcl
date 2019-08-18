@@ -6,7 +6,7 @@
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",
-    "url": "www.n-fuse.co"
+    "url": "https://www.n-fuse.co"
   },
   "scripts": {
     "git-init-presentation": "cd presentation && git init && git remote add origin https://github.com/vcl/presentation.git",

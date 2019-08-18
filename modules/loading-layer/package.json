@@ -1,12 +1,12 @@
 {
   "name": "@vcl/loading-layer",
   "description": "Cover areas to indicate updates and temporarily prevent interaction on them",
-  "version": "0.4.2",
+  "version": "0.5.3",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
     "browsersync": "browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
-    "build-demo": "vcl-build-demo",
+    "build-demo": "vcl-build-demo --watch --vcl-root=..",
     "start": "npm-run-all --parallel build-demo browsersync"
   },
   "style": "index.sss",
@@ -14,7 +14,7 @@
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",
-    "url": "www.n-fuse.co"
+    "url": "https://www.n-fuse.co"
   },
   "contributors": [
     {
@@ -24,16 +24,13 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.4.2",
-    "@vcl/preprocessor": "^0.4.2",
-    "@vcl/typography": "^0.4.2",
-    "@vcl/utils": "^0.4.2",
+    "@vcl/build-demo": "^0.5.3",
+    "@vcl/preprocessor": "^0.5.3",
     "browser-sync": "^2.26.3",
-    "npm-run-all": "^4.1.5",
-    "pre-commit": "^1.2.2"
+    "npm-run-all": "^4.1.5"
   },
   "dependencies": {
-    "@vcl/theme": "^0.4.2",
+    "@vcl/theme": "^0.5.3",
     "normalize.css": "^8.0.1"
   },
   "keywords": [

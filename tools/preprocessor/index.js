@@ -10,6 +10,7 @@ var postCSS = require('postcss');
 var sugarss = require('sugarss');
 var colors = require('postcss-color-function');
 var npmimport = require('postcss-import');
+var resolveId = require("postcss-import/lib/resolve-id")
 var vars = require('postcss-css-variables');
 var postcssPreset = require('postcss-preset-env');
 var postcssNesting = require('postcss-nesting');
@@ -29,9 +30,18 @@ const writeFileAsync = promisify(fs.writeFile);
  * @return Array of postCSS plugins
  */
 function createPostCSSPlugins (opts = {}) {
+  const root = opts.root || process.cwd();
+  let resolve = (id, basedir, importOptions) => {
+    if (opts.vclRoot && id.startsWith('@vcl')) {
+      return path.resolve(root, opts.vclRoot, id.substr(5), 'index.sss');
+    }
+    return resolveId(id, basedir, importOptions);
+  };
+
   return [
     npmimport({
-      root: opts.root || process.cwd(),
+      root,
+      resolve
     }),
     postcssNesting(),
     vars(), // CSS4 compatible variable suppot

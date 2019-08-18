@@ -20,17 +20,16 @@ var yargs = require('yargs')
   .usage('Usage: vcl-preprocessor <input> <output>')
   .describe('watch', 'watches the input file for changes')
   .alias('watch', 'w')
-  .describe('import-root', 'base directory for file based imports')
-  .alias('import-root', 'i')
+  .describe('root', 'base directory for file based imports')
+  .alias('root', 'i')
   .describe('source-map', 'enable source maps')
   .alias('source-map', 's')
   .describe('source-map-inline', 'enable inline source maps')
   .describe('optimize', 'optimize css')
   .alias('optimize', 'o')
-  .describe('theme', 'use theme')
-  .alias('theme', 't')
   .count('verbose')
-  .alias('V', 'verbose');
+  .alias('V', 'verbose')
+  .describe('vcl-root', 'root directory for vcl imports');
 
 // Examples
 yargs
@@ -56,26 +55,26 @@ debug(argv);
 
 const opts = {};
 
+if (argv.optimize) {
+  opts.optimize = true;
+}
+
 if (argv.root) {
-  var root = path.resolve(argv.root);
-  debug('using root: ' + root);
+  var root = path.resolve(process.cwd(), argv.root);
+  debug('using root: ' + argv.root);
   opts.root = root;
 }
 
-if (argv.optimize) {
-  opts.optimize = true;
+if (argv['vcl-root']) {
+  var vclRoot = path.resolve(process.cwd(), argv['vcl-root']);
+  debug('using vcl-root: ' + vclRoot);
+  opts.vclRoot = vclRoot;
 }
 
 if (argv['source-map-inline']) {
   opts.sourceMap = 'inline';
 } else if (argv['source-map']) {
   opts.sourceMap = true;
-}
-
-
-
-if (argv['theme']) {
-  opts.theme = argv['theme'];
 }
 
 if (process.stdin.isTTY) {

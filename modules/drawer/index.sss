@@ -1,94 +1,69 @@
 @import "normalize.css"
 @import "@vcl/theme"
 
+.vclDrawerContainer 
+  position: relative 
+  box-sizing: border-box 
+  -webkit-overflow-scrolling: touch 
+  display: block 
+  overflow: hidden 
 
-.vclDrawer
-  transform: translateX(-var(--drawer-drawer-panel-width))
-  width: calc(100% + var(--drawer-drawer-panel-width))
-  overflow: hidden
-  display: block
-  position: fixed
-  top: 0
-  left: 0
-  height: 100%
-  box-sizing: border-box
-  &.vclOpen
-    transition: transform ease-in-out 0.3s, width ease-in-out 0.3s
-    transform: translateX(0)
-  &.vclClose
-    transition: transform ease-in-out 0.3s, width ease-in-out 0.3s
-    transform: translateX(-var(--drawer-drawer-panel-width))
-  & .vclDrawerDrawerPanel
-    position: absolute
-    top: 0
-    left: 0
-    height: 100%
-    width: var(--drawer-drawer-panel-width)
-    will-change: transform
-    box-sizing: border-box
-    background-color: var(--drawer-drawer-panel-bg-color)
-    color: var(--drawer-drawer-panel-color)
-    z-index: 10
-  /* right-drawer: make drawer on the right side */
-  &.vclDrawerRight
-    & .vclDrawerDrawerPanel
-      left: auto
-      right: 0
-    & .vclDrawerMainPanel
-      left: 0
-      transition: right ease-in-out 0.3s, padding ease-in-out 0.3s
-  & .vclDrawerMainPanel
-    position: relative
-    top: 0
-    right: 0
-    bottom: 0
-    left: var(--drawer-drawer-panel-width)
-    height: 100%
-    box-sizing: border-box
-    transition: left ease-in-out 0.3s, padding ease-in-out 0.3s
-    width: calc(100% - var(--drawer-drawer-panel-width))
-    & .vclDrawerMainPanelContent
-      position: absolute
-      top: 0
-      bottom: 0
-      height: 100%
-      overflow-x: hidden
-  & .vclDrawerMainPanelCover
-    outline: 0
-    cursor: pointer
-    position: absolute
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    background-color: var(--drawer-main-panel-cover-bg-color)
-    visibility: hidden
-    opacity: 0
-    transition: opacity ease-in-out 0.38s, visibility ease-in-out 0.38s
+  & .vclDrawerBackdrop 
+    top: 0 
+    left: 0 
+    right: 0  
+    bottom: 0 
+    position: absolute 
+    display: block 
     z-index: 9
+    visibility: hidden 
+    background-color: transparent
+    &.vclDrawerBackdropVisible 
+      background-color: var(--drawer-backdrop-bg-color)
+      visibility: visible
 
-.vclDrawer.vclOpen .vclDrawerDrawerPanel
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15)
+  & .vclDrawer 
+    position: relative 
+    display: block 
+    position: absolute 
+    top: 0 
+    bottom: 0 
+    z-index: 10
+    outline: 0 
+    box-sizing: border-box 
+    background-color: var(--drawer-bg-color)
+    color: var(--drawer-color)
+    overflow-y: auto 
+    transform: translate3d(-100%, 0, 0) 
+    visibility: hidden 
+    &.vclDrawerRight 
+      right: 0 
+      transform: translate3d(100%, 0, 0) 
+    &.vclDrawerOpen 
+      visibility: visible 
+      transform: translate3d(0, 0, 0) 
+    & .vclDrawerInner
+      width: 100%
+      height: 100%
+      overflow: auto
 
-.vclDrawer.vclDrawerRight.vclOpen .vclDrawerDrawerPanel
-  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15)
+  & .vclDrawerContent
+    background-color: var(--drawer-content-bg-color)
+    position: relative
+    display: block
+    height: 100%
+    overflow: auto
 
-.vclDrawer.vclDrawerRight
-  left: auto
-  transform: translateX(var(--drawer-drawer-panel-width))
-
-.vclDrawer.vclDrawerRight.vclOpen
-  left: auto
-  transform: translateX(0)
-
-.vclDrawer.vclDrawerRight .vclDrawerMainPanel
-  left: 0
-
-.vclDrawer.vclOpen .vclDrawerMainPanelCover
-  visibility: visible
-  opacity: 1
-
-.vclDrawer .vclDrawerMainPanel
-  margin: 0
-  min-height: 100%
-  right: 0
+  &.vclDrawerAnimations
+    & .vclDrawerContent
+      transition-duration: 0.3s
+      transition-timing-function: ease-in-out
+      transition-property: transform, margin-left, margin-right
+    & .vclDrawer
+      transition-duration: 0.3s 
+      transition-timing-function: ease-in-out
+      transition-property: transform, visibility 
+    & .vclDrawerBackdrop 
+      transition-duration: 0.38s 
+      transition-timing-function: ease-in-out
+      transition-property: background-color, visibility 
