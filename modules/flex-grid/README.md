@@ -10,30 +10,42 @@ Features in CSS Flexbox are exposed as classes that can be put on any element.
 ## Usage
 
 Flexbox based layout primitives that can solve almost all layout challenges.
-
+A flex container can render its content either horizontal with the container class `vclHor` or vertical with the container class `vclVer`.
 
 [basic example](/demo/example-basic.html)
 
-The size of a grid is determined by its content. You can add the `vclFlex` class to let the cell take all the available space. All `vclFlex` cells distribute the space equally.
-Additionally a twelve cell grid is provided. It allows to distribute space for each cell.
+The size of a grid is determined by its content. You can add the `vclFlex` class to let the cell take the available space. Multiple `vclFlex` cells distribute the space equally.
+Additionally a twelve cell grid is provided via the `vclFlex-1` to `vclFlex-12` classes. It allows to define the amount of space a cell uses.
+
+e.g. `<div class="vclFlex-6">` takes half of the available space.
 
 [size example](/demo/example-size.html)
 
 Offsets allow set a horizontal offset to a cell.
 
-[size example](/demo/example-offset.html)
+[offset example](/demo/example-offset.html)
 
-The flex layout includes five sets of predefined classes for building responsive layouts. 
-Customize the size of your columns on extra small, small, medium, large, or extra large devices how you see fit.
+The flex layout includes classes for building responsive layouts.
+Customize the size of your columns on extra small (`xs`), small (`sm`), medium (`md`), large (`lg`), or extra large (`xl`) devices how you see fit.
 
-For layouts that are the same from the smallest of devices to the largest, use the .vFlex# and .vFlex#-bp` classes. Specify a numbered class from 1 to 12 when you need a particularly sized column and optionally a breakpoint. Otherwise stick to .vclFlex.
+For layouts that are the same from the smallest of devices to the largest, use the  `.vclFlex-1` classes described before. 
+For device specific layouts, add the breakpoint as a suffix.
+
+e.g. `<div class="vclFlex-12 vclFlex-8-md">` has a size of 12 on `xs` and `sm` devices, but a size of 8 on `md`, `lg` and `xl` devices.
+
+Check the breakpoints section for more details.
 
 [responsive example](/demo/example-responsive.html)
 
-Use `vclGutter-#` classes to space out cells. 
-Warning: Gutters apply negative margins to the container element and positive paddings to the chilrden. Take this into account when you are adding other padding/margins or classes that add spacing.
+Use `vclGutter-1` to `vclGutter-5` classes to space out cells. 
+Warning: Gutters apply negative margins to the container element and positive paddings to the chilrden. Take this into account when you are setting background colors or adding other padding/margins.
 
 [gutter example](/demo/example-gutter.html)
+
+There are several modifier classes to change the positioning of the cells
+
+[positioning example](/demo/example-positioning.html)
+
 
 ## Classes
 
@@ -46,10 +58,10 @@ Warning: Gutters apply negative margins to the container element and positive pa
 - `vclSelfCenter`
 - `vclSelfEnd`
 - `vclSelfStretch`
-- `vclFlex-[bp]`
-- `vclFlex-[1-12]-[bp]`
-- `vclOffset-[1-12]-[bp]`
-- `vclGutter-[0-5]`
+- `vclFlex-1` to `vclFlex-12`
+- `vclFlex-1-bp` to `vclFlex-12-bp` where bp is a breakpoint
+- `vclOffset-1-bp` to `vclOffset-12-bp` where bp is a breakpoint
+- `vclGutter-1` to `vclGutter-5`
 ## Modifiers
 - `vclStart`
 - `vclEnd`
