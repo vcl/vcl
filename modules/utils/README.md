@@ -92,9 +92,9 @@ vclP-3, vclPX-1, vclM-3, vclMy-auto
 
 - `vclOverflowHidden`
 - `vclHide`
-- `vclHide-[bp]`
-- `vclHide-from-[bp]`
-- `vclHide-to-[bp]`
+- `vclHide-bp`: where bp is a breakpoint
+- `vclHide-from-bp`: where bp is a breakpoint
+- `vclHide-to-bp` where bp is a breakpoint
 
 ### Scrollable Containers
 
