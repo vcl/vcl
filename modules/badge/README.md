@@ -4,8 +4,7 @@ A visually highlighted tag to attribute items or show counts.
 
 ## Features
 
-A tag with rounded corners.
-Supports semantic modifiers for coloring.
+Supports rounded corners and semantic modifiers for coloring.
 
 ## Usage
 
@@ -16,6 +15,8 @@ Supports semantic modifiers for coloring.
 - `vclBadge`
 
 ## Modifiers
+
+ `vclRounded`: 
 
 Semantic coloring.
 

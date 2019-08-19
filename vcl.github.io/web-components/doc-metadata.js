@@ -69,7 +69,7 @@ export default class DocMetadata extends PolymerElement {
         <span class="vclGridSpan-gcb" role="gridcell"><b>Categories</b></span>
         <span class="vclGridSpan-gca" role="gridcell">
         <template is="dom-repeat"  items="{{package.docgen.categories}}" as="category">
-          <span class="vclLabel">[[category.title]]</span>
+          <span class="vclBadge">[[category.title]]</span>
         </template>
         </span>
       </li>
