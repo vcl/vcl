@@ -93,4 +93,27 @@ body
     expect(result.css).toMatchSnapshot();
   });
 
+  describe('vcl entrypoints', function() {
+
+    it('should include all modules', async function() {
+      const result = await vcl('@import "@vcl/vcl"\na\n  color: green', opts);
+      expect(result.css).toContain('.vclButton');
+      expect(result.css).toContain('.vclRating');
+      expect(result.css).toContain('.vclGallery');
+    });
+
+    it('should include only core modules', async function() {
+      const result = await vcl('@import "@vcl/vcl/core"\na\n  color: green', opts);
+      expect(result.css).toContain('.vclButton');
+      expect(result.css).not.toContain('.vclRating');
+      expect(result.css).not.toContain('.vclGallery');
+    });
+
+    it('should include only recommended modules', async function() {
+      const result = await vcl('@import "@vcl/vcl/recommended"\na\n  color: green', opts);
+      expect(result.css).toContain('.vclButton');
+      expect(result.css).toContain('.vclRating');
+      expect(result.css).not.toContain('.vclGallery');
+    });
+  });
 });
