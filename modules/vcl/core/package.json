@@ -1,0 +1,5 @@
+{
+  "name": "@vcl/vcl_core",
+  "main": "package.json",
+  "style": "index.sss"
+}

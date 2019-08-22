@@ -1,6 +1,9 @@
-# [VCL](https://vcl.github.io/) core-modules
+# [VCL](https://vcl.github.io/) modules
 
-A collection of [VCL modules](https://github.com/vcl) that we consider core.
+A collection of [VCL modules](https://github.com/vcl).
+
+This module provides different entrypoints for 
+
 _Core_ includes the components that 80% of all reasonable complex Web apps need.
 
 An icon font is _not_ included to leave this choice open.
