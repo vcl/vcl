@@ -8,6 +8,7 @@ Utility classes for:
 
 - Spacing
 - Breakpoint aware visibility control
+- Sizing
 - Floated elements
 - Box model manipulation
 - Alignment of inline elements
@@ -24,6 +25,10 @@ Utility classes for:
 ### Visibility
 
 [visibility example](/demo/example-visibility.html)
+
+### Sizing
+
+[sizing example](/demo/example-sizing.html)
 
 ### Inline Element Alignment
 
@@ -55,6 +60,21 @@ Utility classes for:
 
 - `vclNoBorder`
 
+### Sizing
+
+- `.vclH-25`
+- `.vclH-50`
+- `.vclH-75`
+- `.vclH-100`
+- `.vclH-auto`
+- `.vclMaxH-100`
+- `.vclW-25`
+- `.vclW-50`
+- `.vclW-75`
+- `.vclW-100`
+- `.vclW-auto`
+- `.vclMaxW-100`
+
 ### Spacing
 
 - `vcl[P|M][T|R|B|L|X|Y]-[0|1|2|3|4|5]`
@@ -72,7 +92,7 @@ Utility classes for:
 
 Examples:
 
-vclP-3, vclPX-1, vclM-3, vclMy-auto
+vclP-3, vclPX-1, vclM-3, vclMY-auto
 
 
 ### Alignment of inline Elements
@@ -91,10 +111,12 @@ vclP-3, vclPX-1, vclM-3, vclMy-auto
 ### Breakpoint aware visibility control
 
 - `vclOverflowHidden`
+- `vclVisibilityHidden` 
 - `vclHide`
 - `vclHide-bp`: where bp is a breakpoint
 - `vclHide-from-bp`: where bp is a breakpoint
 - `vclHide-to-bp` where bp is a breakpoint
+- `vclDisplayNone`: deprecated. Use vclHide instead
 
 ### Scrollable Containers
 

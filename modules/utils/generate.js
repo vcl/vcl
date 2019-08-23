@@ -64,7 +64,7 @@ const TPL_SPACE = (query, suffix) => {
     margin-top: auto
     margin-bottom: auto
 `;
-  for(let i = 1; i <=5; i++ ) {
+  for(let i = 0; i <=5; i++ ) {
     s += TPL_SPACE_CONTENT(i, suffix);
   }
   return s;
