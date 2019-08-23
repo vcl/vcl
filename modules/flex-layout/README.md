@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) flex-layout
+# [VCL](https://vcl.github.io/) flex-layout (deprecated)
 
 Flexbox based layout system.
 

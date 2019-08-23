@@ -44,7 +44,7 @@
     "categories": [
       {
         "title": "Layout",
-        "itemPriority": 20,
+        "itemPriority": 99,
         "priority": 10
       }
     ]
