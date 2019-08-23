@@ -73,6 +73,7 @@ There are several modifier classes to change the positioning of the cells
 - `vclJustifyAround`
 - `vclInline`
 - `vclReverse`
+- `vclNoWrap`
 - `vclWrapReverse`
 
 
