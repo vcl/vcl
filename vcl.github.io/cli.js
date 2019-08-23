@@ -3,9 +3,7 @@
 
 const path = require('path');
 const fs = require('fs');
-const resolve = require('resolve');
 const debug = require('debug')('vcl-docgen:cli');
-const mkdirp = require('mkdirp');
 const vcl = require('@vcl/preprocessor');
 const marked = require('marked');
 
@@ -14,26 +12,33 @@ const yargs = require('yargs')
   .alias('help', 'h')
   .demandCommand(2)
   .usage('Usage: vcl-doc-gen <module folder> <output folder>')
-  .describe('root', 'base directory')
+  .describe('root', 'base folder')
   .alias('root', 'i')
   .describe('name', 'doc name')
   .alias('name', 'n')
+  .describe('doc', 'doc folder')
   .describe('verbose')
   .alias('v', 'verbose');
 
-const getModules = source => fs.readdirSync(source)
+const getModuleFolders = source => fs.readdirSync(source)
   .map(name => ({ name, full: path.join(source, name)}))
   .filter(d => fs.lstatSync(d.full).isDirectory())
-  .map(d => d.name);
+  .map(d => d.full);
 
 const argv = yargs.argv;
 
 const verbose = argv.verbose;
 const root = path.resolve(process.cwd(), argv.root || '');
 const name = argv.name;
+const docFolder = argv.doc;
 
-const moduleFolder = path.resolve(root, argv._[0]);
+const baseModuleFolder = path.resolve(root, argv._[0]);
 const outputFolder = path.join(root, argv._[1]);
+
+const rawHtml = exports.rawHtml = fs.readFileSync(__dirname + '/build/dist/index.html', 'utf8')
+                                    .split('<script>define([\'web-components/doc-index.js\']);</script>').join('');
+const appBundle =  fs.readFileSync(__dirname + '/build/dist/web-components/doc-index.js', 'utf8');
+const polyfillBundle =  fs.readFileSync(__dirname + '/build/dist/node_modules/@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce.js', 'utf8');
 
 if (verbose) {
   debug.enabled = true;
@@ -41,56 +46,69 @@ if (verbose) {
 
 (async () => {
   try {
-    debug('using module folder', moduleFolder);
+    debug('using module folder', baseModuleFolder);
 
-    const modules = getModules(moduleFolder);
+    const moduleFolders = getModuleFolders(baseModuleFolder);
 
-    if (!Array.isArray(modules) || modules.length === 0) {
+    let docPackage;
+    if (docFolder) {
+      docPackage = await getPackageJson(path.join(root, docFolder));
+    }
+
+    if (!Array.isArray(moduleFolders) || moduleFolders.length === 0) {
       throw 'This folder has no modules'
     };
 
-    const packages = modules.reduce((packages, m) => {
-      const json = getPackageJson(m, moduleFolder);
+    const packages = moduleFolders.reduce((packages, moduleFolder) => {
+      const json = getPackageJson(moduleFolder);
       if (json.vcl === undefined || packages.some(pkg => pkg.name === json.name )) {
         return packages;
       }
       return [...packages, json];
     }, []);
 
+    if (docPackage) {
+      packages.unshift(docPackage);
+    }
+
     const parts$ = packages.map(pkg => fetchPackage(pkg));
-
     const parts = await Promise.all(parts$);
-
     const doc = {
       name,
       basePath: '',
       packages,
       parts,
-      includeDevDependencies: true,
-      metaName: "vcl",
-      outputFolder: "./dist",
-      readmeFile: "README.md",
-      recursive: true,
-      removeTopHeading: true
     };
 
+    const inlineScript = '\nwindow.doc = ' + JSON.stringify(doc, null, 3) + ';';
 
-    const { html, css } = createWC(doc);
+    const prodStuff = [
+      '<script>',
+      inlineScript,
+      '</script>',
+      '<script>',
+      polyfillBundle,
+      '</script>',
+      '<script>',
+      appBundle,
+      '</script>'
+    ]
 
-    mkdirp.sync(outputFolder);
+    const prodText = prodStuff.join('\n');
+
+    const html = rawHtml.split('<!-- prod -->').join(prodText);
+    const css = fs.readFileSync(__dirname + '/styles.css', 'utf8');
+
     fs.writeFileSync(path.resolve(outputFolder, 'index.html'), html);
     fs.writeFileSync(path.resolve(outputFolder, 'styles.css'), css);
-
-
   } catch (ex) {
     console.error(ex);
   }
 })();
 
-function getPackageJson(name, basedir) {
-  debug('gettings package.json for %s from %s', name, basedir);
+function getPackageJson(modulePath) {
+  debug('gettings package.json from %s', modulePath);
   // get module information
-  const modulePath = path.join(basedir, name);
   const modulePkgFilePath = path.resolve(modulePath, 'package.json');
 
   const pkg = JSON.parse(fs.readFileSync(modulePkgFilePath, 'utf8'));
@@ -137,19 +155,11 @@ async function fetchPackage(pack) {
     description: pack.description
   };
 
-
-
-  if (styleFile) {
-    // docPart.style =  fs.readFileSync(path.resolve(basePath, styleFile), "utf8");
-  }
-
-  // debug(name, docPart);
-
   return renderPart(docPart);
 };
 
 // we have all information we need. this function uses it to generate the html
-async function renderPart(docPart, options) {
+async function renderPart(docPart) {
 
   if (docPart.vcl === undefined) {
     docPart.vcl = {};
@@ -178,8 +188,6 @@ async function renderPart(docPart, options) {
         return false; // filters everything after demo
       }
     }
-
-    // debug('inUsage %s', inUsage);
 
     if (inUsage === false || obj.type !== 'paragraph') {
       return true;
@@ -222,7 +230,7 @@ async function renderPart(docPart, options) {
 
     const result = await vcl(sss, {
       root: process.cwd(),
-      vclRoot: moduleFolder
+      vclRoot: baseModuleFolder
     });
 
     docPart.style = result.css || '';
@@ -233,32 +241,3 @@ async function renderPart(docPart, options) {
 };
 
 
-const rawHtml = exports.rawHtml = fs.readFileSync(__dirname + '/build/dist/index.html', 'utf8')
-                                    .split('<script>define([\'web-components/doc-index.js\']);</script>').join('');
-const appBundle =  fs.readFileSync(__dirname + '/build/dist/web-components/doc-index.js', 'utf8');
-const polyfillBundle =  fs.readFileSync(__dirname + '/build/dist/node_modules/@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce.js', 'utf8');
-
-function createWC(doc) {
-
-    const inlineScript = '\nwindow.doc = ' + JSON.stringify(doc, null, 3) + ';';
-
-    const prodStuff = [
-      '<script>',
-      inlineScript,
-      '</script>',
-      '<script>',
-      polyfillBundle,
-      '</script>',
-      '<script>',
-      appBundle,
-      '</script>'
-    ]
-
-    const prodText = prodStuff.join('\n');
-
-    const doneHTML = rawHtml.split('<!-- prod -->').join(prodText);
-
-    const doneCSS = fs.readFileSync(__dirname + '/styles.css', 'utf8');
-
-    return { html: doneHTML, css: doneCSS };
-};
