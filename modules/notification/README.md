@@ -11,7 +11,7 @@ modifiers.
 ## Usage
 
 Nested lists are also possible as shown in the warning-example.
-If no icon is needed, you can remove it and assign `vclNoPadding`
+If no icon is needed, you can remove it and assign `vclP-0`
 to `vclNotificationContent` to remove the space on the left.
 
 Basic (no modifier).

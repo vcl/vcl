@@ -24,7 +24,7 @@ export default class DocMetadata extends PolymerElement {
     </button>
   </div>
   <aside class$="vclDataList docMetadata {{getHidenCLass(hidden)}}">
-    <header class="vclDataListHeader vclNoPadding">
+    <header class="vclDataListHeader vclP-0">
       <h3>Package Information</h3>
     </header>
     <ul class="vclDataListBody" role="listbox">
@@ -102,7 +102,7 @@ export default class DocMetadata extends PolymerElement {
   }
 
   getHidenCLass(hidden) {
-    return hidden ? 'vclDisplayNone' : '';
+    return hidden ? 'vclHide' : '';
   }
 }
 

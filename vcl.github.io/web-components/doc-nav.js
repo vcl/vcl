@@ -33,7 +33,7 @@ export default class DocNav extends PolymerElement {
               </div>
           </button>
         </div>
-        <nav class="docNav vclNavigation vclVertical vclLayoutVertical vclLayoutFlex vclScrollable vclYOnHover">
+        <nav class="docNav vclNavigation vclVertical vclVer vclFlex vclScrollable vclYOnHover">
             <template is="dom-if" if="[[!searchedText]]">
             <ul id="nav-items">
               <template is="dom-repeat" items="{{groupedOnCategories}}" as="category">
@@ -61,7 +61,7 @@ export default class DocNav extends PolymerElement {
             </template>
 
             <template is="dom-if" if="[[searchedText]]">
-              <ul class="vclScrollable vclYOnHover vclLayoutFlex"id="nav-items">
+              <ul class="vclScrollable vclYOnHover vclFlex"id="nav-items">
                 <template is="dom-repeat" items="{{searchResults}}" as="item">
                   <li class$="vclNavigationItem {{getSelectedClass(item.name,selectedItem)}}" role="presentation">
                     <a class="vclNavigationItemLabel vclIcogram"  href$="#{{item.name}}" >
@@ -153,7 +153,7 @@ export default class DocNav extends PolymerElement {
   }
 
   getDisplayNoneClearBtn(searchedText) {
-    return !searchedText ? 'vclDisplayNone' : '';
+    return !searchedText ? 'vclHide' : '';
   }
 
   getCathegoryIsOpen(index, openedCathegories) {

@@ -79,11 +79,11 @@ export default class DocDemo extends PolymerElement {
   }
 
   getCodeTextClass(codeVisible) {
-    return !codeVisible ? 'vclDisplayNone' : '';
+    return !codeVisible ? 'vclHide' : '';
   }
 
   getDemoClass(codeVisible) {
-    return codeVisible ? 'vclDisplayNone' : '';
+    return codeVisible ? 'vclHide' : '';
   }
 
   getDemoTabClass(codeVisible) {

@@ -20,7 +20,7 @@ inserted to and removed from the DOM as needed.
 
 ## Modifiers
 
-- `vclNoPadding`: From the utils module.
+- `vclP-0`: From the utils module.
 
 ## Variables
 

@@ -13,8 +13,8 @@ export default class DocContent extends PolymerElement {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 
-    <div class$="docPart vclLayoutHorizontal {{getContentClass(hasContent)}}">
-      <div class="vclLayoutFlex">
+    <div class$="docPart vclHor {{getContentClass(hasContent)}}">
+      <div class="vclFlex">
         <h2 id$="docpart-{{content.name}}" class="vclArticleHeader">
             [[content.title]]
             <small class="vclArticleSubHeader">[[content.name]]</small>
@@ -81,11 +81,11 @@ export default class DocContent extends PolymerElement {
   }
 
   getDefTextClass(hasContent) {
-    return hasContent ? 'vclDisplayNone' : '';
+    return hasContent ? 'vclHide' : '';
   }
 
   getContentClass(hasContent) {
-    return !hasContent ? 'vclDisplayNone' : '';
+    return !hasContent ? 'vclHide' : '';
   }
 }
 

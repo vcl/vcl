@@ -18,13 +18,13 @@ export default class DocIndex extends PolymerElement {
 
       <app-location route="{{route}}" use-hash-as-path ></app-location>
       <app-route route="{{route}}" pattern=":#page" ></app-route>
-      <div class="vclApp vclLayoutVertical">
+      <div class="vclApp vclVer">
         <header class="vclToolbar">
           <doc-topbar title="{{doc.name}}"></doc-topbar>
         </header>
-        <div class="vclContentArea vclLayoutHorizontal vclLayoutFlex">
-          <doc-nav class="vclLayoutVertical" items="{{navItems}}" selected-item="{{route.path}}" ></doc-nav>
-          <div class="docContent vclScrollable vclLayoutFlex" id="elements">
+        <div class="vclContentArea vclHor vclFlex">
+          <doc-nav class="vclVer" items="{{navItems}}" selected-item="{{route.path}}" ></doc-nav>
+          <div class="docContent vclScrollable vclFlex vclMaxH-100" id="elements">
             <doc-content content="[[content]]"></doc-content>
           </div>
         </div>

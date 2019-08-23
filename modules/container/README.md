@@ -18,7 +18,7 @@ It can also be combined with tabs as content area for the selected tab.
 ## Modifiers
 
 - `vclTransparent`
-- `vclNoPadding`: From the utils module.
+- `vclP-0`: From the utils module.
 - `vclNoBorder`: From the utils module.
 
 ## Variables

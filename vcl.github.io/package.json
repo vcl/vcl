@@ -7,11 +7,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "npm-run-all clean gen-doc git-init git-push",
-    "gen-doc": "./cli.js ../modules dist --name=\"VCL Documentation\"",
+    "gen-doc": "./cli.js ../modules dist --name=\"VCL Documentation\" --doc=../doc",
     "git-init": "cd dist && git init && git remote add origin git@github.com:vcl/vcl.github.io.git",
     "git-push": "cd dist && git add -A . && git commit -a -m 'doc update' && git push --set-upstream origin master --force",
     "clean": "rm -rf dist",
-    "css": "vcl-preprocessor styles.sss styles.css",
+    "css": "vcl-preprocessor styles.sss styles.css --vcl-root=../modules",
     "bundle-webcomponents": "polymer build"
   },
   "repository": {
