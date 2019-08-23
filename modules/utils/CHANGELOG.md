@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0-0](https://github.com/vcl/vcl/compare/v0.5.4...v0.6.0-0) (2019-08-23)
+
+
+### Features
+
+* **utils:** add layouting utils ([68a867d](https://github.com/vcl/vcl/commit/68a867d))
+* **utils:** add sizing utils ([6528526](https://github.com/vcl/vcl/commit/6528526))
+* **utils:** add spacing and breakpoint aware visibility control utils ([a0ba57a](https://github.com/vcl/vcl/commit/a0ba57a))
+
+
+### BREAKING CHANGES
+
+* **utils:** Removed vclNoPadding and vclNoMargin. Use spaceing utils instead.
+* **utils:** Replaced vclDisplayNone with vclHide
+
+
+
+
+
 ## [0.5.3](https://github.com/vcl/vcl/compare/v0.5.1...v0.5.3) (2019-08-13)
 
 **Note:** Version bump only for package @vcl/utils

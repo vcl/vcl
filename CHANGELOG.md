@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0-0](https://github.com/vcl/vcl/compare/v0.5.4...v0.6.0-0) (2019-08-23)
+
+
+### Important notes
+
+- `flex-layout` is is deprecated and will be removed in 0.7.  Use `flex-grid` instead.
+- `utils` will provide some additional spacing and visibility tools
+- `label` was merged into `badge`.
+
+### Bug Fixes
+
+* **preprocessor:** allow combining vclRoot with file based imports ([df7c918](https://github.com/vcl/vcl/commit/df7c918))
+* **preprocessor:** crash fix ([993028a](https://github.com/vcl/vcl/commit/993028a))
+* **theme:** add missing dependency ([dfb84d7](https://github.com/vcl/vcl/commit/dfb84d7))
+
+
+### Code Refactoring
+
+* **badge:** integrate label into badge ([f490621](https://github.com/vcl/vcl/commit/f490621))
+* **flex-layout:** deprecate flex-layout and remove from @vcl/vcl module collection ([f5493d0](https://github.com/vcl/vcl/commit/f5493d0))
+* **vcl:** refactor @vcl/core-modules into @vcl/vcl ([bc2c9e6](https://github.com/vcl/vcl/commit/bc2c9e6))
+
+
+### Features
+
+* **breakpoints:** adapt materiel style breakpoints ([da8d526](https://github.com/vcl/vcl/commit/da8d526))
+* **flex-grid:** add flex-grid module ([d7ab70e](https://github.com/vcl/vcl/commit/d7ab70e))
+* **preprocessor:** add at-rules-variables plugin ([e3e09c4](https://github.com/vcl/vcl/commit/e3e09c4))
+* **utils:** add layouting utils ([68a867d](https://github.com/vcl/vcl/commit/68a867d))
+* **utils:** add sizing utils ([6528526](https://github.com/vcl/vcl/commit/6528526))
+* **utils:** add spacing and breakpoint aware visibility control utils ([a0ba57a](https://github.com/vcl/vcl/commit/a0ba57a))
+
+
+### BREAKING CHANGES
+
+* **flex-layout:** flex-layout was removed from @vcl/vcl. Import manually if used.
+* **utils:** Removed vclNoPadding and vclNoMargin. Use spacing utils instead.
+* **vcl:** @vcl/core-modules is replaced with @vcl/vcl
+* **badge:** vclLabel was removed. To update, replace "vclLabel" with "vclBadge" and "vclBadge"
+with "vclBadge vclRounded".
+* **utils:** Replaced vclDisplayNone with vclHide
+
+
+
+
+
 ## [0.5.4](https://github.com/vcl/vcl/compare/v0.5.3...v0.5.4) (2019-08-13)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0-0](https://github.com/vcl/vcl/compare/v0.5.4...v0.6.0-0) (2019-08-23)
+
+
+### Features
+
+* **breakpoints:** adapt materiel style breakpoints ([da8d526](https://github.com/vcl/vcl/commit/da8d526))
+
+
+
+
+
 ## [0.5.3](https://github.com/vcl/vcl/compare/v0.5.1...v0.5.3) (2019-08-13)
 
 **Note:** Version bump only for package @vcl/breakpoints
