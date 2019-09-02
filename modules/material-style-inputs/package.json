@@ -1,7 +1,7 @@
 {
   "name": "@vcl/material-style-inputs",
   "description": "Material style inputs",
-  "version": "0.6.0-0",
+  "version": "0.6.0-1",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
@@ -18,15 +18,15 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.6.0-0",
-    "@vcl/preprocessor": "^0.6.0-0",
+    "@vcl/build-demo": "^0.6.0-1",
+    "@vcl/preprocessor": "^0.6.0-1",
     "browser-sync": "^2.26.3",
     "npm-run-all": "^4.1.5"
   },
   "dependencies": {
-    "@vcl/form-control-label": "^0.6.0-0",
-    "@vcl/input": "^0.6.0-0",
-    "@vcl/theme": "^0.6.0-0",
+    "@vcl/form-control-label": "^0.6.0-1",
+    "@vcl/input": "^0.6.0-1",
+    "@vcl/theme": "^0.6.0-1",
     "normalize.css": "^8.0.1"
   },
   "keywords": [
