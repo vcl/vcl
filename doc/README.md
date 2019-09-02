@@ -22,7 +22,7 @@ All modules with version level `>= 0.1.0` are ready for production use.
 - JS framework agnostic ‒ use it with Angular, React and the like.
 - For ambitious mobile and desktop applications.
 - Theming through modules which can inherit from each other.
-- Collection of [core modules](https://github.com/vcl/vcl//modules/core-modules)
+- Collection of [recommended modules](https://github.com/vcl/vcl//modules/vcl)
   to handle the bulk of styling needs.
 - [Default theme](https://github.com/vcl/vcl/themes/default-theme)
   for core modules with ~500 variables.
@@ -39,7 +39,6 @@ All modules with version level `>= 0.1.0` are ready for production use.
 - Browsers compatibility is delegated to
   [Autoprefixer](https://github.com/postcss/autoprefixer).
 - Future CSS features via [CSSNext](http://cssnext.io/).
-  [Autoprefixer](https://github.com/postcss/autoprefixer).
 - Mostly independent of HTML structure and element names.
 - Generation of interactive documentations like [vcl.github.io](https://vcl.github.io/) only for modules **you** use.
 - Embrace flex, no more float.
