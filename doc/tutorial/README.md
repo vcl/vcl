@@ -1,7 +1,7 @@
 # [VCL](https://vcl.github.io/) tutorial
 
 Short tutorials showing how to create VCL builds based on the collection of
-[core modules](../../modules),
+[vcl modules](../../modules/vcl),
 how to style a web page with it and how to run a single component demo.
 
 
