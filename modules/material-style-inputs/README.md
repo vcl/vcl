@@ -21,6 +21,10 @@ A focused input must also have the `vclMaterialFocused` class
 
 [Focused](/demo/example-focused.html)
 
+The embedded input group needs a modifier class for correct label positioning
+
+[EmbeddedInputGroup](/demo/example-embedded-input-button.html)
+
 ## Classes
 
 - `vclMaterial`
@@ -29,6 +33,7 @@ A focused input must also have the `vclMaterialFocused` class
 
 - `vclMaterialFloatingLabel`
 - `vclMaterialFocused`
+- `vclMaterialInputGroupEmbPrepItem`
 
 ## Demo
 

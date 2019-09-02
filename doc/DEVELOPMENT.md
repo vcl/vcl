@@ -119,6 +119,7 @@ Value or Range             | Component or reserved Range
 1                          | divider
 1, 2, 3                    | gallery
 1                          | input group
+1                          | material style inputs label
 1, 2                       | process nav
 1, 2                       | progress bar
 5                          | popover
