@@ -64,6 +64,9 @@
 .vclOverflowHidden
   overflow: hidden
 
+.vclOverflowAuto
+  overflow: auto
+
 .vclVisibilityHidden
   overflow: hidden
 
@@ -107,10 +110,10 @@
 
 /* Utility to enable disable selection of text */
 
-.vclDisableUserSelect
+.vclDisableUserSelect, .vclUserSelectNone
   user-select: none
 
-.vclEnableUserSelect
+.vclEnableUserSelect, .vclUserSelectText
   user-select: text
 
 
@@ -160,28 +163,28 @@
 
 /* Sizing helpers */
 
-.vclH-25
+.vclH-25p
   height: 25%
-.vclH-50
+.vclH-50p
   height: 50%
-.vclH-75
+.vclH-75p
   height: 75%
-.vclH-100
+.vclH-100p
   height: 100%
 .vclH-auto
   height: auto
-.vclMaxH-100
+.vclMaxH-100p
   max-height: 100%
 
-.vclW-25
+.vclW-25p
   width: 25%
-.vclW-50
+.vclW-50p
   width: 50%
-.vclW-75
+.vclW-75p
   width: 75%
-.vclW-100
+.vclW-100p
   width: 100%
 .vclW-auto
   width: auto
-.vclMaxW-100
+.vclMaxW-100p
   max-width: 100%

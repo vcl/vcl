@@ -9,6 +9,7 @@ Utility classes for:
 - Spacing
 - Breakpoint aware visibility control
 - Sizing
+- Gutter
 - Floated elements
 - Box model manipulation
 - Alignment of inline elements
@@ -29,6 +30,10 @@ Utility classes for:
 ### Sizing
 
 [sizing example](/demo/example-sizing.html)
+
+### Gutter
+
+[gutter example](/demo/example-gutter.html)
 
 ### Inline Element Alignment
 
@@ -62,33 +67,46 @@ Utility classes for:
 
 ### Sizing
 
-- `.vclH-25`
-- `.vclH-50`
-- `.vclH-75`
-- `.vclH-100`
-- `.vclH-auto`
-- `.vclMaxH-100`
-- `.vclW-25`
-- `.vclW-50`
-- `.vclW-75`
-- `.vclW-100`
-- `.vclW-auto`
-- `.vclMaxW-100`
+- `vclH-25p`
+- `vclH-50p`
+- `vclH-75p`
+- `vclH-100p`
+- `vclH-auto`
+- `vclMaxH-100p`
+- `vclW-25p`
+- `vclW-50p`
+- `vclW-75p`
+- `vclW-100p`
+- `vclW-autop`
+- `vclMaxW-100p`
+
+### Gutter
+
+- `vclGutter[X|Y]-[0|1|2|3|4|5]
+
+- direction (optional. All if not provided)
+  - values:
+      X (left and right), Y (top and bottom)
+- size
+  - values 0 to 5 (from none to large)
+
+Examples:
+
+vclGutter-3, vclGutterX-1, vclGutterY-5
 
 ### Spacing
 
 - `vcl[P|M][T|R|B|L|X|Y]-[0|1|2|3|4|5]`
- 
 
 - type
   - values: P (padding), M (margin)
 
 - direction (optional. All if not provided)
   - values:
-      R (right), B (bottom), L (left), X (left and right), Y (top and bottom), Auto (margin only)
+      R (right), B (bottom), L (left), X (left and right), Y (top and bottom)
 
 - size
-  - values 0 to 5 (from none to large)
+  - values 0 to 5 (from none to large), Auto (margin only)
 
 Examples:
 
@@ -108,15 +126,15 @@ vclP-3, vclPX-1, vclM-3, vclMY-auto
 - `vclNoWrap`
 - `vclOverflowEllipsis`
 
-### Breakpoint aware visibility control
+### Visibility control
 
 - `vclOverflowHidden`
+- `vclOverflowAuto`
 - `vclVisibilityHidden` 
 - `vclHide`
 - `vclHide-bp`: where bp is a breakpoint
 - `vclHide-from-bp`: where bp is a breakpoint
 - `vclHide-to-bp` where bp is a breakpoint
-- `vclDisplayNone`: deprecated. Use vclHide instead
 
 ### Scrollable Containers
 
@@ -131,8 +149,8 @@ Modifiers:
 
 ### Text Selection by Users
 
-- `vclEnableUserSelect`
-- `vclDisableUserSelect`
+- `vclUserSelectText`
+- `vclUserSelectNone`
 
 ## Demo
 

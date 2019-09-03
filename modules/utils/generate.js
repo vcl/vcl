@@ -70,6 +70,23 @@ const TPL_SPACE = (query, suffix) => {
   return s;
 }
 
+const TPL_GUTTER = (i) => 
+`.vclGutterX-${i}
+  margin-left: -var(--space-${i})
+  & > *
+    margin-left: var(--space-${i})
+.vclGutterY-${i}
+  margin-top: -var(--space-${i})
+  & > *
+    margin-top: var(--space-${i})
+.vclGutter-${i}
+  margin-left: -var(--space-${i})
+  margin-top: -var(--space-${i})
+  & > *
+    margin-left: var(--space-${i})
+    margin-top: var(--space-${i})
+`
+
 let style = '';
 style += TPL_SPACE(queryAll, '');
 // Disable breakpoint aware spacing
@@ -86,6 +103,10 @@ style += BREAKPOINTS.map(bp => {
   }
   return s;
 }).join('');
+
+for (i = 0; i <= 5; i++) {
+  style += TPL_GUTTER(i);
+}
 
 const outFile = path.resolve(__dirname, 'utils.generated.sss');
 fs.writeFileSync(outFile, style);

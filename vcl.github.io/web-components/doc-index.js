@@ -24,7 +24,7 @@ export default class DocIndex extends PolymerElement {
         </header>
         <div class="vclContentArea vclHor vclFlex">
           <doc-nav class="vclVer" items="{{navItems}}" selected-item="{{route.path}}" ></doc-nav>
-          <div class="docContent vclScrollable vclFlex vclMaxH-100" id="elements">
+          <div class="docContent vclScrollable vclFlex vclMaxH-100p" id="elements">
             <doc-content content="[[content]]"></doc-content>
           </div>
         </div>
