@@ -68,6 +68,7 @@ function transformFlexLayout(filepath: string, content: string) {
                 .replace(new RegExp('vclLayoutCenterCenter', 'g'), 'vclCenter')
                 .replace(new RegExp('vclLayoutCenter', 'g'), 'vclCenter')
                 .replace(new RegExp('vclLayoutEnd', 'g'), 'vclEnd')
+                .replace(new RegExp('vclLayoutHidden', 'g'), 'vclHide')
                 ;
 }
 
