@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0-4](https://github.com/vcl/vcl/compare/v0.6.0-3...v0.6.0-4) (2019-09-03)
+
+
+### Bug Fixes
+
+* **material-style-inputs:** fix overlapping label in emb input groups ([1ea98a3](https://github.com/vcl/vcl/commit/1ea98a3))
+
+
+
+
+
 # [0.6.0-1](https://github.com/vcl/vcl/compare/v0.6.0-0...v0.6.0-1) (2019-09-02)
 
 

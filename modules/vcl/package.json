@@ -1,7 +1,7 @@
 {
   "name": "@vcl/vcl",
   "description": "A collection of VCL modules",
-  "version": "0.6.0-3",
+  "version": "0.6.0-4",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"
@@ -19,7 +19,7 @@
     "@vcl/app-content-area": "^0.6.0-1",
     "@vcl/app-footer": "^0.6.0-1",
     "@vcl/app-header": "^0.6.0-1",
-    "@vcl/badge": "^0.6.0-1",
+    "@vcl/badge": "^0.6.0-4",
     "@vcl/blog": "^0.6.0-1",
     "@vcl/breadcrumb": "^0.6.0-1",
     "@vcl/breakpoints": "^0.6.0-1",
@@ -66,7 +66,7 @@
     "@vcl/logo": "^0.6.0-1",
     "@vcl/loose-button-group": "^0.6.0-1",
     "@vcl/material-design-icons": "^0.6.0-1",
-    "@vcl/material-style-inputs": "^0.6.0-1",
+    "@vcl/material-style-inputs": "^0.6.0-4",
     "@vcl/nag": "^0.6.0-1",
     "@vcl/navigation": "^0.6.0-1",
     "@vcl/notification": "^0.6.0-1",
