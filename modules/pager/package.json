@@ -34,8 +34,7 @@
     "@vcl/flex-layout": "^0.6.0-1",
     "@vcl/icogram": "^0.6.0-1",
     "@vcl/theme": "^0.6.0-1",
-    "@vcl/toolbar": "^0.6.0-1",
-    "normalize.css": "^8.0.1"
+    "@vcl/toolbar": "^0.6.0-1"
   },
   "keywords": [
     "css",

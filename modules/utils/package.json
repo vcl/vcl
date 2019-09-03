@@ -32,8 +32,7 @@
     "pug-cli": "^1.0.0-alpha6"
   },
   "dependencies": {
-    "@vcl/theme": "^0.6.0-1",
-    "normalize.css": "^8.0.1"
+    "@vcl/theme": "^0.6.0-1"
   },
   "keywords": [
     "css",

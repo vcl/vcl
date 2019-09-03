@@ -26,8 +26,7 @@
   "dependencies": {
     "@vcl/form-control-label": "^0.6.0-1",
     "@vcl/input": "^0.6.0-1",
-    "@vcl/theme": "^0.6.0-1",
-    "normalize.css": "^8.0.1"
+    "@vcl/theme": "^0.6.0-1"
   },
   "keywords": [
     "css",

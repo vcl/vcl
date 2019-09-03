@@ -40,7 +40,6 @@ Use the `@import ...` syntax on top of ypur file if your module has dependencies
 Most modules need to import the `@vcl/theme`
 
 ```sss
-@import "normalize.css"
 @import "@vcl/theme"
 @import "@vcl/button"
 
