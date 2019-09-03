@@ -1,7 +1,7 @@
 {
   "name": "@vcl/vcl",
   "description": "A collection of VCL modules",
-  "version": "0.6.0-2",
+  "version": "0.6.0-3",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"
@@ -44,7 +44,7 @@
     "@vcl/fieldset": "^0.6.0-1",
     "@vcl/figure": "^0.6.0-1",
     "@vcl/file-input": "^0.6.0-1",
-    "@vcl/flex-grid": "^0.6.0-1",
+    "@vcl/flex-grid": "^0.6.0-3",
     "@vcl/flex-layout": "^0.6.0-1",
     "@vcl/flip-switch": "^0.6.0-1",
     "@vcl/font-awesome": "^0.6.0-1",
@@ -99,7 +99,7 @@
     "@vcl/toolbar": "^0.6.0-1",
     "@vcl/tooltip": "^0.6.0-1",
     "@vcl/typography": "^0.6.0-1",
-    "@vcl/utils": "^0.6.0-1",
+    "@vcl/utils": "^0.6.0-3",
     "@vcl/value-unit-anagram": "^0.6.0-1",
     "@vcl/zoom-box": "^0.6.0-1",
     "normalize.css": "8.0.1"
