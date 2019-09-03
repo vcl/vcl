@@ -1,7 +1,7 @@
 {
   "name": "@vcl/file-input",
   "description": "File input for selecting one or multiple files via tap and drag-and-drop gestures",
-  "version": "0.6.0-1",
+  "version": "0.6.0-5",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
