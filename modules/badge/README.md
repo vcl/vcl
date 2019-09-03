@@ -16,7 +16,7 @@ Supports rounded corners and semantic modifiers for coloring.
 
 ## Modifiers
 
- `vclRounded`: 
+- `vclRounded`
 
 Semantic coloring.
 
