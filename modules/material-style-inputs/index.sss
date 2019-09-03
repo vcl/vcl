@@ -47,6 +47,7 @@
     margin: 0
     // Initial state with the label overlaying the input
     position: relative
+    display: inline-block
     z-index: 1
     top: 27px
     left: 0
@@ -54,13 +55,9 @@
     opacity: 0.6
     pointer-events: none
     margin-bottom: 5px
-    &.vclFormControlLabelWrapping:before
-      content: attr(data-label)
-      top: 22px
     & .vclRequiredIndicator
       line-height: inherit
   // State when label is floating above the input
-
   &.vclMaterialFloatingLabel
     & .vclFormControlLabel
       font-size: 0.9em
@@ -103,7 +100,9 @@
         opacity: 1
 
 
-  // Embedded input group prepended button spacing 
+  // Embedded input group modifiers for prepended space in input
+  &.vclMaterialInputGroupEmbPrepItem .vclFormControlLabel
+    max-width: calc(100% - 2.5em)
+
   &.vclMaterialInputGroupEmbPrepItem:not(.vclMaterialFloatingLabel) .vclFormControlLabel
-    &:not(.vclFormControlLabelWrapping)
-      left: 2.5em
+    left: 2.5em
