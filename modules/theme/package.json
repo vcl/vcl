@@ -1,7 +1,7 @@
 {
   "name": "@vcl/theme",
   "description": "The VCL default theme",
-  "version": "0.6.0-1",
+  "version": "0.6.0-6",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
@@ -23,8 +23,8 @@
     }
   ],
   "devDependencies": {
-    "@vcl/build-demo": "^0.6.0-1",
-    "@vcl/preprocessor": "^0.6.0-1",
+    "@vcl/build-demo": "^0.6.0-6",
+    "@vcl/preprocessor": "^0.6.0-6",
     "browser-sync": "^2.26.3",
     "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5"
