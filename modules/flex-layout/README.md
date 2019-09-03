@@ -1,6 +1,6 @@
 # [VCL](https://vcl.github.io/) flex-layout (deprecated)
 
-Flexbox based layout system.
+*deprecated* - Use [flex-grid](#flex-grid) instead.
 
 ## Features
 
