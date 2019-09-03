@@ -40,7 +40,7 @@ Check the breakpoints section for more details.
 Use `vclGridGutter-1` to `vclGridGutter-5` classes to space out grid cells. 
 Warning: Gutters apply negative margins to the container element and positive paddings to the chilrden. Take this into account when you are setting background colors or adding other padding/margins.
 
-[grid gutter example](/demo/example-gutter.html)
+[grid gutter example](/demo/example-grid-gutter.html)
 
 There are several modifier classes to change the positioning of the cells
 
