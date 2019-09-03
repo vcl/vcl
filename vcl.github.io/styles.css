@@ -7696,158 +7696,158 @@ input.vclSelected:focus {
   }
 }
 
-.vclGutter-x-0 {
+.vclGridGutterX-0 {
   margin-left: -0;
 }
 
-.vclGutter-x-0 > * {
+.vclGridGutterX-0 > * {
     padding-left: 0;
 }
 
-.vclGutter-y-0 {
+.vclGridGutterY-0 {
   margin-top: -0;
 }
 
-.vclGutter-y-0 > * {
+.vclGridGutterY-0 > * {
     padding-top: 0;
 }
 
-.vclGutter-0 {
+.vclGridGutter-0 {
   margin-left: -0;
   margin-top: -0;
 }
 
-.vclGutter-0 > * {
+.vclGridGutter-0 > * {
     padding-left: 0;
     padding-top: 0;
 }
 
-.vclGutter-x-1 {
+.vclGridGutterX-1 {
   margin-left: -4px;
 }
 
-.vclGutter-x-1 > * {
+.vclGridGutterX-1 > * {
     padding-left: 4px;
 }
 
-.vclGutter-y-1 {
+.vclGridGutterY-1 {
   margin-top: -4px;
 }
 
-.vclGutter-y-1 > * {
+.vclGridGutterY-1 > * {
     padding-top: 4px;
 }
 
-.vclGutter-1 {
+.vclGridGutter-1 {
   margin-left: -4px;
   margin-top: -4px;
 }
 
-.vclGutter-1 > * {
+.vclGridGutter-1 > * {
     padding-left: 4px;
     padding-top: 4px;
 }
 
-.vclGutter-x-2 {
+.vclGridGutterX-2 {
   margin-left: -8px;
 }
 
-.vclGutter-x-2 > * {
+.vclGridGutterX-2 > * {
     padding-left: 8px;
 }
 
-.vclGutter-y-2 {
+.vclGridGutterY-2 {
   margin-top: -8px;
 }
 
-.vclGutter-y-2 > * {
+.vclGridGutterY-2 > * {
     padding-top: 8px;
 }
 
-.vclGutter-2 {
+.vclGridGutter-2 {
   margin-left: -8px;
   margin-top: -8px;
 }
 
-.vclGutter-2 > * {
+.vclGridGutter-2 > * {
     padding-left: 8px;
     padding-top: 8px;
 }
 
-.vclGutter-x-3 {
+.vclGridGutterX-3 {
   margin-left: -16px;
 }
 
-.vclGutter-x-3 > * {
+.vclGridGutterX-3 > * {
     padding-left: 16px;
 }
 
-.vclGutter-y-3 {
+.vclGridGutterY-3 {
   margin-top: -16px;
 }
 
-.vclGutter-y-3 > * {
+.vclGridGutterY-3 > * {
     padding-top: 16px;
 }
 
-.vclGutter-3 {
+.vclGridGutter-3 {
   margin-left: -16px;
   margin-top: -16px;
 }
 
-.vclGutter-3 > * {
+.vclGridGutter-3 > * {
     padding-left: 16px;
     padding-top: 16px;
 }
 
-.vclGutter-x-4 {
+.vclGridGutterX-4 {
   margin-left: -24px;
 }
 
-.vclGutter-x-4 > * {
+.vclGridGutterX-4 > * {
     padding-left: 24px;
 }
 
-.vclGutter-y-4 {
+.vclGridGutterY-4 {
   margin-top: -24px;
 }
 
-.vclGutter-y-4 > * {
+.vclGridGutterY-4 > * {
     padding-top: 24px;
 }
 
-.vclGutter-4 {
+.vclGridGutter-4 {
   margin-left: -24px;
   margin-top: -24px;
 }
 
-.vclGutter-4 > * {
+.vclGridGutter-4 > * {
     padding-left: 24px;
     padding-top: 24px;
 }
 
-.vclGutter-x-5 {
+.vclGridGutterX-5 {
   margin-left: -48px;
 }
 
-.vclGutter-x-5 > * {
+.vclGridGutterX-5 > * {
     padding-left: 48px;
 }
 
-.vclGutter-y-5 {
+.vclGridGutterY-5 {
   margin-top: -48px;
 }
 
-.vclGutter-y-5 > * {
+.vclGridGutterY-5 > * {
     padding-top: 48px;
 }
 
-.vclGutter-5 {
+.vclGridGutter-5 {
   margin-left: -48px;
   margin-top: -48px;
 }
 
-.vclGutter-5 > * {
+.vclGridGutter-5 > * {
     padding-left: 48px;
     padding-top: 48px;
 }
@@ -8904,11 +8904,6 @@ table.vclTable input,
   border-right-width: 0;
 }
 
-.vclStickedTable table.vclTable.vclVerticalBorder td:last-child,
-.vclStickedTable table.vclTable.vclVerticalBorder th:last-child {
-  border-right-width: 1px;
-}
-
 .vclTable .vclSelected,
 .vclTable .vclSelected:hover,
 .vclTable .vclSelected:active {
@@ -9422,6 +9417,10 @@ sub {
   overflow: hidden;
 }
 
+.vclOverflowAuto {
+  overflow: auto;
+}
+
 .vclVisibilityHidden {
   overflow: hidden;
 }
@@ -9474,14 +9473,14 @@ sub {
 
 /* Utility to enable disable selection of text */
 
-.vclDisableUserSelect {
+.vclDisableUserSelect, .vclUserSelectNone {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 
-.vclEnableUserSelect {
+.vclEnableUserSelect, .vclUserSelectText {
   -webkit-user-select: text;
      -moz-user-select: text;
       -ms-user-select: text;
@@ -9542,19 +9541,19 @@ sub {
 
 /* Sizing helpers */
 
-.vclH-25 {
+.vclH-25p {
   height: 25%;
 }
 
-.vclH-50 {
+.vclH-50p {
   height: 50%;
 }
 
-.vclH-75 {
+.vclH-75p {
   height: 75%;
 }
 
-.vclH-100 {
+.vclH-100p {
   height: 100%;
 }
 
@@ -9562,23 +9561,23 @@ sub {
   height: auto;
 }
 
-.vclMaxH-100 {
+.vclMaxH-100p {
   max-height: 100%;
 }
 
-.vclW-25 {
+.vclW-25p {
   width: 25%;
 }
 
-.vclW-50 {
+.vclW-50p {
   width: 50%;
 }
 
-.vclW-75 {
+.vclW-75p {
   width: 75%;
 }
 
-.vclW-100 {
+.vclW-100p {
   width: 100%;
 }
 
@@ -9586,7 +9585,7 @@ sub {
   width: auto;
 }
 
-.vclMaxW-100 {
+.vclMaxW-100p {
   max-width: 100%;
 }
 
@@ -9980,6 +9979,162 @@ sub {
   .vclHide-from-xl {
     display: none !important;
   }
+}
+
+.vclGutterX-0 {
+  margin-left: -0;
+}
+
+.vclGutterX-0 > * {
+    margin-left: 0;
+}
+
+.vclGutterY-0 {
+  margin-top: -0;
+}
+
+.vclGutterY-0 > * {
+    margin-top: 0;
+}
+
+.vclGutter-0 {
+  margin-left: -0;
+  margin-top: -0;
+}
+
+.vclGutter-0 > * {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.vclGutterX-1 {
+  margin-left: -4px;
+}
+
+.vclGutterX-1 > * {
+    margin-left: 4px;
+}
+
+.vclGutterY-1 {
+  margin-top: -4px;
+}
+
+.vclGutterY-1 > * {
+    margin-top: 4px;
+}
+
+.vclGutter-1 {
+  margin-left: -4px;
+  margin-top: -4px;
+}
+
+.vclGutter-1 > * {
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.vclGutterX-2 {
+  margin-left: -8px;
+}
+
+.vclGutterX-2 > * {
+    margin-left: 8px;
+}
+
+.vclGutterY-2 {
+  margin-top: -8px;
+}
+
+.vclGutterY-2 > * {
+    margin-top: 8px;
+}
+
+.vclGutter-2 {
+  margin-left: -8px;
+  margin-top: -8px;
+}
+
+.vclGutter-2 > * {
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+.vclGutterX-3 {
+  margin-left: -16px;
+}
+
+.vclGutterX-3 > * {
+    margin-left: 16px;
+}
+
+.vclGutterY-3 {
+  margin-top: -16px;
+}
+
+.vclGutterY-3 > * {
+    margin-top: 16px;
+}
+
+.vclGutter-3 {
+  margin-left: -16px;
+  margin-top: -16px;
+}
+
+.vclGutter-3 > * {
+    margin-left: 16px;
+    margin-top: 16px;
+}
+
+.vclGutterX-4 {
+  margin-left: -24px;
+}
+
+.vclGutterX-4 > * {
+    margin-left: 24px;
+}
+
+.vclGutterY-4 {
+  margin-top: -24px;
+}
+
+.vclGutterY-4 > * {
+    margin-top: 24px;
+}
+
+.vclGutter-4 {
+  margin-left: -24px;
+  margin-top: -24px;
+}
+
+.vclGutter-4 > * {
+    margin-left: 24px;
+    margin-top: 24px;
+}
+
+.vclGutterX-5 {
+  margin-left: -48px;
+}
+
+.vclGutterX-5 > * {
+    margin-left: 48px;
+}
+
+.vclGutterY-5 {
+  margin-top: -48px;
+}
+
+.vclGutterY-5 > * {
+    margin-top: 48px;
+}
+
+.vclGutter-5 {
+  margin-left: -48px;
+  margin-top: -48px;
+}
+
+.vclGutter-5 > * {
+    margin-left: 48px;
+    margin-top: 48px;
 }
 
 html,
