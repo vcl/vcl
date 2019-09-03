@@ -37,10 +37,10 @@ Check the breakpoints section for more details.
 
 [responsive example](/demo/example-responsive.html)
 
-Use `vclGutter-1` to `vclGutter-5` classes to space out cells. 
+Use `vclGridGutter-1` to `vclGridGutter-5` classes to space out grid cells. 
 Warning: Gutters apply negative margins to the container element and positive paddings to the chilrden. Take this into account when you are setting background colors or adding other padding/margins.
 
-[gutter example](/demo/example-gutter.html)
+[grid gutter example](/demo/example-gutter.html)
 
 There are several modifier classes to change the positioning of the cells
 
@@ -61,7 +61,9 @@ There are several modifier classes to change the positioning of the cells
 - `vclFlex-1` to `vclFlex-12`
 - `vclFlex-1-bp` to `vclFlex-12-bp` where bp is a breakpoint
 - `vclOffset-1-bp` to `vclOffset-12-bp` where bp is a breakpoint
-- `vclGutter-1` to `vclGutter-5`
+- `vclGridGutter-1` to `vclGridGutter-5`
+- `vclGridGutterX-1` to `vclGridGutterX-5`
+- `vclGridGutterY-1` to `vclGridGutterY-5`
 ## Modifiers
 - `vclStart`
 - `vclEnd`

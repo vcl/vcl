@@ -41,15 +41,15 @@ const TPL_FLEX_OFFSET = (cell, suffix, per) =>
 `
 
 const TPL_FLEX_GUTTER = (i) => 
-`.vclGutter-x-${i}
+`.vclGridGutterX-${i}
   margin-left: -var(--space-${i})
   & > *
     padding-left: var(--space-${i})
-.vclGutter-y-${i}
+.vclGridGutterY-${i}
   margin-top: -var(--space-${i})
   & > *
     padding-top: var(--space-${i})
-.vclGutter-${i}
+.vclGridGutter-${i}
   margin-left: -var(--space-${i})
   margin-top: -var(--space-${i})
   & > *
