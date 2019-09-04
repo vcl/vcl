@@ -19,8 +19,8 @@ Flexbox based layout primitives that can solve almost all layout challenges.
 The flex layout also features a layout grid which works just like a classical
 float based grid. A grid row is built from a `vclLayoutGridRow` containing
 an arbitrary number of `vclLayoutGridCell`s. The cells can be sized using
-the column classed `vclLayout1 .. vclLayout11` or the sizing spans from
-the layout-spans module.
+the column classed `vclLayout1 .. vclLayout11` or the sizing from
+the utils module.
 
 [grid basic example](/demo/example-grid-basic.html)
 

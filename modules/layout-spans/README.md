@@ -1,5 +1,7 @@
 # [VCL](https://vcl.github.io/) layout-spans
 
+*deprecated* - Use [sizing utils](#utils) instead.
+
 Percentage based sizing spans.
 
 ## Features

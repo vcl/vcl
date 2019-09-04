@@ -60,7 +60,6 @@
     "@vcl/input": "^0.6.0-6",
     "@vcl/input-group": "^0.6.0-6",
     "@vcl/layer": "^0.6.0-6",
-    "@vcl/layout-spans": "^0.6.0-6",
     "@vcl/list": "^0.6.0-6",
     "@vcl/loading-layer": "^0.6.0-6",
     "@vcl/logo": "^0.6.0-6",

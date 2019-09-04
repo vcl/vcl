@@ -56,7 +56,6 @@ List of core modules:
 - icogram
 - icon
 - input
-- layout-spans
 - logo
 - loose-button-group
 - radio-button

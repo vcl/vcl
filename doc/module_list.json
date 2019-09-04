@@ -52,7 +52,6 @@
   {"name": "label",                                "description": "Label",                                               "homepage": "https://vcl.github.io/#vcl-label"},
   {"name": "layer",                                "description": "Layer",                                               "homepage": "https://vcl.github.io/#vcl-layer"},
   {"name": "flex-layout",                          "description": "Flexbox based layout system",                         "homepage": "https://vcl.github.io/#vcl-flex-layout"},
-  {"name": "layout-spans",                         "description": "Percentage based sizing spans",                       "homepage": "https://vcl.github.io/#vcl-layout-spans"},
   {"name": "list",                                 "description": "List",                                                "homepage": "https://vcl.github.io/#vcl-list"},
   {"name": "loading-layer",                        "description": "Loading layer",                                       "homepage": "https://vcl.github.io/#vcl-loading-layer"},
   {"name": "logo",                                 "description": "Logo",                                                "homepage": "https://vcl.github.io/#vcl-logo"},

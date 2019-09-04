@@ -3,7 +3,7 @@ import { join } from "path";
 
 const IGNORE_DIRS = ['node_modules'];
 // Folders to migrate
-const WORK_DIRS = ['./src'];
+const WORK_DIRS = ['../modules'];
 // File extenstion to migrate
 const WORK_EXT_REGEX = /\.(sss|html|md)$/g;
 
@@ -64,6 +64,7 @@ function migrate06(filepath: string, content: string) {
                 .replace(/vclLayoutCenter/g, 'vclCenter')
                 .replace(/vclLayoutEnd/g, 'vclEnd')
                 .replace(/vclLayoutHidden/g, 'vclHide')
+                .replace(/vclSpan-([0-9]{1,3})p/g, (_, x) => `vclW-${x}p`)
                 ;
 }
 
