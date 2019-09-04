@@ -67,18 +67,57 @@ Utility classes for:
 
 ### Sizing
 
+Percentage based spans which can be used in many cases to set the
+width and height of a container.
+
+- `vclW-5p`
+- `vclW-10p`
+- `vclW-15p`
+- `vclW-20p`
+- `vclW-25p`
+- `vclW-30p`
+- `vclW-33p`
+- `vclW-35p`
+- `vclW-40p`
+- `vclW-45p`
+- `vclW-50p`
+- `vclW-55p`
+- `vclW-60p`
+- `vclW-65p`
+- `vclW-70p`
+- `vclW-75p`
+- `vclW-80p`
+- `vclW-85p`
+- `vclW-90p`
+- `vclW-95p`
+- `vclW-100p`
+- `vclW-auto`
+- `vclW-gca`: Golden cut a
+- `vclW-gcb`: Golden cut b
+- `vclMaxW-100p`: max-width: 100%
+- `vclH-5p`
+- `vclH-10p`
+- `vclH-15p`
+- `vclH-20p`
 - `vclH-25p`
+- `vclH-30p`
+- `vclH-33p`
+- `vclH-35p`
+- `vclH-40p`
+- `vclH-45p`
 - `vclH-50p`
+- `vclH-55p`
+- `vclH-60p`
+- `vclH-65p`
+- `vclH-70p`
 - `vclH-75p`
+- `vclH-80p`
+- `vclH-85p`
+- `vclH-90p`
+- `vclH-95p`
 - `vclH-100p`
 - `vclH-auto`
-- `vclMaxH-100p`
-- `vclW-25p`
-- `vclW-50p`
-- `vclW-75p`
-- `vclW-100p`
-- `vclW-autop`
-- `vclMaxW-100p`
+- `vclMaxH-100p`: max-height: 100%
 
 ### Gutter
 
