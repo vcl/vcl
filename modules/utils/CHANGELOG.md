@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0-7](https://github.com/vcl/vcl/compare/v0.6.0-5...v0.6.0-7) (2019-09-04)
+
+
+### Features
+
+* **utils:** add more sizing classes ([cd87261](https://github.com/vcl/vcl/commit/cd87261))
+
+
+
+
+
 # [0.6.0-6](https://github.com/vcl/vcl/compare/v0.6.0-5...v0.6.0-6) (2019-09-03)
 
 **Note:** Version bump only for package @vcl/utils
