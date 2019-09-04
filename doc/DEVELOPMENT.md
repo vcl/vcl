@@ -99,7 +99,7 @@ Example:
 
 ## Usable CSS Features
 
-Use the [flexbox based layout attributes](https://github.com/vcl/vcl/modules/layout)
+Use the [flex-grid layout attributes](https://github.com/vcl/vcl/modules/flex-grid)
 to realize complex layouts or flexbox based rules in the module itself.
 Apart from that, try to stick to the browser compatibility statement below.
 

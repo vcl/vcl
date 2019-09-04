@@ -28,12 +28,12 @@ export default class DocMetadata extends PolymerElement {
       <h3>Package Information</h3>
     </header>
     <ul class="vclDataListBody" role="listbox">
-      <li class="vclDataListItem" horizontal center layout>
+      <li class="vclDataListItem vclHor vclJustifyBetween">
         <span class="vclGridSpan-gcb" role="gridcell"><b>Name</b></span>
         <span class="vclGridSpan-gca" role="gridcell">[[package.name]]</span>
       </li>
       <template is="dom-if" if="{{package.repository}}">
-        <li class="vclDataListItem" horizontal center layout >
+        <li class="vclDataListItem vclHor vclJustifyBetween" >
           <span class="vclGridSpan-gcb" role="gridcell"><b>Repository</b></span>
           <span class="vclGridSpan-gca" role="gridcell">
             <a href=[[pack.repository]] target="_blank">[[package.repository.url]]</a>
@@ -41,31 +41,31 @@ export default class DocMetadata extends PolymerElement {
         </li>
       </template>
       <template is="dom-if" if="{{package.author}}">
-        <li class="vclDataListItem" horizontal center layout >
+        <li class="vclDataListItem vclHor vclJustifyBetween" >
           <span class="vclGridSpan-gcb" role="gridcell"><b>Author</b></span>
           <span class="vclGridSpan-gca" role="gridcell">[[package.author.name]]</span>
         </li>
       </template>
       <template is="dom-if" if="{{package.version}}">
-      <li class="vclDataListItem" horizontal center layout >
+      <li class="vclDataListItem vclHor vclJustifyBetween" >
         <span class="vclGridSpan-gcb" role="gridcell"><b>Version</b></span>
         <span class="vclGridSpan-gca" role="gridcell">[[package.version]]</span>
       </li>
       </template>
       <template is="dom-if" if="{{package.license}}">
-        <li class="vclDataListItem" horizontal center layout >
+        <li class="vclDataListItem vclHor vclJustifyBetween" >
           <span class="vclGridSpan-gcb" role="gridcell"><b>License</b></span>
           <span class="vclGridSpan-gca" role="gridcell">[[package.license]]</span>
         </li>
       </template>
       <template is="dom-if" if="{{false}}">
-        <li class="vclDataListItem" horizontal center layout >
+        <li class="vclDataListItem vclHor vclJustifyBetween" >
           <span class="vclGridSpan-gcb" role="gridcell"><b>Aprox. size</b></span>
           <span class="vclGridSpan-gca" role="gridcell">2kb</span>
         </li>
       </template>
       <template is="dom-if" if="{{package.docgen}}">
-      <li class="vclDataListItem" horizontal center layout >
+      <li class="vclDataListItem vclHor vclJustifyBetween" >
         <span class="vclGridSpan-gcb" role="gridcell"><b>Categories</b></span>
         <span class="vclGridSpan-gca" role="gridcell">
         <template is="dom-repeat"  items="{{package.docgen.categories}}" as="category">
