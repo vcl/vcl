@@ -33,6 +33,8 @@ Utility classes for:
 
 ### Gutter
 
+*note*: Use `vclOverflowAuto` to avoid leaking background colors
+
 [gutter example](/demo/example-gutter.html)
 
 ### Inline Element Alignment
