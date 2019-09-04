@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/vcl/vcl/compare/v0.6.0-7...v0.6.0) (2019-09-04)
+
+
+### Bug Fixes
+
+* **material-style-inputs:** fix label position ([33c985a](https://github.com/vcl/vcl/commit/33c985a))
+* **spinner:** fix button height ([f87741a](https://github.com/vcl/vcl/commit/f87741a))
+
+
+### Features
+
+* **button:** add hover color for selected state ([118778a](https://github.com/vcl/vcl/commit/118778a))
+
+
+
+
+
 # [0.6.0-7](https://github.com/vcl/vcl/compare/v0.6.0-5...v0.6.0-7) (2019-09-04)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/vcl/spinner/compare/v0.6.0-7...v0.6.0) (2019-09-04)
+
+
+### Bug Fixes
+
+* **spinner:** fix button height ([f87741a](https://github.com/vcl/spinner/commit/f87741a))
+
+
+
+
+
 # [0.6.0-7](https://github.com/vcl/spinner/compare/v0.6.0-5...v0.6.0-7) (2019-09-04)
 
 **Note:** Version bump only for package @vcl/spinner

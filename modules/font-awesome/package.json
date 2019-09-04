@@ -1,7 +1,7 @@
 {
   "name": "@vcl/font-awesome",
   "description": "Integration with the font awesome icon font",
-  "version": "0.6.0-7",
+  "version": "0.6.0",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
@@ -24,14 +24,14 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.6.0-7",
-    "@vcl/preprocessor": "^0.6.0-7",
+    "@vcl/build-demo": "^0.6.0",
+    "@vcl/preprocessor": "^0.6.0",
     "browser-sync": "^2.26.3",
     "npm-run-all": "^4.1.5"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.7.2",
-    "@vcl/theme": "^0.6.0-7"
+    "@vcl/theme": "^0.6.0"
   },
   "keywords": [
     "css",
