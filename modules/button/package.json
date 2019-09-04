@@ -6,7 +6,7 @@
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
     "browsersync": "browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
-    "build-demo": "vcl-build-demo --watch --vcl-root=.. --watch --vcl-root=..",
+    "build-demo": "vcl-build-demo --watch --vcl-root=..",
     "start": "npm-run-all --parallel build-demo browsersync"
   },
   "style": "index.sss",

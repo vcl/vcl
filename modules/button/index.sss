@@ -101,6 +101,13 @@ span.vclButton[disabled]
   background-color: var(--button-bg-hover-color)
   color: var(--button-label-hover-color)
 
+.vclButton.vclSelected:active,
+.vclButton.vclSelected:visited,
+.vclButton.vclSelected.vclPressed,
+.vclButton.vclSelected.vclActive
+  background-color: var(--button-bg-selected-hover-color)
+  color: var(--button-label-selected-hover-color)
+
 .vclButton.vclDisabled,
 .vclButton[disabled]
   color: var(--button-label-disabled-color)
@@ -233,6 +240,13 @@ span.vclButton[disabled]
   .vclButton.vclFocused
     background-color: var(--button-bg-hover-color)
     color: var(--button-label-hover-color)
+
+  .vclButton.vclSelected:hover,
+  .vclButton.vclSelected:focus,
+  .vclButton.vclSelected.vclHover,
+  .vclButton.vclSelected.vclFocused
+    background-color: var(--button-bg-selected-hover-color)
+    color: var(--button-label-selected-hover-color)
 
   .vclButton.vclEmphasized:hover,
   .vclButton.vclEmphasized:focus,
