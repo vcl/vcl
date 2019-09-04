@@ -34,7 +34,6 @@ function work(root: string, filter: RegExp, callback: (filepath: string, value: 
 WORK_DIRS.forEach(p => {
   work(p, WORK_EXT_REGEX, (filepath, content) => {
     let s = content;
-    s = transformFlexLayout(filepath, s);
     s = migrate06(filepath, s);
     return s;
   });
@@ -42,36 +41,31 @@ WORK_DIRS.forEach(p => {
 
 
 function migrate06(filepath: string, content: string) {
-  return content.replace(new RegExp('vclLabel', 'g'), 'vclBadge')
-                .replace(new RegExp('vclBadge', 'g'), 'vclBadge vclRounded') // Warning. Not repeatable
-                .replace(new RegExp('vclDisplayNone', 'g'), 'vclHide')
-                .replace(new RegExp('vclNoPadding', 'g'), 'vclP-0')
-                .replace(new RegExp('vclNoMargin', 'g'), 'vclM-0')
+  return content.replace(/vclLabel/g, 'vclBadge')
+                .replace(/vclBadge/g, 'vclBadge vclRounded') // Warning. Not repeatable
+                .replace(/vclDisplayNone/g, 'vclHide')
+                .replace(/vclNoPadding/g, 'vclP-0')
+                .replace(/vclNoMargin/g, 'vclM-0')
+                .replace(/vclLayoutHorizontal/g, 'vclHor')
+                .replace(/vclLayoutVertical/g, 'vclVer')
+                .replace(/vclLayoutFlex/g, 'vclFlex')
+                .replace(/vclLayoutSelfStart/g, 'vclSelfStart')
+                .replace(/vclLayoutSelfCenter/g, 'vclSelfCenter')
+                .replace(/vclLayoutSelfEnd/g, 'vclSelfEnd')
+                .replace(/vclLayoutSelfStretch/g, 'vclSelfStretch')
+                .replace(/vclLayoutStartJustified/g, 'vclJustifyStart')
+                .replace(/vclLayoutCenterJustified/g, 'vclJustifyCenter')
+                .replace(/vclLayoutEndJustified/g, 'vclJustifyEnd')
+                .replace(/vclLayoutAroundJustified/g, 'vclJustifyAround')
+                .replace(/vclLayoutEvenlyJustified/g, 'vclJustifyEvenly')
+                .replace(/vclLayoutJustified/g, 'vclJustifyBetween')
+                .replace(/vclLayoutStart/g, 'vclStart')
+                .replace(/vclLayoutCenterCenter/g, 'vclCenter')
+                .replace(/vclLayoutCenter/g, 'vclCenter')
+                .replace(/vclLayoutEnd/g, 'vclEnd')
+                .replace(/vclLayoutHidden/g, 'vclHide')
                 ;
 }
-
-function transformFlexLayout(filepath: string, content: string) {
-  return content.replace(new RegExp('vclLayoutHorizontal', 'g'), 'vclHor')
-                .replace(new RegExp('vclLayoutVertical', 'g'), 'vclVer')
-                .replace(new RegExp('vclLayoutFlex', 'g'), 'vclFlex')
-                .replace(new RegExp('vclLayoutSelfStart', 'g'), 'vclSelfStart')
-                .replace(new RegExp('vclLayoutSelfCenter', 'g'), 'vclSelfCenter')
-                .replace(new RegExp('vclLayoutSelfEnd', 'g'), 'vclSelfEnd')
-                .replace(new RegExp('vclLayoutSelfStretch', 'g'), 'vclSelfStretch')
-                .replace(new RegExp('vclLayoutStartJustified', 'g'), 'vclJustifyStart')
-                .replace(new RegExp('vclLayoutCenterJustified', 'g'), 'vclJustifyCenter')
-                .replace(new RegExp('vclLayoutEndJustified', 'g'), 'vclJustifyEnd')
-                .replace(new RegExp('vclLayoutAroundJustified', 'g'), 'vclJustifyAround')
-                .replace(new RegExp('vclLayoutEvenlyJustified', 'g'), 'vclJustifyEvenly')
-                .replace(new RegExp('vclLayoutJustified', 'g'), 'vclJustifyBetween')
-                .replace(new RegExp('vclLayoutStart', 'g'), 'vclStart')
-                .replace(new RegExp('vclLayoutCenterCenter', 'g'), 'vclCenter')
-                .replace(new RegExp('vclLayoutCenter', 'g'), 'vclCenter')
-                .replace(new RegExp('vclLayoutEnd', 'g'), 'vclEnd')
-                .replace(new RegExp('vclLayoutHidden', 'g'), 'vclHide')
-                ;
-}
-
 
 // experimental regex transformation: camel-case to kebab-case
 const camelCaseTransformationMap: {
