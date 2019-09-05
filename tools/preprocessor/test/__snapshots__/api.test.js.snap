@@ -33,8 +33,6 @@ body {
 "
 `;
 
-exports[`vcl object should override the theme var 1`] = `".body{background-color:#d9534f}body{color:#00f}"`;
-
 exports[`vcl object should remove the comment 1`] = `"body{color:#00f}"`;
 
 exports[`vcl object should return valid css 1`] = `

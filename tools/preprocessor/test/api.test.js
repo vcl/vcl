@@ -82,7 +82,7 @@ body
     });
 
     expect(typeof result.css).toBe('string');
-    expect(result.css).toMatchSnapshot();
+    expect(result.css).toContain('.body{background-color:#d9534f}body{color:#00f}');
   });
 
   it('should contain source maps', async function() {
@@ -95,11 +95,12 @@ body
 
   describe('vcl entrypoints', function() {
 
-    it('should include all modules', async function() {
+    it('should include recommended modules', async function() {
       const result = await vcl('@import "@vcl/vcl"\na\n  color: green', opts);
       expect(result.css).toContain('.vclButton');
       expect(result.css).toContain('.vclRating');
       expect(result.css).toContain('.vclGallery');
+      expect(result.css).not.toContain('[class*=" fa-"]:before'); // fa module
     });
 
     it('should include only core modules', async function() {
@@ -107,13 +108,14 @@ body
       expect(result.css).toContain('.vclButton');
       expect(result.css).not.toContain('.vclRating');
       expect(result.css).not.toContain('.vclGallery');
+      expect(result.css).not.toContain('[class*=" fa-"]:before'); // fa module
     });
 
-    it('should include only recommended modules', async function() {
-      const result = await vcl('@import "@vcl/vcl/recommended"\na\n  color: green', opts);
+    it('should include all modules', async function() {
+      const result = await vcl('@import "@vcl/vcl/complete"\na\n  color: green', opts);
       expect(result.css).toContain('.vclButton');
       expect(result.css).toContain('.vclRating');
-      expect(result.css).not.toContain('.vclGallery');
+      expect(result.css).toContain('[class*=" fa-"]:before'); // fa module
     });
   });
 });
