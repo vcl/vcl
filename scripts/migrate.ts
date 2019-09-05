@@ -3,9 +3,9 @@ import { join } from "path";
 
 const IGNORE_DIRS = ['node_modules'];
 // Folders to migrate
-const WORK_DIRS = ['../modules'];
+const WORK_DIRS = ['../src', '../projects'];
 // File extenstion to migrate
-const WORK_EXT_REGEX = /\.(sss|html|md)$/g;
+const WORK_EXT_REGEX = /\.(sss|html|md|ts)$/;
 
 function work(root: string, filter: RegExp, callback: (filepath: string, value: string) => string){
   const files = readdirSync(root);
