@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/vcl/vcl/compare/v0.6.0...v0.6.1) (2019-09-05)
+
+
+### Bug Fixes
+
+* **button:** fix selected hover bg color ([5a22a03](https://github.com/vcl/vcl/commit/5a22a03))
+
+
+
+
+
 # [0.6.0](https://github.com/vcl/vcl/compare/v0.6.0-7...v0.6.0) (2019-09-04)
 
 

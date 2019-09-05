@@ -1,7 +1,7 @@
 {
   "name": "@vcl/utils",
   "description": "Basic utility classes",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
@@ -32,7 +32,7 @@
     "pug-cli": "^1.0.0-alpha6"
   },
   "dependencies": {
-    "@vcl/theme": "^0.6.0"
+    "@vcl/theme": "^0.6.1"
   },
   "keywords": [
     "css",
