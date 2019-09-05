@@ -1,5 +1,4 @@
 [
-  {"name": "default-theme-terms",                  "description": "Default theme terms",                                 "homepage": "https://vcl.github.io/#vcl-default-theme-terms"},
   {"name": "default-theme",                        "description": "Default theme",                                       "homepage": "https://vcl.github.io/#vcl-default-theme"},
   {"name": "bw-theme",                             "description": "Black/ white theme",                                  "homepage": "https://vcl.github.io/#vcl-bw-theme"},
   {"name": "restore-theme",                        "description": "Restore theme",                                       "homepage": "https://vcl.github.io/#vcl-restore-theme"},
@@ -86,5 +85,6 @@
   {"name": "typography",                           "description": "Basic text formatting",                               "homepage": "https://vcl.github.io/#vcl-typography"},
   {"name": "utils",                                "description": "Utility classes for floats and alignment",            "homepage": "https://vcl.github.io/#vcl-utils"},
   {"name": "value-unit-anagram",                   "description": "Value unit anagram",                                  "homepage": "https://vcl.github.io/#vcl-value-unit-anagram"},
+  {"name": "vcl",                                  "description": "Kitchen sink module",                                  "homepage": "https://vcl.github.io/#vcl-value-unit-anagram"},
   {"name": "zoom-box",                             "description": "Zoom image portions",                                 "homepage": "https://vcl.github.io/#vcl-zoom-box"}
 ]

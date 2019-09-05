@@ -10,7 +10,7 @@
     `$ git clone https://github.com/vcl/vcl.git && cd vcl/doc/tutorial/preprocessor-cli`
 
 2.  As you can see the folder contains several files and a folder:
-  * `package.json` for this tutorial listing all required VCL and 3d party NPM modules.
+  * `package.json` for this tutorial listing all required VCL and 3rd party NPM modules.
   * `index.html` is an example website using vcl styling.
   * `vcl.sss` defines the styles by including vcl modules using `@import`.
 

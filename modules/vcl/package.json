@@ -1,6 +1,6 @@
 {
   "name": "@vcl/vcl",
-  "description": "A collection of VCL modules",
+  "description": "The whole VCL in one package",
   "version": "0.6.0",
   "main": "package.json",
   "scripts": {

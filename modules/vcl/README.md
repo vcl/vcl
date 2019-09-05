@@ -1,8 +1,17 @@
-# [VCL](https://vcl.github.io/) modules
+# [VCL](https://vcl.github.io/) - @vcl/vcl
 
-A collection of [VCL modules](https://github.com/vcl).
+The `@vcl/vcl` package installs all modules that are part of the vcl and provides different entry points for imports.
 
-The default import includes the components that 80% of all reasonable complex Web apps need.
+## Installation
+
+```sh
+npm install @vcl/vcl --save
+npm install @vcl/preprocessor --save-dev
+```
+
+## 
+
+The package's default import includes the components that 80% of all reasonable complex web apps need.
 
 An icon font is _not_ included to leave this choice open.
 You can use any icon font or multiple ones.
@@ -11,7 +20,7 @@ There are integration modules for:
 - Font Awesome
 - Material Design Icons
 
-Which include the related CSS in the VCL build. This is not a requirement, however.
+which include the related CSS in the VCL build. This is not a requirement, however.
 
 ```scss
 @import "@vcl/vcl"
@@ -19,22 +28,21 @@ Which include the related CSS in the VCL build. This is not a requirement, howev
 // @import "@vcl/material-design-icons"
 ```
 
-There are other imports
+Use the following import to add the whole vcl, including all icon fonts.
 ```scss
-// Imports the whole vcl, including all icon fonts
 @import "@vcl/vcl/complete" 
 ```
 
+Use the following import for a collection of core modules
+
 ```scss
-// Imports modules considered "core"
 @import "@vcl/vcl/core"
 // Additional vcl modules
-@import "@vcl/token"
+...
 ```
 
 List of core modules:
 
-- normalize.css
 - theme
 - app-area
 - app-content-area
