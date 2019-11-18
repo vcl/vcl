@@ -1,7 +1,7 @@
 @import "@vcl/theme"
 
 
-.vclTree
+.tree
   background-color: var(--data-tree-bg-color)
   margin-bottom: var(--block-elem-vertical-gap)
   & ul
@@ -14,13 +14,13 @@
       /* Nested vertical items */
       & li
         padding-left: 1.5em
-  & .vclSeparator
+  & .separator
     margin: 0.2em 0
     overflow: hidden
     padding: 0
     & a
       display: none
-  &.vclBorder
+  &.border
     & li
       & > a
         border-bottom-style: solid
@@ -32,7 +32,7 @@
           & > a
             border-bottom-width: 0
 
-.vclTree .vclListHeading
+.tree .list-heading
   font-weight: bold
   font-size: 0.9em
   padding-top: 1.5em
@@ -40,18 +40,18 @@
   background-color: var(--data-tree-heading-bg-color)
 
 /* item coloring */
-.vclTree
+.tree
   & ul
     & li
       & > a,
-      & > .vclIcogram
+      & > .icogram
         background-color: var(--data-tree-item-bg-color)
       & > a:hover,
-      & > .vclIcogram:hover
+      & > .icogram:hover
         color: var(--data-tree-item-hover-color)
         background-color: var(--data-tree-item-hover-bg-color)
-      &.vclSelected
+      &.selected
         & > a,
-        & > .vclIcogram
+        & > .icogram
           color: var(--data-tree-selected-item-color)
           background-color: var(--data-tree-selected-item-bg-color)

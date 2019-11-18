@@ -1,7 +1,7 @@
 @import "@vcl/theme"
 @import "@vcl/icogram"
 
-.vclRating
+.rating
   height: var(--input-height)
   line-height: var(--input-line-height)
   box-sizing: border-box
@@ -11,18 +11,18 @@
   align-items: baseline
   vertical-align: middle
   margin-bottom: var(--form-control-vertical-gap)
-  &.vclDisabled
-    & .vclRatingItem:hover
+  &.disabled
+    & .rating-item:hover
       color: var(--rating-item-disabled-color)
       cursor: initial
-  & .vclRatingItem
+  & .rating-item
     color: var(--rating-item-color)
     padding: 0.4em 0.3em
     font-size: 1.4em
-  & .vclRatingItem:hover
+  & .rating-item:hover
     cursor: pointer
-  & .vclRatingItem:focus
+  & .rating-item:focus
     color: var(--rating-item-highlighted-color)
     outline: none
-  & .vclRatingItem.vclRatingItemHighlighted
+  & .rating-item.rating-item-highlighted
     color: var(--rating-item-highlighted-color)

@@ -7,8 +7,8 @@ Radio button form control.
 ## Usage
 
 The options may carry an icogram to visualize the option.
-The layout is built with the `vclFormControlGroup` and
-`vclFormInlineControlGroup` from the form module.
+The layout is built with the `form-control-group` and
+`form-inline-control-group` from the form module.
 
 [basic example](/demo/example-basic.html)
 
@@ -18,7 +18,7 @@ Inline variant.
 
 ## Classes
 
-- `vclRadioButton`
+- `radio-button`
 
 ## Modifiers
 

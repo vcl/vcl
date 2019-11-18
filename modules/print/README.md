@@ -19,8 +19,8 @@ in print mediums.
 
 ## Classes
 
-- `vclVisible-print`
-- `vclHidden-print`
+- `visible-print`
+- `hidden-print`
 
 ## Modifiers
 

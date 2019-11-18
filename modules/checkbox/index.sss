@@ -1,13 +1,13 @@
 @import "@vcl/theme"
 @import "@vcl/icon"
 
-.vclCheckbox
+.checkbox
   cursor: pointer
   outline: none
   display: inline-block
-  & > .vclFormControlLabel
+  & > .form-control-label
     display: inline-block
-  & > .vclIcon
+  & > .icon
     color: var(--checkbox-color)
     display: inline-block
     min-width: 1.5em
@@ -16,16 +16,16 @@
     padding-left: 0.4em
     font-size: var(--checkbox-icon-size)
   &:hover
-    & > .vclIcon
+    & > .icon
       color: var(--checkbox-hover-color)
   &:focus
-    & > .vclIcon
+    & > .icon
       color: var(--checkbox-focus-color)
-  &.vclDisabled
-    & > .vclIcon
+  &.disabled
+    & > .icon
       color: var(--checkbox-disabled-color)
 
-.vclFormControlLabel:hover
-  & .vclCheckbox:not(.vclDisabled)
-    & .vclIcon
+.form-control-label:hover
+  & .checkbox:not(.disabled)
+    & .icon
       color: var(--radio-button-focus-color)

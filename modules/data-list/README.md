@@ -27,24 +27,24 @@ As data browser with image and complex layout.
 
 ## Classes
 
-- `vclDataList`
-- `vclDataListHeader`
-- `vclDataListBody`
-- `vclDataListItem`
-- `vclDataListFooter`
+- `data-list`
+- `data-list-header`
+- `data-list-body`
+- `data-list-item`
+- `data-list-footer`
 
 ## Modifiers
 
-### For `vclDataList`
+### For `data-list`
 
-- `vclDivider`: Show a vertical divider (border) between items.
-- `vclItemHoverHighlight`: Highlight a item when hovered.
-- `vclItemSelectability`: Suggest through styling that the item is selectable.
-- `vclNoBorder`: No top/ bottom borders.
+- `divider`: Show a vertical divider (border) between items.
+- `item-hover-highlight`: Highlight a item when hovered.
+- `item-selectability`: Suggest through styling that the item is selectable.
+- `no-border`: No top/ bottom borders.
 
-### For `vclDataListItem`
+### For `data-list-item`
 
-- `vclSelected`
+- `selected`
 
 ## Variables
 

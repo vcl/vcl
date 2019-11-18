@@ -2,7 +2,7 @@
 @import "@vcl/icogram"
 
 /* Commons */
-.vclNavigation
+.navigation
   display: block
   margin-bottom: var(--block-elem-vertical-gap)
   background-color: var(--navigation-bg-color)
@@ -12,8 +12,8 @@
     padding: 0
     margin: 0
     list-style: none
-  & .vclNavigationHeading,
-  & .vclNavigationHeading:hover
+  & .navigation-heading,
+  & .navigation-heading:hover
     color: var(--navigation-heading-color)
     background-color: var(--navigation-heading-bg-color)
     padding: 0.85em 1em
@@ -23,17 +23,17 @@
       font-weight: bold
       font-size: 0.86em
       white-space: nowrap
-  & .vclNavigationItem,
-  & .vclNavigationItem:hover,
-  & .vclNavigationItem:active
+  & .navigation-item,
+  & .navigation-item:hover,
+  & .navigation-item:active
     display: block
     outline: 0
-    &.vclDisabled
-      & .vclNavigationItemLabel
+    &.disabled
+      & .navigation-item-label
         color: var(--navigation-item-disabled-color)
         background-color: var(--navigation-item-disabled-bg-color)
         cursor: default
-  & .vclNavigationItemLabel
+  & .navigation-item-label
     margin-right: 0
     color: inherit
     outline: 0
@@ -44,49 +44,49 @@
     font-size: 0.98em
     font-weight: normal
     overflow: hidden
-    & .vclText
+    & .text
       letter-spacing: 1px
       white-space: nowrap
-  & .vclClose
-    & .vclNavigation
+  & .close
+    & .navigation
       display: none
 
   /* Nested vertical menus */
-  & .vclNavigation
+  & .navigation
     margin-bottom: 0
-    & .vclNavigationItem
-      & .vclNavigationItemLabel
+    & .navigation-item
+      & .navigation-item-label
         font-size: 0.98em
         padding-left: 1.5em
-      & .vclNavigation
-        & .vclNavigationItem
-          & .vclNavigationItemLabel
+      & .navigation
+        & .navigation-item
+          & .navigation-item-label
             padding-left: 2.5em
-        & .vclNavigation
-          & .vclNavigationItem
-            & .vclNavigationItemLabel
+        & .navigation
+          & .navigation-item
+            & .navigation-item-label
               padding-left: 3.5em
 
 /* Horizontal */
-.vclNavigation
-  & .vclHor
+.navigation
+  & .hor
     flex-wrap: nowrap
-    & .vclNavigationItemLabel
+    & .navigation-item-label
       padding: 0.85em 1em
-      & .vclText
+      & .text
         letter-spacing: 1px
 
 /* 1st level coloring */
-.vclNavigation
-  & .vclNavigationItem
+.navigation
+  & .navigation-item
     color: var(--navigation-item-1st-level-color)
     background-color: var(--navigation-item-1st-level-bg-color)
-    & .vclNavigationItemLabel
+    & .navigation-item-label
       &:hover,
       &:focus
         color: var(--navigation-item-1st-level-hover-color)
         background-color: var(--navigation-item-1st-level-hover-bg-color)
-    &.vclSelected
-      & > .vclNavigationItemLabel
+    &.selected
+      & > .navigation-item-label
         color: var(--navigation-item-1st-level-selected-color)
         background-color: var(--navigation-item-1st-level-selected-bg-color)

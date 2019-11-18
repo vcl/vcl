@@ -4,7 +4,7 @@ Zoom into areas of images.
 
 ## Features
 
-The `vclZoomBox` shows the area covered by the `vclZoomBoxMagnifier`
+The `zoom-box` shows the area covered by the `zoom-box-magnifier`
 zoomed. Ideally the zoomed image fragment is from a source of the image with a
 higher resolution than the original image.
 
@@ -14,8 +14,8 @@ higher resolution than the original image.
 
 ## Classes
 
-- `vclZoomBox`
-- `vclZoomBoxMagnifier`
+- `zoom-box`
+- `zoom-box-magnifier`
 
 ## Modifiers
 

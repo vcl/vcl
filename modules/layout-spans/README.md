@@ -25,10 +25,10 @@ Or to CSS flexbox based layout elements.
 
 ## Classes
 
-- `vclSpan-5p, 10p, 15p .. 100p`
-- `vclSpan-33p`
-- `vclSpan-gca`: Golden cut a.
-- `vclSpan-gcb`: Golden cut b.
+- `span-5p, 10p, 15p .. 100p`
+- `span-33p`
+- `span-gca`: Golden cut a.
+- `span-gcb`: Golden cut b.
 
 ## Demo
 

@@ -3,50 +3,50 @@
 @import "@vcl/button"
 @import "@vcl/icon"
 
-.vclTabbable
+.tabbable
   margin-bottom: var(--block-elem-vertical-gap)
   clear: fix
-  &.vclNoBorder
-    & .vclTabContent
+  &.no-border
+    & .tab-content
       border-bottom: 0
-    & .vclTabs
+    & .tabs
       border-bottom: 0
-      & .vclTab,
-      & .vclTab:hover
+      & .tab,
+      & .tab:hover
         border: 0
         margin: 0
-        &.vclSelected
+        &.selected
           border: 0
 
-.vclTabContent
+.tab-content
   padding: 0.8em
 
-.vclTabs
+.tabs
   box-sizing: border-box
   list-style: none
   list-style-type: none
   padding: 0
   margin: 0
   clear: fix
-  &.vclTabNavJustified
+  &.tab-nav-justified
     display: flex
     flex-direction: row
-    & .vclTab
+    & .tab
       flex: 1
-      & .vclTab
+      & .tab
         width: 100%
-  & .vclTab
+  & .tab
     border: 0
-    & > .vclTabLabel
+    & > .tab-label
       border: 0
       margin-right: 0.5em
       text-decoration: none
-    & > .vclTabLabel:hover
+    & > .tab-label:hover
       text-decoration: none
-    & > .vclTabLabel:last-child
+    & > .tab-label:last-child
       margin-right: 0
 
-.vclTabs .vclTab
+.tabs .tab
   float: left
   border: 0
   white-space: nowrap
@@ -68,19 +68,19 @@
   text-align: center
   box-sizing: border-box
 
-.vclTabs .vclTab:last-child
+.tabs .tab:last-child
   margin-right: 0
 
-.vclTabs .vclTab.vclSelected,
-.vclTabs .vclTab.vclSelected:hover,
-.vclTabs .vclTab.vclDisabled,
-.vclTabs .vclTab.vclDisabled:hover
+.tabs .tab.selected,
+.tabs .tab.selected:hover,
+.tabs .tab.disabled,
+.tabs .tab.disabled:hover
   cursor: default
 
 /* Coloring of normal variant */
 
-.vclTabs
-  & .vclTab
+.tabs
+  & .tab
     padding-top: 0.25em
     color: var(--tab-nav-tab-color)
     & > a,
@@ -95,128 +95,128 @@
     &:focus
       outline: none
       background-color: var(--tab-nav-tab-bg-hover-color)
-    & .vclButton
+    & .button
       height: auto
       color: var(--tab-nav-tab-button-label-color)
       &:hover
         color: var(--tab-nav-tab-button-label-hover-color)
-    &.vclSelected
+    &.selected
       color: var(--tab-nav-tab-selected-color)
-      & .vclButton
+      & .button
         color: var(--tab-nav-tab-button-selected-label-color)
         &:hover
           color: var(--tab-nav-tab-button-label-hover-color)
-    &.vclSelected,
-    &.vclSelected:hover
+    &.selected,
+    &.selected:hover
       color: var(--tab-nav-tab-selected-color)
       background-color: var(--tab-nav-tab-bg-selected-color)
       border-bottom: 3px solid var(--tab-nav-tab-border-selected-color)
-    &.vclDisabled,
-    &.vclDisabled:hover
+    &.disabled,
+    &.disabled:hover
       color: var(--tab-nav-tab-disabled-color)
       background-color: var(--tab-nav-tab-bg-disabled-color)
 
 /* Uni variant */
 
-.vclTabs.vclTabStyleUni .vclTab,
-.vclTabs.vclTabStyleUni .vclTab:hover
+.tabs.tab-style-uni .tab,
+.tabs.tab-style-uni .tab:hover
   border: 0
   border-bottom: 1px solid var(--tab-nav-border-color)
   margin-bottom: -1px
 
-.vclTabs.vclTabStyleUni .vclTab.vclSelected
+.tabs.tab-style-uni .tab.selected
   border: 0
 
 /* Tabs left */
 
-.vclTabbable.vclTabsLeft .vclTab,
-.vclTabbable.vclTabsLeft .vclTab:hover
+.tabbable.tabs-left .tab,
+.tabbable.tabs-left .tab:hover
   float: none
   margin: 0 0 0 0
   border-radius: 0 0 0 0
   border-bottom: 0
   border-right: 3px solid var(--tab-nav-tab-bg-color)
 
-.vclTabbable.vclTabsLeft .vclTab.vclSelected,
-.vclTabbable.vclTabsLeft .vclTab.vclSelected:hover
+.tabbable.tabs-left .tab.selected,
+.tabbable.tabs-left .tab.selected:hover
   border-right: 3px solid var(--tab-nav-tab-border-selected-color)
 
-.vclTabbable.vclTabsLeft .vclTabs.vclTabStyleUni
+.tabbable.tabs-left .tabs.tab-style-uni
   border: 0
 
-.vclTabbable.vclTabsLeft .vclTabs.vclTabStyleUni .vclTab
+.tabbable.tabs-left .tabs.tab-style-uni .tab
   border: 0
   margin-bottom: 0
   margin-right: -1px
 
-.vclTabbable.vclTabsLeft .vclTabs.vclTabStyleUni .vclTab
+.tabbable.tabs-left .tabs.tab-style-uni .tab
   margin-right: 1px
   border-radius: 0 0 0 0
 
-.vclTabbable.vclTabsLeft .vclTabs.vclTabStyleUni .vclTab.vclSelected,
-.vclTabbable.vclTabsLeft .vclTabs.vclTabStyleUni .vclTab.vclSelected
+.tabbable.tabs-left .tabs.tab-style-uni .tab.selected,
+.tabbable.tabs-left .tabs.tab-style-uni .tab.selected
   border-right: 0
 
-.vclTabbable.vclTabsLeft .vclTabs
+.tabbable.tabs-left .tabs
   float: left
 
-.vclTabbable.vclTabsLeft .vclTabContent
+.tabbable.tabs-left .tab-content
   float: left
   display: block
   border-bottom: 0
   border: 0
 
-.vclTabbable.vclTabsLeft .vclTabs.vclTabStyleUni
+.tabbable.tabs-left .tabs.tab-style-uni
   border-right: 1px solid var(--tab-nav-border-color)
 
 /* Tabs right */
 
-.vclTabbable.vclTabsRight .vclTab,
-.vclTabbable.vclTabsRight .vclTab:hover
+.tabbable.tabs-right .tab,
+.tabbable.tabs-right .tab:hover
   float: none
   margin: 0 0 0 0
   border-radius: 0 0 0 0
   border-bottom: 0
   border-left: 3px solid var(--tab-nav-tab-bg-color)
 
-.vclTabbable.vclTabsRight .vclTab.vclSelected,
-.vclTabbable.vclTabsRight .vclTab.vclSelected:hover
+.tabbable.tabs-right .tab.selected,
+.tabbable.tabs-right .tab.selected:hover
   border-left: 3px solid var(--tab-nav-tab-border-selected-color)
 
-.vclTabbable.vclTabsRight .vclTabs.vclTabStyleUni
+.tabbable.tabs-right .tabs.tab-style-uni
   border: 0
 
-.vclTabbable.vclTabsRight .vclTabs.vclTabStyleUni .vclTab
+.tabbable.tabs-right .tabs.tab-style-uni .tab
   border: 0
   margin-bottom: 0
   margin-left: -1px
 
-.vclTabbable.vclTabsRight .vclTabs.vclTabStyleUni .vclTab
+.tabbable.tabs-right .tabs.tab-style-uni .tab
   margin-left: 1px
   border-radius: 0 0 0 0
 
-.vclTabbable.vclTabsRight .vclTabs.vclTabStyleUni .vclTab.vclSelected,
-.vclTabbable.vclTabsRight .vclTabs.vclTabStyleUni .vclTab.vclSelected
+.tabbable.tabs-right .tabs.tab-style-uni .tab.selected,
+.tabbable.tabs-right .tabs.tab-style-uni .tab.selected
   border-right: 0
 
-.vclTabbable.vclTabsRight .vclTabs
+.tabbable.tabs-right .tabs
   float: right
 
-.vclTabbable.vclTabsRight .vclTabContent
+.tabbable.tabs-right .tab-content
   float: right
   display: block
   border-bottom: 0
   border: 0
 
-.vclTabbable.vclTabsRight .vclTabs.vclTabStyleUni
+.tabbable.tabs-right .tabs.tab-style-uni
   border-left: 1px solid var(--tab-nav-border-color)
 
 /* Coloring of uni variant */
 
-.vclTabs
-  &.vclTabStyleUni
+.tabs
+  &.tab-style-uni
     border-bottom: 1px solid var(--tab-nav-border-color)
-    & .vclTab
+    & .tab
       padding-top: 0
       background-color: var(--tab-nav-tab-bg-color--uni)
       color: var(--tab-nav-tab-color--uni)
@@ -224,34 +224,34 @@
       &:focus
         background-color: var(--tab-nav-tab-bg-hover-color)
         color: var(--tab-nav-tab-hover-color--uni)
-      &.vclSelected
+      &.selected
         background-clip: border-box
         color: var(--tab-nav-tab-color-selected--uni)
         border: 1px solid var(--tab-nav-border-color)
         border-bottom: 1px solid var(--tab-nav-tab-bg-color--uni)
         border-color: var(--tab-nav-border-color) var(--tab-nav-border-color) var(--tab-nav-tab-bg-color)
         background-color: var(--tab-nav-tab-bg-selected-color--uni)
-      &.vclDisabled,
-      &.vclDisabled:hover
+      &.disabled,
+      &.disabled:hover
         color: var(--tab-nav-tab-disabled-color--uni)
         background-color: var(--tab-nav-tab-bg-disabled-color--uni)
 
-.vclTabbable
-  & .vclTabContent
+.tabbable
+  & .tab-content
     border-left: 1px solid var(--tab-nav-border-color)
     border-right: 1px solid var(--tab-nav-border-color)
     border-bottom: 1px solid var(--tab-nav-border-color)
     border: 0
-  &.vclTabsLeft
-    & .vclTabs.vclTabStyleUni
-      & .vclTab
-        &.vclSelected
+  &.tabs-left
+    & .tabs.tab-style-uni
+      & .tab
+        &.selected
           border: 1px solid var(--tab-nav-border-color)
           border-right: 1px solid var(--tab-nav-tab-bg-color--uni)
-  &.vclTabsRight
-    & .vclTabs.vclTabStyleUni
-      & .vclTab
-        &.vclSelected
+  &.tabs-right
+    & .tabs.tab-style-uni
+      & .tab
+        &.selected
           border: 1px solid var(--tab-nav-border-color)
           border-left: 1px solid var(--tab-nav-tab-bg-color--uni)
 

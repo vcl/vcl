@@ -1,7 +1,7 @@
 @import "@vcl/theme"
 
 
-.vclSlider
+.slider
   display: block
   position: relative
   text-align: center
@@ -11,7 +11,7 @@
     outline: none
   &:active
     outline: none
-  & .vclSliderRail
+  & .slider-rail
     display: inline-block
     box-sizing: border-box
     position: relative
@@ -19,12 +19,12 @@
     height: 0.5em
     width: 100%
     background-color: var(--slider-rail-bg-color)
-    & .vclSliderScale
+    & .slider-scale
       position: absolute
       width: 100%
       height: 100%
       margin: 0
-  & .vclSliderKnobContainer
+  & .slider-knob-container
     box-sizing: border-box
     position: absolute
     width: 2.2em
@@ -35,34 +35,34 @@
     margin-top: -0.8em
     &:hover
       cursor: ew-resize
-      & .vclSliderKnob
+      & .slider-knob
         background-color: var(--slider-knob-bg-hover-color)
-    & .vclSliderKnob
+    & .slider-knob
       background-color: var(--slider-knob-bg-color)
       border: 1px solid var(--slider-knob-border-color)
       border-radius: 0.2em
       height: 100%
-  & .vclSliderScale
+  & .slider-scale
     margin-top: 1em
-    & .vclSliderScalePointMark
+    & .slider-scale-point-mark
       position: relative
       height: 100%
       width: 1px
       background-color: var(--slider-scale-point-mark-bg-color)
-    & .vclSliderScalePointLabel
+    & .slider-scale-point-label
       width: 1em
       top: 2em
       font-size: 95%
-  &.vclFocused
-    & .vclSliderKnobContainer
-      & .vclSliderKnob
+  &.focused
+    & .slider-knob-container
+      & .slider-knob
         background-color: var(--slider-knob-bg-hover-color)
-  &.vclDisabled
+  &.disabled
     cursor: not-allowed
-    & .vclSliderKnobContainer
+    & .slider-knob-container
       &:hover
         cursor: not-allowed
-        & .vclSliderKnob
+        & .slider-knob
           background-color: var(--slider-rail-bg-color)
-      & .vclSliderKnob
+      & .slider-knob
         background-color: var(--slider-rail-bg-color)

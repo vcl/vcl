@@ -13,8 +13,8 @@ Table extensions for numeral and especially financial number display.
 
 ## Classes
 
-- `vclSumTable`
-- `vclSumTableTotal`
+- `sum-table`
+- `sum-table-total`
 
 ## Modifiers
 

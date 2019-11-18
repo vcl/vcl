@@ -10,9 +10,9 @@ Tree structured data browser.
 
 ## Classes
 
-- `vclTree`
-- `vclBorder`
-- `vclListHeading`
+- `tree`
+- `border`
+- `list-heading`
 
 ## Modifiers
 

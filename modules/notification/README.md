@@ -11,8 +11,8 @@ modifiers.
 ## Usage
 
 Nested lists are also possible as shown in the warning-example.
-If no icon is needed, you can remove it and assign `vclP-0`
-to `vclNotificationContent` to remove the space on the left.
+If no icon is needed, you can remove it and assign `p-0`
+to `notification-content` to remove the space on the left.
 
 Basic (no modifier).
 
@@ -36,21 +36,21 @@ Success.
 
 ## Classes
 
-- `vclNotification`
-- `vclNotificationIconContainer`
-- `vclNotificationIcon`
-- `vclNotificationHeader`
-- `vclNotificationContent`
-- `vclNotificationFooter`
+- `notification`
+- `notification-icon-container`
+- `notification-icon`
+- `notification-header`
+- `notification-content`
+- `notification-footer`
 
 ## Modifiers
 
 Semantic coloring:
 
-- `vclSuccess`
-- `vclInfo`
-- `vclWarning`
-- `vclError`
+- `success`
+- `info`
+- `warning`
+- `error`
 
 ## Variables
 

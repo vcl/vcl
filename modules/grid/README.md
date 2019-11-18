@@ -14,9 +14,9 @@ columns.
 
 A grid is usually used in the content area of the page but it can be used in
 any other container.
-A container with the class `vclGridRow` opens it and
-is filled with column spans like `vclGridSpan-3` (three grid units)
-or alternatively percentage based ones like `vclGridSpan-25p` (a quarter).
+A container with the class `grid-row` opens it and
+is filled with column spans like `grid-span-3` (three grid units)
+or alternatively percentage based ones like `grid-span-25p` (a quarter).
 See the example for the whole variety.
 
 Nesting is only supported through percentage based spans as shown
@@ -28,20 +28,20 @@ in the demo.
 
 ## Classes
 
-- `vclGridRow`
-- `vclGridSpan-1..15`: Column unit based grid spans.
-- `vclGridSpan-5p, 10p, 15p ... 100p`: Percentage based grid spans.
-- `vclGridSpan-gca`: Golden cut a.
-- `vclGridSpan-gcb`: Golden cut b.
-- `vclGutterMargin`: margin at half gutter width, applicable to any element.
-- `vclGutterMarginTB`: Top/ bottom margin at half gutter width, applicable
+- `grid-row`
+- `grid-span-1..15`: Column unit based grid spans.
+- `grid-span-5p, 10p, 15p ... 100p`: Percentage based grid spans.
+- `grid-span-gca`: Golden cut a.
+- `grid-span-gcb`: Golden cut b.
+- `gutter-margin`: margin at half gutter width, applicable to any element.
+- `gutter-margin-t-b`: Top/ bottom margin at half gutter width, applicable
    to any element.
-- `vclGutterMarginLR`: Left/ right margin at half gutter width, applicable
+- `gutter-margin-l-r`: Left/ right margin at half gutter width, applicable
    to any element.
 
 ## Modifiers
 
-- `vclGridSpanCentered`: Vertically center a grid column if it is the only
+- `grid-span-centered`: Vertically center a grid column if it is the only
   column.
 
 ## Variables

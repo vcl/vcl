@@ -17,9 +17,9 @@ Flexbox based layout primitives that can solve almost all layout challenges.
 [basic example](/demo/example-basic.html)
 
 The flex layout also features a layout grid which works just like a classical
-float based grid. A grid row is built from a `vclLayoutGridRow` containing
-an arbitrary number of `vclLayoutGridCell`s. The cells can be sized using
-the column classed `vclLayout1 .. vclLayout11` or the sizing from
+float based grid. A grid row is built from a `layout-grid-row` containing
+an arbitrary number of `layout-grid-cell`s. The cells can be sized using
+the column classed `layout1 .. layout11` or the sizing from
 the utils module.
 
 [grid basic example](/demo/example-grid-basic.html)
@@ -28,12 +28,12 @@ The grid also supports nesting of rows.
 
 [grid nested example](/demo/example-grid-nested.html)
 
-Note that a `vclLayoutGridRow` must be enclosed in a block container.
+Note that a `layout-grid-row` must be enclosed in a block container.
 
 A special feature is a grid row which allows to wrap grid cells based on
 their width maintaining the gutters. The total width of all cells can be
 greater than 100%, they wrap at multiples of 100%.
-The `vclLayoutWrappingRow` modifier is used to enable this.
+The `layout-wrapping-row` modifier is used to enable this.
 
 [wrapping example](/demo/example-grid-wrapping.html)
 
@@ -41,65 +41,65 @@ The `vclLayoutWrappingRow` modifier is used to enable this.
 
 ### Flex Layout
 
-- `vclLayoutHorizontal`
-- `vclLayoutVertical`
-- `vclLayoutInline`
-- `vclLayoutReverse`
-- `vclLayoutWrap`
-- `vclLayoutWrapReverse`
-- `vclLayoutFlex`
-- `vclLayoutAuto`
-- `vclLayoutNone`
-- `vclLayout1`
-- `vclLayout2`
-- `vclLayout3`
-- `vclLayout4`
-- `vclLayout5`
-- `vclLayout6`
-- `vclLayout7`
-- `vclLayout8`
-- `vclLayout9`
-- `vclLayout10`
-- `vclLayout11`
-- `vclLayout12`
-- `vclLayoutCenter`
-- `vclLayoutCenterCenter`
-- `vclLayoutStartJustified`
-- `vclLayoutCenterJustified`
-- `vclLayoutEndJustified`
-- `vclLayoutJustified`
-- `vclLayoutAroundJustified`
-- `vclLayoutSelfStart`
-- `vclLayoutSelfCenter`
-- `vclLayoutSelfEnd`
-- `vclLayoutSelfStretch`
+- `layout-horizontal`
+- `layout-vertical`
+- `layout-inline`
+- `layout-reverse`
+- `layout-wrap`
+- `layout-wrap-reverse`
+- `layout-flex`
+- `layout-auto`
+- `layout-none`
+- `layout1`
+- `layout2`
+- `layout3`
+- `layout4`
+- `layout5`
+- `layout6`
+- `layout7`
+- `layout8`
+- `layout9`
+- `layout10`
+- `layout11`
+- `layout12`
+- `layout-center`
+- `layout-center-center`
+- `layout-start-justified`
+- `layout-center-justified`
+- `layout-end-justified`
+- `layout-justified`
+- `layout-around-justified`
+- `layout-self-start`
+- `layout-self-center`
+- `layout-self-end`
+- `layout-self-stretch`
 
 ### Flex Grid Layout
 
-- `vclLayoutGridRow`
-- `vclLayoutGridCell`
-- `vclLayoutWrapContainer`
+- `layout-grid-row`
+- `layout-grid-cell`
+- `layout-wrap-container`
 
 ### Fixed Positioning
 
-- `vclLayoutFixedTop`
-- `vclLayoutFixedRight`
-- `vclLayoutFixedBottom`
-- `vclLayoutFixedLeft`
-- `vclLayoutFullBleed`
+- `layout-fixed-top`
+- `layout-fixed-right`
+- `layout-fixed-bottom`
+- `layout-fixed-left`
+- `layout-full-bleed`
 
 ### Other
 
-- `vclLayoutInvisible`
-- `vclLayoutHidden`
-- `vclLayoutRelative`
-- `vclLayoutFit`
+- `layout-invisible`
+- `layout-hidden`
+- `layout-relative`
+- `layout-fit`
 
 ## Modifiers
 
-### For `vclLayoutGridRow`
+### For `layout-grid-row`
 
-- `vclLayoutWrappingRow`: Make the row a non-nestable one that can
+- `layout-wrapping-row`: Make the row a non-nestable one that can
 accommodate cells of more than 100% width in total and wrap those accordingly.
 
 ## Attributes

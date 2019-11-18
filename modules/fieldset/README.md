@@ -12,7 +12,7 @@ Mainly used with forms but may be also used to group other content.
 
 ## Classes
 
-- `vclFieldset`
+- `fieldset`
 
 ## Modifiers
 

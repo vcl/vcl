@@ -38,28 +38,28 @@ Years view:
 
 ## Classes
 
-- `vclCalendar`
-- `vclCalHeaderLabel`
-- `vclWeekdayLabel`
-- `vclCalItem`
+- `calendar`
+- `cal-header-label`
+- `weekday-label`
+- `cal-item`
 
 ## Modifiers
 
-### For `vclCalendar`
+### For `calendar`
 
-- `vclCalInput` make the calendar appear as input for date selections.
+- `cal-input` make the calendar appear as input for date selections.
 
-### For `vclCalItem`
+### For `cal-item`
 
-- `vclToday`
-- `vclOtherMonth`
-- `vclDisabled`
-- `vclSelected`: Mark a time unit as selected
-- `vclSelectedAlt`: Mark a time unit as selected with alternative style
-- `vclSelectedBeg`: Mark the beginning of a time unit range
-- `vclSelectedEnd`: Mark the end of a time unit range
-- `vclAvailable`
-- `vclUnavailable`
+- `today`
+- `other-month`
+- `disabled`
+- `selected`: Mark a time unit as selected
+- `selected-alt`: Mark a time unit as selected with alternative style
+- `selected-beg`: Mark the beginning of a time unit range
+- `selected-end`: Mark the end of a time unit range
+- `available`
+- `unavailable`
 
 ## Variables
 

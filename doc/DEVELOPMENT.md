@@ -43,7 +43,7 @@ Most modules need to import the `@vcl/theme`
 @import "@vcl/theme"
 @import "@vcl/button"
 
-.vclMyModule
+.my-module
   color: green
 ```
 
@@ -58,18 +58,13 @@ white space files end with the `.sss` suffix.
 
 Do’s:
 
-- `vcl` name space prefix for any class name.
 - Class names in camelCased letters (why? because it’s easier to read and
   shorter than dashes).
-- Have a single class name like `vclFlipSwitch` on the root element of the
+- Have a single class name like `flip-switch` on the root element of the
   corresponding HTML.
 - Use relative units like `em`, `rem` etc.
 - Descendants names: Apply the same naming conventions; i. e.
-  `vclDescendantName`.
-- Except for some common Modifiers, use names such as:
-  `vclComponentName[SubElementName]ModifierName`.
-- To shorten this, you can abbreviate the component name and sub element
-  name, e. g. `vclFSModifier`.
+  `descendant-name`.
 
 Don’ts:
 
@@ -77,7 +72,7 @@ Don’ts:
 - Avoid element name bound selectors;
   i. e. don’t do `div.header` or `h1.title`.
 - Except in some cases, avoid the descendant selector based on element names;
-  i. e. don’t use `.vclComponent h3`. Always introduce classes.
+  i. e. don’t use `.component h3`. Always introduce classes.
 - Except in some very rare cases, avoid using `!important`.
 - Don’t use vendor prefixes.
 
@@ -157,7 +152,7 @@ may be a mashup of different components.
 
 Sometimes it’s useful to have two or more variants of a component, often
 this is to convey a visual hierarchy like with headings (`h1` - `h6` elements).
-Always do this with modifiers like `vclSecondary` for the secondary
+Always do this with modifiers like `secondary` for the secondary
 level variant. The primary variant always goes without modifier.
 
 ## HTML Demo Snippets

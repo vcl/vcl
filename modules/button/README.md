@@ -17,15 +17,15 @@ Buttons can be created using the `button`, `a` and
 
 [basic example](/demo/example-basic.html)
 
-A button can appear to be disabled through `vclDisabled` class and/ or
+A button can appear to be disabled through `disabled` class and/ or
 `disabled` attribute.
 
-The default variant support a selected state via `vclSelected` as well.
+The default variant support a selected state via `selected` as well.
 
 [selected example](/demo/example-selected.html)
 
 If text exceeds the button's width, the text is cut off and does not break
-into a new line. With the `vclOverflowEllipsis` modifier and
+into a new line. With the `overflow-ellipsis` modifier and
 ellipsis is shown.
 
 [overflow-label example](/demo/example-overflow-label.html)
@@ -54,42 +54,42 @@ Multiple variants are supported through modifiers for the following cases:
 
 ## Classes
 
-- `vclButton`
-- `vclButtonDim`: Just the dimensions of a button.
+- `button`
+- `button-dim`: Just the dimensions of a button.
 
 ## Modifiers
 
-- `vclSquare`: Give button the same `min-width` as its height.
+- `square`: Give button the same `min-width` as its height.
 
 Contextual state:
 
-- `vclSelected`
-- `vclActive`
-- `vclFocused`
+- `selected`
+- `active`
+- `focused`
 
 Pointer state:
 
-- `vclHovered`
-- `vclPressed`
+- `hovered`
+- `pressed`
 
 Label overflow:
 
-- `vclOverflowEllipsis`
+- `overflow-ellipsis`
 
 Variants:
 
-- `vclEmphasized`: emphasized appearance for the main interaction.
-- `vclTransparent`: with transparent background and hover indication by color.
-- `vclEmphasizedTransparent`: combo of previous two.
-- `vclHalfTransparent`: transparent background but not on hover.
-- `vclTransparentAlt`: transparent for dark backgrounds.
-- `vclDanger`: prevent users from accidentally doing dangerous things.
-- `vclSuggestive`: suggest users to safely conduct an action.
+- `emphasized`: emphasized appearance for the main interaction.
+- `transparent`: with transparent background and hover indication by color.
+- `emphasized-transparent`: combo of previous two.
+- `half-transparent`: transparent background but not on hover.
+- `transparent-alt`: transparent for dark backgrounds.
+- `danger`: prevent users from accidentally doing dangerous things.
+- `suggestive`: suggest users to safely conduct an action.
 
 Additional Modifiers:
 
-- `vclOutline`: the border is used as outline, transparent background.
-- `vclCircular`: Circular shape.
+- `outline`: the border is used as outline, transparent background.
+- `circular`: Circular shape.
 
 ## Variables
 

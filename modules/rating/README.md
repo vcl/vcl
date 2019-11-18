@@ -6,7 +6,7 @@ Rating.
 
 Can visualize the current average rating and take ratings as input by
 click on a discrete rating item.
-The rating items are `vclIcon`s with proper ARIA attributes.
+The rating items are `icon`s with proper ARIA attributes.
 As an input control, it supports a read read-only mode.
 
 ## Usage
@@ -26,13 +26,13 @@ Disabled (read-only).
 
 ## Classes
 
-- `vclRating`
-- `vclRatingItem`
+- `rating`
+- `rating-item`
 
 ## Modifiers
 
-- `vclDisabled`
-- `vclRatingItemHighlighted`: For rating items to visualize the range of
+- `disabled`
+- `rating-item-highlighted`: For rating items to visualize the range of
   a rating affordance on hover.
 
 ## Variables

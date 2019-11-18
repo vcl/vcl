@@ -13,7 +13,7 @@ and a card variant with a card like visual appearance.
 
 ## Usage
 
-The content of the body can be wrapped in a panel content (`vclPanelContent`)
+The content of the body can be wrapped in a panel content (`panel-content`)
 which adds padding.
 
 [basic example](/demo/example-basic.html)
@@ -32,22 +32,22 @@ Card variant.
 
 ## Classes
 
-- `vclPanel`
-- `vclPanelHeader`
-- `vclPanelHeading`
-- `vclPanelTitle`
-- `vclPanelBody`
-- `vclPanelContent`
-- `vclPanelFooter`
+- `panel`
+- `panel-header`
+- `panel-heading`
+- `panel-title`
+- `panel-body`
+- `panel-content`
+- `panel-footer`
 
 ## Modifiers
 
-- `vclPanelCard`
-- `vclPanelDialog`
+- `panel-card`
+- `panel-dialog`
 
 Semantic coloring:
 
-- `vclDanger`
+- `danger`
 
 ## Variables
 

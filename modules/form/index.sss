@@ -1,34 +1,34 @@
 @import "@vcl/theme"
 
-.vclForm,
-.vclForm.vclFormInline,
-.vclForm.vclFormHorizontal
+.form,
+.form.form-inline,
+.form.form-horizontal
   margin-bottom: var(--block-elem-vertical-gap)
 
 /* Inline and horizontal layouts */
 
-.vclForm.vclFormInline *:first-child,
-.vclForm.vclFormInline .vclFormInline:first-child
+.form.form-inline *:first-child,
+.form.form-inline .form-inline:first-child
   margin-left: 0
 
-.vclForm.vclFormInline input,
-.vclForm.vclFormInline .vclInput,
-.vclForm.vclFormInline select
+.form.form-inline input,
+.form.form-inline .input,
+.form.form-inline select
   width: auto
 
-.vclForm.vclFormInline label,
-.vclForm.vclFormInline input,
-.vclForm.vclFormInline .vclInput,
-.vclForm.vclFormHorizontal input,
-.vclForm.vclFormHorizontal .vclInput,
-.vclForm.vclFormInline textarea,
-.vclForm.vclFormHorizontal textarea,
-.vclForm.vclFormInline select,
-.vclForm.vclFormHorizontal select,
-.vclForm.vclFormInline .vclButtonGroup,
-.vclForm.vclFormInline .vclFormControlGroup,
-.vclForm.vclFormInline .vclFormInline,
-.vclForm.vclFormHorizontal .vclFormInlineControlGroup
+.form.form-inline label,
+.form.form-inline input,
+.form.form-inline .input,
+.form.form-horizontal input,
+.form.form-horizontal .input,
+.form.form-inline textarea,
+.form.form-horizontal textarea,
+.form.form-inline select,
+.form.form-horizontal select,
+.form.form-inline .button-group,
+.form.form-inline .form-control-group,
+.form.form-inline .form-inline,
+.form.form-horizontal .form-inline-control-group
   display: inline-block
   margin-bottom: 0
   vertical-align: middle
@@ -36,30 +36,30 @@
 /* A control group combines input controls and labels so that they are aligned
    like an atomic control. */
 
-.vclFormControlGroup
+.form-control-group
   display: block
   margin-bottom: var(--form-control-vertical-gap)
   & input,
-  & .vclInput,
-  & .vclInputGroup,
-  & .vclFormControlHint
+  & .input,
+  & .input-group,
+  & .form-control-hint
     margin-bottom: 0
 
-.vclFormInlineControlGroup
+.form-inline-control-group
   display: block
   vertical-align: middle
   margin-bottom: var(--form-control-vertical-gap)
 
-.vclFormInlineControlGroup input:first-child,
-.vclFormInlineControlGroup .vclInput:first-child,
-.vclFormInlineControlGroup label:first-child,
-.vclFormInlineControlGroup .vclFormControlLabel:first-child
+.form-inline-control-group input:first-child,
+.form-inline-control-group .input:first-child,
+.form-inline-control-group label:first-child,
+.form-inline-control-group .form-control-label:first-child
   margin-left: 0
 
-.vclFormInlineControlGroup input,
-.vclFormInlineControlGroup .vclInput,
-.vclFormInlineControlGroup label,
-.vclFormInlineControlGroup .vclFormControlLabel
+.form-inline-control-group input,
+.form-inline-control-group .input,
+.form-inline-control-group label,
+.form-inline-control-group .form-control-label
   display: inline-block
   width: auto
   margin-bottom: 0
@@ -67,12 +67,12 @@
   margin-right: 0.5em
   padding-right: 0.4em
 
-.vclFormInlineControlGroup.vclFormControlLabel
+.form-inline-control-group.form-control-label
   margin-top: 0
 
 /* Integration with fieldset component */
 
 legend
-  & + .vclFormControlGroup
+  & + .form-control-group
     margin-top: 2.0em
     -webkit-margin-top-collapse: separate

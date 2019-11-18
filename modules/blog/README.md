@@ -21,24 +21,24 @@ A blog post.
 
 ### Post Preview
 
-- `vclPostPreview`: Container.
-- `vclPostPreviewTitle`: Main post title.
-- `vclPostPreviewSubTitle`: sub title.
-- `vclPostPreviewMeta`: post meta data.
-- `vclPostPreviewMetaAuthor`: Author.
-- `vclPostPreviewMetaDate`: Post date.
-- `vclPostPreviewSummary`: Text excerpt or summary of the post.
+- `post-preview`: Container.
+- `post-preview-title`: Main post title.
+- `post-preview-sub-title`: sub title.
+- `post-preview-meta`: post meta data.
+- `post-preview-meta-author`: Author.
+- `post-preview-meta-date`: Post date.
+- `post-preview-summary`: Text excerpt or summary of the post.
 
 ### Post
 
-- `vclPost`: Container.
-- `vclPostHeader`: Header area.
-- `vclPostTitle`: Main post title.
-- `vclPostSubTitle`: sub title.
-- `vclPostMeta`: post meta data.
-- `vclPostMetaAuthor`: Author.
-- `vclPostMetaDate`: Post date.
-- `vclPostBody`: Text excerpt or summary of the post.
+- `post`: Container.
+- `post-header`: Header area.
+- `post-title`: Main post title.
+- `post-sub-title`: sub title.
+- `post-meta`: post meta data.
+- `post-meta-author`: Author.
+- `post-meta-date`: Post date.
+- `post-body`: Text excerpt or summary of the post.
 
 ## Modifiers
 

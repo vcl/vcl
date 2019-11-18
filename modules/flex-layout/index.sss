@@ -2,181 +2,181 @@
 
 /* flexbox based layout primitives */
 
-.vclLayoutHorizontal,
-.vclLayoutVertical,
+.layout-horizontal,
+.layout-vertical,
 [layout][horizontal],
 [layout][vertical]
   display: flex
 
-.vclLayoutHorizontal.vclLayoutInline,
-.vclLayoutVertical.vclLayoutInline,
+.layout-horizontal.layout-inline,
+.layout-vertical.layout-inline,
 [layout][horizontal][inline],
 [layout][vertical][inline]
   display: inline-flex
 
-.vclLayoutHorizontal,
+.layout-horizontal,
 [layout][horizontal]
   flex-direction: row
 
-.vclLayoutHorizontal.vclLayoutReverse,
+.layout-horizontal.layout-reverse,
 [layout][horizontal][reverse]
   flex-direction: row-reverse
 
-.vclLayoutVertical,
+.layout-vertical,
 [layout][vertical]
   flex-direction: column
 
-.vclLayoutVertical.vclLayoutReverse,
+.layout-vertical.layout-reverse,
 [layout][vertical][reverse]
   flex-direction: column-reverse
 
-.vclLayoutWrap,
+.layout-wrap,
 [layout][wrap]
   flex-wrap: wrap
 
-.vclLayoutWrapReverse,
+.layout-wrap-reverse,
 [layout][wrap-reverse]
   flex-wrap: wrap-reverse
 
-.vclLayoutFlex,
+.layout-flex,
 [flex]
   flex: 1
   flex-basis: 0.000000001px
 
-.vclLayoutVertical > vclLayoutFlex.vclLayoutAutoVertical,
+.layout-vertical > layout-flex.layout-auto-vertical,
 [vertical][layout] > [flex][auto-vertical]
   flex-basis: auto
 
-.vclLayoutFlex.vclLayoutAuto,
+.layout-flex.layout-auto,
 [flex][auto]
   flex-basis: auto
 
-.vclLayoutFlex.vclLayoutNone,
+.layout-flex.layout-none,
 [flex][none]
   flex: none
 
-.vclLayoutFlex.vclLayout1,
+.layout-flex.layout1,
 [flex][one]
   flex: 1
 
-.vclLayoutFlex.vclLayout2,
+.layout-flex.layout2,
 [flex][two]
   flex: 2
 
-.vclLayoutFlex.vclLayout3,
+.layout-flex.layout3,
 [flex][three]
   flex: 3
 
-.vclLayoutFlex.vclLayout4,
+.layout-flex.layout4,
 [flex][four]
   flex: 4
 
-.vclLayoutFlex.vclLayout5,
+.layout-flex.layout5,
 [flex][five]
   flex: 5
 
-.vclLayoutFlex.vclLayout6,
+.layout-flex.layout6,
 [flex][six]
   flex: 6
 
-.vclLayoutFlex.vclLayout7,
+.layout-flex.layout7,
 [flex][seven]
   flex: 7
 
-.vclLayoutFlex.vclLayout8,
+.layout-flex.layout8,
 [flex][eight]
   flex: 8
 
-.vclLayoutFlex.vclLayout9,
+.layout-flex.layout9,
 [flex][nine]
   flex: 9
 
-.vclLayoutFlex.vclLayout10,
+.layout-flex.layout10,
 [flex][ten]
   flex: 10
 
-.vclLayoutFlex.vclLayout11,
+.layout-flex.layout11,
 [flex][eleven]
   flex: 11
 
-.vclLayoutFlex.vclLayout12,
+.layout-flex.layout12,
 [flex][twelve]
   flex: 12
 
 /* alignment in cross axis */
 
-.vclLayoutStart,
+.layout-start,
 [layout][start]
   align-items: flex-start
 
-.vclLayoutCenter,
-.vclLayoutCenterCenter,
+.layout-center,
+.layout-center-center,
 [layout][center],
 [layout][center-center]
   align-items: center
 
-.vclLayoutEnd,
+.layout-end,
 [layout][end]
   align-items: flex-end
 
 /* alignment in main axis */
 
-.vclLayoutStartJustified,
+.layout-start-justified,
 [layout][start-justified]
   justify-content: flex-start
 
-.vclLayoutCenterJustified,
-.vclLayoutCenterCenter,
+.layout-center-justified,
+.layout-center-center,
 [layout][center-justified],
 [layout][center-center]
   justify-content: center
 
-.vclLayoutEndJustified,
+.layout-end-justified,
 [layout][end-justified]
   justify-content: flex-end
 
-.vclLayoutAroundJustified,
+.layout-around-justified,
 [layout][around-justified]
   justify-content: space-around
 
-.vclLayoutEvenlyJustified,
+.layout-evenly-justified,
 [layout][evenly-justified]
   justify-content: space-evenly
 
-.vclLayoutJustified,
+.layout-justified,
 [layout][justified]
   justify-content: space-between
 
 /* self alignment */
 
-.vclLayoutSelfStart,
+.layout-self-start,
 [self-start]
   align-self: flex-start
 
-.vclLayoutSelfCenter,
+.layout-self-center,
 [self-center]
   align-self: center
 
-.vclLayoutSelfEnd,
+.layout-self-end,
 [self-end]
   align-self: flex-end
 
-.vclLayoutSelfStretch,
+.layout-self-stretch,
 [self-stretch]
   align-self: stretch
 
 /* flexbox based layout grid */
 
-.vclLayoutWrapContainer
+.layout-wrap-container
   overflow: hidden
 
-.vclLayoutGridRow
+.layout-grid-row
   width: auto
   box-sizing: border-box
-  & .vclLayoutGridRow
+  & .layout-grid-row
     margin-left: -var(--flex-layout-half-gutter-width)
     margin-right: -var(--flex-layout-half-gutter-width)
-  & > .vclLayoutGridCell
+  & > .layout-grid-cell
     box-sizing: border-box
     padding-left: var(--flex-layout-half-gutter-width)
     padding-right: var(--flex-layout-half-gutter-width)
@@ -184,10 +184,10 @@
       padding-right: 0
     &:first-child
       padding-left: 0
-  &.vclLayoutWrappingRow
+  &.layout-wrapping-row
     margin-left: -var(--flex-layout-half-gutter-width)
     width: calc(100% + var(--flex-layout-half-gutter-width) + var(--flex-layout-half-gutter-width))
-    & > .vclLayoutGridCell
+    & > .layout-grid-cell
       &:last-child
         padding-right: var(--flex-layout-half-gutter-width)
       &:first-child
@@ -195,22 +195,22 @@
 
 /* other layout helpers */
 
-.vclLayoutBlock,
+.layout-block,
 [block]
   display: block
 
 /* other helpful properties */
 
-.vclLayoutInvisible
+.layout-invisible
   visibility: hidden !important
 
-.vclLayoutHidden
+.layout-hidden
   display: none !important
 
-.vclLayoutRelative
+.layout-relative
   position: relative
 
-.vclLayoutFit
+.layout-fit
   position: absolute
   top: 0
   right: 0
@@ -219,33 +219,33 @@
 
 /* fixed positioning */
 
-.vclLayoutFixedBottom,
-.vclLayoutFixedLeft,
-.vclLayoutFixedRight,
-.vclLayoutFixedTop
+.layout-fixed-bottom,
+.layout-fixed-left,
+.layout-fixed-right,
+.layout-fixed-top
   position: fixed
 
-.vclLayoutFixedTop
+.layout-fixed-top
   top: 0
   left: 0
   right: 0
 
-.vclLayoutFixedRight
+.layout-fixed-right
   top: 0
   right: 0
   bottom: 0
 
-.vclLayoutFixedBottom
+.layout-fixed-bottom
   right: 0
   bottom: 0
   left: 0
 
-.vclLayoutFixedLeft
+.layout-fixed-left
   top: 0
   bottom: 0
   left: 0
 
-.vclLayoutFullBleed
+.layout-full-bleed
   top: 0
   bottom: 0
   left: 0

@@ -5,7 +5,7 @@ buttons, form controls etc.
 
 ## Features
 
-Multiple levels can be visualized with the modifiers `vclLeveln`
+Multiple levels can be visualized with the modifiers `leveln`
 where `n` is the level number. The first level (n = 1) is the default and does
 not require a modifier.
 
@@ -33,13 +33,13 @@ Second level toolbar with textual title in the middle.
 
 ## Classes
 
-- `vclToolbar`
-- `vclToolbarTitle`
+- `toolbar`
+- `toolbar-title`
 
 ## Modifiers
 
-- `vclSecondary`: Make is appear less important (level 2).
-- `vclTransparent`: Make the background color transparent.
+- `secondary`: Make is appear less important (level 2).
+- `transparent`: Make the background color transparent.
 
 ## Variables
 

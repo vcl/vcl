@@ -36,7 +36,7 @@ and a help cursor on hover, providing additional context on hover.
 
 [abbreviations example](/demo/example-abbreviations.html)
 
-Add the `vclInitialism` class to an acronym for a slightly smaller
+Add the `initialism` class to an acronym for a slightly smaller
 font size and a transformation to capitals.
 
 ### Small Caps
@@ -74,12 +74,12 @@ code i. e. white spaces inside this element are displayed as typed.
 
 ## Classes
 
-- `vclContentLink`: A link which can carry an vcl-icogram.
+- `content-link`: A link which can carry an vcl-icogram.
 
 ## Modifiers
 
-- `vclDisabled`: To disabled links.
-- `vclSecondaryTextColor`: The secondary text color.
+- `disabled`: To disabled links.
+- `secondary-text-color`: The secondary text color.
 
 ## Variables
 

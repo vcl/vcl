@@ -21,7 +21,7 @@ The date picker should be placed in a popover to show it as overlay.
 
 ## Classes
 
-- `vclDatePicker`
+- `date-picker`
 
 ## Modifiers
 

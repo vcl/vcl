@@ -1,6 +1,6 @@
 @import "@vcl/theme"
 
-.vclFlipSwitch
+.flip-switch
   display: block
   outline: none
   background-color: var(--flip-switch-bg-color)
@@ -10,12 +10,12 @@
   border-width: 1px
   border-style: solid
   border-color: var(--flip-switch-border-color)
-  &.vclFlipSwitchPressed
-    & .vclFlipSwitchTrack
+  &.flip-switch-pressed
+    & .flip-switch-track
       margin-left: 0
-    & .vclFlipSwitchKnob
+    & .flip-switch-knob
       left: calc(100% - 1.8em)
-  & .vclFlipSwitchKnob
+  & .flip-switch-knob
     width: 1.1em
     margin: 0.3em
     background-color: var(--flip-switch-knob-bg-color)
@@ -26,28 +26,28 @@
     left: 0
     transition: all 0.2s ease-in 0s
 
-.vclFlipSwitchLabel
+.flip-switch-label
   display: block
   overflow: hidden
   cursor: pointer
   border: 0
 
-.vclFlipSwitchTrack
+.flip-switch-track
   width: 200%
   margin-left: -100%
   transition: margin 0.2s ease-in 0s
   display: flex
   flex-direction: row
-  & .vclFlipSwitchActive,
-  & .vclFlipSwitchInactive
+  & .flip-switch-active,
+  & .flip-switch-inactive
     width: 50%
     padding: 0 0.5em
     line-height: var(--flip-switch-height)
     font-weight: bold
     box-sizing: border-box
-  & .vclFlipSwitchActive
+  & .flip-switch-active
     background-color: var(--flip-switch-active-bg-color)
     color: var(--flip-switch-active-color)
     text-align: left
-  & .vclFlipSwitchInactive
+  & .flip-switch-inactive
     text-align: right

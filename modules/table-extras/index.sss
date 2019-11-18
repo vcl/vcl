@@ -1,12 +1,12 @@
 @import "@vcl/theme"
 @import "@vcl/table"
 
-.vclTable
-  & .vclTableToolBar
+.table
+  & .table-tool-bar
     background-color: var(--table-tool-bar-bg-color)
     & th
       padding: 0
-  & .vclTableFilterBar
+  & .table-filter-bar
     background-color: var(--table-filter-bar-bg-color)
     padding: 0
     border-color: var(--table-border-color)
@@ -26,7 +26,7 @@
       width: 100%
       color: black
 
-.vclTable .vclTableFilter th > *,
-.vclTable .vclTableFilter th > *:hover
+.table .table-filter th > *,
+.table .table-filter th > *:hover
   font-weight: normal
   line-height: normal

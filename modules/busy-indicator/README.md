@@ -28,7 +28,7 @@ Note that this component depends on the SVG files in the `imgs` folder.
 
 ## Classes
 
-- `vclBusyIndicator`
+- `busy-indicator`
 
 ## Variables
 

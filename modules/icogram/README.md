@@ -4,7 +4,7 @@ The combination of icon(s) and a textual label(s) in any permutation.
 
 ## Features
 
-The `vclIcogram` is a wrapper for `vclText` and `vclIcon`
+The `icogram` is a wrapper for `text` and `icon`
 which can occur in arbitrary order and count.
 The layout of labels and icons (horizontal and vertical) is created using the
 classes from the flex layout module.
@@ -23,8 +23,8 @@ Vertical alignment.
 
 ## Classes
 
-- `vclIcogram`
-- `vclText`
+- `icogram`
+- `text`
 
 ## Modifiers
 

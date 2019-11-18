@@ -2,23 +2,23 @@
 @import "@vcl/input"
 
 
-.vclInputGroup
+.input-group
   display: flex
   width: 100%
   flex: 1 1 auto
   margin-bottom: var(--form-control-vertical-gap)
   & > :not(:first-child)
     margin-left: -var(--input-border-width)
-  & > .vclInput,
-  & > .vclInputGroupEmb
+  & > .input,
+  & > .input-group-emb
     margin-bottom: 0
     &:focus
       z-index: 1
-  & > .vclButton
+  & > .button
     flex: 1 0 auto
     display: block
     height: auto
-  & .vclInputGroupText
+  & .input-group-text
     display: flex
     align-items: center
     background-color: hsl(0, 0%, 92%)
@@ -28,8 +28,8 @@
     border-width: var(--input-border-width)
     border-style: solid
 
-.vclInputGroup .vclInput,
-.vclInputGroup select
+.input-group .input,
+.input-group select
   display: flex
   border-style: solid
   box-sizing: border-box

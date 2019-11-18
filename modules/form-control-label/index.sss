@@ -3,7 +3,7 @@
 
 /* Normal label */
 
-.vclFormControlLabel
+.form-control-label
   cursor: pointer
   display: block
   vertical-align: middle
@@ -12,26 +12,26 @@
   font-size: var(--form-control-label-font-size)
   font-weight: var(--form-control-label-font-weight)
   color: var(--form-control-label-color)
-  & .vclFormControlSubLabel
+  & .form-control-sub-label
     font-size: 0.9em
     padding-left: 0.6em
     color: var(--form-control-sublabel-color)
-  &.vclDisabled
+  &.disabled
     cursor: initial
-  &.vclFormControlLabelWrapping
+  &.form-control-label-wrapping
     line-height: var(--form-control-label-line-height)
     margin-top: 0
 
 /* Adaption for labels in horizontal form layout */
 
-.vclForm
-  &.vclFormHorizontal
-    & .vclFormControlLabel
+.form
+  &.form-horizontal
+    & .form-control-label
       text-align: right
 
 /* Indicator that an input is required */
 
-.vclRequiredIndicator
+.required-indicator
   font-size: 1.2em
   font-style: normal
   font-weight: bold
@@ -43,20 +43,20 @@
 
 /* Additional hint associated with a form control */
 
-.vclFormControlHint
+.form-control-hint
   display: block
   line-height: 1
   font-size: 0.9em
   color: var(--form-control-hint-color)
   margin-top: 0.3em
   margin-bottom: var(--form-control-vertical-gap)
-  &.vclError
+  &.error
     color: var(--danger-medium-color)
-  &.vclWarning
+  &.warning
     color: var(--warning-medium-color)
-  &.vclSuccess
+  &.success
     color: var(--success-medium-color)
-  &.vclInfo
+  &.info
     color: var(--info-medium-color)
-  &.vclPrimary
+  &.primary
     color: var(--primary-medium-color)

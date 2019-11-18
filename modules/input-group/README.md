@@ -7,7 +7,7 @@ control.
 
 ## Usage
 
-An input group is formed by an `vclInputGroup` as wrapper for buttons,
+An input group is formed by an `input-group` as wrapper for buttons,
 icograms and an input element.
 
 Icograms.
@@ -24,7 +24,7 @@ Permutations of multiple prepended/ appended elements are possible as well.
 
 ## Classes
 
-- `vclInputGroup`
+- `input-group`
 
 ## Modifiers
 

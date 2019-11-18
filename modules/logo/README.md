@@ -15,7 +15,7 @@ in an application's navigation bar and no additional styling.
 
 ## Classes
 
-- `vclLogo`
+- `logo`
 
 ## Modifiers
 

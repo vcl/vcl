@@ -27,18 +27,18 @@ Basic.
 [normal example](/demo/example-normal.html)
 
 For narrow viewports, a sensible option is to show only the current
-item along with directional navigation controls. For this, the `vclToolbar` is
+item along with directional navigation controls. For this, the `toolbar` is
 used.
 
 [narrow example](/demo/example-narrow.html)
 
 ## Classes
 
-- `vclProcessNav`
+- `process-nav`
 
 ## Modifiers
 
-- `vclProcessNavArrows`: Items appear as arrows.
+- `process-nav-arrows`: Items appear as arrows.
 
 ## Variables
 

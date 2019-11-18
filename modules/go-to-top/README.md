@@ -11,13 +11,13 @@ This component is a specialization of the
 
 The vertical placement is `1em` to the bottom of the viewport.
 Horizontally it should be placed right to the element with
-the `vclApp` class with `+1em` offset.
+the `app` class with `+1em` offset.
 
 [basic example](/demo/example.html)
 
 ## Classes
 
-- `vclGoToTop`
+- `go-to-top`
 
 ## Modifiers
 

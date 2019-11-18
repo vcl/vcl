@@ -12,19 +12,19 @@ Supports rounded corners and semantic modifiers for coloring.
 
 ## Classes
 
-- `vclBadge`
+- `badge`
 
 ## Modifiers
 
-- `vclRounded`
+- `rounded`
 
 Semantic coloring.
 
-- `vclPrimary`
-- `vclSuccess`
-- `vclInfo`
-- `vclWarning`
-- `vclError`
+- `primary`
+- `success`
+- `info`
+- `warning`
+- `error`
 
 ## Variables
 

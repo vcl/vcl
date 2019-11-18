@@ -1,7 +1,7 @@
 @import "@vcl/theme"
 @import "@vcl/button"
 
-.vclToken
+.token
   box-sizing: border-box
   user-select: none
   display: inline-flex
@@ -23,25 +23,25 @@
   border-color: var(--token-border-color)
   color: var(--token-color)
   background-color: var(--token-bg-color)
-  & .vclIcogram
+  & .icogram
     line-height: 1
   &:empty
     display: none
   &:hover
     border-color: var(--token-border-hover-color)
-  &.vclSelected
+  &.selected
     border-color: var(--token-border-selected-color)
     background-color: var(--token-bg-selected-color)
     color: var(--token-selected-color)
-  &.vclHighlighted
+  &.highlighted
     border-color: var(--token-border-highlighted-color)
     background-color: var(--token-bg-highlighted-color)
     color: var(--token-highlighted-color)
-  & .vclTokenLabel:first-child
+  & .token-label:first-child
     margin-left: 0.3em
-  & .vclTokenLabel:last-child
+  & .token-label:last-child
     margin-right: 0.3em
-  & .vclButton
+  & .button
     padding: 0 0.8em
     height: 100%
     font-size: 0.8em
@@ -49,9 +49,9 @@
     min-height: 2em
     color: var(--token-remove-button-label-color)
 
-.vclTokenContainer
+.token-container
   line-height: initial
-  & > .vclToken
+  & > .token
     &:first-child
       margin-left: 0
     &:last-child

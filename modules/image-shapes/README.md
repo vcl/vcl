@@ -14,9 +14,9 @@ Decorations for images.
 
 ## Classes
 
-- `vclImgShapeThumbnail`
-- `vclImgShapeRounded`
-- `vclImgShapeCircular`
+- `img-shape-thumbnail`
+- `img-shape-rounded`
+- `img-shape-circular`
 
 ## Modifiers
 

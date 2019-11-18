@@ -5,8 +5,8 @@ container.
 
 ## Features
 
-A container with the class `vclOverlayContainer` must be wrapped around
-the `vclOverlayContent` and the `vclOverlay`.
+A container with the class `overlay-container` must be wrapped around
+the `overlay-content` and the `overlay`.
 Due to the absolute positioning, the height of the overlay container must be set
 manually.
 
@@ -16,9 +16,9 @@ manually.
 
 ## Classes
 
-- `vclOverlayContainer`
-- `vclOverlayContent`
-- `vclOverlay`
+- `overlay-container`
+- `overlay-content`
+- `overlay`
 
 ## Modifiers
 

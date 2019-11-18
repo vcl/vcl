@@ -17,14 +17,14 @@ combined with the grid system and mixed with each other.
 
 ### Control Group
 
-The concept of a control group with `vclFormControlGroup` which groups an
+The concept of a control group with `form-control-group` which groups an
 input element together with a label so that they make up an atomic control.
 For example a label and a checkbox if such a combination should behave
 like a single control. The elements are aligned vertically.
 
 ### Inline Control Group
 
-`vclFormInlineControlGroup` is the same as the previous class but
+`form-inline-control-group` is the same as the previous class but
 label and control are aligned horizontally.
 
 ## Usage
@@ -37,7 +37,7 @@ The _horizontal_ layout uses two columns, one for labels, one for controls.
 Left-aligned labels in separate column. Controls and labels are in line.
 In this example the loose button group is used to lay out the buttons.
 The layout columns can be divided with the golden cut
-(`vclGridSpan-gca`, `vclGridSpan-gcb`) from the grid layout component
+(`grid-span-gca`, `grid-span-gcb`) from the grid layout component
 or any other ratio.
 
 [horizontal example](/demo/example-horizontal.html)
@@ -46,22 +46,22 @@ The _inline_ layout variant with right-aligned labels in line with controls.
 
 [inline example](/demo/example-inline.html)
 
-The `vclFormActionArea` wraps the usual buttons on the bottom of the form
+The `form-action-area` wraps the usual buttons on the bottom of the form
 and is optional.
 
 ## Classes
 
-- `vclForm`
-- `vclFormControlGroup`
-- `vclFormInlineControlGroup`
-- `vclFormActionArea`
+- `form`
+- `form-control-group`
+- `form-inline-control-group`
+- `form-action-area`
 
 ## Modifiers
 
-### For `vclForm`
+### For `form`
 
-- `vclFormInline`: Lay out all elements in one line.
-- `vclFormHorizontal`: Two column form layout, for labels and controls.
+- `form-inline`: Lay out all elements in one line.
+- `form-horizontal`: Two column form layout, for labels and controls.
 
 ## Variables
 

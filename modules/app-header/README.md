@@ -18,8 +18,8 @@ A simple header area:
 
 ## Classes
 
-- `vclApplicationHeader`
-- `vclAppName`
+- `application-header`
+- `app-name`
 
 ## Modifiers
 

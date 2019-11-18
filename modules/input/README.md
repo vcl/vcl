@@ -21,7 +21,7 @@ layout spans module.
 ### Basic Input
 
 Text inputs can be created with an HTML `input` element or from a `div`
-element with the `vclInput` class and additional attributes for accessibility.
+element with the `input` class and additional attributes for accessibility.
 
 [text example](/demo/example-text.html)
 
@@ -34,7 +34,7 @@ Custom an normal HTML inputs can have a placeholder.
 ### Validation
 
 The validation state of an input can be visualized by the standard modifiers
-`vclError`, `vclWarning` and `vclSuccess`.
+`error`, `warning` and `success`.
 
 [validation-state example](/demo/example-validation-state.html)
 
@@ -72,13 +72,13 @@ The validation state of an input can be visualized by the standard modifiers
 
 ## Classes
 
-- `vclInput`
+- `input`
 
 ## Modifiers
 
-- `vclFocused`: Alternative to `:focus` pseudo class.
-- `vclDisabled`: Visual disabled state, should be combined with `disabled` property.
-- `vclReadonly`: Visual read only state, should be combined with `readonly` property.
+- `focused`: Alternative to `:focus` pseudo class.
+- `disabled`: Visual disabled state, should be combined with `disabled` property.
+- `readonly`: Visual read only state, should be combined with `readonly` property.
 
 ## Variables
 

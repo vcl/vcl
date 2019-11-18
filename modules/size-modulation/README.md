@@ -22,16 +22,16 @@ pagination at 130%.
 
 ## Classes
 
-- `vclScale75p`
-- `vclScale85p`
-- `vclScale110p`
-- `vclScale115p`
-- `vclScale120p`
-- `vclScale130p`
-- `vclScale155p`
-- `vclScale180p`
-- `vclScale250p`
-- `vclScale300p`
+- `scale75p`
+- `scale85p`
+- `scale110p`
+- `scale115p`
+- `scale120p`
+- `scale130p`
+- `scale155p`
+- `scale180p`
+- `scale250p`
+- `scale300p`
 
 ## Modifiers
 

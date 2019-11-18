@@ -1,14 +1,14 @@
 @import "@vcl/theme"
 
 body,
-.vclViewport
+.viewport
   font-size: var(--typography-font-size)
   line-height: var(--typography-line-height)
   color: var(--typography-text-color)
   font-family: var(--typography-font-family)
 
 abbr
-  &.vclInitialism
+  &.initialism
     font-size: 93%
     text-transform: uppercase
 
@@ -59,7 +59,7 @@ pre
   white-space: pre-wrap
   word-wrap: break-word
   word-break: break-all
-  &.vclCode
+  &.code
     border: 1px solid var(--typography-code-border-color)
     line-height: 1.2em
     padding: 0.7em
@@ -76,7 +76,7 @@ code
   white-space: nowrap
   background-color: var(--typography-code-bg-color)
 
-.vclCodeWrap
+.code-wrap
   white-space: pre-wrap
 
 h1,
@@ -137,13 +137,13 @@ a:hover
 a
   &:hover
     color: var(--typography-link-hover-color)
-  &.vclDisabled
+  &.disabled
     cursor: default
-  &.vclContentLink
+  &.content-link
     user-select: none
     text-decoration: none
     vertical-align: text-bottom
-    & > .vclIcogram
+    & > .icogram
       display: inline
       & > *:first-child
         margin-left: 0.1em
@@ -151,16 +151,16 @@ a
         margin: 0 0.1em 0 0
       & > *:last-child
         margin-right: 0.1em
-      & .vclText
+      & .text
         text-decoration: var(--typography-link-text-decoration)
-      & .vclIcon
+      & .icon
         text-decoration: none
 
-.vclDisabled,
-a.vclDisabled
+.disabled,
+a.disabled
   color: var(--typography-disabled-color)
 
-.vclSecondaryTextColor
+.secondary-text-color
   color: var(--typography-secondary-text-color)
 
 /* Prevents sub and sup affecting line-height */

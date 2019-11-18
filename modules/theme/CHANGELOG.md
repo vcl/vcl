@@ -80,7 +80,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### BREAKING CHANGES
 
-* **utils:** Replaced vclDisplayNone with vclHide
+* **utils:** Replaced display-none with hide
 
 
 

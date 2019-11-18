@@ -7,7 +7,7 @@ Horizontally and vertically aligned multilevel navigation.
 Allows to build a hierarchical navigation by supporting three levels in total,
 which can be styled separately.
 
-The `vclNavigationHeading` can be used to create a header grouping
+The `navigation-heading` can be used to create a header grouping
 a subset of the navigation items.
 
 ## Usage
@@ -29,16 +29,16 @@ Vertical with nested navigation.
 
 ## Classes
 
-- `vclNavigation`
-- `vclNavigationHeading`
-- `vclNavigationItem`
-- `vclNavigationItemLabel`
+- `navigation`
+- `navigation-heading`
+- `navigation-item`
+- `navigation-item-label`
 
 ## Modifiers
 
-### For `vclNavigationItem`
+### For `navigation-item`
 
-- `vclDisabled`
+- `disabled`
 
 ## Variables
 

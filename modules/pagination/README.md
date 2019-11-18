@@ -16,9 +16,9 @@ paged content.
 
 ## Classes
 
-- `vclPagination`
-- `vclSelected`
-- `vclSeparator`
+- `pagination`
+- `selected`
+- `separator`
 
 ## Modifiers
 

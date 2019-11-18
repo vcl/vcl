@@ -72,12 +72,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Code Refactoring
 
-* **flex-grid:** rename vclGutter to vclGridGutter ([e07b288](https://github.com/vcl/vcl/commit/e07b288))
+* **flex-grid:** rename gutter to grid-gutter ([e07b288](https://github.com/vcl/vcl/commit/e07b288))
 
 
 ### BREAKING CHANGES
 
-* **flex-grid:** Renamed vclGutter class to vclGridGutter
+* **flex-grid:** Renamed gutter class to grid-gutter
 
 
 

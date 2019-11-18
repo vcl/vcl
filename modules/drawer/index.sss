@@ -1,13 +1,13 @@
 @import "@vcl/theme"
 
-.vclDrawerContainer 
+.drawer-container 
   position: relative 
   box-sizing: border-box 
   -webkit-overflow-scrolling: touch 
   display: block 
   overflow: hidden 
 
-  & .vclDrawerBackdrop 
+  & .drawer-backdrop 
     top: 0 
     left: 0 
     right: 0  
@@ -17,11 +17,11 @@
     z-index: 9
     visibility: hidden 
     background-color: transparent
-    &.vclDrawerBackdropVisible 
+    &.drawer-backdrop-visible 
       background-color: var(--drawer-backdrop-bg-color)
       visibility: visible
 
-  & .vclDrawer 
+  & .drawer 
     position: relative 
     display: block 
     position: absolute 
@@ -35,34 +35,34 @@
     overflow-y: auto 
     transform: translate3d(-100%, 0, 0) 
     visibility: hidden 
-    &.vclDrawerRight 
+    &.drawer-right 
       right: 0 
       transform: translate3d(100%, 0, 0) 
-    &.vclDrawerOpen 
+    &.drawer-open 
       visibility: visible 
       transform: translate3d(0, 0, 0) 
-    & .vclDrawerInner
+    & .drawer-inner
       width: 100%
       height: 100%
       overflow: auto
 
-  & .vclDrawerContent
+  & .drawer-content
     background-color: var(--drawer-content-bg-color)
     position: relative
     display: block
     height: 100%
     overflow: auto
 
-  &.vclDrawerAnimations
-    & .vclDrawerContent
+  &.drawer-animations
+    & .drawer-content
       transition-duration: 0.3s
       transition-timing-function: ease-in-out
       transition-property: transform, margin-left, margin-right
-    & .vclDrawer
+    & .drawer
       transition-duration: 0.3s 
       transition-timing-function: ease-in-out
       transition-property: transform, visibility 
-    & .vclDrawerBackdrop 
+    & .drawer-backdrop 
       transition-duration: 0.38s 
       transition-timing-function: ease-in-out
       transition-property: background-color, visibility 

@@ -12,7 +12,7 @@ A collection of effects such as 'blur' realized with CSS filters.
 
 ## Modifiers
 
-- `vclEffect--blur`
+- `effect--blur`
 
 ## Variables
 

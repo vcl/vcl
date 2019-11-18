@@ -20,7 +20,7 @@ too small. Therefore full sized buttons are proposed for this case.
 
 ## Classes
 
-- `vclSpinner`
+- `spinner`
 
 ## Modifiers
 

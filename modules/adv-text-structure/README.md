@@ -24,12 +24,12 @@ Automatic chapter numbering for up to three levels.
 
 ## Classes
 
-- `vclMasterHeader`
-- `vclArticle`
-- `vclArticleHeader`
-- `vclArticleSubHeader`
-- `vclSectAutoNumbering`
-- `vclSectAutoNumberingReset`
+- `master-header`
+- `article`
+- `article-header`
+- `article-sub-header`
+- `sect-auto-numbering`
+- `sect-auto-numbering-reset`
 
 ## Modifiers
 

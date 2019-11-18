@@ -13,7 +13,7 @@ also on narrow viewports.
 
 ## Classes
 
-- `vclProductList`
+- `product-list`
 
 ## Modifiers
 

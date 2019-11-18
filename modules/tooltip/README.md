@@ -18,14 +18,14 @@ The content can also be made up of other components.
 
 ## Classes
 
-- `vclTooltip`
-- `vclTooltipContent`
+- `tooltip`
+- `tooltip-content`
 
-- `vclArrowPointer`
-- `vclArrowPointerBottom`
-- `vclArrowPointerRight`
-- `vclArrowPointerLeft`
-- `vclArrowPointerTop`
+- `arrow-pointer`
+- `arrow-pointer-bottom`
+- `arrow-pointer-right`
+- `arrow-pointer-left`
+- `arrow-pointer-top`
 
 ## Modifiers
 

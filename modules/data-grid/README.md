@@ -14,16 +14,16 @@ absence of col- and row-spans.
 
 ## Classes
 
-- `vclDataGrid`
-- `vclDGRow`
-- `vclDGCell`
+- `data-grid`
+- `d-g-row`
+- `d-g-cell`
 
 ## Modifiers
 
-- `vclDGAlignRight`: align cell content to the right
-- `vclDGAlignCentered`: align cell content to the left
-- `vclDGVAlignMiddle`: vertically align cell content to the middle
-- `vclDGVAlignBottom`: vertically align cell content to the bottom
+- `d-g-align-right`: align cell content to the right
+- `d-g-align-centered`: align cell content to the left
+- `d-g-v-align-middle`: vertically align cell content to the middle
+- `d-g-v-align-bottom`: vertically align cell content to the bottom
 
 ## Variables
 

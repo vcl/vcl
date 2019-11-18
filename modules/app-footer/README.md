@@ -18,7 +18,7 @@ demo this is just an example.
 
 ## Classes
 
-- `vclApplicationFooter`
+- `application-footer`
 
 ## Modifiers
 

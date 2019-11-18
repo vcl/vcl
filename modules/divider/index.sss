@@ -1,54 +1,54 @@
 @import "@vcl/theme"
 @import "@vcl/icon"
 
-.vclDivider
+.divider
   user-select: none
   color: var(--divider-color)
-  &> .vclDividerElement
+  &> .divider-element
     padding-left: 1em
     padding-right: 1em
     background-color: var(--divider-fill-color)
     z-index: 1
-    &.vclDividerBeginElement
+    &.divider-begin-element
       padding-left: 0.5em
-    &.vclDividerEndElement
+    &.divider-end-element
       padding-right: 0.5em
-  &.vclDividerHorizontal
+  &.divider-horizontal
     margin: 1rem 0
-    &> .vclDividerRule
+    &> .divider-rule
       border-bottom: 1px solid var(--divider-border-color)
       position: absolute
       left: 0
       top: 50%
       right: 0
-  &.vclDividerVertical
-    &> .vclDividerRule
+  &.divider-vertical
+    &> .divider-rule
       border-left: 1px solid var(--divider-border-color)
       position: absolute
       left: 50%
       top: 0
       bottom: 0
       height: 100%
-    &> .vclDividerElement
+    &> .divider-element
       padding-top: 0.5em
       padding-bottom: 0.5em
-  &> .vclIcogram
+  &> .icogram
     font-weight: 700
     text-transform: uppercase
     letter-spacing: 0.05em
     display: inline-block
-  &.vclDividerHeading
+  &.divider-heading
     text-transform: none
-  &:not(.vclDividerHeading)
+  &:not(.divider-heading)
     font-size: 0.85em
   &:empty
     border-bottom: 1px solid var(--divider-border-color)
-  &.vclDividerHorizontal
+  &.divider-horizontal
     position: relative
-  &.vclDividerVertical
+  &.divider-vertical
     position: relative
 
-/* HTML based divider should just look the same as the vclDivider */
+/* HTML based divider should just look the same as the divider */
 
 hr
   border-top-color: var(--divider-border-color)

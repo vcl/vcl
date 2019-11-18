@@ -1,7 +1,7 @@
 @import "@vcl/theme"
 
 
-.vclDropdown
+.dropdown
   user-select: none
   box-sizing: border-box
   display: none
@@ -20,7 +20,7 @@
   overflow-x: hidden
   overflow-y: auto
   outline: 0
-  & .vclDropdownItem
+  & .dropdown-item
     display: block
     outline: 0
     line-height: 1.6
@@ -28,8 +28,8 @@
     padding-bottom: 0.38em
     cursor: pointer
     color: var(--dropdown-item-color)
-    & > .vclDropdownItemLabel,
-    & > .vclDropdownItemSubLabel
+    & > .dropdown-item-label,
+    & > .dropdown-item-sub-label
       display: block
       padding-left: 0.9rem
       padding-right: 0.9rem
@@ -41,36 +41,36 @@
     &:hover,
     &:focus
       background-color: var(--dropdown-item-bg-hover-color)
-      & > .vclDropdownItemLabel
+      & > .dropdown-item-label
         color: var(--dropdown-item-hover-color)
-      & > .vclDropdownItemSubLabel
+      & > .dropdown-item-sub-label
         color: var(--dropdown-item-sub-label-hover-color)
-    & > .vclDropdownItemSubLabel
+    & > .dropdown-item-sub-label
       font-size: 0.95em
       padding-top: 0
       color: var(--dropdown-item-sub-label-color)
-    &.vclSelected,
-    &.vclSelected:hover,
-    &.vclSelected:focus
+    &.selected,
+    &.selected:hover,
+    &.selected:focus
       background-color: var(--dropdown-selected-item-bg-color)
-      & > .vclDropdownItemLabel,
-      & > .vclDropdownItemSubLabel
+      & > .dropdown-item-label,
+      & > .dropdown-item-sub-label
         color: var(--dropdown-selected-item-color)
-    &.vclHighlighted,
-    &.vclHighlighted:hover,
-    &.vclHighlighted:focus
+    &.highlighted,
+    &.highlighted:hover,
+    &.highlighted:focus
       background-color: var(--dropdown-highlighted-item-bg-color)
-      & > .vclDropdownItemLabel
+      & > .dropdown-item-label
         color: var(--dropdown-highlighted-item-color)
-    &.vclDisabled,
-    &.vclDisabled:hover,
-    &.vclDisabled:focus
+    &.disabled,
+    &.disabled:hover,
+    &.disabled:focus
       background-color: var(--dropdown-disabled-item-bg-color)
       cursor: default
-      & > .vclDropdownItemLabel,
-      & > .vclDropdownItemSubLabel
+      & > .dropdown-item-label,
+      & > .dropdown-item-sub-label
         color: var(--dropdown-disabled-item-color)
-  & .vclSeparator
+  & .separator
     margin-top: 0.5em
     margin-bottom: 0.5em
     border-bottom-color: var(--dropdown-separator-item-border-color)
@@ -79,16 +79,16 @@
     &:hover,
     &:focus
       background-color: transparent
-  & .vclDropdownItemGroupHeader
+  & .dropdown-item-group-header
     line-height: 1.4
     padding-top: 0.1em
     padding-bottom: 0.1em
-    & > .vclDropdownItemGroupHeaderLabel
+    & > .dropdown-item-group-header-label
       line-height: 1.6
       padding-top: 0.2em
       padding-bottom: 0.2em
       padding-left: 0.5em
       font-weight: 600
       cursor: default
-  &.vclOpen
+  &.open
     display: block

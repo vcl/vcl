@@ -10,7 +10,7 @@ Checkbox form control.
 
 ## Classes
 
-- `vclCheckbox`
+- `checkbox`
 
 ## Modifiers
 

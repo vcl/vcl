@@ -16,8 +16,8 @@ Extensions for the vcl table.
 
 ## Modifiers
 
-- `vclTableToolBar`
-- `vclTableFilterBar`
+- `table-tool-bar`
+- `table-filter-bar`
 
 ## Variables
 

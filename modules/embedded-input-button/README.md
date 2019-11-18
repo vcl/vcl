@@ -12,16 +12,16 @@ Buttons, icons and plain text labels embeddable in text input elements.
 
 ## Classes
 
-- `vclInputGroupEmb`
-- `vclAppItem`
-- `vclPrepItem`
-- `vclAppended`
-- `vclPrepended`
+- `input-group-emb`
+- `app-item`
+- `prep-item`
+- `appended`
+- `prepended`
 
 ## Modifiers
 
 The modifiers for the _readonly_, _focused_ and _disabled_ state have to be
-set on the enclosed element with the `vclInput` class.
+set on the enclosed element with the `input` class.
 
 ## Variables
 

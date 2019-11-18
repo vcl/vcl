@@ -15,7 +15,7 @@ Introduces the following concept:
 sidebar etc. Layout-wise it defines the boundary for these elements relative
 to the viewport.
 
-The `vclLayoutWidth` utility class can be used to give containers the width of
+The `layout-width` utility class can be used to give containers the width of
 the app area. This is useful if containers with a 100% spanning background
 are needed and the actual content should be limited to the width of the layout.
 
@@ -27,10 +27,10 @@ Viewport with centered app area which contains the main content area:
 
 ## Classes
 
-- `vclViewport`: In HTML the _body_ tag.
-- `vclViewportBg`: Utility to apply the background color of the viewport.
-- `vclApp`: Main application area.
-- `vclLayoutWidth`: Utility to apply the width of the app area.
+- `viewport`: In HTML the _body_ tag.
+- `viewport-bg`: Utility to apply the background color of the viewport.
+- `app`: Main application area.
+- `layout-width`: Utility to apply the width of the app area.
 
 ## Modifiers
 

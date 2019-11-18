@@ -69,8 +69,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### BREAKING CHANGES
 
-* **badge:** vclLabel was removed. To update, replace "vclLabel" with "vclBadge" and "vclBadge"
-with "vclBadge vclRounded".
+* **badge:** label was removed. To update, replace "label" with "badge" and "badge"
+with "badge rounded".
 
 
 

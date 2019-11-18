@@ -1,7 +1,7 @@
 @import "@vcl/theme"
 @import "@vcl/icon"
 
-.vclBreadcrumbNav
+.breadcrumb-nav
   & ol
     list-style: none
     list-style-type: none
@@ -18,9 +18,9 @@
       & a
         color: var(--breadcrumb-label-color)
         display: inline-block
-      & .vclBreadcrumbNavItemLabel
+      & .breadcrumb-nav-item-label
         display: inline-block
-        & +.vclBreadcrumbNavDivider
+        & +.breadcrumb-nav-divider
           color: var(--breadcrumb-divider-color)
           display: inline-block
           padding-left: 0.2em
@@ -28,10 +28,10 @@
       & a:hover,
       & a:focus
         color: var(--breadcrumb-label-hover-color)
-      &.vclSelected
+      &.selected
         cursor: default
         background: transparent
         border: 0
         & a,
-        & .vclBreadcrumbNavItemLabel
+        & .breadcrumb-nav-item-label
           color: var(--breadcrumb-label-selected-color)

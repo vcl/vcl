@@ -12,7 +12,7 @@ List of navigation items arranged as tabs.
 ## Usage
 
 The tab bar containing the tabs is built from a unordered list and the
-`vclTabs` class. It contains n `vclTab`s.
+`tabs` class. It contains n `tab`s.
 The tab items can be made of anchor tags or just textual.
 An anchor tag is only needed if users should be able to open
 a tab in a different window by an URL.
@@ -20,8 +20,8 @@ Buttons can be embedded as shown in the example below to offer an additional
 interaction.
 A tab with only a button, for example to open new tabs like in the
 example below contains just a button as tab content.
-The selected tab `vclSelected` is visually highlighted and can
-be disabled via `vclDisabled`.
+The selected tab `selected` is visually highlighted and can
+be disabled via `disabled`.
 
 [basic example](/demo/example-basic.html)
 
@@ -32,29 +32,29 @@ attributes is optimal.
 
 Apart from buttons, tabs may also contain other components like a badge as
 in the example above. To get proper margins, all elements within
-a `vclTab` get the `vclTabLabel`.
+a `tab` get the `tab-label`.
 
-Add the modifier class `vclTabStyleUni` for uni colored tabs.
+Add the modifier class `tab-style-uni` for uni colored tabs.
 This style is more suitable for showing tabs unobtrusively within
 content textual for example.
 
 [uni example](/demo/example-uni.html)
 
-The class `vclTabbable` is used to create a wrapper for the tabs
+The class `tabbable` is used to create a wrapper for the tabs
 and the content area.
 The content area can be built from various components
-such as a panel or the included classes `vclTabContent` and `vclTabPanel`.
+such as a panel or the included classes `tab-content` and `tab-panel`.
 
 By default tabs are laid out as shown above.
 Different layouts are possible as shown below.
 
-Modifier class `vclTabLeft`.
+Modifier class `tab-left`.
 
 [left1 example](/demo/example-left.html)
 
 [left2 example](/demo/example-uni-left.html)
 
-Modifier class `vclTabRight`.
+Modifier class `tab-right`.
 
 [right1 example](/demo/example-right.html)
 
@@ -67,31 +67,31 @@ Justified tabs can be achieved using the appropriate layout attributes.
 
 ## Classes
 
-- `vclTabbable`: Wrapper of tab bar and tab content area.
-- `vclTabs`: Tab bar.
-- `vclTab`: Tab.
-- `vclTabLabel`: Optional class for the label(s) inside the tab.
-- `vclTabContent`: Optional content area.
-- `vclTabPanel`: Optional inner content area.
+- `tabbable`: Wrapper of tab bar and tab content area.
+- `tabs`: Tab bar.
+- `tab`: Tab.
+- `tab-label`: Optional class for the label(s) inside the tab.
+- `tab-content`: Optional content area.
+- `tab-panel`: Optional inner content area.
 
 ## Modifiers
 
-### For `vclTabbable`
+### For `tabbable`
 
-- `vclTabsLeft`
-- `vclTabsRight`
-- `vclTabsBottom`
-- `vclNoBorder`: remove any border from `vclTabContent` and `vclTabs`.
+- `tabs-left`
+- `tabs-right`
+- `tabs-bottom`
+- `no-border`: remove any border from `tab-content` and `tabs`.
 
-### For `vclTabs`
+### For `tabs`
 
-- `vclTabStyleUni`
-- `vclTabNavJustified`
+- `tab-style-uni`
+- `tab-nav-justified`
 
-### For `vclTab`
+### For `tab`
 
-- `vclSelected`
-- `vclDisabled`
+- `selected`
+- `disabled`
 
 ## Variables
 

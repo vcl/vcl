@@ -16,11 +16,11 @@ inserted to and removed from the DOM as needed.
 
 ## Classes
 
-- `vclPopOver`
+- `pop-over`
 
 ## Modifiers
 
-- `vclP-0`: From the utils module.
+- `p-0`: From the utils module.
 
 ## Variables
 

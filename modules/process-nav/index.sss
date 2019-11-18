@@ -2,12 +2,12 @@
 @import "@vcl/icogram"
 @import "@vcl/toolbar"
 
-.vclProcessNav
+.process-nav
   font-size: 1em
   user-select: none
   overflow: hidden
   margin-bottom: var(--block-elem-vertical-gap)
-  & .vclProcessNavStepNo
+  & .process-nav-step-no
     margin: 0 0.9em
     border: 1px solid
     border-color: inherit
@@ -55,25 +55,25 @@
       &:focus
         & a
           color: var(--process-nav-item-hover-color)
-      &.vclSelected
+      &.selected
         cursor: default
         color: var(--process-nav-selected-item-color)
         background-color: var(--process-nav-selected-item-bg-color)
         border: 0
-      &.vclDisabled
+      &.disabled
         cursor: default
         color: var(--process-nav-disabled-color)
-      &.vclProcessNavCompletedStep
+      &.process-nav-completed-step
         background-color: var(--process-nav-completed-item-bg-color)
 
-.vclProcessNav.vclProcessNavArrows
+.process-nav.process-nav-arrows
   & ol
     & li
       padding-left: 2.5em
       padding-right: 0
       &:first-child
         padding-left: 1em
-      &:after /* The arrows for the vclProcessNavs are rotated pseudo elements */
+      &:after /* The arrows for the process-navs are rotated pseudo elements */
         content: ''
         position: absolute
         top: 0
@@ -96,8 +96,8 @@
         border-color: var(--process-nav-arrow-border-color)
       &:last-child:after
         content: none
-      &.vclSelected:after
+      &.selected:after
         background-color: var(--process-nav-selected-item-bg-color)
-      &.vclProcessNavCompletedStep
+      &.process-nav-completed-step
         &:after
           background-color: var(--process-nav-completed-item-bg-color)

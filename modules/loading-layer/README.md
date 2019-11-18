@@ -14,15 +14,15 @@ state indication.
 
 The loading layer covers the next ancestor container which is
 `position: absolute`. Alternatively,
-the container can be classed as `vclLoadingLayerContainer` to denote it.
+the container can be classed as `loading-layer-container` to denote it.
 
 [basic example](/demo/example.html)
 
 ## Classes
 
-- `vclLoadingLayerContainer`
-- `vclLoadingLayer`
-- `vclLoadingLayerContent`
+- `loading-layer-container`
+- `loading-layer`
+- `loading-layer-content`
 
 ## Modifiers
 

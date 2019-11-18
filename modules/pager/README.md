@@ -19,7 +19,7 @@ Alternative with justified controls and centered label.
 
 ## Classes
 
-- `vclPager`
+- `pager`
 
 ## Modifiers
 

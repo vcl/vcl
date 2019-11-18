@@ -1,6 +1,6 @@
 @import "@vcl/theme"
 
-.vclProductList
+.product-list
   width: 100%
   padding: 0
   & > tbody tr
@@ -9,22 +9,22 @@
     border-bottom-color: var(--product-list-border-color)
     color: var(--product-list-color)
     padding-bottom: 10px
-  & .vclPLName
+  & .p-l-name
     font-weight: bold
     color: var(--product-list-name-color)
-  & .vclPLData
+  & .p-l-data
     white-space: nowrap
-  & .vclPLPrice
+  & .p-l-price
     text-align: right
-  & .vclPLControls
+  & .p-l-controls
     text-align: right
-    & .vclInput
+    & .input
       width: 4em
-  & .vclProductImage img
+  & .product-image img
     width: 100%
     max-width: 8em
 
-.vclProduct
+.product
   & img
     display: flex
     width: 50%
@@ -33,20 +33,20 @@
     margin-top: 5em
 
 @media (--sm-viewport)
-  table.vclProductList,
-  .vclProductList thead,
-  .vclProductList tbody,
-  .vclProductList th,
-  .vclProductList td,
-  .vclProductList tr
+  table.product-list,
+  .product-list thead,
+  .product-list tbody,
+  .product-list th,
+  .product-list td,
+  .product-list tr
     display: block
 
-  .vclProductList thead tr
+  .product-list thead tr
     position: absolute
     top: -9999em
     left: -9999em
 
-  .vclProductList td
+  .product-list td
     border: none
     position: relative
     &:before
@@ -57,7 +57,7 @@
       padding-right: 1em
       white-space: nowrap
 
-  .vclProductImage img
+  .product-image img
     width: 100%
     max-width: none !important
 

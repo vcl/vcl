@@ -4,7 +4,7 @@ dl,
 menu,
 ol,
 ul,
-.vclList
+.list
   margin-top: 0
   margin-bottom: var(--block-elem-vertical-gap)
 
@@ -25,14 +25,14 @@ ol ol,
 ol ul
   margin-bottom: 0
 
-.vclList
+.list
   padding: 0 0 0 2em
   list-style-position: outside
-  &.vclListHorizontal
+  &.list-horizontal
     padding-left: 0 !important
-    & > .vclListItem
+    & > .list-item
       display: inline-block
-    & > .vclListSeparator
+    & > .list-separator
       display: inline-block
       margin-top: 0
       margin-left: 1em
@@ -40,20 +40,20 @@ ol ul
       margin-bottom: 0
       vertical-align: middle
       border: 0
-  &.vclListCustomBullets
+  &.list-custom-bullets
     list-style-type: none
     padding: 0 0 0 1em
-  & > .vclListItem
+  & > .list-item
     display: list-item
     padding-top: 0.2em
     padding-bottom: 0.2em
-    & > .vclIcon
+    & > .icon
       min-width: 1.5em
       text-align: center
       padding-right: 0em
       padding-left: 0em
 
-.vclListSeparator
+.list-separator
   margin: 0.6em 0
   overflow: hidden
   list-style: none
@@ -61,7 +61,7 @@ ol ul
   padding: 0
   border-bottom: 1px solid var(--list-separator-border-color)
 
-.vclListGroupHeader
+.list-group-header
   font-weight: bold
   list-style-type: none
   margin-left: -1.1em

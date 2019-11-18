@@ -1,7 +1,7 @@
 @import "@vcl/theme"
 
 
-.vclEmailViewport
+.email-viewport
   box-sizing: border-box
   display: block !important
   width: 100%
@@ -12,7 +12,7 @@
   padding-bottom: 0.5em
   box-sizing: border-box
 
-.vclEmailBody
+.email-body
   box-sizing: border-box
   background-color: var(--email-body-bg-color)
   width: 60%
@@ -22,7 +22,7 @@
   border: 1px solid var(--email-body-border-color)
   border-radius: 3px
 
-.vclEmailFooter
+.email-footer
   color: var(--email-footer-color)
   padding-top: 0.6em
   padding-bottom: 1em
@@ -30,7 +30,7 @@
   text-align: center
 
 @media only screen and (max-width: 1024px)
-  .vclEmailBody
+  .email-body
     width: 80% !important
 
 @media only screen and (max-width: 768px)
@@ -38,11 +38,11 @@
     margin: 0 !important
     padding: 0 !important
 
-  .vclEmailViewport
+  .email-viewport
     background-color: var(--email-body-bg-color) !important
     padding: 0 !important
 
-  .vclEmailBody
+  .email-body
     background-color: var(--email-body-bg-color) !important
     width: 100% !important
     margin: 0 auto !important
@@ -56,10 +56,10 @@
     margin: 0 !important
     padding: 0 !important
 
-  .vclEmailViewport
+  .email-viewport
     padding: 0 !important
 
-  .vclEmailBody
+  .email-body
     width: 100% !important
     margin: 0 auto !important
     padding: 0 !important

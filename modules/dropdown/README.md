@@ -38,21 +38,21 @@ item.
 
 ## Classes
 
-- `vclDropdown`
-- `vclDropdownItem`
-- `vclDropdownItemLabel`
-- `vclDropdownItemSubLabel`
-- `vclDropdownItemGroupHeader`
-- `vclDropdownItemGroupHeaderLabel`
-- `vclSeparator`
+- `dropdown`
+- `dropdown-item`
+- `dropdown-item-label`
+- `dropdown-item-sub-label`
+- `dropdown-item-group-header`
+- `dropdown-item-group-header-label`
+- `separator`
 
 ## Modifiers
 
-### For `vclDropdownItem`
+### For `dropdown-item`
 
-- `vclSelected`: To visualize items that are currently selected.
-- `vclDisabled`: To disabled items (make them unavailable for selection).
-- `vclHighlighted`: To mark the caret position for keyboard based navigation.
+- `selected`: To visualize items that are currently selected.
+- `disabled`: To disabled items (make them unavailable for selection).
+- `highlighted`: To mark the caret position for keyboard based navigation.
 
 ## Variables
 

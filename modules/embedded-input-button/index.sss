@@ -1,18 +1,18 @@
 @import "@vcl/theme"
 
-.vclInputGroupEmb
+.input-group-emb
   display: block
   margin-bottom: var(--form-control-vertical-gap)
   position: relative
   width: 100%
-  & .vclInput
+  & .input
     margin-bottom: 0
-    &.vclPrepItem
+    &.prep-item
       padding-left: 2.5em
-    &.vclAppItem
+    &.app-item
       padding-right: 2.5em
-  & .vclPrepended,
-  & .vclAppended
+  & .prepended,
+  & .appended
     text-align: center
     line-height: var(--input-group-height)
     display: block
@@ -20,17 +20,17 @@
     position: absolute
     top: 0
     color: var(--embedded-input-group-text-color)
-  & .vclPrepended
+  & .prepended
     left: 0
-  & .vclAppended
+  & .appended
     right: 0
   & > button
-    &.vclButton,
-    &.vclButton:hover
+    &.button,
+    &.button:hover
       background-color: var(--embedded-input-group-text-bg-color)
       border-width: var(--input-border-width)
       border-style: solid
       border-color: transparent
       background-clip: content-box
-    &.vclButton[disabled]
+    &.button[disabled]
       display: none

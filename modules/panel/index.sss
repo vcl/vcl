@@ -1,39 +1,39 @@
 @import "@vcl/theme"
 
-.vclPanel
+.panel
   background-color: var(--panel-bg-color)
   margin-bottom: var(--block-elem-vertical-gap)
   overflow: overlay
-  &.vclPanelCard
+  &.panel-card
     border-width: 1px
     border-style: solid
     border-color: var(--panel-border-color)
     border-radius: var(--panel-border-radius--card)
-  &.vclPanelDialog
+  &.panel-dialog
     border-width: 1px
     border-style: solid
     border-color: var(--gray-light-5)
-    &.vclDanger
+    &.danger
       color: var(--danger-medium-color)
-    &> .vclPanelHeader
+    &> .panel-header
       padding-top: 0.7rem
       padding-bottom: 0.7rem
       border-bottom-width: 0
       background-color: var(--gray-light-5)
-      &.vclNoBg
+      &.no-bg
         background-color: transparent
-    &> .vclPanelBody
+    &> .panel-body
       border-width: 0
-    &> .vclPanelFooter
+    &> .panel-footer
       padding-top: 0.7rem
       padding-bottom: 0.7rem
       border-top-width: 0
       background-color: var(--gray-light-5)
-      &.vclNoBg
+      &.no-bg
         background-color: transparent
 
-.vclPanelHeader,
-.vclPanelFooter
+.panel-header,
+.panel-footer
   display: flex
   position: relative
   color: var(--panel-header-color)
@@ -42,22 +42,22 @@
   border-width: 0 0 2px 0
   border-color: var(--panel-border-color)
 
-.vclPanelHeader,
-.vclPanelFooter
+.panel-header,
+.panel-footer
   & > *
     margin-left: 0.8rem
   &> :last-child
     margin-right: 0.8rem
-  & > .vclPanelContent
+  & > .panel-content
     margin: 0
 
-.vclPanelFooter
+.panel-footer
   border-width: 0
   color: var(--panel-footer-color)
   background-color: var(--panel-footer-bg-color)
 
-.vclPanelTitle,
-.vclPanelHeading
+.panel-title,
+.panel-heading
   font-weight: bold
   line-height: var(--panel-hf-line-height)
   margin-top: 0
@@ -65,21 +65,21 @@
   font-size: 0.96em
   color: inherit
 
-.vclPanelTitle
+.panel-title
   font-size: 1.08em
 
-.vclPanelBody
+.panel-body
   border-style: solid
   border-width: 1px
   border-color: var(--panel-border-color)
 
-.vclPanelBody > *:first-child
+.panel-body > *:first-child
   margin-top: 0
 
-.vclPanelBody > *:last-child
+.panel-body > *:last-child
   margin-bottom: 0
 
-.vclPanelContent
+.panel-content
   padding: 0.8rem 0.8rem
   margin-bottom: 0
 

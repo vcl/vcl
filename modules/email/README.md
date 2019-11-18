@@ -23,9 +23,9 @@ together with classes from other VCL modules.
 
 ## Classes
 
-- `vclEmailViewport`
-- `vclEmailBody`
-- `vclEmailFooter`
+- `email-viewport`
+- `email-body`
+- `email-footer`
 
 ## Modifiers
 

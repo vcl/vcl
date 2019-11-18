@@ -1,63 +1,63 @@
 
 /* flexbox based layout primitives */
-.vclHor, .vclVer
+.row, .col
   display: flex
   flex-wrap: wrap
   box-sizing: border-box
-  &.vclNoWrap
+  &.no-wrap
     flex-wrap: nowrap
-  &.vclWrapReverse
+  &.wrap-reverse
     flex-wrap: wrap-reverse
-  &.vclInline
+  &.inline
     display: inline-flex
   & > * 
     box-sizing: border-box
 
 /* alignment in cross axis */
-.vclHor, .vclVer
-  &.vclStart
+.row, .col
+  &.start
     align-items: flex-start
-  &.vclCenter
+  &.center
     align-items: center
-  &.vclEnd
+  &.end
     align-items: flex-end
 
 /* alignment in main axis */
-.vclHor, .vclVer
-  &.vclJustifyStart
+.row, .col
+  &.justify-start
     justify-content: flex-start
-  &.vclJustifyCenter
+  &.justify-center
     justify-content: center
-  &.vclJustifyEnd
+  &.justify-end
     justify-content: flex-end
-  &.vclJustifyAround
+  &.justify-around
     justify-content: space-around
-  &.vclJustifyEvenly
+  &.justify-evenly
     justify-content: space-evenly
-  &.vclJustifyBetween
+  &.justify-between
     justify-content: space-between
 
-.vclHor
+.row
   flex-direction: row
-  &.vclReverse
+  &.reverse
     flex-direction: row-reverse
 
-.vclVer
+.col
   flex-direction: column
-  &.vclReverse 
+  &.reverse 
     flex-direction: column-reverse
 
 /* self alignment */
 
-.vclSelfStart
+.self-start
   align-self: flex-start
 
-.vclSelfCenter
+.self-center
   align-self: center
 
-.vclSelfEnd
+.self-end
   align-self: flex-end
 
-.vclSelfStretch
+.self-stretch
   align-self: stretch
  

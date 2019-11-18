@@ -66,6 +66,21 @@ function migrate05to06(filepath: string, content: string) {
                 ;
 }
 
+const VCL_CAMEL_CASE_REG_EX = /vcl([A-Z](?:[a-z]|\d|\-)*)([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?/mg;
+function migrate06to07(filepath: string, content: string) {
+  return content.replace(/vclHor/g, 'vclRow') //
+                .replace(/vclVer/g, 'vclCol')
+                .replace(VCL_CAMEL_CASE_REG_EX, (match, ...args) => {
+                  const matches: string[] = args.splice(0, 7).filter(s => !!s);
+                  const result = matches.map(s => s.toLowerCase()).join('-').trim();
+                  camelCaseTransformationMap[filepath] = { transformations: {}, warnings: [] };
+                  camelCaseTransformationMap[filepath].transformations[match] = result;
+                  return result;
+                })
+                ;
+}
+
+
 // experimental regex transformation: camel-case to kebab-case
 const camelCaseTransformationMap: {
   [key: string]: {
@@ -74,22 +89,11 @@ const camelCaseTransformationMap: {
   }
 } = {};
 
-const VCL_CAMEL_CASE_REG_EX = /vcl([A-Z](?:[a-z]|\d|\-)*)([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?/mg;
-function transformVCLCamelCase(filepath: string, content: string) {
-  const result = content.replace(VCL_CAMEL_CASE_REG_EX, (match, ...args) => {
-    const matches: string[] = args.splice(0, 7).filter(s => !!s);
-    const result = matches.map(s => s.toLowerCase()).join('-').trim();
-    camelCaseTransformationMap[filepath] = { transformations: {}, warnings: [] };
-    camelCaseTransformationMap[filepath].transformations[match] = result;
-    return result;
-  });
-  return result;
-}
 
 WORK_DIRS.forEach(p => {
   work(p, WORK_EXT_REGEX, (filepath, content) => {
     let s = content;
-    s = transformVCLCamelCase(filepath, s);
+    s = migrate06to07(filepath, s);
     return s;
   });
 });

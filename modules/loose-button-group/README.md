@@ -9,13 +9,13 @@ up the group.
 
 ## Usage
 
-It is built by using the `vclLooseButtonGroup` class.
+It is built by using the `loose-button-group` class.
 
 [basic example](/demo/example.html)
 
 ## Classes
 
-- `vclLooseButtonGroup`
+- `loose-button-group`
 
 ## Modifiers
 

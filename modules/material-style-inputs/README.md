@@ -13,11 +13,11 @@ By default the label is rendered over the input
 
 [Basic](/demo/example-basic.html)
 
-The label must float by adding the `vclMaterialFloatingLabel` if the input has any value or a placeholder
+The label must float by adding the `material-floating-label` if the input has any value or a placeholder
 
 [Floating](/demo/example-floating.html)
 
-A focused input must also have the `vclMaterialFocused` class
+A focused input must also have the `material-focused` class
 
 [Focused](/demo/example-focused.html)
 
@@ -27,13 +27,13 @@ The embedded input group needs a modifier class for correct label positioning
 
 ## Classes
 
-- `vclMaterial`
+- `material`
 
 ## Modifiers
 
-- `vclMaterialFloatingLabel`
-- `vclMaterialFocused`
-- `vclMaterialInputGroupEmbPrepItem`
+- `material-floating-label`
+- `material-focused`
+- `material-input-group-emb-prep-item`
 
 ## Demo
 

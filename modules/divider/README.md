@@ -10,7 +10,7 @@ This label is typically an icogram but also other components such as
 a button may be used. It's also possible to have multiple labels.
 
 The divider can also be used in combination with an `h[1-6]` element
-with the `vclDividerHeading` class.
+with the `divider-heading` class.
 
 ## Usage
 
@@ -29,30 +29,30 @@ The divider can also be divide vertically.
 [vertical examples](/demo/example-vertical.html)
 
 The vertically aligned variant requires the height to be set explicitly on the
-`vclDivider` element.
+`divider` element.
 
 ## Classes
 
-- `vclDivider`
-- `vclDividerHeading`
-- `vclDividerElement`: Container class for elements of a divider like a
+- `divider`
+- `divider-heading`
+- `divider-element`: Container class for elements of a divider like a
 label.
 
 ## Modifiers
 
-### For `vclDivider`
+### For `divider`
 
-- `vclDividerHorizontal`: Required when a label is used and horizontally
+- `divider-horizontal`: Required when a label is used and horizontally
   aligned.
-- `vclDividerVertical`: Required when a label is used and vertically
+- `divider-vertical`: Required when a label is used and vertically
   aligned.
-- `vclDividerHeading`: Required when the divider is also a heading.
+- `divider-heading`: Required when the divider is also a heading.
 Disables the text-transformation to uppercase.
 
-### For `vclDividerElement`
+### For `divider-element`
 
- - `vclDividerBeginElement`: Left bound element in horizontal layout.
- - `vclDividerEndElement`: Right bound element in horizontal layout.
+ - `divider-begin-element`: Left bound element in horizontal layout.
+ - `divider-end-element`: Right bound element in horizontal layout.
 
 ## Variables
 

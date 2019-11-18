@@ -25,24 +25,24 @@ The currently visible page of the gallery can show a batch of items:
 
 ## Classes
 
-- `vclGallery`
-- `vclGalleryHeader`
-- `vclGalleryContent`
-- `vclGalleryPrevButton`
-- `vclGalleryNextButton`
-- `vclGalleryPrevPane`
-- `vclGalleryNextPane`
-- `vclGalleryImage`
-- `vclGalleryFooter`
-- `vclGalleryThumbs`
-- `vclGalleryThumbWrapper`
-- `vclGalleryThumb`
+- `gallery`
+- `gallery-header`
+- `gallery-content`
+- `gallery-prev-button`
+- `gallery-next-button`
+- `gallery-prev-pane`
+- `gallery-next-pane`
+- `gallery-image`
+- `gallery-footer`
+- `gallery-thumbs`
+- `gallery-thumb-wrapper`
+- `gallery-thumb`
 
 ## Modifiers
 
-### For `vclGalleryThumbWrapper`
+### For `gallery-thumb-wrapper`
 
-- `vclSelected`
+- `selected`
 
 ## Variables
 

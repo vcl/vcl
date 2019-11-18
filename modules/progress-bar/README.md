@@ -15,21 +15,21 @@ ongoing process whose progress cannot be determined.
 
 ## Classes
 
-- `vclProgressBar`
-- `vclProgress`
+- `progress-bar`
+- `progress`
 
 ## Modifiers
 
-### For `vclProgressBar`
+### For `progress-bar`
 
-- `vclIndeterminate`: Show an animation indicating that the progress cannot
+- `indeterminate`: Show an animation indicating that the progress cannot
   be determined.
-- `vclTransparent`: Transparent background
+- `transparent`: Transparent background
 
-### For `vclProgress`
+### For `progress`
 
-- `vclPrimary`
-- `vclSecondary`
+- `primary`
+- `secondary`
 
 ## Variables
 

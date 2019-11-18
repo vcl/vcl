@@ -1,7 +1,7 @@
 @import "@vcl/theme"
 
 
-.vclNotification
+.notification
   overflow: hidden /* required for border radius */
   border-width: 0
   border-radius: var(--notification-border-radius)
@@ -10,62 +10,62 @@
   color: var(--notification-color)
   background-color: var(--notification-bg-color)
   margin-bottom: var(--block-elem-vertical-gap)
-  & .vclNotificationIconContainer
+  & .notification-icon-container
     padding: 1em
     padding-right: 0.3em
-    & .vclNotificationIcon
+    & .notification-icon
       font-size: 2em
-  & .vclNotificationHeader
+  & .notification-header
     min-height: 2.5em
     padding: 0 0.8em
     background-color: var(--notification-hf-bg-color)
     color: var(--notification-hf-color)
-    & .vclButton
+    & .button
       color: inherit
-  & .vclNotificationContent
+  & .notification-content
     margin: 0
     padding: 0.8em
     position: relative
     word-wrap: break-word
-  & .vclNotificationFooter
+  & .notification-footer
     min-height: 2.5em
     margin-bottom: 0
     padding: 0 0.8em
 
-.vclNotification
-  &.vclSuccess
+.notification
+  &.success
     color: var(--notification-success-color)
     background-color: var(--notification-success-bg-color)
     border-color: var(--notification-success-color)
-    & .vclNotificationHeader
+    & .notification-header
       background-color: var(--notification-success-hf-bg-color)
       color: var(--notification-success-hf-color)
-    & .vclNotificationIcon
+    & .notification-icon
       color: var(--notification-success-color)
-  &.vclInfo
+  &.info
     color: var(--notification-info-color)
     background-color: var(--notification-info-bg-color)
     border-color: var(--notification-info-color)
-    & .vclNotificationHeader
+    & .notification-header
       background-color: var(--notification-info-hf-bg-color)
       color: var(--notification-info-hf-color)
-    & .vclNotificationIcon
+    & .notification-icon
       color: var(--notification-info-color)
-  &.vclWarning
+  &.warning
     color: var(--notification-warning-color)
     background-color: var(--notification-warning-bg-color)
     border-color: var(--notification-warning-color)
-    & .vclNotificationHeader
+    & .notification-header
       background-color: var(--notification-warning-hf-bg-color)
       color: var(--notification-warning-hf-color)
-    & .vclNotificationIcon
+    & .notification-icon
       color: var(--notification-warning-color)
-  &.vclError
+  &.error
     color: var(--notification-error-color)
     background-color: var(--notification-error-bg-color)
     border-color: var(--notification-error-color)
-    & .vclNotificationHeader
+    & .notification-header
       background-color: var(--notification-error-hf-bg-color)
       color: var(--notification-error-hf-color)
-    & .vclNotificationIcon
+    & .notification-icon
       color: var(--notification-error-color)

@@ -4,8 +4,8 @@ The combination of value(s) with associated unit(s) in any permutation.
 
 ## Features
 
-The `vclVUAnagram` is similar to the _icogram_ component;
-it is a wrapper for `vclValue` and `vclUnit`
+The `v-u-anagram` is similar to the _icogram_ component;
+it is a wrapper for `value` and `unit`
 which can occur in arbitrary order and count.
 The unit can also be an _icon_ component.
 The value-unit-anagram applies a small gap in form of a margin
@@ -24,9 +24,9 @@ varied font size for the value and the use of an icon as unit.
 
 ## Classes
 
-- `vclVUAnagram`
-- `vclValue`
-- `vclUnit`
+- `v-u-anagram`
+- `value`
+- `unit`
 
 ## Modifiers
 

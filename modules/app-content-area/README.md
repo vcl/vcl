@@ -22,18 +22,18 @@ A simple content area:
 
 ## Classes
 
-- `vclContentArea`
-- `vclContentAreaBgColor`: Set the background color to the same color as the content area.
+- `content-area`
+- `content-area-bg-color`: Set the background color to the same color as the content area.
 
 ## Modifiers
 
-### For `vclContentArea`
+### For `content-area`
 
-- `vclTransparent`: Make the background color transparent.
+- `transparent`: Make the background color transparent.
 
-### For `vclContentAreaBgColor`
+### For `content-area-bg-color`
 
-- `vclSecondary`: Set the background color to the secondary content
+- `secondary`: Set the background color to the secondary content
   background color.
 
 ## Variables

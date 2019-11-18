@@ -85,8 +85,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### BREAKING CHANGES
 
-* **utils:** Removed vclNoPadding and vclNoMargin. Use spaceing utils instead.
-* **utils:** Replaced vclDisplayNone with vclHide
+* **utils:** Removed no-padding and no-margin. Use spaceing utils instead.
+* **utils:** Replaced display-none with hide
 
 
 

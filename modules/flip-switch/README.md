@@ -12,14 +12,14 @@ Two states between which can be toggled.
 
 ## Classes
 
-- `vclFlipSwitch`
-- `vclFlipSwitchLabel`
-- `vclFlipSwitchTrack`
-- `vclFlipSwitchKnob`
+- `flip-switch`
+- `flip-switch-label`
+- `flip-switch-track`
+- `flip-switch-knob`
 
 ## Modifiers
 
-- `vclFlipSwitchPressed`
+- `flip-switch-pressed`
 
 ## Variables
 

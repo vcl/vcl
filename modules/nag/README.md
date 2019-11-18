@@ -9,9 +9,9 @@ This component is a specialization of the container component.
 The z-index is the highest of all VCL components to make sure it
 is shown even above a layer.
 
-It can easily made modal by using `vclLayoutFullBleed`.
+It can easily made modal by using `layout-full-bleed`.
 
-For positioning it uses helpers such as `vclLayoutFixedBottom` from
+For positioning it uses helpers such as `layout-fixed-bottom` from
 the flex-layout module.
 
 ## Usage
@@ -20,7 +20,7 @@ the flex-layout module.
 
 ## Classes
 
-- `vclNag`
+- `nag`
 
 ## Modifiers
 

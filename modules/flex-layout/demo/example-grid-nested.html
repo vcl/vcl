@@ -1,21 +1,21 @@
-<div class="vclContainer">
-  <div class="vclLayoutHorizontal vclLayoutGridRow demoGridN">
-    <div class="vclLayoutGridCell vclLayoutFlex">
-      <div class="vclLayoutHorizontal vclLayoutGridRow demoGridN">
-        <div class="vclLayoutGridCell vclLayoutFlex">
+<div class="container">
+  <div class="layout-horizontal layout-grid-row demoGridN">
+    <div class="layout-grid-cell layout-flex">
+      <div class="layout-horizontal layout-grid-row demoGridN">
+        <div class="layout-grid-cell layout-flex">
           <div>Nested container A, cell Alpha</div>
         </div>
-        <div class="vclLayoutGridCell">
+        <div class="layout-grid-cell">
           <div>Nested container A, cell Beta</div>
         </div>
       </div>
     </div>
-    <div class="vclLayoutGridCell vclLayoutFlex">
-      <div class="vclLayoutHorizontal vclLayoutGridRow demoGridN">
-        <div class="vclLayoutGridCell vclLayoutFlex">
+    <div class="layout-grid-cell layout-flex">
+      <div class="layout-horizontal layout-grid-row demoGridN">
+        <div class="layout-grid-cell layout-flex">
           <div>Nested container B, cell Alpha</div>
         </div>
-        <div class="vclLayoutGridCell">
+        <div class="layout-grid-cell">
           <div>Nested container B, cell Beta</div>
         </div>
       </div>
@@ -24,21 +24,21 @@
 </div>
 
 <style type="text/css">
-.vclContainer {
+.container {
   border: 0
 }
 
-.demoGridN > .vclLayoutGridCell > dev {
+.demoGridN > .layout-grid-cell > dev {
   background-color: rgba(147, 128, 108, 0.1);
   padding: 12px;
 }
 
-.demoGridN .demoGridN > .vclLayoutGridCell {
+.demoGridN .demoGridN > .layout-grid-cell {
   background-color: rgba(147, 128, 108, 0.1);
   padding: 12px;
 }
 
-.demoGridN > .vclLayoutGridCell > .demoGridN > .vclLayoutGridCell > div {
+.demoGridN > .layout-grid-cell > .demoGridN > .layout-grid-cell > div {
   background-color: #FFF;
   padding: 12px;
 }

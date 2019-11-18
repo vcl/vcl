@@ -1,10 +1,10 @@
 @import "@vcl/theme"
 
 
-.vclTooltip
+.tooltip
   display: inline-block
   position: absolute
-  & .vclTooltipContent
+  & .tooltip-content
     z-index: 500
     font-size: 0.98em
     border-style: solid
@@ -16,7 +16,7 @@
     box-shadow: 0px 0px 4px var(--tooltip-shadow-color)
     padding: 0.3em 0.6em
 
-.vclArrowPointer
+.arrow-pointer
   z-index: 499
   position: absolute
   background-color: var(--tooltip-bg-color)
@@ -28,26 +28,26 @@
   transform: translateX(-50%) translateY(-50%) rotate(45deg)
   pointer-events: none
 
-.vclArrowPointerBottom
-  & .vclArrowPointer
+.arrow-pointer-bottom
+  & .arrow-pointer
     left: 50%
     top: 99%
     border-width: 0 1px 1px 0
 
-.vclArrowPointerRight
-  & .vclArrowPointer
+.arrow-pointer-right
+  & .arrow-pointer
     left: 99%
     top: 50%
     border-width: 1px 1px 0 0
 
-.vclArrowPointerLeft
-  & .vclArrowPointer
+.arrow-pointer-left
+  & .arrow-pointer
     left: 1%
     top: 50%
     border-width: 0 0 1px 1px
 
-.vclArrowPointerTop
-  & .vclArrowPointer
+.arrow-pointer-top
+  & .arrow-pointer
     left: 50%
     top: 1%
     border-width: 1px 0 0 1px

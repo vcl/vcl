@@ -10,36 +10,36 @@ const TPL_HIDE = (query, suffix) =>
 `;
 
 const TPL_SPACE_CONTENT = (idx, suffix) => 
-`  .vclP-${idx}${suffix}
+`  .p-${idx}${suffix}
     padding: var(--space-${idx}) var(--space-${idx})
-  .vclPL-${idx}${suffix}
+  .pl-${idx}${suffix}
     padding-left: var(--space-${idx})
-  .vclPR-${idx}${suffix}
+  .pr-${idx}${suffix}
     padding-right: var(--space-${idx})
-  .vclPT-${idx}${suffix}
+  .pt-${idx}${suffix}
     padding-top: var(--space-${idx})
-  .vclPB-${idx}${suffix}
+  .pb-${idx}${suffix}
     padding-bottom: var(--space-${idx})
-  .vclPX-${idx}${suffix}
+  .px-${idx}${suffix}
     padding-left: var(--space-${idx})
     padding-right: var(--space-${idx})
-  .vclPY-${idx}${suffix}
+  .py-${idx}${suffix}
     padding-top: var(--space-${idx})
     padding-bottom: var(--space-${idx})
-  .vclM-${idx}${suffix}
+  .m-${idx}${suffix}
     margin: var(--space-${idx}) var(--space-${idx})
-  .vclML-${idx}${suffix}
+  .ml-${idx}${suffix}
     margin-left: var(--space-${idx})
-  .vclMR-${idx}${suffix}
+  .mr-${idx}${suffix}
     margin-right: var(--space-${idx})
-  .vclMT-${idx}${suffix}
+  .mt-${idx}${suffix}
     margin-top: var(--space-${idx})
-  .vclMB-${idx}${suffix}
+  .mb-${idx}${suffix}
     margin-bottom: var(--space-${idx})
-  .vclMX-${idx}${suffix}
+  .mx-${idx}${suffix}
     margin-left: var(--space-${idx})
     margin-right: var(--space-${idx})
-  .vclMY-${idx}${suffix}
+  .my-${idx}${suffix}
     margin-top: var(--space-${idx})
     margin-bottom: var(--space-${idx})
 `;
@@ -47,20 +47,20 @@ const TPL_SPACE_CONTENT = (idx, suffix) =>
 const TPL_SPACE = (query, suffix) => {
   let s = 
 `${query}
-  .vclM-auto${suffix}
+  .m-auto${suffix}
     margin: auto
-  .vclML-auto${suffix}
+  .ml-auto${suffix}
     margin-left: auto
-  .vclMR-auto${suffix}
+  .mr-auto${suffix}
     margin-right: auto
-  .vclMT-auto${suffix}
+  .mt-auto${suffix}
     margin-top: auto
-  .vclMB-auto${suffix}
+  .mb-auto${suffix}
     margin-bottom: auto
-  .vclMX-auto${suffix}
+  .mx-auto${suffix}
     margin-left: auto
     margin-right: auto
-  .vclMY-auto${suffix}
+  .my-auto${suffix}
     margin-top: auto
     margin-bottom: auto
 `;
@@ -71,15 +71,15 @@ const TPL_SPACE = (query, suffix) => {
 }
 
 const TPL_GUTTER = (i) => 
-`.vclGutterX-${i}
+`.gutterx-${i}
   margin-left: -var(--space-${i})
   & > *
     margin-left: var(--space-${i})
-.vclGutterY-${i}
+.guttery-${i}
   margin-top: -var(--space-${i})
   & > *
     margin-top: var(--space-${i})
-.vclGutter-${i}
+.gutter-${i}
   margin-left: -var(--space-${i})
   margin-top: -var(--space-${i})
   & > *

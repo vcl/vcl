@@ -34,15 +34,15 @@ The hint may be used to assist the user with his input while the field is filled
 
 ## Classes
 
-- `vclFormControlLabel`: The label
-- `vclFormControlSubLabel`: Additional, less prominent label
-- `vclRequiredIndicator`: Indicator for required fields, usually a single character
-- `vclFormControlHint`: Assisting hint usually shown while field is filled in
+- `form-control-label`: The label
+- `form-control-sub-label`: Additional, less prominent label
+- `required-indicator`: Indicator for required fields, usually a single character
+- `form-control-hint`: Assisting hint usually shown while field is filled in
 
 ## Modifiers
 
-- `vclFormControlLabelWrapping`: To be used if the label encloses the control.
-- `vclDisabled`: Disabled indication that label can be clicked.
+- `form-control-label-wrapping`: To be used if the label encloses the control.
+- `disabled`: Disabled indication that label can be clicked.
 
 ## Variables
 

@@ -9,7 +9,7 @@ viewport.
 
 ## Usage
 
-The container uses the class `vclOverflowHidden` to cut the ribbon.
+The container uses the class `overflow-hidden` to cut the ribbon.
 
 [positions example](/demo/example-corner-positions.html)
 
@@ -19,16 +19,16 @@ A ribbon can also be a link and contain an icogram.
 
 ## Classes
 
-- `vclCornerRibbon`
+- `corner-ribbon`
 
 ## Modifiers
 
-- `vclSticky`: stick to the viewport.
-- `vclShadow`: show a shadow.
-- `vclTopLeft`
-- `vclTopRight`
-- `vclBottomLeft`
-- `vclBottomRight`
+- `sticky`: stick to the viewport.
+- `shadow`: show a shadow.
+- `top-left`
+- `top-right`
+- `bottom-left`
+- `bottom-right`
 
 ## Variables
 

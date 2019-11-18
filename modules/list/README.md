@@ -29,7 +29,7 @@ The icogram component is used to create the icon/ label pairs.
 
 [icons example](/demo/example-icons.html)
 
-The `vclListHorizontal` modifier makes the list items align horizontally.
+The `list-horizontal` modifier makes the list items align horizontally.
 
 [horizontal example](/demo/example-horizontal.html)
 
@@ -37,15 +37,15 @@ Generally, list items can also be anchor tags to form a list of links.
 
 ## Classes
 
-- `vclList`
-- `vclListItem`
-- `vclListSeparator`
-- `vclListGroupHeader`
+- `list`
+- `list-item`
+- `list-separator`
+- `list-group-header`
 
 ## Modifiers
 
-- `vclListHorizontal`: to align the list items horizontally.
-- `vclListCustomBullets`: if custom icons for bullets shall be used.
+- `list-horizontal`: to align the list items horizontally.
+- `list-custom-bullets`: if custom icons for bullets shall be used.
 
 ## Variables
 

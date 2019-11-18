@@ -27,20 +27,20 @@ is visually highlighted.
 
 ## Classes
 
-- `vclSlider`
-- `vclSliderRail`
-- `vclSliderKnobContainer`
-- `vclSliderKnob`
-- `vclSliderScale`
-- `vclSliderScalePointMark`
-- `vclSliderScalePointLabel`
+- `slider`
+- `slider-rail`
+- `slider-knob-container`
+- `slider-knob`
+- `slider-scale`
+- `slider-scale-point-mark`
+- `slider-scale-point-label`
 
 ## Modifiers
 
 Contextual state:
 
-- `vclFocused`
-- `vclDisabled`
+- `focused`
+- `disabled`
 
 ## Variables
 

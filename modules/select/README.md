@@ -14,12 +14,12 @@ opens when the input is focused.
 The select is a specialization of the _embedded input group_
 (which is itself made from an input and a button).
 The basic version allows only to select values. Note that the
-input is using the `readonly` property and the `vclReadonly`
+input is using the `readonly` property and the `readonly`
 class.
 
 [basic example](/demo/example-basic.html)
 
-With the `vclSelectEditable` modifier, the input also allows write access.
+With the `select-editable` modifier, the input also allows write access.
 This is useful to add new entries or allowing the input of a
 phrase for filtering the selectable items.
 
@@ -27,11 +27,11 @@ phrase for filtering the selectable items.
 
 ## Classes
 
-- `vclSelect`
+- `select`
 
 ## Modifiers
 
-- `vclSelectEditable`: Make the input writable for allow for free text input.
+- `select-editable`: Make the input writable for allow for free text input.
 
 ## Variables
 

@@ -31,17 +31,17 @@ Using layout classes, the items can be justified.
 
 [toggle-group-justified example](/demo/example-toggle-group-justified.html)
 
-A vertical group can be built using the `vclVertical` modifier.
+A vertical group can be built using the `vertical` modifier.
 
 [toggle-group-justified example](/demo/example-vertical-group.html)
 
 ## Classes
 
-- `vclButtonGroup`
+- `button-group`
 
 ## Modifiers
 
-- `vclVertical`
+- `vertical`
 
 ## Variables
 

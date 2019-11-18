@@ -22,14 +22,14 @@ A selected and highlighted state is supported.
 
 ## Classes
 
-- `vclToken`
-- `vclTokenContainer`: Container for tokens to get proper paddings.
-- `vclTokenLabel`
+- `token`
+- `token-container`: Container for tokens to get proper paddings.
+- `token-label`
 
 ## Modifiers
 
-- `vclSelected`
-- `vclHighlighted`
+- `selected`
+- `highlighted`
 
 ## Variables
 

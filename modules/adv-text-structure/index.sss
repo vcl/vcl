@@ -3,7 +3,7 @@
 
 /* Chapter level header */
 
-.vclMasterHeader
+.master-header
   text-align: center
   line-height: 1
   margin: 0
@@ -28,7 +28,7 @@
 
 /* Article header */
 
-.vclArticleHeader
+.article-header
   border-bottom-color: var(--article-header-border-color)
   overflow: hidden /* Hide underline if floated elements are present */
   margin-bottom: 0
@@ -38,7 +38,7 @@
   border-bottom-style: solid
   margin-top: 1.2em
   margin-bottom: 1.2em
-  & .vclArticleSubHeader /* small sub header / tagline */
+  & .article-sub-header /* small sub header / tagline */
     color: var(--article-header-tagline-color)
     font-weight: 500
     margin-left: 0.4em
@@ -48,17 +48,17 @@
 
 /* Article */
 
-.vclArticle
+.article
   border: 0
   margin-bottom: var(--block-elem-vertical-gap)
 
 /* Automatic numbering of sectionized content */
 
-.vclSectAutoNumbering,
-.vclSectAutoNumberingReset
+.sect-auto-numbering,
+.sect-auto-numbering-reset
   counter-reset: sectCounterH1
 
-.vclSectAutoNumbering
+.sect-auto-numbering
   & h1
     counter-increment: sectCounterH1
     counter-reset: sectCounterH2

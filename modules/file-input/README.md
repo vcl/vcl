@@ -25,7 +25,7 @@ the default height is higher to serve as a proper drop target.
 ### Validation
 
 The validation state of an file input can be visualized by the standard modifiers
-`vclError`, `vclWarning` and `vclSuccess`.
+`error`, `warning` and `success`.
 
 [validation-state example](/demo/example-validation-state.html)
 
@@ -43,17 +43,17 @@ The validation state of an file input can be visualized by the standard modifier
 
 ## Classes
 
-- `vclFileInput`
+- `file-input`
 
 ## Modifiers
 
-- `vclFocused`
-- `vclDisabled`
-- `vclError`
-- `vclWarning`
-- `vclSuccess`
-- `vclDragndrop`: When the input is hovered with a pointer dragging a file(s).
-- `vclBusy`: When an upload is in progress.
+- `focused`
+- `disabled`
+- `error`
+- `warning`
+- `success`
+- `dragndrop`: When the input is hovered with a pointer dragging a file(s).
+- `busy`: When an upload is in progress.
 
 ## Variables
 

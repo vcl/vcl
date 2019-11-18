@@ -13,13 +13,13 @@ It can also be combined with tabs as content area for the selected tab.
 
 ## Classes
 
-- `vclContainer`
+- `container`
 
 ## Modifiers
 
-- `vclTransparent`
-- `vclP-0`: From the utils module.
-- `vclNoBorder`: From the utils module.
+- `transparent`
+- `p-0`: From the utils module.
+- `no-border`: From the utils module.
 
 ## Variables
 

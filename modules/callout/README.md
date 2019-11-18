@@ -10,15 +10,15 @@ Unobtrusive hints usually found in documentations or factual books.
 
 ## Classes
 
-- `vclCallout`
+- `callout`
 
 ## Modifiers
 
 Semantic coloring:
 
-- `vclInfo`
-- `vclWarning`
-- `vclDanger`
+- `info`
+- `warning`
+- `danger`
 
 ## Variables
 

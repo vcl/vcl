@@ -9,47 +9,47 @@ const FLEX_CELLS = 12;
 const FLEX_CELLS_ARRAY = Array.from(new Array(FLEX_CELLS)).map((_, i) => i + 1);
 
 const TPL_FLEX_ROOT = (suffix) => 
-`  .vclFlex${suffix}
-    flex: 1 1 0
-  .vclFlexAuto${suffix}
+`  .flex${suffix}
+    flex: 1 1 0px
+  .flex-auto${suffix}
     flex: 0 0 auto
 `;
 
 const TPL_FLEX_ROOT_CELL = (cell, suffix, per) => 
-`  ${`.vclFlex-${cell}${suffix}`}
+`  ${`.flex-${cell}${suffix}`}
     flex: 0 0 ${per}%
 `;
 
 const TPL_FLEX_CNT = (cls, suffix, prop) => 
 `  .${cls}
-    & > .vclFlex${suffix}
+    & > .flex${suffix}
       max-${prop}: 100%
-    & > .vclFlexAuto${suffix}
+    & > .flex-auto${suffix}
       ${prop}: auto
       max-${prop}: 100%
 `;
 
 
 const TPL_FLEX_CELL = (cell, suffix, per, prop) => 
-`    & ${`.vclFlex-${cell}${suffix}`}
+`    & ${`.flex-${cell}${suffix}`}
       max-${prop}: ${per}%
 `;
 
 const TPL_FLEX_OFFSET = (cell, suffix, per) => 
-`  ${`.vclOffset-${cell}${suffix}`}
+`  ${`.offset-${cell}${suffix}`}
     margin-left: ${per}%
 `
 
 const TPL_FLEX_GUTTER = (i) => 
-`.vclGridGutterX-${i}
+`.grid-gutterx-${i}
   margin-left: -var(--space-${i})
   & > *
     padding-left: var(--space-${i})
-.vclGridGutterY-${i}
+.grid-guttery-${i}
   margin-top: -var(--space-${i})
   & > *
     padding-top: var(--space-${i})
-.vclGridGutter-${i}
+.grid-gutter-${i}
   margin-left: -var(--space-${i})
   margin-top: -var(--space-${i})
   & > *
@@ -67,7 +67,7 @@ const TPL_FLEX = (suffix) => {
     return s;
   }).join('');
 
-  result += TPL_FLEX_CNT('vclHor', suffix, 'width');
+  result += TPL_FLEX_CNT('row', suffix, 'width');
 
   // Skip breakpoint aware classes for vertical flexes
   result += FLEX_CELLS_ARRAY.map(cell => {
@@ -77,7 +77,7 @@ const TPL_FLEX = (suffix) => {
   }).join('');
 
   if (suffix === '') {
-    result += TPL_FLEX_CNT('vclVer', suffix, 'height');
+    result += TPL_FLEX_CNT('col', suffix, 'height');
     // Skip breakpoint aware classes for vertical flexes
     result += FLEX_CELLS_ARRAY.map(cell => {
       const per = Math.round(Math.floor((cell / FLEX_CELLS) * 10000))  / 100

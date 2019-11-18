@@ -33,7 +33,7 @@ Utility classes for:
 
 ### Gutter
 
-*note*: Use `vclOverflowAuto` to avoid leaking background colors
+*note*: Use `overflow-auto` to avoid leaking background colors
 
 [gutter example](/demo/example-gutter.html)
 
@@ -53,77 +53,77 @@ Utility classes for:
 
 ### Float Helpers
 
-- `vclFloatLeft`
-- `vclFloatRight`
-- `vclFloatNone`
-- `vclClearFix`
-- `vclClear`
+- `float-left`
+- `float-right`
+- `float-none`
+- `clear-fix`
+- `clear`
 
 ### Block Element alignment
 
-- `vclCenterBlock`
+- `center-block`
 
 ### Border
 
-- `vclNoBorder`
+- `no-border`
 
 ### Sizing
 
 Percentage based spans which can be used in many cases to set the
 width and height of a container.
 
-- `vclW-5p`
-- `vclW-10p`
-- `vclW-15p`
-- `vclW-20p`
-- `vclW-25p`
-- `vclW-30p`
-- `vclW-33p`
-- `vclW-35p`
-- `vclW-40p`
-- `vclW-45p`
-- `vclW-50p`
-- `vclW-55p`
-- `vclW-60p`
-- `vclW-65p`
-- `vclW-70p`
-- `vclW-75p`
-- `vclW-80p`
-- `vclW-85p`
-- `vclW-90p`
-- `vclW-95p`
-- `vclW-100p`
-- `vclW-auto`
-- `vclW-gca`: Golden cut a
-- `vclW-gcb`: Golden cut b
-- `vclMaxW-100p`: max-width: 100%
-- `vclH-5p`
-- `vclH-10p`
-- `vclH-15p`
-- `vclH-20p`
-- `vclH-25p`
-- `vclH-30p`
-- `vclH-33p`
-- `vclH-35p`
-- `vclH-40p`
-- `vclH-45p`
-- `vclH-50p`
-- `vclH-55p`
-- `vclH-60p`
-- `vclH-65p`
-- `vclH-70p`
-- `vclH-75p`
-- `vclH-80p`
-- `vclH-85p`
-- `vclH-90p`
-- `vclH-95p`
-- `vclH-100p`
-- `vclH-auto`
-- `vclMaxH-100p`: max-height: 100%
+- `w-5p`
+- `w-10p`
+- `w-15p`
+- `w-20p`
+- `w-25p`
+- `w-30p`
+- `w-33p`
+- `w-35p`
+- `w-40p`
+- `w-45p`
+- `w-50p`
+- `w-55p`
+- `w-60p`
+- `w-65p`
+- `w-70p`
+- `w-75p`
+- `w-80p`
+- `w-85p`
+- `w-90p`
+- `w-95p`
+- `w-100p`
+- `w-auto`
+- `w-gca`: Golden cut a
+- `w-gcb`: Golden cut b
+- `max-w-100p`: max-width: 100%
+- `h-5p`
+- `h-10p`
+- `h-15p`
+- `h-20p`
+- `h-25p`
+- `h-30p`
+- `h-33p`
+- `h-35p`
+- `h-40p`
+- `h-45p`
+- `h-50p`
+- `h-55p`
+- `h-60p`
+- `h-65p`
+- `h-70p`
+- `h-75p`
+- `h-80p`
+- `h-85p`
+- `h-90p`
+- `h-95p`
+- `h-100p`
+- `h-auto`
+- `max-h-100p`: max-height: 100%
 
 ### Gutter
 
-- `vclGutter[X|Y]-[0|1|2|3|4|5]
+- `gutter[X|Y]-[0|1|2|3|4|5]
 
 - direction (optional. All if not provided)
   - values:
@@ -133,7 +133,7 @@ width and height of a container.
 
 Examples:
 
-vclGutter-3, vclGutterX-1, vclGutterY-5
+gutter-3, gutter-x-1, gutter-y-5
 
 ### Spacing
 
@@ -151,47 +151,47 @@ vclGutter-3, vclGutterX-1, vclGutterY-5
 
 Examples:
 
-vclP-3, vclPX-1, vclM-3, vclMY-auto
+p-3, p-x-1, m-3, m-y-auto
 
 
 ### Alignment of inline Elements
 
-- `vclAlignLeft`
-- `vclAlignRight`
-- `vclAlignCentered`
-- `vclAlignJustified`
+- `align-left`
+- `align-right`
+- `align-centered`
+- `align-justified`
 
 ### Text and Word Wrapping
 
-- `vclBreakWords`
-- `vclNoWrap`
-- `vclOverflowEllipsis`
+- `break-words`
+- `no-wrap`
+- `overflow-ellipsis`
 
 ### Visibility control
 
-- `vclOverflowHidden`
-- `vclOverflowAuto`
-- `vclVisibilityHidden` 
-- `vclHide`
-- `vclHide-bp`: where bp is a breakpoint
-- `vclHide-from-bp`: where bp is a breakpoint
-- `vclHide-to-bp` where bp is a breakpoint
+- `overflow-hidden`
+- `overflow-auto`
+- `visibility-hidden` 
+- `hide`
+- `hide-bp`: where bp is a breakpoint
+- `hide-from-bp`: where bp is a breakpoint
+- `hide-to-bp` where bp is a breakpoint
 
 ### Scrollable Containers
 
-- `vclScrollable`
+- `scrollable`
 
 Modifiers:
 
-- `vclX`: scrollable only along x-axis
-- `vclXOnHover`: scrollable only along x-axis when hovered
-- `vclY`: scrollable only along y-axis
-- `vclYOnHover`: scrollable only along y-axis when hovered
+- `x`: scrollable only along x-axis
+- `x-on-hover`: scrollable only along x-axis when hovered
+- `y`: scrollable only along y-axis
+- `y-on-hover`: scrollable only along y-axis when hovered
 
 ### Text Selection by Users
 
-- `vclUserSelectText`
-- `vclUserSelectNone`
+- `user-select-text`
+- `user-select-none`
 
 ## Demo
 
