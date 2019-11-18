@@ -4,8 +4,8 @@
 const path = require('path');
 const fs = require('fs');
 const debug = require('debug')('vcl-docgen:cli');
-const vcl = require('@vcl/preprocessor');
 const marked = require('marked');
+const vcl = require('../tools/preprocessor');
 
 const yargs = require('yargs')
   .help('help')
