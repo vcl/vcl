@@ -1,7 +1,7 @@
 {
   "name": "@vcl/bw-theme",
   "description": "The VCL BW theme",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"
@@ -20,10 +20,10 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@vcl/theme": "^0.6.2"
+    "@vcl/theme": "^0.6.3"
   },
   "devDependencies": {
-    "@vcl/preprocessor": "^0.6.2"
+    "@vcl/preprocessor": "^0.6.3"
   },
   "keywords": [
     "css",
