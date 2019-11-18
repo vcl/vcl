@@ -1,10 +1,16 @@
 import { readdirSync, lstatSync, readFileSync, writeFileSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
 
-const IGNORE_DIRS = ['node_modules'];
+const root =  (...folder: string[]) => resolve(process.cwd(), ...folder);
+
+const IGNORE_DIRS = [
+  'node_modules'
+];
 // Folders to migrate
-const WORK_DIRS = ['../src', '../projects'];
-// File extenstion to migrate
+const WORK_DIRS = [
+  root('./modules'),
+];
+// File extensions to migrate
 const WORK_EXT_REGEX = /\.(sss|html|md|ts)$/;
 
 function work(root: string, filter: RegExp, callback: (filepath: string, value: string) => string){
@@ -31,16 +37,8 @@ function work(root: string, filter: RegExp, callback: (filepath: string, value: 
   }
 }
 
-WORK_DIRS.forEach(p => {
-  work(p, WORK_EXT_REGEX, (filepath, content) => {
-    let s = content;
-    s = migrate06(filepath, s);
-    return s;
-  });
-});
 
-
-function migrate06(filepath: string, content: string) {
+function migrate05to06(filepath: string, content: string) {
   return content.replace(/vclLabel/g, 'vclBadge')
                 .replace(/vclBadge/g, 'vclBadge vclRounded') // Warning. Not repeatable
                 .replace(/vclDisplayNone/g, 'vclHide')
@@ -76,21 +74,31 @@ const camelCaseTransformationMap: {
   }
 } = {};
 
-const VCL_CAMEL_CASE_REG_EX = /vcl([A-Z](?:[a-z]|\d|\-)*)([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?/g;
+const VCL_CAMEL_CASE_REG_EX = /vcl([A-Z](?:[a-z]|\d|\-)*)([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?([A-Z](?:[a-z]|\d|\-)*)?/mg;
 function transformVCLCamelCase(filepath: string, content: string) {
-  return content.replace(VCL_CAMEL_CASE_REG_EX, (match, ...args) => {
+  const result = content.replace(VCL_CAMEL_CASE_REG_EX, (match, ...args) => {
     const matches: string[] = args.splice(0, 7).filter(s => !!s);
     const result = matches.map(s => s.toLowerCase()).join('-').trim();
     camelCaseTransformationMap[filepath] = { transformations: {}, warnings: [] };
     camelCaseTransformationMap[filepath].transformations[match] = result;
     return result;
   });
+  return result;
 }
+
+WORK_DIRS.forEach(p => {
+  work(p, WORK_EXT_REGEX, (filepath, content) => {
+    let s = content;
+    s = transformVCLCamelCase(filepath, s);
+    return s;
+  });
+});
+
 
 Object.keys(camelCaseTransformationMap).forEach(key => {
   console.log(`# ${key}`);
   Object.keys(camelCaseTransformationMap[key]).forEach(key2 => {
-    console.log(`${key2.padEnd(35)} =>     ${camelCaseTransformationMap[key][key2]}`);
+    console.log(`${key2.padEnd(35)} =>     ${camelCaseTransformationMap[key].transformations[key2]}`);
   });
   console.log(``);
 });
