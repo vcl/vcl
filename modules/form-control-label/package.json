@@ -1,7 +1,7 @@
 {
   "name": "@vcl/form-control-label",
   "description": "Labels to describe form controls",
-  "version": "0.7.0-alpha.0",
+  "version": "0.7.0-alpha.1",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
@@ -24,14 +24,14 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.7.0-alpha.0",
-    "@vcl/preprocessor": "^0.7.0-alpha.0",
+    "@vcl/build-demo": "^0.7.0-alpha.1",
+    "@vcl/preprocessor": "^0.7.0-alpha.1",
     "browser-sync": "^2.26.3",
     "npm-run-all": "^4.1.5"
   },
   "dependencies": {
-    "@vcl/form": "^0.7.0-alpha.0",
-    "@vcl/theme": "^0.7.0-alpha.0"
+    "@vcl/form": "^0.7.0-alpha.1",
+    "@vcl/theme": "^0.7.0-alpha.1"
   },
   "keywords": [
     "css",
