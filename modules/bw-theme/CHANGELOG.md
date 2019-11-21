@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0-alpha.0](https://github.com/vcl/vcl/compare/v0.6.2...v0.7.0-alpha.0) (2019-11-21)
+
+**Note:** Version bump only for package @vcl/bw-theme
+
+
+
+
+
 ## [0.6.3](https://github.com/vcl/vcl/compare/v0.6.2...v0.6.3) (2019-11-18)
 
 **Note:** Version bump only for package @vcl/bw-theme

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0-alpha.0](https://github.com/vcl/vcl/compare/v0.6.2...v0.7.0-alpha.0) (2019-11-21)
+
+
+### Code Refactoring
+
+* migrate vcl to kebab-case ([6f39268](https://github.com/vcl/vcl/commit/6f39268fe95b3f48d44da527e7e283e97eca04cd))
+
+
+### BREAKING CHANGES
+
+* All class names are now in kebab-case without any (vcl)prefix by default.
+
+
+
+
+
 ## [0.6.3](https://github.com/vcl/vcl/compare/v0.6.2...v0.6.3) (2019-11-18)
 
 **Note:** Version bump only for package @vcl/badge
