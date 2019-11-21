@@ -76,7 +76,7 @@ function migrate06to07(filepath: string, content: string) {
                   camelCaseTransformationMap[filepath] = { transformations: {}, warnings: [] };
                   camelCaseTransformationMap[filepath].transformations[match] = result;
                   return result;
-                })
+                }).replace(/vu-anagram/g, 'vu-anagram')
                 ;
 }
 

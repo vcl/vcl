@@ -4,7 +4,7 @@ The combination of value(s) with associated unit(s) in any permutation.
 
 ## Features
 
-The `v-u-anagram` is similar to the _icogram_ component;
+The `vu-anagram` is similar to the _icogram_ component;
 it is a wrapper for `value` and `unit`
 which can occur in arbitrary order and count.
 The unit can also be an _icon_ component.
@@ -24,7 +24,7 @@ varied font size for the value and the use of an icon as unit.
 
 ## Classes
 
-- `v-u-anagram`
+- `vu-anagram`
 - `value`
 - `unit`
 
