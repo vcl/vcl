@@ -7,6 +7,7 @@
     "changed-modules": "lerna changed",
     "tag-modules": "lerna version --no-push --conventional-commits",
     "publish-modules": "lerna publish from-git",
+    "publish-modules-next": "lerna publish from-git --dist-tag next",
     "test": "./scripts/test.sh"
   },
   "author": {
