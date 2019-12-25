@@ -36,7 +36,7 @@ including demos of your modules.
 
 ### Dependencies
 
-Use the `@import ...` syntax on top of ypur file if your module has dependencies to another module.
+Use the `@import ...` syntax on top of your file if your module has dependencies to another module.
 Most modules need to import the `@vcl/theme`
 
 ```sss
@@ -81,7 +81,7 @@ Don’ts:
 [CSS4 variables](https://drafts.csswg.org/css-variables/) form the interface
 of modules. The following naming rules should be applied:
 
-    --component-name-[sub-element-name]-aspect[--variant]
+  --component-name-[sub-element-name]-aspect[--variant]
 
 The _aspect_ is the actual value influenced by this variable like
 _bg-color_, _font-size_ etc.
@@ -90,7 +90,7 @@ like a _secondary_ or _danger_.
 
 Example:
 
-    --tab-nav-bg-color--uni
+  --tab-nav-bg-color--uni
 
 ## Usable CSS Features
 
@@ -165,7 +165,7 @@ level variant. The primary variant always goes without modifier.
 - Have at least one example with proper
   [WAI-ARIA](http://www.w3.org/WAI/intro/aria) plumbing.
 - You can neglect semantic HTML due to that.
-- Create a `demo.css` in the module root for additional styling of the demo. 
+- Create a `demo.css` in the module root for additional styling of the demo.
   Do not forget to import the module style in `index.sss` or `index.css`.
 
 ```sss
@@ -176,15 +176,14 @@ level variant. The primary variant always goes without modifier.
   color: red
 ```
 
-
 # Development
 
 Clone the VCL's monorepo, enter the folder of the module you want to work on
 and use the following npm scripts:
 
-* `npm start` - starts a web server and opens the examples
+- `npm start` - starts a web server and opens the examples
   (browsersync enabled).
-* `npm test` - tries to pre-process the sources.
+- `npm test` - tries to pre-process the sources.
 
 # Theming
 
@@ -211,7 +210,6 @@ In general, at least the following should be supported and tested:
 
 A similar and partly compatible approach is pursued by:
 
-- [atomify-css](https://github.com/atomify/atomify-css) which is abandoned,
 - [SUITCSS](https://github.com/suitcss) which is outdated.
 
 # Contributing
