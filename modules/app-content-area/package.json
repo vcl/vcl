@@ -1,7 +1,7 @@
 {
   "name": "@vcl/app-content-area",
   "description": "The area which houses the main content",
-  "version": "0.7.0-alpha.0",
+  "version": "0.7.0-alpha.3",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",

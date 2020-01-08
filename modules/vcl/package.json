@@ -1,7 +1,7 @@
 {
   "name": "@vcl/vcl",
   "description": "The whole VCL in one package",
-  "version": "0.7.0-alpha.0",
+  "version": "0.7.0-alpha.3",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"

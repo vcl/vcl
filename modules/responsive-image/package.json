@@ -1,7 +1,7 @@
 {
   "name": "@vcl/responsive-image",
   "description": "Let images fill up the available horizontal space of its container if it is at least as wide",
-  "version": "0.7.0-alpha.0",
+  "version": "0.7.0-alpha.3",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",

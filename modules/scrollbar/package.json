@@ -1,7 +1,7 @@
 {
   "name": "@vcl/scrollbar",
   "description": "Styling of native browser scrollbars",
-  "version": "0.7.0-alpha.0",
+  "version": "0.7.0-alpha.3",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",

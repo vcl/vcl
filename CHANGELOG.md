@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0-alpha.3](https://github.com/vcl/vcl/compare/v0.7.0-alpha.0...v0.7.0-alpha.3) (2020-01-08)
+
+
+### Bug Fixes
+
+* **utils:** fix class names ([0417665](https://github.com/vcl/vcl/commit/04176651cd054c773c2d9cdd6250c2a82e29022f))
+
+
+
+
+
 # [0.7.0-alpha.0](https://github.com/vcl/vcl/compare/v0.6.2...v0.7.0-alpha.0) (2019-11-21)
 
 
