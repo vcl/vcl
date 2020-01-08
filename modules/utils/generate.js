@@ -5,7 +5,7 @@ const { BREAKPOINTS, queryAll } = require('../breakpoints/breakpoints');
 
 const TPL_HIDE = (query, suffix) => 
 `${query}
-  .vclHide${suffix}
+  .hide${suffix}
     display: none !important
 `;
 
