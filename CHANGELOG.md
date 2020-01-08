@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0-alpha.2](https://github.com/vcl/vcl/compare/v0.7.0-alpha.1...v0.7.0-alpha.2) (2020-01-08)
+
+
+### Bug Fixes
+
+* **utils:** fix class names ([006c2f9](https://github.com/vcl/vcl/commit/006c2f96d5bdf2a899ad51f9270a3887ea013832))
+
+
+
+
+
 # [0.7.0-alpha.1](https://github.com/vcl/vcl/compare/v0.7.0-alpha.0...v0.7.0-alpha.1) (2019-11-21)
 
 **Note:** Version bump only for package vcl-monorepo

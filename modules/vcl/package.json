@@ -1,7 +1,7 @@
 {
   "name": "@vcl/vcl",
   "description": "The whole VCL in one package",
-  "version": "0.7.0-alpha.1",
+  "version": "0.7.0-alpha.2",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"
@@ -98,7 +98,7 @@
     "@vcl/toolbar": "^0.7.0-alpha.1",
     "@vcl/tooltip": "^0.7.0-alpha.1",
     "@vcl/typography": "^0.7.0-alpha.1",
-    "@vcl/utils": "^0.7.0-alpha.1",
+    "@vcl/utils": "^0.7.0-alpha.2",
     "@vcl/value-unit-anagram": "^0.7.0-alpha.1",
     "@vcl/zoom-box": "^0.7.0-alpha.1",
     "normalize.css": "8.0.1"

@@ -1,7 +1,7 @@
 {
   "name": "@vcl/utils",
   "description": "Basic utility classes",
-  "version": "0.7.0-alpha.1",
+  "version": "0.7.0-alpha.2",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
