@@ -3,6 +3,7 @@
   "description": "The VCL default theme",
   "version": "0.7.0-alpha.3",
   "main": "package.json",
+  "scss": "index.scss",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
     "browsersync": "browser-sync start --server --files \"demo\" \"build\" --index \"/build/index.html\" ",
