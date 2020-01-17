@@ -1,0 +1,69 @@
+/**
+* The VCL BW theme.
+*
+* It defines all variables required to be set by the modules included in
+* the 'core-modules' module and narrows them down to a small set
+* of variables required.
+*/
+
+@import "@vcl/theme/terms.scss";
+
+
+/* Colors
+  ====== */
+
+/* Brand Accent Colors */
+$brand-accent-darker: #000 !default;
+$brand-accent-dark: #000 !default;
+$brand-accent: #000 !default;
+$brand-accent-light: $gray-dark-1 !default;
+$brand-accent-lighter: $gray-dark-3 !default;
+
+
+
+/* BW theme variable overrides */
+
+$button-bg-color: $black !default;
+$button-bg-selected-color: $gray-dark-1 !default;
+$button-bg-hover-color: $gray-dark-1 !default;
+
+$app-viewport-bg-color: $white !default;
+$app-area-max-width: 1260px !default;
+
+$typography-link-color: $gray-dark-2 !default;
+$typography-link-color-hover: $brand-accent-darker !default;
+$typography-link-text-decoration: underline !default;
+$typography-selected-text-bg-color: $gray-light-2 !default;
+
+$navigation-item-1st-level-bg-color: transparent !default;
+$navigation-item-1st-level-color: $gray-dark-1 !default;
+$navigation-item-1st-level-hover-bg-color: $black !default;
+$navigation-item-1st-level-hover-color: $white !default;
+$navigation-item-1st-level-selected-bg-color: $black !default;
+$navigation-item-1st-level-selected-color: $white !default;
+
+$tree-nav-item-color: $gray !default;
+$tree-nav-selected-item-bg-color: $white !default;
+$tree-nav-border-color: $black !default;
+$tree-nav-selected-item-color: $black !default;
+$tree-nav-item-hover-color: $black !default;
+$tree-nav-item-hover-bg-color: $white !default;
+
+$loading-layer-cover-bg-color: rgba(255, 255, 255, 0.88) !default;
+$layer-cover-bg-color: rgba(0, 0, 0, 0.10) !default;
+
+$gallery-bg-color: $white !default;
+$gallery-border-color: $black !default;
+$gallery-header-color: $black !default;
+$gallery-footer-color: $black !default;
+$gallery-header-bg-color: $white !default;
+$gallery-footer-bg-color: $white !default;
+$gallery-selected-thumbnail-border-color: $black !default;
+$gallery-initial-buttons-opacity: 1 !default;
+
+$data-list-item-selected-color: $black !default;
+$data-list-item-bg-selected-color: #D6D6D6 !default;
+$data-list-item-bg-hover-color: #D6D6D6 !default;
+
+
+@import "@vcl/theme/index.scss";

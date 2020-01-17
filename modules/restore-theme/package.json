@@ -1,12 +1,12 @@
 {
   "name": "@vcl/restore-theme",
   "description": "The VCL Restore theme",
-  "version": "0.7.0-alpha.3",
+  "version": "1.0.0-alpha.1",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"
   },
-  "style": "index.sss",
+  "scss": "index.scss",
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",
@@ -19,11 +19,8 @@
     }
   ],
   "license": "MIT",
-  "devDependencies": {
-    "@vcl/preprocessor": "^0.7.0-alpha.1"
-  },
   "dependencies": {
-    "@vcl/theme": "^0.7.0-alpha.1"
+    "@vcl/theme": "^1.0.0-alpha.1"
   },
   "keywords": [
     "css",

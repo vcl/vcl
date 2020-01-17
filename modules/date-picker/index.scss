@@ -1,0 +1,27 @@
+@import "@vcl/theme";
+@import "@vcl/toolbar";
+@import "@vcl/button";
+@import "@vcl/calendar";
+@import "@vcl/data-grid";
+@import "@vcl/icogram";
+@import "@vcl/icon";
+
+.date-picker {
+  display: block;
+  box-sizing: border-box;
+  min-width: 18em;
+  margin: 0;
+  padding: 0;
+  border-color: $date-picker-border-color;
+  border-width: 1px;
+  border-style: solid;
+  background-color: $date-picker-bg-color;
+
+  & .toolbar .button-dim {
+    min-width: 3em;
+  }
+
+  & .calendar {
+    margin-bottom: 0;
+  }
+}

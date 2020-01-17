@@ -1,0 +1,99 @@
+@import "@vcl/theme";
+
+/* Chapter level header */
+
+.master-header {
+  text-align: center;
+  line-height: 1;
+  margin: 0;
+  margin-top: 3.3em;
+  margin-bottom: 1em;
+  margin-right: auto;
+  margin-left: auto;
+
+  & h1 {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0.8em;
+  }
+
+  & h2 {
+    font-size: 1.9em;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0.8em;
+  }
+
+  & p {
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 1;
+  }
+}
+
+/* Article header */
+
+.article-header {
+  border-bottom-color: $article-header-border-color;
+  overflow: hidden;
+  margin-bottom: 0;
+  line-height: 1.22em;
+  display: block;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+
+  & .article-sub-header {
+    color: $article-header-tagline-color;
+    font-weight: 500;
+    margin-left: 0.4em;
+    margin-bottom: 0.1em;
+    display: inline;
+    font-size: 0.65em;
+  }
+}
+
+/* Article */
+
+.article {
+  border: 0;
+  margin-bottom: $block-elem-vertical-gap;
+}
+
+/* Automatic numbering of sectionized content */
+
+.sect-auto-numbering,
+.sect-auto-numbering-reset {
+  counter-reset: sectCounterH1;
+}
+
+.sect-auto-numbering {
+  & h1 {
+    counter-increment: sectCounterH1;
+    counter-reset: sectCounterH2;
+
+    &:before {
+      content: counter(sectCounterH1) " ";
+    }
+  }
+
+  & h2 {
+    counter-increment: sectCounterH2;
+    counter-reset: sectCounterH3;
+
+    &:before {
+      content: counter(sectCounterH1) "." counter(sectCounterH2) " ";
+    }
+  }
+
+  & h3 {
+    counter-increment: sectCounterH3;
+
+    &:before {
+      content: counter(sectCounterH1) "." counter(sectCounterH2) "." counter(sectCounterH3) " ";
+      counter-reset: sectCounterH4;
+    }
+  }
+}

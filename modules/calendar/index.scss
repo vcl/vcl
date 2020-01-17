@@ -1,0 +1,109 @@
+@import "@vcl/theme";
+@import "@vcl/data-grid";
+
+.calendar {
+  background-color: $calendar-bg-color;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cal-header-label {
+  font-weight: 600;
+  font-size: 0.85em;
+  line-height: 2em;
+}
+
+.weekday-label {
+  font-size: 0.85em;
+  min-height: 2em;
+}
+
+.cal-item {
+  cursor: pointer;
+  color: $calendar-item-color;
+  background-color: $calendar-item-bg-color;
+  transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  min-height: 2.5em;
+  outline: 0;
+}
+
+.calendar.cal-input {
+  user-select: none;
+  outline: 0;
+}
+
+.calendar.cal-input .cal-item:hover,
+.calendar.cal-input .cal-item:focus {
+  color: $calendar-item-hover-color;
+  background-color: $calendar-item-hover-bg-color;
+}
+
+.cal-item.today,
+.calendar.cal-input .cal-item.today:hover,
+.calendar.cal-input .cal-item.today:focus {
+  font-weight: 500;
+  color: $calendar-item-today-color;
+}
+
+.cal-item.other-month,
+.calendar.cal-input .cal-item.other-month:hover,
+.calendar.cal-input .cal-item.other-month:focus {
+  color: $calendar-otherm-day-color;
+}
+
+.cal-item.disabled,
+.calendar.cal-input .cal-item.disabled:hover,
+.calendar.cal-input .cal-item.disabled:focus {
+  color: $calendar-disabled-item-color;
+  background-color: $calendar-disabled-item-bg-color;
+  cursor: default;
+}
+
+.cal-item.available,
+.calendar.cal-input .cal-item.available:hover,
+.calendar.cal-input .cal-item.available:focus {
+  background-color: $calendar-available-item-bg-color;
+}
+
+.cal-item.unavailable,
+.calendar.cal-input .cal-item.unavailable:hover,
+.calendar.cal-input .cal-item.unavailable:focus {
+  background-color: $calendar-unavailable-item-bg-color;
+}
+
+.cal-item.selected,
+.calendar.cal-input .cal-item.selected:hover,
+.calendar.cal-input .cal-item.selected:focus {
+  color: $calendar-selected-item-color;
+  background-color: $calendar-selected-item-bg-color;
+  font-weight: 500;
+}
+
+.cal-item.selected-alt,
+.calendar.cal-input .cal-item.selected-alt:hover,
+.calendar.cal-input .cal-item.selected-alt:focus {
+  color: $calendar-selected-item-color;
+  background-color: $calendar-selected-item-bg-color;
+  font-weight: 500;
+  border-radius: 50%;
+}
+
+.cal-item.selected-beg,
+.calendar.cal-input .cal-item.selected-beg:hover,
+.calendar.cal-input .cal-item.selected-beg:focus {
+  color: $calendar-selected-item-color;
+  background-color: $calendar-selected-item-bg-color;
+  font-weight: 500;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+
+.cal-item.selected-end,
+.calendar.cal-input .cal-item.selected-end:hover,
+.calendar.cal-input .cal-item.selected-end:focus {
+  color: $calendar-selected-item-color;
+  background-color: $calendar-selected-item-bg-color;
+  font-weight: 500;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}

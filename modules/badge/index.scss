@@ -1,0 +1,52 @@
+@import "@vcl/theme";
+
+.badge {
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+  padding-bottom: 0.2em;
+  padding-left: 0.5em;
+  font-weight: bold;
+  font-size: 80%;
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+  color: $badge-default-color;
+  background-color: $badge-default-bg-color;
+
+  &.rounded {
+    border-radius: 2.5em;
+  }
+
+  &:empty {
+    display: none;
+  }
+}
+
+.badge.primary {
+  color: $badge-primary-color;
+  background-color: $badge-primary-bg-color;
+}
+
+.badge.success {
+  color: $badge-success-color;
+  background-color: $badge-success-bg-color;
+}
+
+.badge.info {
+  color: $badge-info-color;
+  background-color: $badge-info-bg-color;
+}
+
+.badge.warning {
+  color: $badge-warning-color;
+  background-color: $badge-warning-bg-color;
+}
+
+.badge.danger,
+.badge.error,
+.badge.important {
+  color: $badge-danger-color;
+  background-color: $badge-danger-bg-color;
+}

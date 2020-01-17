@@ -3,7 +3,7 @@
     "modules/*",
     "tools/*"
   ],
-  "version": "0.7.0-alpha.3",
+  "version": "1.0.0-alpha.1",
   "command": {
     "publish": {
       "conventionalCommits": true

@@ -1,0 +1,40 @@
+@import "@vcl/theme";
+@import "@vcl/icogram";
+
+.rating {
+  height: $input-height;
+  line-height: $input-line-height;
+  box-sizing: border-box;
+  font-family: inherit;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: baseline;
+  vertical-align: middle;
+  margin-bottom: $form-control-vertical-gap;
+
+  &.disabled {
+    & .rating-item:hover {
+      color: $rating-item-disabled-color;
+      cursor: initial;
+    }
+  }
+
+  & .rating-item {
+    color: $rating-item-color;
+    padding: 0.4em 0.3em;
+    font-size: 1.4em;
+  }
+
+  & .rating-item:hover {
+    cursor: pointer;
+  }
+
+  & .rating-item:focus {
+    color: $rating-item-highlighted-color;
+    outline: none;
+  }
+
+  & .rating-item.rating-item-highlighted {
+    color: $rating-item-highlighted-color;
+  }
+}

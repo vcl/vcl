@@ -1,0 +1,23 @@
+@import "@vcl/theme";
+
+.application-header {
+  box-sizing: border-box;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  color: $app-header-color;
+  background-color: $app-header-bg-color;
+
+  & .logo {
+    margin-left: 0.5em;
+    width: $app-header-logo-max-width;
+  }
+
+  & .app-name {
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+}

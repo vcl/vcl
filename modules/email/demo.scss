@@ -1,0 +1,29 @@
+@import "@vcl/list";
+@import "@vcl/print";
+@import "@vcl/size-modulation";
+@import "@vcl/sum-table";
+@import "@vcl/table";
+@import "@vcl/typography";
+@import "@vcl/utils";
+@import "./index.scss";
+
+@media only screen and (max-width: 640px) {
+  table,
+  .table {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .items {
+    width: 150% !important;
+  }
+
+  .footer {
+    & > div {
+      display: block;
+      float: none;
+      margin-top: 1.4em;
+      width: 100% !important;
+    }
+  }
+}

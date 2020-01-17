@@ -13,11 +13,11 @@ export default class DocContent extends PolymerElement {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 
-    <div class$="docPart vclHor {{getContentClass(hasContent)}}">
-      <div class="vclFlex">
-        <h2 id$="docpart-{{content.name}}" class="vclArticleHeader">
+    <div class$="docPart row {{getContentClass(hasContent)}}">
+      <div class="flex">
+        <h2 id$="docpart-{{content.name}}" class="article-header">
             [[content.title]]
-            <small class="vclArticleSubHeader">[[content.name]]</small>
+            <small class="article-sub-header">[[content.name]]</small>
         </h2>
         <div id="readme" name="readme" class="docText"></div>
 
@@ -63,15 +63,15 @@ export default class DocContent extends PolymerElement {
     });
     const lists = this.$.readme.querySelectorAll('ul')
     lists.forEach(listElem => {
-      listElem.classList.add('vclList')
+      listElem.classList.add('list')
       const listItems = listElem.querySelectorAll('li')
       listItems.forEach(listItem => {
-        listItem.classList.add('vclListItem')
+        listItem.classList.add('list-item')
       });
     });
     const tables = this.$.readme.querySelectorAll('table')
     tables.forEach(table => {
-      table.classList.add('vclTable')
+      table.classList.add('table')
     });
   }
 
@@ -81,11 +81,11 @@ export default class DocContent extends PolymerElement {
   }
 
   getDefTextClass(hasContent) {
-    return hasContent ? 'vclHide' : '';
+    return hasContent ? 'hide' : '';
   }
 
   getContentClass(hasContent) {
-    return !hasContent ? 'vclHide' : '';
+    return !hasContent ? 'hide' : '';
   }
 }
 

@@ -1,0 +1,41 @@
+@import "@vcl/theme";
+
+.toolbar {
+  user-select: none;
+  box-sizing: border-box;
+  background-color: $toolbar-l1-bg-color;
+
+  &.secondary {
+    background-color: $toolbar-l2-bg-color;
+  }
+
+  &.transparent {
+    background-color: transparent;
+  }
+
+  & .input-group,
+  & .input-group-emb,
+  & .navigation,
+  & .loose-button-group {
+    margin-bottom: 0;
+  }
+
+  & .logo {
+    margin-left: 0.5em;
+  }
+
+  & .toolbar-title {
+    display: inline-block;
+    margin: 0;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+
+  & h1.toolbar-title {
+    font-size: 1.1em;
+  }
+
+  & h2.toolbar-title {
+    font-size: 1.05em;
+  }
+}

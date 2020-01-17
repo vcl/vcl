@@ -1,0 +1,25 @@
+@import "@vcl/theme";
+
+.zoom-box {
+  padding: 0;
+  width: 20em;
+  height: 20em;
+  position: absolute;
+  z-index: 199;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.zoom-box-magnifier {
+  min-width: 5em;
+  min-height: 5em;
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  z-index: 180;
+  cursor: pointer;
+  border-collapse: collapse;
+}

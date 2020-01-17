@@ -1,0 +1,15 @@
+@import "@vcl/theme";
+@import "@vcl/button";
+@import "@vcl/dropdown";
+@import "@vcl/icogram";
+@import "@vcl/input";
+@import "@vcl/embedded-input-button";
+
+.select {
+  cursor: pointer;
+
+  & .input {
+    background-color: $input-bg-color;
+    cursor: pointer;
+  }
+}

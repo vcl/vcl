@@ -1,0 +1,17 @@
+@import "@vcl/theme";
+
+.container {
+  box-sizing: border-box;
+  background-color: $container-bg-color;
+  border-width: 1px;
+  border-color: $container-border-color;
+  border-style: solid;
+  border-radius: $container-border-radius;
+  padding: 0.6rem;
+  min-width: 1em;
+  margin-bottom: $block-elem-vertical-gap;
+
+  &.transparent {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,10 @@
+@import "@vcl/theme";
+
+.nag {
+  z-index: 600;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  color: $nag-color;
+  background-color: $nag-bg-color;
+}

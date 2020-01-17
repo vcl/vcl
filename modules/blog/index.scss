@@ -1,0 +1,66 @@
+@import "@vcl/theme";
+
+.post-preview {
+  margin-bottom: $block-elem-vertical-gap;
+
+  .post-preview-summary {
+    line-height: 1.75em;
+  }
+}
+
+.post-preview-meta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  & .post-preview-meta-author,
+  & .post-preview-meta-date {
+    color: $gray-light-2;
+    display: inline-block;
+  }
+}
+
+.post-preview-sub-title {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 1.1em;
+}
+
+.post {
+  margin-bottom: $block-elem-vertical-gap;
+
+  & .post-header {
+    & h1,
+    & h2,
+    & h3 {
+      color: inherit;
+    }
+  }
+
+  & .post-meta {
+    margin: 0;
+  }
+
+  & .post-title {
+    margin-top: 0.4rem;
+  }
+
+  & .post-body {
+    line-height: 1.8em;
+  }
+}
+
+.post-meta {
+  flex-direction: row;
+
+  & .post-meta-author,
+  & .post-meta-date {
+    display: inline-block;
+  }
+}
+
+.post-sub-title {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 1.1em;
+}

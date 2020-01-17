@@ -1,0 +1,24 @@
+@import "@vcl/theme";
+@import "@vcl/table";
+
+.sum-table {
+  & .sum-table-sub-total {
+    & td {
+      font-weight: bold;
+      background-color: $sum-table-subtotal-bg-color;
+      color: $sum-table-subtotal-color;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  & .sum-table-total {
+    & td {
+      font-size: 1.19em;
+      font-weight: bold;
+      background-color: $sum-table-total-bg-color;
+      color: $sum-table-total-color;
+      border-top: 2px solid black;
+      border-bottom: 4px double black;
+    }
+  }
+}

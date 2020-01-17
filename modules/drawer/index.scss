@@ -1,0 +1,86 @@
+@import "@vcl/theme";
+
+.drawer-container {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  overflow: hidden;
+
+  & .drawer-backdrop {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: block;
+    z-index: 9;
+    visibility: hidden;
+    background-color: transparent;
+
+    &.drawer-backdrop-visible {
+      background-color: $drawer-backdrop-bg-color;
+      visibility: visible;
+    }
+  }
+
+  & .drawer {
+    position: relative;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    outline: 0;
+    box-sizing: border-box;
+    background-color: $drawer-bg-color;
+    color: $drawer-color;
+    overflow-y: auto;
+    transform: translate3d(-100%, 0, 0);
+    visibility: hidden;
+
+    &.drawer-right {
+      right: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+
+    &.drawer-open {
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+    }
+
+    & .drawer-inner {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+  }
+
+  & .drawer-content {
+    background-color: $drawer-content-bg-color;
+    position: relative;
+    display: block;
+    height: 100%;
+    overflow: auto;
+  }
+
+  &.drawer-animations {
+    & .drawer-content {
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      transition-property: transform, margin-left, margin-right;
+    }
+
+    & .drawer {
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      transition-property: transform, visibility;
+    }
+
+    & .drawer-backdrop {
+      transition-duration: 0.38s;
+      transition-timing-function: ease-in-out;
+      transition-property: background-color, visibility;
+    }
+  }
+}

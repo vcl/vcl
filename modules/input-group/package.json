@@ -1,7 +1,7 @@
 {
   "name": "@vcl/input-group",
   "description": "Buttons and icograms (label/ icons) prepended and/ or appended to an input control",
-  "version": "0.7.0-alpha.3",
+  "version": "1.0.0-alpha.1",
   "main": "package.json",
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css",
@@ -9,8 +9,8 @@
     "build-demo": "vcl-build-demo --watch --vcl-root=..",
     "start": "npm-run-all --parallel build-demo browsersync"
   },
-  "style": "index.sss",
-  "demoStyle": "demo.sss",
+  "scss": "index.scss",
+  "scssDemo": "demo.scss",
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",
@@ -24,14 +24,13 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/build-demo": "^0.7.0-alpha.1",
-    "@vcl/preprocessor": "^0.7.0-alpha.1",
+    "@vcl/build-demo": "^1.0.0-alpha.1",
     "browser-sync": "^2.26.3",
     "npm-run-all": "^4.1.5"
   },
   "dependencies": {
-    "@vcl/input": "^0.7.0-alpha.1",
-    "@vcl/theme": "^0.7.0-alpha.1"
+    "@vcl/input": "^1.0.0-alpha.1",
+    "@vcl/theme": "^1.0.0-alpha.1"
   },
   "repository": {
     "type": "git",

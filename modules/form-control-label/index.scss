@@ -1,0 +1,84 @@
+@import "@vcl/theme";
+@import "@vcl/form";
+
+/* Normal label */
+
+.form-control-label {
+  cursor: pointer;
+  display: block;
+  vertical-align: middle;
+  margin-top: 0.75em;
+  margin-bottom: 0.5em;
+  font-size: $form-control-label-font-size;
+  font-weight: $form-control-label-font-weight;
+  color: $form-control-label-color;
+
+  & .form-control-sub-label {
+    font-size: 0.9em;
+    padding-left: 0.6em;
+    color: $form-control-sublabel-color;
+  }
+
+  &.disabled {
+    cursor: initial;
+  }
+
+  &.form-control-label-wrapping {
+    line-height: $form-control-label-line-height;
+    margin-top: 0;
+  }
+}
+
+/* Adaption for labels in horizontal form layout */
+
+.form {
+  &.form-horizontal {
+    & .form-control-label {
+      text-align: right;
+    }
+  }
+}
+
+/* Indicator that an input is required */
+
+.required-indicator {
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 0.85em;
+  position: relative;
+  vertical-align: middle;
+  padding-left: 0.2em;
+  color: $form-control-label-required-hint-color;
+}
+
+/* Additional hint associated with a form control */
+
+.form-control-hint {
+  display: block;
+  line-height: 1;
+  font-size: 0.9em;
+  color: $form-control-hint-color;
+  margin-top: 0.3em;
+  margin-bottom: $form-control-vertical-gap;
+
+  &.error {
+    color: $danger-medium-color;
+  }
+
+  &.warning {
+    color: $warning-medium-color;
+  }
+
+  &.success {
+    color: $success-medium-color;
+  }
+
+  &.info {
+    color: $info-medium-color;
+  }
+
+  &.primary {
+    color: $primary-medium-color;
+  }
+}
