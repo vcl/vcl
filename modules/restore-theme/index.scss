@@ -6,6 +6,8 @@
  * of variables required.
  */
 
+ @import "@vcl/theme/terms.scss";
+
 
 /* Colors
   * ====== */
@@ -22,4 +24,4 @@ $brand-accent-lighter: #FFC236 !default;
 $font-family-theme: "Muli", Helvetica, Arial, "Lucida Grande", sans-serif !default;
 
 
-@import "@vcl/theme";
+@import "@vcl/theme/index.scss";

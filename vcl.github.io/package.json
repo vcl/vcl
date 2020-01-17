@@ -19,7 +19,7 @@
     "url": "https://github.com/vcl/vcl.github.io.git"
   },
   "devDependencies": {
-    "@vcl/preprocessor": "^0.5.3",
+    "sass": "^1.24.5",
     "@fortawesome/fontawesome-free": "^5.10.1",
     "@polymer/app-route": "^3.0.2",
     "@polymer/polymer": "^3.1.0",
@@ -43,7 +43,4 @@
     "url": "https://github.com/vcl/vcl.github.io/issues"
   },
   "homepage": "https://github.com/vcl/vcl.github.io",
-  "dependencies": {
-    "sass": "^1.24.5"
-  }
 }
