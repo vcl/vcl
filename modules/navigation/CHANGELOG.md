@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.2](https://github.com/vcl/navigation/compare/v0.7.0-alpha.3...v1.0.0-alpha.2) (2020-01-17)
+
+
+### Code Refactoring
+
+* migrate to sass ([490b7e5](https://github.com/vcl/navigation/commit/490b7e549d7445d27c8832d00560436e35f71511))
+
+
+### BREAKING CHANGES
+
+* VCL was migrated to sass. Check docs for further information.
+
+
+
+
+
 # [1.0.0-alpha.1](https://github.com/vcl/navigation/compare/v0.7.0-alpha.3...v1.0.0-alpha.1) (2020-01-17)
 
 
