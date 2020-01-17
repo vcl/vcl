@@ -1,0 +1,52 @@
+@import "@vcl/theme";
+
+/* Common styles for all types */
+
+.callout {
+  padding: 1.2em;
+  margin-bottom: $block-elem-vertical-gap;
+  border: 1px solid $callout-border-color;
+  border-left-width: 0.35em;
+  border-radius: 0.25em;
+}
+
+.callout h4 {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.callout code {
+  border-radius: 0.25em;
+}
+
+/* Semantic variations */
+
+.callout {
+  &.info {
+    border-left-color: $info-dark-color;
+
+    & h4 {
+      color: $info-dark-color;
+    }
+  }
+
+  &.warning {
+    border-left-color: $warning-dark-color;
+
+    & h4 {
+      color: $warning-dark-color;
+    }
+  }
+
+  &.danger {
+    border-left-color: $danger-dark-color;
+
+    & h4 {
+      color: $danger-dark-color;
+    }
+  }
+}

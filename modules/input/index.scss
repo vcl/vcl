@@ -1,0 +1,201 @@
+@import "@vcl/theme";
+@import "./placeholder.css";
+
+input,
+select,
+textarea,
+.input {
+  min-height: $input-height;
+  line-height: $input-line-height;
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button,
+.input {
+  font-family: inherit;
+  vertical-align: middle;
+}
+
+textarea,
+textarea.input {
+  line-height: $input-textarea-line-height;
+}
+
+/* remove clear-button in ie10+ */
+::-ms-clear {
+  display: none;
+}
+
+/* remove spinner buttons from browsers */
+
+.input[type=number]::-webkit-outer-spin-button,
+.input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input[type=number] {
+  -moz-appearance: textfield;
+}
+
+select,
+textarea,
+input,
+.input {
+  width: 100%;
+  display: inline-block;
+  padding-top: 0;
+  padding-right: 0.4em;
+  padding-bottom: 0;
+  padding-left: 0.4em;
+  vertical-align: middle;
+  margin-bottom: $form-control-vertical-gap;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+.input {
+  overflow: hidden;
+  word-wrap: normal;
+  display: flex;
+  align-items: center;
+  content: none;
+}
+select {
+  width: auto;
+}
+
+select:focus,
+textarea:focus,
+input:focus,
+.input:focus {
+  outline: none;
+}
+
+/* Show an outline for elements which cannot be highlighted by border colors */
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted $input-outline-focus-color;
+  outline: 0.35em auto -webkit-focus-ring-color;
+}
+
+/* Indicate a click will do something useful for a label */
+label {
+  cursor: pointer;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+select,
+input[type="file"] {
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  height: auto;
+}
+
+select,
+textarea,
+input,
+.input {
+  color: $input-color;
+  background-color: $input-bg-color;
+  border-width: $input-border-width;
+  border-color: $input-border-color;
+  border-radius: $input-border-radius;
+  border-style: solid;
+}
+
+
+.input[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block;
+  color: $input-text-placeholder-color;
+  font-style: $input-text-placeholder-font-style;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+.input.disabled,
+input[readonly],
+select[readonly],
+textarea[readonly],
+.input.readonly {
+  color: $input-disabled-color;
+  background-color: $input-disabled-bg-color;
+  border-color: $input-disabled-border-color;
+  cursor: default;
+}
+
+
+select:focus,
+textarea:focus,
+input:focus,
+.input:focus,
+.input.focused {
+  border: $input-border-width solid $input-border-focus-color;
+  background-color: $input-bg-color;
+}
+
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly] {
+  background-color: transparent;
+}
+
+/* Semantic coloring */
+
+textarea.error,
+input.error,
+.input.error,
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid,
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+  border-color: $error-medium-color;
+}
+
+textarea.warning,
+.input.warning,
+input.warning {
+  border-color: $warning-medium-color;
+}
+
+textarea.success,
+.input.success,
+input.success {
+  border-color: $success-medium-color;
+}
+
+textarea.selected,
+textarea.selected:hover,
+textarea.selected:active,
+textarea.selected:focus,
+.input.selected,
+.input.selected:hover,
+.input.selected:active,
+.input.selected:focus,
+input.selected,
+input.selected:hover,
+input.selected:active,
+input.selected:focus {
+  border-color: $input-border-focus-color;
+  background-color: $input-bg-focus-color;
+}

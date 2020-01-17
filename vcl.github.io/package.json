@@ -42,5 +42,8 @@
   "bugs": {
     "url": "https://github.com/vcl/vcl.github.io/issues"
   },
-  "homepage": "https://github.com/vcl/vcl.github.io"
+  "homepage": "https://github.com/vcl/vcl.github.io",
+  "dependencies": {
+    "sass": "^1.24.5"
+  }
 }

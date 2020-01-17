@@ -6,7 +6,7 @@
   "scripts": {
     "test": "vcl-preprocessor ./index.sss ./build/test.css"
   },
-  "style": "index.sss",
+  "scss": "index.scss",
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",

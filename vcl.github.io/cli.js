@@ -5,7 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const debug = require('debug')('vcl-docgen:cli');
 const marked = require('marked');
-const vcl = require('../tools/preprocessor');
+const sass = require('sass');
 
 const yargs = require('yargs')
   .help('help')
@@ -44,7 +44,44 @@ if (verbose) {
   debug.enabled = true;
 }
 
+const render = (data) => {
+  return new Promise((resolve, reject) => {
+    sass.render({
+      data,
+      includePaths: [path.resolve(root, 'node_modules')],
+      importer: function(url, prev, done) {
+        if (url.startsWith('@vcl/')) {
+          let file = path.resolve(baseModuleFolder, url.substr(5));
+          if (fs.lstatSync(file).isDirectory()) {
+            file = path.resolve(file, 'index.scss');
+          }
+          done({
+            file
+          });
+        } else {
+          done();
+        }
+      }
+    }, function(error, result) {
+      try {
+        if(!error){
+          resolve(result);
+        } else {
+          console.error(error);
+          reject(error);
+        }
+      } catch(ex) {
+        console.error(ex);
+        reject(ex);
+      }
+    });
+  });
+}
+
 (async () => {
+
+
+
   try {
     debug('using module folder', baseModuleFolder);
 
@@ -134,7 +171,7 @@ async function fetchPackage(pack) {
 
   const readme = fs.existsSync(readmeFile) ? fs.readFileSync(readmeFile) : undefined;
 
-  const styleFile = pack.demoStyle || pack.style;
+  const styleFile = pack.scssDemo || pack.scss;
 
   // TODO: cleanup - filter and add
   var docPart = {
@@ -224,16 +261,13 @@ async function renderPart(docPart) {
 
   if (docPart.styleFile) {
 
-    const sss = `@import "${docPart.name}/${docPart.styleFile}"`;
+    const data = `@import "${docPart.name}/${docPart.styleFile}"`;
 
-    debug('preprocessing %s with import %s', docPart.name, sss);
+    debug('preprocessing %s with import %s', docPart.name, sass);
 
-    const result = await vcl(sss, {
-      root: process.cwd(),
-      vclRoot: baseModuleFolder
-    });
+    const result = await render(data);
 
-    docPart.style = result.css || '';
+    docPart.style = result.css.toString() || '';
   } else if (!docPart.styleFile) {
     docPart.style = '';
   }

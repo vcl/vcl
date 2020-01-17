@@ -1,0 +1,16 @@
+@import "@vcl/theme";
+
+*::-webkit-scrollbar {
+  width: $scrollbar-width;
+  color: inherit;
+  background-color: $scrollbar-bg-color;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: $scrollbar-track-bg-color;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $scrollbar-thumb-bg-color;
+}

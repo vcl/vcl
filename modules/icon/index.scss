@@ -1,0 +1,25 @@
+@import "@vcl/theme";
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  fill: currentcolor;
+  position: relative;
+  line-height: 1;
+
+  &.icon-size1 {
+    width: 1.6em;
+    height: 1.6em;
+  }
+
+  &.icon-size2 {
+    width: 2.37em;
+    height: 2.37em;
+  }
+
+  &.icon-size3 {
+    width: 3.17em;
+    height: 3.17em;
+  }
+}

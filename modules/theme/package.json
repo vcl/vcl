@@ -10,8 +10,8 @@
     "build-demo": "vcl-build-demo --watch --vcl-root=..",
     "start": "npm-run-all --parallel build-demo browsersync"
   },
-  "style": "index.sss",
-  "demoStyle": "demo.sss",
+  "scss": "index.scss",
+  "scssDemo": "demo.scss",
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",

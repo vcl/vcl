@@ -1,10 +1,10 @@
 const TPL_WRAP = (content) => 
-`:root
+`
 ${content}
 `;
 
 const TPL_BP_VAR = (name, type, value, unit) => 
-`  --bp-${name}-${type}: ${value}${unit}
+`$bp-${name}-${type}: ${value}${unit} !default;
 `;
 
 const BREAKPOINTS = [
@@ -63,12 +63,12 @@ module.exports.BREAKPOINTS = BREAKPOINTS.map(bp => {
   let queryTo;
 
   if (typeof bp.max === 'number') {
-    query = `@media (min-width: var(--bp-${bp.name}-min)) and (max-width: var(--bp-${bp.name}-max))`;
-    queryFrom = `@media (min-width: var(--bp-${bp.name}-min))`;
-    queryTo = `@media (max-width: var(--bp-${bp.name}-max))`;
+    query = `@media (min-width: $bp-${bp.name}-min) and (max-width: $bp-${bp.name}-max)`;
+    queryFrom = `@media (min-width: $bp-${bp.name}-min)`;
+    queryTo = `@media (max-width: $bp-${bp.name}-max)`;
   } else {
-    query = `@media (min-width: var(--bp-${bp.name}-min))`;
-    queryFrom = `@media (min-width: var(--bp-${bp.name}-min))`;
+    query = `@media (min-width: $bp-${bp.name}-min)`;
+    queryFrom = `@media (min-width: $bp-${bp.name}-min)`;
     queryTo = undefined;
   }
   return {

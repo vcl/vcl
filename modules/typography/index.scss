@@ -1,0 +1,247 @@
+@import "@vcl/theme";
+
+body,
+.viewport {
+  font-size: $typography-font-size;
+  line-height: $typography-line-height;
+  color: $typography-text-color;
+  font-family: $typography-font-family;
+}
+
+abbr {
+  &.initialism {
+    font-size: 93%;
+    text-transform: uppercase;
+  }
+}
+
+mark {
+  background: $typography-mark-bg-color;
+  color: $typography-mark-color;
+}
+
+/* Define quote characters for q element */
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+blockquote {
+  margin-top: 0;
+  margin-bottom: $block-elem-vertical-gap;
+  margin-left: 1.8em;
+  margin-right: 1.8em;
+  padding-left: 1em;
+  border-left-width: 0.3em;
+  border-left-style: solid;
+  border-left-color: $typography-blockquote-border-color;
+}
+
+address {
+  display: block;
+  margin-top: 0;
+  margin-bottom: $block-elem-vertical-gap;
+  font-style: normal;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: $typography-font-family-monospace;
+  font-size: 93%;
+}
+
+kbd {
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+  border-radius: 0.85em;
+  color: #FFF;
+  background-color: #333;
+  box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+/* Pre-formatted text. */
+
+pre {
+  margin-bottom: 1.1em;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  &.code {
+    border: 1px solid $typography-code-border-color;
+    line-height: 1.2em;
+    padding: 0.7em;
+    overflow: auto;
+    border-radius: 0;
+    background-clip: padding-box;
+    background-color: $typography-code-bg-color;
+
+    & > code {
+      padding: 0;
+      white-space: pre;
+    }
+  }
+}
+
+code {
+  padding: 0.15em 0.25em;
+  white-space: nowrap;
+  background-color: $typography-code-bg-color;
+}
+
+.code-wrap {
+  white-space: pre-wrap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $typography-heading-color;
+  font-family: inherit;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.428;
+}
+
+h1 {
+  font-size: $typography-mod-scale-1;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+h2 {
+  font-size: $typography-mod-scale-2;
+  margin-top: 0.65em;
+  margin-bottom: 0.3em;
+}
+
+h3 {
+  font-size: $typography-mod-scale-3;
+  margin-top: 0.75em;
+  margin-bottom: 0.4em;
+}
+
+h4 {
+  font-size: $typography-mod-scale-4;
+  margin-top: 0.85em;
+  margin-bottom: 0.4em;
+}
+
+h5 {
+  font-size: $typography-mod-scale-5;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h6 {
+  font-size: $typography-mod-scale-6;
+  margin-top: 1.1em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-top: 0em;
+  margin-bottom: $block-elem-vertical-gap;
+}
+
+/* Anchors */
+
+a,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: $typography-link-text-decoration;
+  color: $typography-link-color;
+}
+
+a {
+  &:hover {
+    color: $typography-link-hover-color;
+  }
+
+  &.disabled {
+    cursor: default;
+  }
+
+  &.content-link {
+    user-select: none;
+    text-decoration: none;
+    vertical-align: text-bottom;
+
+    & > .icogram {
+      display: inline;
+
+      & > *:first-child {
+        margin-left: 0.1em;
+      }
+
+      & > * {
+        margin: 0 0.1em 0 0;
+      }
+
+      & > *:last-child {
+        margin-right: 0.1em;
+      }
+
+      & .text {
+        text-decoration: $typography-link-text-decoration;
+      }
+
+      & .icon {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.disabled,
+a.disabled {
+  color: $typography-disabled-color;
+}
+
+.secondary-text-color {
+  color: $typography-secondary-text-color;
+}
+
+/* Prevents sub and sup affecting line-height */
+
+sub,
+sup {
+  font-size: 80%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Text selection coloring */
+
+*::selection {
+  background: $typography-selected-text-bg-color;
+  color: $typography-selected-text-color;
+  text-shadow: none;
+}
+
+*::-ms-selection {
+  background: $typography-selected-text-bg-color;
+  color: $typography-selected-text-color;
+  text-shadow: none;
+}
+
+*::-moz-selection {
+  background: $typography-selected-text-bg-color;
+  color: $typography-selected-text-color;
+  text-shadow: none;
+}

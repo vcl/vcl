@@ -25,7 +25,9 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "sass-convert": "^0.5.2"
+  },
   "devDependencies": {
     "cz-conventional-changelog": "^3.0.2",
     "lerna": "^3.19.0",

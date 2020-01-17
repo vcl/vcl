@@ -1,0 +1,14 @@
+@import "@vcl/theme";
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+[class^="fa-"]:before,
+[class*=" fa-"]:before {
+  text-decoration: inherit;
+  speak: none;
+}
+
+li [class^="fa-"],
+li [class*=" fa-"] {
+  width: 1.25em;
+  text-align: center;
+}

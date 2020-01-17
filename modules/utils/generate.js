@@ -4,65 +4,89 @@ const path = require('path');
 const { BREAKPOINTS, queryAll } = require('../breakpoints/breakpoints');
 
 const TPL_HIDE = (query, suffix) => 
-`${query}
-  .hide${suffix}
-    display: none !important
+`${query} {
+  .hide${suffix} {
+    display: none !important;
+  }
+}
 `;
 
 const TPL_SPACE_CONTENT = (idx, suffix) => 
-`  .p-${idx}${suffix}
-    padding: var(--space-${idx}) var(--space-${idx})
-  .pl-${idx}${suffix}
-    padding-left: var(--space-${idx})
-  .pr-${idx}${suffix}
-    padding-right: var(--space-${idx})
-  .pt-${idx}${suffix}
-    padding-top: var(--space-${idx})
-  .pb-${idx}${suffix}
-    padding-bottom: var(--space-${idx})
-  .px-${idx}${suffix}
-    padding-left: var(--space-${idx})
-    padding-right: var(--space-${idx})
-  .py-${idx}${suffix}
-    padding-top: var(--space-${idx})
-    padding-bottom: var(--space-${idx})
-  .m-${idx}${suffix}
-    margin: var(--space-${idx}) var(--space-${idx})
-  .ml-${idx}${suffix}
-    margin-left: var(--space-${idx})
-  .mr-${idx}${suffix}
-    margin-right: var(--space-${idx})
-  .mt-${idx}${suffix}
-    margin-top: var(--space-${idx})
-  .mb-${idx}${suffix}
-    margin-bottom: var(--space-${idx})
-  .mx-${idx}${suffix}
-    margin-left: var(--space-${idx})
-    margin-right: var(--space-${idx})
-  .my-${idx}${suffix}
-    margin-top: var(--space-${idx})
-    margin-bottom: var(--space-${idx})
+`  .p-${idx}${suffix} {
+  padding: $space-${idx} $space-${idx};
+}
+  .pl-${idx}${suffix} {
+    padding-left: $space-${idx};
+  }
+  .pr-${idx}${suffix} {
+    padding-right: $space-${idx};
+  }
+  .pt-${idx}${suffix} {
+    padding-top: $space-${idx};
+  }
+  .pb-${idx}${suffix} {
+    padding-bottom: $space-${idx};
+  }
+  .px-${idx}${suffix} {
+    padding-left: $space-${idx};
+    padding-right: $space-${idx};
+  }
+  .py-${idx}${suffix} {
+    padding-top: $space-${idx};
+    padding-bottom: $space-${idx};
+  }
+  .m-${idx}${suffix} {
+    margin: $space-${idx} $space-${idx};
+  }
+  .ml-${idx}${suffix} {
+    margin-left: $space-${idx};
+  }
+  .mr-${idx}${suffix} {
+    margin-right: $space-${idx};
+  }
+  .mt-${idx}${suffix} {
+    margin-top: $space-${idx};
+  }
+  .mb-${idx}${suffix} {
+    margin-bottom: $space-${idx};
+  }
+  .mx-${idx}${suffix} {
+    margin-left: $space-${idx};
+    margin-right: $space-${idx};
+  }
+  .my-${idx}${suffix} {
+    margin-top: $space-${idx};
+    margin-bottom: $space-${idx};
+  }
 `;
 
 const TPL_SPACE = (query, suffix) => {
   let s = 
-`${query}
-  .m-auto${suffix}
-    margin: auto
-  .ml-auto${suffix}
-    margin-left: auto
-  .mr-auto${suffix}
-    margin-right: auto
-  .mt-auto${suffix}
-    margin-top: auto
-  .mb-auto${suffix}
-    margin-bottom: auto
-  .mx-auto${suffix}
-    margin-left: auto
-    margin-right: auto
-  .my-auto${suffix}
-    margin-top: auto
-    margin-bottom: auto
+`${query} {
+  .m-auto${suffix} {
+    margin: auto;
+  }
+  .ml-auto${suffix} {
+    margin-left: auto;
+  }
+  .mr-auto${suffix} {
+    margin-right: auto;
+  }
+  .mt-auto${suffix} {
+    margin-top: auto;
+  }
+  .mb-auto${suffix} {
+    margin-bottom: auto;
+  }
+  .mx-auto${suffix} {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .my-auto${suffix} {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
 `;
   for(let i = 0; i <=5; i++ ) {
     s += TPL_SPACE_CONTENT(i, suffix);
@@ -71,20 +95,27 @@ const TPL_SPACE = (query, suffix) => {
 }
 
 const TPL_GUTTER = (i) => 
-`.gutterx-${i}
-  margin-left: -var(--space-${i})
-  & > *
-    margin-left: var(--space-${i})
-.guttery-${i}
-  margin-top: -var(--space-${i})
-  & > *
-    margin-top: var(--space-${i})
-.gutter-${i}
-  margin-left: -var(--space-${i})
-  margin-top: -var(--space-${i})
-  & > *
-    margin-left: var(--space-${i})
-    margin-top: var(--space-${i})
+`.gutterx-${i} {
+  margin-left: $space-${i};
+  & > * {
+    margin-left: $space-${i};
+  }
+}
+.guttery-${i} {
+
+  margin-top: $space-${i};
+  & > * {
+    margin-top: $space-${i};
+  }
+}
+.gutter-${i}{
+  margin-left: $space-${i};
+  margin-top: $space-${i};
+  & > * {
+    margin-left: $space-${i};
+    margin-top: $space-${i};
+  }
+}
 `
 
 let style = '';
@@ -108,5 +139,5 @@ for (i = 0; i <= 5; i++) {
   style += TPL_GUTTER(i);
 }
 
-const outFile = path.resolve(__dirname, 'utils.generated.sss');
+const outFile = path.resolve(__dirname, 'utils.generated.scss');
 fs.writeFileSync(outFile, style);

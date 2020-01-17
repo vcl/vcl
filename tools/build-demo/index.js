@@ -4,8 +4,11 @@ const fs = require('fs');
 const mkdirp = require('mkdirp');
 const path = require('path');
 const sass = require('sass');
+const chokidar = require('chokidar');
+
 const yargs = require('yargs')
-              .describe('vcl-root', 'root directory for vcl imports');
+              .describe('vcl-root', 'root directory for vcl imports')
+              .describe('watch', 'watch mode');
 
 var argv = yargs.argv;
 const PCK = path.resolve(process.cwd(), './package.json');
@@ -31,33 +34,84 @@ const title = pack.name ? 'Demo of: ' + pack.name : 'VCL Demo Page';
 const finalContent = indexHTML.replace('<%- title %>',title);
 fs.writeFileSync(INDEX_TRG, finalContent);
 console.log('Created ' + INDEX_TRG);
-console.log('Building ' + SASS_SRC);
 
 const includePaths = [path.resolve(process.cwd(), 'node_modules')];
 
 const vclRoot = argv['vcl-root'];
+const watch = !!argv['watch'];
 
-sass.render({
-  file: SASS_SRC,
-  sourceMap: true,
-  outFile: SASS_TRG,
-  includePaths,
-  importer: function(url, prev, done) {
-    if (vclRoot && url.startsWith('@vcl/')) {
-      const file = path.resolve(process.cwd(), vclRoot, url.substr(5), 'index.scss');
-      return {
-        file
-      };
+
+const render = () => {
+  return new Promise((resolve, reject) => {
+    console.log('Building ' + SASS_SRC);
+    sass.render({
+      file: SASS_SRC,
+      sourceMap: true,
+      outFile: SASS_TRG,
+      includePaths,
+      importer: function(url, prev, done) {
+        if (vclRoot && url.startsWith('@vcl/')) {
+          const file = path.resolve(process.cwd(), vclRoot, url.substr(5), 'index.scss');
+
+          done({
+            file
+          });
+        } else {
+          done();
+        }
+      }
+    }, function(error, result) {
+      try {
+        if(!error){
+          fs.writeFileSync(SASS_TRG, result.css);
+          console.log('Created ' + SASS_TRG);
+          fs.writeFileSync(SASS_MAP_TRG, result.map);
+          console.log('Created ' + SASS_MAP_TRG);
+          resolve(result);
+        } else {
+          console.error(error);
+          reject(error);
+        }
+      } catch(ex) {
+        console.error(ex);
+        reject(ex);
+      }
+    });
+  });
+}
+
+if (watch) {
+  const fileChangeNotify = () => console.log('\nWaiting for file changes...');
+  render().then(result => {
+    watchlist = result.stats.includedFiles;
+
+    const watcher = chokidar.watch(watchlist, {
+      usePolling: false,
+      awaitWriteFinish: {
+        stabilityThreshold: 50,
+        pollInterval: 10
+      }
+    })
+    watcher.on('ready', fileChangeNotify).on('change', file => {
+      console.log('Change detected in ' + file);
+      (async () => {
+        try {
+          const result = await render();
+          watcher.add(result.stats.includedFiles);
+        } catch(ex) {
+          console.error(ex);
+        }
+      })();
+    })
+  }).catch(ex => {
+    console.error(ex);
+  });
+} else {
+  (async () => {
+    try {
+      await render();
+    } catch(ex) {
+      console.error(ex);
     }
-    return undefined;
-  }
-}, function(error, result) {
-  if(!error){
-    fs.writeFileSync(SASS_TRG, result.css);
-    console.log('Created ' + SASS_TRG);
-    fs.writeFileSync(SASS_MAP_TRG, result.map);
-    console.log('Created ' + SASS_MAP_TRG);
-  } else {
-    console.error(error);
-  }
-});
+  })();
+}
