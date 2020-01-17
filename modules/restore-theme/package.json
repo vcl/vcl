@@ -20,7 +20,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@vcl/preprocessor": "^0.7.0-alpha.1"
   },
   "dependencies": {
     "@vcl/theme": "^0.7.0-alpha.1"
