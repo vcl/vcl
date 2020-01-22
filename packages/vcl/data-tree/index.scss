@@ -1,0 +1,86 @@
+@use "../theme.scss" as *;
+
+.tree {
+  background-color: $data-tree-bg-color;
+  margin-bottom: $block-elem-vertical-gap;
+
+  & ul {
+    margin: 0;
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+
+    & > li {
+      padding: 0;
+
+      /* Nested vertical items */
+      & li {
+        padding-left: 1.5em;
+      }
+    }
+  }
+
+  & .separator {
+    margin: 0.2em 0;
+    overflow: hidden;
+    padding: 0;
+
+    & a {
+      display: none;
+    }
+  }
+
+  &.border {
+    & li {
+      & > a {
+        border-bottom-style: solid;
+        border-bottom-color: $data-tree-border-color;
+        border-bottom-width: 1px;
+      }
+    }
+
+    & ul {
+      & > li {
+        &:last-child {
+          & > a {
+            border-bottom-width: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tree .list-heading {
+  font-weight: bold;
+  font-size: 0.9em;
+  padding-top: 1.5em;
+  color: $data-tree-heading-color;
+  background-color: $data-tree-heading-bg-color;
+}
+
+/* item coloring */
+.tree {
+  & ul {
+    & li {
+      & > a,
+      & > .icogram {
+        background-color: $data-tree-item-bg-color;
+      }
+
+      & > a:hover,
+      & > .icogram:hover {
+        color: $data-tree-item-hover-color;
+        background-color: $data-tree-item-hover-bg-color;
+      }
+
+      &.selected {
+        & > a,
+        & > .icogram {
+          color: $data-tree-selected-item-color;
+          background-color: $data-tree-selected-item-bg-color;
+        }
+      }
+    }
+  }
+}

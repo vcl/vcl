@@ -1,0 +1,52 @@
+@use "../theme.scss" as *;
+
+.corner-ribbon {
+  width: 16em;
+  position: absolute;
+  top: 2.5em;
+  left: -5em;
+  text-align: center;
+  line-height: 2.5em;
+  letter-spacing: 1px;
+  background-color: $ribbon-bg-color;
+  color: $ribbon-color;
+  transform: rotate(-45deg);
+}
+
+.corner-ribbon.sticky {
+  position: fixed;
+}
+
+.corner-ribbon.shadow {
+  box-shadow: 0 0 3px $ribbon-shadow-color;
+}
+
+/* Different positions */
+
+.corner-ribbon.top-left {
+  top: 2.5em;
+  left: -5em;
+  transform: rotate(-45deg);
+}
+
+.corner-ribbon.top-right {
+  top: 2.5em;
+  right: -5em;
+  left: auto;
+  transform: rotate(45deg);
+}
+
+.corner-ribbon.bottom-left {
+  top: auto;
+  bottom: 2.5em;
+  left: -5em;
+  transform: rotate(45deg);
+}
+
+.corner-ribbon.bottom-right {
+  top: auto;
+  right: -5em;
+  bottom: 2.5em;
+  left: auto;
+  transform: rotate(-45deg);
+}

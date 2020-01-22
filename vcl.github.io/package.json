@@ -6,20 +6,18 @@
   "main": "package.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm-run-all clean gen-doc git-init git-push",
-    "gen-doc": "./cli.js ../modules dist --name=\"VCL Documentation\" --doc=../doc",
     "git-init": "cd dist && git init && git remote add origin git@github.com:vcl/vcl.github.io.git",
     "git-push": "cd dist && git add -A . && git commit -a -m 'doc update' && git push --set-upstream origin master --force",
     "clean": "rm -rf dist",
-    "css": "vcl-preprocessor styles.sss styles.css --vcl-root=../modules",
-    "bundle-webcomponents": "polymer build"
+    "bundle-webcomponents": "polymer build",
+    "gen-doc": "./cli.js ../packages/vcl dist --name=\"VCL Documentation\" --doc=../doc",
+    "deploy": "npm-run-all clean gen-doc git-init git-push"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/vcl/vcl.github.io.git"
   },
   "devDependencies": {
-    "@vcl/preprocessor": "^0.5.3",
     "@fortawesome/fontawesome-free": "^5.10.1",
     "@polymer/app-route": "^3.0.2",
     "@polymer/polymer": "^3.1.0",
@@ -30,7 +28,8 @@
     "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5",
     "polymer-cli": "^1.9.7",
-    "resolve": "^1.12.0"
+    "resolve": "^1.12.0",
+    "sass": "^1.25.0"
   },
   "keywords": [
     "vcl",

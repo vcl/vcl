@@ -1,0 +1,11 @@
+{
+  "name": "app-area",
+  "description": "The background and layout of the app's viewport and app area",
+  "categories": [
+    {
+      "title": "Areas",
+      "itemPriority": 10,
+      "priority": 30
+    }
+  ]
+}

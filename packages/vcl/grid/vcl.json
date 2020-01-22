@@ -1,0 +1,11 @@
+{
+  "name": "grid",
+  "description": "Float based fluid grid system",
+  "categories": [
+    {
+      "title": "Layout",
+      "itemPriority": 10,
+      "priority": 10
+    }
+  ]
+}

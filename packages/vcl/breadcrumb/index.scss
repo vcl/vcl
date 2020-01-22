@@ -1,0 +1,53 @@
+@use "../theme.scss" as *;
+@use "../icon.scss" as *;
+
+.breadcrumb-nav {
+  & ol {
+    list-style: none;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    margin-bottom: $block-elem-vertical-gap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & li {
+      font-weight: bold;
+      font-size: 0.98em;
+
+      & a {
+        color: $breadcrumb-label-color;
+        display: inline-block;
+      }
+
+      & .breadcrumb-nav-item-label {
+        display: inline-block;
+
+        & + .breadcrumb-nav-divider {
+          color: $breadcrumb-divider-color;
+          display: inline-block;
+          padding-left: 0.2em;
+          padding-right: 0.2em;
+        }
+      }
+
+      & a:hover,
+      & a:focus {
+        color: $breadcrumb-label-hover-color;
+      }
+
+      &.selected {
+        cursor: default;
+        background: transparent;
+        border: 0;
+
+        & a,
+        & .breadcrumb-nav-item-label {
+          color: $breadcrumb-label-selected-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "responsive-table",
+  "description": "Transposed variant of normal vcl-table optimized for narrow viewports",
+  "categories": [
+    {
+      "title": "Tabular Data",
+      "itemPriority": 20,
+      "priority": 90
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "input-group",
+  "description": "Buttons and icograms (label/ icons) prepended and/ or appended to an input control",
+  "categories": [
+    {
+      "title": "Form Controls",
+      "itemPriority": 50,
+      "priority": 70
+    }
+  ]
+}

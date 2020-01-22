@@ -1,0 +1,11 @@
+{
+  "name": "app-content-area",
+  "description": "The area which houses the main content",
+  "categories": [
+    {
+      "title": "Areas",
+      "itemPriority": 20,
+      "priority": 30
+    }
+  ]
+}

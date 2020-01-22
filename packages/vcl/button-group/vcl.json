@@ -1,0 +1,11 @@
+{
+  "name": "button-group",
+  "description": "Arrangement of multiple buttons as group",
+  "categories": [
+    {
+      "title": "Buttons",
+      "itemPriority": 20,
+      "priority": 80
+    }
+  ]
+}

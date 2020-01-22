@@ -1,0 +1,11 @@
+{
+  "name": "blog",
+  "description": "Everything that makes up a blog",
+  "categories": [
+    {
+      "title": "Blog",
+      "itemPriority": 10,
+      "priority": 90
+    }
+  ]
+}

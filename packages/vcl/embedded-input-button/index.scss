@@ -1,0 +1,54 @@
+@use "../theme.scss" as *;
+
+.input-group-emb {
+  display: block;
+  margin-bottom: $form-control-vertical-gap;
+  position: relative;
+  width: 100%;
+
+  & .input {
+    margin-bottom: 0;
+
+    &.prep-item {
+      padding-left: 2.5em;
+    }
+
+    &.app-item {
+      padding-right: 2.5em;
+    }
+  }
+
+  & .prepended,
+  & .appended {
+    text-align: center;
+    line-height: $input-group-height;
+    display: block;
+    min-width: 2.5em;
+    position: absolute;
+    top: 0;
+    color: $embedded-input-group-text-color;
+  }
+
+  & .prepended {
+    left: 0;
+  }
+
+  & .appended {
+    right: 0;
+  }
+
+  & > button {
+    &.button,
+    &.button:hover {
+      background-color: $embedded-input-group-text-bg-color;
+      border-width: $input-border-width;
+      border-style: solid;
+      border-color: transparent;
+      background-clip: content-box;
+    }
+
+    &.button[disabled] {
+      display: none;
+    }
+  }
+}

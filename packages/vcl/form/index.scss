@@ -1,0 +1,91 @@
+@use "../theme.scss" as *;
+
+.form,
+.form.form-inline,
+.form.form-horizontal {
+  margin-bottom: $block-elem-vertical-gap;
+}
+
+/* Inline and horizontal layouts */
+
+.form.form-inline *:first-child,
+.form.form-inline .form-inline:first-child {
+  margin-left: 0;
+}
+
+.form.form-inline input,
+.form.form-inline .input,
+.form.form-inline select {
+  width: auto;
+}
+
+.form.form-inline label,
+.form.form-inline input,
+.form.form-inline .input,
+.form.form-horizontal input,
+.form.form-horizontal .input,
+.form.form-inline textarea,
+.form.form-horizontal textarea,
+.form.form-inline select,
+.form.form-horizontal select,
+.form.form-inline .button-group,
+.form.form-inline .form-control-group,
+.form.form-inline .form-inline,
+.form.form-horizontal .form-inline-control-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+/* A control group combines input controls and labels so that they are aligned
+ * like an atomic control. */
+
+.form-control-group {
+  display: block;
+  margin-bottom: $form-control-vertical-gap;
+
+  & input,
+  & .input,
+  & .input-group,
+  & .form-control-hint {
+    margin-bottom: 0;
+  }
+}
+
+.form-inline-control-group {
+  display: block;
+  vertical-align: middle;
+  margin-bottom: $form-control-vertical-gap;
+}
+
+.form-inline-control-group input:first-child,
+.form-inline-control-group .input:first-child,
+.form-inline-control-group label:first-child,
+.form-inline-control-group .form-control-label:first-child {
+  margin-left: 0;
+}
+
+.form-inline-control-group input,
+.form-inline-control-group .input,
+.form-inline-control-group label,
+.form-inline-control-group .form-control-label {
+  display: inline-block;
+  width: auto;
+  margin-bottom: 0;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding-right: 0.4em;
+}
+
+.form-inline-control-group.form-control-label {
+  margin-top: 0;
+}
+
+/* Integration with fieldset component */
+
+legend {
+  & + .form-control-group {
+    margin-top: 2em;
+    -webkit-margin-top-collapse: separate;
+  }
+}

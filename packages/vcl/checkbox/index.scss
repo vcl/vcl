@@ -1,0 +1,48 @@
+@use "../theme.scss" as *;
+@use "../icon.scss" as *;
+
+.checkbox {
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+
+  & > .form-control-label {
+    display: inline-block;
+  }
+
+  & > .icon {
+    color: $checkbox-color;
+    display: inline-block;
+    min-width: 1.5em;
+    text-align: center;
+    padding-right: 0.4em;
+    padding-left: 0.4em;
+    font-size: $checkbox-icon-size;
+  }
+
+  &:hover {
+    & > .icon {
+      color: $checkbox-hover-color;
+    }
+  }
+
+  &:focus {
+    & > .icon {
+      color: $checkbox-focus-color;
+    }
+  }
+
+  &.disabled {
+    & > .icon {
+      color: $checkbox-disabled-color;
+    }
+  }
+}
+
+.form-control-label:hover {
+  & .checkbox:not(.disabled) {
+    & .icon {
+      color: $radio-button-focus-color;
+    }
+  }
+}

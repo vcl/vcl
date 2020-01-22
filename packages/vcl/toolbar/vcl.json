@@ -1,0 +1,11 @@
+{
+  "name": "toolbar",
+  "description": "Horizontal bar which can contain navigation elements, buttons, form controls etc",
+  "categories": [
+    {
+      "title": "Navigations",
+      "itemPriority": 30,
+      "priority": 40
+    }
+  ]
+}

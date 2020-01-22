@@ -1,0 +1,79 @@
+@use "../theme.scss" as *;
+@use "../form-control-label.scss" as *;
+@use "../icogram.scss" as *;
+
+.file-input {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  color: $file-input-color;
+  background-color: $file-input-bg-color;
+  border-width: $file-input-border-width;
+  border-style: solid;
+  border-color: $file-input-border-color;
+  border-radius: $file-input-border-radius;
+
+  & .file-input-icon {
+    font-size: 2em;
+    margin-top: 0.4em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    margin-bottom: 0.4em;
+  }
+
+  & .file-input-placeholder {
+    display: inline-block;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+.file-input:focus,
+.file-input.focused {
+  background-color: $file-input-bg-focus-color;
+  border-color: $file-input-border-focus-color;
+}
+
+.file-input.disabled,
+.file-input.disabled:hover,
+.file-input.disabled:active,
+.file-input.disabled:focus {
+  outline: none;
+  cursor: default;
+  color: $file-input-disabled-color;
+  background-color: $file-input-disabled-bg-color;
+  border-color: $file-input-disabled-border-color;
+}
+
+.file-input.error {
+  border-color: $error-medium-color;
+}
+
+.file-input.warning {
+  border-color: $warning-medium-color;
+}
+
+.file-input.success {
+  border-color: $success-medium-color;
+}
+
+.file-input.disabled,
+.file-input.disabled:hover,
+.file-input.disabled:active,
+.file-input.disabled:focus {
+  outline: none;
+  cursor: default;
+  color: $file-input-disabled-color;
+  background-color: $file-input-disabled-bg-color;
+  border-color: $file-input-disabled-border-color;
+}
+
+.file-input.dragndrop {
+  color: $file-input-dragndrop-color;
+  background-color: $file-input-dragndrop-bg-color;
+  border-color: $file-input-dragndrop-border-color;
+}

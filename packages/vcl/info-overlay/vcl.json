@@ -1,0 +1,15 @@
+{
+  "name": "info-overlay",
+  "description": "A general purpose overlay carrying arbitrary information associated with its container",
+  "categories": [
+    {
+      "title": "Overlays",
+      "itemPriority": 80,
+      "priority": 100
+    },
+    {
+      "title": "Info Overlay",
+      "priority": 1
+    }
+  ]
+}

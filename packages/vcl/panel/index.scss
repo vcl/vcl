@@ -1,0 +1,115 @@
+@use "../theme.scss" as *;
+
+.panel {
+  background-color: $panel-bg-color;
+  margin-bottom: $block-elem-vertical-gap;
+  overflow: overlay;
+
+  &.panel-card {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $panel-border-color;
+    border-radius: $panel-border-radius--card;
+  }
+
+  &.panel-dialog {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $gray-light-5;
+
+    &.danger {
+      color: $danger-medium-color;
+    }
+
+    & > .panel-header {
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      border-bottom-width: 0;
+      background-color: $gray-light-5;
+
+      &.no-bg {
+        background-color: transparent;
+      }
+    }
+
+    & > .panel-body {
+      border-width: 0;
+    }
+
+    & > .panel-footer {
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      border-top-width: 0;
+      background-color: $gray-light-5;
+
+      &.no-bg {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.panel-header,
+.panel-footer {
+  display: flex;
+  position: relative;
+  color: $panel-header-color;
+  background-color: $panel-header-bg-color;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  border-color: $panel-border-color;
+}
+
+.panel-header,
+.panel-footer {
+  & > * {
+    margin-left: 0.8rem;
+  }
+
+  & > :last-child {
+    margin-right: 0.8rem;
+  }
+
+  & > .panel-content {
+    margin: 0;
+  }
+}
+
+.panel-footer {
+  border-width: 0;
+  color: $panel-footer-color;
+  background-color: $panel-footer-bg-color;
+}
+
+.panel-title,
+.panel-heading {
+  font-weight: bold;
+  line-height: $panel-hf-line-height;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.96em;
+  color: inherit;
+}
+
+.panel-title {
+  font-size: 1.08em;
+}
+
+.panel-body {
+  border-style: solid;
+  border-width: 1px;
+  border-color: $panel-border-color;
+}
+
+.panel-body > *:first-child {
+  margin-top: 0;
+}
+
+.panel-body > *:last-child {
+  margin-bottom: 0;
+}
+
+.panel-content {
+  padding: 0.8rem 0.8rem;
+  margin-bottom: 0;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@vcl/vcl",
+  "description": "The whole VCL in one package",
+  "version": "1.0.0-alpha.2",
+  "main": "package.json",
+  "style": "dist/index.css",
+  "scss": "index.scss",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.co",
+    "url": "https://www.n-fuse.co"
+  },
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "vcl",
+    "component",
+    "core",
+    "modules",
+    "all",
+    "include"
+  ]
+}

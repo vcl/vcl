@@ -1,0 +1,26 @@
+@use "../theme.scss" as *;
+@use "../mixins.scss";
+@forward "./viewport.scss";
+
+.viewport {
+  margin: 0;
+  min-height: 100vh;
+  background-color: $app-viewport-bg-color;
+}
+
+.viewport-bg {
+  background-color: $app-viewport-bg-color;
+}
+
+.app {
+  background-color: $app-area-bg-color;
+  max-width: $app-area-max-width;
+  min-width: $app-area-min-width;
+  margin-left: auto;
+  margin-right: auto;
+  @include mixins.clearfix;
+}
+
+.layout-width {
+  max-width: $app-area-max-width;
+}

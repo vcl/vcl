@@ -1,0 +1,81 @@
+@use "../theme.scss" as *;
+@use "../button.scss" as *;
+
+.token {
+  box-sizing: border-box;
+  user-select: none;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  line-height: 2.1em;
+  padding: 0;
+  margin-top: 0;
+  margin-right: 0.5em;
+  margin-left: 0;
+  margin-bottom: 0.3em;
+  font-weight: normal;
+  font-size: 95%;
+  white-space: nowrap;
+  border-radius: 0.25em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $token-border-color;
+  color: $token-color;
+  background-color: $token-bg-color;
+
+  & .icogram {
+    line-height: 1;
+  }
+
+  &:empty {
+    display: none;
+  }
+
+  &:hover {
+    border-color: $token-border-hover-color;
+  }
+
+  &.selected {
+    border-color: $token-border-selected-color;
+    background-color: $token-bg-selected-color;
+    color: $token-selected-color;
+  }
+
+  &.highlighted {
+    border-color: $token-border-highlighted-color;
+    background-color: $token-bg-highlighted-color;
+    color: $token-highlighted-color;
+  }
+
+  & .token-label:first-child {
+    margin-left: 0.3em;
+  }
+
+  & .token-label:last-child {
+    margin-right: 0.3em;
+  }
+
+  & .button {
+    padding: 0 0.8em;
+    height: 100%;
+    font-size: 0.8em;
+    min-width: 2em;
+    min-height: 2em;
+    color: $token-remove-button-label-color;
+  }
+}
+
+.token-container {
+  line-height: initial;
+
+  & > .token {
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

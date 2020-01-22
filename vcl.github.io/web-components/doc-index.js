@@ -18,13 +18,13 @@ export default class DocIndex extends PolymerElement {
 
       <app-location route="{{route}}" use-hash-as-path ></app-location>
       <app-route route="{{route}}" pattern=":#page" ></app-route>
-      <div class="vclApp vclVer">
-        <header class="vclToolbar">
+      <div class="app col">
+        <header class="toolbar">
           <doc-topbar title="{{doc.name}}"></doc-topbar>
         </header>
-        <div class="vclContentArea vclHor vclFlex">
-          <doc-nav class="vclVer" items="{{navItems}}" selected-item="{{route.path}}" ></doc-nav>
-          <div class="docContent vclScrollable vclFlex vclMaxH-100p" id="elements">
+        <div class="content-area row flex">
+          <doc-nav class="col" items="{{navItems}}" selected-item="{{route.path}}" ></doc-nav>
+          <div class="docContent scrollable flex max-h-100p" id="elements">
             <doc-content content="[[content]]"></doc-content>
           </div>
         </div>
@@ -79,11 +79,9 @@ export default class DocIndex extends PolymerElement {
       const itemIsDocIndex = item.docgen.docIndex === true;
       if (itemIsCollection || itemIsDocIndex) return undefined;
 
-      const withoutPrefixName = /@vcl\/(.+)/.exec(item.name);
-
       const res = {
         title: item.title || item.name,
-        name: withoutPrefixName[1],
+        name: item.name,
         description: item.description
       };
 

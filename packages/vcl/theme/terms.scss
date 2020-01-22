@@ -1,0 +1,79 @@
+/*
+ * The terms of the VCL default theme.
+ *
+ * Terms are colors, font faces etc.
+ * Typically these terms are derived from CI or design
+ * stipulations like a color palette in a style guide.
+ */
+
+/* Colors */
+$black: black !default;
+$white: white !default;
+
+/* Grays */
+$gray-dark-5: rgb(27,27,27) !default;
+$gray-dark-4: rgb(38,38,38) !default;
+$gray-dark-3: rgb(48,48,48) !default;
+$gray-dark-2: rgb(71,71,71) !default;
+$gray-dark-1: rgb(106,106,106) !default;
+$gray: rgb(119,119,119) !default;
+$gray-light-1: rgb(152,152,152) !default;
+$gray-light-2: rgb(185,185,185) !default;
+$gray-light-3: rgb(221,221,221) !default;
+$gray-light-4: rgb(232,232,232) !default;
+$gray-light-5: rgb(241,241,241) !default;
+$gray-light-6: rgb(255,255,255) !default;
+
+/* Brand Accent Colors */
+$brand-accent-darker: #005f84 !default;
+$brand-accent-dark: #0888bf !default;
+$brand-accent: #00adef !default;
+$brand-accent-light: #96dcfa !default;
+$brand-accent-lighter: #c7d9f1 !default;
+$brand-accent-overlay: hsla(197, 100%, 47%, 0.4) !default;
+
+/* Semantic Brand Colors */
+$brand-primary: #428bca !default;
+$brand-success: #5cb85c !default;
+$brand-info: #5bc0de !default;
+$brand-warning: #f0ad4e !default;
+$brand-danger: #d9534f !default;
+
+/* Shadows, transparencies etc. */
+$glass-1: rgba(0, 0, 0, 0.3) !default;
+$glass-2: rgba(0, 0, 0, 0.15) !default;
+
+/* Semantic Colors */
+$emphasized-dark-color: darken($brand-primary, 25%) !default;
+$emphasized-medium-color: $brand-primary !default;
+$emphasized-light-color: lighten($brand-primary, +30%) !default;
+
+$primary-dark-color: $black !default;
+$primary-medium-color: $gray-dark-2 !default;
+$primary-light-color: $white !default;
+
+$success-dark-color:  darken($brand-success, 25%) !default;
+$success-medium-color: $brand-success !default;
+$success-light-color: lighten($brand-success, +30%) !default;
+
+$info-dark-color: darken($brand-info, 25%) !default;
+$info-medium-color: $brand-info !default;
+$info-light-color: lighten($brand-info, +30%) !default;
+
+$warning-dark-color: darken($brand-warning, 25%) !default;
+$warning-medium-color: $brand-warning !default;
+$warning-light-color: lighten($brand-warning, +30%) !default;
+
+$error-dark-color: darken($brand-danger, 25%) !default;
+$error-medium-color: $brand-danger !default;
+$error-light-color: lighten($brand-danger, +30%) !default;
+
+$danger-dark-color: darken($brand-danger, 25%) !default;
+$danger-medium-color: $brand-danger !default;
+$danger-light-color: lighten($brand-danger, +30%) !default;
+
+/* Fonts
+ * ===== */
+$font-family-theme: "Helvetica Neue", Arial, "Lucida Grande", sans-serif !default;
+$font-family-serif-theme: Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace-theme: Menlo, Monaco, Consolas, "Courier New", monospace !default;

@@ -1,0 +1,11 @@
+{
+  "name": "form-control-label",
+  "description": "Labels to describe form controls",
+  "categories": [
+    {
+      "title": "Form Controls",
+      "itemPriority": 20,
+      "priority": 70
+    }
+  ]
+}

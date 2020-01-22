@@ -1,0 +1,11 @@
+{
+  "name": "embedded-input-button",
+  "description": "Buttons, icons and plain text labels embeddable in text input elements",
+  "categories": [
+    {
+      "title": "Form Controls",
+      "itemPriority": 60,
+      "priority": 70
+    }
+  ]
+}

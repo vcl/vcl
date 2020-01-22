@@ -1,0 +1,11 @@
+{
+  "name": "tab-nav",
+  "description": "List of navigation items arranged as tabs",
+  "categories": [
+    {
+      "title": "Navigations",
+      "itemPriority": 40,
+      "priority": 50
+    }
+  ]
+}

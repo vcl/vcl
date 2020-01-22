@@ -1,0 +1,11 @@
+{
+  "name": "token",
+  "description": "A atomic input element that can be interacted upon",
+  "categories": [
+    {
+      "title": "Form Controls",
+      "itemPriority": 120,
+      "priority": 70
+    }
+  ]
+}

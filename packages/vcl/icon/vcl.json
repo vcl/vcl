@@ -1,0 +1,11 @@
+{
+  "name": "icon",
+  "description": "Icon",
+  "categories": [
+    {
+      "title": "Icons",
+      "itemPriority": 10,
+      "priority": 140
+    }
+  ]
+}

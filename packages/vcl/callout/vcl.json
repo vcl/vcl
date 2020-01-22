@@ -1,0 +1,11 @@
+{
+  "name": "callout",
+  "description": "Unobtrusive hints usually found in documentations or factual books",
+  "categories": [
+    {
+      "title": "Containers",
+      "itemPriority": 50,
+      "priority": 40
+    }
+  ]
+}

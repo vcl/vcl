@@ -7,30 +7,30 @@ export default class DocDemo extends PolymerElement {
     <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <div id="docDemo">
-      <div class="vclTabbable">
-        <div class="vclTabs vclTabStyleUni" role="tablist">
-          <div class$="vclTab  {{getDemoTabClass(codeVisible)}}"  on-click="showDemo" role="tab">
-            <span class="vclTabLabel vclIcon fas fa-eye"></span>
-            <span class="vclTabLabel">Demo</span>
+      <div class="tabbable">
+        <div class="tabs tab-style-uni" role="tablist">
+          <div class$="tab  {{getDemoTabClass(codeVisible)}}"  on-click="showDemo" role="tab">
+            <span class="tabLabel icon fas fa-eye"></span>
+            <span class="tabLabel">Demo</span>
           </div>
-          <div class$="vclTab {{getCodeTabClass(codeVisible)}}" on-click="showCode" role="tab">
-            <span class="vclTabLabel vclIcon fas fa-code"></span>
-            <span class="vclTabLabel">Code</span>
+          <div class$="tab {{getCodeTabClass(codeVisible)}}" on-click="showCode" role="tab">
+            <span class="tabLabel icon fas fa-code"></span>
+            <span class="tabLabel">Code</span>
           </div>
 
-          <form class$="docEditDemoButton vclHalfTransparent {{getCodeTextClass(codeVisible)}}" action="https://codepen.io/pen/define" method="POST" target="_blank">
+          <form class$="docEditDemoButton half-transparent {{getCodeTextClass(codeVisible)}}" action="https://codepen.io/pen/define" method="POST" target="_blank">
             <input type="hidden" name="data" value$="{{codePen}}">
-            <button class="vclButton vclHalfTransparent">
-              <div class="vclIcogram">
-                <div class="vclIcon fab fa-codepen" aria-hidden="true" role="img"></div>
-                <span class="vclText">Edit on CodePen</span>
+            <button class="button half-transparent">
+              <div class="icogram">
+                <div class="icon fab fa-codepen" aria-hidden="true" role="img"></div>
+                <span class="text">Edit on CodePen</span>
               </div>
             </button>
           </form>
         </div>
-        <div class="vclTabContent">
-          <div on-click="demoClick" id="ninja" name="ninja" role="tabpanel" class$="vclTabPanel docDemoContent vclTransparent shadow {{getDemoClass(codeVisible)}}"></div>
-          <div role="tabpanel" class$="vclTabPanel code {{getCodeTextClass(codeVisible)}}">
+        <div class="tab-content">
+          <div on-click="demoClick" id="ninja" name="ninja" role="tabpanel" class$="tab-panel docDemoContent transparent shadow {{getDemoClass(codeVisible)}}"></div>
+          <div role="tabpanel" class$="tab-panel code {{getCodeTextClass(codeVisible)}}">
             <pre ref="source" name="source">[[markdown]]</pre>
           </div>
         </div>
@@ -79,19 +79,19 @@ export default class DocDemo extends PolymerElement {
   }
 
   getCodeTextClass(codeVisible) {
-    return !codeVisible ? 'vclHide' : '';
+    return !codeVisible ? 'hide' : '';
   }
 
   getDemoClass(codeVisible) {
-    return codeVisible ? 'vclHide' : '';
+    return codeVisible ? 'hide' : '';
   }
 
   getDemoTabClass(codeVisible) {
-    return !codeVisible ? 'vclSelected' : '';
+    return !codeVisible ? 'selected' : '';
   }
 
   getCodeTabClass(codeVisible) {
-    return codeVisible ? 'vclSelected' : '';
+    return codeVisible ? 'selected' : '';
   }
 
   showCode() {
@@ -103,7 +103,7 @@ export default class DocDemo extends PolymerElement {
   }
   removeBodyProps(styles){
     const cleanStyles = styles.replace(/body {([\s\S]*?)}/g, '')
-    .replace(/.vclViewport {([\s\S]*?)}/g, '');
+    .replace(/.viewport {([\s\S]*?)}/g, '');
     return cleanStyles
 
   }

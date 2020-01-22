@@ -1,0 +1,29 @@
+@use "../container.scss" as *;
+@use "../typography.scss" as *;
+@use "../utils.scss" as *;
+@use "../button.scss" as *;
+@use "../theme.scss" as *;
+@use "./index.scss";
+
+.demo > .high {
+  height: 10em;
+}
+
+.demo > .veryhigh {
+  height: 20em;
+}
+
+.demo > * > * {
+  background-color: rgba(58, 45, 79, 0.2);
+  border: 1px solid #000;
+}
+
+.demo > * > * > .democontent {
+  padding: 5px;
+}
+
+.demo-grid-gutter > * > * > .demo-grid-gutter-content {
+  padding: 5px;
+  background-color: rgba(58, 45, 79, 0.2);
+  border: 1px solid #000;
+}

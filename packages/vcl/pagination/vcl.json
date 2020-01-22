@@ -1,0 +1,11 @@
+{
+  "name": "pagination",
+  "description": "Random access to pages via links and directional controls to navigate through paged content",
+  "categories": [
+    {
+      "title": "Navigations",
+      "itemPriority": 20,
+      "priority": 50
+    }
+  ]
+}

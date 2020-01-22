@@ -1,0 +1,48 @@
+@use "../theme.scss" as *;
+@use "../icon.scss" as *;
+
+.radio-button {
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+
+  & > .form-control-label {
+    display: inline-block;
+  }
+
+  & > .icon {
+    color: $radio-button-color;
+    display: inline-block;
+    min-width: 1.5em;
+    text-align: center;
+    padding-right: 0.4em;
+    padding-left: 0.4em;
+    font-size: $radio-button-icon-size;
+  }
+
+  &:hover {
+    & > .icon {
+      color: $radio-button-hover-color;
+    }
+  }
+
+  &:focus {
+    & > .icon {
+      color: $radio-button-focus-color;
+    }
+  }
+
+  &.disabled {
+    & > .icon {
+      color: $radio-button-disabled-color;
+    }
+  }
+}
+
+.form-control-label:hover {
+  & .radio-button:not(.disabled) {
+    & .icon {
+      color: $radio-button-focus-color;
+    }
+  }
+}

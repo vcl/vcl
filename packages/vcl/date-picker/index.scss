@@ -1,0 +1,27 @@
+@use "../theme.scss" as *;
+@use "../toolbar.scss" as *;
+@use "../button.scss" as *;
+@use "../calendar.scss" as *;
+@use "../data-grid.scss" as *;
+@use "../icogram.scss" as *;
+@use "../icon.scss" as *;
+
+.date-picker {
+  display: block;
+  box-sizing: border-box;
+  min-width: 18em;
+  margin: 0;
+  padding: 0;
+  border-color: $date-picker-border-color;
+  border-width: 1px;
+  border-style: solid;
+  background-color: $date-picker-bg-color;
+
+  & .toolbar .button-dim {
+    min-width: 3em;
+  }
+
+  & .calendar {
+    margin-bottom: 0;
+  }
+}

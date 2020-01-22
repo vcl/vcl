@@ -1,0 +1,50 @@
+@use "../theme.scss" as *;
+
+/* For whatever reason, they need to be separate */
+
+input:-ms-input-placeholder {
+  color: $input-text-placeholder-color;
+  font-style: $input-text-placeholder-font-style;
+}
+
+textarea:-ms-input-placeholder {
+  color: $input-text-placeholder-color;
+  font-style: $input-text-placeholder-font-style;
+}
+
+.vclInput:-ms-placeholder {
+  color: $input-text-placeholder-color;
+  font-style: $input-text-placeholder-font-style;
+}
+
+input::-moz-placeholder {
+  color: $input-text-placeholder-color;
+  font-style: $input-text-placeholder-font-style;
+}
+
+textarea::-moz-placeholder {
+  color: $input-text-placeholder-color;
+  font-style: $input-text-placeholder-font-style;
+}
+
+.vclInput::-moz-placeholder {
+  color: $input-text-placeholder-color;
+  font-style: $input-text-placeholder-font-style;
+}
+
+*::-webkit-input-placeholder {
+  color: $input-text-placeholder-color;
+  font-style: $input-text-placeholder-font-style;
+}
+
+.vclInput::-webkit-input-placeholder {
+  color: $input-text-placeholder-color;
+  font-style: $input-text-placeholder-font-style;
+}
+
+input::placeholder,
+textarea::placeholder,
+.vclInput::placeholder {
+  color: $input-text-placeholder-color;
+  font-style: $input-text-placeholder-font-style;
+}

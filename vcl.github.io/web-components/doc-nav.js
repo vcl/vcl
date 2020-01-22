@@ -12,9 +12,9 @@ export default class DocNav extends PolymerElement {
     return html`
     <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <div class="vclInputGroupEmb" style="margin-bottom: 0">
-          <span class="vclPrepended">
-              <div class="vclIcon fas fa-search"></div>
+        <div class="input-group-emb" style="margin-bottom: 0">
+          <span class="prepended">
+              <div class="icon fas fa-search"></div>
           </span>
           <input
               type="search"
@@ -23,33 +23,33 @@ export default class DocNav extends PolymerElement {
               on-input="searchUpdate"
               on-keydown="searchKey"
               placeholder="Search Modules"
-              class="vclInput vclNoBorder vclPrepItem vclAppItem searchInput"
+              class="input no-border prep-item app-item searchInput"
               value=""
               autocomplete="off"
               autofocus />
-          <button on-click="clearSearch" class$="vclButton vclTransparent vclSquare vclAppended {{getDisplayNoneClearBtn(searchedText)}} ">
-              <div class="vclIcogram">
-              <div class="vclIcon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
+          <button on-click="clearSearch" class$="button transparent square appended {{getDisplayNoneClearBtn(searchedText)}} ">
+              <div class="icogram">
+              <div class="icon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
               </div>
           </button>
         </div>
-        <nav class="docNav vclNavigation vclVertical vclVer vclFlex vclScrollable vclYOnHover">
+        <nav class="docNav navigation vertical col flex scrollable y-on-hover">
             <template is="dom-if" if="[[!searchedText]]">
             <ul id="nav-items">
               <template is="dom-repeat" items="{{groupedOnCategories}}" as="category">
 
-                <li on-click="toggleCathegory" role="presentation" class="vclNavigationItem docNavHeading" >
-                  <span style="font-weight: bold;"  class="vclNavigationItemLabel vclIcogram" href="#">
-                    <span class$="vclIcon fas {{getCathegoryClass(index,openedCathegories)}}" aria-hidden="true" aria-label="angle-right" role="img"></span>
+                <li on-click="toggleCathegory" role="presentation" class="navigation-item docNavHeading" >
+                  <span style="font-weight: bold;"  class="navigation-item-label icogram" href="#">
+                    <span class$="icon fas {{getCathegoryClass(index,openedCathegories)}}" aria-hidden="true" aria-label="angle-right" role="img"></span>
                     <span>[[category.title]]</span>
                   </span>
                 </li>
                 <template is="dom-if" if="[[getCathegoryIsOpen(index,openedCathegories)]]">
-                  <div class="vclAnimContainer" >
+                  <div class="anim-container" >
                     <template is="dom-repeat" items="{{category.items}}" as="item">
-                      <li class$="vclNavigationItem docNavItem {{getSelectedClass(item.name,selectedItem)}}" role="presentation">
-                      <a class="vclNavigationItemLabel vclIcogram"  href$="#{{item.name}}">
-                        <span class="vclText">[[item.title]]</span>
+                      <li class$="navigation-item docNavItem {{getSelectedClass(item.name,selectedItem)}}" role="presentation">
+                      <a class="navigation-item-label icogram"  href$="#{{item.name}}">
+                        <span class="text">[[item.title]]</span>
                       </a>
                       </li>
                     </template>
@@ -61,11 +61,11 @@ export default class DocNav extends PolymerElement {
             </template>
 
             <template is="dom-if" if="[[searchedText]]">
-              <ul class="vclScrollable vclYOnHover vclFlex"id="nav-items">
+              <ul class="scrollable y-on-hover flex"id="nav-items">
                 <template is="dom-repeat" items="{{searchResults}}" as="item">
-                  <li class$="vclNavigationItem {{getSelectedClass(item.name,selectedItem)}}" role="presentation">
-                    <a class="vclNavigationItemLabel vclIcogram"  href$="#{{item.name}}" >
-                      <span class="vclText">[[item.title]]</span>
+                  <li class$="navigation-item {{getSelectedClass(item.name,selectedItem)}}" role="presentation">
+                    <a class="navigation-item-label icogram"  href$="#{{item.name}}" >
+                      <span class="text">[[item.title]]</span>
                     </a>
                   </li>
                 </template>
@@ -114,7 +114,7 @@ export default class DocNav extends PolymerElement {
       const searchResults = cats.filter((cat) => {
         const { title, description } = cat;
         const lowerCaseText = searchedText.toLowerCase()
-        const descriptionMatchesSearch = description.toLowerCase().indexOf(lowerCaseText) >= 0;
+        const descriptionMatchesSearch = description ? description.toLowerCase().indexOf(lowerCaseText) >= 0 : false;
         const titleMatchesSearch = title.toLowerCase().indexOf(lowerCaseText) >= 0;
         return descriptionMatchesSearch || titleMatchesSearch;
       }).sort((a, b) => a.itemPriority - b.itemPriority);
@@ -145,7 +145,7 @@ export default class DocNav extends PolymerElement {
   }
 
   getSelectedClass(itemName, selectedItem) {
-    return itemName === selectedItem ? 'vclSelected' : '';
+    return itemName === selectedItem ? 'selected' : '';
   }
 
   getCathegoryClass(index, openedCathegories) {
@@ -153,7 +153,7 @@ export default class DocNav extends PolymerElement {
   }
 
   getDisplayNoneClearBtn(searchedText) {
-    return !searchedText ? 'vclHide' : '';
+    return !searchedText ? 'hide' : '';
   }
 
   getCathegoryIsOpen(index, openedCathegories) {

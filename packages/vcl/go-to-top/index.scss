@@ -1,0 +1,15 @@
+@use "../theme.scss" as *;
+
+.go-to-top {
+  position: fixed;
+  bottom: 1em;
+  color: $gototop-color;
+  background-color: $gototop-bg-color;
+  border-radius: 0.25em;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

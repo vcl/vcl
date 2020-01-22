@@ -11,73 +11,73 @@ export default class DocMetadata extends PolymerElement {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <div class="docMetadataControls">
-    <button on-click="toggle" class="vclButton vclHalfTransparent" type="button" name="button" title="Package information">
-      <div class="vclIcogram">
+    <button on-click="toggle" class="button half-transparent" type="button" name="button" title="Package information">
+      <div class="icogram">
         <template is="dom-if" if="{{hidden}}">
-          <span class="vclIcon fas fa-chevron-left"></span>
+          <span class="icon fas fa-chevron-left"></span>
         </template >
         <template is="dom-if" if="{{!hidden}}">
-          <span class="vclIcon fas fa-chevron-right"></span>
+          <span class="icon fas fa-chevron-right"></span>
         </template >
-        <span class="vclIcon fas fa-info"></span>
+        <span class="icon fas fa-info"></span>
       </div>
     </button>
   </div>
-  <aside class$="vclDataList docMetadata {{getHidenCLass(hidden)}}">
-    <header class="vclDataListHeader vclP-0">
+  <aside class$="data-list docMetadata {{getHidenCLass(hidden)}}">
+    <header class="data-list-header p-0">
       <h3>Package Information</h3>
     </header>
-    <ul class="vclDataListBody" role="listbox">
-      <li class="vclDataListItem vclHor vclJustifyBetween">
-        <span class="vclGridSpan-gcb" role="gridcell"><b>Name</b></span>
-        <span class="vclGridSpan-gca" role="gridcell">[[package.name]]</span>
+    <ul class="data-list-body" role="listbox">
+      <li class="data-list-item row justify-between">
+        <span class="w-gcb" role="gridcell"><b>Name</b></span>
+        <span class="w-gca" role="gridcell">[[package.name]]</span>
       </li>
       <template is="dom-if" if="{{package.repository}}">
-        <li class="vclDataListItem vclHor vclJustifyBetween" >
-          <span class="vclGridSpan-gcb" role="gridcell"><b>Repository</b></span>
-          <span class="vclGridSpan-gca" role="gridcell">
+        <li class="data-list-item row justify-between" >
+          <span class="w-gcb" role="gridcell"><b>Repository</b></span>
+          <span class="w-gca" role="gridcell">
             <a href=[[pack.repository]] target="_blank">[[package.repository.url]]</a>
           </span>
         </li>
       </template>
       <template is="dom-if" if="{{package.author}}">
-        <li class="vclDataListItem vclHor vclJustifyBetween" >
-          <span class="vclGridSpan-gcb" role="gridcell"><b>Author</b></span>
-          <span class="vclGridSpan-gca" role="gridcell">[[package.author.name]]</span>
+        <li class="data-list-item row justify-between" >
+          <span class="w-gcb" role="gridcell"><b>Author</b></span>
+          <span class="w-gca" role="gridcell">[[package.author.name]]</span>
         </li>
       </template>
       <template is="dom-if" if="{{package.version}}">
-      <li class="vclDataListItem vclHor vclJustifyBetween" >
-        <span class="vclGridSpan-gcb" role="gridcell"><b>Version</b></span>
-        <span class="vclGridSpan-gca" role="gridcell">[[package.version]]</span>
+      <li class="data-list-item row justify-between" >
+        <span class="w-gcb" role="gridcell"><b>Version</b></span>
+        <span class="w-gca" role="gridcell">[[package.version]]</span>
       </li>
       </template>
       <template is="dom-if" if="{{package.license}}">
-        <li class="vclDataListItem vclHor vclJustifyBetween" >
-          <span class="vclGridSpan-gcb" role="gridcell"><b>License</b></span>
-          <span class="vclGridSpan-gca" role="gridcell">[[package.license]]</span>
+        <li class="data-list-item row justify-between" >
+          <span class="w-gcb" role="gridcell"><b>License</b></span>
+          <span class="w-gca" role="gridcell">[[package.license]]</span>
         </li>
       </template>
       <template is="dom-if" if="{{false}}">
-        <li class="vclDataListItem vclHor vclJustifyBetween" >
-          <span class="vclGridSpan-gcb" role="gridcell"><b>Aprox. size</b></span>
-          <span class="vclGridSpan-gca" role="gridcell">2kb</span>
+        <li class="data-list-item row justify-between" >
+          <span class="w-gcb" role="gridcell"><b>Aprox. size</b></span>
+          <span class="w-gca" role="gridcell">2kb</span>
         </li>
       </template>
       <template is="dom-if" if="{{package.docgen}}">
-      <li class="vclDataListItem vclHor vclJustifyBetween" >
-        <span class="vclGridSpan-gcb" role="gridcell"><b>Categories</b></span>
-        <span class="vclGridSpan-gca" role="gridcell">
+      <li class="data-list-item row justify-between" >
+        <span class="w-gcb" role="gridcell"><b>Categories</b></span>
+        <span class="w-gca" role="gridcell">
         <template is="dom-repeat"  items="{{package.docgen.categories}}" as="category">
-          <span class="vclBadge">[[category.title]]</span>
+          <span class="badge">[[category.title]]</span>
         </template>
         </span>
       </li>
       </template>
       <template is="dom-if" if="{{false}}">
         <li >
-          <span class="vclGridSpan-gcb" role="gridcell"><b>Description</b></span>
-          <span class="vclGridSpan-gca" role="gridcell">[[package.description]]</span>
+          <span class="w-gcb" role="gridcell"><b>Description</b></span>
+          <span class="w-gca" role="gridcell">[[package.description]]</span>
         </li>
       </template>
     </ul>
@@ -102,7 +102,7 @@ export default class DocMetadata extends PolymerElement {
   }
 
   getHidenCLass(hidden) {
-    return hidden ? 'vclHide' : '';
+    return hidden ? 'hide' : '';
   }
 }
 

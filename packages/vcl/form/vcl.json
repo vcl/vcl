@@ -1,0 +1,11 @@
+{
+  "name": "form",
+  "description": "Basic form layout variants and arrangement of form elements with labels",
+  "categories": [
+    {
+      "title": "Forms",
+      "itemPriority": 10,
+      "priority": 60
+    }
+  ]
+}

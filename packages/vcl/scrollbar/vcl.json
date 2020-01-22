@@ -1,0 +1,11 @@
+{
+  "name": "scrollbar",
+  "description": "Styling of native browser scrollbars",
+  "categories": [
+    {
+      "title": "Overlays",
+      "itemPriority": 60,
+      "priority": 100
+    }
+  ]
+}

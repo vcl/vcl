@@ -1,0 +1,11 @@
+{
+  "name": "pager",
+  "description": "Previous and next links to directionally navigate through paged content",
+  "categories": [
+    {
+      "title": "Navigations",
+      "itemPriority": 10,
+      "priority": 50
+    }
+  ]
+}

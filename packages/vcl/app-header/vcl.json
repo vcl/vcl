@@ -1,0 +1,11 @@
+{
+  "name": "app-header",
+  "description": "The area on the top of an app, usually containing a brand mark and the main navigation",
+  "categories": [
+    {
+      "title": "Areas",
+      "itemPriority": 30,
+      "priority": 30
+    }
+  ]
+}

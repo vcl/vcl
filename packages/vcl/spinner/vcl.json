@@ -1,0 +1,11 @@
+{
+  "name": "spinner",
+  "description": "Spinner based input for integer values",
+  "categories": [
+    {
+      "title": "Form Controls",
+      "itemPriority": 80,
+      "priority": 70
+    }
+  ]
+}

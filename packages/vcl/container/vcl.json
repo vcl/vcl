@@ -1,0 +1,11 @@
+{
+  "name": "container",
+  "description": "A visually differentiated container element",
+  "categories": [
+    {
+      "title": "Containers",
+      "itemPriority": 10,
+      "priority": 40
+    }
+  ]
+}

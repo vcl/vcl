@@ -1,0 +1,11 @@
+{
+  "name": "date-picker",
+  "description": "Lets users pick dates and points in time comfortably",
+  "categories": [
+    {
+      "title": "Form Controls",
+      "itemPriority": 70,
+      "priority": 70
+    }
+  ]
+}

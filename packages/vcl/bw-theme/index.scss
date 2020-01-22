@@ -1,0 +1,65 @@
+/**
+* The VCL BW theme.
+*
+* It defines all variables required to be set by the modules included in
+* the 'core-modules' module and narrows them down to a small set
+* of variables required.
+*/
+
+@use "../theme.scss" as *;
+
+/* Colors
+  ====== */
+
+/* Brand Accent Colors */
+$brand-accent-darker: #000;
+$brand-accent-dark: #000;
+$brand-accent: #000;
+$brand-accent-light: $gray-dark-1;
+$brand-accent-lighter: $gray-dark-3;
+
+
+/* BW theme variable overrides */
+
+$button-bg-color: $black;
+$button-bg-selected-color: $gray-dark-1;
+$button-bg-hover-color: $gray-dark-1;
+
+$app-viewport-bg-color: $white;
+$app-area-max-width: 1260px;
+
+$typography-link-color: $gray-dark-2;
+$typography-link-color-hover: $brand-accent-darker;
+$typography-link-text-decoration: underline;
+$typography-selected-text-bg-color: $gray-light-2;
+
+$navigation-item-1st-level-bg-color: transparent;
+$navigation-item-1st-level-color: $gray-dark-1;
+$navigation-item-1st-level-hover-bg-color: $black;
+$navigation-item-1st-level-hover-color: $white;
+$navigation-item-1st-level-selected-bg-color: $black;
+$navigation-item-1st-level-selected-color: $white;
+
+$tree-nav-item-color: $gray;
+$tree-nav-selected-item-bg-color: $white;
+$tree-nav-border-color: $black;
+$tree-nav-selected-item-color: $black;
+$tree-nav-item-hover-color: $black;
+$tree-nav-item-hover-bg-color: $white;
+
+$loading-layer-cover-bg-color: rgba(255, 255, 255, 0.88);
+$layer-cover-bg-color: rgba(0, 0, 0, 0.10);
+
+$gallery-bg-color: $white;
+$gallery-border-color: $black;
+$gallery-header-color: $black;
+$gallery-footer-color: $black;
+$gallery-header-bg-color: $white;
+$gallery-footer-bg-color: $white;
+$gallery-selected-thumbnail-border-color: $black;
+$gallery-initial-buttons-opacity: 1;
+
+$data-list-item-selected-color: $black;
+$data-list-item-bg-selected-color: #D6D6D6;
+$data-list-item-bg-hover-color: #D6D6D6;
+

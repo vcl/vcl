@@ -1,0 +1,11 @@
+{
+  "name": "panel",
+  "description": "Container element to group and highlight content",
+  "categories": [
+    {
+      "title": "Containers",
+      "itemPriority": 20,
+      "priority": 40
+    }
+  ]
+}

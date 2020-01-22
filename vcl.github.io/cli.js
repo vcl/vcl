@@ -5,7 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const debug = require('debug')('vcl-docgen:cli');
 const marked = require('marked');
-const vcl = require('../tools/preprocessor');
+const sass = require('sass');
 
 const yargs = require('yargs')
   .help('help')
@@ -44,15 +44,62 @@ if (verbose) {
   debug.enabled = true;
 }
 
+const sassOptions = {
+  includePaths: [baseModuleFolder],
+  importer: (url, prev, done) => {
+    if (url[0] === '~') {
+      url = path.resolve(process.cwd(), 'node_modules', url.substr(1));
+    }
+    return { file: url };
+  }
+};
+
+const render = (data) => {
+  return new Promise((resolve, reject) => {
+    sass.render({
+      data,
+      ...sassOptions
+    }, function(error, result) {
+      try {
+        if(!error){
+          resolve(result);
+        } else {
+          console.error(error);
+          reject(error);
+        }
+      } catch(ex) {
+        console.error(ex);
+        reject(ex);
+      }
+    });
+  });
+}
+
 (async () => {
   try {
+    await new Promise((resolve, reject) => {
+      sass.render({
+        file: 'styles.scss',
+        sourceMap: false,
+        ...sassOptions
+      }, ((err, result) => {
+        if (err) {
+          console.error(err);
+          reject(err);
+        } else { 
+          fs.writeFileSync('styles.css', result.css);
+          resolve();
+        }
+      }));
+    });
+
     debug('using module folder', baseModuleFolder);
 
     const moduleFolders = getModuleFolders(baseModuleFolder);
 
     let docPackage;
     if (docFolder) {
-      docPackage = await getPackageJson(path.join(root, docFolder));
+      docPackage = await getMeta(path.join(root, docFolder));
     }
 
     if (!Array.isArray(moduleFolders) || moduleFolders.length === 0) {
@@ -60,8 +107,13 @@ if (verbose) {
     };
 
     const packages = moduleFolders.reduce((packages, moduleFolder) => {
-      const json = getPackageJson(moduleFolder);
-      if (json.vcl === undefined || packages.some(pkg => pkg.name === json.name )) {
+      const json = getMeta(moduleFolder);
+
+      if (!json) {
+        return packages;
+      }
+
+      if (packages.some(pkg => pkg.name === json.name )) {
         return packages;
       }
       return [...packages, json];
@@ -106,14 +158,21 @@ if (verbose) {
   }
 })();
 
-function getPackageJson(modulePath) {
+function getMeta(modulePath) {
   debug('gettings package.json from %s', modulePath);
   // get module information
-  const modulePkgFilePath = path.resolve(modulePath, 'package.json');
+  const modulePkgFilePath = path.resolve(modulePath, 'vcl.json');
+  
+  if (!fs.existsSync(modulePkgFilePath)) {
+    return undefined;
+  }
 
-  const pkg = JSON.parse(fs.readFileSync(modulePkgFilePath, 'utf8'));
-  pkg.basePath = modulePath + '/';
-  return pkg;
+  const vcl = JSON.parse(fs.readFileSync(modulePkgFilePath, 'utf8'));
+  return {
+    name: vcl.name,
+    basePath: modulePath + '/',
+    vcl
+  };
 };
 
 async function fetchPackage(pack) {
@@ -125,16 +184,16 @@ async function fetchPackage(pack) {
 
   const basePath = pack.basePath;
 
-  if (pack.vcl === undefined) {
+  if (!pack) {
     debug('WARN: non vcl package passed!');
     return;
   }
 
   const readmeFile = path.resolve(basePath, 'README.md')
-
+  
   const readme = fs.existsSync(readmeFile) ? fs.readFileSync(readmeFile) : undefined;
-
-  const styleFile = pack.demoStyle || pack.style;
+  
+  const styleFile = fs.existsSync(path.resolve(basePath, 'demo.scss')) ? 'demo.scss' : undefined;
 
   // TODO: cleanup - filter and add
   var docPart = {
@@ -142,7 +201,7 @@ async function fetchPackage(pack) {
     basePath,
     styleFile,
     // fullPath: path.resolve(basePath, pack.style),
-    docgen: pack['vcl'] || {},
+    docgen: pack.vcl || {},
     dependencies: pack.dependencies,
     devDependencies: pack.devDependencies,
     readme,
@@ -198,7 +257,7 @@ async function renderPart(docPart) {
     if (result !== null && result.length > 0) {
       var exPath = docPart.basePath + result[2];
       var key = path.basename(exPath, '.html');
-      obj.text = '<div class="demo vclPanel" id="demo-' + key + '"></div>';
+      obj.text = '<div class="demo panel" id="demo-' + key + '"></div>';
 
       docPart.demos[key] = fs.readFileSync(exPath, 'utf8');
     }
@@ -211,32 +270,25 @@ async function renderPart(docPart) {
 
   docPart.readme = parsed;
 
-  var fallbackTitle = /@vcl\/(.+)/.exec(docPart.name);
-
   const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
-
-  if (fallbackTitle.length >= 2){
-    fallbackTitle = capitalize(fallbackTitle[1]);
-  } else {
-    fallbackTitle = capitalize(docPart.name);
-  }
-  docPart.title = docPart.vcl.title || fallbackTitle;
+  docPart.title = capitalize(docPart.name);
 
   if (docPart.styleFile) {
 
-    const sss = `@import "${docPart.name}/${docPart.styleFile}"`;
+    const data = `@import "${docPart.name}/${docPart.styleFile}";`;
 
-    debug('preprocessing %s with import %s', docPart.name, sss);
+    debug('preprocessing %s with import %s', docPart.name);
 
-    const result = await vcl(sss, {
-      root: process.cwd(),
-      vclRoot: baseModuleFolder
-    });
+    debug(data);
 
-    docPart.style = result.css || '';
+    const result = await render(data);
+
+    docPart.style = result.css.toString() || '';
   } else if (!docPart.styleFile) {
     docPart.style = '';
   }
+
+
   return docPart;
 };
 

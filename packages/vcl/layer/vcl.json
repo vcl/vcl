@@ -1,0 +1,11 @@
+{
+  "name": "layer",
+  "description": "Show content or dialogs on top of the current view",
+  "categories": [
+    {
+      "title": "Overlays",
+      "itemPriority": 30,
+      "priority": 100
+    }
+  ]
+}

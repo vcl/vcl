@@ -1,0 +1,11 @@
+{
+  "name": "calendar",
+  "description": "Calendar to display and select dates",
+  "categories": [
+    {
+      "title": "Tabular Data",
+      "itemPriority": 50,
+      "priority": 90
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+@use "../theme.scss" as *;
+@use "../breakpoints.scss" as *;
+
+/* flexbox based layout primitives */
+.row, .col {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  &.no-wrap {
+    flex-wrap: nowrap;
+  }
+
+  &.wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  &.inline {
+    display: inline-flex;
+  }
+
+  & > * {
+    box-sizing: border-box;
+  }
+}
+
+/* alignment in cross axis */
+.row, .col {
+  &.start {
+    align-items: flex-start;
+  }
+
+  &.center {
+    align-items: center;
+  }
+
+  &.end {
+    align-items: flex-end;
+  }
+}
+
+/* alignment in main axis */
+.row, .col {
+  &.justify-start {
+    justify-content: flex-start;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.justify-end {
+    justify-content: flex-end;
+  }
+
+  &.justify-around {
+    justify-content: space-around;
+  }
+
+  &.justify-evenly {
+    justify-content: space-evenly;
+  }
+
+  &.justify-between {
+    justify-content: space-between;
+  }
+}
+
+.row {
+  flex-direction: row;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.col {
+  flex-direction: column;
+
+  &.reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+/* self alignment */
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-stretch {
+  align-self: stretch;
+}

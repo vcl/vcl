@@ -1,0 +1,104 @@
+@use "../theme.scss" as *;
+
+[class^="span-"],
+[class*=" span-"] {
+  box-sizing: border-box;
+}
+
+.span-5p {
+  width: 5%;
+}
+
+.span-10p {
+  width: 10%;
+}
+
+.span-15p {
+  width: 15%;
+}
+
+.span-20p {
+  width: 20%;
+}
+
+.span-25p {
+  width: 25%;
+}
+
+.span-30p {
+  width: 30%;
+}
+
+.span-33p {
+  width: 33.333%;
+}
+
+.span-35p {
+  width: 35%;
+}
+
+.span-40p {
+  width: 40%;
+}
+
+.span-45p {
+  width: 45%;
+}
+
+.span-50p {
+  width: 50%;
+}
+
+.span-55p {
+  width: 55%;
+}
+
+.span-60p {
+  width: 60%;
+}
+
+.span-65p {
+  width: 65%;
+}
+
+.span-70p {
+  width: 70%;
+}
+
+.span-75p {
+  width: 75%;
+}
+
+.span-80p {
+  width: 80%;
+}
+
+.span-85p {
+  width: 85%;
+}
+
+.span-90p {
+  width: 90%;
+}
+
+.span-95p {
+  width: 95%;
+}
+
+.span-100p {
+  width: 100%;
+}
+
+.span-v-100p {
+  height: 100%;
+}
+
+/* golden cut */
+
+.span-gcb {
+  width: 38.2%;
+}
+
+.span-gca {
+  width: 61.8%;
+}

@@ -1,0 +1,107 @@
+@use "../theme.scss" as *;
+
+.notification {
+  overflow: hidden;
+  border-width: 0;
+  border-radius: $notification-border-radius;
+  border-style: solid;
+  border-color: $notification-color;
+  color: $notification-color;
+  background-color: $notification-bg-color;
+  margin-bottom: $block-elem-vertical-gap;
+
+  & .notification-icon-container {
+    padding: 1em;
+    padding-right: 0.3em;
+
+    & .notification-icon {
+      font-size: 2em;
+    }
+  }
+
+  & .notification-header {
+    min-height: 2.5em;
+    padding: 0 0.8em;
+    background-color: $notification-hf-bg-color;
+    color: $notification-hf-color;
+
+    & .button {
+      color: inherit;
+    }
+  }
+
+  & .notification-content {
+    margin: 0;
+    padding: 0.8em;
+    position: relative;
+    word-wrap: break-word;
+  }
+
+  & .notification-footer {
+    min-height: 2.5em;
+    margin-bottom: 0;
+    padding: 0 0.8em;
+  }
+}
+
+.notification {
+  &.success {
+    color: $notification-success-color;
+    background-color: $notification-success-bg-color;
+    border-color: $notification-success-color;
+
+    & .notification-header {
+      background-color: $notification-success-hf-bg-color;
+      color: $notification-success-hf-color;
+    }
+
+    & .notification-icon {
+      color: $notification-success-color;
+    }
+  }
+
+  &.info {
+    color: $notification-info-color;
+    background-color: $notification-info-bg-color;
+    border-color: $notification-info-color;
+
+    & .notification-header {
+      background-color: $notification-info-hf-bg-color;
+      color: $notification-info-hf-color;
+    }
+
+    & .notification-icon {
+      color: $notification-info-color;
+    }
+  }
+
+  &.warning {
+    color: $notification-warning-color;
+    background-color: $notification-warning-bg-color;
+    border-color: $notification-warning-color;
+
+    & .notification-header {
+      background-color: $notification-warning-hf-bg-color;
+      color: $notification-warning-hf-color;
+    }
+
+    & .notification-icon {
+      color: $notification-warning-color;
+    }
+  }
+
+  &.error {
+    color: $notification-error-color;
+    background-color: $notification-error-bg-color;
+    border-color: $notification-error-color;
+
+    & .notification-header {
+      background-color: $notification-error-hf-bg-color;
+      color: $notification-error-hf-color;
+    }
+
+    & .notification-icon {
+      color: $notification-error-color;
+    }
+  }
+}

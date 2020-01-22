@@ -1,0 +1,11 @@
+{
+  "name": "list",
+  "description": "List without interaction",
+  "categories": [
+    {
+      "title": "Typography",
+      "itemPriority": 20,
+      "priority": 20
+    }
+  ]
+}

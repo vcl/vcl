@@ -1,0 +1,78 @@
+@use "../theme.scss" as *;
+
+.email-viewport {
+  box-sizing: border-box;
+  display: block !important;
+  width: 100%;
+  line-height: 1.6em;
+  color: $email-viewport-color;
+  background-color: $email-viewport-bg-color;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  box-sizing: border-box;
+}
+
+.email-body {
+  box-sizing: border-box;
+  background-color: $email-body-bg-color;
+  width: 60%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 3em;
+  border: 1px solid $email-body-border-color;
+  border-radius: 3px;
+}
+
+.email-footer {
+  color: $email-footer-color;
+  padding-top: 0.6em;
+  padding-bottom: 1em;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .email-body {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .email-viewport {
+    background-color: $email-body-bg-color !important;
+    padding: 0 !important;
+  }
+
+  .email-body {
+    background-color: $email-body-bg-color !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    padding-left: 0.4rem !important;
+    padding-right: 0.4rem !important;
+    border: none !important;
+  }
+}
+
+@media print {
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .email-viewport {
+    padding: 0 !important;
+  }
+
+  .email-body {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+}

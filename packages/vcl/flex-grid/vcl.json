@@ -1,0 +1,11 @@
+{
+  "name": "flex-grid",
+  "description": "Flexbox based grid layout",
+  "categories": [
+    {
+      "title": "Layout",
+      "itemPriority": 10,
+      "priority": 10
+    }
+  ]
+}
