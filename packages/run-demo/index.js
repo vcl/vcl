@@ -8,24 +8,19 @@ const sass = require('sass');
 const chokidar = require('chokidar');
 
 const argv = require('yargs') // eslint-disable-line
-              .demandCommand(1, 'module required')
-              .option('vcl-root', {
-                type: 'string',
-                description: 'root directory for vcl imports',
-                default: path.resolve(process.cwd(), 'packages/vcl')
-              })
+              .demandCommand(1, 'Error: module name required as argument')
               .argv;
 
-const modulesFolder = path.resolve(process.cwd(), argv['vcl-root']);
 const moduleName = argv._[0];
 
 const moduleFolder = path.resolve(modulesFolder, moduleName);
+const modulesFolder = path.resolve(process.cwd(), 'packages/vcl');
 const sassInFile = path.resolve(moduleFolder,  'demo.scss');
 const buildFolder = path.resolve(moduleFolder, 'build');
 const demoFolder = path.resolve(moduleFolder, 'demo');
 const cssOutFile = path.resolve(buildFolder,  'index.css');
 const cssMapOutFile = path.resolve(buildFolder,  'index.css.map');
-const htmlInFile = path.resolve(__dirname, 'run_demo.html');
+const htmlInFile = path.resolve(__dirname, 'index.html');
 const htmlOutFile = path.resolve(buildFolder,  'index.html');
 
 const vcl = require(path.resolve(moduleFolder, 'vcl.json'));
