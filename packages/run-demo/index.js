@@ -13,8 +13,8 @@ const argv = require('yargs') // eslint-disable-line
 
 const moduleName = argv._[0];
 
-const moduleFolder = path.resolve(modulesFolder, moduleName);
 const modulesFolder = path.resolve(process.cwd(), 'packages/vcl');
+const moduleFolder = path.resolve(modulesFolder, moduleName);
 const sassInFile = path.resolve(moduleFolder,  'demo.scss');
 const buildFolder = path.resolve(moduleFolder, 'build');
 const demoFolder = path.resolve(moduleFolder, 'demo');
