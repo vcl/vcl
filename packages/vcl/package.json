@@ -19,5 +19,8 @@
     "modules",
     "all",
     "include"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
