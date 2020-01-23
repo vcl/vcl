@@ -4,10 +4,10 @@
   "version": "0.5.1",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "changed-modules": "lerna changed",
-    "tag-modules": "lerna version --no-push --conventional-commits",
-    "publish-modules": "lerna publish from-git",
-    "publish-modules-next": "lerna publish from-git --dist-tag next",
+    "changed-packages": "lerna changed",
+    "tag-packages": "lerna version --no-push --conventional-commits",
+    "publish-packages": "lerna publish from-git",
+    "publish-packages-next": "lerna publish from-git --dist-tag next",
     "build": "node scripts/build_vcl.js",
     "demo": "vcl-run-demo"
   },
