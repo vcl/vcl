@@ -29,6 +29,7 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
     "@mdi/font": "^4.8.95",
+    "@vcl/run-demo": "^1.0.0-alpha.8",
     "cz-conventional-changelog": "^3.0.2",
     "lerna": "^3.20.2",
     "normalize.css": "^8.0.1",
@@ -36,7 +37,6 @@
     "sass": "^1.25.0",
     "ts-lint": "^4.5.1",
     "ts-node": "^8.6.2",
-    "typescript": "^3.7.5",
-    "@vcl/run-demo": "^1.0.0-alpha.7"
+    "typescript": "^3.7.5"
   }
 }
