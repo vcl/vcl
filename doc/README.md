@@ -12,7 +12,7 @@ introducing the VCL.
 
 ## Status
 
-The current modules are released in the **0.6.x version series** and adhere to
+The current modules are released in the **1.0.x version series** and adhere to
 [semver](http://semver.org/).
 All modules with version level `>= 0.1.0` are ready for production use.
 
@@ -22,23 +22,16 @@ All modules with version level `>= 0.1.0` are ready for production use.
 - JS framework agnostic ‒ use it with Angular, React and the like.
 - For ambitious mobile and desktop applications.
 - Theming through modules which can inherit from each other.
-- Collection of [recommended modules](https://github.com/vcl/vcl//modules/vcl)
-  to handle the bulk of styling needs.
-- [Default theme](https://github.com/vcl/vcl/themes/default-theme)
+- [Default theme](https://github.com/vcl/vcl/packages/vcl/theme)
   for core modules with ~500 variables.
 - Extensible through custom modules or just project local styles.
-- Integrates seamlessly with a gulp based build process.
+- Integrates seamlessly with any sass based build process.
 - As lightweight as you want ‒ include only what you need.
 - Quick rendering through simple, low specificity selectors.
 - Maintainable & readable code with unabstracted, obvious naming conventions.
 - Relative units like `em` (Elements) are used wherever feasible.
-- Powered by the [postcss](http://postcss.org)
+- Powered by sass [sass](https://sass-lang.com/)
   and [npm](https://www.npmjs.org/) eco systems.
-- CSS level 4 features like the
-  [color-function](http://dev.w3.org/csswg/css-color/#modifying-colors).
-- Browsers compatibility is delegated to
-  [Autoprefixer](https://github.com/postcss/autoprefixer).
-- Future CSS features via [CSSNext](http://cssnext.io/).
 - Mostly independent of HTML structure and element names.
 - Generation of interactive documentations like [vcl.github.io](https://vcl.github.io/) only for modules **you** use.
 - Embrace flex, no more float.
