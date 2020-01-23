@@ -1,0 +1,577 @@
+@use './terms.scss' as *;
+
+/* Theme internally shared Variables */
+$block-elem-vertical-gap: 1.3em !default;
+$form-control-vertical-gap: 1em !default;
+$input-elem-height: 2.65em !default;
+$text-primary-color: $gray-dark-3 !default;
+$text-secondary-color: $gray !default;
+$content-primary-bg-color: $white !default;
+$content-secondary-bg-color: $gray-light-5 !default;
+$content-ternary-bg-color: $gray-light-3 !default;
+$layout-half-gutter-width: 0.5rem !default;
+
+$space-0: 0 !default;
+$space-1: 4px !default;
+$space-2: 8px !default;
+$space-3: 16px !default;
+$space-4: 24px !default;
+$space-5: 48px !default;
+
+/* App */
+$app-viewport-bg-color: $gray-light-5 !default;
+$app-area-bg-color: transparent !default;
+$app-area-max-width: 95% !default;
+$app-area-min-width: 0 !default;
+
+/* App Content Area */
+$content-area-primary-bg-color: $content-primary-bg-color !default;
+$content-area-secondary-bg-color: $content-secondary-bg-color !default;
+
+/* App Header */
+$app-header-color: inherit !default;
+$app-header-bg-color: $white !default;
+$app-header-logo-max-width: 4em !default;
+
+/* App Footer */
+$app-footer-color: inherit !default;
+$app-footer-bg-color: $white !default;
+
+/* Grid */
+$grid-half-gutter-width: $layout-half-gutter-width !default;
+
+/* Flex Layout */
+$flex-layout-half-gutter-width: $layout-half-gutter-width !default;
+
+
+/* Typography */
+
+/* Font settings */
+$typography-font-family: $font-family-theme !default;
+$typography-font-family-serif: $font-family-serif-theme !default;
+$typography-font-family-monospace: $font-family-monospace-theme !default;
+$typography-font-size: 0.875em !default;
+$typography-line-height: 1.428 !default;
+
+/* Modular scale variants */
+$typography-mod-scale-1: 2.08em !default;
+$typography-mod-scale-2: 1.7em !default;
+$typography-mod-scale-3: 1.27em !default;
+$typography-mod-scale-4: 1.1em !default;
+$typography-mod-scale-5: 0.95em !default;
+$typography-mod-scale-6: 0.82em !default;
+
+/* Colors */
+$typography-text-color: $text-primary-color !default;
+$typography-secondary-text-color: $text-secondary-color !default;
+$typography-disabled-color: $text-secondary-color !default;
+$typography-link-color: $brand-accent !default;
+$typography-link-hover-color: $brand-accent-darker !default;
+$typography-link-text-decoration: none !default;
+$typography-heading-color: $text-primary-color !default;
+$typography-mark-color: $black !default;
+$typography-mark-bg-color: yellow !default;
+$typography-code-border-color: $gray-light-3 !default;
+$typography-code-bg-color: $gray-light-4 !default;
+$typography-selected-text-bg-color: $black !default;
+$typography-selected-text-color: $white !default;
+$typography-blockquote-border-color: $gray-light-3 !default;
+
+/* List */
+$list-separator-border-color: $gray-light-1 !default;
+
+/* Value Unit Anagram */
+$vu-anagram-unit-font-size: 1em !default;
+$vu-anagram-unit-color: $gray-light-1 !default;
+
+/* Label */
+$label-default-bg-color: $gray-dark-4 !default;
+$label-default-color: $white !default;
+$label-primary-bg-color: $primary-medium-color !default;
+$label-primary-color: $white !default;
+$label-success-bg-color: $success-medium-color !default;
+$label-success-color: $white !default;
+$label-info-bg-color: $info-medium-color !default;
+$label-info-color: $white !default;
+$label-warning-bg-color: $warning-medium-color !default;
+$label-warning-color: $white !default;
+$label-danger-bg-color: $danger-medium-color !default;
+$label-danger-color: $white !default;
+
+/* Badge */
+$badge-default-bg-color: $gray-dark-4 !default;
+$badge-default-color: $white !default;
+$badge-primary-bg-color: $primary-medium-color !default;
+$badge-primary-color: $white !default;
+$badge-success-bg-color: $success-medium-color !default;
+$badge-success-color: $white !default;
+$badge-info-bg-color: $info-medium-color !default;
+$badge-info-color: $white !default;
+$badge-warning-bg-color: $warning-medium-color !default;
+$badge-warning-color: $white !default;
+$badge-danger-bg-color: $danger-medium-color !default;
+$badge-danger-color: $white !default;
+
+/* Table */
+$table-bg-color: $black !default;
+$table-color: $black !default;
+$table-disabled-color: $text-secondary-color !default;
+$table-border-color: $gray-light-3 !default;
+$table-header-bg-color: $gray-light-1 !default;
+$table-header-color: $white !default;
+$table-header-button-hover-color: $brand-accent !default;
+$table-footer-bg-color: $gray-light-1 !default;
+$table-footer-color: $white !default;
+$table-alt-bg-color: $gray-light-4 !default;
+$table-highlight-bg-color: $brand-accent-lighter !default;
+$table-highlight-hover-bg-color: $brand-accent-light !default;
+$table-row-selected-color: $white !default;
+$table-row-selected-bg-color: $brand-accent-dark !default;
+
+/* Table Extras */
+$table-filter-bar-bg-color: transparent !default;
+$table-tool-bar-bg-color: $gray-light-3 !default;
+
+/* Sum Table */
+$sum-table-subtotal-color: inherit !default;
+$sum-table-subtotal-bg-color: transparent !default;
+$sum-table-total-color: inherit !default;
+$sum-table-total-bg-color: transparent !default;
+
+/* Data List */
+$data-list-bg-color: transparent !default;
+$data-list-header-bg-color: transparent !default;
+$data-list-footer-bg-color: transparent !default;
+$data-list-border-color: $gray-light-2 !default;
+$data-list-item-separator-border-color: transparent !default;
+$data-list-item-hover-color: $text-primary-color !default;
+$data-list-item-bg-hover-color: $gray-light-4 !default;
+$data-list-item-selected-color: $white !default;
+$data-list-item-bg-selected-color: $brand-accent-dark !default;
+$data-list-item-divider-border-color: $gray-light-3 !default;
+$data-list-item-disabled-color: $gray-light-2 !default;
+
+/* Data Tree */
+$data-tree-bg-color: transparent !default;
+$data-tree-border-color: $gray-dark-4 !default;
+$data-tree-heading-color: $gray-dark-4 !default;
+$data-tree-heading-bg-color: $gray-light-1 !default;
+$data-tree-item-color: inherit !default;
+$data-tree-item-bg-color: transparent !default;
+$data-tree-item-hover-color: $white !default;
+$data-tree-item-hover-bg-color: $gray-light-4 !default;
+$data-tree-selected-item-color: $white !default;
+$data-tree-selected-item-bg-color: $brand-accent-dark !default;
+
+/* Calendar */
+$calendar-bg-color: transparent !default;
+$calendar-item-color: inherit !default;
+$calendar-item-today-color: tomato !default;
+$calendar-item-bg-color: transparent !default;
+$calendar-item-hover-color: $text-primary-color !default;
+$calendar-item-hover-bg-color: $gray-light-4 !default;
+$calendar-otherm-day-color: $gray-light-1 !default;
+$calendar-otherm-day-bg-color: transparent !default;
+$calendar-selected-item-color: $white !default;
+$calendar-selected-item-bg-color: $brand-accent-dark !default;
+$calendar-disabled-item-color: $text-secondary-color !default;
+$calendar-disabled-item-bg-color: $gray-light-3 !default;
+$calendar-available-item-bg-color: $success-light-color !default;
+$calendar-unavailable-item-bg-color: $danger-light-color !default;
+
+/* Pagination */
+$pagination-selected-page-bg-color: $brand-accent !default;
+$pagination-selected-page-color: $white !default;
+
+/* Tab Navigation */
+$tab-nav-border-color: $gray-light-2 !default;
+$tab-nav-tab-bg-color: transparent !default;
+$tab-nav-tab-bg-hover-color: $gray-light-4 !default;
+$tab-nav-tab-bg-selected-color: transparent !default;
+$tab-nav-tab-bg-disabled-color: transparent !default;
+$tab-nav-tab-border-selected-color: $brand-accent !default;
+$tab-nav-tab-color: $gray !default;
+$tab-nav-tab-disabled-color: $gray-light-2 !default;
+$tab-nav-tab-selected-color: inherit !default;
+$tab-nav-tab-hover-color: $black !default;
+$tab-nav-tab-button-label-color: $gray-light-1 !default;
+$tab-nav-tab-button-label-hover-color: $gray-dark-3 !default;
+$tab-nav-tab-button-selected-label-color: $gray-light-1 !default;
+
+$tab-nav-tab-bg-color--uni: transparent !default;
+$tab-nav-tab-bg-selected-color--uni: $white !default;
+$tab-nav-tab-bg-disabled-color--uni: transparent !default;
+$tab-nav-tab-color--uni: $text-primary-color !default;
+$tab-nav-tab-hover-color--uni: $black !default;
+$tab-nav-tab-color-selected--uni: $gray !default;
+$tab-nav-tab-disabled-color--uni: $gray-light-2 !default;
+
+/* Breadcrumb Navigation */
+$breadcrumb-divider-color: inherit !default;
+$breadcrumb-label-color: $brand-accent-dark !default;
+$breadcrumb-label-selected-color: inherit !default;
+$breadcrumb-label-hover-color: $brand-accent !default;
+
+/* Navigation */
+$navigation-bg-color: transparent !default;
+$navigation-color: $gray-dark-4 !default;
+$navigation-heading-color: $gray-dark-4 !default;
+$navigation-heading-bg-color: transparent !default;
+$navigation-3rd-level-bg-color: $gray-dark-4 !default;
+$navigation-2nd-level-bg-color: $gray-dark-4 !default;
+$navigation-item-disabled-bg-color: transparent !default;
+$navigation-item-disabled-color: $gray-light-2 !default;
+$navigation-item-1st-level-bg-color: transparent !default;
+$navigation-item-1st-level-color: $gray-dark-4 !default;
+$navigation-item-1st-level-hover-bg-color: $gray-light-4 !default;
+$navigation-item-1st-level-hover-color: $black !default;
+$navigation-item-1st-level-selected-bg-color: $brand-accent !default;
+$navigation-item-1st-level-selected-color: $white !default;
+$navigation-item-2nd-level-bg-color: transparent !default;
+$navigation-item-2nd-level-color: $gray-dark-4 !default;
+$navigation-item-2nd-level-hover-bg-color: $gray-light-1 !default;
+$navigation-item-2nd-level-hover-color: $black !default;
+$navigation-item-2nd-level-selected-bg-color: $brand-accent !default;
+$navigation-item-2nd-level-selected-color: $white !default;
+
+/* Process Navigation */
+$process-nav-arrow-border-width: 2px !default;
+$process-nav-arrow-border-color: $white !default;
+$process-nav-item-bg-color: $gray-light-4 !default;
+$process-nav-item-color: $brand-accent !default;
+$process-nav-item-hover-color: $brand-accent-darker !default;
+$process-nav-disabled-bg-color: $gray-light-3 !default;
+$process-nav-disabled-color: $text-secondary-color !default;
+$process-nav-selected-item-color: $white !default;
+$process-nav-selected-item-bg-color: $brand-accent-dark !default;
+$process-nav-completed-item-bg-color: $gray-light-4 !default;
+
+/* Tooltip */
+$tooltip-color: $white !default;
+$tooltip-bg-color: $gray-dark-4 !default;
+$tooltip-border-color: $gray-dark-4 !default;
+$tooltip-shadow-color: $glass-2 !default;
+
+/* Popover */
+$popover-color: $text-primary-color !default;
+$popover-bg-color: $white !default;
+$popover-border-width: 1px !default;
+$popover-border-color: $glass-2 !default;
+$popover-shadow-color: $glass-2 !default;
+
+/* Layer */
+$layer-color: $text-primary-color !default;
+$layer-bg-color: $white !default;
+$layer-cover-bg-color: $glass-1 !default;
+$layer-gutter-padding: $grid-half-gutter-width !default;
+
+/* Nag */
+$nag-color: $text-primary-color !default;
+$nag-bg-color: $white !default;
+
+/* Scrollbar */
+$scrollbar-width: 6px !default;
+$scrollbar-bg-color: transparent !default;
+$scrollbar-thumb-bg-color: $gray-light-1 !default;
+$scrollbar-track-bg-color: transparent !default;
+
+/* Ribbon */
+$ribbon-color: $brand-accent-dark !default;
+$ribbon-bg-color: $white !default;
+$ribbon-shadow-color: $gray !default;
+
+/* Loading Layer */
+$loading-layer-cover-bg-color: $glass-1 !default;
+
+/* Container */
+$container-bg-color: $content-ternary-bg-color !default;
+$container-border-color: $gray-light-2 !default;
+$container-border-radius: 0 !default;
+
+/* Go-to-top */
+$gototop-color: $gray-light-3 !default;
+$gototop-bg-color: $gray-dark-1 !default;
+
+/* Divider */
+$divider-color: inherit !default;
+$divider-border-color: $gray-light-2 !default;
+$divider-fill-color: $content-primary-bg-color !default;
+
+/* Panel */
+$panel-bg-color: transparent !default;
+$panel-hf-line-height: 2em !default;
+$panel-border-color: $gray !default;
+$panel-header-color: $text-primary-color !default;
+$panel-header-bg-color: transparent !default;
+$panel-footer-color: $text-primary-color !default;
+$panel-footer-bg-color: transparent !default;
+$panel-border-radius--card: 0.55em !default;
+
+/* Toolbar */
+$toolbar-l1-bg-color: $gray-light-5 !default;
+$toolbar-l2-bg-color: $gray-light-6 !default;
+
+/* Notification */
+$notification-border-radius: 0.45em !default;
+$notification-color: inherit !default;
+$notification-bg-color: $content-secondary-bg-color !default;
+$notification-hf-color: inherit !default;
+$notification-hf-bg-color: $gray-light-3 !default;
+$notification-success-color: $success-dark-color !default;
+$notification-success-bg-color: $success-light-color !default;
+$notification-success-hf-color: $white !default;
+$notification-success-hf-bg-color: $success-dark-color !default;
+$notification-info-color: $info-dark-color !default;
+$notification-info-bg-color: $info-light-color !default;
+$notification-info-hf-color: $white !default;
+$notification-info-hf-bg-color: $info-dark-color !default;
+$notification-warning-color: $warning-dark-color !default;
+$notification-warning-bg-color: $warning-light-color !default;
+$notification-warning-hf-color: $white !default;
+$notification-warning-hf-bg-color: $warning-dark-color !default;
+$notification-error-color: $danger-dark-color !default;
+$notification-error-bg-color: $danger-light-color !default;
+$notification-error-hf-color: $white !default;
+$notification-error-hf-bg-color: $danger-dark-color !default;
+
+/* Progress Bar */
+$progress-bar-progress-label-color: $gray-light-3 !default;
+$progress-bar-container-bg-color: $gray-light-5 !default;
+$progress-bar-primary-progress-bg-color: $brand-accent-light !default;
+$progress-bar-secondary-progress-bg-color: $brand-accent-lighter !default;
+
+/* Callout */
+$callout-border-color: $gray-light-1 !default;
+
+/* Article Structuring */
+$article-header-tagline-color: $gray-dark-1 !default;
+$article-header-border-color: $gray-light-2 !default;
+
+/* Button */
+$button-height: $input-elem-height !default;
+$button-line-height: initial !default;
+
+$button-outline-focus-color: $black !default;
+$button-border-width: 0 !default;
+$button-border-radius: 0 !default;
+$button-border-color: transparent !default;
+$button-label-font-size: 0.96em !default;
+$button-label-text-transform: none !default;
+
+/* Default variant */
+$button-label-color: $white !default;
+$button-label-hover-color: $white !default;
+$button-label-disabled-color: $gray-light-3 !default;
+$button-label-selected-color: $white !default;
+$button-label-selected-hover-color: $button-label-selected-color !default;
+$button-bg-color: $gray !default;
+$button-bg-hover-color: $gray-dark-3 !default;
+$button-bg-selected-color: $brand-accent-dark !default;
+$button-bg-selected-hover-color: $brand-accent-darker !default;
+
+/* Emphasized variant */
+$button-border-color--emphasized: transparent !default;
+$button-label-color--emphasized: $white !default;
+$button-label-hover-color--emphasized: $white !default;
+$button-label-disabled-color--emphasized: $gray-light-3 !default;
+$button-bg-color--emphasized: $brand-accent !default;
+$button-bg-hover-color--emphasized: $brand-accent-dark !default;
+
+/* Transparent variant */
+$button-label-color--transparent: $gray-dark-1 !default;
+$button-label-hover-color--transparent: $black !default;
+$button-label-disabled-color--transparent: $gray-light-1 !default;
+
+/* Emphasized & transparent variant */
+$button-label-color--emphasized-transparent: $brand-accent !default;
+$button-label-hover-color--emphasized-transparent: $brand-accent-darker !default;
+$button-label-disabled-color--emphasized-transparent: $gray-light-3 !default;
+
+/* Half transparent alternative variant */
+$button-label-color--half-transparent: inherit !default;
+$button-label-hover-color--half-transparent: inherit !default;
+$button-label-disabled-color--half-transparent: $gray-light-1 !default;
+$button-bg-hover-color--half-transparent: $gray-light-4 !default;
+
+/* Transparent alternative variant */
+$button-label-color--transparentalt: $gray-light-3 !default;
+$button-label-hover-color--transparentalt: $white !default;
+$button-label-disabled-color--transparentalt: $gray-light-1 !default;
+
+/* Danger variant */
+$button-label-color--danger: $white !default;
+$button-bg-color--danger: $danger-medium-color !default;
+$button-label-hover-color--danger: $white !default;
+$button-label-disabled-color--danger: $gray-light-1 !default;
+$button-bg-hover-color--danger: $danger-dark-color !default;
+
+/* Suggestive variant */
+$button-label-color--suggestive: $white !default;
+$button-bg-color--suggestive: $success-medium-color !default;
+$button-label-hover-color--suggestive: $white !default;
+$button-label-disabled-color--suggestive: $gray-light-3 !default;
+$button-bg-hover-color--suggestive: $success-dark-color !default;
+
+/* Form Control Label */
+$form-control-sublabel-color: $gray-dark-4 !default;
+$form-control-label-line-height: $input-elem-height !default;
+$form-control-label-required-hint-color: $brand-accent-darker !default;
+$form-control-label-font-size: inherit !default;
+$form-control-label-font-weight: inherit !default;
+$form-control-label-color: inherit !default;
+$form-control-hint-color: $gray !default;
+
+/* Fieldset */
+$fieldset-border-width: 1px !default;
+$fieldset-border-color: $gray-light-2 !default;
+
+/* Input */
+$input-height: $input-elem-height !default;
+$input-line-height: initial !default;
+$input-textarea-line-height: 1.52em !default;
+$input-outline-focus-color: $black !default;
+$input-color: $black !default;
+$input-text-placeholder-color: $gray-light-1 !default;
+$input-text-placeholder-font-style: normal !default;
+$input-border-width: 1px !default;
+$input-border-color: $gray-light-1 !default;
+$input-border-focus-color: $brand-accent !default;
+$input-border-radius: 0 !default;
+$input-bg-color: $white !default;
+$input-bg-focus-color: $white !default;
+$input-disabled-color: $gray-dark-4 !default;
+$input-disabled-border-color: $gray-light-1 !default;
+$input-disabled-bg-color: $gray-light-3 !default;
+
+/* File Input */
+$file-input-color: $input-outline-focus-color !default;
+$file-input-bg-color: $input-bg-color !default;
+$file-input-border-width: $input-border-width !default;
+$file-input-border-color: $input-border-color !default;
+$file-input-border-radius: $input-border-radius !default;
+$file-input-border-focus-color: $input-border-focus-color !default;
+$file-input-bg-focus-color: $input-bg-focus-color !default;
+$file-input-disabled-color: $input-disabled-color !default;
+$file-input-disabled-border-color: $input-disabled-border-color !default;
+$file-input-disabled-bg-color: $input-disabled-bg-color !default;
+$file-input-dragndrop-color: $input-color !default;
+$file-input-dragndrop-border-color: $brand-accent-light !default;
+$file-input-dragndrop-bg-color: $brand-accent-light !default;
+
+/* Checkbox */
+$checkbox-color: $input-border-color !default;
+$checkbox-focus-color: $input-border-focus-color !default;
+$checkbox-hover-color: $input-border-focus-color !default;
+$checkbox-disabled-color: $gray-light-3 !default;
+$checkbox-icon-size: 1.16em !default;
+
+/* Radio Button */
+$radio-button-color: $input-border-color !default;
+$radio-button-focus-color: $input-border-focus-color !default;
+$radio-button-hover-color: $input-border-focus-color !default;
+$radio-button-disabled-color: $gray-light-3 !default;
+$radio-button-icon-size: 1.16em !default;
+
+/* Input Group */
+$input-group-bg-color: $gray-dark-5 !default;
+$input-group-color: $gray-light-3 !default;
+$input-group-height: $input-elem-height !default;
+$input-group-line-height: $input-elem-height !default;
+
+/* Embedded Input Group */
+$embedded-input-group-text-color: $gray-dark-1 !default;
+$embedded-input-group-text-bg-color: $input-bg-color !default;
+
+/* Slider */
+$slider-rail-bg-color: $gray-light-3 !default;
+$slider-rail-border-color: transparent !default;
+$slider-knob-bg-color: $gray-light-1 !default;
+$slider-knob-bg-hover-color: $brand-accent-dark !default;
+$slider-knob-border-color: transparent !default;
+$slider-scale-point-mark-bg-color: $gray-dark-1 !default;
+
+/* Rating */
+$rating-item-color: inherit !default;
+$rating-item-disabled-color: $text-secondary-color !default;
+$rating-item-highlighted-color: $brand-accent !default;
+
+/* Token */
+$token-bg-color: $gray-light-5 !default;
+$token-border-color: $gray-light-3 !default;
+$token-border-hover-color: $gray-light-1 !default;
+$token-border-selected-color: $brand-accent-dark !default;
+$token-bg-selected-color: $brand-accent-dark !default;
+$token-selected-color: $white !default;
+$token-border-highlighted-color: $brand-accent-dark !default;
+$token-bg-highlighted-color: $gray-light-5 !default;
+$token-highlighted-color: inherit !default;
+$token-color: inherit !default;
+$token-remove-button-label-color: $gray-light-1 !default;
+
+/* Flip Switch */
+$flip-switch-height: 2em !default;
+$flip-switch-bg-color: transparent !default;
+$flip-switch-border-color: $gray !default;
+$flip-switch-active-bg-color: $brand-accent-dark !default;
+$flip-switch-active-color: $white !default;
+$flip-switch-knob-bg-color: $brand-accent-darker !default;
+
+/* Drop Down */
+$dropdown-border-color: $glass-1 !default;
+$dropdown-border-width: 1px !default;
+$dropdown-bg-color: $white !default;
+$dropdown-item-color: $input-color !default;
+$dropdown-item-sub-label-color: $text-secondary-color !default;
+$dropdown-item-bg-hover-color: $gray-dark-1 !default;
+$dropdown-item-hover-color: $white !default;
+$dropdown-item-sub-label-hover-color: $gray-light-2 !default;
+$dropdown-selected-item-bg-color: $brand-accent !default;
+$dropdown-selected-item-color: $white !default;
+$dropdown-highlighted-item-bg-color: $gray-dark-2 !default;
+$dropdown-highlighted-item-color: $white !default;
+$dropdown-disabled-item-bg-color: transparent !default;
+$dropdown-disabled-item-color: $gray-dark-1 !default;
+$dropdown-separator-item-border-color: $gray-light-1 !default;
+
+/* Date Picker */
+$date-picker-border-color: transparent !default;
+$date-picker-bg-color: transparent !default;
+
+/* Time Picker */
+$time-picker-border-color: transparent !default;
+$time-picker-bg-color: transparent !default;
+
+/* Responsive Image */
+$responsive-image-container-color: $gray-light-1 !default;
+
+/* Image Shapes */
+$thumbnail-bg-color: transparent !default;
+$thumbnail-border-color: $black !default;
+
+/* Gallery */
+$gallery-bg-color: transparent !default;
+$gallery-header-color: inherit !default;
+$gallery-header-bg-color: transparent !default;
+$gallery-footer-color: inherit !default;
+$gallery-footer-bg-color: transparent !default;
+$gallery-initial-buttons-opacity: 0.4 !default;
+$gallery-thumbnail-selected-border-color: $brand-accent-dark !default;
+$gallery-thumbnail-hover-bg-color: $brand-accent-overlay !default;
+
+/* Drawer */
+$drawer-color: $text-primary-color !default;
+$drawer-bg-color: $content-primary-bg-color !default;
+$drawer-content-bg-color: transparent !default;
+$drawer-backdrop-bg-color: $glass-1 !default;
+
+/* E-Mail */
+$email-viewport-color: $text-primary-color !default;
+$email-viewport-bg-color: #f6f6f6 !default;
+$email-body-bg-color: $white !default;
+$email-body-border-color: #e9e9e9 !default;
+$email-footer-color: #999999 !default;
+
+/* Product List */
+$product-list-color: $gray-dark-4 !default;
+$product-list-name-color: $black !default;
+$product-list-border-color: $gray-light-3 !default;
