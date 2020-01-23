@@ -1,3 +1,11 @@
-@import "@vcl/theme";
-@import "@vcl/vcl/recommended";
-@import "@vcl/font-awesome";
+@use "sass:color";
+@use "~@vcl/vcl";
+
+@use "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@use "~@fortawesome/fontawesome-free/scss/solid.scss" with (
+  $fa-font-path: "~@fortawesome/fontawesome-free/webfonts"
+);
+
+.article-text {
+  color: color.grayscale(#6b717f);
+}

@@ -12,7 +12,7 @@
 2.  As you can see the folder contains several files and a folder:
   * `package.json` for this tutorial listing all required VCL and 3d party NPM modules.
   * `index.html` is an example website using vcl styling.
-  * `vcl.sss` defines the styles by including vcl modules using `@import`.
+  * `vcl.scss` defines the styles by including vcl modules using `@use`.
   * `webpack.config.js` basic webpack config for the vcl
 
 3.  Open a terminal and execute `npm install`.

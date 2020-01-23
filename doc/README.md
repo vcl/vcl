@@ -47,16 +47,17 @@ build process.
 ### Run a Module's Demos
 
     $ git clone https://github.com/vcl/vcl.git
-    $ cd vcl/modules/button
     $ npm install
-    $ npm start
+    $ npm run demo [module name] -- --watch
+    e.g.
+    $ npm run demo button -- --watch
 
 ### Missing a Module?
 
 If you are a developer, see below how to create one.
 We are willed to add new modules to the VCL org's range of modules
 if they fit.
-Otherwise [create an issue](https://vcl.github.io//issues).
+Otherwise [create an issue](https://vcl.github.io/issues).
 
 ### Development
 

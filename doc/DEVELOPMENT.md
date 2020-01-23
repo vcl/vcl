@@ -10,12 +10,12 @@ Use the [vcl-list](https://github.com/vcl/vcl/modules/list) as a prototype.
 
 ## package.json
 
-Have an `index.sss` or `index.css` file per module which is referenced in
-the `package.json` in the `style` property.
+Have an `index.scss` file per module which is referenced in
+the `package.json` in the `scss` property.
 
 Have the following custom fields in the `package.json` file:
 
-- `style` points to the entry CSS file of the module.
+- `scss` points to the entry CSS file of the module.
 - `vcl.categories` an array of categories. Example:
 
     {
@@ -36,23 +36,16 @@ including demos of your modules.
 
 ### Dependencies
 
-Use the `@import ...` syntax on top of your file if your module has dependencies to another module.
-Most modules need to import the `@vcl/theme`
+Use the `@use ...` syntax on top of your file if your module has dependencies to another module.
+Most modules need to use the `@vcl/theme`
 
 ```sss
-@import "@vcl/theme"
-@import "@vcl/button"
+@use "../theme"
+@use "../button"
 
 .my-module
   color: green
 ```
-
-## CSS Syntax and Use
-
-Use the
-[indent-based CSS syntax](https://github.com/postcss/sugarss)
-or plain CSS. Normal CSS files end with the `.css` suffix, sugar SS
-white space files end with the `.sss` suffix.
 
 ## Selectors, Class Naming and Units
 
@@ -75,22 +68,6 @@ Don’ts:
   i. e. don’t use `.component h3`. Always introduce classes.
 - Except in some very rare cases, avoid using `!important`.
 - Don’t use vendor prefixes.
-
-## Variable Naming
-
-[CSS4 variables](https://drafts.csswg.org/css-variables/) form the interface
-of modules. The following naming rules should be applied:
-
-  --component-name-[sub-element-name]-aspect[--variant]
-
-The _aspect_ is the actual value influenced by this variable like
-_bg-color_, _font-size_ etc.
-The variant is only to be used if the component actually has a variant
-like a _secondary_ or _danger_.
-
-Example:
-
-  --tab-nav-bg-color--uni
 
 ## Usable CSS Features
 
@@ -169,11 +146,12 @@ level variant. The primary variant always goes without modifier.
   Do not forget to import the module style in `index.sss` or `index.css`.
 
 ```sss
-@import "@vcl/some-required-dep-for-the-demo"
-@import "./index.sss"
+@use "../some-required-dep-for-the-demo"
+@use "./index.scss"
 
-.demoSpecificStuff
+.demoSpecificStuff {
   color: red
+}
 ```
 
 # Development

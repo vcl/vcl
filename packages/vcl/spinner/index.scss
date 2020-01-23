@@ -9,11 +9,11 @@
 
 .spinner {
   & .button-group.vertical {
-    width: calc($input-elem-height + 0.5em);
+    width: calc(#{$input-elem-height} + 0.5em);
     height: 100%;
 
     & .button {
-      height: calc($input-elem-height / 2);
+      height: calc(#{$input-elem-height} / 2);
     }
 
     & > .button {

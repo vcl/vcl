@@ -1,13 +1,13 @@
 # [VCL](https://vcl.github.io/) tutorial
 
 Short tutorials showing how to create VCL builds based on the collection of
-[vcl modules](../../modules/vcl),
+[vcl modules](../../packages/vcl),
 how to style a web page with it and how to run a single component demo.
 
 
 ## Tutorials
 
-- [vcl preprocessor cli](preprocessor-cli)
+- [sass cli](preprocessor-cli)
 - [webpack](webpack)
 
 
@@ -51,7 +51,7 @@ The search input is more complex and actually a mashup of multiple VCL component
   <span class="prepended">
     <div class="icon fas fa-search"></div>
   </span>
-  <input class="input no-border prep-item app-item searchInput" placeholder="Search Posts" type="text">
+  <input class="input no-border prep-item app-item search-input" placeholder="Search Posts" type="text">
   <button class="button transparent square appended">
      <div class="icogram">
        <div class="icon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>

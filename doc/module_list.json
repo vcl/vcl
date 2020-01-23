@@ -1,5 +1,5 @@
 [
-  {"name": "default-theme",                        "description": "Default theme",                                       "homepage": "https://vcl.github.io/#vcl-default-theme"},
+  {"name": "theme",                                "description": "Default theme",                                       "homepage": "https://vcl.github.io/#vcl-theme"},
   {"name": "bw-theme",                             "description": "Black/ white theme",                                  "homepage": "https://vcl.github.io/#vcl-bw-theme"},
   {"name": "restore-theme",                        "description": "Restore theme",                                       "homepage": "https://vcl.github.io/#vcl-restore-theme"},
   {"name": "app-area",                             "description": "App area",                                            "homepage": "https://vcl.github.io/#vcl-app-area"},
@@ -32,7 +32,6 @@
   {"name": "fieldset",                             "description": "Fieldset",                                            "homepage": "https://vcl.github.io/#vcl-fieldset"},
   {"name": "figure",                               "description": "Figure or image plus caption",                        "homepage": "https://vcl.github.io/#vcl-figure"},
   {"name": "flip-switch",                          "description": "Flip switch",                                         "homepage": "https://vcl.github.io/#vcl-flip-switch"},
-  {"name": "font-awesome",                         "description": "Font-awesome integration",                            "homepage": "https://vcl.github.io/#vcl-font-awesome"},
   {"name": "form",                                 "description": "Forms in different layouts",                          "homepage": "https://vcl.github.io/#vcl-form"},
   {"name": "form-control-label",                   "description": "Form control label",                                  "homepage": "https://vcl.github.io/#vcl-form-control-label"},
   {"name": "gallery",                              "description": "Picture gallery",                                     "homepage": "https://vcl.github.io/#vcl-gallery"},
@@ -55,7 +54,6 @@
   {"name": "loading-layer",                        "description": "Loading layer",                                       "homepage": "https://vcl.github.io/#vcl-loading-layer"},
   {"name": "logo",                                 "description": "Logo",                                                "homepage": "https://vcl.github.io/#vcl-logo"},
   {"name": "loose-button-group",                   "description": "Loose button group",                                  "homepage": "https://vcl.github.io/#vcl-loose-button-group"},
-  {"name": "material-design-icons",                "description": "Material design icons integration",                   "homepage": "https://vcl.github.io/#vcl-material-design-icons"},
   {"name": "notification",                         "description": "Notification",                                        "homepage": "https://vcl.github.io/#vcl-notification"},
   {"name": "pager",                                "description": "Pager",                                               "homepage": "https://vcl.github.io/#vcl-pager"},
   {"name": "pagination",                           "description": "Pagination",                                          "homepage": "https://vcl.github.io/#vcl-pagination"},
@@ -85,6 +83,5 @@
   {"name": "typography",                           "description": "Basic text formatting",                               "homepage": "https://vcl.github.io/#vcl-typography"},
   {"name": "utils",                                "description": "Utility classes for floats and alignment",            "homepage": "https://vcl.github.io/#vcl-utils"},
   {"name": "value-unit-anagram",                   "description": "Value unit anagram",                                  "homepage": "https://vcl.github.io/#vcl-value-unit-anagram"},
-  {"name": "vcl",                                  "description": "Kitchen sink module",                                  "homepage": "https://vcl.github.io/#vcl-value-unit-anagram"},
   {"name": "zoom-box",                             "description": "Zoom image portions",                                 "homepage": "https://vcl.github.io/#vcl-zoom-box"}
 ]
