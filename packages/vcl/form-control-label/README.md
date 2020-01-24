@@ -46,13 +46,13 @@ The hint may be used to assist the user with his input while the field is filled
 
 ## Variables
 
-- `--form-control-sublabel-color`
-- `--form-control-label-line-height`
-- `--form-control-label-font-size`
-- `--form-control-label-font-weight`
-- `--form-control-label-color`
-- `--form-control-label-required-hint-color`
-- `--form-control-hint-color`
+- `$form-control-sublabel-color`
+- `$form-control-label-line-height`
+- `$form-control-label-font-size`
+- `$form-control-label-font-weight`
+- `$form-control-label-color`
+- `$form-control-label-required-hint-color`
+- `$form-control-hint-color`
 
 ## Demo
 

@@ -57,19 +57,19 @@ The validation state of an file input can be visualized by the standard modifier
 
 ## Variables
 
-- `--file-input-color`
-- `--file-input-bg-color`
-- `--file-input-border-width`
-- `--file-input-border-color`
-- `--file-input-border-radius`
-- `--file-input-border-focus-color`
-- `--file-input-bg-focus-color`
-- `--file-input-disabled-color`
-- `--file-input-disabled-border-color`
-- `--file-input-disabled-bg-color`
-- `--file-input-dragndrop-color`
-- `--file-input-dragndrop-border-color`
-- `--file-input-dragndrop-bg-color`
+- `$file-input-color`
+- `$file-input-bg-color`
+- `$file-input-border-width`
+- `$file-input-border-color`
+- `$file-input-border-radius`
+- `$file-input-border-focus-color`
+- `$file-input-bg-focus-color`
+- `$file-input-disabled-color`
+- `$file-input-disabled-border-color`
+- `$file-input-disabled-bg-color`
+- `$file-input-dragndrop-color`
+- `$file-input-dragndrop-border-color`
+- `$file-input-dragndrop-bg-color`
 
 ## Demo
 

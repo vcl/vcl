@@ -22,7 +22,7 @@ Semantic coloring:
 
 ## Variables
 
-- `--callout-border-color`
+- `$callout-border-color`
 
 ## Demo
 

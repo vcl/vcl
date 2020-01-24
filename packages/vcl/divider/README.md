@@ -56,9 +56,9 @@ Disables the text-transformation to uppercase.
 
 ## Variables
 
-- `--divider-color`
-- `--divider-border-color`
-- `--divider-fill-color`
+- `$divider-color`
+- `$divider-border-color`
+- `$divider-fill-color`
 
 ## Demo
 

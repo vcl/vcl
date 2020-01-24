@@ -20,10 +20,10 @@ Works only for **Webkit/ Blink** based browsers.
 
 ## Variables
 
-- `--scrollbar-width`
-- `--scrollbar-bg-color`
-- `--scrollbar-thumb-bg-color`
-- `--scrollbar-track-bg-color`
+- `$scrollbar-width`
+- `$scrollbar-bg-color`
+- `$scrollbar-thumb-bg-color`
+- `$scrollbar-track-bg-color`
 
 ## Demo
 

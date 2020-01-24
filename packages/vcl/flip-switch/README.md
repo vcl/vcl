@@ -23,12 +23,12 @@ Two states between which can be toggled.
 
 ## Variables
 
-- `--flip-switch-height`
-- `--flip-switch-bg-color`
-- `--flip-switch-border-color`
-- `--flip-switch-active-bg-color`
-- `--flip-switch-active-color`
-- `--flip-switch-knob-bg-color`
+- `$flip-switch-height`
+- `$flip-switch-bg-color`
+- `$flip-switch-border-color`
+- `$flip-switch-active-bg-color`
+- `$flip-switch-active-color`
+- `$flip-switch-knob-bg-color`
 
 ## Demo
 

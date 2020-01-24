@@ -150,20 +150,20 @@ modifiers.
 
 ## Variables
 
-- `--table-color`
-- `--table-disabled-color`
-- `--table-border-color`
-- `--table-bg-color`
-- `--table-header-bg-color`
-- `--table-header-color`
-- `--table-header-button-hover-color`
-- `--table-footer-bg-color`
-- `--table-footer-color`
-- `--table-alt-bg-color`
-- `--table-highlight-bg-color`
-- `--table-highlight-hover-bg-color`
-- `--table-row-selected-color`
-- `--table-row-selected-bg-color`
+- `$table-color`
+- `$table-disabled-color`
+- `$table-border-color`
+- `$table-bg-color`
+- `$table-header-bg-color`
+- `$table-header-color`
+- `$table-header-button-hover-color`
+- `$table-footer-bg-color`
+- `$table-footer-color`
+- `$table-alt-bg-color`
+- `$table-highlight-bg-color`
+- `$table-highlight-hover-bg-color`
+- `$table-row-selected-color`
+- `$table-row-selected-bg-color`
 
 ## Demo
 

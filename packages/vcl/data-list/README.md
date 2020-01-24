@@ -48,15 +48,15 @@ As data browser with image and complex layout.
 
 ## Variables
 
-- `--data-list-bg-color`
-- `--data-list-header-bg-color`
-- `--data-list-footer-bg-color`
-- `--data-list-border-color`
-- `--data-list-item-separator-border-color`
-- `--data-list-item-hover-color`
-- `--data-list-item-bg-hover-color`
-- `--data-list-item-selected-color`
-- `--data-list-item-bg-selected-color`
+- `$data-list-bg-color`
+- `$data-list-header-bg-color`
+- `$data-list-footer-bg-color`
+- `$data-list-border-color`
+- `$data-list-item-separator-border-color`
+- `$data-list-item-hover-color`
+- `$data-list-item-bg-hover-color`
+- `$data-list-item-selected-color`
+- `$data-list-item-bg-selected-color`
 
 ## Demo
 

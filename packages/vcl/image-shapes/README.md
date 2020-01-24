@@ -22,7 +22,7 @@ Decorations for images.
 
 ## Variables
 
-- `--thumbnail-border-color`
+- `$thumbnail-border-color`
 
 ## Demo
 

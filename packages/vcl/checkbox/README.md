@@ -16,11 +16,11 @@ Checkbox form control.
 
 ## Variables
 
-- `--checkbox-color`
-- `--checkbox-focus-color`
-- `--checkbox-hover-color`
-- `--checkbox-disabled-color`
-- `--checkbox-icon-size`
+- `$checkbox-color`
+- `$checkbox-focus-color`
+- `$checkbox-hover-color`
+- `$checkbox-disabled-color`
+- `$checkbox-icon-size`
 
 ## Demo
 

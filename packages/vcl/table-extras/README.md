@@ -21,9 +21,9 @@ Extensions for the vcl table.
 
 ## Variables
 
-- `--table-filter-bar-bg-color`
-- `--table-tool-bar-bg-color`
-- `--table-border-color`
+- `$table-filter-bar-bg-color`
+- `$table-tool-bar-bg-color`
+- `$table-border-color`
 
 ## Demo
 

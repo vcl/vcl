@@ -28,10 +28,10 @@ Any icon can be used as divider:
 
 ## Variables
 
-- `--breadcrumb-divider-color`
-- `--breadcrumb-label-color`
-- `--breadcrumb-label-hover-color`
-- `--breadcrumb-label-selected-color`
+- `$breadcrumb-divider-color`
+- `$breadcrumb-label-color`
+- `$breadcrumb-label-hover-color`
+- `$breadcrumb-label-selected-color`
 
 ## Demo
 

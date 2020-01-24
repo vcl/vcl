@@ -28,18 +28,18 @@ Semantic coloring.
 
 ## Variables
 
-- `--badge-default-color`
-- `--badge-default-bg-color`
-- `--badge-primary-color`
-- `--badge-primary-bg-color`
-- `--badge-success-color`
-- `--badge-success-bg-color`
-- `--badge-info-color`
-- `--badge-info-bg-color`
-- `--badge-warning-color`
-- `--badge-warning-bg-color`
-- `--badge-danger-color`
-- `--badge-danger-bg-color`
+- `$badge-default-color`
+- `$badge-default-bg-color`
+- `$badge-primary-color`
+- `$badge-primary-bg-color`
+- `$badge-success-color`
+- `$badge-success-bg-color`
+- `$badge-info-color`
+- `$badge-info-bg-color`
+- `$badge-warning-color`
+- `$badge-warning-bg-color`
+- `$badge-danger-color`
+- `$badge-danger-bg-color`
 
 ## Demo
 

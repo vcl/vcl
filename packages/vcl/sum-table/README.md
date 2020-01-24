@@ -20,10 +20,10 @@ Table extensions for numeral and especially financial number display.
 
 ## Variables
 
-- `--sum-table-subtotal-color`
-- `--sum-table-subtotal-bg-color`
-- `--sum-table-total-color`
-- `--sum-table-total-bg-color`
+- `$sum-table-subtotal-color`
+- `$sum-table-subtotal-bg-color`
+- `$sum-table-total-color`
+- `$sum-table-total-bg-color`
 
 ## Demo
 

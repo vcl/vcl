@@ -35,29 +35,6 @@ module.exports = {
           }
         ]
       }
-
-
-      // {
-      //   test: /\.sss$/,
-      //   use: [
-      //     MiniCssExtractPlugin.loader,
-      //     {
-      //       loader: 'css-loader',
-      //       options: {
-      //         importLoaders: 1,
-      //         url: false
-      //       }
-      //     },
-      //     {
-      //       loader: 'postcss-loader',
-      //       options: {
-      //         ident: 'postcss',
-      //         parser: 'sugarss',
-      //         plugins: vcl.createPostCSSPlugins()
-      //       }
-      //     }
-      //   ]
-      // },
     ]
   },
   plugins: [

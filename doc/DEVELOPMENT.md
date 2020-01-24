@@ -37,14 +37,16 @@ including demos of your modules.
 ### Dependencies
 
 Use the `@use ...` syntax on top of your file if your module has dependencies to another module.
-Most modules need to use the `@vcl/theme`
+Most modules need to use the `theme` to access variables.
 
-```sss
-@use "../theme"
-@use "../button"
+```scss
+@use "../theme";
+@use "../button";
 
-.my-module
-  color: green
+.my-module {
+  color: theme.$brand-accent;
+  height: 1em;
+}
 ```
 
 ## Selectors, Class Naming and Units
@@ -143,11 +145,11 @@ level variant. The primary variant always goes without modifier.
   [WAI-ARIA](http://www.w3.org/WAI/intro/aria) plumbing.
 - You can neglect semantic HTML due to that.
 - Create a `demo.css` in the module root for additional styling of the demo.
-  Do not forget to import the module style in `index.sss` or `index.css`.
+  Do not forget to import the module style in `index.scss` or `index.css`.
 
-```sss
-@use "../some-required-dep-for-the-demo"
-@use "./index.scss"
+```scss
+@use "../some-required-dep-for-the-demo";
+@use "./index.scss";
 
 .demoSpecificStuff {
   color: red

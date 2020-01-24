@@ -33,10 +33,10 @@ ongoing process whose progress cannot be determined.
 
 ## Variables
 
-- `--progress-bar-progress-label-color`
-- `--progress-bar-container-bg-color`
-- `--progress-bar-primary-progress-bg-color`
-- `--progress-bar-secondary-progress-bg-color`
+- `$progress-bar-progress-label-color`
+- `$progress-bar-container-bg-color`
+- `$progress-bar-primary-progress-bg-color`
+- `$progress-bar-secondary-progress-bg-color`
 
 ## Demo
 

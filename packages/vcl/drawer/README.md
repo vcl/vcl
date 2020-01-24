@@ -46,9 +46,9 @@ using the `drawer-right` modifier.
 
 ## Variables
 
-- `--drawer-color`
-- `--drawer-bg-color`
-- `--drawer-content-bg-color`
+- `$drawer-color`
+- `$drawer-bg-color`
+- `$drawer-content-bg-color`
 
 
 ## Demo

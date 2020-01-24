@@ -19,9 +19,9 @@ also on narrow viewports.
 
 ## Variables
 
-- `--product-list-color`
-- `--product-list-name-color`
-- `--product-list-border-color`
+- `$product-list-color`
+- `$product-list-name-color`
+- `$product-list-border-color`
 
 ## Demo
 

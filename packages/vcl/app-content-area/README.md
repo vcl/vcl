@@ -38,8 +38,8 @@ A simple content area:
 
 ## Variables
 
-- `--content-area-primary-bg-color`
-- `--content-area-secondary-bg-color`
+- `$content-area-primary-bg-color`
+- `$content-area-secondary-bg-color`
 
 ## Demo
 

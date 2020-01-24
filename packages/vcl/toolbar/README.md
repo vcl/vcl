@@ -43,8 +43,8 @@ Second level toolbar with textual title in the middle.
 
 ## Variables
 
-- `--toolbar-l1-bg-color`
-- `--toolbar-l2-bg-color`
+- `$toolbar-l1-bg-color`
+- `$toolbar-l2-bg-color`
 
 ## Demo
 

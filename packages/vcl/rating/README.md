@@ -37,9 +37,9 @@ Disabled (read-only).
 
 ## Variables
 
-- `--rating-item-color`
-- `--rating-item-disabled-color`
-- `--rating-item-highlighted-color`
+- `$rating-item-color`
+- `$rating-item-disabled-color`
+- `$rating-item-highlighted-color`
 
 ## Demo
 

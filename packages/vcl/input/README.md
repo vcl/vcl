@@ -82,22 +82,22 @@ The validation state of an input can be visualized by the standard modifiers
 
 ## Variables
 
-- `--input-height`
-- `--input-line-height`
-- `--input-textarea-line-height`
-- `--input-outline-focus-color`
-- `--input-color`
-- `--input-text-placeholder-color`
-- `--input-text-placeholder-font-style`
-- `--input-border-width`
-- `--input-border-color`
-- `--input-border-radius`
-- `--input-border-focus-color`
-- `--input-bg-color`
-- `--input-bg-focus-color`
-- `--input-disabled-color`
-- `--input-disabled-border-color`
-- `--input-disabled-bg-color`
+- `$input-height`
+- `$input-line-height`
+- `$input-textarea-line-height`
+- `$input-outline-focus-color`
+- `$input-color`
+- `$input-text-placeholder-color`
+- `$input-text-placeholder-font-style`
+- `$input-border-width`
+- `$input-border-color`
+- `$input-border-radius`
+- `$input-border-focus-color`
+- `$input-bg-color`
+- `$input-bg-focus-color`
+- `$input-disabled-color`
+- `$input-disabled-border-color`
+- `$input-disabled-bg-color`
 
 ## Demo
 

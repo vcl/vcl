@@ -32,9 +32,9 @@ A ribbon can also be a link and contain an icogram.
 
 ## Variables
 
-- `--ribbon-bg-color`
-- `--ribbon-color`
-- `--ribbon-shadow-color`
+- `$ribbon-bg-color`
+- `$ribbon-color`
+- `$ribbon-shadow-color`
 
 ## Demo
 

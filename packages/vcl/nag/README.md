@@ -26,8 +26,8 @@ the flex-layout module.
 
 ## Variables
 
-- `--nag-color`
-- `--nag-bg-color`
+- `$nag-color`
+- `$nag-bg-color`
 
 ## Demo
 

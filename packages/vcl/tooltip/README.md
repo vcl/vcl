@@ -31,10 +31,10 @@ The content can also be made up of other components.
 
 ## Variables
 
-- `--tooltip-color`
-- `--tooltip-bg-color`
-- `--tooltip-border-color`
-- `--tooltip-shadow-color`
+- `$tooltip-color`
+- `$tooltip-bg-color`
+- `$tooltip-border-color`
+- `$tooltip-shadow-color`
 
 ## Demo
 

@@ -42,16 +42,16 @@ used.
 
 ## Variables
 
-- `--process-nav-arrow-border-width`
-- `--process-nav-arrow-border-color`
-- `--process-nav-item-bg-color`
-- `--process-nav-item-color`
-- `--process-nav-item-hover-color`
-- `--process-nav-disabled-bg-color`
-- `--process-nav-disabled-color`
-- `--process-nav-selected-item-color`
-- `--process-nav-selected-item-bg-color`
-- `--process-nav-completed-item-bg-color`
+- `$process-nav-arrow-border-width`
+- `$process-nav-arrow-border-color`
+- `$process-nav-item-bg-color`
+- `$process-nav-item-color`
+- `$process-nav-item-hover-color`
+- `$process-nav-disabled-bg-color`
+- `$process-nav-disabled-color`
+- `$process-nav-selected-item-color`
+- `$process-nav-selected-item-bg-color`
+- `$process-nav-completed-item-bg-color`
 
 ## Demo
 

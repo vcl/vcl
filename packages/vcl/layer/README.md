@@ -17,7 +17,7 @@ By default the layer box is horizontally and vertically centered.
 
 The layer box has a reasonable max width; it
 extends to covers the whole viewport if its width
-is smaller than `--sm-viewport`.
+is smaller than `$sm-viewport`.
 
 ## Usage
 
@@ -43,12 +43,12 @@ A simple layer with a panel as its content.
 
 ## Variables
 
-- `--layer-color`
-- `--layer-bg-color`
-- `--layer-cover-bg-color`
-- `--layer-border-color`
-- `--layer-header-bg-color`
-- `--layer-footer-bg-color`
+- `$layer-color`
+- `$layer-bg-color`
+- `$layer-cover-bg-color`
+- `$layer-border-color`
+- `$layer-header-bg-color`
+- `$layer-footer-bg-color`
 
 ## Demo
 

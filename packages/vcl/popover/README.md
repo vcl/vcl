@@ -24,8 +24,8 @@ inserted to and removed from the DOM as needed.
 
 ## Variables
 
-- `--popover-bg-color`
-- `--popover-shadow-color`
+- `$popover-bg-color`
+- `$popover-shadow-color`
 
 ## Demo
 

@@ -33,16 +33,16 @@ A selected and highlighted state is supported.
 
 ## Variables
 
-- `--token-bg-color`
-- `--token-border-color`
-- `--token-border-hover-color`
-- `--token-border-selected-color`
-- `--token-bg-selected-color`
-- `--token-selected-color`
-- `--token-border-highlighted-color`
-- `--token-bg-highlighted-color`
-- `--token-highlighted-color`
-- `--token-color`
+- `$token-bg-color`
+- `$token-border-color`
+- `$token-border-hover-color`
+- `$token-border-selected-color`
+- `$token-bg-selected-color`
+- `$token-selected-color`
+- `$token-border-highlighted-color`
+- `$token-bg-highlighted-color`
+- `$token-highlighted-color`
+- `$token-color`
 
 ## Demo
 

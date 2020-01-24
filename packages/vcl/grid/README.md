@@ -46,7 +46,7 @@ in the demo.
 
 ## Variables
 
-- `--grid-half-gutter-width`
+- `$grid-half-gutter-width`
 
 ## Demo
 

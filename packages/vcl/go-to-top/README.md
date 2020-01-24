@@ -23,8 +23,8 @@ the `app` class with `+1em` offset.
 
 ## Variables
 
-- `--gototop-color`
-- `--gototop-bg-color`
+- `$gototop-color`
+- `$gototop-bg-color`
 
 ## Demo
 

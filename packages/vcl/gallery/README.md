@@ -46,14 +46,14 @@ The currently visible page of the gallery can show a batch of items:
 
 ## Variables
 
-- `--gallery-bg-color`
-- `--gallery-header-color`
-- `--gallery-header-bg-color`
-- `--gallery-footer-color`
-- `--gallery-footer-bg-color`
-- `--gallery-initial-buttons-opacity`
-- `--gallery-thumbnail-selected-border-color`
-- `--gallery-thumbnail-hover-bg-color`
+- `$gallery-bg-color`
+- `$gallery-header-color`
+- `$gallery-header-bg-color`
+- `$gallery-footer-color`
+- `$gallery-footer-bg-color`
+- `$gallery-initial-buttons-opacity`
+- `$gallery-thumbnail-selected-border-color`
+- `$gallery-thumbnail-hover-bg-color`
 
 ## Demo
 

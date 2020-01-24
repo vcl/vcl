@@ -63,20 +63,20 @@ Years view:
 
 ## Variables
 
-- `--calendar-bg-color`
-- `--calendar-item-color`
-- `--calendar-item-today-color`
-- `--calendar-item-bg-color`
-- `--calendar-item-hover-color`
-- `--calendar-item-hover-bg-color`
-- `--calendar-otherm-day-color`
-- `--calendar-otherm-day-bg-color`
-- `--calendar-selected-item-color`
-- `--calendar-selected-item-bg-color`
-- `--calendar-disabled-item-color`
-- `--calendar-disabled-item-bg-color`
-- `--calendar-available-item-bg-color`
-- `--calendar-unavailable-item-bg-color`
+- `$calendar-bg-color`
+- `$calendar-item-color`
+- `$calendar-item-today-color`
+- `$calendar-item-bg-color`
+- `$calendar-item-hover-color`
+- `$calendar-item-hover-bg-color`
+- `$calendar-otherm-day-color`
+- `$calendar-otherm-day-bg-color`
+- `$calendar-selected-item-color`
+- `$calendar-selected-item-bg-color`
+- `$calendar-disabled-item-color`
+- `$calendar-disabled-item-bg-color`
+- `$calendar-available-item-bg-color`
+- `$calendar-unavailable-item-bg-color`
 
 ## Demo
 

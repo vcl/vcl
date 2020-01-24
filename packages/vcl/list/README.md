@@ -49,7 +49,7 @@ Generally, list items can also be anchor tags to form a list of links.
 
 ## Variables
 
-- `--list-separator-border-color`
+- `$list-separator-border-color`
 
 ## Demo
 

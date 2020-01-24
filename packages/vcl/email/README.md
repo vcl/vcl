@@ -31,10 +31,10 @@ together with classes from other VCL modules.
 
 ## Variables
 
-- `--email-viewport-color`
-- `--email-viewport-bg-color`
-- `--email-body-bg-color`
-- `--email-body-border-color`
+- `$email-viewport-color`
+- `$email-viewport-bg-color`
+- `$email-body-bg-color`
+- `$email-body-border-color`
 
 ## Demo
 

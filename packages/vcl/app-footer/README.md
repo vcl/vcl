@@ -24,8 +24,8 @@ demo this is just an example.
 
 ## Variables
 
-- `--app-footer-color`
-- `--app-footer-bg-color`
+- `$app-footer-color`
+- `$app-footer-bg-color`
 
 ## Demo
 

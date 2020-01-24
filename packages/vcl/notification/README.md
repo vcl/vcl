@@ -54,27 +54,27 @@ Semantic coloring:
 
 ## Variables
 
-- `--notification-border-radius`
-- `--notification-color`
-- `--notification-bg-color`
-- `--notification-hf-color`
-- `--notification-hf-bg-color`
-- `--notification-success-color`
-- `--notification-success-bg-color`
-- `--notification-success-hf-color`
-- `--notification-success-hf-bg-color`
-- `--notification-info-color`
-- `--notification-info-bg-color`
-- `--notification-info-hf-color`
-- `--notification-info-hf-bg-color`
-- `--notification-warning-color`
-- `--notification-warning-bg-color`
-- `--notification-warning-hf-color`
-- `--notification-warning-hf-bg-color`
-- `--notification-error-color`
-- `--notification-error-bg-color`
-- `--notification-error-hf-color`
-- `--notification-error-hf-bg-color`
+- `$notification-border-radius`
+- `$notification-color`
+- `$notification-bg-color`
+- `$notification-hf-color`
+- `$notification-hf-bg-color`
+- `$notification-success-color`
+- `$notification-success-bg-color`
+- `$notification-success-hf-color`
+- `$notification-success-hf-bg-color`
+- `$notification-info-color`
+- `$notification-info-bg-color`
+- `$notification-info-hf-color`
+- `$notification-info-hf-bg-color`
+- `$notification-warning-color`
+- `$notification-warning-bg-color`
+- `$notification-warning-hf-color`
+- `$notification-warning-hf-bg-color`
+- `$notification-error-color`
+- `$notification-error-bg-color`
+- `$notification-error-hf-color`
+- `$notification-error-hf-bg-color`
 
 ## Demo
 

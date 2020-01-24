@@ -27,8 +27,8 @@ The date picker should be placed in a popover to show it as overlay.
 
 ## Variables
 
-- `--date-picker-border-color`
-- `--date-picker-bg-color`
+- `$date-picker-border-color`
+- `$date-picker-bg-color`
 
 ## Demo
 

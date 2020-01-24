@@ -27,7 +27,7 @@
 
 The package.json file defines three scripts.
 
-- `build` utilizes the preprocessor to build the vcl by transpiling the content of vcl.sss to valid css written in the file vcl.css. The `--watch` flag starts the preprocessor in watch mode, so any changes of vcl.sss will trigger a rebuild.
+- `build` utilizes the preprocessor to build the vcl by transpiling the content of vcl.scss to valid css written in the file vcl.css. The `--watch` flag starts sass in watch mode, so any changes of vcl.scss will trigger a rebuild.
 
 - `serve` starts a local webserver with the help of browser-sync. Changes to vcl.css or index.html are immediately reflected in the browser
 

@@ -35,9 +35,9 @@ Automatic chapter numbering for up to three levels.
 
 ## Variables
 
-- `--article-header-border-color`
-- `--article-header-tagline-color`
-- `--block-elem-bottom-margin`
+- `$article-header-border-color`
+- `$article-header-tagline-color`
+- `$block-elem-bottom-margin`
 
 ## Demo
 

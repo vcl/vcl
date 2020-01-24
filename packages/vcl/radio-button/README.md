@@ -24,11 +24,11 @@ Inline variant.
 
 ## Variables
 
-- `--radio-button-color`
-- `--radio-button-focus-color`
-- `--radio-button-hover-color`
-- `--radio-button-disabled-color`
-- `--radio-button-icon-size`
+- `$radio-button-color`
+- `$radio-button-focus-color`
+- `$radio-button-hover-color`
+- `$radio-button-disabled-color`
+- `$radio-button-icon-size`
 
 ## Demo
 

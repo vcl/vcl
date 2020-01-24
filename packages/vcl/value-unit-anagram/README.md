@@ -32,8 +32,8 @@ varied font size for the value and the use of an icon as unit.
 
 ## Variables
 
-- `--vu-anagram-unit-font-size`
-- `--vu-anagram-unit-color`
+- `$vu-anagram-unit-font-size`
+- `$vu-anagram-unit-color`
 
 ## Demo
 

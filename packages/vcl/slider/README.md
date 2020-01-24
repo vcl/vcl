@@ -44,9 +44,9 @@ Contextual state:
 
 ## Variables
 
-- `--slider-rail-bg-color`
-- `--slider-knob-bg-color`
-- `--slider-scale-point-mark-bg-color`
+- `$slider-rail-bg-color`
+- `$slider-knob-bg-color`
+- `$slider-scale-point-mark-bg-color`
 
 ## Demo
 

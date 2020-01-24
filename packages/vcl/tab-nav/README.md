@@ -97,29 +97,29 @@ Justified tabs can be achieved using the appropriate layout attributes.
 
 ### Normal Variant
 
-- `--tab-nav-border-color`
-- `--tab-nav-tab-bg-color`
-- `--tab-nav-tab-bg-hover-color`
-- `--tab-nav-tab-bg-selected-color`
-- `--tab-nav-tab-bg-disabled-color`
-- `--tab-nav-tab-border-selected-color`
-- `--tab-nav-tab-disabled-color`
-- `--tab-nav-tab-color`
-- `--tab-nav-tab-selected-color`
-- `--tab-nav-tab-hover-color`
-- `--tab-nav-tab-button-label-color`
-- `--tab-nav-tab-button-label-hover-color`
-- `--tab-nav-tab-button-selected-label-color`
+- `$tab-nav-border-color`
+- `$tab-nav-tab-bg-color`
+- `$tab-nav-tab-bg-hover-color`
+- `$tab-nav-tab-bg-selected-color`
+- `$tab-nav-tab-bg-disabled-color`
+- `$tab-nav-tab-border-selected-color`
+- `$tab-nav-tab-disabled-color`
+- `$tab-nav-tab-color`
+- `$tab-nav-tab-selected-color`
+- `$tab-nav-tab-hover-color`
+- `$tab-nav-tab-button-label-color`
+- `$tab-nav-tab-button-label-hover-color`
+- `$tab-nav-tab-button-selected-label-color`
 
 ### Uni Variant
 
-- `--tab-nav-tab-bg-color--uni`
-- `--tab-nav-tab-bg-selected-color--uni`
-- `--tab-nav-tab-bg-disabled-color--uni`
-- `--tab-nav-tab-color--uni`
-- `--tab-nav-tab-hover-color--uni`
-- `--tab-nav-tab-color-selected--uni`
-- `--tab-nav-tab-disabled-color--uni`
+- `$tab-nav-tab-bg-color--uni`
+- `$tab-nav-tab-bg-selected-color--uni`
+- `$tab-nav-tab-bg-disabled-color--uni`
+- `$tab-nav-tab-color--uni`
+- `$tab-nav-tab-hover-color--uni`
+- `$tab-nav-tab-color-selected--uni`
+- `$tab-nav-tab-disabled-color--uni`
 
 ## Demo
 

@@ -36,10 +36,10 @@ Viewport with centered app area which contains the main content area:
 
 ## Variables
 
-- `--app-viewport-bg-color`
-- `--app-area-bg-color`
-- `--app-area-max-width`
-- `--app-area-min-width`
+- `$app-viewport-bg-color`
+- `$app-area-bg-color`
+- `$app-area-max-width`
+- `$app-area-min-width`
 
 ## Demo
 

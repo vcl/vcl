@@ -32,7 +32,7 @@ The optional `responsive-image-container` can be used to:
 
 ## Variables
 
-- `--responsive-image-container-color`
+- `$responsive-image-container-color`
 
 ## Demo
 

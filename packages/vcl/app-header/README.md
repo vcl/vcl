@@ -25,9 +25,9 @@ A simple header area:
 
 ## Variables
 
-- `--app-header-color`
-- `--app-header-bg-color`
-- `--app-header-logo-max-width`
+- `$app-header-color`
+- `$app-header-bg-color`
+- `$app-header-logo-max-width`
 
 ## Demo
 

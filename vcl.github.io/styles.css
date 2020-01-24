@@ -1345,7 +1345,7 @@ input[readonly],
 select[readonly],
 textarea[readonly],
 .input.readonly {
-  color: #262626;
+  color: #3f3232;
   background-color: #dddddd;
   border-color: #989898;
   cursor: default;
@@ -2785,7 +2785,7 @@ input.selected:focus {
   list-style: none;
 }
 .navigation .navigation-heading, .navigation .navigation-heading:hover {
-  color: #262626;
+  color: #3f3232;
   background-color: transparent;
   padding: 0.85em 1em;
   overflow: hidden;
@@ -2851,7 +2851,7 @@ input.selected:focus {
 
 /* 1st level coloring */
 .navigation .navigation-item {
-  color: #262626;
+  color: #3f3232;
   background-color: transparent;
 }
 .navigation .navigation-item .navigation-item-label:hover, .navigation .navigation-item .navigation-item-label:focus {
@@ -2978,7 +2978,7 @@ input.selected:focus {
   vertical-align: baseline;
   border-radius: 0.25em;
   color: white;
-  background-color: #262626;
+  background-color: #3f3232;
 }
 .badge.rounded {
   border-radius: 2.5em;
@@ -3472,7 +3472,7 @@ table.table input,
 
 /* Single cell highlighting */
 .cell-highlight {
-  background-color: #c7d9f1;
+  background-color: #171718;
 }
 
 /* Selected cell and row coloring */
@@ -10502,16 +10502,38 @@ readers do not read off random characters that represent icons */
   width: auto;
 }
 
-[class^=fa-]:before,
-[class*=" fa-"]:before {
-  text-decoration: inherit;
-  speak: none;
+/*!
+ * Font Awesome Free 5.10.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("~@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot");
+  src: url("~@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("~@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2") format("woff2"), url("~@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff") format("woff"), url("~@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf") format("truetype"), url("~@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+.fab {
+  font-family: "Font Awesome 5 Brands";
 }
 
-li [class^=fa-],
-li [class*=" fa-"] {
-  width: 1.25em;
-  text-align: center;
+/*!
+ * Font Awesome Free 5.10.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: auto;
+  src: url("~@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot");
+  src: url("~@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("~@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2") format("woff2"), url("~@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff") format("woff"), url("~@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf") format("truetype"), url("~@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+.fa,
+.fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 html,

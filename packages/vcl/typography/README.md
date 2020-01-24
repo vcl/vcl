@@ -85,36 +85,36 @@ code i. e. white spaces inside this element are displayed as typed.
 
 ### Font Settings
 
-- `--typography-font-family`
-- `--typography-font-family-serif`
-- `--typography-font-family-monospace`
-- `--typography-font-size`
-- `--typography-line-height`
+- `$typography-font-family`
+- `$typography-font-family-serif`
+- `$typography-font-family-monospace`
+- `$typography-font-size`
+- `$typography-line-height`
 
 ### Modular Scale Variants
 
-- `--typography-mod-scale-1`
-- `--typography-mod-scale-2`
-- `--typography-mod-scale-3`
-- `--typography-mod-scale-4`
-- `--typography-mod-scale-5`
-- `--typography-mod-scale-6`
+- `$typography-mod-scale-1`
+- `$typography-mod-scale-2`
+- `$typography-mod-scale-3`
+- `$typography-mod-scale-4`
+- `$typography-mod-scale-5`
+- `$typography-mod-scale-6`
 
 ### Colors and Decorations
 
-- `--typography-text-color`
-- `--typography-link-color`
-- `--typography-link-hover-color`
-- `--typography-link-text-decoration`
-- `--typography-heading-color`
-- `--typography-disabled-color`
-- `--typography-mark-color`
-- `--typography-mark-bg-color`
-- `--typography-code-border-color`
-- `--typography-code-bg-color`
-- `--typography-selected-text-bg-color`
-- `--typography-selected-text-color`
-- `--typography-blockquote-border-color`
+- `$typography-text-color`
+- `$typography-link-color`
+- `$typography-link-hover-color`
+- `$typography-link-text-decoration`
+- `$typography-heading-color`
+- `$typography-disabled-color`
+- `$typography-mark-color`
+- `$typography-mark-bg-color`
+- `$typography-code-border-color`
+- `$typography-code-bg-color`
+- `$typography-selected-text-bg-color`
+- `$typography-selected-text-color`
+- `$typography-blockquote-border-color`
 
 ## Demo
 

@@ -23,9 +23,9 @@ It can also be combined with tabs as content area for the selected tab.
 
 ## Variables
 
-- `--container-bg-color`
-- `--container-border-color`
-- `--container-border-radius`
+- `$container-bg-color`
+- `$container-border-color`
+- `$container-border-radius`
 
 ## Demo
 

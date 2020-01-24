@@ -32,15 +32,15 @@ Warning: Try to prevent responsive components as much as you can,
 
 Display widths:
 
--  `--bp-xs-min`: 0px
--  `--bp-xs-max`: 599px
--  `--bp-sm-min`: 600px
--  `--bp-sm-max`: 1023px
--  `--bp-md-min`: 1024px
--  `--bp-md-max`: 1439px
--  `--bp-lg-min`: 1440px
--  `--bp-lg-max`: 1919px
--  `--bp-xl-min`: 1920px
+-  `$bp-xs-min`: 0px
+-  `$bp-xs-max`: 599px
+-  `$bp-sm-min`: 600px
+-  `$bp-sm-max`: 1023px
+-  `$bp-md-min`: 1024px
+-  `$bp-md-max`: 1439px
+-  `$bp-lg-min`: 1440px
+-  `$bp-lg-max`: 1919px
+-  `$bp-xl-min`: 1920px
 
 ## Demo
 

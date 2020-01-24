@@ -42,26 +42,26 @@ Vertical with nested navigation.
 
 ## Variables
 
-- `--navigation-bg-color`
-- `--navigation-color`
-- `--navigation-heading-color`
-- `--navigation-heading-bg-color`
-- `--navigation-3rd-level-bg-color`
-- `--navigation-2nd-level-bg-color`
-- `--navigation-item-disabled-bg-color`
-- `--navigation-item-disabled-color`
-- `--navigation-item-1st-level-bg-color`
-- `--navigation-item-1st-level-color`
-- `--navigation-item-1st-level-hover-bg-color`
-- `--navigation-item-1st-level-hover-color`
-- `--navigation-item-1st-level-selected-bg-color`
-- `--navigation-item-1st-level-selected-color`
-- `--navigation-item-2nd-level-bg-color`
-- `--navigation-item-2nd-level-color`
-- `--navigation-item-2nd-level-hover-bg-color`
-- `--navigation-item-2nd-level-hover-color`
-- `--navigation-item-2nd-level-selected-bg-color`
-- `--navigation-item-2nd-level-selected-color`
+- `$navigation-bg-color`
+- `$navigation-color`
+- `$navigation-heading-color`
+- `$navigation-heading-bg-color`
+- `$navigation-3rd-level-bg-color`
+- `$navigation-2nd-level-bg-color`
+- `$navigation-item-disabled-bg-color`
+- `$navigation-item-disabled-color`
+- `$navigation-item-1st-level-bg-color`
+- `$navigation-item-1st-level-color`
+- `$navigation-item-1st-level-hover-bg-color`
+- `$navigation-item-1st-level-hover-color`
+- `$navigation-item-1st-level-selected-bg-color`
+- `$navigation-item-1st-level-selected-color`
+- `$navigation-item-2nd-level-bg-color`
+- `$navigation-item-2nd-level-color`
+- `$navigation-item-2nd-level-hover-bg-color`
+- `$navigation-item-2nd-level-hover-color`
+- `$navigation-item-2nd-level-selected-bg-color`
+- `$navigation-item-2nd-level-selected-color`
 
 ## Demo
 

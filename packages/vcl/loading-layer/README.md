@@ -28,7 +28,7 @@ the container can be classed as `loading-layer-container` to denote it.
 
 ## Variables
 
-- `--loading-layer-cover-bg-color`
+- `$loading-layer-cover-bg-color`
 
 ## Demo
 

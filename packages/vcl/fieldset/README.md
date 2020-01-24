@@ -18,7 +18,7 @@ Mainly used with forms but may be also used to group other content.
 
 ## Variables
 
-- `--fieldset-border-color`
+- `$fieldset-border-color`
 
 ## Demo
 

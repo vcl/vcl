@@ -56,20 +56,20 @@ item.
 
 ## Variables
 
-- `--dropdown-border-color`
-- `--dropdown-bg-color`
-- `--dropdown-item-color`
-- `--dropdown-item-sub-label-color`
-- `--dropdown-item-bg-hover-color`
-- `--dropdown-item-hover-color`
-- `--dropdown-item-sub-label-hover-color`
-- `--dropdown-selected-item-bg-color`
-- `--dropdown-selected-item-color`
-- `--dropdown-highlighted-item-bg-color`
-- `--dropdown-highlighted-item-color`
-- `--dropdown-disabled-item-bg-color`
-- `--dropdown-disabled-item-color`
-- `--dropdown-separator-item-border-color`
+- `$dropdown-border-color`
+- `$dropdown-bg-color`
+- `$dropdown-item-color`
+- `$dropdown-item-sub-label-color`
+- `$dropdown-item-bg-hover-color`
+- `$dropdown-item-hover-color`
+- `$dropdown-item-sub-label-hover-color`
+- `$dropdown-selected-item-bg-color`
+- `$dropdown-selected-item-color`
+- `$dropdown-highlighted-item-bg-color`
+- `$dropdown-highlighted-item-color`
+- `$dropdown-disabled-item-bg-color`
+- `$dropdown-disabled-item-color`
+- `$dropdown-separator-item-border-color`
 
 ## Demo
 

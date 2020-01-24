@@ -51,14 +51,14 @@ Semantic coloring:
 
 ## Variables
 
-- `--panel-bg-color`
-- `--panel-hf-line-height`
-- `--panel-border-color`
-- `--panel-header-color`
-- `--panel-header-bg-color`
-- `--panel-footer-color`
-- `--panel-footer-bg-color`
-- `--panel-border-radius--card`
+- `$panel-bg-color`
+- `$panel-hf-line-height`
+- `$panel-border-color`
+- `$panel-header-color`
+- `$panel-header-bg-color`
+- `$panel-footer-color`
+- `$panel-footer-bg-color`
+- `$panel-border-radius--card`
 
 ## Demo
 
