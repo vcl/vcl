@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-beta.4](https://github.com/vcl/vcl/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2020-01-24)
+
+
+### Bug Fixes
+
+* **app:** add modules ([22e28a8](https://github.com/vcl/vcl/commit/22e28a85b1b507290459355b4fe5ec32ce050cfb))
+
+
+
+
+
 # [1.0.0-beta.3](https://github.com/vcl/vcl/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2020-01-24)
 
 
