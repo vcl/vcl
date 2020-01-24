@@ -5,6 +5,7 @@
   "main": "package.json",
   "style": "dist/index.css",
   "scss": "index.scss",
+  "sass": "index.scss",
   "author": {
     "name": "n-fuse GmbH",
     "email": "info@n-fuse.co",
