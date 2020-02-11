@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/vcl/vcl/compare/v1.0.0-beta.5...v1.0.0) (2020-02-11)
+
+
+### Bug Fixes
+
+* **run-demo:** replace html-imports ([91135d0](https://github.com/vcl/vcl/commit/91135d0b910ca3998619d37518dad525231239ce))
+
+
+
+
+
 # [1.0.0-beta.2](https://github.com/vcl/vcl/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2020-01-24)
 
 **Note:** Version bump only for package @vcl/run-demo

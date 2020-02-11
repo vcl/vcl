@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/vcl/vcl/compare/v1.0.0-beta.5...v1.0.0) (2020-02-11)
+
+
+### Bug Fixes
+
+* **run-demo:** replace html-imports ([91135d0](https://github.com/vcl/vcl/commit/91135d0b910ca3998619d37518dad525231239ce))
+* **theme:** fix gray-dark-4 and gray-light 6 colors ([00720be](https://github.com/vcl/vcl/commit/00720beef739856511dd2ef694bc7341f8f07cf0))
+
+
+
+
+
 # [1.0.0-beta.5](https://github.com/vcl/vcl/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2020-01-24)
 
 **Note:** Version bump only for package vcl-monorepo
