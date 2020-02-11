@@ -59,8 +59,8 @@ There are several modifier classes to change the positioning of the cells
 - `self-end`
 - `self-stretch`
 - `flex-1` to `flex-12`
-- `flex-1-bp` to `flex-12-bp` where bp is a breakpoint
-- `offset-1-bp` to `offset-12-bp` where bp is a breakpoint
+- `flex-1-bp` to `flex-12-{bp}` where {bp} is a breakpoint
+- `offset-1-bp` to `offset-12-{bp}` where {bp} is a breakpoint
 - `grid-gutter-1` to `grid-gutter-5`
 - `grid-gutterx-1` to `grid-gutterx-5`
 - `grid-guttery-1` to `grid-guttery-5`

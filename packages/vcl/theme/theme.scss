@@ -11,12 +11,14 @@ $content-secondary-bg-color: $gray-light-5 !default;
 $content-ternary-bg-color: $gray-light-3 !default;
 $layout-half-gutter-width: 0.5rem !default;
 
-$space-0: 0 !default;
-$space-1: 4px !default;
-$space-2: 8px !default;
-$space-3: 16px !default;
-$space-4: 24px !default;
-$space-5: 48px !default;
+$space: (
+  "0": 0,
+  "1": 4px,
+  "2": 8px,
+  "3": 16px,
+  "4": 24px,
+  "5": 48px
+) !default;
 
 /* App */
 $app-viewport-bg-color: $gray-light-5 !default;

@@ -1,0 +1,95 @@
+@use "../theme.scss" as *;
+
+.m-auto {
+  margin: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+@each $name, $value in $space {
+  .p-#{$name} {
+    padding: $value $value;
+  }
+
+  .pl-#{$name} {
+    padding-left: $value;
+  }
+
+  .pr-#{$name} {
+    padding-right: $value;
+  }
+
+  .pt-#{$name} {
+    padding-top: $value;
+  }
+
+  .pb-#{$name} {
+    padding-bottom: $value;
+  }
+
+  .px-#{$name} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  .py-#{$name} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  .m-#{$name} {
+    margin: $value $value;
+  }
+
+  .ml-#{$name} {
+    margin-left: $value;
+  }
+
+  .mr-#{$name} {
+    margin-right: $value;
+  }
+
+  .mt-#{$name} {
+    margin-top: $value;
+  }
+
+  .mb-#{$name} {
+    margin-bottom: $value;
+  }
+
+  .mx-#{$name} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .my-#{$name} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+}
