@@ -9,13 +9,17 @@ export default class DocDemo extends PolymerElement {
     <div id="docDemo">
       <div class="tabbable">
         <div class="tabs tab-style-uni" role="tablist">
-          <div class$="tab  {{getDemoTabClass(codeVisible)}}"  on-click="showDemo" role="tab">
-            <span class="tabLabel icon fas fa-eye"></span>
-            <span class="tabLabel">Demo</span>
+          <div class$="tab {{getDemoTabClass(codeVisible)}}" on-click="showDemo" role="tab">
+            <div class="icogram">
+              <div class="icon icon fas fa-eye" aria-hidden="true" aria-label="account" role="img"></div>
+              <div class="text">Demo</div>
+            </div>
           </div>
           <div class$="tab {{getCodeTabClass(codeVisible)}}" on-click="showCode" role="tab">
-            <span class="tabLabel icon fas fa-code"></span>
-            <span class="tabLabel">Code</span>
+            <div class="icogram">
+              <div class="icon icon fas fa-code" aria-hidden="true" aria-label="account" role="img"></div>
+              <div class="text">Code</div>
+            </div>
           </div>
 
           <form class$="docEditDemoButton half-transparent {{getCodeTextClass(codeVisible)}}" action="https://codepen.io/pen/define" method="POST" target="_blank">
