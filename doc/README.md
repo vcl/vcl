@@ -46,11 +46,13 @@ build process.
 
 ### Run a Module's Demos
 
-    $ git clone https://github.com/vcl/vcl.git
-    $ npm install
-    $ npm run demo [module name] -- --watch
-    e.g.
-    $ npm run demo button -- --watch
+```sh
+git clone https://github.com/vcl/vcl.git
+npm install
+npm run demo [module name] -- --watch
+e.g.
+npm run demo button -- --watch
+```
 
 ### Missing a Module?
 
