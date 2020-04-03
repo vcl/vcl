@@ -144,7 +144,7 @@ level variant. The primary variant always goes without modifier.
 - Have at least one example with proper
   [WAI-ARIA](http://www.w3.org/WAI/intro/aria) plumbing.
 - You can neglect semantic HTML due to that.
-- Create a `demo.css` in the module root for additional styling of the demo.
+- Create a `demo.scss` in the module root for additional styling of the demo.
   Do not forget to import the module style in `index.scss` or `index.css`.
 
 ```scss
@@ -156,16 +156,7 @@ level variant. The primary variant always goes without modifier.
 }
 ```
 
-# Development
-
-Clone the VCL's monorepo, enter the folder of the module you want to work on
-and use the following npm scripts:
-
-- `npm start` - starts a web server and opens the examples
-  (browsersync enabled).
-- `npm test` - tries to pre-process the sources.
-
-# Theming
+## Theming
 
 Themes like the [default theme](https://github.com/vcl/vcl/themes/theme) just
 define variables which are expected to be set by the modules in scope of it.
@@ -174,7 +165,7 @@ In order to create a new theme it may be sensible to just extend/ override
 the default theme as done in the
 [bw theme](https://github.com/vcl/vcl/themes/bw-theme)
 
-# Browser Compatibility
+## Browser Compatibility
 
 Compatibility differs on module level and is delegated to
 [Autoprefixer](https://github.com/postcss/autoprefixer).
@@ -186,13 +177,7 @@ In general, at least the following should be supported and tested:
 - Reasonably recent Webkit/ Blink engines and derivatives.
 - Plus their mobile variants.
 
-# Related Tools
-
-A similar and partly compatible approach is pursued by:
-
-- [SUITCSS](https://github.com/suitcss) which is outdated.
-
-# Contributing
+## Contributing
 
 PRs are welcome! Please understand that we will only accept modules and
 changes which we think fit in the current VCL eco-system.
