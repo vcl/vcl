@@ -158,12 +158,12 @@ level variant. The primary variant always goes without modifier.
 
 ## Theming
 
-Themes like the [default theme](https://github.com/vcl/vcl/themes/theme) just
+Themes like the [default theme](https://github.com/vcl/vcl/tree/master/packages/vcl/theme) just
 define variables which are expected to be set by the modules in scope of it.
 A theme can be for a single module or a collection of modules.
 In order to create a new theme it may be sensible to just extend/ override
 the default theme as done in the
-[bw theme](https://github.com/vcl/vcl/themes/bw-theme)
+[bw theme](https://github.com/vcl/vcl/tree/master/packages/vcl/bw-theme)
 
 ## Browser Compatibility
 
