@@ -4,11 +4,8 @@
   user-select: none;
   box-sizing: border-box;
   display: block;
-  // position: absolute;
-  // z-index: 60;
-  // min-width: 13em;
-  // max-height: 25em;
   margin: 0;
+  margin-bottom: $form-control-vertical-gap;
   padding: 0;
   list-style: none;
   text-align: left;
