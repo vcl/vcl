@@ -5,7 +5,7 @@ Select form control.
 ## Features
 
 A replacement of the standard HTML select form control.
-This component comprises only the input control, the _dropdown_ is a suitable
+This component comprises only the input control, the _select-list_ is a suitable
 component for the drop-down that contains selectable items and
 opens when the input is focused.
 
