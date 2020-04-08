@@ -8,6 +8,11 @@ body,
   font-family: $typography-font-family;
 }
 
+.disabled,
+a.disabled {
+  color: $typography-disabled-color;
+}
+
 abbr {
   &.initialism {
     font-size: 93%;
@@ -197,11 +202,6 @@ a {
       }
     }
   }
-}
-
-.disabled,
-a.disabled {
-  color: $typography-disabled-color;
 }
 
 .secondary-text-color {
