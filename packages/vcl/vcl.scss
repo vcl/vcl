@@ -21,7 +21,6 @@
 @forward "date-picker.scss";
 @forward "divider.scss";
 @forward "drawer.scss";
-@forward "dropdown.scss";
 @forward "effects.scss";
 @forward "email.scss";
 @forward "embedded-input-button.scss";
@@ -65,6 +64,7 @@
 @forward "ribbon.scss";
 @forward "scrollbar.scss";
 @forward "select.scss";
+@forward "select-list.scss";
 @forward "size-modulation.scss";
 @forward "slider.scss";
 @forward "spinner.scss";
@@ -80,3 +80,5 @@
 @forward "utils.scss";
 @forward "value-unit-anagram.scss";
 @forward "zoom-box.scss";
+// Deprecated
+@forward "dropdown.scss";

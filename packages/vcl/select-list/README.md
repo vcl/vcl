@@ -1,8 +1,6 @@
-# [VCL](https://github.com/vcl/doc) dropdown (deprecated)
+# [VCL](https://github.com/vcl/doc) select-list
 
-**DEPRECATED**
-
-A dropdown menu consisting of a list of items which can be selected.
+A select-list menu consisting of a list of items which can be selected.
 
 ## Features
 
@@ -27,7 +25,7 @@ The example below has ARIA attributes denoting it as menu.
 
 [menu example](/demo/example-menu.html)
 
-The example below is a dropdown with _listbox_ semantics.
+The example below is a select-list with _listbox_ semantics.
 In this example, multiple items are already selected.
 Also sub-labels or items are used.
 
@@ -40,17 +38,17 @@ item.
 
 ## Classes
 
-- `dropdown`
-- `dropdown-item`
-- `dropdown-item-label`
-- `dropdown-item-sub-label`
-- `dropdown-item-group-header`
-- `dropdown-item-group-header-label`
+- `select-list`
+- `select-list-item`
+- `select-list-item-label`
+- `select-list-item-sub-label`
+- `select-list-item-group-header`
+- `select-list-item-group-header-label`
 - `separator`
 
 ## Modifiers
 
-### For `dropdown-item`
+### For `select-list-item`
 
 - `selected`: To visualize items that are currently selected.
 - `disabled`: To disabled items (make them unavailable for selection).
@@ -58,20 +56,20 @@ item.
 
 ## Variables
 
-- `$dropdown-border-color`
-- `$dropdown-bg-color`
-- `$dropdown-item-color`
-- `$dropdown-item-sub-label-color`
-- `$dropdown-item-bg-hover-color`
-- `$dropdown-item-hover-color`
-- `$dropdown-item-sub-label-hover-color`
-- `$dropdown-selected-item-bg-color`
-- `$dropdown-selected-item-color`
-- `$dropdown-highlighted-item-bg-color`
-- `$dropdown-highlighted-item-color`
-- `$dropdown-disabled-item-bg-color`
-- `$dropdown-disabled-item-color`
-- `$dropdown-separator-item-border-color`
+- `$select-list-border-color`
+- `$select-list-bg-color`
+- `$select-list-item-color`
+- `$select-list-item-sub-label-color`
+- `$select-list-item-bg-hover-color`
+- `$select-list-item-hover-color`
+- `$select-list-item-sub-label-hover-color`
+- `$select-list-selected-item-bg-color`
+- `$select-list-selected-item-color`
+- `$select-list-highlighted-item-bg-color`
+- `$select-list-highlighted-item-color`
+- `$select-list-disabled-item-bg-color`
+- `$select-list-disabled-item-color`
+- `$select-list-separator-item-border-color`
 
 ## Demo
 
