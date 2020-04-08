@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/vcl/vcl/compare/v1.0.0...v1.1.0) (2020-04-08)
+
+
+### Features
+
+* **select-list:** add select-list control ([7b8207f](https://github.com/vcl/vcl/commit/7b8207f7a099d847100d26aa87a5f2eebd517139))
+
+
+
+
+
 # [1.0.0](https://github.com/vcl/vcl/compare/v1.0.0-beta.5...v1.0.0) (2020-02-11)
 
 
