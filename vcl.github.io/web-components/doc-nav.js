@@ -12,7 +12,7 @@ export default class DocNav extends PolymerElement {
     return html`
     <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <div class="input-group-emb" style="margin-bottom: 0">
+        <div class="embedded-input-group" style="margin-bottom: 0">
           <span class="prepended">
               <div class="icon fas fa-search"></div>
           </span>

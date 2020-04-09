@@ -1212,7 +1212,7 @@ span.button[disabled] {
 .toolbar.transparent {
   background-color: transparent;
 }
-.toolbar .input-group, .toolbar .input-group-emb, .toolbar .navigation, .toolbar .loose-button-group {
+.toolbar .input-group, .toolbar .embedded-input-group, .toolbar .navigation, .toolbar .loose-button-group {
   margin-bottom: 0;
 }
 .toolbar .logo {
@@ -1575,22 +1575,22 @@ hr {
     border: none !important;
   }
 }
-.input-group-emb {
+.embedded-input-group {
   display: block;
   margin-bottom: 1em;
   position: relative;
   width: 100%;
 }
-.input-group-emb .input {
+.embedded-input-group .input {
   margin-bottom: 0;
 }
-.input-group-emb .input.prep-item {
+.embedded-input-group .input.prep-item {
   padding-left: 2.5em;
 }
-.input-group-emb .input.app-item {
+.embedded-input-group .input.app-item {
   padding-right: 2.5em;
 }
-.input-group-emb .prepended, .input-group-emb .appended {
+.embedded-input-group .prepended, .embedded-input-group .appended {
   text-align: center;
   line-height: 2.65em;
   display: block;
@@ -1599,20 +1599,20 @@ hr {
   top: 0;
   color: #6a6a6a;
 }
-.input-group-emb .prepended {
+.embedded-input-group .prepended {
   left: 0;
 }
-.input-group-emb .appended {
+.embedded-input-group .appended {
   right: 0;
 }
-.input-group-emb > button.button, .input-group-emb > button.button:hover {
+.embedded-input-group > button.button, .embedded-input-group > button.button:hover {
   background-color: white;
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
   background-clip: content-box;
 }
-.input-group-emb > button.button[disabled] {
+.embedded-input-group > button.button[disabled] {
   display: none;
 }
 
@@ -3662,10 +3662,10 @@ input.selected:focus {
 .input-group > :not(:first-child) {
   margin-left: -1px;
 }
-.input-group > .input, .input-group > .input-group-emb {
+.input-group > .input, .input-group > .embedded-input-group {
   margin-bottom: 0;
 }
-.input-group > .input:focus, .input-group > .input-group-emb:focus {
+.input-group > .input:focus, .input-group > .embedded-input-group:focus {
   z-index: 1;
 }
 .input-group > .button {
@@ -3954,10 +3954,10 @@ ol ul {
 .material.material-floating-label input:-ms-input-placeholder, .material.material-floating-label textarea:-ms-input-placeholder {
   opacity: 1;
 }
-.material.material-input-group-emb-prep-item .form-control-label {
+.material.material-embedded-input-group-prep-item .form-control-label {
   max-width: calc(100% - 2.5em);
 }
-.material.material-input-group-emb-prep-item:not(.material-floating-label) .form-control-label {
+.material.material-embedded-input-group-prep-item:not(.material-floating-label) .form-control-label {
   left: 2.5em;
 }
 
@@ -4758,7 +4758,7 @@ table.table select,
 table.table textarea,
 table.table input,
 .table .input,
-.table input-group-emb {
+.table embedded-input-group {
   margin-bottom: 0;
 }
 
