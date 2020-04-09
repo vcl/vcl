@@ -12,4 +12,12 @@
     background-color: $input-bg-color;
     cursor: pointer;
   }
+
+  & .input.disabled {
+    color: $input-disabled-color;
+    background-color: $input-disabled-bg-color;
+    border-color: $input-disabled-border-color;
+    cursor: default;
+  }
+
 }
