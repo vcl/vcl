@@ -1,6 +1,6 @@
 @use "../theme.scss" as *;
 
-.input-group-emb {
+.embedded-input-group {
   display: block;
   margin-bottom: $form-control-vertical-gap;
   position: relative;
@@ -47,7 +47,8 @@
       background-clip: content-box;
     }
 
-    &.button[disabled] {
+    &.button[disabled], 
+    &.button.disabled {
       display: none;
     }
   }

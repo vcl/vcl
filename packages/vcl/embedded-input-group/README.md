@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) embedded-input-button
+# [VCL](https://github.com/vcl/doc) embedded-input-group
 
 Buttons, icons and plain text labels embeddable in text input elements.
 
@@ -12,7 +12,7 @@ Buttons, icons and plain text labels embeddable in text input elements.
 
 ## Classes
 
-- `input-group-emb`
+- `embedded-input-group`
 - `app-item`
 - `prep-item`
 - `appended`

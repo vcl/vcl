@@ -36,7 +36,7 @@ List of core modules:
 - container
 - divider
 - drawer
-- embedded-input-button
+- embedded-input-group
 - fieldset
 - flex-grid
 - form

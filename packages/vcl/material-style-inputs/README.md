@@ -23,7 +23,7 @@ A focused input must also have the `material-focused` class
 
 The embedded input group needs a modifier class for correct label positioning
 
-[EmbeddedInputGroup](/demo/example-embedded-input-button.html)
+[EmbeddedInputGroup](/demo/example-embedded-input-group.html)
 
 ## Classes
 
@@ -33,7 +33,7 @@ The embedded input group needs a modifier class for correct label positioning
 
 - `material-floating-label`
 - `material-focused`
-- `material-input-group-emb-prep-item`
+- `material-embedded-input-group-prep-item`
 
 ## Demo
 

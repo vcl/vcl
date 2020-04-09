@@ -47,7 +47,7 @@ Similarly the navigation bar on the left but with the modifier class `col`:
 The search input is more complex and actually a mashup of multiple VCL components:
 
 ```html
-<div class="input-group-emb">
+<div class="embedded-input-group">
   <span class="prepended">
     <div class="icon fas fa-search"></div>
   </span>

@@ -129,11 +129,11 @@
   }
 
   // Embedded input group modifiers for prepended space in input
-  &.material-input-group-emb-prep-item .form-control-label {
+  &.material-embedded-input-group-prep-item .form-control-label {
     max-width: calc(100% - 2.5em);
   }
 
-  &.material-input-group-emb-prep-item:not(.material-floating-label) .form-control-label {
+  &.material-embedded-input-group-prep-item:not(.material-floating-label) .form-control-label {
     left: 2.5em;
   }
 }
