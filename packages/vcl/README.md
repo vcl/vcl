@@ -28,10 +28,7 @@ Use the following import for a collection of core modules
 List of core modules:
 
 - theme
-- app-area
-- app-content-area
-- app-footer
-- app-header
+- app
 - breakpoints
 - button
 - button-group

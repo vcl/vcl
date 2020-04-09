@@ -1,6 +1,6 @@
 {
-  "name": "app-area",
-  "description": "The background and layout of the app's viewport and app area",
+  "name": "app",
+  "description": "The app's viewport and app layout",
   "categories": [
     {
       "title": "Areas",
