@@ -1,61 +1,65 @@
 @use "../theme.scss" as *;
 
+
 .data-list {
   display: block;
   margin-bottom: $block-elem-vertical-gap;
   background-color: $data-list-bg-color;
+}
 
-  & .data-list-header {
-    display: block;
-    background-color: $data-list-header-bg-color;
-  }
 
-  & .data-list-footer {
-    display: block;
-    background-color: $data-list-footer-bg-color;
-  }
+.data-list-header {
+  display: block;
+  background-color: $data-list-header-bg-color;
+}
 
-  & > .data-list-body {
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style: none;
-    list-style-type: none;
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-top-color: $data-list-border-color;
-    border-bottom-color: $data-list-border-color;
+.data-list-footer {
+  display: block;
+  background-color: $data-list-footer-bg-color;
+}
 
-    & > .data-list-item {
-      display: list-item;
-      min-height: 3em;
-      position: relative;
+.data-list-body {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  list-style-type: none;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-top-color: $data-list-border-color;
+  border-bottom-color: $data-list-border-color;
+}
 
-      &.disabled {
-        background-color: transparent;
-        color: $data-list-item-disabled-color;
-        cursor: default;
+.data-list-item {
+  display: list-item;
+  min-height: 3em;
+  position: relative;
 
-        &:hover {
-          color: $data-list-item-disabled-color;
-          background-color: transparent;
-        }
-      }
-    }
+  &.disabled {
+    background-color: transparent;
+    color: $data-list-item-disabled-color;
+    cursor: default;
 
-    & .data-list-item,
-    & .data-list-item:hover {
-      &.selected {
-        color: $data-list-item-selected-color;
-        background-color: $data-list-item-bg-selected-color;
-      }
+    &:hover {
+      color: $data-list-item-disabled-color;
+      background-color: transparent;
     }
   }
+}
 
+.data-list-item,
+.data-list-item:hover {
+  &.selected {
+    color: $data-list-item-selected-color;
+    background-color: $data-list-item-bg-selected-color;
+  }
+}
+
+.data-list {
   &.divider {
     & .data-list-item {
       border-bottom-width: 1px;
@@ -68,7 +72,7 @@
     }
   }
 
-  & .no-border {
+  &.no-border {
     & .data-list-body {
       border: 0;
     }
