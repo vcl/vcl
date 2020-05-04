@@ -22,7 +22,6 @@
   {"name": "drawer",                               "description": "Drawer",                                              "homepage": "https://vcl.github.io/#vcl-drawer"},
   {"name": "email",                                "description": "E-Mail related styles",                               "homepage": "https://vcl.github.io/#vcl-email"},
   {"name": "effects",                              "description": "CSS filter based effects",                            "homepage": "https://vcl.github.io/#vcl-effects"},
-  {"name": "embedded-input-group",                 "description": "Input with embedded icons/buttons",                   "homepage": "https://vcl.github.io/#vcl-embedded-input-group"},
   {"name": "icon",                                 "description": "Icon",                                                "homepage": "https://vcl.github.io/#vcl-icon"},
   {"name": "icogram",                              "description": "Icon and text",                                       "homepage": "https://vcl.github.io/#vcl-icogram"},
   {"name": "fieldset",                             "description": "Fieldset",                                            "homepage": "https://vcl.github.io/#vcl-fieldset"},
