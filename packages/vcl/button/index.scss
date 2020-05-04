@@ -3,7 +3,7 @@
 @use "../mixins.scss";
 
 .button-dim {
-  display: inline;
+  display: inline-block;
   vertical-align: middle;
   border-width: $button-border-width;
   line-height: $button-line-height;
