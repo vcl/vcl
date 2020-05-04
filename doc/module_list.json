@@ -41,7 +41,6 @@
   {"name": "checkbox",                             "description": "Checkbox form control",                               "homepage": "https://vcl.github.io/#vcl-checkbox"},
   {"name": "radio-button",                         "description": "Radio button form control",                           "homepage": "https://vcl.github.io/#vcl-radio-button"},
   {"name": "ribbon",                               "description": "Ribbon",                                              "homepage": "https://vcl.github.io/#vcl-ribbon"},
-  {"name": "input-group",                          "description": "Input group",                                         "homepage": "https://vcl.github.io/#vcl-input-group"},
   {"name": "label",                                "description": "Label",                                               "homepage": "https://vcl.github.io/#vcl-label"},
   {"name": "layer",                                "description": "Layer",                                               "homepage": "https://vcl.github.io/#vcl-layer"},
   {"name": "flex-layout",                          "description": "Flexbox based layout system",                         "homepage": "https://vcl.github.io/#vcl-flex-layout"},
