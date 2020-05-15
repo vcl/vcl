@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.1](https://github.com/vcl/vcl/compare/v1.1.2...v2.0.0-alpha.1) (2020-05-15)
+
+
+### Bug Fixes
+
+* fix module priorities ([1aca49b](https://github.com/vcl/vcl/commit/1aca49bba514354bbe7e831b6af3805024b2bce3))
+* misc fixes ([e1f3882](https://github.com/vcl/vcl/commit/e1f38824a91296f98ef7df5aba5bbbde448935dd))
+* **select:** fix disabled state ([4843bb1](https://github.com/vcl/vcl/commit/4843bb1851abf92643f578837e821fb607e34052))
+
+
+### Code Refactoring
+
+* Refactoring of checkbox, radio-button, input, select, token-input and form ([d637193](https://github.com/vcl/vcl/commit/d637193d67167ee271b4494df009fe9658d63efe))
+* **dropdown:** remove dropdown module ([e2a7e5f](https://github.com/vcl/vcl/commit/e2a7e5fc8835274deb27cce0af36ea3c8a6713a9))
+* **embedded-input-button:** rename embedded-input-button to embedded-input-group ([8c9291c](https://github.com/vcl/vcl/commit/8c9291c9d04787e2b5baa3c86a6a5d677a41b85a))
+* **embedded-input-group:** remove embedded-input-group ([3c5295f](https://github.com/vcl/vcl/commit/3c5295fd8eb6cae096512db8e5ccff5ac8b1f8a0))
+* **tooltip:** remove absolute positioning ([2dc6b03](https://github.com/vcl/vcl/commit/2dc6b03ee21625961ad14945b5a1accf7cd815b6))
+* merge app-* modules into single app module ([a33841a](https://github.com/vcl/vcl/commit/a33841a84a10634f489e046facc4a04ec9e2c6dd))
+
+
+### BREAKING CHANGES
+
+* Checkbox, radio-button, input, select, token-input and form controls are refactored.
+Check control docs for more information.
+* **embedded-input-group:** Removed embedded-input-group. Will be integrated in input.
+* **tooltip:** Removed absolute positioning.
+* **dropdown:** Removed dropdown module. Use select-list instead.
+* **embedded-input-button:** embedded-input-button module was renamed to embedded-input-button. .input-group-emb
+class was renamed to .embedded-input-group
+* All app-* modules are merged into app the module. Remove app-* related imports and
+replace with app.
+
+
+
+
+
 ## [1.1.2](https://github.com/vcl/vcl/compare/v1.1.1...v1.1.2) (2020-04-08)
 
 

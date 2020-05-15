@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.1](https://github.com/vcl/vcl/compare/v1.1.2...v2.0.0-alpha.1) (2020-05-15)
+
+**Note:** Version bump only for package @vcl/run-demo
+
+
+
+
+
 # [1.0.0](https://github.com/vcl/vcl/compare/v1.0.0-beta.5...v1.0.0) (2020-02-11)
 
 
