@@ -141,17 +141,21 @@ $sum-table-total-color: inherit !default;
 $sum-table-total-bg-color: transparent !default;
 
 /* Data List */
+
 $data-list-bg-color: transparent !default;
 $data-list-header-bg-color: transparent !default;
 $data-list-footer-bg-color: transparent !default;
 $data-list-border-color: $gray-light-2 !default;
+$data-list-item-color: inherit !default;
 $data-list-item-separator-border-color: transparent !default;
 $data-list-item-hover-color: $text-primary-color !default;
 $data-list-item-bg-hover-color: $gray-light-4 !default;
 $data-list-item-selected-color: $white !default;
 $data-list-item-bg-selected-color: $brand-accent-dark !default;
 $data-list-item-divider-border-color: $gray-light-3 !default;
-$data-list-item-disabled-color: $gray-light-2 !default;
+$data-list-item-selected-hover-color: $white !default;
+$data-list-item-selected-hover-bg-color: $brand-accent-darker !default;
+$data-list-item-disabled-opacity: 0.6;
 
 /* Data Tree */
 $data-tree-bg-color: transparent !default;
@@ -433,7 +437,7 @@ $input-line-height: initial !default;
 $input-textarea-line-height: 1.52em !default;
 $input-outline-focus-color: $black !default;
 $input-color: $black !default;
-$input-text-placeholder-color: $gray-light-1 !default;
+$input-text-placeholder-color: $gray-dark-2 !default;
 $input-text-placeholder-font-style: normal !default;
 $input-border-width: 1px !default;
 $input-border-color: $gray-light-1 !default;
@@ -441,9 +445,11 @@ $input-border-focus-color: $brand-accent !default;
 $input-border-radius: 0 !default;
 $input-bg-color: $white !default;
 $input-bg-focus-color: $white !default;
-$input-disabled-color: $gray-dark-4 !default;
-$input-disabled-border-color: $gray-light-1 !default;
-$input-disabled-bg-color: $gray-light-3 !default;
+$input-disabled-color: $gray-light-1 !default;
+$input-disabled-border-color: $gray-light-3 !default;
+$input-disabled-bg-color: $white !default;
+$input-field-text-color: $gray-dark-1 !default;
+$input-field-disabled-text-color: $gray-light-1 !default;
 
 /* File Input */
 $file-input-color: $input-outline-focus-color !default;
@@ -480,9 +486,6 @@ $input-group-color: $gray-light-3 !default;
 $input-group-height: $input-elem-height !default;
 $input-group-line-height: $input-elem-height !default;
 
-/* Embedded Input Group */
-$embedded-input-group-text-color: $gray-dark-1 !default;
-$embedded-input-group-text-bg-color: $input-bg-color !default;
 
 /* Slider */
 $slider-rail-bg-color: $gray-light-3 !default;

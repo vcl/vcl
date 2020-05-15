@@ -12,7 +12,7 @@ textarea:-ms-input-placeholder {
   font-style: $input-text-placeholder-font-style;
 }
 
-.vclInput:-ms-placeholder {
+.input:-ms-placeholder {
   color: $input-text-placeholder-color;
   font-style: $input-text-placeholder-font-style;
 }
@@ -27,7 +27,7 @@ textarea::-moz-placeholder {
   font-style: $input-text-placeholder-font-style;
 }
 
-.vclInput::-moz-placeholder {
+.input::-moz-placeholder {
   color: $input-text-placeholder-color;
   font-style: $input-text-placeholder-font-style;
 }
@@ -37,14 +37,14 @@ textarea::-moz-placeholder {
   font-style: $input-text-placeholder-font-style;
 }
 
-.vclInput::-webkit-input-placeholder {
+.input::-webkit-input-placeholder {
   color: $input-text-placeholder-color;
   font-style: $input-text-placeholder-font-style;
 }
 
 input::placeholder,
 textarea::placeholder,
-.vclInput::placeholder {
+.input::placeholder {
   color: $input-text-placeholder-color;
   font-style: $input-text-placeholder-font-style;
 }

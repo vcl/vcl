@@ -1,0 +1,36 @@
+@use "../theme.scss" as *;
+
+.form-control-hint {
+  display: block;
+  line-height: 1;
+  font-size: 0.9em;
+  color: $form-control-hint-color;
+  margin-top: 0.3em;
+  margin-bottom: $form-control-vertical-gap;
+
+  &.error {
+    color: $danger-medium-color;
+  }
+
+  &.warning {
+    color: $warning-medium-color;
+  }
+
+  &.success {
+    color: $success-medium-color;
+  }
+
+  &.info {
+    color: $info-medium-color;
+  }
+
+  &.primary {
+    color: $primary-medium-color;
+  }
+}
+
+.form-control-group.floating-label {
+  & .form-control-hint {
+    margin-bottom: 0;
+  }
+}

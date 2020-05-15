@@ -12,15 +12,18 @@ The layout is built with the `form-control-group` and
 
 [basic example](/demo/example-basic.html)
 
-Inline variant.
+Vertical variant.
 
-[inline example](/demo/example-inline.html)
+[inline example](/demo/example-vertical.html)
 
 ## Classes
 
+- `radio-group`
 - `radio-button`
 
 ## Modifiers
+
+- `vertical`
 
 ## Variables
 

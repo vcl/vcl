@@ -1,7 +1,6 @@
 @use "../theme.scss" as *;
 
 .pop-over {
-  position: absolute;
   box-sizing: border-box;
   border-radius: 0.25em;
   padding: 0.5rem;
@@ -12,5 +11,4 @@
   background-color: $popover-bg-color;
   box-shadow: 0px 3px 8px $popover-shadow-color;
   color: $popover-color;
-  z-index: 5;
 }

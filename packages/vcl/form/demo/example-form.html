@@ -1,0 +1,67 @@
+<div id="form-example-basic">
+  <form class="form">
+    <div class="form-control-group">
+      <label for="form_basic">
+        Label
+        <em class="required-indicator">•</em>
+      </label>
+      <div class="input-field">
+        <div class="icon fas fa-search"></div>
+        <input id="form_basic" class="input" type="text">
+      </div>
+      <span class="form-control-hint">Form Control Hint</span>
+    </div>
+  </form>
+
+
+  <form class="form">
+    <div class="form-control-group">
+      <label for="form_basic">
+        Label
+        <em class="required-indicator">•</em>
+      </label>
+      <div class="input-field">
+        <div class="icon fas fa-search"></div>
+        <input id="form_basic" class="input" type="text">
+      </div>
+      <span class="form-control-hint">Form Control Hint</span>
+    </div>
+  </form>
+
+
+  <form class="form demo_ig">
+    <div class="form-control-group">
+      <label for="form_basic">
+        Label
+        <em class="required-indicator">•</em>
+      </label>
+      <div class="input-group">
+        <div class="input-field">
+          <div class="icon fas fa-search"></div>
+          <input id="form_basic" class="input" type="text">
+        </div>
+        <button type="button" class="button transparent">
+          <div class="icon fas fa-question-circle" aria-hidden="true" role="img"></div>
+        </button>
+      </div>
+      <span class="form-control-hint">Form Control Hint</span>
+    </div>
+  </form>
+</div>
+
+<script>
+  const fcgs = document.querySelectorAll('#form-example-basic .form-control-group');
+  
+  fcgs.forEach(fcg => {
+    const inputField = fcg.querySelector('.input-field');
+    const input = inputField.querySelector('.input');
+    input.addEventListener('focus', () => {
+      inputField.classList.add('focused');
+      fcg.classList.add('focused');
+    })
+    input.addEventListener('blur', () => {
+      inputField.classList.remove('focused');
+      fcg.classList.remove('focused');
+    })
+  })
+</script>

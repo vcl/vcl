@@ -68,8 +68,13 @@
 
 .token-container {
   line-height: initial;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 
   & > .token {
+    margin-top: 0;
+    margin-bottom: 0;
     &:first-child {
       margin-left: 0;
     }

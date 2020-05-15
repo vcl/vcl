@@ -31,23 +31,8 @@ label and control are aligned horizontally.
 
 _Vertical_ form layout with stacked labels and controls.
 
-[vertical example](/demo/example-vertical.html)
+[example](/demo/example-form.html)
 
-The _horizontal_ layout uses two columns, one for labels, one for controls.
-Left-aligned labels in separate column. Controls and labels are in line.
-In this example the loose button group is used to lay out the buttons.
-The layout columns can be divided with the golden cut
-(`grid-span-gca`, `grid-span-gcb`) from the grid layout component
-or any other ratio.
-
-[horizontal example](/demo/example-horizontal.html)
-
-The _inline_ layout variant with right-aligned labels in line with controls.
-
-[inline example](/demo/example-inline.html)
-
-The `form-action-area` wraps the usual buttons on the bottom of the form
-and is optional.
 
 ## Classes
 

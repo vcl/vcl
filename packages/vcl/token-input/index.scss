@@ -2,16 +2,22 @@
 @use "../token.scss" as *;
 @use "../input.scss" as *;
 
-.token-input {
-  & > .input,
-  & > .input:focus {
-    border: 0;
+.token-input.input-field {
+  flex-wrap: wrap;
+  > .input,
+  > .input:focus {
     width: auto;
-    margin: 0;
     min-width: 8em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
   }
 
-  & .token-container {
-    padding-top: 0.2em;
+  .token-container {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    .token {
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
+    }
   }
 }

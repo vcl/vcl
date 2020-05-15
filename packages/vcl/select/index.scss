@@ -3,21 +3,27 @@
 @use "../select-list.scss" as *;
 @use "../icogram.scss" as *;
 @use "../input.scss" as *;
-@use "../embedded-input-group.scss";
 
-.select {
+.select.input-field {
   cursor: pointer;
 
-  & .input {
-    background-color: $input-bg-color;
+  &.select-editable input {
+    cursor: initial;
+  }
+
+  input {
+    // background-color: $input-bg-color;
     cursor: pointer;
   }
 
-  & .input.disabled {
-    color: $input-disabled-color;
-    background-color: $input-disabled-bg-color;
-    border-color: $input-disabled-border-color;
+  &.disabled input {
+    // color: $input-disabled-color;
+    // background-color: $input-disabled-bg-color;
     cursor: default;
   }
+}
 
+// form control group modifiers
+.form-control-group .select {
+  margin-bottom: 0;
 }

@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-<div id="example-radio-button-basic">
-  <div class="radio-group" role="radiogroup">
-    <div class="radio-button" role="checkbox" aria-checked="true" aria-labelledby="radio-button-label-1">
-      <label id="radio-button-label-1" tabindex="0">
+<div id="example-radio-button-vertical">
+  <div class="radio-group vertical" role="radiogroup">
+    <div class="radio-button" role="checkbox" aria-checked="true" aria-labelledby="radio-button-label-4">
+      <label id="radio-button-label-4" tabindex="0">
         <div class="icon fas fa-dot-circle"></div>
         <span class="icogram">
           <span class="text">Male</span>
@@ -11,8 +11,8 @@
         </span>
       </label>
     </div>
-    <div class="radio-button" role="checkbox" aria-checked="false" aria-labelledby="radio-button-label-2">
-      <label id="radio-button-label-2" tabindex="0">
+    <div class="radio-button" role="checkbox" aria-checked="false" aria-labelledby="radio-button-label-5">
+      <label id="radio-button-label-5" tabindex="0">
         <div class="icon fas fa-circle"></div>
         <span class="icogram">
           <span class="text">Female</span>
@@ -20,21 +20,21 @@
         </span>
       </label>
     </div>
-    <div class="radio-button" role="checkbox" aria-checked="false" aria-labelledby="radio-button-label-3">
-      <label id="radio-button-label-3" tabindex="0">
+    <div class="radio-button disabled" role="checkbox" aria-disabled="true" aria-checked="false" aria-labelledby="radio-button-label-6">
+      <label id="radio-button-label-6" tabindex="0">
         <div class="icon fas fa-circle"></div>
         <span class="icogram">
-          <span class="text">Genderless</span>
+          <span class="text">Genderless (Disabled)</span>
           <span class="icon fas fa-genderless" aria-hidden="true" aria-label="presentation" role="img"></span>
         </span>
       </label>
-    </div>    
+    </div>
   </div>
 </div>
 
 <script>
 (function() {
-  const radiogroups = document.querySelectorAll('#example-radio-button-basic .radio-group');
+  const radiogroups = document.querySelectorAll('#example-radio-button-vertical .radio-group');
   radiogroups.forEach(radiogroup => {
     const radiobuttons = radiogroup.querySelectorAll('.radio-button');
 
@@ -73,5 +73,5 @@
       });
     });
   })
-})();
+}());
 </script>

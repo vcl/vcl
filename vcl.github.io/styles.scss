@@ -3,18 +3,14 @@
   $app-area-max-width: 100%
 );
 @use "adv-text-structure";
-@use "app-area";
-@use "app-content-area";
-@use "logo";
+@use "app";
 @use "list";
 @use "button";
 @use "container";
 @use "data-list";
-@use "embedded-input-group";
 @use "icon";
 @use "icogram";
 @use "input";
-@use "input-group";
 @use "flex-grid";
 @use "grid";
 @use "navigation";

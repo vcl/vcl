@@ -1,48 +1,136 @@
 @use "../theme.scss" as *;
 @use "../icon.scss" as *;
 
-.radio-button {
-  cursor: pointer;
-  outline: none;
-  display: inline-block;
+.radio-group {
+  display: block;
+  overflow: auto; // prevents the margin-bottom to collapse
+  margin-bottom: $form-control-vertical-gap;
 
-  & > .form-control-label {
+  .radio-button {
     display: inline-block;
-  }
-
-  & > .icon {
-    color: $radio-button-color;
-    display: inline-block;
-    min-width: 1.5em;
-    text-align: center;
-    padding-right: 0.4em;
-    padding-left: 0.4em;
-    font-size: $radio-button-icon-size;
-  }
-
-  &:hover {
-    & > .icon {
-      color: $radio-button-hover-color;
+    
+    & > label {
+      cursor: pointer;
+      outline: none;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      line-height: $form-control-label-line-height;
+      margin-top: 0;
+    }
+  
+    & > label > .icon {
+      color: $radio-button-color;
+      display: inline-block;
+      min-width: 1.5em;
+      text-align: center;
+      padding-right: 0.4em;
+      padding-left: 0.4em;
+      font-size: $radio-button-icon-size;
+    }
+  
+    & label:hover {
+      & > .icon {
+        color: $radio-button-hover-color;
+      }
+    }
+  
+    & label:focus {
+      & > .icon {
+        color: $radio-button-focus-color;
+      }
+    }
+  
+    &.disabled > label {
+      cursor: default;
+      & .icon {
+        color: $radio-button-disabled-color;
+      }
     }
   }
 
-  &:focus {
-    & > .icon {
-      color: $radio-button-focus-color;
+  &.vertical {
+    & .radio-button {
+      display: block;
+      margin-bottom: $form-control-vertical-gap;
+    }
+    & .radio-button:last-child {
+      margin-bottom: 0;
     }
   }
 
-  &.disabled {
-    & > .icon {
-      color: $radio-button-disabled-color;
+  &:not(.vertical) {
+    & .radio-button {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+      padding-right: 0.4em;
+    }
+  
+    & .radio-button:first-child {
+      margin-left: 0;
     }
   }
 }
 
-.form-control-label:hover {
-  & .radio-button:not(.disabled) {
-    & .icon {
-      color: $radio-button-focus-color;
-    }
-  }
+.form-control-group .radio-group {
+  margin-bottom: 0;
 }
+
+
+
+// @use "../theme.scss" as *;
+// @use "../icon.scss" as *;
+
+// .checkbox {
+//   display: inline-block;
+//   margin-bottom: $form-control-vertical-gap;
+//   overflow: auto;
+
+//   & > label {
+//     cursor: pointer;
+//     outline: none;
+//     display: inline-flex;
+//     flex-direction: row;
+//     align-items: center;
+//     line-height: $form-control-label-line-height;
+//     margin-top: 0;
+//   }
+
+//   & > label > .icon {
+//     color: $checkbox-color;
+//     display: block;
+//     min-width: 1.5em;
+//     text-align: center;
+//     padding-right: 0.4em;
+//     padding-left: 0.4em;
+//     font-size: $checkbox-icon-size;
+//   }
+
+//   & label:hover {
+//     & > .icon {
+//       color: $checkbox-hover-color;
+//     }
+//   }
+
+//   & label:focus {
+//     & > .icon {
+//       color: $checkbox-focus-color;
+//     }
+//   }
+
+//   &.disabled > label {
+//     cursor: default;
+//     & .icon {
+//       color: $checkbox-disabled-color;
+//     }
+//   }
+// }
+
+// // form control group modifiers
+// .form-control-group {
+//   & .checkbox  {
+//     margin-bottom: 0;
+//   }
+// }

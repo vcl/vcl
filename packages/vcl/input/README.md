@@ -4,32 +4,30 @@ Standard HTML form input controls.
 
 ## Features
 
-Styling of all HTML form controls like input, textarea, select and
-_custom_ input (made of div and styling) based input controls.
+Styling of input and textarea HTML form controls.
 
 ## Usage
 
 ### Sizing
 
-Text input controls are set to be inline-blocks and take 100% width by default.
+Text input controls take 100% width by default.
 The occupied width can also be limited by placing input elements in
 a container with the desired size. Layout grid containers are perfectly
 suited for this purpose.
-Secondly they can be sized using the percentage based spans from the
-layout spans module.
 
 ### Basic Input
 
 Text inputs can be created with an HTML `input` element or from a `div`
 element with the `input` class and additional attributes for accessibility.
 
-[text example](/demo/example-text.html)
+[basic example](/demo/example-basic.html)
 
-### Placeholder
+### Validation
 
-Custom an normal HTML inputs can have a placeholder.
+The validation state of an input can be visualized by the standard modifiers
+`error`, `warning` and `success`.
 
-[placeholder example](/demo/example-placeholder.html)
+[input-group example](/demo/example-input-group.html)
 
 ### Validation
 
@@ -37,38 +35,6 @@ The validation state of an input can be visualized by the standard modifiers
 `error`, `warning` and `success`.
 
 [validation-state example](/demo/example-validation-state.html)
-
-### Focused State
-
-[state-focused example](/demo/example-state-focused.html)
-
-### Disabled State
-
-[state-disabled example](/demo/example-state-disabled.html)
-
-### Read only State
-
-[state-readonly example](/demo/example-state-readonly.html)
-
-### Multi Line Text Input
-
-[textarea example](/demo/example-textarea.html)
-
-### Radio Button
-
-[radio example](/demo/example-radio.html)
-
-### Check Box
-
-[checkbox example](/demo/example-checkbox.html)
-
-### File Selector
-
-[file example](/demo/example-file.html)
-
-### Standard Select Box
-
-[select example](/demo/example-select.html)
 
 ## Classes
 

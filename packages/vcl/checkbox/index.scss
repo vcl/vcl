@@ -2,17 +2,23 @@
 @use "../icon.scss" as *;
 
 .checkbox {
-  cursor: pointer;
-  outline: none;
   display: inline-block;
+  margin-bottom: $form-control-vertical-gap;
+  overflow: auto;
 
-  & > .form-control-label {
-    display: inline-block;
+  & > label {
+    cursor: pointer;
+    outline: none;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: $form-control-label-line-height;
+    margin-top: 0;
   }
 
-  & > .icon {
+  & > label > .icon {
     color: $checkbox-color;
-    display: inline-block;
+    display: block;
     min-width: 1.5em;
     text-align: center;
     padding-right: 0.4em;
@@ -20,29 +26,29 @@
     font-size: $checkbox-icon-size;
   }
 
-  &:hover {
+  & label:hover {
     & > .icon {
       color: $checkbox-hover-color;
     }
   }
 
-  &:focus {
+  & label:focus {
     & > .icon {
       color: $checkbox-focus-color;
     }
   }
 
-  &.disabled {
-    & > .icon {
+  &.disabled > label {
+    cursor: default;
+    & .icon {
       color: $checkbox-disabled-color;
     }
   }
 }
 
-.form-control-label:hover {
-  & .checkbox:not(.disabled) {
-    & .icon {
-      color: $radio-button-focus-color;
-    }
+// form control group modifiers
+.form-control-group {
+  & .checkbox  {
+    margin-bottom: 0;
   }
 }

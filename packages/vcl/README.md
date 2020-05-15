@@ -39,7 +39,6 @@ List of core modules:
 - fieldset
 - flex-grid
 - form
-- form-control-label
 - icogram
 - icon
 - input

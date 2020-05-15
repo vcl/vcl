@@ -1,0 +1,140 @@
+<form class="form" id="example-input-form">
+  <div class="form-control-group">
+    <label for="example_form_input_0">
+      Basic label
+      <em class="required-indicator">•</em>
+    </label>
+    <div class="input-field">
+      <input id="example_form_input_0" class="input" type="text">
+    </div>
+    <span class="form-control-hint">Form Control Hint</span>
+  </div>
+  <div class="form-control-group embedded-input-field-label">
+    <label for="example_form_input_1">
+      Floating label
+      <em class="required-indicator">•</em>
+    </label>
+    <div class="input-field">
+      <input id="example_form_input_1" class="input" type="text">
+    </div>
+    <span class="form-control-hint">Form Control Hint</span>
+  </div>
+  <div class="form-control-group embedded-input-field-label static-label">
+    <label for="example_form_input_1">
+      Static label
+      <em class="required-indicator">•</em>
+    </label>
+    <div class="input-field">
+      <input id="example_form_input_1" class="input" type="text">
+    </div>
+    <span class="form-control-hint">Form Control Hint</span>
+  </div>
+  <div class="form-control-group embedded-input-field-label">
+    <label for="example_form_textarea_1">
+      Textarea label
+      <em class="required-indicator">•</em>
+    </label>
+    <div class="input-field">
+      <textarea id="example_form_textarea_1" class="input"></textarea>
+    </div>
+    <span class="form-control-hint">Form Control Hint</span>
+  </div>
+  <div class="form-control-group embedded-input-field-label" data-calc-offset>
+    <label for="example_form_input_2">
+      Floating label with offset
+      <em class="required-indicator">•</em>
+    </label>
+    <div class="input-field">
+      <div class="icon fas fa-search"></div>
+      <input id="example_form_input_2" class="input" type="text">
+      <button class="button square">
+        <div class="icogram">
+          <div class="icon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
+        </div>
+      </button>
+    </div>
+    <span class="form-control-hint">Form Control Hint</span>
+  </div>
+  <div class="form-control-group embedded-input-field-label disabled" data-calc-offset>
+    <label for="example_form_input_2">
+      Disabled state
+      <em class="required-indicator">•</em>
+    </label>
+    <div class="input-field disabled">
+      <div class="icon fas fa-search"></div>
+      <input id="example_form_input_2" disabled class="input" type="text" value="">
+      <button class="button square">
+        <div class="icogram">
+          <div class="icon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
+        </div>
+      </button>
+    </div>
+    <span class="form-control-hint">Form Control Hint</span>
+  </div>
+
+  <div class="form-control-group embedded-input-field-label" style="--label-offset-x: 2.5rem;">
+    <label for="example_form_input_3">
+      Custom content with label offset
+      <em class="required-indicator">•</em>
+    </label>
+    <div class="row">
+      <button type="button" class="button transparent" style="width: 2.5rem;">
+        <div class="icon fas fa-cog" aria-hidden="true" role="img"></div>
+      </button>
+      <div class="input-field flex">
+        <div class="icon fas fa-search"></div>
+        <input id="example_form_input_3" class="input" type="text">
+      </div>
+      <div class="px-5"></div> <!-- spacer -->
+      <button type="button" class="button transparent">
+        <div class="icon fas fa-question-circle" aria-hidden="true" role="img"></div>
+      </button>
+    </div>
+    <span class="form-control-hint">Form Control Hint</span>
+  </div>
+</form>
+<script>
+  function registerInputFieldListeners(fcg) {
+    const inputField = fcg.querySelector('.input-field');
+    const input = inputField.querySelector('.input');
+    
+    function updateState() {
+      const hasValue = typeof input.value === 'string' && input.value.length > 0;
+      const hasFocus = document.activeElement === input;
+
+      if (hasFocus) {
+        inputField.classList.add('focused');
+        fcg.classList.add('focused');
+      } else {
+        inputField.classList.remove('focused');
+        fcg.classList.remove('focused');
+      }
+
+      if (hasValue || hasFocus) {
+        fcg.classList.remove('floating');
+      } else {
+        fcg.classList.add('floating');
+      }
+    }
+
+    input.addEventListener('focus', updateState);
+    input.addEventListener('blur', updateState);
+    input.addEventListener('input', updateState);
+
+    updateState();
+  }
+
+  function calcFloatingLabelOffset(fcg) {
+    const inputField = fcg.querySelector('.input-field');
+    const input = inputField.querySelector('.input');
+    // Calculate floating label offset by determining the offset between input field and input
+    const floatingOffsetX = (input.getBoundingClientRect().left - inputField.getBoundingClientRect().left);
+    fcg.style.setProperty('--label-floating-offset-x', `${floatingOffsetX}px`);
+  }
+
+  const form = document.querySelector('#example-input-form');
+  form.querySelectorAll('.form-control-group').forEach(fcg => {
+    registerInputFieldListeners(fcg);
+    calcFloatingLabelOffset(fcg);
+  });
+</script>
