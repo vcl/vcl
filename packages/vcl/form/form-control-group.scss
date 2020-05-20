@@ -4,7 +4,19 @@
   display: block;
   margin-bottom: $form-control-vertical-gap;
 
-  & > label:first-child {
+  & .required-indicator {
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: bold;
+    line-height: inherit;
+    position: relative;
+    vertical-align: middle;
+    padding-left: 0.2em;
+    color: $form-control-label-required-hint-color;
+  }
+
+  & > label:first-child,
+  & > .form-control-label {
     cursor: pointer;
     display: block;
     font-size: $form-control-label-font-size;
@@ -14,10 +26,6 @@
     margin-top: 0.75em;
     margin-bottom: 0.5em;
 
-    & .required-indicator {
-      line-height: inherit;
-    }
-
     & .form-control-sub-label {
       font-size: 0.9em;
       padding-left: 0.6em;
@@ -25,23 +33,18 @@
     }
   
     & > .required-indicator {
-      font-size: 1.2em;
-      font-style: normal;
-      font-weight: bold;
       line-height: 0.85em;
-      position: relative;
-      vertical-align: middle;
-      padding-left: 0.2em;
-      color: $form-control-label-required-hint-color;
     }
   }
 
-  &.focused > label:first-child {
+  &.focused > label:first-child,
+  &.focused > .form-control-label {
     color: $input-border-focus-color;
     opacity: 1;
   }
 
-  &.disabled > label:first-child {
+  &.disabled > label:first-child,
+  &.disabled > .form-control-label {
     cursor: initial;
   }
 }

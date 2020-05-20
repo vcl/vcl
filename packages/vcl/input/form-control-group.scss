@@ -1,7 +1,6 @@
 @use "../theme.scss" as *;
 
 $duration: 200ms;
-$function: linear;
 
 // form control group modifiers
 .form-control-group {
@@ -17,22 +16,18 @@ $function: linear;
 .form-control-group.embedded-input-field-label {
   --label-offset-x: 0px;
   --label-offset-y: 0px;
-  --label-floating-offset-x: 0px;
-  --label-floating-offset-y: 0px;
+  --prepended-elements: 0;
+  --prepended-element-width: 2.5rem;
   position: relative;
-  // padding-top: 0.4rem;
   margin-top: 0.4rem;
-
-  &.disable-animations * {
-    transition: none !important;
-  }
 
   // textarea has to be padded for consistency
   & textarea {
     padding-top: 7px;
   }
 
-  > label:first-child {
+  > label:first-child,
+  > .form-control-label {
     // Remove any spacing
     margin: 0;
     padding: 0;
@@ -40,15 +35,13 @@ $function: linear;
     position: absolute;
     display: inline-block;
     z-index: 1;
+    transition: all $duration ease-out;
+    transition-property: left, top, font-size;    
     top: calc(-0.35rem + var(--label-offset-y));
     left: calc(0.5rem + var(--label-offset-x));
     font-size: 0.8em;
-    transition: all $duration $function;
-    transition-property: left, top, font-size;
     font-size: 0.8em;
     pointer-events: none;
-
-  
     // Label background
     &::before {
       content: "";
@@ -57,7 +50,7 @@ $function: linear;
       bottom: 0; 
       opacity: 1;
       background-color: $input-bg-color;
-      transition: all $duration ease-out;
+      transition: all $duration ease-in;
       transition-property: opacity, left, right;
       left: -0.3rem;
       right: -0.3rem;
@@ -66,10 +59,12 @@ $function: linear;
   }
 
   // Label is floating when control is focused or has the floating modifier
-  &.floating:not(.static-label) {
-    & > label:first-child {
-      top: calc(0.6rem + var(--label-offset-y) + var(--label-floating-offset-y)); 
-      left: calc(0.5rem + var(--label-offset-x) + var(--label-floating-offset-x));
+  &.floating:not(.static) {
+    & > label:first-child,
+    & > .form-control-label {
+      top: calc(0.6rem + var(--label-offset-y)); 
+      left: calc(0.5rem + var(--label-offset-x) + calc(var(--prepended-elements) * var(--prepended-element-width)));
+      transition: all $duration ease-out;
       font-size: inherit;
       &::before {
         opacity: 0;
@@ -98,6 +93,22 @@ $function: linear;
 
       &:-ms-input-placeholder {
         opacity: 0;
+      }
+    }
+  }
+
+  &.disable-animations {
+    > label:first-child,
+    > .form-control-label {
+      transition: none;
+      &::before {
+        transition: none;
+      }
+    }
+    &.floating:not(.static-label) {
+      & > label:first-child,
+      & > .form-control-label {
+        transition: none;
       }
     }
   }
