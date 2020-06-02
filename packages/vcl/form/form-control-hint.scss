@@ -29,8 +29,6 @@
   }
 }
 
-.form-control-group.floating-label {
-  & .form-control-hint {
-    margin-bottom: 0;
-  }
+.form-control-group .form-control-hint {
+  margin-bottom: 0;
 }

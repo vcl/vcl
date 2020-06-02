@@ -419,12 +419,14 @@ $button-label-disabled-color--suggestive: $gray-light-3 !default;
 $button-bg-hover-color--suggestive: $success-dark-color !default;
 
 /* Form Control Label */
+$form-control-label-color: inherit !default;
 $form-control-sublabel-color: $gray-dark-4 !default;
 $form-control-label-line-height: $input-elem-height !default;
 $form-control-label-required-hint-color: $brand-accent-darker !default;
 $form-control-label-font-size: inherit !default;
 $form-control-label-font-weight: inherit !default;
-$form-control-label-color: inherit !default;
+$form-control-focused-label-color: $brand-accent !default;
+$form-control-focused-sublabel-color: $brand-accent !default;
 $form-control-hint-color: $gray !default;
 
 /* Fieldset */

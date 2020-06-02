@@ -8,7 +8,6 @@ Sets `@viewport { width: device-width; }`.
 
 Introduces the following concept:
 
-
 - The _app viewport_ which is the highest level content container
 (in HTML this should be the _body_ tag) and defines its background color.
 
@@ -32,7 +31,6 @@ Secondly there are helper classes to set the primary or secondary
 content background color on any component.
 A secondary background color can be used to make a component or content
 appear less important.
-
 
 - The _footer area_ is usually below the content area or in ARIA terms,
 the area having the _contentinfo_ role.

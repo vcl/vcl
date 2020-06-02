@@ -39,8 +39,11 @@
 
   &.focused > label:first-child,
   &.focused > .form-control-label {
-    color: $input-border-focus-color;
-    opacity: 1;
+    color: $form-control-focused-label-color;
+
+    & .form-control-sub-label {
+      color: $form-control-focused-sublabel-color;
+    }
   }
 
   &.disabled > label:first-child,

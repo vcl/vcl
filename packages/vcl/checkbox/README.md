@@ -2,11 +2,15 @@
 
 Checkbox form control.
 
-## Features
-
 ## Usage
 
-[basic example](/demo/example.html)
+Standalone
+
+[basic example](/demo/example-basic.html)
+
+Within form-control-group
+
+[basic example](/demo/example-form.html)
 
 ## Classes
 
