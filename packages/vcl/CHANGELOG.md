@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.3](https://github.com/vcl/vcl/compare/v2.0.0-alpha.2...v2.0.0-alpha.3) (2020-06-05)
+
+
+### Bug Fixes
+
+* misc fixes ([033caec](https://github.com/vcl/vcl/commit/033caec805f92c4474ecea9c8b49506760b18a1f))
+* misc fixes ([4367cd7](https://github.com/vcl/vcl/commit/4367cd76f0602d996ee77715553b7c52f512f493))
+
+
+
+
+
 # [2.0.0-alpha.2](https://github.com/vcl/vcl/compare/v2.0.0-alpha.1...v2.0.0-alpha.2) (2020-05-20)
 
 **Note:** Version bump only for package @vcl/vcl
