@@ -1,7 +1,8 @@
 @use "../theme.scss" as *;
 
 .form-control-group {
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin-bottom: $form-control-vertical-gap;
 
   & .required-indicator {
@@ -17,8 +18,11 @@
 
   & > label:first-child,
   & > .form-control-label {
-    cursor: pointer;
-    display: block;
+    &.clickable {
+      cursor: pointer;
+    }
+    align-self: flex-start;
+    display: inline-block;
     font-size: $form-control-label-font-size;
     font-weight: $form-control-label-font-weight;
     color: $form-control-label-color;
@@ -32,7 +36,7 @@
       color: $form-control-sublabel-color;
     }
   
-    & > .required-indicator {
+    & .required-indicator {
       line-height: 0.85em;
     }
   }
@@ -47,7 +51,7 @@
   }
 
   &.disabled > label:first-child,
-  &.disabled > .form-control-label {
-    cursor: initial;
+  &.disabled > .form-control-label.clickable {
+    cursor: default;
   }
 }

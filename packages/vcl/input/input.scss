@@ -1,7 +1,6 @@
 @use "../theme.scss" as *;
 @use "../form.scss" as *;
 
-// @mixin input-field-mixin {
 .input-field {
   display: flex;
   flex-direction: row;
@@ -130,7 +129,7 @@
     content: none;
   }
   
-  input:focus {
+  input:focus, textarea:focus {
     outline: none;
   }
   

@@ -12,13 +12,12 @@
   }
 
   input {
-    // background-color: $input-bg-color;
     cursor: pointer;
+    &.readonly {
+      color: $input-color;
+    }
   }
-
   &.disabled input {
-    // color: $input-disabled-color;
-    // background-color: $input-disabled-bg-color;
     cursor: default;
   }
 }

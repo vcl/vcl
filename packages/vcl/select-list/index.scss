@@ -16,6 +16,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   outline: 0;
+  width: 100%;
 
   & .select-list-item {
     display: block;
@@ -119,4 +120,8 @@
     }
   }
 
+}
+
+.form-control-group .select-list {
+  margin-bottom: 0;
 }
