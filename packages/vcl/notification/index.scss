@@ -1,6 +1,9 @@
 @use "../theme.scss" as *;
 
 .notification {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   overflow: hidden;
   border-width: 0;
   border-radius: $notification-border-radius;
@@ -13,6 +16,7 @@
   & .notification-icon-container {
     padding: 1em;
     padding-right: 0.3em;
+    align-self: center;
 
     & .notification-icon {
       font-size: 2em;
@@ -20,24 +24,26 @@
   }
 
   & .notification-header {
+    flex: 0 1 100%;
     min-height: 2.5em;
-    padding: 0 0.8em;
     background-color: $notification-hf-bg-color;
     color: $notification-hf-color;
-
+    padding: 0 0.8em;
     & .button {
       color: inherit;
     }
   }
 
   & .notification-content {
-    margin: 0;
-    padding: 0.8em;
+    align-self: center;
+    flex: 1 0 50px;
     position: relative;
     word-wrap: break-word;
+    padding: 0.8em;
   }
 
   & .notification-footer {
+    flex: 0 1 100%;
     min-height: 2.5em;
     margin-bottom: 0;
     padding: 0 0.8em;
