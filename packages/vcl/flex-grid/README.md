@@ -65,18 +65,18 @@ There are several modifier classes to change the positioning of the cells
 - `grid-gutterx-1` to `grid-gutterx-5`
 - `grid-guttery-1` to `grid-guttery-5`
 ## Modifiers
-- `start`
-- `end`
-- `center`
-- `justify-start`
-- `justify-center`
-- `justify-end`
-- `justify-between`
-- `justify-around`
+- `align-items-start`
+- `align-items-end`
+- `align-items-center`
+- `justify-content-start`
+- `justify-content-center`
+- `justify-content-end`
+- `justify-content-between`
+- `justify-content-around`
 - `inline`
 - `reverse`
-- `no-wrap`
-- `wrap-reverse`
+- `flex-no-wrap`
+- `flex-wrap-reverse`
 
 
 ## Demo
