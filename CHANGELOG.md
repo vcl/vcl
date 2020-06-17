@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.5](https://github.com/vcl/vcl/compare/v2.0.0-alpha.4...v2.0.0-alpha.5) (2020-06-17)
+
+
+### Code Refactoring
+
+* **layer:** remove layer box background color ([24e4598](https://github.com/vcl/vcl/commit/24e4598bad46f451caf07596b6b5585a9790ef0e))
+
+
+### BREAKING CHANGES
+
+* **layer:** Layer box background color is removed and should be set within content
+
+
+
+
+
 # [2.0.0-alpha.4](https://github.com/vcl/vcl/compare/v2.0.0-alpha.3...v2.0.0-alpha.4) (2020-06-09)
 
 **Note:** Version bump only for package vcl-monorepo
