@@ -1,3 +1,5 @@
+@use "./index.scss";
+
 @use "../app.scss";
 @use "../button.scss" as *;
 @use "../divider.scss" as *;
@@ -13,4 +15,3 @@
 @use "../typography.scss" as *;
 @use "../utils.scss" as *;
 @use "../theme.scss" as *;
-@use "./index.scss";

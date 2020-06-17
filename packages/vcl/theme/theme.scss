@@ -266,8 +266,6 @@ $popover-border-color: $glass-2 !default;
 $popover-shadow-color: $glass-2 !default;
 
 /* Layer */
-$layer-color: $text-primary-color !default;
-$layer-bg-color: $white !default;
 $layer-cover-bg-color: $glass-1 !default;
 $layer-gutter-padding: $grid-half-gutter-width !default;
 
@@ -304,7 +302,8 @@ $divider-border-color: $gray-light-2 !default;
 $divider-fill-color: $content-primary-bg-color !default;
 
 /* Panel */
-$panel-bg-color: transparent !default;
+$panel-color: $text-primary-color !default;
+$panel-bg-color: $white !default;
 $panel-hf-line-height: 2em !default;
 $panel-border-color: $gray !default;
 $panel-header-color: $text-primary-color !default;
