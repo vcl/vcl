@@ -36,19 +36,14 @@ A simple layer with a panel as its content.
 
 ## Modifiers
 
-- `transparent`: Makes the layer's background transparent.
 - `layer-fill`: Makes the layer cover the whole viewport.
 - `layer-stick-to-bottom`: Makes the layer stick to the bottom.
 - `layer-gutter-padding`: Add a padding of half the gutter width.
 
 ## Variables
 
-- `$layer-color`
-- `$layer-bg-color`
 - `$layer-cover-bg-color`
 - `$layer-border-color`
-- `$layer-header-bg-color`
-- `$layer-footer-bg-color`
 
 ## Demo
 
