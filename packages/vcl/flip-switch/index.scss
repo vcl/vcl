@@ -1,7 +1,7 @@
 @use "../theme.scss" as *;
 
 .flip-switch {
-  display: block;
+  display: inline-block;
   outline: none;
   background-color: $flip-switch-bg-color;
   position: relative;

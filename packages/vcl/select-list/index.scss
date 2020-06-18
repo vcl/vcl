@@ -3,7 +3,6 @@
 .select-list {
   user-select: none;
   box-sizing: border-box;
-  display: block;
   margin: 0;
   margin-bottom: $form-control-vertical-gap;
   padding: 0;
@@ -19,7 +18,6 @@
   width: 100%;
 
   & .select-list-item {
-    display: block;
     outline: 0;
     line-height: 1.6;
     padding-top: 0.38em;
@@ -29,7 +27,6 @@
 
     & > .select-list-item-label,
     & > .select-list-item-sub-label {
-      display: block;
       padding-left: 0.9rem;
       padding-right: 0.9rem;
       padding-bottom: 0.1em;

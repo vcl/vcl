@@ -2,28 +2,22 @@
 
 
 .data-list {
-  display: block;
   margin-bottom: $block-elem-vertical-gap;
   background-color: $data-list-bg-color;
 
   .data-list-header {
-    display: block;
     background-color: $data-list-header-bg-color;
   }
   
   .data-list-footer {
-    display: block;
     background-color: $data-list-footer-bg-color;
   }
   
   .data-list-body {
-    display: block;
     width: 100%;
     padding: 0;
     margin-top: 0;
     margin-bottom: 0;
-    list-style: none;
-    list-style-type: none;
     border-top-width: 1px;
     border-top-style: solid;
     border-bottom-width: 1px;
@@ -33,7 +27,6 @@
   }
   
   .data-list-item {
-    display: list-item;
     min-height: 3em;
     position: relative;
     color: $data-list-item-color;

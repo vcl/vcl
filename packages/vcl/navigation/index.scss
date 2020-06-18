@@ -3,7 +3,6 @@
 
 /* Commons */
 .navigation {
-  display: block;
   margin-bottom: $block-elem-vertical-gap;
   background-color: $navigation-bg-color;
   position: relative;
@@ -33,7 +32,6 @@
   & .navigation-item,
   & .navigation-item:hover,
   & .navigation-item:active {
-    display: block;
     outline: 0;
 
     &.disabled {

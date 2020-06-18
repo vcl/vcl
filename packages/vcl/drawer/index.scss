@@ -4,7 +4,6 @@
   position: relative;
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
-  display: block;
   overflow: hidden;
 
   & .drawer-backdrop {
@@ -13,7 +12,6 @@
     right: 0;
     bottom: 0;
     position: absolute;
-    display: block;
     z-index: 9;
     visibility: hidden;
     background-color: transparent;
@@ -26,7 +24,6 @@
 
   & .drawer {
     position: relative;
-    display: block;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -59,7 +56,6 @@
   & .drawer-content {
     background-color: $drawer-content-bg-color;
     position: relative;
-    display: block;
     height: 100%;
     overflow: auto;
   }
