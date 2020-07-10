@@ -15,7 +15,7 @@ like a single control. The elements are aligned vertically.
 
 Default form layout with stacked labels and controls.
 
-[example](/demo/example-form.html)
+[example](/demo/example-input.html)
 
 
 ## Classes

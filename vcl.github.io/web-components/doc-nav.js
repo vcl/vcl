@@ -12,26 +12,26 @@ export default class DocNav extends PolymerElement {
     return html`
     <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <div class="embedded-input-group" style="margin-bottom: 0">
-          <span class="prepended">
-              <div class="icon fas fa-search"></div>
-          </span>
-          <input
-              type="search"
-              name="search"
-              id="search"
-              on-input="searchUpdate"
-              on-keydown="searchKey"
-              placeholder="Search Modules"
-              class="input no-border prep-item app-item searchInput"
-              value=""
-              autocomplete="off"
-              autofocus />
-          <button on-click="clearSearch" class$="button transparent square appended {{getDisplayNoneClearBtn(searchedText)}} ">
-              <div class="icogram">
-              <div class="icon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
-              </div>
-          </button>
+        <div class="form-control-group" style="margin-bottom: 0">
+          <div class="input-field no-border">
+            <div class="icon fas fa-search"></div>
+            <input
+                type="search"
+                name="search"
+                id="search"
+                on-input="searchUpdate"
+                on-keydown="searchKey"
+                placeholder="Search Modules"
+                class="input searchInput"
+                value=""
+                autocomplete="off"
+                autofocus />
+            <button on-click="clearSearch" class$="button transparent square appended {{getDisplayNoneClearBtn(searchedText)}} ">
+                <div class="icogram">
+                <div class="icon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
+                </div>
+            </button>
+          </div>
         </div>
         <nav class="docNav navigation vertical col flex scrollable y-on-hover">
             <template is="dom-if" if="[[!searchedText]]">

@@ -57,7 +57,7 @@ export default class DocContent extends PolymerElement {
     Object.keys(demos).forEach((demoName) => {
       const markdown = demos[demoName];
       const demoNode = new DocDemo();
-      demoNode.markdown = markdown;
+      demoNode.markdown = decodeURIComponent(markdown);
       demoNode.style = style;
       this.$.readme.querySelector(`#demo-${demoName}`).appendChild(demoNode);
     });

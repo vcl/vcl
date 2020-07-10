@@ -217,6 +217,7 @@ async function fetchPackage(pack) {
   return renderPart(docPart);
 };
 
+
 // we have all information we need. this function uses it to generate the html
 async function renderPart(docPart) {
 
@@ -259,7 +260,10 @@ async function renderPart(docPart) {
       var key = path.basename(exPath, '.html');
       obj.text = '<div class="demo panel" id="demo-' + key + '"></div>';
 
-      docPart.demos[key] = fs.readFileSync(exPath, 'utf8');
+
+      const demo = fs.readFileSync(exPath, 'utf8');
+      docPart.demos[key] = encodeURIComponent(demo);
+      // docPart.demos[key] = fs.readFileSync(exPath, 'utf8').replace(/<.*?script.*?>.*?<\/.*?script.*?>/igm, '');
     }
     return true;
   });

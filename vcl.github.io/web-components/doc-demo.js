@@ -79,7 +79,7 @@ export default class DocDemo extends PolymerElement {
   }
 
   renderNinja(markdown) {
-    this.$.ninja.innerHTML = markdown;
+    insertAndExecute(this.$.ninja, markdown);
   }
 
   getCodeTextClass(codeVisible) {
@@ -113,3 +113,42 @@ export default class DocDemo extends PolymerElement {
   }
 }
 customElements.define(DocDemo.is, DocDemo);
+
+
+function insertAndExecute(domelement, text) {
+  domelement.innerHTML = text;
+//   var scripts = [];
+
+//   var ret = domelement.childNodes;
+//   for ( var i = 0; ret[i]; i++ ) {
+//     if ( scripts && nodeName( ret[i], "script" ) && (!ret[i].type || ret[i].type.toLowerCase() === "text/javascript") ) {
+//       scripts.push( ret[i].parentNode ? ret[i].parentNode.removeChild( ret[i] ) : ret[i] );
+//     }
+//   }
+
+//   for(var script in scripts)
+//   {
+//     setTimeout(() => {
+//       evalScript(domelement, scripts[script]);
+//     }, 1);
+//   }
+// }
+
+// function nodeName( elem, name ) {
+//   return elem.nodeName && elem.nodeName.toUpperCase() === name.toUpperCase();
+// }
+
+// function evalScript(domelement, elem ) {
+//   var data = ( elem.text || elem.textContent || elem.innerHTML || "" );
+
+//   // var head = document.getElementsByTagName("head")[0] || document.documentElement;
+//   var script = document.createElement("script");
+//   script.type = "text/javascript";
+//   script.appendChild( document.createTextNode( data ) );
+//   domelement.insertBefore( script, domelement.firstChild );
+//   domelement.removeChild( script );
+
+//   if ( elem.parentNode ) {
+//     elem.parentNode.removeChild( elem );
+//   }
+}
