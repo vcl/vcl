@@ -20,7 +20,7 @@ const buildFolder = path.resolve(moduleFolder, 'build');
 const demoFolder = path.resolve(moduleFolder, 'demo');
 const cssOutFile = path.resolve(buildFolder,  'index.css');
 const cssMapOutFile = path.resolve(buildFolder,  'index.css.map');
-const htmlInFile = path.resolve(__dirname, 'index.html');
+const htmlInFile = path.resolve(__dirname, 'demo.html');
 const htmlOutFile = path.resolve(buildFolder,  'index.html');
 
 const vcl = require(path.resolve(moduleFolder, 'vcl.json'));
@@ -32,7 +32,10 @@ const finalContent = indexHTML.replace('<%- title %>', title);
 fs.writeFileSync(htmlOutFile, finalContent);
 console.log('Created ' + htmlOutFile);
 
-const watch = !!argv['watch'];
+let watch = argv['watch'];
+if (typeof watch !== 'boolean') {
+  watch = true;
+}
 
 const render = () => {
   return new Promise((resolve, reject) => {
