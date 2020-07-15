@@ -41,15 +41,19 @@
 </form>
 
 <script>
-  const inputFields = document.querySelectorAll('#input-example-basic .input-field');
-  
-  inputFields.forEach(inputField => {
-    const input = inputField.querySelector('.input');
-    input.addEventListener('focus', () => {
-      inputField.classList.add('focused');
+  !function() {
+    let docRoot = document.demoShadowRoot || document;
+
+    let inputFields = docRoot.querySelectorAll('#input-example-basic .input-field');
+    
+    inputFields.forEach(inputField => {
+      var input = inputField.querySelector('.input');
+      input.addEventListener('focus', () => {
+        inputField.classList.add('focused');
+      })
+      input.addEventListener('blur', () => {
+        inputField.classList.remove('focused');
+      })
     })
-    input.addEventListener('blur', () => {
-      inputField.classList.remove('focused');
-    })
-  })
+  }();
 </script>

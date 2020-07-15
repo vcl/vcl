@@ -27,50 +27,52 @@
   </div>
 </form>
 <script>
+  !function() {
+    const docRoot = document.demoShadowRoot || document;
 
-  function registerInputFieldListeners(fcg) {
-    const inputField = fcg.querySelector('.input-field');
-    const input = inputField.querySelector('.input');
-    
-    function checkValue() {
-      if (typeof input.value === 'string' && input.value.length > 0){
-        fcg.classList.remove('floating');
-      } else {
-        fcg.classList.add('floating');
+    function registerInputFieldListeners(fcg) {
+      const inputField = fcg.querySelector('.input-field');
+      const input = inputField.querySelector('.input');
+
+      function checkValue() {
+        if (typeof input.value === 'string' && input.value.length > 0){
+          fcg.classList.remove('floating');
+        } else {
+          fcg.classList.add('floating');
+        }
       }
+
+      input.addEventListener('focus', () => {
+        inputField.classList.add('focused');
+        fcg.classList.add('focused');
+      })
+      input.addEventListener('blur', () => {
+        inputField.classList.remove('focused');
+        fcg.classList.remove('focused');
+      });
+
+      input.addEventListener('input', checkValue);
+
+      // Calculate label offset by determining width of elements before the input field
+      let current = input;
+      let offset = 0;
+      while(current =  current.previousElementSibling) {
+        offset += current.offsetWidth;
+      }
+
+      fcg.style.setProperty('--label-offset-x', `${offset}px`);
+
+      checkValue();
+
+      setTimeout(() => {
+        fcg.classList.remove('disable-animations');
+      }, 0);
+
     }
 
-    input.addEventListener('focus', () => {
-      inputField.classList.add('focused');
-      fcg.classList.add('focused');
-    })
-    input.addEventListener('blur', () => {
-      inputField.classList.remove('focused');
-      fcg.classList.remove('focused');
+    const formControlGroups = docRoot.querySelectorAll('#example-form-input .form-control-group');
+    formControlGroups.forEach(fcg => {
+      registerInputFieldListeners(fcg);
     });
-
-    input.addEventListener('input', checkValue);
-
-    // Calculate label offset by determining width of elements before the input field
-    let current = input;
-    let offset = 0;
-    while(current =  current.previousElementSibling) {
-      offset += current.offsetWidth;
-    }
-
-    fcg.style.setProperty('--label-offset-x', `${offset}px`);
-
-    checkValue();
-
-    setTimeout(() => {
-      fcg.classList.remove('disable-animations');
-    }, 0);
-
-  }
-
-  const formControlGroups = document.querySelectorAll('#example-form-input .form-control-group');
-  formControlGroups.forEach(fcg => {
-    registerInputFieldListeners(fcg);
-  });
-
+  }();
 </script>

@@ -33,7 +33,7 @@ export default class DocDemo extends PolymerElement {
           </form>
         </div>
         <div class="tab-content">
-          <div on-click="demoClick" id="ninja" name="ninja" role="tabpanel" class$="tab-panel docDemoContent transparent shadow {{getDemoClass(codeVisible)}}"></div>
+          <div id="ninja" name="ninja" role="tabpanel" class$="tab-panel docDemoContent transparent shadow {{getDemoClass(codeVisible)}}"></div>
           <div role="tabpanel" class$="tab-panel code {{getCodeTextClass(codeVisible)}}">
             <pre ref="source" name="source">[[markdown]]</pre>
           </div>
@@ -79,7 +79,7 @@ export default class DocDemo extends PolymerElement {
   }
 
   renderNinja(markdown) {
-    insertAndExecute(this.$.ninja, markdown);
+    this.insertAndExecute(this.$.ninja, markdown);
   }
 
   getCodeTextClass(codeVisible) {
@@ -111,44 +111,32 @@ export default class DocDemo extends PolymerElement {
     return cleanStyles
 
   }
+  insertAndExecute(domelement, text) {
+    domelement.innerHTML = text;
+    var scripts = [];
+  
+    var ret = domelement.childNodes;
+    for ( var i = 0; ret[i]; i++ ) {
+      if ( scripts && nodeName( ret[i], "script" ) && (!ret[i].type || ret[i].type.toLowerCase() === "text/javascript") ) {
+        scripts.push( ret[i].parentNode ? ret[i].parentNode.removeChild( ret[i] ) : ret[i] );
+      }
+    }
+  
+    for(var script in scripts)
+    {
+      var elem = scripts[script];
+      var data = ( elem.text || elem.textContent || elem.innerHTML || "" );
+      try {
+        document.demoShadowRoot = this.shadowRoot;
+        eval(data);
+      } catch (ex) {
+        console.error(ex);
+      }
+    }
+  }
 }
 customElements.define(DocDemo.is, DocDemo);
 
-
-function insertAndExecute(domelement, text) {
-  domelement.innerHTML = text;
-//   var scripts = [];
-
-//   var ret = domelement.childNodes;
-//   for ( var i = 0; ret[i]; i++ ) {
-//     if ( scripts && nodeName( ret[i], "script" ) && (!ret[i].type || ret[i].type.toLowerCase() === "text/javascript") ) {
-//       scripts.push( ret[i].parentNode ? ret[i].parentNode.removeChild( ret[i] ) : ret[i] );
-//     }
-//   }
-
-//   for(var script in scripts)
-//   {
-//     setTimeout(() => {
-//       evalScript(domelement, scripts[script]);
-//     }, 1);
-//   }
-// }
-
-// function nodeName( elem, name ) {
-//   return elem.nodeName && elem.nodeName.toUpperCase() === name.toUpperCase();
-// }
-
-// function evalScript(domelement, elem ) {
-//   var data = ( elem.text || elem.textContent || elem.innerHTML || "" );
-
-//   // var head = document.getElementsByTagName("head")[0] || document.documentElement;
-//   var script = document.createElement("script");
-//   script.type = "text/javascript";
-//   script.appendChild( document.createTextNode( data ) );
-//   domelement.insertBefore( script, domelement.firstChild );
-//   domelement.removeChild( script );
-
-//   if ( elem.parentNode ) {
-//     elem.parentNode.removeChild( elem );
-//   }
+function nodeName( elem, name ) {
+  return elem.nodeName && elem.nodeName.toUpperCase() === name.toUpperCase();
 }

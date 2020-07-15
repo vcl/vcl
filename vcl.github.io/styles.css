@@ -1530,6 +1530,7 @@ span.button[disabled] {
   border-radius: 0;
   border-style: solid;
   box-sizing: border-box;
+  background-color: white;
   /* Semantic coloring */
 }
 .input-field.focused, .input-field:focus-within {
@@ -1749,7 +1750,7 @@ textarea::placeholder,
   z-index: 1;
   transition: all 200ms ease-out;
   transition-property: left, top, font-size;
-  top: calc(-0.35rem + var(--label-offset-y));
+  top: calc(-0.45rem + var(--label-offset-y));
   left: calc(0.5rem + var(--label-offset-x));
   font-size: 0.8em;
   font-size: 0.8em;
@@ -3796,7 +3797,7 @@ table.table select,
 table.table textarea,
 table.table input,
 .table .input,
-.table embedded-input-group {
+.table input-field {
   margin-bottom: 0;
 }
 
@@ -3894,7 +3895,7 @@ table.table input,
 .toolbar.transparent {
   background-color: transparent;
 }
-.toolbar .input-group, .toolbar .embedded-input-group, .toolbar .navigation, .toolbar .loose-button-group {
+.toolbar .input-group, .toolbar .input-field, .toolbar .navigation, .toolbar .loose-button-group {
   margin-bottom: 0;
 }
 .toolbar .logo {

@@ -34,7 +34,8 @@
 
 <script>
 (function() {
-  const radiogroups = document.querySelectorAll('#example-radio-button-vertical .radio-group');
+  const docRoot = document.demoShadowRoot || document;
+  const radiogroups = docRoot.querySelectorAll('#example-radio-button-vertical .radio-group');
   radiogroups.forEach(radiogroup => {
     const radiobuttons = radiogroup.querySelectorAll('.radio-button');
 

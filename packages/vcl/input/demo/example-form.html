@@ -94,43 +94,47 @@
   </div>
 </form>
 <script>
-  function registerInputFieldListeners(fcg) {
-    const inputField = fcg.querySelector('.input-field');
-    const input = inputField.querySelector('input, textarea');
-    
-    function updateState() {
-      const hasValue = typeof input.value === 'string' && input.value.length > 0;
-      const hasFocus = document.activeElement === input;
+  !function() {
+    const docRoot = document.demoShadowRoot || document;
 
-      if (hasFocus) {
-        inputField.classList.add('focused');
-        fcg.classList.add('focused');
-      } else {
-        inputField.classList.remove('focused');
-        fcg.classList.remove('focused');
+    function registerInputFieldListeners(fcg) {
+      const inputField = fcg.querySelector('.input-field');
+      const input = inputField.querySelector('input, textarea');
+      
+      function updateState() {
+        const hasValue = typeof input.value === 'string' && input.value.length > 0;
+        const hasFocus = docRoot.activeElement === input;
+
+        if (hasFocus) {
+          inputField.classList.add('focused');
+          fcg.classList.add('focused');
+        } else {
+          inputField.classList.remove('focused');
+          fcg.classList.remove('focused');
+        }
+
+        if (hasValue || hasFocus) {
+          fcg.classList.remove('floating');
+        } else {
+          fcg.classList.add('floating');
+        }
       }
 
-      if (hasValue || hasFocus) {
-        fcg.classList.remove('floating');
-      } else {
-        fcg.classList.add('floating');
+      input.addEventListener('focus', updateState);
+      input.addEventListener('blur', updateState);
+      input.addEventListener('input', updateState);
+
+      updateState();
+
+      let prependedElements = 0, sibling = input;
+      while (sibling = sibling.previousElementSibling) {
+        prependedElements++;
       }
+      fcg.style.setProperty('--prepended-elements', prependedElements);
+
     }
 
-    input.addEventListener('focus', updateState);
-    input.addEventListener('blur', updateState);
-    input.addEventListener('input', updateState);
-
-    updateState();
-
-    let prependedElements = 0, sibling = input;
-    while (sibling = sibling.previousElementSibling) {
-      prependedElements++;
-    }
-    fcg.style.setProperty('--prepended-elements', prependedElements);
-
-  }
-
-  const form = document.querySelector('#example-input-form');
-  form.querySelectorAll('.form-control-group').forEach(fcg => registerInputFieldListeners(fcg));
+    const form = docRoot.querySelector('#example-input-form');
+    form.querySelectorAll('.form-control-group').forEach(fcg => registerInputFieldListeners(fcg));
+  }();
 </script>
