@@ -6,7 +6,7 @@
   margin-bottom: $form-control-vertical-gap;
   overflow: auto;
 
-  & > label {
+  & .checkbox-label {
     cursor: pointer;
     outline: none;
     display: inline-flex;
@@ -16,7 +16,7 @@
     margin-top: 0;
   }
 
-  & > label > .icon {
+  & .checkbox-label > .icon {
     color: $checkbox-color;
     display: block;
     min-width: 1.5em;
@@ -26,19 +26,19 @@
     font-size: $checkbox-icon-size;
   }
 
-  & label:hover {
+  & .checkbox-label:hover {
     & > .icon {
       color: $checkbox-hover-color;
     }
   }
 
-  & label:focus {
+  & .checkbox-label:focus {
     & > .icon {
       color: $checkbox-focus-color;
     }
   }
 
-  &.disabled > label {
+  &.disabled .checkbox-label {
     cursor: default;
     & .icon {
       color: $checkbox-disabled-color;
@@ -47,8 +47,6 @@
 }
 
 // form control group modifiers
-.form-control-group {
-  & .checkbox  {
-    margin-bottom: 0;
-  }
+.form-control-group .checkbox {
+  margin-bottom: 0;
 }

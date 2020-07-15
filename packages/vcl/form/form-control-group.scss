@@ -16,7 +16,6 @@
     color: $form-control-label-required-hint-color;
   }
 
-  & > label:first-child,
   & > .form-control-label {
     &.clickable {
       cursor: pointer;
@@ -41,7 +40,6 @@
     }
   }
 
-  &.focused > label:first-child,
   &.focused > .form-control-label {
     color: $form-control-focused-label-color;
 
@@ -50,7 +48,6 @@
     }
   }
 
-  &.disabled > label:first-child,
   &.disabled > .form-control-label.clickable {
     cursor: default;
   }

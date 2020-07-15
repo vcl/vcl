@@ -1,15 +1,15 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-<div id="example-checkbox">
+<div id="example-checkbox-basic">
   <div class="checkbox" role="checkbox" aria-checked="false" aria-labelledby="checkbox-label-1">
-    <label id="checkbox-label-1" tabindex="0">
+    <label id="checkbox-label-1" class="checkbox-label" tabindex="0">
       <div class="icon fas fa-square"></div>
       Label
     </label>
   </div>
   
   <div class="checkbox disabled" role="checkbox" aria-disabled="true" aria-checked="true" aria-labelledby="checkbox-label-2">
-    <label id="checkbox-label-2">
+    <label id="checkbox-label-2" class="checkbox-label">
       <div class="icon fas fa-check-square"></div>
       Disabled
     </label>
@@ -17,13 +17,13 @@
   
   <div class="col">
     <div class="checkbox" role="checkbox" aria-checked="false" aria-labelledby="checkbox-label-3">
-      <label id="checkbox-label-3"  tabindex="0">
+      <label id="checkbox-label-3" class="checkbox-label" tabindex="0">
         <div class="icon fas fa-square"></div>
         Option 1
       </label>
     </div>
     <div class="checkbox" role="checkbox" aria-checked="true" aria-labelledby="checkbox-label-4">
-      <label id="checkbox-label-4" tabindex="0">
+      <label id="checkbox-label-4" class="checkbox-label" tabindex="0">
         <div class="icon fas fa-check-square"></div>
         Option 2
       </label>
@@ -32,7 +32,9 @@
 </div>
 
 <script>
-  const checkboxes = document.querySelectorAll('#example-checkbox .checkbox');
+  const docRoot = document.demoShadowRoot || document;
+
+  const checkboxes = docRoot.querySelectorAll('#example-checkbox-basic .checkbox');
   checkboxes.forEach(checkbox => {
     const label = checkbox.querySelector('label');
     const icon = checkbox.querySelector('.icon');

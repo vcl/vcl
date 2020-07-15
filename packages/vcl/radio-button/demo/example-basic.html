@@ -3,7 +3,7 @@
 <div id="example-radio-button-basic">
   <div class="radio-group" role="radiogroup">
     <div class="radio-button" role="checkbox" aria-checked="true" aria-labelledby="radio-button-label-1">
-      <label id="radio-button-label-1" tabindex="0">
+      <label class="radio-button-label" id="radio-button-label-1" tabindex="0">
         <div class="icon fas fa-dot-circle"></div>
         <span class="icogram">
           <span class="text">Male</span>
@@ -12,7 +12,7 @@
       </label>
     </div>
     <div class="radio-button" role="checkbox" aria-checked="false" aria-labelledby="radio-button-label-2">
-      <label id="radio-button-label-2" tabindex="0">
+      <label class="radio-button-label" id="radio-button-label-2" tabindex="0">
         <div class="icon fas fa-circle"></div>
         <span class="icogram">
           <span class="text">Female</span>
@@ -21,7 +21,7 @@
       </label>
     </div>
     <div class="radio-button" role="checkbox" aria-checked="false" aria-labelledby="radio-button-label-3">
-      <label id="radio-button-label-3" tabindex="0">
+      <label class="radio-button-label" id="radio-button-label-3" tabindex="0">
         <div class="icon fas fa-circle"></div>
         <span class="icogram">
           <span class="text">Genderless</span>
@@ -33,8 +33,10 @@
 </div>
 
 <script>
+const docRoot = document.demoShadowRoot || document;
+
 (function() {
-  const radiogroups = document.querySelectorAll('#example-radio-button-basic .radio-group');
+  const radiogroups = docRoot.querySelectorAll('#example-radio-button-basic .radio-group');
   radiogroups.forEach(radiogroup => {
     const radiobuttons = radiogroup.querySelectorAll('.radio-button');
 

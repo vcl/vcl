@@ -1,7 +1,7 @@
-<form class="form">
+<form class="form" id="example-checkbox-form">
   <div class="form-control-group">
     <div class="checkbox" role="checkbox" aria-checked="false" aria-labelledby="checkbox-label-1">
-      <label id="checkbox-label-1" tabindex="0">
+      <label id="checkbox-label-1" class="checkbox-label" tabindex="0">
         <div class="icon fas fa-square"></div>
         Label
       </label>
@@ -9,3 +9,30 @@
     <span class="form-control-hint">Form Control Hint</span>
   </div>
 </form>
+
+<script>
+  const docRoot = document.demoShadowRoot || document;
+
+  const checkboxes = docRoot.querySelectorAll('#example-checkbox-form .checkbox');
+  checkboxes.forEach(checkbox => {
+    const label = checkbox.querySelector('label');
+    const icon = checkbox.querySelector('.icon');
+
+    label.addEventListener('click', () => {
+      const disabled = checkbox.getAttribute('aria-disabled') === 'true';
+      const checked = checkbox.getAttribute('aria-checked') === 'true';
+      if (disabled) {
+        return;
+      }
+      if (checked) {
+        checkbox.setAttribute('aria-checked', 'false');
+        icon.classList.remove('fa-check-square');
+        icon.classList.add('fa-square');
+      } else {
+        checkbox.setAttribute('aria-checked', 'true');
+        icon.classList.add('fa-check-square');
+        icon.classList.remove('fa-square');
+      }
+    });
+  })
+</script>

@@ -9,7 +9,7 @@
   .radio-button {
     display: inline-block;
     
-    & > label {
+    & .radio-button-label {
       cursor: pointer;
       outline: none;
       display: inline-flex;
@@ -19,7 +19,7 @@
       margin-top: 0;
     }
   
-    & > label > .icon {
+    & .radio-button-label > .icon {
       color: $radio-button-color;
       display: inline-block;
       min-width: 1.5em;
@@ -29,19 +29,15 @@
       font-size: $radio-button-icon-size;
     }
   
-    & label:hover {
-      & > .icon {
-        color: $radio-button-hover-color;
-      }
+    & .radio-button-label:hover & > .icon {
+      color: $radio-button-hover-color;
     }
   
-    & label:focus {
-      & > .icon {
-        color: $radio-button-focus-color;
-      }
+    & .radio-button-label:focus & > .icon{
+      color: $radio-button-focus-color;
     }
   
-    &.disabled > label {
+    &.disabled .radio-button-label {
       cursor: default;
       & .icon {
         color: $radio-button-disabled-color;

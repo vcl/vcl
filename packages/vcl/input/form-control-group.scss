@@ -26,7 +26,6 @@ $duration: 200ms;
     padding-top: 7px;
   }
 
-  > label:first-child,
   > .form-control-label {
     // Remove any spacing
     margin: 0;
@@ -37,7 +36,7 @@ $duration: 200ms;
     z-index: 1;
     transition: all $duration ease-out;
     transition-property: left, top, font-size;    
-    top: calc(-0.35rem + var(--label-offset-y));
+    top: calc(-0.45rem + var(--label-offset-y));
     left: calc(0.5rem + var(--label-offset-x));
     font-size: 0.8em;
     font-size: 0.8em;
@@ -60,7 +59,6 @@ $duration: 200ms;
 
   // Label is floating when control is focused or has the floating modifier
   &.floating:not(.static) {
-    & > label:first-child,
     & > .form-control-label {
       top: calc(0.6rem + var(--label-offset-y)); 
       left: calc(0.5rem + var(--label-offset-x) + calc(var(--prepended-elements) * var(--prepended-element-width)));
@@ -98,7 +96,6 @@ $duration: 200ms;
   }
 
   &.disable-animations {
-    > label:first-child,
     > .form-control-label {
       transition: none;
       &::before {
@@ -106,7 +103,6 @@ $duration: 200ms;
       }
     }
     &.floating:not(.static-label) {
-      & > label:first-child,
       & > .form-control-label {
         transition: none;
       }
