@@ -1460,7 +1460,7 @@ span.button[disabled] {
   padding-left: 0.2em;
   color: #005f84;
 }
-.form-control-group > label:first-child, .form-control-group > .form-control-label {
+.form-control-group > .form-control-label {
   align-self: flex-start;
   display: inline-block;
   font-size: inherit;
@@ -1469,24 +1469,24 @@ span.button[disabled] {
   margin-top: 0.75em;
   margin-bottom: 0.5em;
 }
-.form-control-group > label:first-child.clickable, .form-control-group > .form-control-label.clickable {
+.form-control-group > .form-control-label.clickable {
   cursor: pointer;
 }
-.form-control-group > label:first-child .form-control-sub-label, .form-control-group > .form-control-label .form-control-sub-label {
+.form-control-group > .form-control-label .form-control-sub-label {
   font-size: 0.9em;
   padding-left: 0.6em;
   color: #262626;
 }
-.form-control-group > label:first-child .required-indicator, .form-control-group > .form-control-label .required-indicator {
+.form-control-group > .form-control-label .required-indicator {
   line-height: 0.85em;
 }
-.form-control-group.focused > label:first-child, .form-control-group.focused > .form-control-label {
+.form-control-group.focused > .form-control-label {
   color: #00adef;
 }
-.form-control-group.focused > label:first-child .form-control-sub-label, .form-control-group.focused > .form-control-label .form-control-sub-label {
+.form-control-group.focused > .form-control-label .form-control-sub-label {
   color: #00adef;
 }
-.form-control-group.disabled > label:first-child, .form-control-group.disabled > .form-control-label.clickable {
+.form-control-group.disabled > .form-control-label.clickable {
   cursor: default;
 }
 
@@ -1741,7 +1741,6 @@ textarea::placeholder,
 .form-control-group.embedded-input-field-label textarea {
   padding-top: 7px;
 }
-.form-control-group.embedded-input-field-label > label:first-child,
 .form-control-group.embedded-input-field-label > .form-control-label {
   margin: 0;
   padding: 0;
@@ -1756,7 +1755,6 @@ textarea::placeholder,
   font-size: 0.8em;
   pointer-events: none;
 }
-.form-control-group.embedded-input-field-label > label:first-child::before,
 .form-control-group.embedded-input-field-label > .form-control-label::before {
   content: "";
   position: absolute;
@@ -1770,13 +1768,13 @@ textarea::placeholder,
   right: -0.3rem;
   z-index: -1;
 }
-.form-control-group.embedded-input-field-label.floating:not(.static) > label:first-child, .form-control-group.embedded-input-field-label.floating:not(.static) > .form-control-label {
+.form-control-group.embedded-input-field-label.floating:not(.static) > .form-control-label {
   top: calc(0.6rem + var(--label-offset-y));
   left: calc(0.5rem + var(--label-offset-x) + calc(var(--prepended-elements) * var(--prepended-element-width)));
   transition: all 200ms ease-out;
   font-size: inherit;
 }
-.form-control-group.embedded-input-field-label.floating:not(.static) > label:first-child::before, .form-control-group.embedded-input-field-label.floating:not(.static) > .form-control-label::before {
+.form-control-group.embedded-input-field-label.floating:not(.static) > .form-control-label::before {
   opacity: 0;
   left: 0em;
   right: 0em;
@@ -1802,15 +1800,13 @@ textarea::placeholder,
 .form-control-group.embedded-input-field-label.floating:not(.static) textarea:-ms-input-placeholder {
   opacity: 0;
 }
-.form-control-group.embedded-input-field-label.disable-animations > label:first-child,
 .form-control-group.embedded-input-field-label.disable-animations > .form-control-label {
   transition: none;
 }
-.form-control-group.embedded-input-field-label.disable-animations > label:first-child::before,
 .form-control-group.embedded-input-field-label.disable-animations > .form-control-label::before {
   transition: none;
 }
-.form-control-group.embedded-input-field-label.disable-animations.floating:not(.static-label) > label:first-child, .form-control-group.embedded-input-field-label.disable-animations.floating:not(.static-label) > .form-control-label {
+.form-control-group.embedded-input-field-label.disable-animations.floating:not(.static-label) > .form-control-label {
   transition: none;
 }
 

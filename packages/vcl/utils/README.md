@@ -123,35 +123,35 @@ width and height of a container.
 
 ### Gutter
 
-- `gutter[X|Y]-[0|1|2|3|4|5]
+- `gutter[x|y]-[0|1|2|3|4|5]
 
 - direction (optional. All if not provided)
   - values:
-      X (left and right), Y (top and bottom)
+      x (left and right), y (top and bottom)
 - size
   - values 0 to 5 (from none to large)
 
 Examples:
 
-gutter-3, gutter-x-1, gutter-y-5
+gutter-3, gutterx-1, guttery-5
 
 ### Spacing
 
-- `vcl[P|M][T|R|B|L|X|Y]-[0|1|2|3|4|5]`
+- `[p|m][r|e|b|l|x|y]-[0|1|2|3|4|5]`
 
 - type
-  - values: P (padding), M (margin)
+  - values: p (padding), p (margin)
 
 - direction (optional. All if not provided)
   - values:
-      R (right), B (bottom), L (left), X (left and right), Y (top and bottom)
+      r (right), b (bottom), l (left), x (left and right), y (top and bottom)
 
 - size
-  - values 0 to 5 (from none to large), Auto (margin only)
+  - values 0 to 5 (from none to large), auto (margin only)
 
 Examples:
 
-p-3, p-x-1, m-3, m-y-auto
+p-3, px-1, m-3, my-auto
 
 
 ### Alignment of inline Elements
