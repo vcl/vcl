@@ -41,7 +41,6 @@ function build({ source, target }) {
 
 (async function() {
   try {
-    let result;
     console.log('Building ' + vclDefaultIn);
     await build({
       source: vclDefaultIn,

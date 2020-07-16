@@ -28,8 +28,9 @@
   & .p-l-controls {
     text-align: right;
 
-    & .input {
+    & .input-field {
       width: 4em;
+      display: inline-flex;
     }
   }
 
