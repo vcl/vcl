@@ -1,7 +1,8 @@
-@use "../flex-grid.scss";
+@use "../theme.scss" as *;
+@use "../button.scss" as *;
 @use "../size-modulation.scss";
 @use "../typography.scss" as *;
 @use "../utils.scss" as *;
-@use "../theme.scss" as *;
+@use "../flex-grid.scss";
 @use "./index.scss";
 @import "https://use.fontawesome.com/releases/v5.3.1/css/all.css";
