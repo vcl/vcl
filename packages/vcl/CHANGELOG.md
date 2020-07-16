@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.1](https://github.com/vcl/vcl/compare/v2.0.0-alpha.6...v2.0.0-beta.1) (2020-07-16)
+
+
+### Bug Fixes
+
+* fixes and optimizations ([10b8786](https://github.com/vcl/vcl/commit/10b8786806fed4f36985b99b1fa3f6ff746dbd54))
+* fixes and optimizations ([af4a6f9](https://github.com/vcl/vcl/commit/af4a6f96af201954912312506bded0d4f88a4004))
+* misc fixes ([6823694](https://github.com/vcl/vcl/commit/6823694c330c8fb255728a4ac2f903e321e8fc7f))
+* **docs:** fix docs ([545b682](https://github.com/vcl/vcl/commit/545b6827f04c0d577a4d14b48053e9cce4bde498))
+* **input:** add bg color to input-field ([21fad87](https://github.com/vcl/vcl/commit/21fad8777935aae57d90ba62099c1cacb085e567))
+
+
+
+
+
 # [2.0.0-alpha.6](https://github.com/vcl/vcl/compare/v2.0.0-alpha.5...v2.0.0-alpha.6) (2020-06-18)
 
 **Note:** Version bump only for package @vcl/vcl
