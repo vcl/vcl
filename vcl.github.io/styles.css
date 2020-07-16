@@ -1531,6 +1531,7 @@ span.button[disabled] {
   border-style: solid;
   box-sizing: border-box;
   background-color: white;
+  min-height: 2.65em;
   /* Semantic coloring */
 }
 .input-field.focused, .input-field:focus-within {
@@ -1588,7 +1589,7 @@ span.button[disabled] {
   padding-right: 0;
 }
 .input-field input {
-  min-height: 2.65em;
+  height: 100%;
   line-height: initial;
   box-sizing: border-box;
 }
