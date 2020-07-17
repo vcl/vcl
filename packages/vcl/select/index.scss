@@ -17,6 +17,8 @@
       color: $input-color;
     }
   }
+
+  &.disabled,
   &.disabled input {
     cursor: default;
   }
