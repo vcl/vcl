@@ -35,7 +35,7 @@ const docFolder = argv.doc;
 const baseModuleFolder = path.resolve(root, argv._[0]);
 const outputFolder = path.join(root, argv._[1]);
 
-const rawHtml = exports.rawHtml = fs.readFileSync(__dirname + '/index.html', 'utf8')
+const rawHtml = exports.rawHtml = fs.readFileSync(__dirname + '/build/dist/index.html', 'utf8')
                                     .split('<script>define([\'web-components/doc-index.js\']);</script>').join('');
 const appBundle =  fs.readFileSync(__dirname + '/build/dist/web-components/doc-index.js', 'utf8');
 const polyfillBundle =  fs.readFileSync(__dirname + '/build/dist/node_modules/@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce.js', 'utf8');
@@ -47,7 +47,6 @@ if (verbose) {
 if (!fs.existsSync(outputFolder)){
   fs.mkdirSync(outputFolder);
 }
-
 
 const sassOptions = {
   includePaths: [baseModuleFolder],
