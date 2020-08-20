@@ -139,20 +139,21 @@ gutter-3, gutterx-1, guttery-5
 
 - `[p|m][r|e|b|l|x|y]-[0|1|2|3|4|5]`
 
-- type
-  - values: p (padding), p (margin)
+  - type
+    - values: p (padding), p (margin)
 
-- direction (optional. All if not provided)
-  - values:
-      r (right), b (bottom), l (left), x (left and right), y (top and bottom)
+  - direction (optional. All if not provided)
+    - values:
+        r (right), b (bottom), l (left), x (left and right), y (top and bottom)
 
-- size
-  - values 0 to 5 (from none to large), auto (margin only)
+  - size
+    - values 0 to 5 (from none to large), auto (margin only)
 
-Examples:
+  Examples:
 
-p-3, px-1, m-3, my-auto
+  p-3, px-1, m-3, my-auto
 
+- `mb-form-control` Bottom margin used in form controls
 
 ### Alignment of inline Elements
 
