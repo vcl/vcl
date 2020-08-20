@@ -4545,6 +4545,10 @@ sub {
   margin-bottom: auto;
 }
 
+.mb-form-control {
+  margin-bottom: 1em;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
