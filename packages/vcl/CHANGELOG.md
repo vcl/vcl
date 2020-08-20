@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/vcl/vcl/compare/v2.0.0-beta.2...v2.0.0) (2020-08-20)
+
+
+### Features
+
+* **utils:** add form control margin ([a10a7b3](https://github.com/vcl/vcl/commit/a10a7b302d1f82254cdd451c7eafa8e7283f2d66))
+
+
+
+
+
 # [2.0.0-beta.2](https://github.com/vcl/vcl/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2020-07-17)
 
 
