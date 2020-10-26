@@ -54,7 +54,7 @@ class: center, middle
 # The Visual Component Library “VCL“
 ## Modular, extensible CSS
 
-Thomas Hoppe in 2019
+Thomas Hoppe in 2020
 
 ---
 
@@ -69,11 +69,11 @@ Web application development.
 
 - Modular, not a framework, 100% JS-free at runtime
 
-- For static sites and MV* framework driven SPAs (EmberJS, Angular, React...)
+- For static sites and MV* framework driven SPAs (Angular, React, Vue...)
 
 - Does not break your build process, it's part of it
 
-- Existing library of 85 ready-to-use modules
+- Existing library of 85 ready-to-use components
 
 ---
 
@@ -81,31 +81,18 @@ Web application development.
 
 __Component__: A self-contained UI element like a button
 
-__Module__: An NPM module containing 1 - n components
--
-__Theme__: A module which only defines variables for other components
+__Theme__: A component which only defines variables for other components
 
 __Theme terms__: High level theme defining colors, shades and fonts
 
 ---
 
-# Technical Basis
-
-- [npm](https://www.npmjs.org/) as
-package management vehicle and module registry
-
----
-
 # Why is it _modular_?
 
-Because components are packaged as NPM modules which can be:
+Because new components can be easily added and used:
 
-- from the VCL org's repository
-- third parties
-- your own ones
-
-This allows you to use exactly the modules you need
-to cover the styling needs of a project.
+- to the VCL repository
+- your own modules
 
 ---
 
@@ -119,35 +106,29 @@ It is in several ways:
 
 - You can adapt existing components by overriding styles and/ or variables
 
-Everything through modules
-
-Extensions can thus seamlessly be integrated a build process
-
 ---
 
-# Installing Modules
+# Installing the VCL
 
 ```shell
-$ npm install vcl-button
+$ npm install @vcl/vcl
 ```
 
 ---
 
-# “Running“ the Demos of a Module
+# “Running“ the Demo of a component
 
 ```shell
 $ git clone https://github.com/vcl/vcl.git
 
-$ cd vcl/modules/date-picker
-
 $ npm install
 
-$ npm start
+$ npm run demo <component name>
 ```
 
 This will:
 
-1. install the `vcl-preprocessor`
+1. install the CSS processor (SASS)
 2. install all dependent VCL modules
 3. Build the styles and copy stuff to the `build` folder
 4. Start a web server, serving the `build` folder
@@ -157,52 +138,40 @@ This will:
 
 # Using Modules
 
-The CSS `@import`-statement is used to import modules and files:
+The SASS `@use`-statement is used to import modules and files:
 
 Import a module via
 
-```CSS
-@import "<module name>"
+```sass
+@use "<module name>"
 ```
 
 Import a local file via
 
-```CSS
-@import "<file name>.styl|css"
+```sass
+@use "<file name>.scss|css"
 ```
 
 ---
 
-# Anatomy of a Module
+# Anatomy of a Component
 
-See what makes up a module using the example of the _button_:
+See what makes up a component using the example of the _button_:
 
-[https://github.com/vcl/vcl/tree/master/modules/button](https://github.com/vcl/vcl/tree/master/modules/button)
+[https://github.com/vcl/vcl/tree/master/packages/vcl/button](https://github.com/vcl/vcl/tree/master/packages/vcl/button)
 
-This definition in `package.json` specifies the index style file:
-
-`"style": "index.styl"`
-
-It functions in the same way as the `main` property for JS-modules.
+The `index.scss` is the main entry point to the component.
 
 ---
 
-# Soft Dependencies
+# Dependencies
 
-Soft dependencies via `devDependencies` are used to specify the
-dependencies of modules to run the demos. An example `package.json`:
+Dependencies are specified via `@use` and can be local files or external modules:
 
-```JavaScript
-"devDependencies": {
-  "normalize.css": "^7.0.0",
-  "pre-commit": "^1.0.6",
-  "@vcl/build-demo": "^0.4.0-2",
-  "@vcl/default-theme": "^0.2.0",
-  "@vcl/default-theme-terms": "^0.2.0",
-  "@vcl/font-awesome": "^0.3.0",
-  "@vcl/icon": "^0.2.0",
-  "@vcl/preprocessor": "^0.3.0-2"
-}
+```sass
+@use "../theme.scss" as *;
+@use "../icogram.scss" as *;
+@use "../mixins.scss";
 ```
 
 ---
@@ -211,42 +180,38 @@ dependencies of modules to run the demos. An example `package.json`:
 
 Typical usage is best explained by a typical `index.sss` of a web app:
 
-```
-@import "@vcl/default-theme-terms"   ← Use the terms of the default theme
-@import "@vcl/default-theme"         ← Use the default theme
-@import "./vcl-var-override.styl"   ← Override some vars
-@import "@vcl/vcl/recommended"      ← Use the collection of recommended modules
-@import "@vcl/font-awesome"          ← Use font awesome
-@import "./own-modules.css"         ← Add some own stuff
+```sass
+@use "sass:color";
+@use "~@vcl/vcl";
+
+@use "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@use "~@fortawesome/fontawesome-free/scss/solid.scss" with (
+  $fa-font-path: "~@fortawesome/fontawesome-free/webfonts"
+);
 ```
 
 ---
 
 # Current Module Stock
 
-- There is a collection of **~70 __core modules__**
+There is a collection of **~85 __core components__**
   * with components ranging from typographical styles for text,
 links, lists etc. to complex widgets like a date picker.
   - They provide roughly wahat you can find in Twitter Bootstrap
 
-- ~85 Modules from the VCL org's repos
-
 <br>
 Check the
-**[Generated Docs of all Core Modules](https://vcl.github.io/)**.
+**[documentation of all Core Components](https://vcl.github.io/)**.
 
 ---
 
-# WARNING, it is opinionated
+# It'ss opinionated
 
-- CSS code is written using the
-[white space significant syntax](https://www.npmjs.org/package/css-whitespace),
-`.styl` suffix
-  - You can also use plain CSS for your components
+- CSS code is written using the SASS syntax
 
 - Uses relative units like `em`, `rem` everywhere (except for some borders)
 
-- camelCased class naming, like `flip-switch`
+- Kebab-cased class naming, like `flip-switch`
 
 - Embraces flexbox
 
@@ -254,108 +219,20 @@ Check the
 
 ---
 
-# Browser Compatibility
-
-Is mainly a build time decision,
-how you parameterize
-[autoprefixer](https://github.com/postcss/autoprefixer).
-
-As a result, even IE8 is possible for
-many components.
-
-On the other hand some components
-use _flexbox_, _transitions_,
-_media queries_ etc. which are not
-available in older browsers.
-
----
-
-# Creating Builds
-
-1.) Via CLI
+# Creating Builds with SASS
 
 ```shell
-$ npm install -g @vcl/preprocessor
+$ npm install -g sass
 
-$ vcl-preprocessor index.styl dist/compiled.css
+$ sass --style=compressed --no-source-map ./node_modules/@vcl/vcl/index.scss ./index.css
 ```
 
-2.) `package.json` script
+It's assumed that the VCL is installed in `./node_modules/@vcl/vcl/index.scss`.
 
-```JavaScript
-"scripts": {
-  "build-css": "vcl-preprocessor index.styl vcl.css"
-}
-```
+The result can be found in `index.css`.
 
-3.) [Gulp task](https://github.com/vcl/vcl/tree/master/tools/gulp-vcl-preprocessor)
-
----
-
-# The Doc Generator
-
-The [doc-gen](https://github.com/vcl/vcl/tree/master/tools/doc-gen)
-allows to generate a browsable catalog of all VCL modules used
-in a project.
-
-- The documentation and the demos can be browsed conveniently
-
-- Includes all VCL modules in the dependency tree (“recursive“)
-
-- Completely introspection based; no registry or manual enumeration required
-
----
-
-# Doc related Module Meta Data in `package.json`
-
-The doc-generator is fed by the `categories` part of the meta data.
-
-- A module can have multiple categories
-- The priorities affect the sort order in the menu of the generated
-  documentation
-
-```JavaScript
-"vcl": {
-  "categories": [
-    {
-      "title": "Buttons",
-      "itemPriority": 10,     ← Order of the category
-      "priority": 80          ← Order of the module within the category
-    }
-  ]
-}
-```
-
-There is a
-[list of categories](https://raw.githubusercontent.com/vcl/vcl/master/doc/component_categories.yml)
-but it's not mandatory to use them.
-
----
-
-# Creating Docs
-
-1.) Via CLI
-
-```shell
-$ npm install -g @vcl/doc-gen
-
-$ vcl-doc-gen --entry ./package.json --output doc.html
-```
-
-2.) Via `package.json` script
-
-```JavaScript
-"scripts": {
-  "doc-gen": "vcl-doc-gen && http-server ./vcl-documentation",
-}
-```
-
----
-
-class: center, middle
-
-Check the **[VCL tutorial](https://github.com/vcl/vcl/tree/master/doc/tutorial)**
-project to see everything put together.
+Check the **[VCL SASS CLI tutorial](https://github.com/vcl/vcl/tree/master/doc/tutorial/sass-cli)**
+to learn more.
 
 ---
 
@@ -369,29 +246,21 @@ It's battle proven in:
 - Mobile apps
 - Enterprise apps
 
-We are on a conservative **0.4.0 version level** that we
-released in spring 2019.
+We are on a conservative **2.0.0 version level** that we
+released in 2020.
 
 Of course we adhere to
 [semver](http://semver.org/).
-
-The 0.2.x series of modules is published on npm.
 
 ---
 
 # Open Issues / Roadmap
 
-- Enhance documentation of modules
-
 - RTL support
 
-- Even more components
-
-- Support for [@apply](http://tabatkins.github.io/specs/css-apply-rule/#at-ruledef-apply) based extends for easy theme extension
+- Even more components and themes
 
 - Support themes better in doc-gen/ doc-client
-
-- Ability to scope modules to a web component via [ICSS](https://github.com/css-modules/icss)
 
 ---
 
@@ -399,7 +268,7 @@ The 0.2.x series of modules is published on npm.
 
 - Mainly created and maintained by [n-fuse](http://www.n-fuse.co) employees
 
-- 6 comitters currently
+- 3 comitters currently
 
 **We are open for your contributions!**
 
