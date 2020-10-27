@@ -1,4 +1,4 @@
-# Guidelines for writing VCL Modules
+# Guidelines developing VCL Modules
 
 Here are stipulations and guidelines about writing VCL modules.
 This guide also describes the mechanics behind the VCL and thus is
@@ -6,17 +6,16 @@ also vital to understand how VCL modules work.
 
 ## Structure
 
-Use the [vcl-list](https://github.com/vcl/vcl/modules/list) as a prototype.
+Use a module like the [vcl-list](https://github.com/vcl/vcl/tree/master/packages/vcl/list)
+as a prototype.
 
-## package.json
+## `index.scss` and `vcl.json`
 
-Have an `index.scss` file per module which is referenced in
-the `package.json` in the `scss` property.
+Have an `index.scss` file per module.
 
-Have the following custom fields in the `package.json` file:
+Have the following fields in the `vcl.json` file:
 
-- `scss` points to the entry CSS file of the module.
-- `vcl.categories` an array of categories. Example:
+- `categories` an array of categories. Example:
 
     {
       "title": "Icons",
@@ -36,8 +35,9 @@ including demos of your modules.
 
 ### Dependencies
 
-Use the `@use ...` syntax on top of your file if your module has dependencies to another module.
-Most modules need to use the `theme` to access variables.
+Use the `@use ...` syntax on top of your `.scss` file if your module has
+dependencies to another module. Most modules need to use the `theme` to access
+variables.
 
 ```scss
 @use "../theme";

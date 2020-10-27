@@ -1,4 +1,9 @@
 @use "sass:color";
+
+@forward "./node_modules/@vcl/vcl/theme" with (
+  $app-viewport-bg-color: #ffffff,
+);
+
 @use "node_modules/@vcl/vcl";
 
 .article-text {
