@@ -4,7 +4,7 @@ The background and layout of the app's viewport and app area.
 
 ## Features
 
-Sets `@viewport { width: device-width; }`.
+Sets `@viewport { width: device-width; }` and the viewport's background color.
 
 Introduces the following concept:
 
@@ -83,5 +83,3 @@ Viewport with centered app area which contains the main content area:
 ## Demo
 
 [example.html](/demo/example.html) on GH-pages.
-
-
