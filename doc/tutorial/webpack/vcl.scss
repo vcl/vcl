@@ -1,10 +1,8 @@
 @use "sass:color";
 
-@forward "./node_modules/@vcl/vcl/theme" with (
+@use "~@vcl/vcl" with (
   $app-viewport-bg-color: #ffffff,
 );
-
-@use "~@vcl/vcl";
 
 @use "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @use "~@fortawesome/fontawesome-free/scss/solid.scss" with (

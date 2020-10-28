@@ -182,11 +182,14 @@ Typical usage is best explained by a typical `index.sss` of a web app:
 
 ```sass
 @use "sass:color";
-@use "~@vcl/vcl";
 
-@use "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@use "~@fortawesome/fontawesome-free/scss/solid.scss" with (
-  $fa-font-path: "~@fortawesome/fontawesome-free/webfonts"
+@use "node_modules/@vcl/vcl"with (
+  $app-viewport-bg-color: #ffffff,
+);
+
+@use "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@use "node_modules/@fortawesome/fontawesome-free/scss/solid.scss" with (
+  $fa-font-path: "node_modules/@fortawesome/fontawesome-free/webfonts"
 );
 ```
 
@@ -205,7 +208,7 @@ Check the
 
 ---
 
-# It'ss opinionated
+# It's opinionated
 
 - CSS code is written using the SASS syntax
 
