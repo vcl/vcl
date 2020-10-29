@@ -6,17 +6,17 @@
     "start": "webpack-dev-server --open"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "@vcl/vcl": "^2.0.0"
   },
   "devDependencies": {
-    "css-loader": "^4.2.1",
-    "file-loader": "^6.0.0",
-    "html-webpack-plugin": "^4.3.0",
-    "mini-css-extract-plugin": "^0.10.0",
-    "sass-loader": "^9.0.3",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
+    "css-loader": "^5.0.0",
+    "file-loader": "^6.1.1",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.2.0",
+    "sass-loader": "^10.0.4",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.1.0",
     "webpack-dev-server": "^3.11.0"
   }
 }

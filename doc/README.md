@@ -7,7 +7,7 @@ Web application development.
 
 - Browse **[vcl.github.io](https://vcl.github.io/)** for the docs and demos
  of all modules in the VCL org’s repos.
-- Check **[the presentation](http://vcl.github.io/presentation/index.html)**
+- Check **[the presentation](https://vcl.github.io/presentation/index.html)**
 introducing the VCL.
 
 ## Status
