@@ -195,6 +195,20 @@ Typical usage is best explained by a typical `index.sss` of a web app:
 
 ---
 
+# Use of Themes
+
+Use the VCL with the black/ white theme:
+
+```sass
+@use "node_modules/@vcl/vcl/bw-theme" with (
+  $app-viewport-bg-color: #ffffff
+);
+
+@use "node_modules/@vcl/vcl";
+```
+
+---
+
 # Current Module Stock
 
 There is a collection of **~85 __core components__**
