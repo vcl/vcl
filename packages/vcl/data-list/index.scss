@@ -1,6 +1,5 @@
 @use "../theme.scss" as *;
 
-
 .data-list {
   margin-bottom: $block-elem-vertical-gap;
   background-color: $data-list-bg-color;
@@ -8,11 +7,11 @@
   .data-list-header {
     background-color: $data-list-header-bg-color;
   }
-  
+
   .data-list-footer {
     background-color: $data-list-footer-bg-color;
   }
-  
+
   .data-list-body {
     width: 100%;
     padding: 0;
@@ -24,8 +23,9 @@
     border-bottom-style: solid;
     border-top-color: $data-list-border-color;
     border-bottom-color: $data-list-border-color;
+    list-style: none;
   }
-  
+
   .data-list-item {
     min-height: 3em;
     position: relative;
@@ -58,9 +58,9 @@
       &.disabled {
         cursor: default;
       }
-    }    
+    }
   }
-  
+
   &.divider {
     & .data-list-item {
       border-bottom-width: 1px;
@@ -79,7 +79,7 @@
   }
 
   // Same as .data-list-item.selectable, but for all items
-  &.selectable-items .data-list-item {
+  &.item-selectability .data-list-item {
     outline: none;
     &:not(.disabled) {
       cursor: pointer;
