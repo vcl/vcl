@@ -8,6 +8,8 @@
     "tag-packages": "lerna version --no-push --conventional-commits",
     "publish-packages": "lerna publish from-git",
     "publish-packages-next": "lerna publish from-git --dist-tag next",
+    "prepublish-packages": "npm run build",
+    "prepublish-packages-next": "npm run build",
     "build": "node scripts/build.js",
     "demo": "node scripts/demo.js"
   },
