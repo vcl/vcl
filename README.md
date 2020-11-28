@@ -10,4 +10,5 @@ See [README.md](doc/README.md) for an overview of VCL.
 
 ## Development
 
+See [README.md](doc/README.md) for a guide how to run a module's demo.
 See [DEVELOPMENT.md](doc/DEVELOPMENT.md) for the mechanics and philosophy behind VCL modules.
