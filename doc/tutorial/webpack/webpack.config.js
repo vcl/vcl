@@ -9,6 +9,7 @@ module.exports = {
   },
   output: {
     path: path.join(process.cwd(), 'build'),
+    publicPath: '',
   },
   module: {
     rules: [

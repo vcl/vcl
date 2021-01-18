@@ -274,16 +274,6 @@
   counter-reset: sectCounterH4;
 }
 
-/* Set the viewport width to the device width */
-@viewport {
-  width: device-width;
-}
-/*
-@-moz-viewport { width: device-width }
-@-o-viewport { width: device-width; }
-@-webkit-viewport { width: device-width; }
-@viewport { width: device-width; }
-*/
 /*! modern-normalize v0.6.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -524,6 +514,7 @@ summary {
 .viewport {
   margin: 0;
   min-height: 100vh;
+  width: device-width;
   background-color: #ffffff;
 }
 
@@ -828,10 +819,6 @@ summary {
   border-color: transparent;
   border-style: solid;
   border-radius: 0;
-  padding-right: 0.8em;
-  padding-left: 0.8em;
-  padding-top: 0;
-  padding-bottom: 0;
   line-height: initial;
   text-decoration: none;
   font-weight: bolder;
@@ -1462,6 +1449,7 @@ span.button[disabled] {
   border-bottom-style: solid;
   border-top-color: #b9b9b9;
   border-bottom-color: #b9b9b9;
+  list-style: none;
 }
 .data-list .data-list-item {
   min-height: 3em;
@@ -1504,21 +1492,21 @@ span.button[disabled] {
 .data-list.no-border .data-list-body {
   border: 0;
 }
-.data-list.selectable-items .data-list-item {
+.data-list.item-selectability .data-list-item {
   outline: none;
 }
-.data-list.selectable-items .data-list-item:not(.disabled) {
+.data-list.item-selectability .data-list-item:not(.disabled) {
   cursor: pointer;
 }
-.data-list.selectable-items .data-list-item:not(.disabled):hover, .data-list.selectable-items .data-list-item:not(.disabled):focus, .data-list.selectable-items .data-list-item:not(.disabled).focused {
+.data-list.item-selectability .data-list-item:not(.disabled):hover, .data-list.item-selectability .data-list-item:not(.disabled):focus, .data-list.item-selectability .data-list-item:not(.disabled).focused {
   color: #303030;
   background-color: #e8e8e8;
 }
-.data-list.selectable-items .data-list-item:not(.disabled).selected:hover, .data-list.selectable-items .data-list-item:not(.disabled).selected:focus, .data-list.selectable-items .data-list-item:not(.disabled).selected.focused {
+.data-list.item-selectability .data-list-item:not(.disabled).selected:hover, .data-list.item-selectability .data-list-item:not(.disabled).selected:focus, .data-list.item-selectability .data-list-item:not(.disabled).selected.focused {
   color: white;
   background-color: #005f84;
 }
-.data-list.selectable-items .data-list-item.disabled {
+.data-list.item-selectability .data-list-item.disabled {
   cursor: default;
 }
 
