@@ -140,7 +140,7 @@ gutter-3, gutterx-1, guttery-5
 - `[p|m][r|e|b|l|x|y]-[0|1|2|3|4|5]`
 
   - type
-    - values: p (padding), p (margin)
+    - values: p (padding), m (margin)
 
   - direction (optional. All if not provided)
     - values:
@@ -172,7 +172,7 @@ gutter-3, gutterx-1, guttery-5
 
 - `overflow-hidden`
 - `overflow-auto`
-- `visibility-hidden` 
+- `visibility-hidden`
 - `hide`
 - `hide-bp`: where bp is a breakpoint
 - `hide-from-bp`: where bp is a breakpoint
