@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/vcl/vcl/compare/v2.1.1...v2.1.2) (2021-01-27)
+
+
+### Bug Fixes
+
+* make item-hover-highlight behave as documented ([6be027e](https://github.com/vcl/vcl/commit/6be027e10a42674f3ad6c09631fa6a904f01c4a8))
+
+
+
+
+
 ## [2.1.1](https://github.com/vcl/vcl/compare/v2.1.0...v2.1.1) (2020-11-17)
 
 **Note:** Version bump only for package @vcl/vcl
