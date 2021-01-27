@@ -78,11 +78,20 @@
     }
   }
 
-  // Same as .data-list-item.selectable, but for all items
+  // (item-selectability & item-hover-highlight) Same as .data-list-item.selectable, but for all items
   &.item-selectability .data-list-item {
     outline: none;
     &:not(.disabled) {
       cursor: pointer;
+    }
+    &.disabled {
+      cursor: default;
+    }
+  }
+
+  &.item-hover-highlight .data-list-item {
+    outline: none;
+    &:not(.disabled) {
       &:hover,
       &:focus,
       &.focused {
@@ -95,9 +104,6 @@
         color: $data-list-item-selected-hover-color;
         background-color: $data-list-item-selected-hover-bg-color;
       }
-    }
-    &.disabled {
-      cursor: default;
     }
   }
 
