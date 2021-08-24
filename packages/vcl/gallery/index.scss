@@ -90,39 +90,48 @@
   & .gallery-thumbs {
     overflow-x: auto;
     text-align: center;
+    width: 100%;
 
-    & .gallery-thumb-wrapper {
-      z-index: 1;
-      position: relative;
+    & .gallery-thumbs-container {
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x;
 
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        border-width: 4px;
-        border-style: solid;
-        border-color: transparent;
-        cursor: pointer;
-      }
+      & .gallery-thumb-wrapper {
+        z-index: 1;
+        position: relative;
 
-      &:hover {
         &:after {
-          background-color: $gallery-thumbnail-hover-bg-color;
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          border-width: 4px;
+          border-style: solid;
+          border-color: transparent;
+          cursor: pointer;
+        }
+
+        &:hover {
+          &:after {
+            background-color: $gallery-thumbnail-hover-bg-color;
+          }
+        }
+
+        &.selected:after {
+          border-color: $gallery-thumbnail-selected-border-color;
         }
       }
 
-      &.selected:after {
-        border-color: $gallery-thumbnail-selected-border-color;
+      & .gallery-thumb {
+        box-sizing: border-box;
+        object-fit: contain;
+        display: block;
+        scroll-snap-align: center;
+        border-radius: 10px;
       }
-    }
-
-    & .gallery-thumb {
-      box-sizing: border-box;
-      object-fit: contain;
-      display: block;
     }
   }
 }
