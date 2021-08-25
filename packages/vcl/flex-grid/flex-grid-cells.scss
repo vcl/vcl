@@ -21,12 +21,12 @@ $cells: 12;
   }
 
   @for $i from 1 through $cells {
-    $per: math.percentage($i / $cells);
+    $per: math.percentage(math.div($i, $cells));
 
     .flex-#{$i}#{$suffix} {
       flex: 0 0 $per;
     }
-    
+
     .offset-#{$i}#{$suffix} {
       margin-left: $per;
     }
@@ -43,7 +43,7 @@ $cells: 12;
     }
 
     @for $i from 1 through $cells {
-      $per: math.percentage($i / $cells);
+      $per: math.percentage(math.div($i, $cells));
       .flex-#{$i}#{$suffix} {
         max-width: $per;
       }
@@ -61,7 +61,7 @@ $cells: 12;
     }
 
     @for $i from 1 through $cells {
-      $per: math.percentage($i / $cells);
+      $per: math.percentage(math.div($i, $cells));
       .flex-#{$i} {
         max-height: $per;
       }

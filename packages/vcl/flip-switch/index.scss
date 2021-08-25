@@ -10,6 +10,7 @@
   border-width: 1px;
   border-style: solid;
   border-color: $flip-switch-border-color;
+  background-color: $flip-switch-border-color;
 
   &.flip-switch-pressed {
     & .flip-switch-track {
@@ -39,6 +40,7 @@
   overflow: hidden;
   cursor: pointer;
   border: 0;
+  background-color: $app-viewport-bg-color;
 }
 
 .flip-switch-track {
