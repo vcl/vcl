@@ -38,6 +38,8 @@
   @include mixins.clearfix;
   cursor: pointer;
   transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  padding-right: 0.8em;
+  padding-left: 0.8em;
 }
 
 .button {
