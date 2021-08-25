@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.3](https://github.com/vcl/vcl/compare/v2.1.2...v2.1.3) (2021-08-25)
+
+
+### Bug Fixes
+
+* **flex-grid:** SASS syntax ([de4b924](https://github.com/vcl/vcl/commit/de4b92419682f378138b06fa70259631cc2864c6))
+* **flip-switch:** layout glitch in chrome ([863900f](https://github.com/vcl/vcl/commit/863900f7f899a2d6a49302db23ab4e177b4f5e10))
+
+
+
+
+
 ## [2.1.2](https://github.com/vcl/vcl/compare/v2.1.1...v2.1.2) (2021-01-27)
 
 
