@@ -27,6 +27,7 @@
     border-style: solid;
     border-color: $panel-border-color;
     border-radius: $panel-border-radius--card;
+    overflow: clip;
   }
 
   &.panel-dialog {
