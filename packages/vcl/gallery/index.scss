@@ -101,11 +101,14 @@
   }
 
   & .gallery-thumbs {
+    display: flex;
+    justify-content: center;
     overflow-x: auto;
     text-align: center;
     width: 100%;
 
     & .gallery-thumbs-container {
+      display: flex;
       gap: 1rem;
       overflow-x: auto;
       scroll-snap-type: x;
@@ -145,6 +148,22 @@
         scroll-snap-align: center;
         border-radius: 10px;
       }
+    }
+  }
+
+  & .gallery-thumbs-vertical {
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    text-align: center;
+    height: 100%;
+
+    & .gallery-thumbs-container-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      overflow-y: auto;
+      scroll-snap-type: y;
     }
   }
 }
