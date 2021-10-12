@@ -37,7 +37,7 @@ jobs:
           GIT_BRANCH: ${{ steps.extract_branch.outputs.branch }}
         run: |
           npm ci
-          npm run docs
+          npm run demo
           
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
