@@ -38,11 +38,12 @@ jobs:
         run: |
           npm ci
           npm run docs
+          
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: master
+          BRANCH: gh-pages
           FOLDER: docs
 
       - name: Create Release
