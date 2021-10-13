@@ -1,9 +1,6 @@
 <form class="form" id="example-input-form">
   <div class="form-control-group">
-    <label for="example_form_input_0" class="form-control-label clickable">
-      Basic label
-      <em class="required-indicator">•</em>
-    </label>
+    <label for="example_form_input_0" class="form-control-label clickable"></label>
     <div class="input-field">
       <input id="example_form_input_0" type="text">
     </div>
@@ -100,7 +97,7 @@
     function registerInputFieldListeners(fcg) {
       const inputField = fcg.querySelector('.input-field');
       const input = inputField.querySelector('input, textarea');
-      
+
       function updateState() {
         const hasValue = typeof input.value === 'string' && input.value.length > 0;
         const hasFocus = docRoot.activeElement === input;
