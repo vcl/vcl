@@ -44,7 +44,7 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: docs
+          FOLDER: docgen/vcl.github.io/dist
 
       - name: Create Release
         id: create_release
