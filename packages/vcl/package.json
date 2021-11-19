@@ -1,7 +1,7 @@
 {
   "name": "@vcl/vcl",
   "description": "The whole VCL in one package",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "main": "package.json",
   "style": "dist/index.css",
   "scss": "index.scss",
