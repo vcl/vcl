@@ -1,6 +1,6 @@
 
 
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import { PolymerElement, html } from '@polymer/polymer/polymer-element';
 import '@polymer/app-route/app-location.js';
 import '@polymer/app-route/app-route.js';
 

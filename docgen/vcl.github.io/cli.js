@@ -90,7 +90,7 @@ const render = (data) => {
         if (err) {
           console.error(err);
           reject(err);
-        } else { 
+        } else {
           fs.writeFileSync('styles.css', result.css);
           resolve();
         }
@@ -166,7 +166,7 @@ function getMeta(modulePath) {
   debug('gettings package.json from %s', modulePath);
   // get module information
   const modulePkgFilePath = path.resolve(modulePath, 'vcl.json');
-  
+
   if (!fs.existsSync(modulePkgFilePath)) {
     return undefined;
   }
@@ -194,9 +194,9 @@ async function fetchPackage(pack) {
   }
 
   const readmeFile = path.resolve(basePath, 'README.md')
-  
+
   const readme = fs.existsSync(readmeFile) ? fs.readFileSync(readmeFile) : undefined;
-  
+
   const styleFile = fs.existsSync(path.resolve(basePath, 'demo.scss')) ? 'demo.scss' : undefined;
 
   // TODO: cleanup - filter and add
@@ -224,7 +224,6 @@ async function fetchPackage(pack) {
 
 // we have all information we need. this function uses it to generate the html
 async function renderPart(docPart) {
-
   if (docPart.vcl === undefined) {
     docPart.vcl = {};
   }
@@ -262,12 +261,12 @@ async function renderPart(docPart) {
     if (result !== null && result.length > 0) {
       var exPath = docPart.basePath + result[2];
       var key = path.basename(exPath, '.html');
-      obj.text = '<div class="demo panel" id="demo-' + key + '"></div>';
-
-
+      var html = '<div class="demo panel" id="demo-' + key + '"></div>';
+      obj.tokens[0].type = 'text';
+      obj.tokens[0].text = html;
+      // obj.tokens[0].raw = html;
       const demo = fs.readFileSync(exPath, 'utf8');
       docPart.demos[key] = encodeURIComponent(demo);
-      // docPart.demos[key] = fs.readFileSync(exPath, 'utf8').replace(/<.*?script.*?>.*?<\/.*?script.*?>/igm, '');
     }
     return true;
   });
@@ -295,7 +294,6 @@ async function renderPart(docPart) {
   } else if (!docPart.styleFile) {
     docPart.style = '';
   }
-
 
   return docPart;
 };

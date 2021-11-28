@@ -1,5 +1,5 @@
 
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import { PolymerElement, html } from '@polymer/polymer/polymer-element';
 
 export default class DocDemo extends PolymerElement {
   static get template() {
@@ -114,14 +114,14 @@ export default class DocDemo extends PolymerElement {
   insertAndExecute(domelement, text) {
     domelement.innerHTML = text;
     var scripts = [];
-  
+
     var ret = domelement.childNodes;
     for ( var i = 0; ret[i]; i++ ) {
       if ( scripts && nodeName( ret[i], "script" ) && (!ret[i].type || ret[i].type.toLowerCase() === "text/javascript") ) {
         scripts.push( ret[i].parentNode ? ret[i].parentNode.removeChild( ret[i] ) : ret[i] );
       }
     }
-  
+
     for(var script in scripts)
     {
       var elem = scripts[script];

@@ -1,5 +1,5 @@
 
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import { PolymerElement, html } from '@polymer/polymer/polymer-element';
 
 
 export default class DocTopbar extends PolymerElement {
