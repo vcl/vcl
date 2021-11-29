@@ -264,7 +264,6 @@ async function renderPart(docPart) {
       var html = '<div class="demo panel" id="demo-' + key + '"></div>';
       obj.tokens[0].type = 'text';
       obj.tokens[0].text = html;
-      // obj.tokens[0].raw = html;
       const demo = fs.readFileSync(exPath, 'utf8');
       docPart.demos[key] = encodeURIComponent(demo);
     }
