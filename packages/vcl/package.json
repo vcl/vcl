@@ -23,5 +23,6 @@
   ],
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "933d4c8e76fa9e9f1ddfd3dcb51390bd6838beb0"
 }
