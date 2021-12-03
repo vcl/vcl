@@ -65,3 +65,10 @@ Otherwise [create an issue](https://vcl.github.io/issues).
 
 See [DEVELOPMENT.md](DEVELOPMENT.md)
 for the mechanics and philosophy behind VCL modules.
+
+## Creating Releases
+
+After your changes have been merged into master, run
+```sh
+npm run tag-packages npm run publish-packages
+```

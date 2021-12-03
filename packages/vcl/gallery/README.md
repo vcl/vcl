@@ -12,6 +12,7 @@ active area for user interaction. The pane is splitted vertically in the middle
 to allow for controls corresponding to the buttons.
 An optional thumbnail bar allows to visualize the current window within within
 the whole gallery.
+The inline styles are only added for display purposes and are not needed in the ng-vcl - only the seperator between body and thumbnails needs to be added manually.
 
 ## Usage
 
@@ -19,22 +20,23 @@ With single item and thumbnail bar.
 
 [thumbnails example](/demo/example-thumbnails.html)
 
-The currently visible page of the gallery can show a batch of items:
-
-[batched example](/demo/example-batched.html)
-
 ## Classes
 
 - `gallery`
+- `gallery-body-norow`
+- `gallery-body-row`
 - `gallery-header`
 - `gallery-content`
 - `gallery-prev-button`
 - `gallery-next-button`
 - `gallery-prev-pane`
 - `gallery-next-pane`
+- `gallery-images-container`
 - `gallery-image`
 - `gallery-footer`
+- `gallery-thumbnails-host`
 - `gallery-thumbs`
+- `gallery-thumbs-container`
 - `gallery-thumb-wrapper`
 - `gallery-thumb`
 
