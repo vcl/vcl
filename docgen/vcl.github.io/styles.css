@@ -926,12 +926,14 @@ ol ul {
 
 .icogram {
   white-space: nowrap;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .icogram > * {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 0.25em 0 0;
+  margin: 0 0.65em 0 0;
 }
 .icogram > *:first-child {
   margin-left: 0;
@@ -941,9 +943,6 @@ ol ul {
 }
 .icogram > *:only-child {
   margin: 0;
-}
-.icogram .text {
-  vertical-align: middle;
 }
 .icogram a.text {
   color: inherit;
