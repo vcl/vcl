@@ -48,12 +48,16 @@
     color: $token-highlighted-color;
   }
 
+  &.token-label {
+    padding-top: 1px;
+  }
+
   & .token-label:first-child {
-    margin-left: 0.3em;
+    margin-left: 0.5em;
   }
 
   & .token-label:last-child {
-    margin-right: 0.3em;
+    margin-right: 0.5em;
   }
 
   & .button {

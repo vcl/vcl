@@ -6,6 +6,7 @@
   text-align: center;
   min-height: 2.5em;
   margin-bottom: $form-control-vertical-gap;
+  cursor: pointer;
 
   &:focus {
     outline: none;
