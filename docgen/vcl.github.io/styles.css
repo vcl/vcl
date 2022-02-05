@@ -926,7 +926,7 @@ ol ul {
 
 .icogram {
   white-space: nowrap;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
@@ -3864,7 +3864,7 @@ table.table input,
 
 /* Single cell highlighting */
 .cell-highlight {
-  background-color: #171718;
+  background-color: #bfe5f5;
 }
 
 /* Selected cell and row coloring */
@@ -11228,6 +11228,7 @@ header {
 
 .docMetadata {
   margin-bottom: 1em;
+  min-width: 20em;
 }
 .docMetadata .grid-span-gca, .docMetadata .grid-span-gcb {
   text-overflow: ellipsis;

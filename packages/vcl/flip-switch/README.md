@@ -29,6 +29,11 @@ Two states between which can be toggled.
 - `$flip-switch-active-bg-color`
 - `$flip-switch-active-color`
 - `$flip-switch-knob-bg-color`
+- `$flip-switch-disabled-color`
+- `$flip-switch-disabled-bg-color`
+- `$flip-switch-disabled-border-color`
+- `$flip-switch-disabled-knob-bg-color`
+- `$flip-switch-disabled-active-bg-color`
 
 ## Demo
 

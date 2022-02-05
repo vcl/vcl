@@ -1,5 +1,4 @@
 On:
-
 <div class="flip-switch flip-switch-pressed" touch-action="pan-y" role="button" tabindex="0" aria-pressed="true" aria-labelledby="fs-label-0">
   <label class="flip-switch-label" id="fs-label-0">
     <div class="flip-switch-track">
@@ -12,9 +11,32 @@ On:
 
 <br><br>
 Off:
-
 <div class="flip-switch" touch-action="pan-y" role="button" tabindex="0" aria-pressed="false" aria-labelledby="fs-label-1">
   <label class="flip-switch-label" id="fs-label-1">
+    <div class="flip-switch-track">
+      <div class="flip-switch-active" aria-hidden="true">On</div>
+      <div class="flip-switch-inactive" aria-hidden="false">Off</div>
+    </div>
+    <div class="flip-switch-knob"></div>
+  </label>
+</div>
+
+<br><br>
+Disabled on:
+<div class="flip-switch flip-switch-pressed disabled" touch-action="pan-y" role="button" tabindex="0" aria-pressed="true" aria-labelledby="fs-label-0">
+  <label class="flip-switch-label" id="fs-label-0">
+    <div class="flip-switch-track">
+      <div class="flip-switch-active" aria-hidden="false">On</div>
+      <div class="flip-switch-inactive" aria-hidden="true">Off</div>
+    </div>
+    <div class="flip-switch-knob"></div>
+  </label>
+</div>
+
+<br><br>
+Disabled off:
+<div class="flip-switch disabled" touch-action="pan-y" role="button" tabindex="0" aria-pressed="false" aria-labelledby="fs-label-2">
+  <label class="flip-switch-label" id="fs-label-2">
     <div class="flip-switch-track">
       <div class="flip-switch-active" aria-hidden="true">On</div>
       <div class="flip-switch-inactive" aria-hidden="false">Off</div>

@@ -521,6 +521,11 @@ $flip-switch-border-color: $gray !default;
 $flip-switch-active-bg-color: $brand-accent-dark !default;
 $flip-switch-active-color: $white !default;
 $flip-switch-knob-bg-color: $brand-accent-darker !default;
+$flip-switch-disabled-color: $input-disabled-color !default;
+$flip-switch-disabled-bg-color: $input-disabled-border-color !default;
+$flip-switch-disabled-border-color: $input-disabled-border-color !default;
+$flip-switch-disabled-knob-bg-color: $brand-accent-light !default;
+$flip-switch-disabled-active-bg-color: $brand-accent-lighter !default;
 
 /* Drop Down */
 $dropdown-border-color: $glass-1 !default;
