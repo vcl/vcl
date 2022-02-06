@@ -11228,7 +11228,6 @@ header {
 
 .docMetadata {
   margin-bottom: 1em;
-  min-width: 20em;
 }
 .docMetadata .grid-span-gca, .docMetadata .grid-span-gcb {
   text-overflow: ellipsis;
