@@ -18,4 +18,14 @@
       margin-right: 0;
     }
   }
+
+  &.vertical {
+    flex-direction: column;
+    & button,
+    & .button {
+      margin-left: unset;
+      margin-right: unset;
+      margin-bottom: $form-control-vertical-gap;
+    }
+  }
 }

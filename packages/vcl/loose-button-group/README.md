@@ -11,13 +11,19 @@ up the group.
 
 It is built by using the `loose-button-group` class.
 
-[basic example](/demo/example.html)
+[basic example](/demo/example-basic.html)
+
+Vertical alignment.
+
+[vertical example](/demo/example-vertical.html)
 
 ## Classes
 
 - `loose-button-group`
 
 ## Modifiers
+
+- `vertical`: Show the buttons stacked.
 
 ## Variables
 
