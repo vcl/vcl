@@ -15,7 +15,8 @@
   border-style: solid;
   box-sizing: border-box;
   background-color: $input-bg-color;
-  min-height: $input-height;
+  height: $input-height;
+  overflow: hidden;
 
   &.focused,
   &:focus-within {
@@ -54,7 +55,7 @@
     background-color: $input-disabled-bg-color;
     border-color: $input-disabled-border-color;
     cursor: default;
-  }  
+  }
 
   & > .icon {
     text-align: center;
@@ -83,7 +84,7 @@
     & > button.button,
       button.button:hover {
       cursor: default;
-      color: $input-field-disabled-text-color;      
+      color: $input-field-disabled-text-color;
     }
   }
 
@@ -100,19 +101,19 @@
     line-height: $input-line-height;
     box-sizing: border-box;
   }
-  
+
   input,
   textarea {
     font-family: inherit;
   }
-  
+
   textarea {
     line-height: $input-textarea-line-height;
     overflow: auto;
     vertical-align: top;
     height: auto;
   }
-  
+
   input,
   textarea {
     width: 100%;
@@ -130,18 +131,18 @@
     word-wrap: normal;
     content: none;
   }
-  
+
   input:focus, textarea:focus {
     outline: none;
   }
-  
+
   input[type="radio"][disabled],
   input[type="checkbox"][disabled],
   input[type="radio"][readonly],
   input[type="checkbox"][readonly] {
     background-color: transparent;
   }
-  
+
   &.disabled input,
   input.disabled,
   input.readonly {

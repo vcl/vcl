@@ -3,6 +3,8 @@
 @use "../input.scss" as *;
 
 .token-input.input-field {
+  height: unset;
+  min-height: $input-height;
   flex-wrap: wrap;
   > .input,
   > .input:focus {
