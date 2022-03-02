@@ -41,6 +41,7 @@
   overflow: hidden;
   border: 0;
   background-color: $app-viewport-bg-color;
+  cursor: pointer;
 }
 
 .flip-switch-track {
@@ -79,6 +80,10 @@
   color: $flip-switch-disabled-color;
   background-color: $flip-switch-disabled-bg-color;
   border-color: $flip-switch-disabled-border-color;
+
+  & .flip-switch-label {
+    cursor: default;
+  }
 
   & .flip-switch-knob {
     background-color: $flip-switch-disabled-knob-bg-color;
