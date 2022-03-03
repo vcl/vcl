@@ -47,14 +47,3 @@ jobs:
           folder: docgen/vcl.github.io/dist
           ssh-key: ${{ secrets.DEPLOY_KEY }}
           repository-name: vcl/vcl.github.io
-
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
