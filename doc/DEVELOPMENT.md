@@ -167,13 +167,9 @@ the default theme as done in the
 
 ## Browser Compatibility
 
-Compatibility differs on module level and is delegated to
-[Autoprefixer](https://github.com/postcss/autoprefixer).
-
 In general, at least the following should be supported and tested:
 
 - Reasonably recent Firefox builds,
-- Internet Explorer 11 and up,
 - Reasonably recent Webkit/ Blink engines and derivatives.
 - Plus their mobile variants.
 
