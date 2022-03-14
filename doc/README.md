@@ -49,9 +49,9 @@ build process.
 ```sh
 git clone https://github.com/vcl/vcl.git
 npm install
-npm run demo [module name] -- --watch
+npm run demo [module name] -- watch
 e.g.
-npm run demo button -- --watch
+npm run demo button -- watch
 ```
 
 ### Missing a Module?
