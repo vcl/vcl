@@ -157,6 +157,7 @@ const render = (data) => {
 
     fs.writeFileSync(path.resolve(outputFolder, 'index.html'), html);
     fs.writeFileSync(path.resolve(outputFolder, 'styles.css'), css);
+    runDemoServer();
   } catch (ex) {
     console.error(ex);
   }
@@ -297,4 +298,17 @@ async function renderPart(docPart) {
   return docPart;
 };
 
+function runDemoServer()
+{
+  const mondule = process.argv[6] || 'button'; // Default value `button`
+  const isWatch = process.argv[7] == "watch" ? true : false;
+  
+  var browserSync = require("browser-sync").create();
+
+  browserSync.init({
+      watch: isWatch,
+      server: "./dist",
+      startPath: "/#"+mondule  
+  });
+}
 
