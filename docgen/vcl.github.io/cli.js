@@ -300,6 +300,9 @@ async function renderPart(docPart) {
 
 function runDemoServer()
 {
+   // Don't open the browser if running from github action
+  if(process.argv[6] == "automatedRun") return;
+
   const mondule = process.argv[6] || 'button'; // Default value `button`
   const isWatch = process.argv[7] == "watch" ? true : false;
   
