@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.17](https://github.com/vcl/vcl/compare/v2.1.16...v2.1.17) (2022-03-22)
+
+
+### Bug Fixes
+
+* **Release:** A fix to get clean Release ([5200c8f](https://github.com/vcl/vcl/commit/5200c8fc7946144f9c403584df16a20a60ca2a53))
+
+
+### Features
+
+* add Release ([8babc48](https://github.com/vcl/vcl/commit/8babc4839324dc99bd40b4b822af78552147de5c))
+
+
+
+
+
 ## [2.1.16](https://github.com/vcl/vcl/compare/v2.1.15...v2.1.16) (2022-02-25)
 
 **Note:** Version bump only for package vcl-monorepo
