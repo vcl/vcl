@@ -48,6 +48,9 @@ jobs:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
           repository-name: vcl/vcl.github.io
           
+      - name: Extract version
+        id: extract_version
+        uses: Saionaro/extract-package-version@v1.0.6
           
       - name: Create Release
         id: create_release
@@ -55,7 +58,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: ${{ steps.extract_version.outputs.version }}
+          release_name: Release ${{ steps.extract_version.outputs.version }}
           draft: false
           prerelease: false
