@@ -5,8 +5,7 @@
 **Modular** and **extensible** CSS for the era of component-based
 Web application development.
 
-- Browse **[vcl.github.io](https://vcl.github.io/)** for the docs and demos
- of all modules in the VCL org’s repos.
+- Browse **[vcl.github.io](https://vcl.github.io/)** for the docs and demos.
 - Check **[the presentation](https://vcl.github.io/presentation/index.html)**
 introducing the VCL.
 
