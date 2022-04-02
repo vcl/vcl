@@ -17,7 +17,6 @@ Default form layout with stacked labels and controls.
 
 [example](/demo/example-input.html)
 
-
 ## Classes
 
 - `form`
@@ -28,7 +27,7 @@ Default form layout with stacked labels and controls.
 
 ## Modifiers
 
-- `focused` 
+- `focused`
 - `disabled`
 
 ## Variables

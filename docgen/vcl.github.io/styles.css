@@ -1531,6 +1531,9 @@ span.button[disabled] {
   border: 1px solid #00adef;
   background-color: white;
 }
+.input-field.auto-height {
+  height: unset;
+}
 .input-field.error, .input-field.focused.error, .input-field.error:focus-within {
   border-color: #d9534f;
 }
@@ -1600,9 +1603,9 @@ span.button[disabled] {
 .input-field textarea {
   width: 100%;
   display: inline-block;
-  padding-top: 0;
+  padding-top: 0.4em;
   padding-right: 0.4em;
-  padding-bottom: 0;
+  padding-bottom: 0.4em;
   padding-left: 0.4em;
   vertical-align: middle;
   margin-bottom: 0;
@@ -1628,6 +1631,13 @@ span.button[disabled] {
   color: #989898;
   background-color: white;
   cursor: default;
+}
+
+input::placeholder,
+textarea::placeholder,
+.input-field::placeholder {
+  color: #474747;
+  font-style: normal;
 }
 
 .input-group {
@@ -1669,54 +1679,6 @@ span.button[disabled] {
   box-sizing: border-box;
 }
 
-/* For whatever reason, they need to be separate */
-input:-ms-input-placeholder {
-  color: #474747;
-  font-style: normal;
-}
-
-textarea:-ms-input-placeholder {
-  color: #474747;
-  font-style: normal;
-}
-
-.input:-ms-placeholder {
-  color: #474747;
-  font-style: normal;
-}
-
-input::-moz-placeholder {
-  color: #474747;
-  font-style: normal;
-}
-
-textarea::-moz-placeholder {
-  color: #474747;
-  font-style: normal;
-}
-
-.input::-moz-placeholder {
-  color: #474747;
-  font-style: normal;
-}
-
-*::-webkit-input-placeholder {
-  color: #474747;
-  font-style: normal;
-}
-
-.input::-webkit-input-placeholder {
-  color: #474747;
-  font-style: normal;
-}
-
-input::placeholder,
-textarea::placeholder,
-.input::placeholder {
-  color: #474747;
-  font-style: normal;
-}
-
 .form-control-group .input-field {
   margin-bottom: 0;
 }
@@ -1734,9 +1696,6 @@ textarea::placeholder,
   --prepended-element-width: 2.5rem;
   position: relative;
   margin-top: 0.4rem;
-}
-.form-control-group.embedded-input-field-label textarea {
-  padding-top: 7px;
 }
 .form-control-group.embedded-input-field-label > .form-control-label {
   margin: 0;

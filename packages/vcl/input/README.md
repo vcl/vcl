@@ -34,18 +34,17 @@ The validation state of an input can be visualized by the standard modifiers
 
 [validation-state example](/demo/example-validation-state.html)
 
-### Form control group
+### Form Control Group
 
 When using within a form-control-group, the label can be embedded in the input-field borders.
 
-[form-control-group example](/demo/example-form.html)
+[form-control-group example](/demo/example-form-control-group.html)
 
-### Input group
+### Input Group
 
 An input group is formed by an input-group as wrapper for buttons, icograms and an input element.
 
 [input-group example](/demo/example-input-group.html)
-
 
 ## Classes
 
@@ -53,14 +52,15 @@ An input group is formed by an input-group as wrapper for buttons, icograms and 
 - `input`
 - `embedded-input-field-label`: Embeds label in input-field borders
 - `input-group`
- 
-## Modifiers
+
+## Modifiers for `input-field`
 
 - `focused`: Alternative to `:focus` pseudo class.
 - `disabled`: Visual disabled state, should be combined with `disabled` property.
 - `readonly`: Visual read only state, should be combined with `readonly` property.
-- `floating`: Lets the label float above the input
-- `static`: Disabled floating support
+- `floating`: Lets the label float above the input.
+- `static`: Disabled floating support.
+- `auto-height`: For input fields that should not use the standard height, e.&nbsp;g. `textarea`.
 
 ## Variables
 

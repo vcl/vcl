@@ -24,11 +24,6 @@ $duration: 200ms;
   position: relative;
   margin-top: 0.4rem;
 
-  // textarea has to be padded for consistency
-  & textarea {
-    padding-top: 7px;
-  }
-
   > .form-control-label {
     // Remove any spacing
     margin: 0;

@@ -35,8 +35,8 @@
     <input class="input" type="text" readonly="readonly" autocomplete="off" value="I'm readonly">
   </div>
 
-  <div class="input-field">
-    <textarea class="input" value="aaa">I'm a HTML textarea</textarea>
+  <div class="input-field auto-height">
+    <textarea class="input" value="aaa">I'm a textarea</textarea>
   </div>
 </form>
 
@@ -45,7 +45,7 @@
     let docRoot = document.demoShadowRoot || document;
 
     let inputFields = docRoot.querySelectorAll('#input-example-basic .input-field');
-    
+
     inputFields.forEach(inputField => {
       var input = inputField.querySelector('.input');
       input.addEventListener('focus', () => {
