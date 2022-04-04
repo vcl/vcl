@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/vcl/vcl/compare/v2.1.5...v2.2.0) (2022-04-04)
+
+
+### Features
+
+* better support for textareas ([1d1b318](https://github.com/vcl/vcl/commit/1d1b31897d0f85be38c1e0684a2753236b962d38))
+
+
+
+
+
 ## [2.1.17](https://github.com/vcl/vcl/compare/v2.1.16...v2.1.17) (2022-03-22)
 
 **Note:** Version bump only for package @vcl/vcl
