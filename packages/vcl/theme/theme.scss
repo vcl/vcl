@@ -128,7 +128,7 @@ $table-alt-bg-color: $gray-light-4 !default;
 $table-highlight-bg-color: $brand-accent-lighter !default;
 $table-highlight-hover-bg-color: $brand-accent-light !default;
 $table-row-selected-color: $white !default;
-$table-row-selected-bg-color: $brand-accent-dark !default;
+$table-row-selected-bg-color: $brand-accent !default;
 
 /* Table Extras */
 $table-filter-bar-bg-color: transparent !default;
@@ -151,10 +151,10 @@ $data-list-item-separator-border-color: transparent !default;
 $data-list-item-hover-color: $text-primary-color !default;
 $data-list-item-bg-hover-color: $gray-light-4 !default;
 $data-list-item-selected-color: $white !default;
-$data-list-item-bg-selected-color: $brand-accent-dark !default;
+$data-list-item-bg-selected-color: $brand-accent !default;
 $data-list-item-divider-border-color: $gray-light-3 !default;
 $data-list-item-selected-hover-color: $white !default;
-$data-list-item-selected-hover-bg-color: $brand-accent-darker !default;
+$data-list-item-selected-hover-bg-color: $brand-accent-dark !default;
 $data-list-item-disabled-opacity: 0.6;
 
 /* Data Tree */
@@ -167,7 +167,7 @@ $data-tree-item-bg-color: transparent !default;
 $data-tree-item-hover-color: $white !default;
 $data-tree-item-hover-bg-color: $gray-light-4 !default;
 $data-tree-selected-item-color: $white !default;
-$data-tree-selected-item-bg-color: $brand-accent-dark !default;
+$data-tree-selected-item-bg-color: $brand-accent !default;
 
 /* Calendar */
 $calendar-bg-color: transparent !default;
@@ -179,7 +179,7 @@ $calendar-item-hover-bg-color: $gray-light-4 !default;
 $calendar-otherm-day-color: $gray-light-1 !default;
 $calendar-otherm-day-bg-color: transparent !default;
 $calendar-selected-item-color: $white !default;
-$calendar-selected-item-bg-color: $brand-accent-dark !default;
+$calendar-selected-item-bg-color: $brand-accent !default;
 $calendar-disabled-item-color: $text-secondary-color !default;
 $calendar-disabled-item-bg-color: $gray-light-3 !default;
 $calendar-available-item-bg-color: $success-light-color !default;
@@ -249,7 +249,7 @@ $process-nav-item-hover-color: $brand-accent-darker !default;
 $process-nav-disabled-bg-color: $gray-light-3 !default;
 $process-nav-disabled-color: $text-secondary-color !default;
 $process-nav-selected-item-color: $white !default;
-$process-nav-selected-item-bg-color: $brand-accent-dark !default;
+$process-nav-selected-item-bg-color: $brand-accent !default;
 $process-nav-completed-item-bg-color: $gray-light-4 !default;
 
 /* Tooltip */
@@ -505,8 +505,8 @@ $rating-item-highlighted-color: $brand-accent !default;
 $token-bg-color: $gray-light-5 !default;
 $token-border-color: $gray-light-3 !default;
 $token-border-hover-color: $gray-light-1 !default;
-$token-border-selected-color: $brand-accent-dark !default;
-$token-bg-selected-color: $brand-accent-dark !default;
+$token-border-selected-color: $brand-accent !default;
+$token-bg-selected-color: $brand-accent !default;
 $token-selected-color: $white !default;
 $token-border-highlighted-color: $brand-accent-dark !default;
 $token-bg-highlighted-color: $gray-light-5 !default;

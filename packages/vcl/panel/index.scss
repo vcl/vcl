@@ -1,6 +1,7 @@
 @use "../theme.scss" as *;
 
 .panel {
+  display: block;
   color: $panel-color;
   background-color: $panel-bg-color;
   margin-bottom: $block-elem-vertical-gap;
@@ -35,7 +36,8 @@
     border-style: solid;
     border-color: $gray-light-5;
 
-    & > .panel-header {
+    & > .panel-header,
+        .panel-footer {
       padding-top: 0.7rem;
       padding-bottom: 0.7rem;
       border-bottom-width: 0;

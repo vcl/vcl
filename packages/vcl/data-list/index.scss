@@ -4,6 +4,13 @@
   margin-bottom: $block-elem-vertical-gap;
   background-color: $data-list-bg-color;
 
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: inherit;
+  }
+
   .data-list-header {
     background-color: $data-list-header-bg-color;
   }

@@ -1321,6 +1321,12 @@ span.button[disabled] {
   margin-bottom: 1.3em;
   background-color: transparent;
 }
+.data-list h1,
+.data-list h2,
+.data-list h3,
+.data-list h4 {
+  color: inherit;
+}
 .data-list .data-list-header {
   background-color: transparent;
 }
@@ -1347,7 +1353,7 @@ span.button[disabled] {
 }
 .data-list .data-list-item.selected {
   color: white;
-  background-color: #0888bf;
+  background-color: #00adef;
 }
 .data-list .data-list-item.disabled {
   cursor: default;
@@ -1365,7 +1371,7 @@ span.button[disabled] {
 }
 .data-list .data-list-item.selectable:not(.disabled).selected:hover, .data-list .data-list-item.selectable:not(.disabled).selected:focus, .data-list .data-list-item.selectable:not(.disabled).selected.focused {
   color: white;
-  background-color: #005f84;
+  background-color: #0888bf;
 }
 .data-list .data-list-item.selectable.disabled {
   cursor: default;
@@ -1399,7 +1405,7 @@ span.button[disabled] {
 }
 .data-list.item-hover-highlight .data-list-item:not(.disabled).selected:hover, .data-list.item-hover-highlight .data-list-item:not(.disabled).selected:focus, .data-list.item-hover-highlight .data-list-item:not(.disabled).selected.focused {
   color: white;
-  background-color: #005f84;
+  background-color: #0888bf;
 }
 
 /* remove clear-button in ie10+ */
@@ -3833,7 +3839,7 @@ table.table input,
 .table tr.selected:active td,
 .table tr td.selected {
   color: white;
-  background-color: #0888bf;
+  background-color: #00adef;
 }
 
 .toolbar {
