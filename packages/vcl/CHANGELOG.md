@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/vcl/vcl/compare/v2.2.0...v2.2.1) (2022-04-05)
+
+
+### Bug Fixes
+
+* introduce variables for padding in inputs ([f6b8cff](https://github.com/vcl/vcl/commit/f6b8cffb6ed1a42637610db4bdb9c970c3f389b8))
+
+
+
+
+
 # [2.2.0](https://github.com/vcl/vcl/compare/v2.1.5...v2.2.0) (2022-04-04)
 
 
