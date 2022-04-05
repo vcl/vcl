@@ -435,6 +435,8 @@ $fieldset-border-color: $gray-light-2 !default;
 /* Input */
 $input-height: $input-elem-height !default;
 $input-line-height: initial !default;
+$input-padding-lr: 0.6em !default;
+$input-padding-tb: 0.4em !default;
 $input-textarea-line-height: 1.52em !default;
 $input-outline-focus-color: $black !default;
 $input-color: $black !default;

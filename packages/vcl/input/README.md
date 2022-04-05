@@ -66,6 +66,8 @@ An input group is formed by an input-group as wrapper for buttons, icograms and 
 
 - `$input-height`
 - `$input-line-height`
+- `$input-padding-lr`: Left/ right padding
+- `$input-padding-tb`: Top/ bottom padding
 - `$input-textarea-line-height`
 - `$input-outline-focus-color`
 - `$input-color`
@@ -80,6 +82,8 @@ An input group is formed by an input-group as wrapper for buttons, icograms and 
 - `$input-disabled-color`
 - `$input-disabled-border-color`
 - `$input-disabled-bg-color`
+- `$label-offset-x`: Allows to offset the label in case higher/ narrower standard input dimensions are used
+- `$label-offset-7`
 
 ## Demo
 
