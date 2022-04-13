@@ -33,7 +33,3 @@ The optional `responsive-image-container` can be used to:
 ## Variables
 
 - `$responsive-image-container-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

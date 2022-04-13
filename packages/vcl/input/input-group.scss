@@ -27,6 +27,7 @@
   .input-group-text {
     display: flex;
     align-items: center;
+    padding: $input-padding-tb $input-padding-lr;
     background-color: hsl(0, 0%, 92%);
     color: hsl(0, 0%, 20%);
     font-weight: normal;
@@ -34,7 +35,6 @@
     border-width: $input-border-width;
     border-style: solid;
   }
-
 
   &.disabled .input-group-text {
     border-color: $input-disabled-border-color;
@@ -47,4 +47,3 @@
   border-style: solid;
   box-sizing: border-box;
 }
-

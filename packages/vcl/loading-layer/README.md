@@ -29,7 +29,3 @@ the container can be classed as `loading-layer-container` to denote it.
 ## Variables
 
 - `$loading-layer-cover-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

@@ -50,7 +50,3 @@ Generally, list items can also be anchor tags to form a list of links.
 ## Variables
 
 - `$list-separator-border-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

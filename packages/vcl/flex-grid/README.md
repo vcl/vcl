@@ -28,7 +28,7 @@ Offsets allow set a horizontal offset to a cell.
 The flex layout includes classes for building responsive layouts.
 Customize the size of your columns on extra small (`xs`), small (`sm`), medium (`md`), large (`lg`), or extra large (`xl`) devices how you see fit.
 
-For layouts that are the same from the smallest of devices to the largest, use the  `.flex-1` classes described before. 
+For layouts that are the same from the smallest of devices to the largest, use the  `.flex-1` classes described before.
 For device specific layouts, add the breakpoint as a suffix.
 
 e.g. `<div class="flex-12 flex-8-md">` has a size of 12 on `xs` and `sm` devices, but a size of 8 on `md`, `lg` and `xl` devices.
@@ -37,7 +37,7 @@ Check the breakpoints section for more details.
 
 [responsive example](/demo/example-responsive.html)
 
-Use `grid-gutter-1` to `grid-gutter-5` classes to space out grid cells. 
+Use `grid-gutter-1` to `grid-gutter-5` classes to space out grid cells.
 Warning: Gutters apply negative margins to the container element and positive paddings to the chilrden. Take this into account when you are setting background colors or adding other padding/margins.
 
 [grid gutter example](/demo/example-grid-gutter.html)
@@ -45,7 +45,6 @@ Warning: Gutters apply negative margins to the container element and positive pa
 There are several modifier classes to change the positioning of the cells
 
 [positioning example](/demo/example-positioning.html)
-
 
 ## Classes
 
@@ -64,7 +63,9 @@ There are several modifier classes to change the positioning of the cells
 - `grid-gutter-1` to `grid-gutter-5`
 - `grid-gutterx-1` to `grid-gutterx-5`
 - `grid-guttery-1` to `grid-guttery-5`
+
 ## Modifiers
+
 - `align-items-start`
 - `align-items-end`
 - `align-items-center`
@@ -77,8 +78,3 @@ There are several modifier classes to change the positioning of the cells
 - `reverse`
 - `flex-no-wrap`
 - `flex-wrap-reverse`
-
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

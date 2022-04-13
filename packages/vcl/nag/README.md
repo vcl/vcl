@@ -28,7 +28,3 @@ the flex-layout module.
 
 - `$nag-color`
 - `$nag-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

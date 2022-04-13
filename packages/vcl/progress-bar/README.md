@@ -37,7 +37,3 @@ ongoing process whose progress cannot be determined.
 - `$progress-bar-container-bg-color`
 - `$progress-bar-primary-progress-bg-color`
 - `$progress-bar-secondary-progress-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

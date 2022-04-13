@@ -59,7 +59,3 @@ Semantic coloring:
 - `$panel-footer-color`
 - `$panel-footer-bg-color`
 - `$panel-border-radius--card`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

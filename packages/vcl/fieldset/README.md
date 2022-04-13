@@ -19,7 +19,3 @@ Mainly used with forms but may be also used to group other content.
 ## Variables
 
 - `$fieldset-border-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

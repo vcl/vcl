@@ -164,7 +164,3 @@ modifiers.
 - `$table-highlight-hover-bg-color`
 - `$table-row-selected-color`
 - `$table-row-selected-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

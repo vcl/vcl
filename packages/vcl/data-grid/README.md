@@ -26,7 +26,3 @@ absence of col- and row-spans.
 - `d-g-v-align-bottom`: vertically align cell content to the bottom
 
 ## Variables
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

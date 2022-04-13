@@ -47,7 +47,3 @@ Contextual state:
 - `$slider-rail-bg-color`
 - `$slider-knob-bg-color`
 - `$slider-scale-point-mark-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

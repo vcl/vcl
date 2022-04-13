@@ -40,7 +40,3 @@ Semantic coloring.
 - `$badge-warning-bg-color`
 - `$badge-danger-color`
 - `$badge-danger-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

@@ -25,7 +25,3 @@ the `app` class with `+1em` offset.
 
 - `$gototop-color`
 - `$gototop-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

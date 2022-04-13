@@ -35,7 +35,3 @@ together with classes from other VCL modules.
 - `$email-viewport-bg-color`
 - `$email-body-bg-color`
 - `$email-body-border-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

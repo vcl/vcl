@@ -35,7 +35,3 @@ A ribbon can also be a link and contain an icogram.
 - `$ribbon-bg-color`
 - `$ribbon-color`
 - `$ribbon-shadow-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

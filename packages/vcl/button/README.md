@@ -36,7 +36,7 @@ by virtue of which it supports labels with prepended and appended icons.
 [icon example](/demo/example-icon.html)
 
 Button sizes can be changed with scaling modifiers from the
-size-modulation module.
+size-modulation component.
 
 [size example](/demo/example-size.html)
 
@@ -94,7 +94,3 @@ Additional Modifiers:
 ## Variables
 
 See `--button-*` variables in the default theme.
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

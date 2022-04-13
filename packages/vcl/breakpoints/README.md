@@ -21,7 +21,3 @@ Warning: Try to prevent responsive components as much as you can,
 @media (max-width: @bp-xs-max)
   /* mobile phone styles */
 ```
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

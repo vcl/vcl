@@ -31,7 +31,3 @@ Note that this component depends on the SVG files in the `imgs` folder.
 - `busy-indicator`
 
 ## Variables
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

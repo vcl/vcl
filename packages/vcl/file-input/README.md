@@ -70,7 +70,3 @@ The validation state of an file input can be visualized by the standard modifier
 - `$file-input-dragndrop-color`
 - `$file-input-dragndrop-border-color`
 - `$file-input-dragndrop-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

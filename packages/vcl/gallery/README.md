@@ -56,7 +56,3 @@ With single item and thumbnail bar.
 - `$gallery-initial-buttons-opacity`
 - `$gallery-thumbnail-selected-border-color`
 - `$gallery-thumbnail-hover-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

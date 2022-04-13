@@ -25,7 +25,3 @@ in print mediums.
 ## Modifiers
 
 ## Variables
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

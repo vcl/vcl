@@ -4,11 +4,11 @@ Checkbox form control.
 
 ## Usage
 
-Standalone
+Standalone.
 
 [basic example](/demo/example-basic.html)
 
-Within form-control-group
+Within `form-control-group`.
 
 [basic example](/demo/example-form.html)
 
@@ -25,7 +25,3 @@ Within form-control-group
 - `$checkbox-hover-color`
 - `$checkbox-disabled-color`
 - `$checkbox-icon-size`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

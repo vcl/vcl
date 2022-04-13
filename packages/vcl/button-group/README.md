@@ -44,7 +44,3 @@ A vertical group can be built using the `vertical` modifier.
 - `vertical`
 
 ## Variables
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

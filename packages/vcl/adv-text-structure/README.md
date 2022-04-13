@@ -38,7 +38,3 @@ Automatic chapter numbering for up to three levels.
 - `$article-header-border-color`
 - `$article-header-tagline-color`
 - `$block-elem-bottom-margin`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

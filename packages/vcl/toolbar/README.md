@@ -45,7 +45,3 @@ Second level toolbar with textual title in the middle.
 
 - `$toolbar-l1-bg-color`
 - `$toolbar-l2-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

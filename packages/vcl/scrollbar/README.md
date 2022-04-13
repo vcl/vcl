@@ -24,7 +24,3 @@ Works only for **Webkit/ Blink** based browsers.
 - `$scrollbar-bg-color`
 - `$scrollbar-thumb-bg-color`
 - `$scrollbar-track-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

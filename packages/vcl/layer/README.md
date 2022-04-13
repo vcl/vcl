@@ -44,7 +44,3 @@ A simple layer with a panel as its content.
 
 - `$layer-cover-bg-color`
 - `$layer-border-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

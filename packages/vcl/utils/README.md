@@ -193,7 +193,3 @@ Modifiers:
 
 - `user-select-text`
 - `user-select-none`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

@@ -40,7 +40,3 @@ Disabled (read-only).
 - `$rating-item-color`
 - `$rating-item-disabled-color`
 - `$rating-item-highlighted-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

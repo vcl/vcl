@@ -5,16 +5,14 @@
 @use "../icon.scss" as *;
 @use "../input.scss" as *;
 
-.spinner {
-  & .button-group.vertical {
-    width: calc(#{$input-elem-height} + 0.5em);
-    height: 100%;
-
-    & .button {
-      height: calc(#{$input-elem-height} / 2);
+.button-group {
+  &.spinner {
+    &.vertical {
+      & .button {
+        height: calc(#{$input-elem-height} / 2);
+      }
     }
-
-    & > .button {
+    & .button {
       border-radius: 0;
     }
   }

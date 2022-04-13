@@ -57,7 +57,3 @@ As data browser with image and complex layout.
 - `$data-list-item-bg-hover-color`
 - `$data-list-item-selected-color`
 - `$data-list-item-bg-selected-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

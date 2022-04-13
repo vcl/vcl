@@ -5,10 +5,10 @@ Standard HTML form input controls.
 ## Features
 
 - Styling of input and textarea HTML form controls.
-- Embedded icons/buttons
+- Embedded icons/ buttons
 - State specific stylings
-- Embedded label when used within form-control-groups
-- Attached buttons/icons via input-group
+- Embedded label when used within `form-control-group`s
+- Prepended/ appended buttons and icons via input-group
 
 ## Usage
 
@@ -23,26 +23,29 @@ suited for this purpose.
 
 ### Basic Input
 
-Text inputs can be created with an HTML `input` element wrapped in an element with the input-field class.
+Text inputs can be created with an HTML `input` element wrapped in an element with the `input-field` class.
+The construct also supports buttons embedded into the input.
 
 [basic example](/demo/example-basic.html)
 
 ### Validation
 
-The validation state of an input can be visualized by the standard modifiers
+The validation state of an input can be visualized with the modifiers
 `error`, `warning` and `success`.
 
 [validation-state example](/demo/example-validation-state.html)
 
 ### Form Control Group
 
-When using within a form-control-group, the label can be embedded in the input-field borders.
+Inputs inside a `form-control-group` allow the label to be embedded in the input-field via `embedded-input-field-label`.
+Also allows to prepended/ appended buttons to the input.
 
 [form-control-group example](/demo/example-form-control-group.html)
 
 ### Input Group
 
-An input group is formed by an input-group as wrapper for buttons, icograms and an input element.
+Input groups separate the siblings visually. An input group is formed by an `input-group` as wrapper
+in which concatenated input fields, texts and buttons take place.
 
 [input-group example](/demo/example-input-group.html)
 
@@ -50,8 +53,10 @@ An input group is formed by an input-group as wrapper for buttons, icograms and 
 
 - `input-field`
 - `input`
-- `embedded-input-field-label`: Embeds label in input-field borders
+- `form-control-group`
+- `embedded-input-field-label`: Embeds label in the input-field
 - `input-group`
+- `input-group-text`
 
 ## Modifiers for `input-field`
 
@@ -59,7 +64,7 @@ An input group is formed by an input-group as wrapper for buttons, icograms and 
 - `disabled`: Visual disabled state, should be combined with `disabled` property.
 - `readonly`: Visual read only state, should be combined with `readonly` property.
 - `floating`: Lets the label float above the input.
-- `static`: Disabled floating support.
+- `static`: Disabled floating label.
 - `auto-height`: For input fields that should not use the standard height, e.&nbsp;g. `textarea`.
 
 ## Variables
@@ -84,7 +89,3 @@ An input group is formed by an input-group as wrapper for buttons, icograms and 
 - `$input-disabled-bg-color`
 - `$label-offset-x`: Allows to offset the label in case higher/ narrower standard input dimensions are used
 - `$label-offset-7`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

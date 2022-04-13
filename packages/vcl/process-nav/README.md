@@ -52,7 +52,3 @@ used.
 - `$process-nav-selected-item-color`
 - `$process-nav-selected-item-bg-color`
 - `$process-nav-completed-item-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

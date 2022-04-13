@@ -77,7 +77,3 @@ Years view:
 - `$calendar-disabled-item-bg-color`
 - `$calendar-available-item-bg-color`
 - `$calendar-unavailable-item-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

@@ -6,7 +6,7 @@ Horizontally or vertically aligned divider to segment content.
 
 The divider may have a label to describe the following
 content or the reason for the segmentation.
-This label is typically an icogram but also other components such as 
+This label is typically an icogram but also other components such as
 a button may be used. It's also possible to have multiple labels.
 
 The divider can also be used in combination with an `h[1-6]` element
@@ -19,8 +19,8 @@ divider and its labels is done with the flex-layout module.
 
 [basic examples](/demo/example-basic.html)
 
-The HTML native horizontal rule (`hr` element) is basically the same 
-but very hard to tame in terms of styling. 
+The HTML native horizontal rule (`hr` element) is basically the same
+but very hard to tame in terms of styling.
 
 [hr example](/demo/example-hr.html)
 
@@ -51,15 +51,11 @@ Disables the text-transformation to uppercase.
 
 ### For `divider-element`
 
- - `divider-begin-element`: Left bound element in horizontal layout.
- - `divider-end-element`: Right bound element in horizontal layout.
+- `divider-begin-element`: Left bound element in horizontal layout.
+- `divider-end-element`: Right bound element in horizontal layout.
 
 ## Variables
 
 - `$divider-color`
 - `$divider-border-color`
 - `$divider-fill-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

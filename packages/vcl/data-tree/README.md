@@ -27,7 +27,3 @@ Tree structured data browser.
 - `$data-tree-item-hover-bg-color`
 - `$data-tree-selected-item-color`
 - `$data-tree-selected-item-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

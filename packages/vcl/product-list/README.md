@@ -22,7 +22,3 @@ also on narrow viewports.
 - `$product-list-color`
 - `$product-list-name-color`
 - `$product-list-border-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

@@ -34,7 +34,3 @@ phrase for filtering the selectable items.
 - `select-editable`: Make the input writable for allow for free text input.
 
 ## Variables
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

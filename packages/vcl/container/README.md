@@ -26,7 +26,3 @@ It can also be combined with tabs as content area for the selected tab.
 - `$container-bg-color`
 - `$container-border-color`
 - `$container-border-radius`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

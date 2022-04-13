@@ -26,7 +26,3 @@ inserted to and removed from the DOM as needed.
 
 - `$popover-bg-color`
 - `$popover-shadow-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

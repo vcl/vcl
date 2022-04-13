@@ -13,7 +13,3 @@ A composition of a container for one or multiple images and a caption.
 ## Modifiers
 
 ## Variables
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

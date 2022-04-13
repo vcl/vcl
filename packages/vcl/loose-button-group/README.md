@@ -1,6 +1,6 @@
 # [VCL](https://vcl.github.io/) loose-button-group
 
-A button group with margins between the group items.
+A button group with visible inter-item gaps.
 
 ## Features
 
@@ -26,7 +26,3 @@ Vertical alignment.
 - `vertical`: Show the buttons stacked.
 
 ## Variables
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

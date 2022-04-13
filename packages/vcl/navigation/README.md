@@ -62,7 +62,3 @@ Vertical with nested navigation.
 - `$navigation-item-2nd-level-hover-color`
 - `$navigation-item-2nd-level-selected-bg-color`
 - `$navigation-item-2nd-level-selected-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

@@ -34,7 +34,3 @@ Two states between which can be toggled.
 - `$flip-switch-disabled-border-color`
 - `$flip-switch-disabled-knob-bg-color`
 - `$flip-switch-disabled-active-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

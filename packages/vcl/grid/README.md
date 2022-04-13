@@ -47,7 +47,3 @@ in the demo.
 ## Variables
 
 - `$grid-half-gutter-width`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

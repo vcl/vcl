@@ -120,7 +120,3 @@ Justified tabs can be achieved using the appropriate layout attributes.
 - `$tab-nav-tab-hover-color--uni`
 - `$tab-nav-tab-color-selected--uni`
 - `$tab-nav-tab-disabled-color--uni`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

@@ -1,6 +1,6 @@
 # [VCL](https://vcl.github.io/) responsive-table
 
-Transposed variant of normal vcl-table optimized for narrow viewports
+Transposed variant of normal vcl-table optimized for narrow viewports.
 
 ## Features
 
@@ -11,7 +11,3 @@ Transposed variant of normal vcl-table optimized for narrow viewports
 ## Modifiers
 
 ## Variables
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

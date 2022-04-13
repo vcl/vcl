@@ -23,7 +23,3 @@ Semantic coloring:
 ## Variables
 
 - `$callout-border-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

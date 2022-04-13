@@ -20,7 +20,6 @@ The content can also be made up of other components.
 
 - `tooltip`
 - `tooltip-content`
-
 - `arrow-pointer`
 - `arrow-pointer-bottom`
 - `arrow-pointer-right`
@@ -35,7 +34,3 @@ The content can also be made up of other components.
 - `$tooltip-bg-color`
 - `$tooltip-border-color`
 - `$tooltip-shadow-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

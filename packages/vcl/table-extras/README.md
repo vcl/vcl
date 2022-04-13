@@ -24,7 +24,3 @@ Extensions for the vcl table.
 - `$table-filter-bar-bg-color`
 - `$table-tool-bar-bg-color`
 - `$table-border-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

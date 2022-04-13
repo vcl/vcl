@@ -70,7 +70,3 @@ item.
 - `$select-list-disabled-item-bg-color`
 - `$select-list-disabled-item-color`
 - `$select-list-separator-item-border-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

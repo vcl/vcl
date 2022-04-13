@@ -1664,6 +1664,7 @@ textarea::placeholder,
 .input-group .input-group-text {
   display: flex;
   align-items: center;
+  padding: 0.4em 0.6em;
   background-color: #ebebeb;
   color: #333333;
   font-weight: normal;

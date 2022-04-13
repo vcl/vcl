@@ -29,7 +29,3 @@ Or to CSS flexbox based layout elements.
 - `span-33p`
 - `span-gca`: Golden cut a.
 - `span-gcb`: Golden cut b.
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

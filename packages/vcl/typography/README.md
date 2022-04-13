@@ -115,7 +115,3 @@ code i. e. white spaces inside this element are displayed as typed.
 - `$typography-selected-text-bg-color`
 - `$typography-selected-text-color`
 - `$typography-blockquote-border-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

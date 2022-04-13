@@ -79,7 +79,3 @@ Viewport with centered app area which contains the main content area:
 - `$app-header-logo-max-width`
 - `$app-footer-color`
 - `$app-footer-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

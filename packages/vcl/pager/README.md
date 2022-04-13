@@ -24,7 +24,3 @@ Alternative with justified controls and centered label.
 ## Modifiers
 
 ## Variables
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

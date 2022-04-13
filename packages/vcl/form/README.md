@@ -31,7 +31,3 @@ Default form layout with stacked labels and controls.
 - `disabled`
 
 ## Variables
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

@@ -75,7 +75,3 @@ Semantic coloring:
 - `$notification-error-bg-color`
 - `$notification-error-hf-color`
 - `$notification-error-hf-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

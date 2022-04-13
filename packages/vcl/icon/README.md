@@ -46,7 +46,3 @@ Inline SVG based.
 - `icon-size3`: ~48px.
 
 ## Variables
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

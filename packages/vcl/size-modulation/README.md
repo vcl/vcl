@@ -36,7 +36,3 @@ pagination at 130%.
 ## Modifiers
 
 ## Variables
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

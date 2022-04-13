@@ -34,7 +34,3 @@ varied font size for the value and the use of an icon as unit.
 
 - `$vu-anagram-unit-font-size`
 - `$vu-anagram-unit-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

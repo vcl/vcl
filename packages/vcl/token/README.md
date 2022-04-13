@@ -1,18 +1,18 @@
 # [VCL](https://vcl.github.io/) token
 
-A atomic input element that can be interacted upon.
+An atomic input element that can be interacted upon.
 
 ## Features
 
-- Optional button to remove the token.
+- Optional button to interact with the token, e.&nbsp;g. to remove it.
 - Support for selected and highlighted states.
-- A container to get a gaps relative to container's border right.
+- A token container to get gaps relative to container's border right.
 
 ## Usage
 
 [basic example](/demo/example-basic.html)
 
-A button may be embedded to offer a control to remove the token.
+A button can be embedded to offer a control to remove the token.
 
 [button example](/demo/example-button.html)
 
@@ -43,7 +43,3 @@ A selected and highlighted state is supported.
 - `$token-bg-highlighted-color`
 - `$token-highlighted-color`
 - `$token-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

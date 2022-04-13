@@ -83,7 +83,3 @@ These variables are shared within the theme:
 - `$content-primary-bg-color`
 - `$content-secondary-bg-color`
 - `$content-ternary-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

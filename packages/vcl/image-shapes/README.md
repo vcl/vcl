@@ -23,7 +23,3 @@ Decorations for images.
 ## Variables
 
 - `$thumbnail-border-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

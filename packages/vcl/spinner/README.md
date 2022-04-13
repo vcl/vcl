@@ -1,11 +1,11 @@
 # [VCL](https://github.com/vcl/doc) spinner
 
-Spinner based input for integer values.
+Spinner for input values that can be incremented and decremented.
 
 ## Features
 
-A control for entering integer values conveniently using free text input
-and an accompanying up/ down control to increment and decrement the value.
+An opinionated button-group for incrementing/ decrementing values in a normal
+free text input.
 
 ## Usage
 
@@ -14,18 +14,14 @@ Basic spinner.
 [basic example](/demo/example-basic.html)
 
 If a coarse pointing device is used, the buttons in the stacked group are
-too small. Therefore full sized buttons are proposed for this case.
+too small and full sized buttons are used.
 
 [coarse pointer example](/demo/example-coarse-pointer.html)
 
 ## Classes
 
-- `spinner`
+- `spinner`: A modifier for the `button-group`.
 
 ## Modifiers
 
 ## Variables
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

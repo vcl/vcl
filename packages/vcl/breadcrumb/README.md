@@ -32,7 +32,3 @@ Any icon can be used as divider:
 - `$breadcrumb-label-color`
 - `$breadcrumb-label-hover-color`
 - `$breadcrumb-label-selected-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.

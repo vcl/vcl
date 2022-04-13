@@ -29,7 +29,3 @@ The date picker should be placed in a popover to show it as overlay.
 
 - `$date-picker-border-color`
 - `$date-picker-bg-color`
-
-## Demo
-
-[example.html](/demo/example.html) on GH-pages.
