@@ -123,7 +123,7 @@ width and height of a container.
 
 ### Gutter
 
-- `gutter[x|y]-[0|1|2|3|4|5]
+- `gutter[x|y]-[0|1|2|3|4|5]`
 
 - direction (optional. All if not provided)
   - values:
@@ -133,7 +133,7 @@ width and height of a container.
 
 Examples:
 
-gutter-3, gutterx-1, guttery-5
+`gutter-3`, `gutterx-1`, `guttery-5`
 
 ### Spacing
 
@@ -151,7 +151,7 @@ gutter-3, gutterx-1, guttery-5
 
   Examples:
 
-  p-3, px-1, m-3, my-auto
+  `p-3`, `px-1`, `m-3`, `my-auto`
 
 - `mb-form-control` Bottom margin used in form controls
 
