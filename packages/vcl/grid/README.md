@@ -1,6 +1,6 @@
 # [VCL](https://vcl.github.io/) grid
 
-Classical float based fluid grid system.
+Classical float based fluid grid system **DEPRECATED**.
 
 ## Features
 

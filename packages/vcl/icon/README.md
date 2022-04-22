@@ -27,7 +27,7 @@ of `layout-fit` on the div carrying the background image.
 
 [background image based media objects example](/demo/example-background-image.html)
 
-CSS class based (icon font).
+CSS class based for icon fonts.
 
 [CSS class based with icon font example](/demo/example-icon-font.html)
 

@@ -1,91 +1,12 @@
-<div id="form-example-input">
-  <form class="form">
-    <div class="form-control-group">
-      <label for="form_input1" class="form-control-label clickable">
-        Label
-        <em class="required-indicator">•</em>
-      </label>
-      <div class="input-field">
-        <input id="form_input1" type="text">
-      </div>
-      <span class="form-control-hint">Form Control Hint</span>
+<form class="form">
+  <div class="form-control-group">
+    <label for="form_input1" class="form-control-label clickable">
+      Label
+      <em class="required-indicator">•</em>
+    </label>
+    <div class="input-field">
+      <input id="form_input1" type="text">
     </div>
-  </form>
-
-
-  <form class="form">
-    <div class="form-control-group">
-      <label for="form_input2" class="form-control-label clickable">
-        Label
-        <em class="required-indicator">•</em>
-      </label>
-      <div class="input-field">
-        <div class="icon fas fa-search"></div>
-        <input id="form_input2" type="text">
-        <div class="icon fas fa-times"></div>
-      </div>
-      <span class="form-control-hint">Form Control Hint</span>
-      <span class="form-control-hint error">Error hint</span>
-      <span class="form-control-hint warning">Warning hint</span>
-      <span class="form-control-hint primary">Primary hint</span>
-      <span class="form-control-hint success">Success hint</span>
-      <span class="form-control-hint info">Info hint</span>      
-    </div>
-  </form>
-
-
-  <form class="form demo_ig">
-    <div class="form-control-group">
-      <label for="form_input3" class="form-control-label clickable">
-        Label
-        <em class="required-indicator">•</em>
-      </label>
-      <div class="input-group">
-        <div class="input-field">
-          <div class="icon fas fa-search"></div>
-          <input id="form_input3" type="text">
-        </div>
-        <button type="button" class="button transparent">
-          <div class="icon fas fa-question-circle" aria-hidden="true" role="img"></div>
-        </button>
-      </div>
-      <span class="form-control-hint">Form Control Hint</span>
-    </div>
-  </form>
-
-  <form>
-    <div class="form-control-group disabled">
-      <label for="form_input4" class="form-control-label clickable">
-        Label
-        <em class="required-indicator">•</em>
-      </label>
-      <div class="input-field disabled">
-        <div class="icon fas fa-search" disabled></div>
-        <input id="form_input4" class="disabled" disabled type="text">
-        <button type="button" class="button disabled">
-          <div class="icon fas fa-times" aria-hidden="true" role="img"></div>
-        </button>      
-      </div>
-      <span class="form-control-hint">Form Control Hint</span>
-    </div>
-  </form>
-</div>
-
-<script>
-  const docRoot = document.demoShadowRoot || document;
-
-  const fcgs = docRoot.querySelectorAll('#form-example-basic .form-control-group');
-  
-  fcgs.forEach(fcg => {
-    const inputField = fcg.querySelector('.input-field');
-    const input = inputField.querySelector('.input');
-    input.addEventListener('focus', () => {
-      inputField.classList.add('focused');
-      fcg.classList.add('focused');
-    })
-    input.addEventListener('blur', () => {
-      inputField.classList.remove('focused');
-      fcg.classList.remove('focused');
-    })
-  })
-</script>
+    <span class="form-control-hint">Form Control Hint</span>
+  </div>
+</form>

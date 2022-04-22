@@ -21,7 +21,7 @@ export default class DocNav extends PolymerElement {
                 id="search"
                 on-input="searchUpdate"
                 on-keydown="searchKey"
-                placeholder="Search Modules"
+                placeholder="Search Components"
                 class="input searchInput"
                 value=""
                 autocomplete="off"

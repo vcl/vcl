@@ -1,6 +1,6 @@
 # [VCL](https://vcl.github.io/) flex-grid
 
-Responsive flexbox based grid
+Responsive flexbox based grid and layout.
 
 ## Features
 
@@ -38,7 +38,7 @@ Check the breakpoints section for more details.
 [responsive example](/demo/example-responsive.html)
 
 Use `grid-gutter-1` to `grid-gutter-5` classes to space out grid cells.
-Warning: Gutters apply negative margins to the container element and positive paddings to the chilrden. Take this into account when you are setting background colors or adding other padding/margins.
+Warning: Gutters apply negative margins to the container element and positive paddings to the children. Take this into account when you are setting background colors or adding other padding/margins.
 
 [grid gutter example](/demo/example-grid-gutter.html)
 

@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+
+<div id="example-checkbox-basic">
+  <h3>Horizontal</h3>
+  <div class="checkbox" role="checkbox" aria-checked="false" aria-labelledby="checkbox-label-1">
+    <label id="checkbox-label-1" class="checkbox-label" tabindex="0">
+      <div class="icon fas fa-square"></div>
+      Unchecked
+    </label>
+  </div>
+
+  <div class="checkbox" role="checkbox" aria-checked="true" aria-labelledby="checkbox-label-1">
+    <label id="checkbox-label-1" class="checkbox-label" tabindex="0">
+      <div class="icon fas fa-check-square"></div>
+      Checked
+    </label>
+  </div>
+
+  <div class="checkbox disabled" role="checkbox" aria-disabled="true" aria-checked="true" aria-labelledby="checkbox-label-2">
+    <label id="checkbox-label-2" class="checkbox-label">
+      <div class="icon fas fa-check-square"></div>
+      Disabled
+    </label>
+  </div>
+
+  <h3>Horizontal with reversed Labels</h3>
+  <div class="checkbox" role="checkbox" aria-checked="false" aria-labelledby="checkbox-label-1">
+    <label id="checkbox-label-1" class="checkbox-label" tabindex="0">
+      Unchecked
+      <div class="icon fas fa-square"></div>
+    </label>
+  </div>
+
+  <div class="checkbox" role="checkbox" aria-checked="true" aria-labelledby="checkbox-label-1">
+    <label id="checkbox-label-1" class="checkbox-label" tabindex="0">
+      Checked
+      <div class="icon fas fa-check-square"></div>
+    </label>
+  </div>
+
+  <div class="checkbox disabled" role="checkbox" aria-disabled="true" aria-checked="true" aria-labelledby="checkbox-label-2">
+    <label id="checkbox-label-2" class="checkbox-label">
+      Disabled
+      <div class="icon fas fa-check-square"></div>
+    </label>
+  </div>
+</div>
+
+<script>
+  const docRoot = document.demoShadowRoot || document;
+
+  const checkboxes = docRoot.querySelectorAll('#example-checkbox-basic .checkbox');
+  checkboxes.forEach(checkbox => {
+    const label = checkbox.querySelector('label');
+    const icon = checkbox.querySelector('.icon');
+
+    label.addEventListener('click', () => {
+      const disabled = checkbox.getAttribute('aria-disabled') === 'true';
+      const checked = checkbox.getAttribute('aria-checked') === 'true';
+      if (disabled) {
+        return;
+      }
+      if (checked) {
+        checkbox.setAttribute('aria-checked', 'false');
+        icon.classList.remove('fa-check-square');
+        icon.classList.add('fa-square');
+      } else {
+        checkbox.setAttribute('aria-checked', 'true');
+        icon.classList.add('fa-check-square');
+        icon.classList.remove('fa-square');
+      }
+    });
+  })
+</script>

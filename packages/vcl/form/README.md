@@ -1,33 +1,21 @@
 # [VCL](https://github.com/vcl/doc) form
 
-Basic form layout and arrangement of form elements with labels.
+Form element.
 
 ## Features
 
-### Form Control Group
-
-The concept of a control group with `form-control-group` which groups an
-input element together with a label and a hint so that they make up an atomic control.
-For example a label and an input if such a combination should behave
-like a single control. The elements are aligned vertically.
+Just used to maintain proper block element margin.
 
 ## Usage
 
-Default form layout with stacked labels and controls.
+Default form with an input.
 
 [example](/demo/example-input.html)
 
 ## Classes
 
 - `form`
-- `form-control-group`
-- `form-control-hint`
-- `form-control-label`
-- `required-indicator`
 
 ## Modifiers
-
-- `focused`
-- `disabled`
 
 ## Variables

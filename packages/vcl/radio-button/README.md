@@ -14,7 +14,7 @@ Vertical layout.
 
 [inline example](/demo/example-vertical.html)
 
-Within `form-control-group`.
+As part of a `form-control-group` with a hint.
 
 [form-control-group example](/demo/example-form.html)
 

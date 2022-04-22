@@ -68,7 +68,7 @@ for the mechanics and philosophy behind VCL modules.
 
 After your changes have been merged into master, run
 
-```
+```sh
 npm run tag
 npm run publish
 ```
