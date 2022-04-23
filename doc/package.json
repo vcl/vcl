@@ -1,7 +1,8 @@
 {
   "name": "@vcl/doc",
   "description": "Conceputal VCL documentation",
-  "version": "0.4.0",
+  "version": "0.0.0",
+  "private": true,
   "main": "package.json",
   "author": {
     "name": "n-fuse GmbH",

@@ -2,6 +2,7 @@
   "name": "vcl-monorepo",
   "description": "The Visual Component Library",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "changed": "lerna changed",
