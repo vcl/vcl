@@ -19,3 +19,5 @@ Default form with an input.
 ## Modifiers
 
 ## Variables
+
+- `$form-control-vertical-gap`: Vertical margin between form elements.
