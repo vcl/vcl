@@ -125,7 +125,7 @@
     border-bottom: 3px solid $tab-nav-tab-bg-color;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       outline: none;
       background-color: $tab-nav-tab-bg-hover-color;
     }
@@ -293,7 +293,7 @@
       color: $tab-nav-tab-color--uni;
 
       &:hover,
-      &:focus {
+      &:focus-visible {
         background-color: $tab-nav-tab-bg-hover-color;
         color: $tab-nav-tab-hover-color--uni;
       }

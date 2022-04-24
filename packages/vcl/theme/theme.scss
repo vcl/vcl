@@ -20,6 +20,14 @@ $space: (
   "5": 48px
 ) !default;
 
+/* Focus Outline Colors */
+$focus-outline-default-shadow-color: rgba($emphasized-medium-color, .3) !default;
+$focus-outline-primary-shadow-color: rgba($primary-medium-color, .3) !default;
+$focus-outline-success-shadow-color: rgba($success-medium-color, .3) !default;
+$focus-outline-info-shadow-color: rgba($info-medium-color, .3) !default;
+$focus-outline-warning-shadow-color: rgba($warning-medium-color, .3) !default;
+$focus-outline-danger-shadow-color: rgba($danger-medium-color, .3) !default;
+
 /* App */
 $app-viewport-bg-color: $gray-light-5 !default;
 $app-area-bg-color: transparent !default;
@@ -141,7 +149,6 @@ $sum-table-total-color: inherit !default;
 $sum-table-total-bg-color: transparent !default;
 
 /* Data List */
-
 $data-list-bg-color: transparent !default;
 $data-list-header-bg-color: transparent !default;
 $data-list-footer-bg-color: transparent !default;
@@ -149,7 +156,7 @@ $data-list-border-color: $gray-light-2 !default;
 $data-list-item-color: inherit !default;
 $data-list-item-separator-border-color: transparent !default;
 $data-list-item-hover-color: $text-primary-color !default;
-$data-list-item-bg-hover-color: $gray-light-4 !default;
+$data-list-item-bg-hover-color: $gray-light-5 !default;
 $data-list-item-selected-color: $white !default;
 $data-list-item-bg-selected-color: $brand-accent !default;
 $data-list-item-divider-border-color: $gray-light-3 !default;
@@ -192,7 +199,7 @@ $pagination-selected-page-color: $white !default;
 /* Tab Navigation */
 $tab-nav-border-color: $gray-light-2 !default;
 $tab-nav-tab-bg-color: transparent !default;
-$tab-nav-tab-bg-hover-color: $gray-light-4 !default;
+$tab-nav-tab-bg-hover-color: $gray-light-5 !default;
 $tab-nav-tab-bg-selected-color: transparent !default;
 $tab-nav-tab-bg-disabled-color: transparent !default;
 $tab-nav-tab-border-selected-color: $brand-accent !default;
@@ -489,7 +496,6 @@ $input-group-color: $gray-light-3 !default;
 $input-group-height: $input-elem-height !default;
 $input-group-line-height: $input-elem-height !default;
 
-
 /* Slider */
 $slider-rail-bg-color: $gray-light-3 !default;
 $slider-rail-border-color: transparent !default;
@@ -529,36 +535,20 @@ $flip-switch-disabled-border-color: $input-disabled-border-color !default;
 $flip-switch-disabled-knob-bg-color: $brand-accent-light !default;
 $flip-switch-disabled-active-bg-color: $brand-accent-lighter !default;
 
-/* Drop Down */
-$dropdown-border-color: $glass-1 !default;
-$dropdown-border-width: 1px !default;
-$dropdown-bg-color: $white !default;
-$dropdown-item-color: $input-color !default;
-$dropdown-item-sub-label-color: $text-secondary-color !default;
-$dropdown-item-bg-hover-color: $gray-light-4 !default;
-$dropdown-item-hover-color: $black !default;
-$dropdown-item-sub-label-hover-color: $gray-light-1 !default;
-$dropdown-selected-item-bg-color: $brand-accent !default;
-$dropdown-selected-item-color: $white !default;
-$dropdown-highlighted-item-bg-color: $gray-light-2 !default;
-$dropdown-highlighted-item-color: $black !default;
-$dropdown-disabled-item-bg-color: transparent !default;
-$dropdown-disabled-item-color: $gray-dark-1 !default;
-$dropdown-separator-item-border-color: $gray-light-1 !default;
-
 /* Select List */
 $select-list-border-color: $glass-1 !default;
 $select-list-border-width: 1px !default;
 $select-list-bg-color: $white !default;
 $select-list-item-color: $input-color !default;
 $select-list-item-sub-label-color: $text-secondary-color !default;
-$select-list-item-bg-hover-color: $gray-light-4 !default;
+$select-list-item-bg-hover-color: $gray-light-5 !default;
 $select-list-item-hover-color: $black !default;
 $select-list-item-sub-label-hover-color: $gray-light-1 !default;
-$select-list-selected-item-bg-color: $brand-accent !default;
-$select-list-selected-item-color: $white !default;
-$select-list-highlighted-item-bg-color: $gray-light-2 !default;
-$select-list-highlighted-item-color: $black !default;
+$select-list-selected-item-bg-color: $gray-light-4 !default;
+$select-list-selected-item-color: $brand-accent-dark !default;
+$select-list-highlighted-item-bg-color: $brand-accent !default;
+$select-list-highlighted-item-color: $white !default;
+$select-list-highlighted-item-sub-label-color: $gray-light-4 !default;
 $select-list-disabled-item-bg-color: transparent !default;
 $select-list-disabled-item-color: $gray-dark-1 !default;
 $select-list-separator-item-border-color: $gray-light-1 !default;

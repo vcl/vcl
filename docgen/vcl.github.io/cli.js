@@ -312,7 +312,7 @@ function runDemoServer()
       watch: isWatch,
       watchOptions: {
         paths: [
-          '../../packages/vcl'
+          root
         ]
       },
       server: "./dist",

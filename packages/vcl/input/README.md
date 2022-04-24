@@ -60,7 +60,7 @@ in which concatenated input fields, texts and buttons take place.
 
 ## Modifiers for `input-field`
 
-- `focused`: Alternative to `:focus` pseudo class.
+- `focused`: Alternative to `:focus-visible` pseudo class.
 - `disabled`: Visual disabled state, should be combined with `disabled` property.
 - `readonly`: Visual read only state, should be combined with `readonly` property.
 - `floating`: Lets the label float above the input.

@@ -32,7 +32,7 @@
     }
   }
 
-  & .checkbox-label:focus {
+  & .checkbox-label:focus-visible {
     & > .icon {
       color: $checkbox-focus-color;
     }

@@ -62,7 +62,7 @@
       }
 
       &:hover,
-      &:focus {
+      &:focus-visible {
         & a {
           color: $process-nav-item-hover-color;
         }

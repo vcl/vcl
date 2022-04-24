@@ -50,13 +50,13 @@
       &:not(.disabled) {
         cursor: pointer;
         &:hover,
-        &:focus,
+        &:focus-visible,
         &.focused {
           color: $data-list-item-hover-color;
           background-color: $data-list-item-bg-hover-color;
         }
         &.selected:hover,
-        &.selected:focus,
+        &.selected:focus-visible,
         &.selected.focused {
           color: $data-list-item-selected-hover-color;
           background-color: $data-list-item-selected-hover-bg-color;
@@ -100,13 +100,13 @@
     outline: none;
     &:not(.disabled) {
       &:hover,
-      &:focus,
+      &:focus-visible,
       &.focused {
         color: $data-list-item-hover-color;
         background-color: $data-list-item-bg-hover-color;
       }
       &.selected:hover,
-      &.selected:focus,
+      &.selected:focus-visible,
       &.selected.focused {
         color: $data-list-item-selected-hover-color;
         background-color: $data-list-item-selected-hover-bg-color;

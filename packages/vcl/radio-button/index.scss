@@ -35,7 +35,7 @@
       }
     }
 
-    & .radio-button-label:focus {
+    & .radio-button-label:focus-visible {
       & > .icon {
         color: $radio-button-focus-color;
       }

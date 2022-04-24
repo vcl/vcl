@@ -33,8 +33,9 @@
   }
 }
 
-.file-input:focus,
+.file-input:focus-visible,
 .file-input.focused {
+  outline: 0;
   background-color: $file-input-bg-focus-color;
   border-color: $file-input-border-focus-color;
 }
@@ -42,7 +43,7 @@
 .file-input.disabled,
 .file-input.disabled:hover,
 .file-input.disabled:active,
-.file-input.disabled:focus {
+.file-input.disabled:focus-visible {
   outline: none;
   cursor: default;
   color: $file-input-disabled-color;
@@ -52,20 +53,32 @@
 
 .file-input.error {
   border-color: $error-medium-color;
+  &:focus-visible,
+  &.focused {
+    border-color: $error-dark-color;
+  }
 }
 
 .file-input.warning {
   border-color: $warning-medium-color;
+  &:focus-visible,
+  &.focused {
+    border-color: $warning-dark-color;
+  }
 }
 
 .file-input.success {
   border-color: $success-medium-color;
+  &:focus-visible,
+  &.focused {
+    border-color: $success-dark-color;
+  }
 }
 
 .file-input.disabled,
 .file-input.disabled:hover,
 .file-input.disabled:active,
-.file-input.disabled:focus {
+.file-input.disabled:focus-visible {
   outline: none;
   cursor: default;
   color: $file-input-disabled-color;

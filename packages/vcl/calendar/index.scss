@@ -33,27 +33,27 @@
 }
 
 .calendar.cal-input .cal-item:hover,
-.calendar.cal-input .cal-item:focus {
+.calendar.cal-input .cal-item:focus-visible {
   color: $calendar-item-hover-color;
   background-color: $calendar-item-hover-bg-color;
 }
 
 .cal-item.today,
 .calendar.cal-input .cal-item.today:hover,
-.calendar.cal-input .cal-item.today:focus {
+.calendar.cal-input .cal-item.today:focus-visible {
   font-weight: 500;
   color: $calendar-item-today-color;
 }
 
 .cal-item.other-month,
 .calendar.cal-input .cal-item.other-month:hover,
-.calendar.cal-input .cal-item.other-month:focus {
+.calendar.cal-input .cal-item.other-month:focus-visible {
   color: $calendar-otherm-day-color;
 }
 
 .cal-item.disabled,
 .calendar.cal-input .cal-item.disabled:hover,
-.calendar.cal-input .cal-item.disabled:focus {
+.calendar.cal-input .cal-item.disabled:focus-visible {
   color: $calendar-disabled-item-color;
   background-color: $calendar-disabled-item-bg-color;
   cursor: default;
@@ -61,19 +61,19 @@
 
 .cal-item.available,
 .calendar.cal-input .cal-item.available:hover,
-.calendar.cal-input .cal-item.available:focus {
+.calendar.cal-input .cal-item.available:focus-visible {
   background-color: $calendar-available-item-bg-color;
 }
 
 .cal-item.unavailable,
 .calendar.cal-input .cal-item.unavailable:hover,
-.calendar.cal-input .cal-item.unavailable:focus {
+.calendar.cal-input .cal-item.unavailable:focus-visible {
   background-color: $calendar-unavailable-item-bg-color;
 }
 
 .cal-item.selected,
 .calendar.cal-input .cal-item.selected:hover,
-.calendar.cal-input .cal-item.selected:focus {
+.calendar.cal-input .cal-item.selected:focus-visible {
   color: $calendar-selected-item-color;
   background-color: $calendar-selected-item-bg-color;
   font-weight: 500;
@@ -81,7 +81,7 @@
 
 .cal-item.selected-alt,
 .calendar.cal-input .cal-item.selected-alt:hover,
-.calendar.cal-input .cal-item.selected-alt:focus {
+.calendar.cal-input .cal-item.selected-alt:focus-visible {
   color: $calendar-selected-item-color;
   background-color: $calendar-selected-item-bg-color;
   font-weight: 500;
@@ -90,7 +90,7 @@
 
 .cal-item.selected-beg,
 .calendar.cal-input .cal-item.selected-beg:hover,
-.calendar.cal-input .cal-item.selected-beg:focus {
+.calendar.cal-input .cal-item.selected-beg:focus-visible {
   color: $calendar-selected-item-color;
   background-color: $calendar-selected-item-bg-color;
   font-weight: 500;
@@ -100,7 +100,7 @@
 
 .cal-item.selected-end,
 .calendar.cal-input .cal-item.selected-end:hover,
-.calendar.cal-input .cal-item.selected-end:focus {
+.calendar.cal-input .cal-item.selected-end:focus-visible {
   color: $calendar-selected-item-color;
   background-color: $calendar-selected-item-bg-color;
   font-weight: 500;

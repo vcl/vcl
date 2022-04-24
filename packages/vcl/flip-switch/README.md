@@ -19,6 +19,8 @@ Two states between which can be toggled.
 
 ## Modifiers
 
+- `focused`
+- `disabled`
 - `flip-switch-pressed`
 
 ## Variables

@@ -37,7 +37,7 @@
     }
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       background-color: $select-list-item-bg-hover-color;
 
       & > .select-list-item-label {
@@ -57,7 +57,7 @@
 
     &.selected,
     &.selected:hover,
-    &.selected:focus {
+    &.selected:focus-visible {
       background-color: $select-list-selected-item-bg-color;
 
       & > .select-list-item-label,
@@ -68,17 +68,20 @@
 
     &.highlighted,
     &.highlighted:hover,
-    &.highlighted:focus {
+    &.highlighted:focus-visible {
       background-color: $select-list-highlighted-item-bg-color;
 
       & > .select-list-item-label {
         color: $select-list-highlighted-item-color;
       }
+      & > .select-list-item-sub-label {
+        color: $select-list-highlighted-item-sub-label-color;
+      }
     }
 
     &.disabled,
     &.disabled:hover,
-    &.disabled:focus {
+    &.disabled:focus-visible {
       background-color: $select-list-disabled-item-bg-color;
       cursor: default;
 
@@ -97,7 +100,7 @@
     border-bottom-style: solid;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       background-color: transparent;
     }
   }

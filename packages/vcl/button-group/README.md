@@ -27,7 +27,8 @@ layout component.
 
 [toggle-group-check example](/demo/example-toggle-group-check.html)
 
-Using layout classes, the items can be justified.
+Using layout classes, the items can be justified. Using modifiers for the buttons
+can also be used.
 
 [toggle-group-justified example](/demo/example-toggle-group-justified.html)
 

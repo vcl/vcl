@@ -29,7 +29,7 @@
     cursor: pointer;
   }
 
-  & .rating-item:focus {
+  & .rating-item:focus-visible {
     color: $rating-item-highlighted-color;
     outline: none;
   }

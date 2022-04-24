@@ -77,7 +77,7 @@ span.button[disabled] {
 }
 
 .button {
-  &:focus {
+  &:focus-visible {
     outline: none;
   }
 
@@ -115,6 +115,17 @@ span.button[disabled] {
 .button.selected {
   color: $button-label-selected-color;
   background-color: $button-bg-selected-color;
+  border-color: $button-bg-selected-hover-color;
+}
+
+.button.outline.selected,
+.button.outline.selected:hover {
+  color: $button-bg-selected-hover-color;
+}
+
+.button.outline.focused,
+.button.outline.focused:hover {
+  background-color: $button-label-disabled-color--emphasized-transparent;
 }
 
 .button:active,
@@ -282,7 +293,7 @@ span.button[disabled] {
 /* Hover support */
 @media (hover: hover) {
   .button:hover,
-  .button:focus,
+  .button:focus-visible,
   .button.hover,
   .button.focused {
     background-color: $button-bg-hover-color;
@@ -290,7 +301,7 @@ span.button[disabled] {
   }
 
   .button.selected:hover,
-  .button.selected:focus,
+  .button.selected:focus-visible,
   .button.selected.hover,
   .button.selected.focused {
     background-color: $button-bg-selected-hover-color;
@@ -298,7 +309,7 @@ span.button[disabled] {
   }
 
   .button.emphasized:hover,
-  .button.emphasized:focus,
+  .button.emphasized:focus-visible,
   .button.emphasized.hover,
   .button.emphasized.focused {
     background-color: $button-bg-hover-color--emphasized;
@@ -306,7 +317,7 @@ span.button[disabled] {
   }
 
   .button.emphasized-transparent:hover,
-  .button.emphasized-transparent:focus,
+  .button.emphasized-transparent:focus-visible,
   .button.emphasized-transparent.hover,
   .button.emphasized-transparent.focused {
     background: none;
@@ -314,7 +325,7 @@ span.button[disabled] {
   }
 
   .button.transparent:hover,
-  .button.transparent:focus,
+  .button.transparent:focus-visible,
   .button.transparent.hover,
   .button.transparent.focused {
     background: none;
@@ -322,7 +333,7 @@ span.button[disabled] {
   }
 
   .button.transparent-alt:hover,
-  .button.transparent-alt:focus,
+  .button.transparent-alt:focus-visible,
   .button.transparent-alt.hover,
   .button.transparent-alt.focused {
     background: none;
@@ -330,7 +341,7 @@ span.button[disabled] {
   }
 
   .button.half-transparent:hover,
-  .button.half-transparent:focus,
+  .button.half-transparent:focus-visible,
   .button.half-transparent.hover,
   .button.half-transparent.focused {
     background-color: $button-bg-hover-color--half-transparent;
@@ -338,7 +349,7 @@ span.button[disabled] {
   }
 
   .button.danger:hover,
-  .button.danger:focus,
+  .button.danger:focus-visible,
   .button.danger.hover,
   .button.danger.focused {
     color: $button-label-hover-color--danger;
@@ -346,10 +357,18 @@ span.button[disabled] {
   }
 
   .button.suggestive:hover,
-  .button.suggestive:focus,
+  .button.suggestive:focus-visible,
   .button.suggestive.hover,
   .button.suggestive.focused {
     color: $button-label-hover-color--suggestive;
     background-color: $button-bg-hover-color--suggestive;
+  }
+
+  .button.outline.selected:hover,
+  .button.outline.selected:focus-visible,
+  .button.outline.selected.hover,
+  .button.outline.selected.focused {
+    border-color: $button-bg-selected-hover-color;
+    color: $button-bg-selected-hover-color;
   }
 }

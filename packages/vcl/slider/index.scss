@@ -8,7 +8,7 @@
   margin-bottom: $form-control-vertical-gap;
   cursor: pointer;
 
-  &:focus {
+  &:focus-visible {
     outline: none;
   }
 

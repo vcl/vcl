@@ -20,7 +20,7 @@ Buttons can be created using the `button`, `a` and
 A button can appear to be disabled through `disabled` class and/ or
 `disabled` attribute.
 
-The default variant support a selected state via `selected` as well.
+The default and outline variant support a selected state via `selected` as well.
 
 [selected example](/demo/example-selected.html)
 

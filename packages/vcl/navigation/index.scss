@@ -116,14 +116,14 @@
   & .navigation-item {
     color: $navigation-item-1st-level-color;
     background-color: $navigation-item-1st-level-bg-color;
-
-    & .navigation-item-label {
-      &:hover,
-      &:focus {
-        color: $navigation-item-1st-level-hover-color;
-        background-color: $navigation-item-1st-level-hover-bg-color;
-      }
+    &:hover,
+    &:focus-visible {
+      color: $navigation-item-1st-level-hover-color;
+      background-color: $navigation-item-1st-level-hover-bg-color;
     }
+
+    // & .navigation-item-label {
+    // }
 
     &.selected {
       & > .navigation-item-label {

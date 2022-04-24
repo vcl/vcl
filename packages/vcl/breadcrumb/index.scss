@@ -34,7 +34,7 @@
       }
 
       & a:hover,
-      & a:focus {
+      & a:focus-visible {
         color: $breadcrumb-label-hover-color;
       }
 

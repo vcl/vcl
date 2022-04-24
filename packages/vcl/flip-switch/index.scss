@@ -2,12 +2,11 @@
 
 .flip-switch {
   display: inline-block;
-  outline: none;
   background-color: $flip-switch-bg-color;
   position: relative;
   width: 5em;
   user-select: none;
-  border-width: 1px;
+  border-width: 0;
   border-style: solid;
   border-color: $flip-switch-border-color;
   background-color: $flip-switch-border-color;
@@ -33,6 +32,12 @@
     bottom: 0;
     left: 0;
     transition: all 0.2s ease-in 0s;
+  }
+
+  &:focus-visible,
+  &.focused {
+    outline: 0;
+    box-shadow: 0 0 0 .25rem $focus-outline-default-shadow-color;
   }
 }
 
@@ -74,8 +79,7 @@
 .flip-switch.disabled,
 .flip-switch.disabled:hover,
 .flip-switch.disabled:active,
-.flip-switch.disabled:focus {
-  outline: none;
+.flip-switch.disabled:focus-visible {
   cursor: default;
   color: $flip-switch-disabled-color;
   background-color: $flip-switch-disabled-bg-color;
