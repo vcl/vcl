@@ -301,17 +301,22 @@ async function renderPart(docPart) {
 function runDemoServer()
 {
    // Don't open the browser if running from github action
-  if(process.argv[6] == "automatedRun") return;
+  if (process.argv[6] == "automatedRun") return;
 
-  const mondule = process.argv[6] || 'button'; // Default value `button`
-  const isWatch = process.argv[7] == "watch" ? true : false;
-  
-  var browserSync = require("browser-sync").create();
+  const module = process.argv[6] || 'button'; // Default value `button`
+  const isWatch = process.argv[7] == 'watch' ? true : false;
+
+  var browserSync = require('browser-sync').create();
 
   browserSync.init({
       watch: isWatch,
+      watchOptions: {
+        paths: [
+          '../../packages/vcl'
+        ]
+      },
       server: "./dist",
-      startPath: "/#"+mondule  
+      startPath: "/#"+module,
+      open: false,
   });
 }
-
