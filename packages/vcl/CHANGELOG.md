@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/vcl/vcl/compare/v2.2.1...v2.3.0) (2022-04-24)
+
+
+### Bug Fixes
+
+* button color for selected token ([7838e54](https://github.com/vcl/vcl/commit/7838e540fbdc08765a89a99bbe6d719411f35e8f))
+* doc formatting ([1c55dac](https://github.com/vcl/vcl/commit/1c55dac7e3bbae6c8caf7bd1fa8f8ffe57d762b3))
+* **navigation:** aria roles in demo ([3e6e681](https://github.com/vcl/vcl/commit/3e6e681ab0cc2264f87875093b27a863282ea996))
+
+
+### Features
+
+* use :focus-visible where possible ([a8595d1](https://github.com/vcl/vcl/commit/a8595d1338ac08035b2c4f48c434dfe256e7502d))
+* various improvements ([a9e0cf9](https://github.com/vcl/vcl/commit/a9e0cf9fd442bc00b7baef0f065aa07ba44abf07))
+
+
+
+
+
 ## [2.2.1](https://github.com/vcl/vcl/compare/v2.2.0...v2.2.1) (2022-04-05)
 
 
