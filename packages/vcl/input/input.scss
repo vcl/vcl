@@ -2,6 +2,7 @@
 @use "../form.scss" as *;
 
 .input-field {
+  outline: none;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -15,7 +16,7 @@
   border-style: solid;
   box-sizing: border-box;
   background-color: $input-bg-color;
-  height: $input-height;
+  height: $input-height; // For downstream UI frameworks
   overflow: hidden;
 
   &.focused,
