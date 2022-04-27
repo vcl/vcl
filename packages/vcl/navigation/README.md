@@ -5,7 +5,8 @@ Horizontally and vertically aligned multilevel navigation.
 ## Features
 
 Allows to build a hierarchical navigation by supporting three levels in total,
-which can be styled separately.
+which can be styled separately. The items are just icograms, so icons can be
+prepended or appended.
 
 The `navigation-heading` can be used to create a header grouping
 a subset of the navigation items.
@@ -23,7 +24,7 @@ Vertical.
 
 [vertical example](/demo/example-vertical.html)
 
-Vertical with nested navigation.
+Vertical with opened levels.
 
 [vertical-nested example](/demo/example-vertical-nested.html)
 
@@ -46,8 +47,6 @@ Vertical with nested navigation.
 - `$navigation-color`
 - `$navigation-heading-color`
 - `$navigation-heading-bg-color`
-- `$navigation-3rd-level-bg-color`
-- `$navigation-2nd-level-bg-color`
 - `$navigation-item-disabled-bg-color`
 - `$navigation-item-disabled-color`
 - `$navigation-item-1st-level-bg-color`

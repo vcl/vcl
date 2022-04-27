@@ -1454,6 +1454,7 @@ span.button[disabled] {
 }
 
 .input-field {
+  outline: none;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -3125,14 +3126,10 @@ textarea::placeholder,
   margin-bottom: 0;
 }
 .navigation .navigation .navigation-item .navigation-item-label {
-  font-size: 0.98em;
-  padding-left: 1.5em;
+  padding-left: 3em;
 }
 .navigation .navigation .navigation-item .navigation .navigation-item .navigation-item-label {
-  padding-left: 2.5em;
-}
-.navigation .navigation .navigation-item .navigation .navigation .navigation-item .navigation-item-label {
-  padding-left: 3.5em;
+  padding-left: 6em;
 }
 
 /* Horizontal */
@@ -3142,16 +3139,19 @@ textarea::placeholder,
 .navigation .hor .navigation-item-label {
   padding: 0.85em 1em;
 }
-.navigation .hor .navigation-item-label .text {
-  letter-spacing: 1px;
-}
 
-/* 1st level coloring */
+.navigation {
+  /* 1st level coloring */
+}
 .navigation .navigation-item {
   color: rgb(38, 38, 38);
   background-color: transparent;
 }
-.navigation .navigation-item:hover, .navigation .navigation-item:focus-visible {
+.navigation .navigation-item:focus-visible > .navigation-item-label {
+  color: black;
+  background-color: rgb(232, 232, 232);
+}
+.navigation .navigation-item > .navigation-item-label:hover {
   color: black;
   background-color: rgb(232, 232, 232);
 }
@@ -15217,10 +15217,6 @@ header {
 
 .docNavHeading a {
   font-weight: bold !important;
-}
-
-.docNavItem > .icogram {
-  padding-left: 4.5em !important;
 }
 
 .docEditDemoButton {

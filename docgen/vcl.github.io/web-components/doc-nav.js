@@ -39,21 +39,23 @@ export default class DocNav extends PolymerElement {
               <template is="dom-repeat" items="{{groupedOnCategories}}" as="category">
 
                 <li on-click="toggleCathegory" role="presentation" class="navigation-item docNavHeading" >
-                  <span style="font-weight: bold;"  class="navigation-item-label icogram" href="#">
+                  <span class="navigation-item-label icogram" href="#">
                     <span class$="icon fas {{getCathegoryClass(index,openedCathegories)}}" aria-hidden="true" aria-label="angle-right" role="img"></span>
                     <span>[[category.title]]</span>
                   </span>
                 </li>
                 <template is="dom-if" if="[[getCathegoryIsOpen(index,openedCathegories)]]">
-                  <div class="anim-container" >
-                    <template is="dom-repeat" items="{{category.items}}" as="item">
-                      <li class$="navigation-item docNavItem {{getSelectedClass(item.name,selectedItem)}}" role="presentation">
-                      <a class="navigation-item-label icogram"  href$="#{{item.name}}">
-                        <span class="text">[[item.title]]</span>
-                      </a>
-                      </li>
-                    </template>
-                  </div>
+                  <nav class="navigation">
+                    <div class="anim-container" >
+                      <template is="dom-repeat" items="{{category.items}}" as="item">
+                        <li class$="navigation-item docNavItem {{getSelectedClass(item.name,selectedItem)}}" role="presentation">
+                        <a class="navigation-item-label icogram"  href$="#{{item.name}}">
+                          <span class="text">[[item.title]]</span>
+                        </a>
+                        </li>
+                      </template>
+                    </div>
+                  </nav>
                 </template>
 
               </template>

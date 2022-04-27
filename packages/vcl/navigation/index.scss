@@ -71,26 +71,20 @@
   & .navigation {
     margin-bottom: 0;
 
+    // Level 2
     & .navigation-item {
       & .navigation-item-label {
-        font-size: 0.98em;
-        padding-left: 1.5em;
+        padding-left: 3.0em;
       }
 
+      // Level 3
       & .navigation {
         & .navigation-item {
           & .navigation-item-label {
-            padding-left: 2.5em;
+            padding-left: 6em;
           }
         }
 
-        & .navigation {
-          & .navigation-item {
-            & .navigation-item-label {
-              padding-left: 3.5em;
-            }
-          }
-        }
       }
     }
   }
@@ -103,27 +97,26 @@
 
     & .navigation-item-label {
       padding: 0.85em 1em;
-
-      & .text {
-        letter-spacing: 1px;
-      }
     }
   }
 }
 
-/* 1st level coloring */
 .navigation {
   & .navigation-item {
     color: $navigation-item-1st-level-color;
     background-color: $navigation-item-1st-level-bg-color;
-    &:hover,
     &:focus-visible {
-      color: $navigation-item-1st-level-hover-color;
-      background-color: $navigation-item-1st-level-hover-bg-color;
+      & > .navigation-item-label {
+        color: $navigation-item-1st-level-hover-color;
+        background-color: $navigation-item-1st-level-hover-bg-color;
+      }
     }
-
-    // & .navigation-item-label {
-    // }
+    & > .navigation-item-label {
+      &:hover {
+        color: $navigation-item-1st-level-hover-color;
+        background-color: $navigation-item-1st-level-hover-bg-color;
+      }
+    }
 
     &.selected {
       & > .navigation-item-label {

@@ -35,6 +35,7 @@
 
       & a:hover,
       & a:focus-visible {
+        outline: none;
         color: $breadcrumb-label-hover-color;
       }
 
