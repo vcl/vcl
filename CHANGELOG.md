@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/vcl/vcl/compare/v2.3.0...v2.3.1) (2022-04-27)
+
+
+### Bug Fixes
+
+* add outline: 0 for input-field ([15c4267](https://github.com/vcl/vcl/commit/15c42673b2b2aa29c691c6e1ac2f7df44668477a))
+* correct menu demo and styling ([9021922](https://github.com/vcl/vcl/commit/9021922981cbfebd57698c8ad82bb037c7312b60))
+
+
+
+
+
 # [2.3.0](https://github.com/vcl/vcl/compare/v2.2.1...v2.3.0) (2022-04-24)
 
 
