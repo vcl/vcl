@@ -70,7 +70,6 @@
   {"name": "table-extras",                         "description": "Table extras",                                        "homepage": "https://vcl.github.io/#vcl-table-extras"},
   {"name": "token",                                "description": "Token",                                               "homepage": "https://vcl.github.io/#vcl-token"},
   {"name": "token-input",                          "description": "Token input",                                         "homepage": "https://vcl.github.io/#vcl-token-input"},
-  {"name": "responsive-table",                     "description": "Responsive table",                                    "homepage": "https://vcl.github.io/#vcl-responsive-table"},
   {"name": "responsive-image",                     "description": "Responsive image",                                    "homepage": "https://vcl.github.io/#vcl-responsive-image"},
   {"name": "image-shapes",                         "description": "Image shapes",                                        "homepage": "https://vcl.github.io/#vcl-image-shapes"},
   {"name": "tooltip",                              "description": "Tooltip",                                             "homepage": "https://vcl.github.io/#vcl-tooltip"},

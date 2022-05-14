@@ -4,7 +4,7 @@ Display tabular product data.
 
 ## Features
 
-It is based on the responsive table and this perfectly suited as product list
+It is based on the table and this perfectly suited as product list
 also on narrow viewports.
 
 ## Usage
