@@ -1,4 +1,4 @@
-@use './terms.scss' as *;
+@use "./terms.scss" as *;
 
 /* Theme internally shared Variables */
 $block-elem-vertical-gap: 1.3em !default;
@@ -17,16 +17,19 @@ $space: (
   "2": 8px,
   "3": 16px,
   "4": 24px,
-  "5": 48px
+  "5": 48px,
 ) !default;
 
 /* Focus Outline Colors */
-$focus-outline-default-shadow-color: rgba($emphasized-medium-color, .3) !default;
-$focus-outline-primary-shadow-color: rgba($primary-medium-color, .3) !default;
-$focus-outline-success-shadow-color: rgba($success-medium-color, .3) !default;
-$focus-outline-info-shadow-color: rgba($info-medium-color, .3) !default;
-$focus-outline-warning-shadow-color: rgba($warning-medium-color, .3) !default;
-$focus-outline-danger-shadow-color: rgba($danger-medium-color, .3) !default;
+$focus-outline-default-shadow-color: rgba(
+  $emphasized-medium-color,
+  0.3
+) !default;
+$focus-outline-primary-shadow-color: rgba($primary-medium-color, 0.3) !default;
+$focus-outline-success-shadow-color: rgba($success-medium-color, 0.3) !default;
+$focus-outline-info-shadow-color: rgba($info-medium-color, 0.3) !default;
+$focus-outline-warning-shadow-color: rgba($warning-medium-color, 0.3) !default;
+$focus-outline-danger-shadow-color: rgba($danger-medium-color, 0.3) !default;
 
 /* App */
 $app-viewport-bg-color: $gray-light-5 !default;
@@ -52,7 +55,6 @@ $grid-half-gutter-width: $layout-half-gutter-width !default;
 
 /* Flex Layout */
 $flex-layout-half-gutter-width: $layout-half-gutter-width !default;
-
 
 /* Typography */
 
@@ -479,7 +481,15 @@ $checkbox-color: $input-border-color !default;
 $checkbox-focus-color: $input-border-focus-color !default;
 $checkbox-hover-color: $input-border-focus-color !default;
 $checkbox-disabled-color: $gray-light-3 !default;
-$checkbox-icon-size: 1.16em !default;
+$checkbox-size: 1.16em !default;
+$checkbox-radius: 0 !default;
+$checkbox-border-width: 2px !default;
+$checkbox-label-color: inherit !default;
+$checkbox-border-color: $input-border-color !default;
+$checkbox-label-right-margin: 0.5em !default;
+$checkbox-fill-color: $brand-accent !default;
+$checkbox-marker-color: $white !default;
+$checkbox-marker-size: $typography-font-size !default;
 
 /* Radio Button */
 $radio-button-color: $input-border-color !default;
