@@ -9,7 +9,7 @@
     "git-push": "cd dist && git add -A . && git commit -a -m 'doc update' && git push --set-upstream origin master --force",
     "clean": "rm -rf dist",
     "bundle-webcomponents": "polymer build",
-    "pregen-doc": "npm run bundle-webcomponents",
+    "pregen-doc": "npm run bundle-webcomponents && mkdir dist && cp -r node_modules/@fortawesome/fontawesome-free/webfonts dist/",
     "gen-doc": "./cli.js ../../packages/vcl dist --name=\"VCL Documentation\" --doc=../../doc",
     "deploy": "npm-run-all clean gen-doc git-init git-push"
   },

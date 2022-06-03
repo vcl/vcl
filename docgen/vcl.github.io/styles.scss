@@ -24,10 +24,10 @@
 
 @use "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @use "~@fortawesome/fontawesome-free/scss/brands.scss" with (
-  $fa-font-path: "~@fortawesome/fontawesome-free/webfonts"
+  $fa-font-path: "webfonts"
 );
 @use "~@fortawesome/fontawesome-free/scss/solid.scss" with (
-  $fa-font-path: "~@fortawesome/fontawesome-free/webfonts"
+  $fa-font-path: "webfonts"
 );
 
 html,
