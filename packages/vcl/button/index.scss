@@ -14,7 +14,6 @@
   padding-left: 0.8em;
   padding-top: 0;
   padding-bottom: 0;
-  border: 1px solid red;
 
   &.square {
     min-width: $button-height;
@@ -38,8 +37,6 @@
   white-space: normal;
   @include mixins.clearfix;
   cursor: pointer;
-  // transition: color 0.25s linear, background-color 0.25s ease-in-out,
-  //   border-color 0.25s ease-in-out;
   padding-right: 0.8em;
   padding-left: 0.8em;
 }
@@ -108,6 +105,7 @@ span.button[disabled] {
   background-color: $button-bg-color;
   color: $button-label-color;
   text-transform: $button-label-text-transform;
+  transition: none;
 }
 
 .button:visited {
@@ -294,11 +292,6 @@ span.button[disabled] {
 
 /* Hover support */
 @media (hover: hover) {
-  .button:hover {
-    transition: color 0.25s linear, background-color 0.25s ease-in-out,
-      border-color 0.25s ease-in-out;
-  }
-
   .button:hover,
   .button:focus-visible,
   .button.hover,
