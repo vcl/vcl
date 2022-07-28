@@ -984,7 +984,6 @@ ol ul {
   user-select: none;
   white-space: normal;
   cursor: pointer;
-  transition: color 0.25s linear, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   padding-right: 0.8em;
   padding-left: 0.8em;
 }
@@ -1055,6 +1054,7 @@ span.button[disabled] {
   background-color: rgb(119, 119, 119);
   color: white;
   text-transform: none;
+  transition: none;
 }
 
 .button:visited {
