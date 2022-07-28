@@ -481,15 +481,7 @@ $checkbox-color: $input-border-color !default;
 $checkbox-focus-color: $input-border-focus-color !default;
 $checkbox-hover-color: $input-border-focus-color !default;
 $checkbox-disabled-color: $gray-light-3 !default;
-$checkbox-size: 1.16em !default;
-$checkbox-radius: 0 !default;
-$checkbox-border-width: 2px !default;
-$checkbox-label-color: inherit !default;
-$checkbox-border-color: $input-border-color !default;
-$checkbox-label-right-margin: 0.5em !default;
-$checkbox-fill-color: $brand-accent !default;
-$checkbox-marker-color: $white !default;
-$checkbox-marker-size: $typography-font-size !default;
+$checkbox-icon-size: 1.16em !default;
 
 /* Radio Button */
 $radio-button-color: $input-border-color !default;

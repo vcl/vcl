@@ -5,7 +5,6 @@
   display: inline-block;
   margin-bottom: $form-control-vertical-gap;
   overflow: auto;
-  user-select: none;
 
   & .checkbox-label {
     cursor: pointer;
@@ -15,49 +14,35 @@
     align-items: center;
     line-height: $form-control-label-line-height;
     margin-top: 0;
-    color: $checkbox-label-color;
   }
 
-  & .checkbox-label .checkbox-input {
-    width: $checkbox-size;
-    height: $checkbox-size;
-    border-radius: $checkbox-radius;
-    border-width: $checkbox-border-width;
-    border-color: $checkbox-border-color;
-    border-style: solid;
-    margin-right: $checkbox-label-right-margin;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  & .checkbox-label .checkbox-input.checked {
-    background-color: $checkbox-fill-color;
-    border-color: transparent;
+  & .checkbox-label > .icon {
+    color: $checkbox-color;
+    display: block;
+    min-width: 1.5em;
+    text-align: center;
+    padding-right: 0.4em;
+    padding-left: 0.4em;
+    font-size: $checkbox-icon-size;
   }
 
   & .checkbox-label:hover {
-    & > .checkbox-input {
+    & > .icon {
       color: $checkbox-hover-color;
     }
   }
 
   & .checkbox-label:focus-visible {
-    & > .checkbox-input {
+    & > .icon {
       color: $checkbox-focus-color;
     }
   }
 
   &.disabled .checkbox-label {
     cursor: default;
-    & .checkbox-input {
+    & .icon {
       color: $checkbox-disabled-color;
     }
-  }
-
-  .icon {
-    color: $checkbox-marker-color;
-    font-size: $checkbox-marker-size;
   }
 }
 
