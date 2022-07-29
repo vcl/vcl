@@ -138,6 +138,10 @@
       }
       fcg.style.setProperty('--prepended-elements', prependedElements);
 
+      if (prependedElements > 0) {
+        fcg.style.setProperty('--floating-label-padding', '0em');
+      }
+
     }
 
     const form = docRoot.querySelector('#example-input-form');
