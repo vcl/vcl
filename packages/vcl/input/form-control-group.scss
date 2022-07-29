@@ -20,9 +20,10 @@ $duration: 200ms;
   --label-offset-x: 0px;
   --label-offset-y: 0px;
   --prepended-elements: 0;
-  --prepended-element-width: 2.5rem;
+  --prepended-element-width: 2.5em;
+  --floating-label-padding: 0.6em;
   position: relative;
-  margin-top: 0.4rem;
+  margin-top: 0.4em;
 
   > .form-control-label {
     // Remove any spacing
@@ -34,7 +35,7 @@ $duration: 200ms;
     z-index: 2;
     transition: all $duration ease-out;
     transition-property: left, top, font-size;
-    top: calc(-0.45rem + var(--label-offset-y));
+    top: calc(-0.45em + var(--label-offset-y));
     left: calc($input-padding-lr + var(--label-offset-x));
     font-size: 0.8em;
     font-size: 0.8em;
@@ -49,8 +50,8 @@ $duration: 200ms;
       background-color: $input-bg-color;
       transition: all $duration ease-in;
       transition-property: opacity, left, right;
-      left: -0.3rem;
-      right: -0.3rem;
+      left: -0.3em;
+      right: -0.3em;
       z-index: -1;
     }
   }
@@ -58,8 +59,8 @@ $duration: 200ms;
   // Label is floating when control is focused or has the floating modifier
   &.floating:not(.static) {
     & > .form-control-label {
-      top: calc(0.6rem + var(--label-offset-y));
-      left: calc($input-padding-lr + var(--label-offset-x) + calc(var(--prepended-elements) * var(--prepended-element-width)));
+      top: calc(0.6em + var(--label-offset-y));
+      left: calc(var(--floating-label-padding) + var(--label-offset-x) + calc(var(--prepended-elements) * var(--prepended-element-width)));
       transition: all $duration ease-out;
       font-size: inherit;
       &::before {
