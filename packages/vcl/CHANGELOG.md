@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.5](https://github.com/vcl/vcl/compare/v2.3.4...v2.3.5) (2022-07-29)
+
+
+### Bug Fixes
+
+* add dynamic spacing variable to floating label ([c6319b5](https://github.com/vcl/vcl/commit/c6319b5f0fcb03cedd20500694a5e2a1d1c5d4e4))
+
+
+
+
+
 ## [2.3.4](https://github.com/vcl/vcl/compare/v2.3.3...v2.3.4) (2022-07-29)
 
 **Note:** Version bump only for package @vcl/vcl
