@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/vcl/vcl/compare/v2.3.5...v2.4.0) (2022-08-16)
+
+
+### Features
+
+* add height and radius  variables ([b5a034f](https://github.com/vcl/vcl/commit/b5a034fb782f8d6cdf24106286ab1698da9b5d0f))
+
+
+
+
+
 ## [2.3.5](https://github.com/vcl/vcl/compare/v2.3.4...v2.3.5) (2022-07-29)
 
 
