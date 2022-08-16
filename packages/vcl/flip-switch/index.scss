@@ -4,12 +4,13 @@
   display: inline-block;
   background-color: $flip-switch-bg-color;
   position: relative;
-  width: 5em;
+  width: $flip-switch-width;
+  height: $flip-switch-height;
   user-select: none;
   border-width: 0;
   border-style: solid;
   border-color: $flip-switch-border-color;
-  background-color: $flip-switch-border-color;
+  border-radius: $flip-switch-border-radius;
   cursor: pointer;
 
   &.flip-switch-pressed {
@@ -23,8 +24,9 @@
   }
 
   & .flip-switch-knob {
-    width: 1.1em;
-    margin: 0.3em;
+    width: $flip-switch-knob-width;
+    height: $flip-switch-knob-height;
+    margin: $flip-switch-knob-margin;
     background-color: $flip-switch-knob-bg-color;
     border: 0;
     position: absolute;
@@ -32,6 +34,7 @@
     bottom: 0;
     left: 0;
     transition: all 0.2s ease-in 0s;
+    border-radius: $flip-switch-knob-border-radius;
   }
 
   &:focus-visible,
@@ -47,6 +50,8 @@
   border: 0;
   background-color: $app-viewport-bg-color;
   cursor: pointer;
+  border-radius: $flip-switch-border-radius;
+  height: 100%;
 }
 
 .flip-switch-track {
@@ -55,10 +60,13 @@
   transition: margin 0.2s ease-in 0s;
   display: flex;
   flex-direction: row;
+  align-items: stretch;
+  height: 100%;
 
   & .flip-switch-active,
   & .flip-switch-inactive {
     width: 50%;
+    //height: 2em; // Add a height so that it works without the labels
     padding: 0 0.5em;
     line-height: $flip-switch-height;
     font-weight: bold;
