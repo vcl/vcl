@@ -25,11 +25,17 @@ Two states between which can be toggled.
 
 ## Variables
 
+- `$flip-switch-width`
 - `$flip-switch-height`
 - `$flip-switch-bg-color`
+- `$flip-switch-border-radius`
 - `$flip-switch-border-color`
 - `$flip-switch-active-bg-color`
 - `$flip-switch-active-color`
+- `$flip-switch-knob-width`
+- `$flip-switch-knob-height`
+- `$flip-switch-knob-margin`
+- `$flip-switch-knob-border-radius`
 - `$flip-switch-knob-bg-color`
 - `$flip-switch-disabled-color`
 - `$flip-switch-disabled-bg-color`

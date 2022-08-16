@@ -523,11 +523,17 @@ $token-color: inherit !default;
 $token-remove-button-label-color: $gray-light-1 !default;
 
 /* Flip Switch */
-$flip-switch-height: 2em !default;
+$flip-switch-width: 5em !default;
+$flip-switch-height: 1.8em !default;
 $flip-switch-bg-color: transparent !default;
+$flip-switch-border-radius: 0 !default;
 $flip-switch-border-color: $gray !default;
 $flip-switch-active-bg-color: $brand-accent-dark !default;
 $flip-switch-active-color: $white !default;
+$flip-switch-knob-width: 1.1em !default;
+$flip-switch-knob-height: 1.1em !default;
+$flip-switch-knob-margin: 0.3em !default;
+$flip-switch-knob-border-radius: 0 !default;
 $flip-switch-knob-bg-color: $brand-accent-darker !default;
 $flip-switch-disabled-color: $input-disabled-color !default;
 $flip-switch-disabled-bg-color: $input-disabled-border-color !default;
