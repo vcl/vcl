@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/vcl/vcl/compare/v2.4.0...v2.5.0) (2022-08-23)
+
+
+### Bug Fixes
+
+* update readme file ([442fc76](https://github.com/vcl/vcl/commit/442fc764dad41efcc5d162d75e26cbc683f768ea))
+
+
+### Features
+
+* add rounded modifier to flip-switch ([0cefb26](https://github.com/vcl/vcl/commit/0cefb264c3214389a60d4069ce43e7464cb80392))
+
+
+
+
+
 # [2.4.0](https://github.com/vcl/vcl/compare/v2.3.5...v2.4.0) (2022-08-16)
 
 
