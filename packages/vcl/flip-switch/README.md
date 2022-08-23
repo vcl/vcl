@@ -21,6 +21,7 @@ Two states between which can be toggled.
 
 - `focused`
 - `disabled`
+- `rounded`
 - `flip-switch-pressed`
 
 ## Variables
