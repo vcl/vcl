@@ -12,3 +12,12 @@ See [README.md](doc/README.md) for an overview of VCL.
 
 See [README.md](doc/README.md) for a guide how to run a module's demo.
 See [DEVELOPMENT.md](doc/DEVELOPMENT.md) for the mechanics and philosophy behind VCL modules.
+
+## Creating Releases
+
+After your changes have been merged into master, run
+
+```sh
+npm run tag
+npm run publish
+```
