@@ -1,7 +1,5 @@
 # Visual Component Library
 
-[![Join the chat at https://gitter.im/vcl](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vcl?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 **Modular** and **extensible** CSS for the era of component-based
 Web application development.
 
@@ -44,7 +42,7 @@ build process.
 
 ### Run a Component's Demos
 
-```
+```sh
 git clone https://github.com/vcl/vcl.git
 npm install
 npm run demo [component name] -- watch
