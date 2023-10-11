@@ -1,0 +1,30 @@
+@use 'sass:math';
+@use '../breakpoints.scss' as *;
+
+$percentageCount: 20;
+
+@mixin flex-percent($suffix) {
+  @if $suffix {
+    $suffix: '-' + $suffix;
+  } @else {
+    $suffix: '';
+  }
+
+  @for $i from 1 through $percentageCount {
+    $per: $i * 5;
+
+    .flex-span#{$suffix}-#{$per}p {
+      flex: 0 0 math.percentage(math.div($per, 100));
+    }
+  }
+}
+
+@include flex-percent(null);
+
+@each $bp-name, $bp-value in $breakpoints {
+  @if $bp-name != 'xs' {
+    @media (min-width: $bp-value) {
+      @include flex-percent($bp-name);
+    }
+  }
+}

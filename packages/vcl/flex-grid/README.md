@@ -42,6 +42,11 @@ Warning: Gutters apply negative margins to the container element and positive pa
 
 [grid gutter example](/demo/example-grid-gutter.html)
 
+Use ```flex-span-{size}p``` and ```flex-span-{bp}-${size}p``` to acheive percentage based ratio size of
+flex items.
+
+[Percentage ratio of flex item](/demo/example-percentage-size.html)
+
 There are several modifier classes to change the positioning of the cells
 
 [positioning example](/demo/example-positioning.html)
@@ -59,6 +64,8 @@ There are several modifier classes to change the positioning of the cells
 - `self-stretch`
 - `flex-1` to `flex-12`
 - `flex-1-bp` to `flex-12-{bp}` where {bp} is a breakpoint
+- `flex-span-5p` to `flex-span-100p`
+- `flex-span-{bp}-5p` to `flex-span-{bp}-100p` where {bp} is a breakpoint
 - `offset-1-bp` to `offset-12-{bp}` where {bp} is a breakpoint
 - `grid-gutter-1` to `grid-gutter-5`
 - `grid-gutterx-1` to `grid-gutterx-5`
