@@ -93,6 +93,7 @@ width and height of a container.
 - `w-90p`
 - `w-95p`
 - `w-100p`
+- `w-{bp}-{per}p` Where bp is the breakpoint and per is the percentage For responsive width on sm, md, xl, xxl
 - `w-auto`
 - `w-gca`: Golden cut a
 - `w-gcb`: Golden cut b

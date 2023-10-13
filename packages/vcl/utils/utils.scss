@@ -1,4 +1,5 @@
-@use "../theme.scss" as *;
+@use 'sass:math';
+@use '../theme.scss' as *;
 
 /* Float helpers */
 
@@ -133,11 +134,13 @@
 
 /* Utility to enable disable selection of text */
 
-.disable-user-select, .user-select-none {
+.disable-user-select,
+.user-select-none {
   user-select: none;
 }
 
-.enable-user-select, .user-select-text {
+.enable-user-select,
+.user-select-text {
   user-select: text;
 }
 
@@ -299,92 +302,28 @@
   max-height: 100%;
 }
 
-.w-5p {
-  width: 5%;
+$percentageCount: 20;
+
+@mixin flex-percent($suffix) {
+  @if $suffix {
+    $suffix: '-' + $suffix;
+  } @else {
+    $suffix: '';
+  }
+
+  @for $i from 1 through $percentageCount {
+    $per: $i * 5;
+
+    .w#{$suffix}-#{$per}p {
+      width: math.percentage(math.div($per, 100));
+    }
+  }
 }
 
-.w-10p {
-  width: 10%;
-}
-
-.w-15p {
-  width: 15%;
-}
-
-.w-20p {
-  width: 20%;
-}
-
-.w-25p {
-  width: 25%;
-}
-
-.w-30p {
-  width: 30%;
-}
+@include flex-percent(null);
 
 .w-33p {
   width: 33.333%;
-}
-
-.w-35p {
-  width: 35%;
-}
-
-.w-40p {
-  width: 40%;
-}
-
-.w-45p {
-  width: 45%;
-}
-
-.w-50p {
-  width: 50%;
-}
-
-.w-55p {
-  width: 55%;
-}
-
-.w-60p {
-  width: 60%;
-}
-
-.w-65p {
-  width: 65%;
-}
-
-.w-70p {
-  width: 70%;
-}
-
-.w-75p {
-  width: 75%;
-}
-
-.w-80p {
-  width: 80%;
-}
-
-.w-85p {
-  width: 85%;
-}
-
-.w-90p {
-  width: 90%;
-}
-
-.w-95p {
-  width: 95%;
-}
-
-.w-100p {
-  width: 100%;
-}
-
-.w-auto {
-  width: auto;
 }
 
 .w-gca {
@@ -393,6 +332,30 @@
 
 .w-gcb {
   width: 38.2%;
+}
+
+@each $bp-name, $bp-value in $breakpoints {
+  @if $bp-name != 'xs' {
+    @media (min-width: $bp-value) {
+      @include flex-percent($bp-name);
+
+      .w-#{$bp-name}-33p {
+        width: 33.333%;
+      }
+
+      .w-#{$bp-name}-gca {
+        width: 61.8%;
+      }
+
+      .w-#{$bp-name}-gcb {
+        width: 38.2%;
+      }
+    }
+  }
+}
+
+.w-auto {
+  width: auto;
 }
 
 .max-w-100p {

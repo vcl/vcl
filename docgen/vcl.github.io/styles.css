@@ -3839,11 +3839,13 @@ sub {
 }
 
 /* Utility to enable disable selection of text */
-.disable-user-select, .user-select-none {
+.disable-user-select,
+.user-select-none {
   user-select: none;
 }
 
-.enable-user-select, .user-select-text {
+.enable-user-select,
+.user-select-text {
   user-select: text;
 }
 
@@ -4026,10 +4028,6 @@ sub {
   width: 30%;
 }
 
-.w-33p {
-  width: 33.333%;
-}
-
 .w-35p {
   width: 35%;
 }
@@ -4086,8 +4084,8 @@ sub {
   width: 100%;
 }
 
-.w-auto {
-  width: auto;
+.w-33p {
+  width: 33.333%;
 }
 
 .w-gca {
@@ -4096,6 +4094,294 @@ sub {
 
 .w-gcb {
   width: 38.2%;
+}
+
+@media (min-width: 600px) {
+  .w-sm-5p {
+    width: 5%;
+  }
+  .w-sm-10p {
+    width: 10%;
+  }
+  .w-sm-15p {
+    width: 15%;
+  }
+  .w-sm-20p {
+    width: 20%;
+  }
+  .w-sm-25p {
+    width: 25%;
+  }
+  .w-sm-30p {
+    width: 30%;
+  }
+  .w-sm-35p {
+    width: 35%;
+  }
+  .w-sm-40p {
+    width: 40%;
+  }
+  .w-sm-45p {
+    width: 45%;
+  }
+  .w-sm-50p {
+    width: 50%;
+  }
+  .w-sm-55p {
+    width: 55%;
+  }
+  .w-sm-60p {
+    width: 60%;
+  }
+  .w-sm-65p {
+    width: 65%;
+  }
+  .w-sm-70p {
+    width: 70%;
+  }
+  .w-sm-75p {
+    width: 75%;
+  }
+  .w-sm-80p {
+    width: 80%;
+  }
+  .w-sm-85p {
+    width: 85%;
+  }
+  .w-sm-90p {
+    width: 90%;
+  }
+  .w-sm-95p {
+    width: 95%;
+  }
+  .w-sm-100p {
+    width: 100%;
+  }
+  .w-sm-33p {
+    width: 33.333%;
+  }
+  .w-sm-gca {
+    width: 61.8%;
+  }
+  .w-sm-gcb {
+    width: 38.2%;
+  }
+}
+@media (min-width: 1024px) {
+  .w-md-5p {
+    width: 5%;
+  }
+  .w-md-10p {
+    width: 10%;
+  }
+  .w-md-15p {
+    width: 15%;
+  }
+  .w-md-20p {
+    width: 20%;
+  }
+  .w-md-25p {
+    width: 25%;
+  }
+  .w-md-30p {
+    width: 30%;
+  }
+  .w-md-35p {
+    width: 35%;
+  }
+  .w-md-40p {
+    width: 40%;
+  }
+  .w-md-45p {
+    width: 45%;
+  }
+  .w-md-50p {
+    width: 50%;
+  }
+  .w-md-55p {
+    width: 55%;
+  }
+  .w-md-60p {
+    width: 60%;
+  }
+  .w-md-65p {
+    width: 65%;
+  }
+  .w-md-70p {
+    width: 70%;
+  }
+  .w-md-75p {
+    width: 75%;
+  }
+  .w-md-80p {
+    width: 80%;
+  }
+  .w-md-85p {
+    width: 85%;
+  }
+  .w-md-90p {
+    width: 90%;
+  }
+  .w-md-95p {
+    width: 95%;
+  }
+  .w-md-100p {
+    width: 100%;
+  }
+  .w-md-33p {
+    width: 33.333%;
+  }
+  .w-md-gca {
+    width: 61.8%;
+  }
+  .w-md-gcb {
+    width: 38.2%;
+  }
+}
+@media (min-width: 1440px) {
+  .w-lg-5p {
+    width: 5%;
+  }
+  .w-lg-10p {
+    width: 10%;
+  }
+  .w-lg-15p {
+    width: 15%;
+  }
+  .w-lg-20p {
+    width: 20%;
+  }
+  .w-lg-25p {
+    width: 25%;
+  }
+  .w-lg-30p {
+    width: 30%;
+  }
+  .w-lg-35p {
+    width: 35%;
+  }
+  .w-lg-40p {
+    width: 40%;
+  }
+  .w-lg-45p {
+    width: 45%;
+  }
+  .w-lg-50p {
+    width: 50%;
+  }
+  .w-lg-55p {
+    width: 55%;
+  }
+  .w-lg-60p {
+    width: 60%;
+  }
+  .w-lg-65p {
+    width: 65%;
+  }
+  .w-lg-70p {
+    width: 70%;
+  }
+  .w-lg-75p {
+    width: 75%;
+  }
+  .w-lg-80p {
+    width: 80%;
+  }
+  .w-lg-85p {
+    width: 85%;
+  }
+  .w-lg-90p {
+    width: 90%;
+  }
+  .w-lg-95p {
+    width: 95%;
+  }
+  .w-lg-100p {
+    width: 100%;
+  }
+  .w-lg-33p {
+    width: 33.333%;
+  }
+  .w-lg-gca {
+    width: 61.8%;
+  }
+  .w-lg-gcb {
+    width: 38.2%;
+  }
+}
+@media (min-width: 1920px) {
+  .w-xl-5p {
+    width: 5%;
+  }
+  .w-xl-10p {
+    width: 10%;
+  }
+  .w-xl-15p {
+    width: 15%;
+  }
+  .w-xl-20p {
+    width: 20%;
+  }
+  .w-xl-25p {
+    width: 25%;
+  }
+  .w-xl-30p {
+    width: 30%;
+  }
+  .w-xl-35p {
+    width: 35%;
+  }
+  .w-xl-40p {
+    width: 40%;
+  }
+  .w-xl-45p {
+    width: 45%;
+  }
+  .w-xl-50p {
+    width: 50%;
+  }
+  .w-xl-55p {
+    width: 55%;
+  }
+  .w-xl-60p {
+    width: 60%;
+  }
+  .w-xl-65p {
+    width: 65%;
+  }
+  .w-xl-70p {
+    width: 70%;
+  }
+  .w-xl-75p {
+    width: 75%;
+  }
+  .w-xl-80p {
+    width: 80%;
+  }
+  .w-xl-85p {
+    width: 85%;
+  }
+  .w-xl-90p {
+    width: 90%;
+  }
+  .w-xl-95p {
+    width: 95%;
+  }
+  .w-xl-100p {
+    width: 100%;
+  }
+  .w-xl-33p {
+    width: 33.333%;
+  }
+  .w-xl-gca {
+    width: 61.8%;
+  }
+  .w-xl-gcb {
+    width: 38.2%;
+  }
+}
+.w-auto {
+  width: auto;
 }
 
 .max-w-100p {
