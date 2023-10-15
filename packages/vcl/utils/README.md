@@ -97,6 +97,8 @@ width and height of a container.
 - `w-auto`
 - `w-gca`: Golden cut a
 - `w-gcb`: Golden cut b
+- `w-{bp}-gca`: Breaking point version for golden cut 'A'. Where bp is the breakpoint
+- `w-{bp}-gcb`: Breaking point version for golden cut 'B'. Where bp is the breakpoint
 - `max-w-100p`: max-width: 100%
 - `h-5p`
 - `h-10p`

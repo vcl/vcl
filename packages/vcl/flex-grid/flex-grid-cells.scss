@@ -1,5 +1,6 @@
 @use "sass:math";
 @use "../theme.scss" as *;
+@use "../breakpoints.scss";
 
 $cells: 12;
 

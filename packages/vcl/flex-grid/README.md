@@ -37,6 +37,11 @@ Check the breakpoints section for more details.
 
 [responsive example](/demo/example-responsive.html)
 
+Utilize the percentage based width classes of the [sizing utils](#utils): ```w-{bp}-{per}p``` and ```w-{bp}-gca``` and ```w-{bp}-gcb```
+to size the flex items.
+
+[responsive percentage based example](/demo/example-percentage-based-width.html)
+
 Use `grid-gutter-1` to `grid-gutter-5` classes to space out grid cells.
 Warning: Gutters apply negative margins to the container element and positive paddings to the children. Take this into account when you are setting background colors or adding other padding/margins.
 

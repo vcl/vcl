@@ -1,0 +1,33 @@
+@use 'sass:math';
+
+@mixin percent-based-height-step5($suffix) {
+  @if $suffix {
+    $suffix: '-' + $suffix;
+  } @else {
+    $suffix: '';
+  }
+
+  @for $i from 1 through 20 {
+    $per: $i * 5;
+
+    .h#{$suffix}-#{$per}p {
+      height: math.percentage(math.div($per, 100));
+    }
+  }
+}
+
+@mixin percent-based-width-step5($suffix) {
+  @if $suffix {
+    $suffix: '-' + $suffix;
+  } @else {
+    $suffix: '';
+  }
+
+  @for $i from 1 through 20 {
+    $per: $i * 5;
+
+    .w#{$suffix}-#{$per}p {
+      width: math.percentage(math.div($per, 100));
+    }
+  }
+}
