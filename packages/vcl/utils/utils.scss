@@ -1,4 +1,6 @@
-@use "../theme.scss" as *;
+@use '../theme.scss' as *;
+@use "../mixins.scss" as *;
+@use "../breakpoints.scss";
 
 /* Float helpers */
 
@@ -133,11 +135,13 @@
 
 /* Utility to enable disable selection of text */
 
-.disable-user-select, .user-select-none {
+.disable-user-select,
+.user-select-none {
   user-select: none;
 }
 
-.enable-user-select, .user-select-text {
+.enable-user-select,
+.user-select-text {
   user-select: text;
 }
 
@@ -207,88 +211,10 @@
   box-sizing: border-box;
 }
 
-.h-5p {
-  height: 5%;
-}
-
-.h-10p {
-  height: 10%;
-}
-
-.h-15p {
-  height: 15%;
-}
-
-.h-20p {
-  height: 20%;
-}
-
-.h-25p {
-  height: 25%;
-}
-
-.h-30p {
-  height: 30%;
-}
+@include percent-based-height-step5(null);
 
 .h-33p {
   height: 33.333%;
-}
-
-.h-35p {
-  height: 35%;
-}
-
-.h-40p {
-  height: 40%;
-}
-
-.h-45p {
-  height: 45%;
-}
-
-.h-50p {
-  height: 50%;
-}
-
-.h-55p {
-  height: 55%;
-}
-
-.h-60p {
-  height: 60%;
-}
-
-.h-65p {
-  height: 65%;
-}
-
-.h-70p {
-  height: 70%;
-}
-
-.h-75p {
-  height: 75%;
-}
-
-.h-80p {
-  height: 80%;
-}
-
-.h-85p {
-  height: 85%;
-}
-
-.h-90p {
-  height: 90%;
-}
-
-.h-95p {
-  height: 95%;
-}
-
-.h-100p {
-  height: 100%;
 }
 
 .h-auto {
@@ -299,92 +225,10 @@
   max-height: 100%;
 }
 
-.w-5p {
-  width: 5%;
-}
-
-.w-10p {
-  width: 10%;
-}
-
-.w-15p {
-  width: 15%;
-}
-
-.w-20p {
-  width: 20%;
-}
-
-.w-25p {
-  width: 25%;
-}
-
-.w-30p {
-  width: 30%;
-}
+@include percent-based-width-step5(null);
 
 .w-33p {
   width: 33.333%;
-}
-
-.w-35p {
-  width: 35%;
-}
-
-.w-40p {
-  width: 40%;
-}
-
-.w-45p {
-  width: 45%;
-}
-
-.w-50p {
-  width: 50%;
-}
-
-.w-55p {
-  width: 55%;
-}
-
-.w-60p {
-  width: 60%;
-}
-
-.w-65p {
-  width: 65%;
-}
-
-.w-70p {
-  width: 70%;
-}
-
-.w-75p {
-  width: 75%;
-}
-
-.w-80p {
-  width: 80%;
-}
-
-.w-85p {
-  width: 85%;
-}
-
-.w-90p {
-  width: 90%;
-}
-
-.w-95p {
-  width: 95%;
-}
-
-.w-100p {
-  width: 100%;
-}
-
-.w-auto {
-  width: auto;
 }
 
 .w-gca {
@@ -393,6 +237,30 @@
 
 .w-gcb {
   width: 38.2%;
+}
+
+@each $bp-name, $bp-value in $breakpoints {
+  @if $bp-name != 'xs' {
+    @media (min-width: $bp-value) {
+      @include percent-based-width-step5($bp-name);
+
+      .w-#{$bp-name}-33p {
+        width: 33.333%;
+      }
+
+      .w-#{$bp-name}-gca {
+        width: 61.8%;
+      }
+
+      .w-#{$bp-name}-gcb {
+        width: 38.2%;
+      }
+    }
+  }
+}
+
+.w-auto {
+  width: auto;
 }
 
 .max-w-100p {

@@ -1,7 +1,6 @@
 @use "sass:map";
 @use "../theme.scss" as *;
-@use "../breakpoints.scss" as *;
-
+@use "../breakpoints.scss";
 
 .hide {
   display: none !important;

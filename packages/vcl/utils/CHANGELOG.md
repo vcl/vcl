@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+
+
+# [1.0.0-alpha.3](https://github.com/vcl/vcl/compare/v0.6.0-5...v0.6.0-7) (2023-10-13)
+
+
+### Features
+
+* **utils:** add responsive width sizing classes ([cd87261](https://github.com/vcl/vcl/commit/cd87261))
+
 # [1.0.0-alpha.2](https://github.com/vcl/vcl/compare/v0.7.0-alpha.3...v1.0.0-alpha.2) (2020-01-17)
 
 
