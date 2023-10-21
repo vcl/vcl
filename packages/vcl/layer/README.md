@@ -28,6 +28,14 @@ A simple layer with a panel as its content.
 
 [basic example](/demo/example.html)
 
+Utilise the `fade-out-animation` with the `layer-cover` and `layer` to create a smooth entry and exit animation (_Available on Chrome 117_)
+
+[Dynamic modal with entry and exit transition](/demo/example-with-transitions.html)
+
+Utilise the `zoom-animation` to create *zoom in* and *zoom out* effect when the modals opens and exit (_Available on chrome 117_)
+
+[Dynamic modal with Zoom in and zoom out animation](/demo/example-with-zoom-animation.html)
+
 ## Classes
 
 - `layer-cover`
@@ -39,8 +47,13 @@ A simple layer with a panel as its content.
 - `layer-fill`: Makes the layer cover the whole viewport.
 - `layer-stick-to-bottom`: Makes the layer stick to the bottom.
 - `layer-gutter-padding`: Add a padding of half the gutter width.
+- `fade-out-animation`: Creates a smooth fade in and out transition when the layer enter and exit the window.
+- `zoom-animation`: Show a zoom in and zoom out animation effect when the layer enter and exit the window.
 
 ## Variables
 
 - `$layer-cover-bg-color`
 - `$layer-border-color`
+- `$layer-cover-transition-duration`
+- `$layer-transition-duration`
+- `$layer-box-animation-durations`
