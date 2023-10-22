@@ -284,6 +284,9 @@ $popover-shadow-color: $glass-2 !default;
 /* Layer */
 $layer-cover-bg-color: $glass-1 !default;
 $layer-gutter-padding: $grid-half-gutter-width !default;
+$layer-cover-transition-duration: 0.4s !default;
+$layer-transition-duration: 0.3s !default;
+$layer-box-animation-durations: 0.2s !default;
 
 /* Nag */
 $nag-color: $text-primary-color !default;

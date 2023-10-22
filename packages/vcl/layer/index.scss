@@ -1,9 +1,5 @@
 @use '../theme.scss' as *;
 
-$layer-cover-transition-duration: 0.4s;
-$layer-transition-duration: 0.3s;
-$layer-box-animation-durations: 0.2s;
-
 /* ==== Entry animation ==== */
 @starting-style {
   .layer-cover,
