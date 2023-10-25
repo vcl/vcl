@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/vcl/vcl/compare/v2.4.0...v3.0.0) (2023-10-25)
+
+
+### Bug Fixes
+
+* update readme file ([442fc76](https://github.com/vcl/vcl/commit/442fc764dad41efcc5d162d75e26cbc683f768ea))
+
+
+* chore!: drop support for grid layout ([d0fb57f](https://github.com/vcl/vcl/commit/d0fb57fb7a535d7a03f07a20ba2f9690d32597fc))
+
+
+### Features
+
+* add entry and exit animation on the layer module ([3040692](https://github.com/vcl/vcl/commit/3040692a56c67eac28c2ef4d3c75427fb4149ad4))
+* add responsive percentage ratio to the utils module ([ce87827](https://github.com/vcl/vcl/commit/ce87827d1f8cbb34951c51ac0ab025077d32a018))
+* add rounded modifier to flip-switch ([0cefb26](https://github.com/vcl/vcl/commit/0cefb264c3214389a60d4069ce43e7464cb80392))
+
+
+### BREAKING CHANGES
+
+* grid layout not available
+
+
+
+
+
 # [2.5.0](https://github.com/vcl/vcl/compare/v2.4.0...v2.5.0) (2022-08-23)
 
 
