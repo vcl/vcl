@@ -28,11 +28,11 @@ A simple layer with a panel as its content.
 
 [basic example](/demo/example.html)
 
-Utilise the `fade-out-animation` with the `layer-cover` and `layer` to create a smooth entry and exit animation (_Available on Chrome 117_)
+Utilize the `fade-out-animation` with the `layer-cover` and `layer` to create a smooth entry and exit animation.
 
 [Dynamic modal with entry and exit transition](/demo/example-with-transitions.html)
 
-Utilise the `zoom-animation` to create *zoom in* and *zoom out* effect when the modals opens and exit (_Available on chrome 117_)
+Utilize the `zoom-animation` to create *zoom in* and *zoom out* effect when the modal opens and closes.
 
 [Dynamic modal with Zoom in and zoom out animation](/demo/example-with-zoom-animation.html)
 

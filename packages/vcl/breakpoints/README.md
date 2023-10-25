@@ -14,9 +14,6 @@ The following ranges of viewport widths are defined:
 
 ## Usage
 
-Warning: Try to prevent responsive components as much as you can,
-[see why](https://vcl.github.io/#responsive-css-via-media-queries).
-
 ```css
 @media (max-width: @bp-xs-max); /* mobile phone styles */
 ```
