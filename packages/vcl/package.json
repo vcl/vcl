@@ -1,0 +1,28 @@
+{
+  "name": "@vcl/vcl",
+  "description": "The whole VCL in one package",
+  "version": "3.0.0",
+  "main": "package.json",
+  "style": "dist/index.css",
+  "scss": "index.scss",
+  "sass": "index.scss",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.co",
+    "url": "https://www.n-fuse.co"
+  },
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "vcl",
+    "component",
+    "core",
+    "modules",
+    "all",
+    "include"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "3fbd621b846bac32b9b0e20bb86bc1cb37d0db69"
+}

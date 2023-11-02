@@ -1,0 +1,212 @@
+@use "../theme.scss" as *;
+@use "./index.scss";
+@use "../typography.scss" as *;
+
+.demo {
+  & .label {
+    min-width: 12rem;
+  }
+
+  & .color {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    width: 10rem;
+    height: 1.9rem;
+  }
+
+  & .color:empty {
+    display: block;
+  }
+ 
+  & .black {
+    background-color: $black;
+  }
+
+  & .white {
+    background-color: $white;
+  }
+  
+  & .grayd5 {
+    background-color: $gray-dark-5;
+  }
+ 
+  & .grayd4 {
+    background-color: $gray-dark-4;
+  }
+
+  & .grayd3 {
+    background-color: $gray-dark-3;
+  }
+
+  & .grayd2 {
+    background-color: $gray-dark-2;
+  }
+
+  & .grayd1 {
+    background-color: $gray-dark-1;
+  }
+
+  & .gray {
+    background-color: $gray;
+  }
+
+  & .grayl1 {
+    background-color: $gray-light-1;
+  }
+
+  & .grayl2 {
+    background-color: $gray-light-2;
+  }
+
+  & .grayl3 {
+    background-color: $gray-light-3;
+  }
+
+  & .grayl4 {
+    background-color: $gray-light-4;
+  }
+
+  & .grayl5 {
+    background-color: $gray-light-5;
+  }
+
+  & .grayl6 {
+    background-color: $gray-light-6;
+  }
+
+  & .badarker {
+    background-color: $brand-accent-darker;
+  }
+
+  & .badark {
+    background-color: $brand-accent-dark;
+  }
+
+  & .ba {
+    background-color: $brand-accent;
+  }
+
+  & .balight {
+    background-color: $brand-accent-light;
+  }
+
+  & .balighter {
+    background-color: $brand-accent-lighter;
+  }
+
+  & .baoverlay {
+    background-color: $brand-accent-overlay;
+  }
+
+  & .bprimary {
+    background-color: $brand-primary;
+  }
+
+  & .bsuccess {
+    background-color: $brand-success;
+  }
+
+  & .binfo {
+    background-color: $brand-info;
+  }
+
+  & .bwarning {
+    background-color: $brand-warning;
+  }
+
+  & .bdanger {
+    background-color: $brand-danger;
+  }
+
+  & .glass1 {
+    background-color: $glass-1;
+  }
+
+  & .glass2 {
+    background-color: $glass-2;
+  }
+
+  & .empdc {
+    background-color: $emphasized-dark-color;
+  }
+
+  & .empmc {
+    background-color: $emphasized-medium-color;
+  }
+
+  & .emplc {
+    background-color: $emphasized-light-color;
+  }
+
+  & .primdc {
+    background-color: $primary-dark-color;
+  }
+
+  & .primmc {
+    background-color: $primary-medium-color;
+  }
+
+  & .primlc {
+    background-color: $primary-light-color;
+  }
+
+  & .succdc {
+    background-color: $success-dark-color;
+  }
+
+  & .succmc {
+    background-color: $success-medium-color;
+  }
+
+  & .succlc {
+    background-color: $success-light-color;
+  }
+
+  & .infodc {
+    background-color: $info-dark-color;
+  }
+
+  & .infomc {
+    background-color: $info-medium-color;
+  }
+
+  & .infolc {
+    background-color: $info-light-color;
+  }
+
+  & .warningdc {
+    background-color: $warning-dark-color;
+  }
+
+  & .warningmc {
+    background-color: $warning-medium-color;
+  }
+
+  & .warninglc {
+    background-color: $warning-light-color;
+  }
+
+  & .errordc {
+    background-color: $error-dark-color;
+  }
+
+  & .errormc {
+    background-color: $error-medium-color;
+  }
+
+  & .errorlc {
+    background-color: $error-light-color;
+  }
+
+  & .dangerdc {
+    background-color: $danger-dark-color;
+  }
+
+  & .dangermc {
+    background-color: $danger-medium-color;
+  }
+
+  & .dangerlc {
+    background-color: $danger-light-color;
+  }
+}

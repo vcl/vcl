@@ -1,0 +1,11 @@
+{
+  "name": "app",
+  "description": "The app's viewport and app layout",
+  "categories": [
+    {
+      "title": "Areas",
+      "itemPriority": 10,
+      "priority": 30
+    }
+  ]
+}

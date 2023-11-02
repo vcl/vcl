@@ -1,0 +1,11 @@
+{
+  "name": "input",
+  "description": "Standard HTML form input controls",
+  "categories": [
+    {
+      "title": "Form Controls",
+      "itemPriority": 10,
+      "priority": 70
+    }
+  ]
+}

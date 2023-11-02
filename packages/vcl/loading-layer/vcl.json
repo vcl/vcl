@@ -1,0 +1,11 @@
+{
+  "name": "loading-layer",
+  "description": "Cover areas to indicate updates and temporarily prevent interaction on them",
+  "categories": [
+    {
+      "title": "Overlays",
+      "itemPriority": 40,
+      "priority": 100
+    }
+  ]
+}

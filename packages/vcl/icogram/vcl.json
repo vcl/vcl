@@ -1,0 +1,11 @@
+{
+  "name": "icogram",
+  "description": "The combination of icon(s) and a textual label(s) in any permutation",
+  "categories": [
+    {
+      "title": "Icons",
+      "itemPriority": 20,
+      "priority": 140
+    }
+  ]
+}

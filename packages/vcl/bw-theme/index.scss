@@ -1,0 +1,54 @@
+/**
+* The VCL BW theme.
+*
+* It defines all variables required to be set by the modules included in
+* the 'core-modules' module and narrows them down to a small set
+* of variables required.
+*/
+
+@forward "../theme/terms.scss" with (
+  /* Brand Accent Colors */
+  $brand-accent-darker: #000 !default,
+  $brand-accent-dark: #000 !default,
+  $brand-accent: #000 !default,
+  $brand-accent-light: green !default,
+  $brand-accent-lighter: yellow !default,
+);
+
+@use "../theme/terms" as *;
+@forward "../theme/theme.scss" with (
+  /* BW theme variable overrides */
+
+  $button-bg-color: $black !default,
+  $button-bg-selected-color: $gray-dark-1 !default,
+  $button-bg-hover-color: $gray-dark-1 !default,
+
+  $app-viewport-bg-color: $white !default,
+  $app-area-max-width: 1260px !default,
+
+  $typography-link-color: $gray-dark-2 !default,
+  $typography-link-hover-color: $brand-accent-darker !default,
+  $typography-link-text-decoration: underline !default,
+  $typography-selected-text-bg-color: $gray-light-2 !default,
+
+  $navigation-item-1st-level-bg-color: transparent !default,
+  $navigation-item-1st-level-color: $gray-dark-1 !default,
+  $navigation-item-1st-level-hover-bg-color: $black !default,
+  $navigation-item-1st-level-hover-color: $white !default,
+  $navigation-item-1st-level-selected-bg-color: $black !default,
+  $navigation-item-1st-level-selected-color: $white !default,
+
+  $loading-layer-cover-bg-color: rgba(255, 255, 255, 0.88) !default,
+  $layer-cover-bg-color: rgba(0, 0, 0, 0.10) !default,
+
+  $gallery-bg-color: $white !default,
+  $gallery-header-color: $black !default,
+  $gallery-footer-color: $black !default,
+  $gallery-header-bg-color: $white !default,
+  $gallery-footer-bg-color: $white !default,
+  $gallery-initial-buttons-opacity: 1 !default,
+
+  $data-list-item-selected-color: $black !default,
+  $data-list-item-bg-selected-color: #D6D6D6 !default,
+  $data-list-item-bg-hover-color: #D6D6D6 !default,
+)

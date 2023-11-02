@@ -1,0 +1,11 @@
+{
+  "name": "email",
+  "description": "Basic HTML email styling",
+  "categories": [
+    {
+      "title": "Email",
+      "itemPriority": 10,
+      "priority": 200
+    }
+  ]
+}

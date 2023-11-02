@@ -1,0 +1,110 @@
+@use "../theme.scss" as *;
+
+$duration: 200ms;
+
+// form control group modifiers
+.form-control-group {
+  & .input-field  {
+    margin-bottom: 0;
+  }
+  & .input-group  {
+    margin-bottom: 0;
+  }
+  > .form-control-label:empty {
+    display: none;
+  }
+}
+
+// embedded input label modifier
+.form-control-group.embedded-input-field-label {
+  --label-offset-x: 0px;
+  --label-offset-y: 0px;
+  --prepended-elements: 0;
+  --prepended-element-width: 2.5em;
+  --floating-label-padding: 0.6em;
+  position: relative;
+  margin-top: 0.4em;
+
+  > .form-control-label {
+    // Remove any spacing
+    margin: 0;
+    padding: 0;
+    // Initial state with the label overlaying the input
+    position: absolute;
+    display: inline-block;
+    z-index: 2;
+    transition: all $duration ease-out;
+    transition-property: left, top, font-size;
+    top: calc(-0.45em + var(--label-offset-y));
+    left: calc($input-padding-lr + var(--label-offset-x));
+    font-size: 0.8em;
+    font-size: 0.8em;
+    pointer-events: none;
+    // Label background
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      opacity: 1;
+      background-color: $input-bg-color;
+      transition: all $duration ease-in;
+      transition-property: opacity, left, right;
+      left: -0.3em;
+      right: -0.3em;
+      z-index: -1;
+    }
+  }
+
+  // Label is floating when control is focused or has the floating modifier
+  &.floating:not(.static) {
+    & > .form-control-label {
+      top: calc(0.6em + var(--label-offset-y));
+      left: calc(var(--floating-label-padding) + var(--label-offset-x) + calc(var(--prepended-elements) * var(--prepended-element-width)));
+      transition: all $duration ease-out;
+      font-size: inherit;
+      &::before {
+        opacity: 0;
+        left: 0em;
+        right: 0em;
+      }
+    }
+
+    // Remove text and placeholders when label is floating. They are replaced by labels
+    input,
+    textarea {
+      color: transparent;
+      &::-webkit-input-placeholder {
+        // placeholder transitions are only working in chrome
+        transition: opacity 0.2s ease-out;
+        opacity: 0;
+      }
+
+      &:-moz-placeholder {
+        opacity: 0;
+      }
+
+      &::-moz-placeholder {
+        opacity: 0;
+      }
+
+      &:-ms-input-placeholder {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.disable-animations {
+    > .form-control-label {
+      transition: none;
+      &::before {
+        transition: none;
+      }
+    }
+    &.floating:not(.static-label) {
+      & > .form-control-label {
+        transition: none;
+      }
+    }
+  }
+}

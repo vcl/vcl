@@ -1,0 +1,11 @@
+{
+  "name": "flip-switch",
+  "description": "A switch that can be toggled between two states",
+  "categories": [
+    {
+      "title": "Form Controls",
+      "itemPriority": 100,
+      "priority": 70
+    }
+  ]
+}

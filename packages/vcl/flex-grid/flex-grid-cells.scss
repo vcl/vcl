@@ -1,0 +1,80 @@
+@use "sass:math";
+@use "../theme.scss" as *;
+@use "../breakpoints.scss";
+
+$cells: 12;
+
+@mixin flex-grid($suffix) {
+
+  @if $suffix {
+    $suffix: "-" + $suffix;
+  } @else {
+    $suffix: "";
+  }
+
+  .flex#{$suffix} {
+    flex: 1 1 0px;
+  }
+
+  .flex-auto#{$suffix} {
+    flex: 0 0 auto;
+  }
+
+  @for $i from 1 through $cells {
+    $per: math.percentage(math.div($i, $cells));
+
+    .flex-#{$i}#{$suffix} {
+      flex: 0 0 $per;
+    }
+
+    .offset-#{$i}#{$suffix} {
+      margin-left: $per;
+    }
+  }
+
+  .row {
+    & > .flex#{$suffix} {
+      max-width: 100%;
+    }
+
+    & > .flex-auto#{$suffix} {
+      width: auto;
+      max-width: 100%;
+    }
+
+    @for $i from 1 through $cells {
+      $per: math.percentage(math.div($i, $cells));
+      .flex-#{$i}#{$suffix} {
+        max-width: $per;
+      }
+    }
+  }
+
+  .col {
+    & > .flex#{$suffix} {
+      max-height: 100%;
+    }
+
+    & > .flex-auto#{$suffix} {
+      height: auto;
+      max-height: 100%;
+    }
+
+    @for $i from 1 through $cells {
+      $per: math.percentage(math.div($i, $cells));
+      .flex-#{$i} {
+        max-height: $per;
+      }
+    }
+  }
+}
+
+@include flex-grid(null);
+
+@each $bp-name, $bp-value in $breakpoints {
+  @if $bp-name != "xs" {
+    @media (min-width: $bp-value) {
+      @include flex-grid($bp-name);
+    }
+  }
+}

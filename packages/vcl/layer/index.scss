@@ -1,0 +1,110 @@
+@use '../theme.scss' as *;
+
+/* ==== Entry animation ==== */
+@starting-style {
+  .layer-cover,
+  .layer {
+    opacity: 0;
+  }
+}
+
+.layer-cover {
+  position: fixed;
+  z-index: 300;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $layer-cover-bg-color;
+
+  /* Add exiting animation */
+  transition: opacity $layer-cover-transition-duration,
+    display $layer-cover-transition-duration;
+  transition-behavior: allow-discrete;
+}
+
+.layer {
+  position: fixed;
+  display: flex;
+  z-index: 401;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: none;
+  align-items: center;
+  justify-content: center;
+  /* Add exiting animation */
+  transition: opacity $layer-transition-duration,
+    display $layer-transition-duration;
+  transition-behavior: allow-discrete;
+
+  &.layer-stick-to-bottom {
+    & .layer-box {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Feature: The fade out animation for smooth transition*/
+.layer-cover.fade-out-animation,
+.layer.fade-out-animation {
+  opacity: 0;
+  display: none;
+}
+
+.layer-box {
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: inline-block;
+  &.fill {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+  &.gutter-padding {
+    padding: $layer-gutter-padding;
+  }
+}
+
+.zoom {
+  animation-name: animatetop;
+  animation-duration: $layer-box-animation-durations;
+}
+
+.fade-out-animation .zoom {
+  animation-name: animatedown;
+  animation-duration: $layer-box-animation-durations;
+  animation-fill-mode: forwards;
+}
+
+// Zoom in type animation
+@keyframes animatetop {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+// Zoom out and fade type animation
+@keyframes animatedown {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.4);
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "busy-indicator",
+  "description": "Indicate that a long-lasting operation is currently in progress",
+  "categories": [
+    {
+      "title": "Status Information",
+      "itemPriority": 20,
+      "priority": 110
+    },
+    {
+      "title": "Busy Indicator",
+      "priority": 2
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+@use "../theme.scss" as *;
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+}
+
+.fixed {
+  table-layout: fixed;
+
+  &.no-wrap,
+  &.no-wrap td,
+  &.no-wrap th {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.table {
+  font-size: inherit;
+
+  &.condensed {
+    & td {
+      padding: 0.2em 0.3em;
+    }
+  }
+
+  &.no-border {
+    & tbody {
+      & tr {
+        border-width: 0;
+      }
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: $block-elem-vertical-gap;
+
+  &.row-selectability {
+    & tbody {
+      & tr {
+        cursor: pointer;
+      }
+    }
+  }
+
+  & thead {
+    & tr {
+      text-align: left;
+      border-width: 0;
+      border-style: solid;
+      border-color: $table-header-bg-color;
+      background-color: $table-header-bg-color;
+      color: $table-header-color;
+
+      & th {
+        line-height: 1.5em;
+        padding: 0.2em 0.4em;
+
+        & > * {
+          line-height: 2em;
+          font-size: 0.96em;
+          font-weight: 600;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  & tr.disabled {
+    & td {
+      cursor: default;
+      color: $table-disabled-color;
+    }
+  }
+
+  & td {
+    padding-top: 0.3em;
+    padding-left: 0.4em;
+    padding-bottom: 0.3em;
+    padding-right: 0.4em;
+    vertical-align: top;
+  }
+
+  & tbody {
+    & tr {
+      border-width: 0 0 1px;
+      border-style: solid;
+      border-color: $table-border-color;
+    }
+  }
+
+  & tfoot {
+    & td {
+      font-weight: bold;
+      background-color: $table-footer-bg-color;
+      color: $table-footer-color;
+    }
+  }
+
+  & .selected {
+    & td > {
+      & a {
+        text-decoration: underline;
+        color: $table-row-selected-color;
+      }
+    }
+  }
+
+  & .sortable-col {
+    cursor: pointer;
+
+    & a {
+      margin-right: 1em;
+    }
+  }
+}
+
+/* Input fields in tables */
+
+table.table select,
+table.table textarea,
+table.table input,
+.table .input,
+.table input-field {
+  margin-bottom: 0;
+}
+
+/* Alignment modifiers, required to override default td alignment */
+
+.table td.align-right,
+.table th.align-right,
+.table .align-right td {
+  text-align: right;
+}
+
+.table td.align-left,
+.table th.align-left,
+.table .align-left td {
+  text-align: left;
+}
+
+.table td.align-centered,
+.table th.align-centered,
+.table .align-centered td {
+  text-align: center;
+}
+
+.v-align-middle {
+  & td {
+    vertical-align: middle;
+  }
+}
+
+.v-align-bottom {
+  & td {
+    vertical-align: bottom;
+  }
+}
+
+/* Modifiers for borders */
+
+.table.vertical-border td,
+.table.vertical-border th {
+  border-width: 0 1px 1px 0;
+}
+
+.table.vertical-border td:last-child,
+.table.vertical-border th:last-child {
+  border-right-width: 0;
+}
+
+.table .selected,
+.table .selected:hover,
+.table .selected:active {
+  border-style: solid;
+  border-width: 0;
+}
+
+.table input,
+.table .input,
+.table select,
+.table textarea,
+.table .input-group {
+  margin-bottom: 0;
+}
+
+.table .sortable-col.sort-asc button.button i,
+.table .sortable-col.sort-desc button.button i {
+  color: $table-header-button-hover-color;
+}
+
+/* Alternating row colors */
+
+.alt-row-color tbody tr:nth-child(2n+1),
+.alt-row-color tbody tr:nth-child(2n+1) {
+  background-color: $table-alt-bg-color;
+}
+
+/* Row highlighting on hover */
+
+.table {
+  &.row-hover-highlight {
+    & tbody {
+      & tr {
+        &:hover {
+          background-color: $table-highlight-hover-bg-color;
+        }
+      }
+    }
+  }
+}
+
+/* Single cell highlighting */
+
+.cell-highlight {
+  background-color: $table-highlight-bg-color;
+}
+
+/* Selected cell and row coloring */
+
+.table tr.selected td,
+.table tr.selected:hover td,
+.table tr.selected:active td,
+.table tr td.selected {
+  color: $table-row-selected-color;
+  background-color: $table-row-selected-bg-color;
+}

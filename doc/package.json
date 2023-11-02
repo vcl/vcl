@@ -1,0 +1,39 @@
+{
+  "name": "@vcl/doc",
+  "description": "Conceputal VCL documentation",
+  "version": "0.0.0",
+  "private": true,
+  "main": "package.json",
+  "author": {
+    "name": "n-fuse GmbH",
+    "email": "info@n-fuse.co",
+    "url": "https://www.n-fuse.co"
+  },
+  "scripts": {
+    "git-init-presentation": "cd presentation && git init && git remote add origin https://github.com/vcl/presentation.git",
+    "git-push-presentation": "cd presentation && git add -A . && git commit -a -m 'presentation update' && git push --set-upstream origin master --force"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Hoppe",
+      "email": "thomas.hoppe@n-fuse.co"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vcl/vcl/doc.git"
+  },
+  "keywords": [
+    "css",
+    "vcl",
+    "index",
+    "documentation"
+  ],
+  "vcl": {
+    "categories": [],
+    "docIndex": true
+  }
+}

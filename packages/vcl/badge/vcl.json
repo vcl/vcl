@@ -1,0 +1,11 @@
+{
+  "name": "badge",
+  "description": "A visually highlighted tag to attribute items or show counts",
+  "categories": [
+    {
+      "title": "Typography",
+      "itemPriority": 40,
+      "priority": 20
+    }
+  ]
+}

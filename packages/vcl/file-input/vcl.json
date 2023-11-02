@@ -1,0 +1,11 @@
+{
+  "name": "file-input",
+  "description": "File input for selecting one or multiple files via tap and drag-and-drop gestures",
+  "categories": [
+    {
+      "title": "Form Controls",
+      "itemPriority": 80,
+      "priority": 70
+    }
+  ]
+}

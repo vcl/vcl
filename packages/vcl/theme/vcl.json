@@ -1,0 +1,11 @@
+{
+  "name": "theme",
+  "description": "The VCL default theme",
+  "categories": [
+    {
+      "title": "Themes",
+      "itemPriority": 10,
+      "priority": 180
+    }
+  ]
+}

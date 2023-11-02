@@ -1,0 +1,54 @@
+@use "../theme.scss" as *;
+
+.form-control-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $form-control-vertical-gap;
+
+  & .required-indicator {
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: bold;
+    line-height: inherit;
+    position: relative;
+    vertical-align: middle;
+    padding-left: 0.2em;
+    color: $form-control-label-required-hint-color;
+  }
+
+  & > .form-control-label {
+    &.clickable {
+      cursor: pointer;
+    }
+    align-self: flex-start;
+    display: inline-block;
+    font-size: $form-control-label-font-size;
+    font-weight: $form-control-label-font-weight;
+    color: $form-control-label-color;
+
+    margin-top: 0.75em;
+    margin-bottom: 0.5em;
+
+    & .form-control-sub-label {
+      font-size: 0.9em;
+      padding-left: 0.6em;
+      color: $form-control-sublabel-color;
+    }
+  
+    & .required-indicator {
+      line-height: 0.85em;
+    }
+  }
+
+  &.focused > .form-control-label {
+    color: $form-control-focused-label-color;
+
+    & .form-control-sub-label {
+      color: $form-control-focused-sublabel-color;
+    }
+  }
+
+  &.disabled > .form-control-label.clickable {
+    cursor: default;
+  }
+}

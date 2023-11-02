@@ -1,0 +1,11 @@
+{
+  "name": "slider",
+  "description": "Slider based selection of a discrete or continuous value within a given range",
+  "categories": [
+    {
+      "title": "Form Controls",
+      "itemPriority": 90,
+      "priority": 70
+    }
+  ]
+}

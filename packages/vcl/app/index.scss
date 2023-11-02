@@ -1,0 +1,79 @@
+@forward "./normalize.scss";
+@use "../theme.scss" as *;
+@use "../mixins.scss";
+@use "../breakpoints.scss";
+
+.viewport {
+  margin: 0;
+  min-height: 100vh;
+  width: device-width;
+  background-color: $app-viewport-bg-color;
+}
+
+.viewport-bg {
+  background-color: $app-viewport-bg-color;
+}
+
+.app {
+  background-color: $app-area-bg-color;
+  max-width: $app-area-max-width;
+  min-width: $app-area-min-width;
+  margin-left: auto;
+  margin-right: auto;
+  @include mixins.clearfix;
+}
+
+.layout-width {
+  max-width: $app-area-max-width;
+}
+
+.logo {
+  display: block;
+}
+
+.application-header {
+  box-sizing: border-box;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  color: $app-header-color;
+  background-color: $app-header-bg-color;
+
+  & .logo {
+    margin-left: 0.5em;
+    width: $app-header-logo-max-width;
+  }
+
+  & .app-name {
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+}
+
+.content-area {
+  background-color: $content-area-primary-bg-color;
+
+  &.transparent {
+    background-color: transparent;
+  }
+}
+
+.content-area-bg-color {
+  background-color: $content-area-primary-bg-color;
+
+  &.secondary {
+    background-color: $content-area-secondary-bg-color;
+  }
+}
+
+.application-footer {
+  box-sizing: border-box;
+  position: relative;
+  color: $app-footer-color;
+  background-color: $app-footer-bg-color;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

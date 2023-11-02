@@ -1,0 +1,170 @@
+@use "../theme.scss" as *;
+@use "../form.scss" as *;
+
+.input-field {
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: $form-control-vertical-gap;
+  position: relative;
+  width: 100%;
+  border-width: $input-border-width;
+  border-color: $input-border-color;
+  border-radius: $input-border-radius;
+  border-style: solid;
+  box-sizing: border-box;
+  background-color: $input-bg-color;
+  height: $input-height; // For downstream UI frameworks
+  overflow: hidden;
+
+  &.focused,
+  &:focus-within {
+    border: $input-border-width solid $input-border-focus-color;
+    background-color: $input-bg-color;
+  }
+
+  &.auto-height {
+    height: unset;
+  }
+
+  /* Semantic coloring */
+  &.error {
+    border-color: $error-medium-color;
+    &:focus-within,
+    &.focused {
+      border-color: $error-dark-color;
+    }
+  }
+
+  &.warning {
+    border-color: $warning-medium-color;
+    &:focus-within,
+    &.focused {
+      border-color: $warning-dark-color;
+    }
+  }
+
+  &.success {
+    border-color: $success-medium-color;
+    &:focus-within,
+    &.focused {
+      border-color: $success-dark-color;
+    }
+  }
+
+  &.selected,
+  &.selected.focused,
+  &.selected:focus-within {
+    border-color: $input-border-focus-color;
+    background-color: $input-bg-focus-color;
+  }
+
+  &.disabled,
+  &.readonly {
+    color: $input-disabled-color;
+    background-color: $input-disabled-bg-color;
+    border-color: $input-disabled-border-color;
+    cursor: default;
+  }
+
+  & > .icon {
+    text-align: center;
+    min-width: 2.5em;
+    color: $input-field-text-color;
+  }
+
+  & > button.button,
+    > button.button:hover {
+    font-family: inherit;
+    text-align: center;
+    min-width: 2.5em;
+    background-color: $input-bg-color;
+    color: $input-field-text-color;
+    border-width: $input-border-width;
+    border-style: solid;
+    border-color: transparent;
+    background-clip: content-box;
+  }
+
+  &.disabled {
+    & > .icon {
+      color: $input-field-disabled-text-color;
+    }
+
+    & > button.button,
+      button.button:hover {
+      cursor: default;
+      color: $input-field-disabled-text-color;
+    }
+  }
+
+  input:not(:first-child) {
+    padding-left: 0;
+  }
+
+  input:not(:last-child) {
+    padding-right: 0;
+  }
+
+  input {
+    height: 100%;
+    line-height: $input-line-height;
+    box-sizing: border-box;
+  }
+
+  input,
+  textarea {
+    font-family: inherit;
+  }
+
+  textarea {
+    line-height: $input-textarea-line-height;
+    overflow: auto;
+    vertical-align: top;
+    height: auto;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    display: inline-block;
+    padding: $input-padding-tb $input-padding-lr;
+    vertical-align: middle;
+    margin-bottom: 0;
+    color: $input-color;
+    background-color: $input-bg-color;
+    border: 0;
+    overflow: hidden;
+    word-wrap: normal;
+    content: none;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: none;
+  }
+
+  input[type="radio"][disabled],
+  input[type="checkbox"][disabled],
+  input[type="radio"][readonly],
+  input[type="checkbox"][readonly] {
+    background-color: transparent;
+  }
+
+  &.disabled input,
+  input.disabled,
+  input.readonly {
+    color: $input-disabled-color;
+    background-color: $input-disabled-bg-color;
+    cursor: default;
+  }
+}
+
+input::placeholder,
+textarea::placeholder,
+.input-field::placeholder {
+  color: $input-text-placeholder-color;
+  font-style: $input-text-placeholder-font-style;
+}

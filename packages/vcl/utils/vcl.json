@@ -1,0 +1,11 @@
+{
+  "name": "utils",
+  "description": "Basic utility classes",
+  "categories": [
+    {
+      "title": "Utilities",
+      "itemPriority": 10,
+      "priority": 130
+    }
+  ]
+}

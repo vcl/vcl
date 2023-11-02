@@ -1,0 +1,30 @@
+@use "../theme.scss" as *;
+@use "../button.scss" as *;
+@use "../select-list.scss" as *;
+@use "../icogram.scss" as *;
+@use "../input.scss" as *;
+
+.select.input-field {
+  cursor: pointer;
+
+  &.select-editable input {
+    cursor: initial;
+  }
+
+  input {
+    cursor: pointer;
+    &.readonly {
+      color: $input-color;
+    }
+  }
+
+  &.disabled,
+  &.disabled input {
+    cursor: default;
+  }
+}
+
+// form control group modifiers
+.form-control-group .select {
+  margin-bottom: 0;
+}

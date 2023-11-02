@@ -1,0 +1,52 @@
+@use "../theme.scss" as *;
+@use "../icon.scss" as *;
+
+.checkbox {
+  display: inline-block;
+  margin-bottom: $form-control-vertical-gap;
+  overflow: auto;
+
+  & .checkbox-label {
+    cursor: pointer;
+    outline: none;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: $form-control-label-line-height;
+    margin-top: 0;
+  }
+
+  & .checkbox-label > .icon {
+    color: $checkbox-color;
+    display: block;
+    min-width: 1.5em;
+    text-align: center;
+    padding-right: 0.4em;
+    padding-left: 0.4em;
+    font-size: $checkbox-icon-size;
+  }
+
+  & .checkbox-label:hover {
+    & > .icon {
+      color: $checkbox-hover-color;
+    }
+  }
+
+  & .checkbox-label:focus-visible {
+    & > .icon {
+      color: $checkbox-focus-color;
+    }
+  }
+
+  &.disabled .checkbox-label {
+    cursor: default;
+    & .icon {
+      color: $checkbox-disabled-color;
+    }
+  }
+}
+
+// form control group modifiers
+.form-control-group .checkbox {
+  margin-bottom: 0;
+}

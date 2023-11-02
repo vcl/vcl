@@ -1,0 +1,11 @@
+{
+  "name": "sum-table",
+  "description": "Table extensions for numeral and especially financial number display",
+  "categories": [
+    {
+      "title": "Tabular Data",
+      "itemPriority": 80,
+      "priority": 90
+    }
+  ]
+}

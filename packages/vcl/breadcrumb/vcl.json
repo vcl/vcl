@@ -1,0 +1,11 @@
+{
+  "name": "breadcrumb",
+  "description": "A chain of navigation items represented as links",
+  "categories": [
+    {
+      "title": "Navigations",
+      "itemPriority": 30,
+      "priority": 50
+    }
+  ]
+}

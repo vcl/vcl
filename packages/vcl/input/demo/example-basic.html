@@ -1,0 +1,59 @@
+<form id="input-example-basic">
+  <div class="input-field">
+    <input class="input" type="text" autocomplete="off" value="I'm an HTML input">
+  </div>
+
+  <div class="input-field">
+    <input class="input" type="text" autocomplete="off" placeholder="I'm a placeholder in an HTML input">
+  </div>
+
+  <div class="input-field">
+    <div class="icon fas fa-search"></div>
+    <input class="input" type="text" autocomplete="off" value="I'm an HTML input">
+    <button class="button square">
+      <div class="icogram">
+        <div class="icon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
+      </div>
+    </button>
+  </div>
+
+  <div class="input-field disabled">
+    <input class="input disabled" type="text" disabled="disabled" autocomplete="off" value="I'm disabled">
+  </div>
+
+  <div class="input-field disabled">
+    <div class="icon fas fa-search"></div>
+    <input class="input disabled" type="text" disabled="disabled" autocomplete="off" value="I'm disabled">
+    <button class="button square disabled">
+      <div class="icogram">
+        <div class="icon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
+      </div>
+    </button>
+  </div>
+
+  <div class="input-field">
+    <input class="input" type="text" readonly="readonly" autocomplete="off" value="I'm readonly">
+  </div>
+
+  <div class="input-field auto-height">
+    <textarea class="input" value="aaa">I'm a textarea</textarea>
+  </div>
+</form>
+
+<script>
+  !function() {
+    let docRoot = document.demoShadowRoot || document;
+
+    let inputFields = docRoot.querySelectorAll('#input-example-basic .input-field');
+
+    inputFields.forEach(inputField => {
+      var input = inputField.querySelector('.input');
+      input.addEventListener('focus', () => {
+        inputField.classList.add('focused');
+      })
+      input.addEventListener('blur', () => {
+        inputField.classList.remove('focused');
+      })
+    })
+  }();
+</script>

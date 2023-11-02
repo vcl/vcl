@@ -1,0 +1,139 @@
+@use "../theme.scss" as *;
+@use "../icogram.scss" as *;
+@use "../toolbar.scss" as *;
+
+.process-nav {
+  font-size: 1em;
+  user-select: none;
+  overflow: hidden;
+  margin-bottom: $block-elem-vertical-gap;
+
+  & .process-nav-step-no {
+    margin: 0 0.9em;
+    border: 1px solid;
+    border-color: inherit;
+    border-radius: 50%;
+    height: 1.7em;
+    line-height: 1.75;
+    min-width: 1.7em;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    font-size: 0.8em;
+  }
+
+  & ol {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    & li {
+      outline: none;
+      box-sizing: border-box;
+      padding-top: 0;
+      padding-bottom: 0;
+      position: relative;
+      background-color: $process-nav-item-bg-color;
+      white-space: nowrap;
+      border: 0;
+      min-height: 2.5em;
+      min-width: 2.5em;
+      cursor: pointer;
+      text-align: center;
+      flex-grow: 1;
+
+      & > {
+        & a,
+        & span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      & a {
+        color: $process-nav-item-color;
+        outline: none;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      &:hover,
+      &:focus-visible {
+        & a {
+          color: $process-nav-item-hover-color;
+        }
+      }
+
+      &.selected {
+        cursor: default;
+        color: $process-nav-selected-item-color;
+        background-color: $process-nav-selected-item-bg-color;
+        border: 0;
+      }
+
+      &.disabled {
+        cursor: default;
+        color: $process-nav-disabled-color;
+      }
+
+      &.process-nav-completed-step {
+        background-color: $process-nav-completed-item-bg-color;
+      }
+    }
+  }
+}
+
+.process-nav.process-nav-arrows {
+  & ol {
+    & li {
+      padding-left: 2.5em;
+      padding-right: 0;
+
+      &:first-child {
+        padding-left: 1em;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -1.65em;
+        width: 2.5em;
+        height: 2.5em;
+        -webkit-transform: scale(0.7, 1.5) rotate(45deg);
+        -moz-transform: scale(0.7, 1.5) rotate(45deg);
+        -ms-transform: scale(0.7, 1.5) rotate(45deg);
+        transform: scale(0.7, 1.5) rotate(45deg);
+
+        /* Prevent the arrows from getting buried under the next link */
+        z-index: 1;
+        background-color: $process-nav-item-bg-color;
+        box-sizing: content-box;
+        border-left-width: 0;
+        border-bottom-width: 0;
+        border-right-width: $process-nav-arrow-border-width;
+        border-top-width: $process-nav-arrow-border-width;
+        border-style: solid;
+        border-color: $process-nav-arrow-border-color;
+      }
+
+      &:last-child:after {
+        content: none;
+      }
+
+      &.selected:after {
+        background-color: $process-nav-selected-item-bg-color;
+      }
+
+      &.process-nav-completed-step {
+        &:after {
+          background-color: $process-nav-completed-item-bg-color;
+        }
+      }
+    }
+  }
+}

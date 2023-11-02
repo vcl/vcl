@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+
+<form class="form" id="example-radio-button-form">
+  <div class="form-control-group">
+    <label for="example_rb_1" class="form-control-label">
+      Label
+      <em class="required-indicator">•</em>
+    </label>
+    <div id="example_rb_1" class="radio-group" role="radiogroup">
+      <div class="radio-button" role="checkbox" aria-checked="true" aria-labelledby="radio-button-label-1">
+        <label id="radio-button-label-1" class="radio-button-label" tabindex="0">
+          <div class="icon fas fa-dot-circle"></div>
+          <span class="icogram">
+            <span class="text">Male</span>
+            <span class="icon fas fa-mars" aria-hidden="true" aria-label="presentation" role="img"></span>
+          </span>
+        </label>
+      </div>
+      <div class="radio-button" role="checkbox" aria-checked="false" aria-labelledby="radio-button-label-2">
+        <label id="radio-button-label-2" class="radio-button-label" tabindex="0">
+          <div class="icon fas fa-circle"></div>
+          <span class="icogram">
+            <span class="text">Female</span>
+            <span class="icon fas fa-venus" aria-hidden="true" aria-label="presentation" role="img"></span>
+          </span>
+        </label>
+      </div>
+      <div class="radio-button" role="checkbox" aria-checked="false" aria-labelledby="radio-button-label-3">
+        <label id="radio-button-label-3" class="radio-button-label" tabindex="0">
+          <div class="icon fas fa-circle"></div>
+          <span class="icogram">
+            <span class="text">Genderless</span>
+            <span class="icon fas fa-genderless" aria-hidden="true" aria-label="presentation" role="img"></span>
+          </span>
+        </label>
+      </div>
+    </div>
+    <span class="form-control-hint">Form Control Hint</span>
+  </div>
+</form>
+
+<script>
+const docRoot = document.demoShadowRoot || document;
+
+(function() {
+  const radiogroups = docRoot.querySelectorAll('#example-radio-button-form .radio-group');
+  radiogroups.forEach(radiogroup => {
+    const radiobuttons = radiogroup.querySelectorAll('.radio-button');
+
+    function check(radiobutton) {
+      const icon = radiobutton.querySelector('.icon');
+      radiobutton.setAttribute('aria-checked', 'true');
+      icon.classList.remove('fa-circle');
+      icon.classList.add('fa-dot-circle');
+    }
+
+    function uncheck(radiobutton) {
+      const icon = radiobutton.querySelector('.icon');
+      radiobutton.setAttribute('aria-checked', 'false');
+      icon.classList.add('fa-circle');
+      icon.classList.remove('fa-dot-circle');
+    }
+
+    function uncheckAll() {
+      radiobuttons.forEach(radiobutton => uncheck(radiobutton));
+    }
+
+    radiobuttons.forEach(radiobutton => {
+      const label = radiobutton.querySelector('label');
+      const icon = radiobutton.querySelector('.icon');
+
+      label.addEventListener('click', () => {
+        const disabled = radiobutton.getAttribute('aria-disabled') === 'true';
+        const checked = radiobutton.getAttribute('aria-checked') === 'true';
+        if (disabled) {
+          return;
+        }
+        if (!checked) {
+          uncheckAll();
+          check(radiobutton);
+        }
+      });
+    });
+  })
+})();
+</script>

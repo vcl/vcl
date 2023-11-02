@@ -1,0 +1,29 @@
+@use "../theme.scss" as *;
+
+/* remove clear-button in ie10+ */
+::-ms-clear {
+  display: none;
+}
+
+/* remove spinner buttons from browsers */
+
+.input-field {
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: auto;
+  }
+
+  input[type="file"] {
+    padding: 0;
+  }
+}

@@ -1,0 +1,9 @@
+@use "sass:color";
+
+@use "node_modules/@vcl/vcl"with (
+  $app-viewport-bg-color: #ffffff,
+);
+
+.article-text {
+  color: color.grayscale(#6b717f);
+}

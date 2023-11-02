@@ -1,0 +1,11 @@
+{
+  "name": "tooltip",
+  "description": "Overlay carrying contextual, non-interactive content",
+  "categories": [
+    {
+      "title": "Overlays",
+      "itemPriority": 10,
+      "priority": 100
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "data-grid",
+  "description": "Data grid to display tabular data",
+  "categories": [
+    {
+      "title": "Tabular Data",
+      "itemPriority": 40,
+      "priority": 90
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "size-modulation",
+  "description": "Scale the size of text and whole widgets",
+  "categories": [
+    {
+      "title": "Utilities",
+      "itemPriority": 20,
+      "priority": 130
+    }
+  ]
+}

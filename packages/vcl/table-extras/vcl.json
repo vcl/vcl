@@ -1,0 +1,11 @@
+{
+  "name": "table-extras",
+  "description": "Extensions for the vcl table",
+  "categories": [
+    {
+      "title": "Tabular Data",
+      "itemPriority": 90,
+      "priority": 90
+    }
+  ]
+}
