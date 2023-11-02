@@ -43,7 +43,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: .
+          folder: docgen/vcl.github.io/dist
           
       - name: Extract version
         id: extract_version
