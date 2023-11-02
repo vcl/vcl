@@ -41,12 +41,9 @@ jobs:
           npm run demo automatedRun
           
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+        uses: JamesIves/github-pages-deploy-action@4.4.3
         with:
-          branch: master
-          folder: docgen/vcl.github.io/dist
-          ssh-key: ${{ secrets.DEPLOY_KEY }}
-          repository-name: vcl/vcl.github.io
+          folder: .
           
       - name: Extract version
         id: extract_version
