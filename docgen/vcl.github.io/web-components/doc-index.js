@@ -20,7 +20,7 @@ export default class DocIndex extends PolymerElement {
       <app-route route="{{route}}" pattern=":#page" ></app-route>
       <div class="app col">
         <header class="toolbar">
-          <doc-topbar title="{{doc.name}}"></doc-topbar>
+          <doc-topbar title="{{pageTitle}}"></doc-topbar>
         </header>
         <div class="content-area row flex">
           <doc-nav class="col" items="{{navItems}}" selected-item="{{route.path}}" ></doc-nav>
@@ -40,6 +40,11 @@ export default class DocIndex extends PolymerElement {
         type: Object,
         value: doc
       },
+      pageTitle: {
+        type: String,
+        readOnly: true,
+        computed: 'computeTitle(doc.name, doc.version)'
+      },
       navItems: {
         type: Array,
         readOnly: true,
@@ -51,6 +56,10 @@ export default class DocIndex extends PolymerElement {
         computed: 'computeContent(doc, route.path)'
       }
     };
+  }
+
+  computeTitle(name, version) {
+    return `${name} (v${version})`;
   }
 
   computeContent(doc, path) {
