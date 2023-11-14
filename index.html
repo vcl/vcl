@@ -17,6 +17,7 @@
 
 window.doc = {
    "name": "VCL Documentation",
+   "version": "3.0.0",
    "basePath": "",
    "packages": [
       {
@@ -11231,7 +11232,7 @@ const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyl
       <app-route route="{{route}}" pattern=":#page" ></app-route>
       <div class="app col">
         <header class="toolbar">
-          <doc-topbar title="{{doc.name}}"></doc-topbar>
+          <doc-topbar title="{{pageTitle}}"></doc-topbar>
         </header>
         <div class="content-area row flex">
           <doc-nav class="col" items="{{navItems}}" selected-item="{{route.path}}" ></doc-nav>
@@ -11240,7 +11241,7 @@ const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyl
           </div>
         </div>
       </div>
-      `;}static get is(){return'doc-index';}static get properties(){return{doc:{type:Object,value:doc},navItems:{type:Array,readOnly:true,computed:'computeNavItems(doc)'},content:{type:Object,readOnly:true,computed:'computeContent(doc, route.path)'}};}computeContent(doc,path){if(doc&&path!==undefined){const{parts}=doc;const itemsMatchingRoute=parts.filter(part=>{const name=part.name.split('@vcl/').pop();return name===path;});const itemsDocIndex=parts.filter(part=>{return part.docgen.docIndex;});const selectedItem=itemsMatchingRoute[0]?itemsMatchingRoute[0]:itemsDocIndex[0];return selectedItem;}return undefined;}computeNavItems(doc){const{parts}=doc;const navItems=parts.map(item=>{const itemIsCollection=item.docgen.categories===undefined;const itemIsDocIndex=item.docgen.docIndex===true;if(itemIsCollection||itemIsDocIndex)return undefined;const res={title:item.title||item.name,name:item.name,description:item.description};if(item.docgen.categories&&item.docgen.categories.length>0){res.primaryCategory=item.docgen.categories[0].title;res.priority=item.docgen.categories[0].priority;res.itemPriority=item.docgen.categories[0].itemPriority||0;}return res;}).filter(part=>part);return navItems;}}_exports.$docIndexDefault=DocIndex;customElements.define(DocIndex.is,DocIndex);var docIndex={'default':DocIndex};_exports.$docIndex=docIndex;});
+      `;}static get is(){return'doc-index';}static get properties(){return{doc:{type:Object,value:doc},pageTitle:{type:String,readOnly:true,computed:'computeTitle(doc.name, doc.version)'},navItems:{type:Array,readOnly:true,computed:'computeNavItems(doc)'},content:{type:Object,readOnly:true,computed:'computeContent(doc, route.path)'}};}computeTitle(name,version){return`${name} (v${version})`;}computeContent(doc,path){if(doc&&path!==undefined){const{parts}=doc;const itemsMatchingRoute=parts.filter(part=>{const name=part.name.split('@vcl/').pop();return name===path;});const itemsDocIndex=parts.filter(part=>{return part.docgen.docIndex;});const selectedItem=itemsMatchingRoute[0]?itemsMatchingRoute[0]:itemsDocIndex[0];return selectedItem;}return undefined;}computeNavItems(doc){const{parts}=doc;const navItems=parts.map(item=>{const itemIsCollection=item.docgen.categories===undefined;const itemIsDocIndex=item.docgen.docIndex===true;if(itemIsCollection||itemIsDocIndex)return undefined;const res={title:item.title||item.name,name:item.name,description:item.description};if(item.docgen.categories&&item.docgen.categories.length>0){res.primaryCategory=item.docgen.categories[0].title;res.priority=item.docgen.categories[0].priority;res.itemPriority=item.docgen.categories[0].itemPriority||0;}return res;}).filter(part=>part);return navItems;}}_exports.$docIndexDefault=DocIndex;customElements.define(DocIndex.is,DocIndex);var docIndex={'default':DocIndex};_exports.$docIndex=docIndex;});
 </script>
 
 <doc-index></doc-index>
