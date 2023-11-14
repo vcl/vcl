@@ -40,6 +40,10 @@ const rawHtml = exports.rawHtml = fs.readFileSync(__dirname + '/build/dist/index
 const appBundle =  fs.readFileSync(__dirname + '/build/dist/web-components/doc-index.js', 'utf8');
 const polyfillBundle =  fs.readFileSync(__dirname + '/build/dist/node_modules/@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce.js', 'utf8');
 
+
+const lernaPckJSON = fs.readFileSync(path.join(__dirname, '..', '..', 'lerna.json'), 'utf8');
+const version = JSON.parse(lernaPckJSON).version;
+
 if (verbose) {
   debug.enabled = true;
 }
@@ -131,13 +135,14 @@ const render = (data) => {
     const parts = await Promise.all(parts$);
     const doc = {
       name,
+      version,
       basePath: '',
       packages,
       parts,
     };
-
+    
     const inlineScript = '\nwindow.doc = ' + JSON.stringify(doc, null, 3) + ';';
-
+    
     const prodStuff = [
       '<script>',
       inlineScript,
