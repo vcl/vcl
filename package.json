@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "bootstrap": "lerna bootstrap",
     "changed": "lerna changed",
     "tag": "lerna version --no-push --conventional-commits",
     "publish": "lerna publish from-git",
@@ -37,15 +36,15 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.5.1",
-    "@mdi/font": "^7.3.67",
-    "browser-sync": "^2.29.3",
+    "@mdi/font": "^7.4.47",
+    "browser-sync": "^3.0.2",
     "chokidar": "^3.5.3",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
-    "lerna": "^8.0.0",
+    "lerna": "^8.0.2",
     "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5",
-    "sass": "^1.69.5"
+    "sass": "^1.70.0"
   },
   "dependencies": {
     "yargs": "^17.7.2"
