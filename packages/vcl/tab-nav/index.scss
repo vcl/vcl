@@ -171,8 +171,11 @@
 .tabs.tab-style-uni .tab,
 .tabs.tab-style-uni .tab:hover {
   border: 0;
-  border-bottom: 1px solid $tab-nav-border-color;
   margin-bottom: -1px;
+}
+
+.tabs.tab-style-uni .tab:hover {
+  border-bottom: 1px solid $tab-nav-border-color;
 }
 
 .tabs.tab-style-uni .tab.selected {
@@ -245,6 +248,8 @@
 .tabbable.tabs-right .tab.selected:hover {
   border-left: 3px solid $tab-nav-tab-border-selected-color;
 }
+
+
 
 .tabbable.tabs-right .tabs.tab-style-uni {
   border: 0;
