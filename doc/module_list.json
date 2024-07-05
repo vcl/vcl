@@ -54,7 +54,6 @@
   {"name": "popover",                              "description": "Popover",                                             "homepage": "https://vcl.github.io/#vcl-popover"},
   {"name": "print",                                "description": "Print media optimizations",                           "homepage": "https://vcl.github.io/#vcl-print"},
   {"name": "process-nav",                          "description": "Process navigation",                                  "homepage": "https://vcl.github.io/#vcl-process-nav"},
-  {"name": "product-list",                         "description": "Product list",                                        "homepage": "https://vcl.github.io/#vcl-product-list"},
   {"name": "progress-bar",                         "description": "Progress bar",                                        "homepage": "https://vcl.github.io/#vcl-progress-bar"},
   {"name": "select",                               "description": "Select form control",                                 "homepage": "https://vcl.github.io/#vcl-select"},
   {"name": "select-list",                          "description": "Select List form control",                            "homepage": "https://vcl.github.io/#vcl-select-list"},

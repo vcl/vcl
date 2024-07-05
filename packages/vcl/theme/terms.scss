@@ -74,6 +74,6 @@ $danger-light-color: lighten($brand-danger, +30%) !default;
 
 /* Fonts
  * ===== */
-$font-family-theme: "Helvetica Neue", Arial, "Lucida Grande", sans-serif !default;
+$font-family-theme: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-serif-theme: Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace-theme: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-monospace-theme: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;

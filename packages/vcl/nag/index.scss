@@ -1,11 +1,15 @@
 @use "../theme.scss" as *;
 
 .nag {
+  position: fixed;
+  left: 50%;
+  translate: -50% 0;
   z-index: 600;
-  box-shadow: 0px -2px 11px $gray-dark-2;
-  margin: 0;
+  box-shadow: 0 0 0px 6px transparentize($gray-dark-2, 0.5);
   border: 0;
   border-radius: 0;
   color: $nag-color;
   background-color: $nag-bg-color;
+  width: 48rem;;
+  bottom: 2rem;
 }

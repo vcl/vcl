@@ -44,6 +44,7 @@
 .button {
   & > .icogram {
     font-size: $button-label-font-size;
+    font-weight: $button-label-font-weight;
     line-height: $button-line-height;
   }
 }

@@ -1,11 +1,9 @@
 @use "../theme.scss" as *;
 
 .icon {
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
   background-repeat: no-repeat;
   fill: currentcolor;
-  position: relative;
   line-height: 1;
 
   &.icon-size1 {

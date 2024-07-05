@@ -88,4 +88,4 @@ in which concatenated input fields, texts and buttons take place.
 - `$input-disabled-border-color`
 - `$input-disabled-bg-color`
 - `$label-offset-x`: Allows to offset the label in case higher/ narrower standard input dimensions are used
-- `$label-offset-7`
+- `$label-offset-y`

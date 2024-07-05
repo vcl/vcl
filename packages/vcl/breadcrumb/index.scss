@@ -16,20 +16,19 @@
     & li {
       font-weight: bold;
       font-size: 0.98em;
+      display: flex;
+      align-items: center;
 
       & a {
         color: $breadcrumb-label-color;
-        display: inline-block;
       }
 
       & .breadcrumb-nav-item-label {
-        display: inline-block;
 
         & + .breadcrumb-nav-divider {
           color: $breadcrumb-divider-color;
-          display: inline-block;
-          padding-left: 0.2em;
-          padding-right: 0.2em;
+          padding-left: 0.5em;
+          padding-right: 0.5em;
         }
       }
 
@@ -37,6 +36,7 @@
       & a:focus-visible {
         outline: none;
         color: $breadcrumb-label-hover-color;
+        text-decoration: underline;
       }
 
       &.selected {

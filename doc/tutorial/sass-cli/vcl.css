@@ -3398,18 +3398,6 @@ figure figcaption {
   opacity: 0.8;
 }
 
-.gutter-margin,
-.gutter-margin-t-b {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.gutter-margin,
-.gutter-margin-l-r {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
 .grid-row {
   width: 100%;
   margin-left: auto;

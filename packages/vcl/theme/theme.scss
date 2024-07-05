@@ -231,10 +231,10 @@ $tab-nav-tab-color-selected--uni: $gray !default;
 $tab-nav-tab-disabled-color--uni: $gray-light-2 !default;
 
 /* Breadcrumb Navigation */
-$breadcrumb-divider-color: inherit !default;
-$breadcrumb-label-color: $brand-accent-dark !default;
-$breadcrumb-label-selected-color: inherit !default;
-$breadcrumb-label-hover-color: $brand-accent !default;
+$breadcrumb-divider-color: $gray-dark-1 !default;
+$breadcrumb-label-color: $gray-dark-1 !default;
+$breadcrumb-label-selected-color: $gray-dark-4 !default;
+$breadcrumb-label-hover-color: $gray-dark-2 !default;
 
 /* Navigation */
 $navigation-bg-color: transparent !default;
@@ -379,7 +379,8 @@ $button-outline-focus-color: $black !default;
 $button-border-width: 0 !default;
 $button-border-radius: 0 !default;
 $button-border-color: transparent !default;
-$button-label-font-size: 0.96em !default;
+$button-label-font-size: 1.15em !default;
+$button-label-font-weight: 500 !default;
 $button-label-text-transform: none !default;
 
 /* Default variant */
@@ -608,8 +609,3 @@ $email-viewport-bg-color: #f6f6f6 !default;
 $email-body-bg-color: $white !default;
 $email-body-border-color: #e9e9e9 !default;
 $email-footer-color: #999999 !default;
-
-/* Product List */
-$product-list-color: $gray-dark-4 !default;
-$product-list-name-color: $black !default;
-$product-list-border-color: $gray-light-3 !default;
