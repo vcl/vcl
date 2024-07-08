@@ -3286,10 +3286,6 @@ textarea::placeholder,
   border: 0;
 }
 
-.tabs.tab-style-uni .tab:hover {
-  border-bottom: 1px solid rgb(185, 185, 185);
-}
-
 .tabs.tab-style-uni .tab.selected {
   border: 0;
   margin-bottom: -1px;
