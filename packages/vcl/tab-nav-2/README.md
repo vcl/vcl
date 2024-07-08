@@ -40,31 +40,6 @@ content textual for example.
 
 [uni example](/demo/example-uni.html)
 
-The class `tabbable` is used to create a wrapper for the tabs
-and the content area.
-The content area can be built from various components
-such as a panel or the included classes `tab-content` and `tab-panel`.
-
-By default tabs are laid out as shown above.
-Different layouts are possible as shown below.
-
-Modifier class `tab-left`.
-
-[left1 example](/demo/example-left.html)
-
-[left2 example](/demo/example-uni-left.html)
-
-Modifier class `tab-right`.
-
-[right1 example](/demo/example-right.html)
-
-[right2 example](/demo/example-uni-right.html)
-
-Justified tabs can be achieved using the appropriate layout attributes.
-
-[uni example](/demo/example-uni-justified.html)
-
-
 ## Classes
 
 - `tabbable`: Wrapper of tab bar and tab content area.

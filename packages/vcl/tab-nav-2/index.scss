@@ -1,12 +1,10 @@
-@use "../theme.scss" as *;
-@use "../badge.scss" as *;
-@use "../button.scss" as *;
-@use "../icon.scss" as *;
-@use "../mixins.scss";
+@use '../theme.scss' as *;
+@use '../badge.scss' as *;
+@use '../button.scss' as *;
+@use '../icon.scss' as *;
 
 .tabbable {
   margin-bottom: $block-elem-vertical-gap;
-  @include mixins.clearfix;
   &.no-border {
     & .tab-content {
       border-bottom: 0;
@@ -33,12 +31,12 @@
 }
 
 .tabs {
+  display: flex;
   box-sizing: border-box;
   list-style: none;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  @include mixins.clearfix;
 
   &.tab-nav-justified {
     display: flex;
@@ -73,7 +71,6 @@
 }
 
 .tabs .tab {
-  float: left;
   border: 0;
   white-space: nowrap;
   user-select: none;
@@ -86,10 +83,10 @@
   align-items: center;
   justify-content: center;
   border: 0;
-  height: 2.9em;
-  line-height: 2.9;
-  padding: 0 0.75em 0 0.75em;
-  border-radius: 0 0 0 0;
+  //   height: 2.9em;
+  //   line-height: 2.9;
+  padding: 0 0.75em;
+  border-radius: 0;
   min-width: 4em;
   text-align: center;
   box-sizing: border-box;
@@ -171,19 +168,22 @@
 .tabs.tab-style-uni .tab,
 .tabs.tab-style-uni .tab:hover {
   border: 0;
+}
+
+.tabs.tab-style-uni .tab:hover {
   border-bottom: 1px solid $tab-nav-border-color;
-  margin-bottom: -1px;
+//   margin-bottom: -1px;
 }
 
 .tabs.tab-style-uni .tab.selected {
   border: 0;
+  margin-bottom: -1px;
 }
 
 /* Tabs left */
 
 .tabbable.tabs-left .tab,
 .tabbable.tabs-left .tab:hover {
-  float: none;
   margin: 0 0 0 0;
   border-radius: 0 0 0 0;
   border-bottom: 0;
@@ -215,12 +215,7 @@
   border-right: 0;
 }
 
-.tabbable.tabs-left .tabs {
-  float: left;
-}
-
 .tabbable.tabs-left .tab-content {
-  float: left;
   display: block;
   border-bottom: 0;
   border: 0;
@@ -234,9 +229,8 @@
 
 .tabbable.tabs-right .tab,
 .tabbable.tabs-right .tab:hover {
-  float: none;
-  margin: 0 0 0 0;
-  border-radius: 0 0 0 0;
+  margin: 0;
+  border-radius: 0;
   border-bottom: 0;
   border-left: 3px solid $tab-nav-tab-bg-color;
 }
@@ -266,12 +260,7 @@
   border-right: 0;
 }
 
-.tabbable.tabs-right .tabs {
-  float: right;
-}
-
 .tabbable.tabs-right .tab-content {
-  float: right;
   display: block;
   border-bottom: 0;
   border: 0;
@@ -303,7 +292,8 @@
         color: $tab-nav-tab-color-selected--uni;
         border: 1px solid $tab-nav-border-color;
         border-bottom: 1px solid $tab-nav-tab-bg-color--uni;
-        border-color: $tab-nav-border-color $tab-nav-border-color $tab-nav-tab-bg-color;
+        border-color: $tab-nav-border-color $tab-nav-border-color
+          $tab-nav-tab-bg-color;
         background-color: $tab-nav-tab-bg-selected-color--uni;
       }
 

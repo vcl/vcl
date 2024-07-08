@@ -3156,13 +3156,6 @@ textarea::placeholder,
 .tabbable {
   margin-bottom: 1.3em;
 }
-.tabbable:before, .tabbable:after {
-  display: table;
-  content: " ";
-}
-.tabbable:after {
-  clear: both;
-}
 .tabbable.no-border .tab-content {
   border-bottom: 0;
 }
@@ -3182,18 +3175,12 @@ textarea::placeholder,
 }
 
 .tabs {
+  display: flex;
   box-sizing: border-box;
   list-style: none;
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-.tabs:before, .tabs:after {
-  display: table;
-  content: " ";
-}
-.tabs:after {
-  clear: both;
 }
 .tabs.tab-nav-justified {
   display: flex;
@@ -3221,7 +3208,6 @@ textarea::placeholder,
 }
 
 .tabs .tab {
-  float: left;
   border: 0;
   white-space: nowrap;
   user-select: none;
@@ -3234,10 +3220,8 @@ textarea::placeholder,
   align-items: center;
   justify-content: center;
   border: 0;
-  height: 2.9em;
-  line-height: 2.9;
-  padding: 0 0.75em 0 0.75em;
-  border-radius: 0 0 0 0;
+  padding: 0 0.75em;
+  border-radius: 0;
   min-width: 4em;
   text-align: center;
   box-sizing: border-box;
@@ -3299,18 +3283,20 @@ textarea::placeholder,
 .tabs.tab-style-uni .tab,
 .tabs.tab-style-uni .tab:hover {
   border: 0;
+}
+
+.tabs.tab-style-uni .tab:hover {
   border-bottom: 1px solid rgb(185, 185, 185);
-  margin-bottom: -1px;
 }
 
 .tabs.tab-style-uni .tab.selected {
   border: 0;
+  margin-bottom: -1px;
 }
 
 /* Tabs left */
 .tabbable.tabs-left .tab,
 .tabbable.tabs-left .tab:hover {
-  float: none;
   margin: 0 0 0 0;
   border-radius: 0 0 0 0;
   border-bottom: 0;
@@ -3342,12 +3328,7 @@ textarea::placeholder,
   border-right: 0;
 }
 
-.tabbable.tabs-left .tabs {
-  float: left;
-}
-
 .tabbable.tabs-left .tab-content {
-  float: left;
   display: block;
   border-bottom: 0;
   border: 0;
@@ -3360,9 +3341,8 @@ textarea::placeholder,
 /* Tabs right */
 .tabbable.tabs-right .tab,
 .tabbable.tabs-right .tab:hover {
-  float: none;
-  margin: 0 0 0 0;
-  border-radius: 0 0 0 0;
+  margin: 0;
+  border-radius: 0;
   border-bottom: 0;
   border-left: 3px solid transparent;
 }
@@ -3392,12 +3372,7 @@ textarea::placeholder,
   border-right: 0;
 }
 
-.tabbable.tabs-right .tabs {
-  float: right;
-}
-
 .tabbable.tabs-right .tab-content {
-  float: right;
   display: block;
   border-bottom: 0;
   border: 0;
