@@ -170,6 +170,10 @@
   border: 0;
 }
 
+.tabs.tab-style-uni .tab:hover {
+  border-bottom: 1px solid $tab-nav-border-color;
+}
+
 .tabs.tab-style-uni .tab.selected {
   border: 0;
   margin-bottom: -1px;
@@ -250,6 +254,8 @@
 .tabbable.tabs-right .tab.selected:hover {
   border-left: 3px solid $tab-nav-tab-border-selected-color;
 }
+
+
 
 .tabbable.tabs-right .tabs.tab-style-uni {
   border: 0;
