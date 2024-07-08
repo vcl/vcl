@@ -1,6 +1,6 @@
 {
-  "name": "tab-nav-2",
-  "description": "List of navigation items arranged as tabs: New Implementation",
+  "name": "tab-nav",
+  "description": "List of navigation items arranged as tabs",
   "categories": [
     {
       "title": "Navigations",

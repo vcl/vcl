@@ -3286,10 +3286,6 @@ textarea::placeholder,
   border: 0;
 }
 
-.tabs.tab-style-uni .tab:hover {
-  border-bottom: 1px solid rgb(185, 185, 185);
-}
-
 .tabs.tab-style-uni .tab.selected {
   border: 0;
   margin-bottom: -1px;
@@ -3303,8 +3299,8 @@ textarea::placeholder,
 /* Tabs left */
 .tabbable.tabs-left .tab,
 .tabbable.tabs-left .tab:hover {
-  margin: 0 0 0 0;
-  border-radius: 0 0 0 0;
+  margin: 0;
+  border-radius: 0;
   border-bottom: 0;
   border-right: 3px solid transparent;
 }
@@ -3326,7 +3322,7 @@ textarea::placeholder,
 
 .tabbable.tabs-left .tabs.tab-style-uni .tab {
   margin-right: 1px;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
 }
 
 .tabbable.tabs-left .tabs {

@@ -170,11 +170,6 @@
   border: 0;
 }
 
-.tabs.tab-style-uni .tab:hover {
-  border-bottom: 1px solid $tab-nav-border-color;
-  //   margin-bottom: -1px;
-}
-
 .tabs.tab-style-uni .tab.selected {
   border: 0;
   margin-bottom: -1px;
@@ -189,8 +184,8 @@
 
 .tabbable.tabs-left .tab,
 .tabbable.tabs-left .tab:hover {
-  margin: 0 0 0 0;
-  border-radius: 0 0 0 0;
+  margin: 0;
+  border-radius: 0;
   border-bottom: 0;
   border-right: 3px solid $tab-nav-tab-bg-color;
 }
@@ -212,7 +207,7 @@
 
 .tabbable.tabs-left .tabs.tab-style-uni .tab {
   margin-right: 1px;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
 }
 
 .tabbable.tabs-left .tabs {
