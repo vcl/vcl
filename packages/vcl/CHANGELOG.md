@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/vcl/vcl/compare/v3.0.0...v3.2.0) (2024-07-13)
+
+
+### Bug Fixes
+
+* Make calendar headrs a bit nicer, reduce layer animation ([e8f726d](https://github.com/vcl/vcl/commit/e8f726d6b17f1ed43674cb24a1799bf2eb4fcf4d))
+* **tab-nav:** remove border on hover for uni-style ([bc37d38](https://github.com/vcl/vcl/commit/bc37d38ed96fd3f35edf3fdcb5a6401e7062bf15))
+* **tab-nav:** remove border on hover for unique-style ([4050e85](https://github.com/vcl/vcl/commit/4050e851c397719ba014a750a54b516b6e95756f))
+* **tab:** remove border-bottom from tab item ([908431e](https://github.com/vcl/vcl/commit/908431e18039c0cee8cb95b871a16853b6f1ead6))
+
+
+### Features
+
+* improve styling of breadcrumb, better docs, make icons flex, rewrite nag ([5618d10](https://github.com/vcl/vcl/commit/5618d10f65b49250118cca5f32b6aa87bdcb8bb7))
+
+
+
+
+
 # [3.0.0](https://github.com/vcl/vcl/compare/v2.4.0...v3.0.0) (2023-10-25)
 
 
