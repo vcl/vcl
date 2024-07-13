@@ -37,4 +37,9 @@
   & h2.toolbar-title {
     font-size: 1.05em;
   }
+
+  & .button {
+    height: auto;
+    min-height: $button-height;
+  }
 }

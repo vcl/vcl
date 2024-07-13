@@ -5,7 +5,7 @@
 </div>
 
 <script>
-  const CLOSE_MODAL_DURATION = 500;
+  const CLOSE_MODAL_DURATION = 0;
 
   const docRoot = document.demoShadowRoot || document;
 
@@ -69,8 +69,8 @@
 
     // Listeners
     deleteBtn.addEventListener('click', () => {
-      layerCover.classList.add('fade-out-animation');
-      layer.classList.add('fade-out-animation');
+      layerCover.classList.add('fade-animation');
+      layer.classList.add('fade-animation');
 
       myTimeout = setTimeout(function () {
         layer.remove();
@@ -79,8 +79,8 @@
     });
 
     cancelBtn.addEventListener('click', () => {
-      layerCover.classList.add('fade-out-animation');
-      layer.classList.add('fade-out-animation');
+      // layerCover.classList.add('fade-animation');
+      // layer.classList.add('fade-animation');
 
       myTimeout = setTimeout(() => {
         layer.remove();
@@ -90,8 +90,8 @@
 
     docRoot.onclick = (event) => {
       if (event.target === layerCover || event.target === layer) {
-        layerCover.classList.add('fade-out-animation');
-        layer.classList.add('fade-out-animation');
+        layerCover.classList.add('fade-animation');
+        layer.classList.add('fade-animation');
 
         myTimeout = setTimeout(() => {
           layer.remove();

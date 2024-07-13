@@ -1,13 +1,5 @@
 @use '../theme.scss' as *;
 
-/* ==== Entry animation ==== */
-@starting-style {
-  .layer-cover,
-  .layer {
-    opacity: 0.4;
-  }
-}
-
 .layer-cover {
   position: fixed;
   z-index: 300;
@@ -35,8 +27,8 @@
   align-items: center;
   justify-content: center;
   /* Add exiting animation */
-  transition: opacity $layer-transition-duration,
-    display $layer-transition-duration;
+  transition: opacity $layer-fade-transition-duration,
+    display $layer-fade-transition-duration;
   transition-behavior: allow-discrete;
 
   &.layer-stick-to-bottom {
@@ -50,9 +42,17 @@
   }
 }
 
+/* Needs to be placed below the actual rule as specificity is the same */
+@starting-style {
+  .layer-cover,
+  .layer {
+    opacity: 0.1;
+  }
+}
+
 /* Feature: The fade out animation for smooth transition*/
-.layer-cover.fade-out-animation,
-.layer.fade-out-animation {
+.layer-cover.fade-animation,
+.layer.fade-animation {
   opacity: 0;
   display: none;
 }
@@ -76,12 +76,12 @@
 
 .zoom {
   animation-name: animatetop;
-  animation-duration: $layer-box-animation-durations;
+  animation-duration: $layer-zoom-animation-durations;
 }
 
-.fade-out-animation .zoom {
+.fade-animation .zoom {
   animation-name: animatedown;
-  animation-duration: $layer-box-animation-durations;
+  animation-duration: $layer-zoom-animation-durations;
   animation-fill-mode: forwards;
 }
 

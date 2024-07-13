@@ -933,7 +933,7 @@ ol ul {
   font-weight: bolder;
   vertical-align: middle;
   display: inline-block;
-  height: 2.65em;
+  min-height: 2.65em;
   box-sizing: border-box;
   user-select: none;
   white-space: normal;
@@ -3214,7 +3214,6 @@ textarea::placeholder,
   cursor: pointer;
   position: relative;
   margin-right: 0.5em;
-  min-width: 6em;
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -3639,6 +3638,10 @@ table.table input,
 }
 .toolbar h2.toolbar-title {
   font-size: 1.05em;
+}
+.toolbar .button {
+  height: auto;
+  min-height: 2.65em;
 }
 
 body,
