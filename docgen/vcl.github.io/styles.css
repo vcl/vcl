@@ -933,7 +933,7 @@ ol ul {
   font-weight: bolder;
   vertical-align: middle;
   display: inline-block;
-  min-height: 2.65em;
+  height: 2.65em;
   box-sizing: border-box;
   user-select: none;
   white-space: normal;
