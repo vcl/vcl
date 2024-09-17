@@ -32,25 +32,25 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-          
+
       - name: install and build
         env:
           GIT_BRANCH: ${{ steps.extract_branch.outputs.branch }}
         run: |
           npm ci
           npm run demo automatedRun
-          
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: docgen/vcl.github.io/dist
-          
+
       - name: Extract version
         id: extract_version
         uses: Saionaro/extract-package-version@v1.1.1
         with:
           path: packages/vcl
-          
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@latest
