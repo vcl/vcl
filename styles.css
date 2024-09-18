@@ -394,7 +394,6 @@ template {
 /* Gallery */
 /* Drawer */
 /* E-Mail */
-/* Product List */
 /* Chapter level header */
 .master-header {
   text-align: center;
@@ -861,11 +860,9 @@ ol ul {
 }
 
 .icon {
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
   background-repeat: no-repeat;
   fill: currentcolor;
-  position: relative;
   line-height: 1;
 }
 .icon.icon-size1 {
@@ -956,7 +953,8 @@ ol ul {
 }
 
 .button > .icogram {
-  font-size: 0.96em;
+  font-size: 1.15em;
+  font-weight: 500;
   line-height: initial;
 }
 
@@ -1459,6 +1457,7 @@ span.button[disabled] {
   text-align: center;
   min-width: 2.5em;
   color: rgb(106, 106, 106);
+  display: inline-block;
 }
 .input-field > button.button,
 .input-field > button.button:hover {
@@ -3157,13 +3156,6 @@ textarea::placeholder,
 .tabbable {
   margin-bottom: 1.3em;
 }
-.tabbable:before, .tabbable:after {
-  display: table;
-  content: " ";
-}
-.tabbable:after {
-  clear: both;
-}
 .tabbable.no-border .tab-content {
   border-bottom: 0;
 }
@@ -3183,18 +3175,12 @@ textarea::placeholder,
 }
 
 .tabs {
+  display: flex;
   box-sizing: border-box;
   list-style: none;
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-.tabs:before, .tabs:after {
-  display: table;
-  content: " ";
-}
-.tabs:after {
-  clear: both;
 }
 .tabs.tab-nav-justified {
   display: flex;
@@ -3222,23 +3208,20 @@ textarea::placeholder,
 }
 
 .tabs .tab {
-  float: left;
   border: 0;
   white-space: nowrap;
   user-select: none;
   cursor: pointer;
   position: relative;
   margin-right: 0.5em;
-  min-width: 6em;
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: center;
   border: 0;
-  height: 2.9em;
   line-height: 2.9;
-  padding: 0 0.75em 0 0.75em;
-  border-radius: 0 0 0 0;
+  padding: 0 0.75em;
+  border-radius: 0;
   min-width: 4em;
   text-align: center;
   box-sizing: border-box;
@@ -3300,20 +3283,23 @@ textarea::placeholder,
 .tabs.tab-style-uni .tab,
 .tabs.tab-style-uni .tab:hover {
   border: 0;
-  border-bottom: 1px solid rgb(185, 185, 185);
-  margin-bottom: -1px;
 }
 
 .tabs.tab-style-uni .tab.selected {
   border: 0;
+  margin-bottom: -1px;
+}
+
+.tabbable.tabs-left,
+.tabbable.tabs-right {
+  display: flex;
 }
 
 /* Tabs left */
 .tabbable.tabs-left .tab,
 .tabbable.tabs-left .tab:hover {
-  float: none;
-  margin: 0 0 0 0;
-  border-radius: 0 0 0 0;
+  margin: 0;
+  border-radius: 0;
   border-bottom: 0;
   border-right: 3px solid transparent;
 }
@@ -3335,7 +3321,11 @@ textarea::placeholder,
 
 .tabbable.tabs-left .tabs.tab-style-uni .tab {
   margin-right: 1px;
-  border-radius: 0 0 0 0;
+  border-radius: 0;
+}
+
+.tabbable.tabs-left .tabs {
+  flex-direction: column;
 }
 
 .tabbable.tabs-left .tabs.tab-style-uni .tab.selected,
@@ -3343,12 +3333,7 @@ textarea::placeholder,
   border-right: 0;
 }
 
-.tabbable.tabs-left .tabs {
-  float: left;
-}
-
 .tabbable.tabs-left .tab-content {
-  float: left;
   display: block;
   border-bottom: 0;
   border: 0;
@@ -3359,11 +3344,18 @@ textarea::placeholder,
 }
 
 /* Tabs right */
+.tabbable.tabs-right {
+  flex-direction: row-reverse;
+}
+
+.tabbable.tabs-right .tabs {
+  flex-direction: column;
+}
+
 .tabbable.tabs-right .tab,
 .tabbable.tabs-right .tab:hover {
-  float: none;
-  margin: 0 0 0 0;
-  border-radius: 0 0 0 0;
+  margin: 0;
+  border-radius: 0;
   border-bottom: 0;
   border-left: 3px solid transparent;
 }
@@ -3393,12 +3385,7 @@ textarea::placeholder,
   border-right: 0;
 }
 
-.tabbable.tabs-right .tabs {
-  float: right;
-}
-
 .tabbable.tabs-right .tab-content {
-  float: right;
   display: block;
   border-bottom: 0;
   border: 0;
@@ -3625,7 +3612,6 @@ table.table input,
 }
 
 .toolbar {
-  user-select: none;
   box-sizing: border-box;
   background-color: rgb(241, 241, 241);
 }
@@ -3653,13 +3639,17 @@ table.table input,
 .toolbar h2.toolbar-title {
   font-size: 1.05em;
 }
+.toolbar .button {
+  height: auto;
+  min-height: 2.65em;
+}
 
 body,
 .viewport {
   font-size: 0.875em;
   line-height: 1.428;
   color: rgb(48, 48, 48);
-  font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .disabled,
@@ -3704,7 +3694,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 93%;
 }
 
