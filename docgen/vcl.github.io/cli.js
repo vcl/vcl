@@ -54,6 +54,7 @@ if (!fs.existsSync(outputFolder)){
 
 const sassOptions = {
   includePaths: [baseModuleFolder],
+  silenceDeprecations: ['legacy-js-api'],
   importer: (url, prev, done) => {
     if (url[0] === '~') {
       url = path.resolve(process.cwd(), 'node_modules', url.substr(1));

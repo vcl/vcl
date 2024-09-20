@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../theme.scss" as *;
 
 .nag {
@@ -5,7 +6,7 @@
   left: 50%;
   translate: -50% 0;
   z-index: 600;
-  box-shadow: 0 0 0px 6px transparentize($gray-dark-2, 0.5);
+  box-shadow: 0 0 0px 6px color.adjust($gray-dark-2, $alpha: -0.5);
   border: 0;
   border-radius: 0;
   color: $nag-color;
