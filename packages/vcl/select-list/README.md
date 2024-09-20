@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) select-list
+# [VCL](https://vcl.github.io/vcl/) select-list
 
 A select-list menu consisting of a list of items which can be selected.
 

@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) busy-indicator
+# [VCL](https://vcl.github.io/vcl/) busy-indicator
 
 Indicate that a long-lasting operation is currently in progress.
 

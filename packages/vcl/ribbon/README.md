@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) ribbon
+# [VCL](https://vcl.github.io/vcl/) ribbon
 
 A ribbon to show meta data in a celebratory manner.
 

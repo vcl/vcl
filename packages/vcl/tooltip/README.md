@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) tooltip
+# [VCL](https://vcl.github.io/vcl/) tooltip
 
 Overlay carrying contextual, non-interactive content.
 

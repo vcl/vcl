@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) data-list
+# [VCL](https://vcl.github.io/vcl/) data-list
 
 Tabular data browser, selection list and navigation menu.
 

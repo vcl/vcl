@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) tutorial
+# [VCL](https://vcl.github.io/vcl/) tutorial
 
 Short tutorials showing how to create VCL builds based on the collection of
 [vcl modules](../../packages/vcl),
@@ -62,4 +62,4 @@ The search input is more complex and actually a mashup of multiple VCL component
 
 In the same manner, all VCL styles are used.
 You can find out more on the available modules, their classes and
-purpose in the [module browser](https://vcl.github.io/).
+purpose in the [module browser](https://vcl.github.io/vcl/).

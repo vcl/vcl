@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) zoom-box
+# [VCL](https://vcl.github.io/vcl/) zoom-box
 
 Zoom into areas of images.
 

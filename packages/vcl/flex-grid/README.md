@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) flex-grid
+# [VCL](https://vcl.github.io/vcl/) flex-grid
 
 Responsive flexbox based grid and layout.
 

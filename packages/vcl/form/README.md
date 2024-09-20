@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) form
+# [VCL](https://vcl.github.io/vcl/) form
 
 Form element.
 

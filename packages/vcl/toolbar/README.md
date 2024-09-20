@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) toolbar
+# [VCL](https://vcl.github.io/vcl/) toolbar
 
 Horizontal bar which can contain navigation elements,
 buttons, form controls etc.
@@ -15,7 +15,7 @@ not require a modifier.
 
 A toolbar with logo, controls and a navigation menu
 as typically found as main application toolbar.
-To manifest its hierarchy level visually,  it is enlarged by 10%.
+To account for its hierarchy level visually, it is enlarged by 10%.
 
 [main toolbar example](/demo/example-main.html)
 

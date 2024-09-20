@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) panel
+# [VCL](https://vcl.github.io/vcl/) panel
 
 Container element to group and highlight content.
 

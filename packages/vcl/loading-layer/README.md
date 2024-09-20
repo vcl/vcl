@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) loading-layer
+# [VCL](https://vcl.github.io/vcl/) loading-layer
 
 Cover areas to indicate updates and temporarily prevent interaction on them.
 

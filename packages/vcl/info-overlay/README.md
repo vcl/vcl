@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) info-overlay
+# [VCL](https://vcl.github.io/vcl/) info-overlay
 
 A general purpose overlay carrying arbitrary information associated with its
 container.

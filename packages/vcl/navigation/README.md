@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) navigation
+# [VCL](https://vcl.github.io/vcl/) navigation
 
 Horizontally and vertically aligned multilevel navigation.
 

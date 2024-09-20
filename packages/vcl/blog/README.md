@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) blog
+# [VCL](https://vcl.github.io/vcl/) blog
 
 Everything that makes up a blog.
 

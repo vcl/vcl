@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) breadcrumb
+# [VCL](https://vcl.github.io/vcl/) breadcrumb
 
 A chain of navigation items represented as links.
 

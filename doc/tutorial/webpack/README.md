@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) webpack tutorial
+# [VCL](https://vcl.github.io/vcl/) webpack tutorial
 
 ## Installing and building the VCL
 

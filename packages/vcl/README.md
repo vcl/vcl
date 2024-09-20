@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) - @vcl/vcl
+# [VCL](https://vcl.github.io/vcl/) - @vcl/vcl
 
 The `@vcl/vcl` package contains all modules that are part of the VCL and
 provides different entry points for imports.

@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) input
+# [VCL](https://vcl.github.io/vcl/) input
 
 Standard HTML form input controls.
 

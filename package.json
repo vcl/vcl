@@ -11,13 +11,7 @@
     "prepublish": "npm run build",
     "prepublish-next": "npm run build",
     "build": "node scripts/build.js",
-    "demo": "cd docgen/vcl.github.io && npm i && npm run gen-doc",
-    "docs": "cross-env-shell npm run docs:set-env npm-run-all docs:set-env docs:clean docs:pull-current docs:build",
-    "docs:set-env": "cross-env-shell GIT_BRANCH=${GIT_BRANCH:-$(git rev-parse --abbrev-ref HEAD)}",
-    "docs:build": "cross-env-shell ng build --prod --outputPath=docs/${GIT_BRANCH}",
-    "docs:deploy": "git-directory-deploy --directory docs --branch gh-pages",
-    "docs:clean": "rimraf docs",
-    "docs:pull-current": "git clone -b gh-pages --single-branch https://github.com/vcl/vcl.git docs"
+    "demo": "cd docgen/vcl.github.io && npm i && npm run gen-doc"
   },
   "author": {
     "name": "n-fuse GmbH",
@@ -38,13 +32,12 @@
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@mdi/font": "^7.4.47",
     "browser-sync": "^3.0.2",
-    "chokidar": "^3.6.0",
+    "chokidar": "^4.0.0",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "lerna": "^8.1.5",
-    "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5",
-    "sass": "^1.77.6"
+    "sass": "^1.79.1"
   },
   "dependencies": {
     "yargs": "^17.7.2"

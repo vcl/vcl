@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) slider
+# [VCL](https://vcl.github.io/vcl/) slider
 
 Slider based selection of a discrete or continuous value within a given range.
 

@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) app-area
+# [VCL](https://vcl.github.io/vcl/) app-area
 
 The background and layout of the app's viewport and app area.
 

@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) spinner
+# [VCL](https://vcl.github.io/vcl/) spinner
 
 Spinner for input values that can be incremented and decremented.
 

@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) preprocessor cli tutorial
+# [VCL](https://vcl.github.io/vcl/) preprocessor cli tutorial
 
 ## Installing and building the VCL
 

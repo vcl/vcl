@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) divider
+# [VCL](https://vcl.github.io/vcl/) divider
 
 Horizontally or vertically aligned divider to segment content.
 

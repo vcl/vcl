@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) nag
+# [VCL](https://vcl.github.io/vcl/) nag
 
 Overlay dialog which requires acknowledgement to go away.
 

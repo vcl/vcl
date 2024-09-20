@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) button
+# [VCL](https://vcl.github.io/vcl/) button
 
 The main control for triggering actions.
 

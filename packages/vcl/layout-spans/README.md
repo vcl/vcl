@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) layout-spans
+# [VCL](https://vcl.github.io/vcl/) layout-spans
 
 *deprecated* - Use [sizing utils](#utils) instead.
 

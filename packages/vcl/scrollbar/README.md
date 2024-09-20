@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) scrollbar
+# [VCL](https://vcl.github.io/vcl/) scrollbar
 
 Styling of native browser scrollbars.
 

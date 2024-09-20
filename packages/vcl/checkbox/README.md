@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) checkbox
+# [VCL](https://vcl.github.io/vcl/) checkbox
 
 Checkbox form control.
 

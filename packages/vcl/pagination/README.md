@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) pagination
+# [VCL](https://vcl.github.io/vcl/) pagination
 
 Random access to pages via links and directional controls to navigate through
 paged content.

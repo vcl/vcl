@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) table-extras
+# [VCL](https://vcl.github.io/vcl/) table-extras
 
 Extensions for the vcl table.
 

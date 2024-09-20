@@ -8,7 +8,7 @@
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  line-height: 1.9em;
+  height: $input-elem-height * 0.9;
   padding: 0;
   padding-top: 0.2em; // Tweak to make the text actually appear to be centered
   margin-top: 0;

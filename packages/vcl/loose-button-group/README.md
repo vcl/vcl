@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) loose-button-group
+# [VCL](https://vcl.github.io/vcl/) loose-button-group
 
 A button group with visible inter-item gaps.
 

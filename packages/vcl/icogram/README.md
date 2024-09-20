@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) icogram
+# [VCL](https://vcl.github.io/vcl/) icogram
 
 The combination of icon(s) and a textual label(s) in any permutation.
 

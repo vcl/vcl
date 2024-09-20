@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) breakpoints
+# [VCL](https://vcl.github.io/vcl/) breakpoints
 
 Descriptive breakpoints for responsive adaptation of components.
 

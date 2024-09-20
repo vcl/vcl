@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) select
+# [VCL](https://vcl.github.io/vcl/) select
 
 Select form control.
 

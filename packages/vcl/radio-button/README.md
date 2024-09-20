@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) radio-button
+# [VCL](https://vcl.github.io/vcl/) radio-button
 
 Radio button form control.
 

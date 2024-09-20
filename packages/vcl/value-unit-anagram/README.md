@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) value-unit-anagram
+# [VCL](https://vcl.github.io/vcl/) value-unit-anagram
 
 The combination of value(s) with associated unit(s) in any permutation.
 

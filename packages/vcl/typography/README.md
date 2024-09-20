@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) typography
+# [VCL](https://vcl.github.io/vcl/) typography
 
 Styling for basic typographical elements.
 

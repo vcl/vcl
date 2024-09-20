@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) go-to-top
+# [VCL](https://vcl.github.io/vcl/) go-to-top
 
 A fixed positioned control to jump to the top of a scrolled viewport.
 

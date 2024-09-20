@@ -1,4 +1,4 @@
-# [VCL](https://github.com/vcl/doc) process-nav
+# [VCL](https://vcl.github.io/vcl/) process-nav
 
 Navigate within a process consisting of steps.
 

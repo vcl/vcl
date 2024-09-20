@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) callout
+# [VCL](https://vcl.github.io/vcl/) callout
 
 Unobtrusive hints usually found in documentations or factual books.
 

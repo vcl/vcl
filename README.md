@@ -2,7 +2,7 @@
 
 ## Demo
 
-[Demo browser showing all VCL modules](https://vcl.github.io/).
+[Demo browser showing all VCL modules](https://vcl.github.io/vcl/).
 
 ## Docs
 

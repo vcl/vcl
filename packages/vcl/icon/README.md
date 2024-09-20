@@ -1,4 +1,4 @@
-# [VCL](https://vcl.github.io/) icon
+# [VCL](https://vcl.github.io/vcl/) icon
 
 Icon.
 
