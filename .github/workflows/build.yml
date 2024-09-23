@@ -39,6 +39,7 @@ jobs:
         run: |
           npm ci
           npm run demo automatedRun
+          sed -i -e 's/..\/styles.css/styles.css/g' docgen/vcl.github.io/dist/index.html
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
