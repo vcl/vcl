@@ -42,6 +42,9 @@ With single item and thumbnail bar.
 
 ## Modifiers
 
+### For `gallery`
+- `navigation-buttons-on-hover`
+
 ### For `gallery-thumb-wrapper`
 
 - `selected`

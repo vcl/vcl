@@ -1,4 +1,4 @@
-@use "../theme.scss" as *;
+@use '../theme.scss' as *;
 
 .gallery {
   margin-bottom: $block-elem-vertical-gap;
@@ -117,6 +117,26 @@
     }
   }
 
+  &.navigation-buttons-on-hover {
+    transition: 0.2s opacity ease;
+
+    & .gallery-content {
+      & .gallery-next-button,
+      & .gallery-prev-button {
+        display: none;
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      & .gallery-next-button,
+      & .gallery-prev-button {
+        opacity: 1;
+        display: block;
+      }
+    }
+  }
+
   & .gallery-thumbnails-host {
     display: flex;
     flex-direction: column;
@@ -141,7 +161,7 @@
           position: relative;
 
           &:after {
-            content: "";
+            content: '';
             position: absolute;
             top: 0;
             bottom: 0;
