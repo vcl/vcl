@@ -1,17 +1,17 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
 
 <div id="example-checkbox-basic">
   <h3>Vertical</h3>
   <div class="col">
     <div class="checkbox" role="checkbox" aria-checked="false" aria-labelledby="checkbox-label-3">
       <label id="checkbox-label-3" class="checkbox-label" tabindex="0">
-        <div class="icon fas fa-square"></div>
+        <div class="icon mdi mdi-checkbox-blank-outline"></div> <!-- Replaced fa-square with mdi-checkbox-blank-outline -->
         Option 1
       </label>
     </div>
     <div class="checkbox" role="checkbox" aria-checked="true" aria-labelledby="checkbox-label-4">
       <label id="checkbox-label-4" class="checkbox-label" tabindex="0">
-        <div class="icon fas fa-check-square"></div>
+        <div class="icon mdi mdi-checkbox-marked"></div> <!-- Replaced fa-check-square with mdi-checkbox-marked -->
         Option 2
       </label>
     </div>
@@ -34,12 +34,12 @@
       }
       if (checked) {
         checkbox.setAttribute('aria-checked', 'false');
-        icon.classList.remove('fa-check-square');
-        icon.classList.add('fa-square');
+        icon.classList.remove('mdi-checkbox-marked');
+        icon.classList.add('mdi-checkbox-blank-outline');
       } else {
         checkbox.setAttribute('aria-checked', 'true');
-        icon.classList.add('fa-check-square');
-        icon.classList.remove('fa-square');
+        icon.classList.add('mdi-checkbox-marked');
+        icon.classList.remove('mdi-checkbox-blank-outline');
       }
     });
   })

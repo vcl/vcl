@@ -1,8 +1,10 @@
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+
 <form class="form" id="example-checkbox-form">
   <div class="form-control-group">
     <div class="checkbox" role="checkbox" aria-checked="false" aria-labelledby="checkbox-label-1">
       <label id="checkbox-label-1" class="checkbox-label" tabindex="0">
-        <div class="icon fas fa-square"></div>
+        <div class="icon mdi mdi-checkbox-blank"></div> <!-- Replaced fa-square with mdi-checkbox-blank -->
         Label
       </label>
     </div>
@@ -11,7 +13,7 @@
   <div class="form-control-group">
     <div class="checkbox" role="checkbox" aria-checked="false" aria-labelledby="checkbox-label-2">
       <label id="checkbox-label-2" class="checkbox-label" tabindex="0">
-        <div class="icon fas fa-square"></div>
+        <div class="icon mdi mdi-checkbox-blank"></div> <!-- Replaced fa-square with mdi-checkbox-blank -->
         Label 2
       </label>
     </div>
@@ -35,12 +37,12 @@
       }
       if (checked) {
         checkbox.setAttribute('aria-checked', 'false');
-        icon.classList.remove('fa-check-square');
-        icon.classList.add('fa-square');
+        icon.classList.remove('mdi-checkbox-marked');
+        icon.classList.add('mdi-checkbox-blank');
       } else {
         checkbox.setAttribute('aria-checked', 'true');
-        icon.classList.add('fa-check-square');
-        icon.classList.remove('fa-square');
+        icon.classList.add('mdi-checkbox-marked');
+        icon.classList.remove('mdi-checkbox-blank');
       }
     });
   })

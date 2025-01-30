@@ -1,3 +1,5 @@
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+
 <div class="example-layer-width-animation">
   <button id="showDialog" type="button" class="button emphasized">
     <div class="icogram"><span class="text">Show Dialog</span></div>
@@ -21,9 +23,9 @@
       <div class="panel-content">
         <div class="icogram">
           <div
-            class="icon far fa-question-circle scale300p"
+            class="icon mdi mdi-help-circle scale300p"
             aria-hidden="true"
-            aria-label="account"
+            aria-label="question"
             role="img"
           ></div>
           <div class="text">Do you really want to delete XY?</div>
@@ -79,9 +81,6 @@
     });
 
     cancelBtn.addEventListener('click', () => {
-      // layerCover.classList.add('fade-animation');
-      // layer.classList.add('fade-animation');
-
       myTimeout = setTimeout(() => {
         layer.remove();
         layerCover.remove();

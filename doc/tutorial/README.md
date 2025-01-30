@@ -49,15 +49,16 @@ The search input is more complex and actually a mashup of multiple VCL component
 ```html
 <div class="embedded-input-group">
   <span class="prepended">
-    <div class="icon fas fa-search"></div>
+    <div class="icon mdi mdi-magnify"></div>
   </span>
   <input class="input no-border prep-item app-item search-input" placeholder="Search Posts" type="text">
   <button class="button transparent square appended">
      <div class="icogram">
-       <div class="icon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
+       <div class="icon mdi mdi-close-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
      </div>
   </button>
 </div>
+
 ```
 
 In the same manner, all VCL styles are used.

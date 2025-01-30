@@ -1,57 +1,57 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
 
-<table class="table vertical-border row-selectability" role="listbox">
+<table class="table vertical-border row-selectability" role="table">
   <thead>
-    <tr>
-      <th><span>Col 1</span></th>
-      <th><span>Col 2</span></th>
-      <th><span>Col 3</span></th>
-      <th><span>Col 4</span></th>
+    <tr role="row">
+      <th role="columnheader"><span>Col 1</span></th>
+      <th role="columnheader"><span>Col 2</span></th>
+      <th role="columnheader"><span>Col 3</span></th>
+      <th role="columnheader"><span>Col 4</span></th>
     </tr>
-    <tr class="table-tool-bar">
-      <th colspan="4">
-        <button type="button" class="button transparent" disabled>
+    <tr class="table-tool-bar" role="row">
+      <th colspan="4" role="cell">
+        <button type="button" class="button transparent" disabled aria-disabled="true">
           <div class="icogram">
-            <div class="icon fas fa-trash-o" aria-hidden="true" role="img"></div>
+            <div class="icon mdi mdi-delete-outline" aria-hidden="true" role="img"></div> <!-- MDI Trash Icon -->
           </div>
         </button>
         <button type="button" class="button transparent">
           <div class="icogram">
-            <div class="icon fas fa-refresh" aria-hidden="true" role="img"></div>
+            <div class="icon mdi mdi-refresh" aria-hidden="true" role="img"></div> <!-- MDI Refresh Icon -->
           </div>
         </button>
         <button type="button" class="button transparent">
           <div class="icogram">
-            <div class="icon fas fa-plus" aria-hidden="true" role="img"></div>
+            <div class="icon mdi mdi-plus" aria-hidden="true" role="img"></div> <!-- MDI Plus Icon -->
           </div>
         </button>
       </th>
     </tr>
-    <tr class="table-filter-bar">
-      <th><input autocomplete="off" placeholder="Filter" type="text"></th>
-      <th><input autocomplete="off" placeholder="Filter" type="text"></th>
-      <th><input autocomplete="off" placeholder="Filter" type="text"></th>
-      <th><input autocomplete="off" placeholder="Filter" type="text"></th>
+    <tr class="table-filter-bar" role="row">
+      <th role="cell"><input autocomplete="off" placeholder="Filter" type="text"></th>
+      <th role="cell"><input autocomplete="off" placeholder="Filter" type="text"></th>
+      <th role="cell"><input autocomplete="off" placeholder="Filter" type="text"></th>
+      <th role="cell"><input autocomplete="off" placeholder="Filter" type="text"></th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Lorem ipsum</td>
-      <td>Lorem ipsum</td>
-      <td>Lorem ipsum</td>
-      <td>Lorem ipsum</td>
+    <tr role="row">
+      <td role="cell">Lorem ipsum</td>
+      <td role="cell">Lorem ipsum</td>
+      <td role="cell">Lorem ipsum</td>
+      <td role="cell">Lorem ipsum</td>
     </tr>
-    <tr>
-      <td>Lorem ipsum</td>
-      <td>Lorem ipsum</td>
-      <td>Lorem ipsum</td>
-      <td>Lorem ipsum</td>
+    <tr role="row">
+      <td role="cell">Lorem ipsum</td>
+      <td role="cell">Lorem ipsum</td>
+      <td role="cell">Lorem ipsum</td>
+      <td role="cell">Lorem ipsum</td>
     </tr>
-    <tr>
-      <td>Lorem ipsum</td>
-      <td>Lorem ipsum</td>
-      <td>Lorem ipsum</td>
-      <td>Lorem ipsum</td>
+    <tr role="row">
+      <td role="cell">Lorem ipsum</td>
+      <td role="cell">Lorem ipsum</td>
+      <td role="cell">Lorem ipsum</td>
+      <td role="cell">Lorem ipsum</td>
     </tr>
   </tbody>
 </table>

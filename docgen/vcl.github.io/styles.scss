@@ -1,31 +1,27 @@
-@use "theme" with (
+@use 'theme' with (
   $app-area-max-width: 100%
 );
-@use "adv-text-structure";
-@use "app";
-@use "list";
-@use "button";
-@use "container";
-@use "data-list";
-@use "icon";
-@use "icogram";
-@use "input";
-@use "flex-grid";
-@use "navigation";
-@use "notification";
-@use "scrollbar";
-@use "tab-nav";
-@use "table";
-@use "toolbar";
-@use "typography";
-@use "utils";
+@use 'adv-text-structure';
+@use 'app';
+@use 'list';
+@use 'button';
+@use 'container';
+@use 'data-list';
+@use 'icon';
+@use 'icogram';
+@use 'input';
+@use 'flex-grid';
+@use 'navigation';
+@use 'notification';
+@use 'scrollbar';
+@use 'tab-nav';
+@use 'table';
+@use 'toolbar';
+@use 'typography';
+@use 'utils';
 
-@use "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@use "~@fortawesome/fontawesome-free/scss/brands.scss" with (
-  $fa-font-path: "webfonts"
-);
-@use "~@fortawesome/fontawesome-free/scss/solid.scss" with (
-  $fa-font-path: "webfonts"
+@use '~@mdi/font/scss/materialdesignicons.scss' with (
+  $mdi-font-path: 'fonts'
 );
 
 html,
