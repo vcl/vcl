@@ -384,6 +384,7 @@ ol ul {
   padding-left: 0.8em;
   padding-top: 0;
   padding-bottom: 0;
+  font-size: 1em;
 }
 .button-dim.square {
   min-width: 2.65em;
@@ -407,6 +408,7 @@ ol ul {
   cursor: pointer;
   padding-right: 0.8em;
   padding-left: 0.8em;
+  font-size: 1em;
 }
 .button:before, .button:after,
 .button[disabled]:before,
@@ -423,10 +425,6 @@ ol ul {
   font-size: 1.15em;
   font-weight: 500;
   line-height: initial;
-}
-
-a.button > .icogram {
-  display: inline-block;
 }
 
 .button.overflow-ellipsis > .icogram > .text {
