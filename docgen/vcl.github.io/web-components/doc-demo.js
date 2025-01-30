@@ -5,7 +5,6 @@ export default class DocDemo extends PolymerElement {
   static get template() {
     return html`
     <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
     <div id="docDemo">
       <div class="tabbable">
         <div class="tabs tab-style-uni" role="tablist">
