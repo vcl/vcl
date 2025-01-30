@@ -10,13 +10,13 @@ export default class DocDemo extends PolymerElement {
         <div class="tabs tab-style-uni" role="tablist">
           <div class$="tab {{getDemoTabClass(codeVisible)}}" on-click="showDemo" role="tab">
             <div class="icogram">
-              <div class="icon icon fas fa-eye" aria-hidden="true" aria-label="account" role="img"></div>
+              <div class="icon mdi mdi-eye" aria-hidden="true" aria-label="account" role="img"></div>
               <div class="text">Demo</div>
             </div>
           </div>
           <div class$="tab {{getCodeTabClass(codeVisible)}}" on-click="showCode" role="tab">
             <div class="icogram">
-              <div class="icon icon fas fa-code" aria-hidden="true" aria-label="account" role="img"></div>
+              <div class="icon mdi mdi-code-tags" aria-hidden="true" aria-label="account" role="img"></div>
               <div class="text">Code</div>
             </div>
           </div>
@@ -25,7 +25,7 @@ export default class DocDemo extends PolymerElement {
             <input type="hidden" name="data" value$="{{codePen}}">
             <button class="button half-transparent">
               <div class="icogram">
-                <div class="icon fab fa-codepen" aria-hidden="true" role="img"></div>
+                <div class="icon mdi mdi-codepen" aria-hidden="true" role="img"></div>
                 <span class="text">Edit on CodePen</span>
               </div>
             </button>

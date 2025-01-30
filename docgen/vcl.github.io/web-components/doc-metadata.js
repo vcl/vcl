@@ -14,12 +14,12 @@ export default class DocMetadata extends PolymerElement {
     <button on-click="toggle" class="button half-transparent" type="button" name="button" title="Component information">
       <div class="icogram">
         <template is="dom-if" if="{{hidden}}">
-          <span class="icon fas fa-chevron-left"></span>
+          <span class="icon mdi mdi-chevron-left"></span>
         </template >
         <template is="dom-if" if="{{!hidden}}">
-          <span class="icon fas fa-chevron-right"></span>
+          <span class="icon mdi mdi-chevron-right"></span>
         </template >
-        <span class="icon fas fa-info"></span>
+        <span class="icon mdi mdi-information"></span>
       </div>
     </button>
   </div>

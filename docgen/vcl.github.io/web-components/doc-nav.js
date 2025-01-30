@@ -11,10 +11,9 @@ export default class DocNav extends PolymerElement {
   static get template() {
     return html`
     <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
         <div class="form-control-group" style="margin-bottom: 0">
           <div class="input-field no-border">
-            <div class="icon fas fa-search"></div>
+            <div class="icon mdi mdi-magnify"></div>
             <input
                 type="search"
                 name="search"
@@ -28,7 +27,7 @@ export default class DocNav extends PolymerElement {
                 autofocus />
             <button on-click="clearSearch" class$="button transparent square appended {{getDisplayNoneClearBtn(searchedText)}} ">
                 <div class="icogram">
-                <div class="icon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
+                <div class="icon mdi mdi-close-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
                 </div>
             </button>
           </div>
@@ -40,7 +39,7 @@ export default class DocNav extends PolymerElement {
 
                 <li on-click="toggleCathegory" role="presentation" class="navigation-item docNavHeading" >
                   <span class="navigation-item-label icogram" href="#">
-                    <span class$="icon fas {{getCathegoryClass(index,openedCathegories)}}" aria-hidden="true" aria-label="angle-right" role="img"></span>
+                    <span class$="icon mdi {{getCathegoryClass(index,openedCathegories)}}" aria-hidden="true" aria-label="angle-right" role="img"></span>
                     <span>[[category.title]]</span>
                   </span>
                 </li>
@@ -151,7 +150,7 @@ export default class DocNav extends PolymerElement {
   }
 
   getCathegoryClass(index, openedCathegories) {
-    return openedCathegories[index] ? 'fa-angle-down' : 'fa-angle-right';
+    return openedCathegories[index] ? 'mdi mdi-menu-down' : 'mdi mdi-menu-right';
   }
 
   getDisplayNoneClearBtn(searchedText) {
