@@ -1,22 +1,22 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
 
 <div id="example-radio-button-vertical">
   <div class="radio-group vertical" role="radiogroup">
     <div class="radio-button" role="checkbox" aria-checked="true" aria-labelledby="radio-button-label-4">
       <label class="radio-button-label" id="radio-button-label-4" tabindex="0">
-        <div class="icon fas fa-dot-circle"></div>
+        <div class="icon mdi mdi-radio-button-checked"></div> <!-- Replaced fa-dot-circle with mdi-radio-button-checked -->
         <span class="icogram">
           <span class="text">Male</span>
-          <span class="icon fas fa-mars" aria-hidden="true" aria-label="presentation" role="img"></span>
+          <span class="icon mdi mdi-gender-male" aria-hidden="true" aria-label="presentation" role="img"></span> <!-- Replaced fa-mars with mdi-gender-male -->
         </span>
       </label>
     </div>
     <div class="radio-button" role="checkbox" aria-checked="false" aria-labelledby="radio-button-label-5">
       <label class="radio-button-label" id="radio-button-label-5" tabindex="0">
-        <div class="icon fas fa-circle"></div>
+        <div class="icon mdi mdi-circle-outline"></div> <!-- Replaced fa-circle with mdi-circle-outline -->
         <span class="icogram">
           <span class="text">Female</span>
-          <span class="icon fas fa-venus" aria-hidden="true" aria-label="presentation" role="img"></span>
+          <span class="icon mdi mdi-gender-female" aria-hidden="true" aria-label="presentation" role="img"></span> <!-- Replaced fa-venus with mdi-gender-female -->
         </span>
       </label>
     </div>
@@ -33,15 +33,15 @@
     function check(radiobutton) {
       const icon = radiobutton.querySelector('.icon');
       radiobutton.setAttribute('aria-checked', 'true');
-      icon.classList.remove('fa-circle');
-      icon.classList.add('fa-dot-circle');
+      icon.classList.remove('mdi-circle-outline');
+      icon.classList.add('mdi-radio-button-checked');
     }
 
     function uncheck(radiobutton) {
       const icon = radiobutton.querySelector('.icon');
       radiobutton.setAttribute('aria-checked', 'false');
-      icon.classList.add('fa-circle');
-      icon.classList.remove('fa-dot-circle');
+      icon.classList.add('mdi-circle-outline');
+      icon.classList.remove('mdi-radio-button-checked');
     }
 
     function uncheckAll() {
