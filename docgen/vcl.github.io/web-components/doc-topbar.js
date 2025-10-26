@@ -6,7 +6,7 @@ export default class DocTopbar extends PolymerElement {
   static get template() {
     return html`
     <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.1.0/css/all.css">
 
     <div  class="row justify-between">
       <h1 class="m-0">

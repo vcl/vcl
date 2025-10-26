@@ -66,6 +66,7 @@ if (!fs.existsSync(outputFolder)) {
 }
 
 const sassOptions = {
+<<<<<<< HEAD
   includePaths: [baseModuleFolder],
   silenceDeprecations: ['legacy-js-api'],
   importer: (url, prev, done) => {
@@ -121,6 +122,34 @@ const render = (data) => {
         }
       );
     });
+=======
+  style: "expanded",
+  loadPaths: [baseModuleFolder, path.resolve(process.cwd(), 'node_modules')],
+};
+
+const render = (dataOrFile) => {
+  try {
+    if (fs.existsSync(dataOrFile)) {
+      // Compile from file
+      const result = sass.compile(dataOrFile, sassOptions);
+      return result;
+    } else {
+      // Compile from string
+      const result = sass.compileString(dataOrFile, sassOptions);
+      return result;
+    }
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
+
+(async () => {
+  try {
+    // Compile from file and write CSS as string
+    const result = sass.compile('styles.scss', sassOptions);
+    fs.writeFileSync('styles.css', result.css);
+>>>>>>> 2201813c (feat: upgrade deps, initial support for a dark mode)
 
     debug('using module folder', baseModuleFolder);
 
@@ -309,15 +338,21 @@ async function renderPart(docPart) {
   docPart.title = capitalize(docPart.name);
 
   if (docPart.styleFile) {
+<<<<<<< HEAD
     const data = `@import "${docPart.name}/${docPart.styleFile}";`;
+=======
 
-    debug('preprocessing %s with import %s', docPart.name);
+    // const data = `@import "${docPart.name}/${docPart.styleFile}";`;
+>>>>>>> 2201813c (feat: upgrade deps, initial support for a dark mode)
 
-    debug(data);
+    // debug('preprocessing %s with import %s', docPart.name);
 
-    const result = await render(data);
+    // debug(data);
+    // console.log(data)
 
-    docPart.style = result.css.toString() || '';
+    // const result = await render(data);
+
+    // docPart.style = result.css.toString() || '';
   } else if (!docPart.styleFile) {
     docPart.style = '';
   }
