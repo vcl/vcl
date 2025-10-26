@@ -38,41 +38,31 @@ if (typeof watch !== 'boolean') {
 }
 
 const render = () => {
-  return new Promise((resolve, reject) => {
+  try {
     console.log('Building ' + sassInFile);
-    sass.render({
-      file: sassInFile,
+    const result = sass.compile(sassInFile, {
+      style: "expanded",
       sourceMap: true,
-      outFile: cssOutFile,
-      importer: (url, prev, done) => {
-        if (url[0] === '~') {
-          url = path.resolve(process.cwd(), 'node_modules', url.substr(1));
-        }
-        return { file: url };
-      }
-    }, function(error, result) {
-      try {
-        if(!error){
-          fs.writeFileSync(cssOutFile, result.css);
-          console.log('Created ' + cssOutFile);
-          fs.writeFileSync(cssMapOutFile, result.map);
-          console.log('Created ' + cssMapOutFile);
-          resolve(result);
-        } else {
-          console.error(error);
-          reject(error);
-        }
-      } catch(ex) {
-        console.error(ex);
-        reject(ex);
-      }
+      loadPaths: [path.resolve(process.cwd(), 'node_modules')],
     });
-  });
-}
+    fs.writeFileSync(cssOutFile, result.css);
+    console.log('Created ' + cssOutFile);
+    if (result.sourceMap) {
+      fs.writeFileSync(cssMapOutFile, JSON.stringify(result.sourceMap));
+      console.log('Created ' + cssMapOutFile);
+    }
+    return result;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
 
 if (watch) {
   const fileChangeNotify = () => console.log('\nWaiting for file changes...');
-  render().then(result => {
+  let result;
+  try {
+    result = render();
     watchlist = result.stats.includedFiles;
 
     const watcher = chokidar.watch(watchlist, {
@@ -81,30 +71,26 @@ if (watch) {
         stabilityThreshold: 50,
         pollInterval: 10
       }
-    })
+    });
     watcher.on('ready', fileChangeNotify).on('change', file => {
       console.log('Change detected in ' + file);
-      (async () => {
-        try {
-          const result = await render();
-          watcher.add(result.stats.includedFiles);
-        } catch(ex) {
-          console.error(ex);
-        }
-      })();
-    })
-  }).catch(ex => {
+      try {
+        const result = render();
+        watcher.add(result.stats.includedFiles);
+      } catch (ex) {
+        console.error(ex);
+      }
+    });
+  } catch (ex) {
     console.error(ex);
     process.exit();
-  });
+  }
 
   browserSync({server: [buildFolder, demoFolder] });
 } else {
-  (async () => {
-    try {
-      await render();
-    } catch(ex) {
-      console.error(ex);
-    }
-  })();
+  try {
+    render();
+  } catch (ex) {
+    console.error(ex);
+  }
 }

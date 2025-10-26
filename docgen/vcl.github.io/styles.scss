@@ -1,4 +1,3 @@
-@use "~normalize.css/normalize.css";
 @use "theme" with (
   $app-area-max-width: 100%
 );
@@ -21,11 +20,11 @@
 @use "typography";
 @use "utils";
 
-@use "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@use "~@fortawesome/fontawesome-free/scss/brands.scss" with (
+@use "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@use "@fortawesome/fontawesome-free/scss/brands.scss" with (
   $fa-font-path: "webfonts"
 );
-@use "~@fortawesome/fontawesome-free/scss/solid.scss" with (
+@use "@fortawesome/fontawesome-free/scss/solid.scss" with (
   $fa-font-path: "webfonts"
 );
 

@@ -18,19 +18,18 @@
     "url": "https://github.com/vcl/vcl.github.io.git"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@polymer/app-route": "^3.0.2",
-    "@polymer/polymer": "^3.5.1",
+    "@polymer/polymer": "^3.5.2",
     "@webcomponents/webcomponentsjs": "^2.8.0",
-    "browser-sync": "^3.0.2",
-    "debug": "^4.3.4",
+    "browser-sync": "^3.0.3",
+    "debug": "^4.4.0",
     "lodash": "^4.17.21",
     "marked": "^11.1.1",
-    "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5",
     "polymer-cli": "^1.9.7",
-    "resolve": "^1.22.8",
-    "sass": "^1.70.0"
+    "resolve": "^1.22.10",
+    "sass": "^1.83.4"
   },
   "keywords": [
     "vcl",

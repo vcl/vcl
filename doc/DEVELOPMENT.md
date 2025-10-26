@@ -73,7 +73,7 @@ Don’ts:
 
 ## Usable CSS Features
 
-Use the [flex-grid layout attributes](https://github.com/vcl/vcl/modules/flex-grid)
+Use the [flex-grid layout attributes](https://github.com/vcl/vcl/tree/master/packages/vcl/flex-grid)
 to realize complex layouts or flexbox based rules in the module itself.
 Apart from that, try to stick to the browser compatibility statement below.
 

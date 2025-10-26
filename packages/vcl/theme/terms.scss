@@ -1,3 +1,5 @@
+@use "sass:color";
+
 /*
  * The terms of the VCL default theme.
  *
@@ -9,6 +11,13 @@
 /* Colors */
 $black: black !default;
 $white: white !default;
+
+// Enable dark mode for the theme. Set to true to switch the theme to
+// a dark color mapping (text becomes light, backgrounds become dark).
+$theme-dark: false !default;
+
+// Font color for theme, auto-adjusts for dark mode
+$font-color-theme: if($theme-dark, $white, $black) !default;
 
 /* Grays */
 $gray-dark-5: rgb(27,27,27) !default;
@@ -40,37 +49,42 @@ $brand-warning: #f0ad4e !default;
 $brand-danger: #d9534f !default;
 
 /* Shadows, transparencies etc. */
-$glass-1: rgba(0, 0, 0, 0.3) !default;
-$glass-2: rgba(0, 0, 0, 0.15) !default;
+$glass-1: color.adjust($black, $alpha: -0.7) !default;
+$glass-2: color.adjust($black, $alpha: -0.85) !default;
 
 /* Semantic Colors */
-$emphasized-dark-color: darken($brand-primary, 25%) !default;
+$emphasized-dark-color: color.adjust($brand-primary, $lightness: -25%) !default;
 $emphasized-medium-color: $brand-primary !default;
-$emphasized-light-color: lighten($brand-primary, +30%) !default;
+$emphasized-light-color: color.adjust($brand-primary, $lightness: 30%) !default;
 
 $primary-dark-color: $black !default;
 $primary-medium-color: $gray-dark-2 !default;
 $primary-light-color: $white !default;
 
-$success-dark-color:  darken($brand-success, 25%) !default;
+$success-dark-color:  color.adjust($brand-success, $lightness: -25%) !default;
 $success-medium-color: $brand-success !default;
-$success-light-color: lighten($brand-success, +30%) !default;
+$success-light-color: color.adjust($brand-success, $lightness: 30%) !default;
 
-$info-dark-color: darken($brand-info, 25%) !default;
+$info-dark-color: color.adjust($brand-info, $lightness: -25%) !default;
 $info-medium-color: $brand-info !default;
-$info-light-color: lighten($brand-info, +30%) !default;
+$info-light-color: color.adjust($brand-info, $lightness: 30%) !default;
 
-$warning-dark-color: darken($brand-warning, 25%) !default;
+$warning-dark-color: color.adjust($brand-warning, $lightness: -25%) !default;
 $warning-medium-color: $brand-warning !default;
-$warning-light-color: lighten($brand-warning, +30%) !default;
+$warning-light-color: color.adjust($brand-warning, $lightness: 30%) !default;
 
-$error-dark-color: darken($brand-danger, 25%) !default;
+$error-dark-color: color.adjust($brand-danger, $lightness: -25%) !default;
 $error-medium-color: $brand-danger !default;
-$error-light-color: lighten($brand-danger, +30%) !default;
+$error-light-color: color.adjust($brand-danger, $lightness: 30%) !default;
 
-$danger-dark-color: darken($brand-danger, 25%) !default;
+$danger-dark-color: color.adjust($brand-danger, $lightness: -25%) !default;
 $danger-medium-color: $brand-danger !default;
-$danger-light-color: lighten($brand-danger, +30%) !default;
+$danger-light-color: color.adjust($brand-danger, $lightness: 30%) !default;
+
+$navigation-heading-color: $font-color-theme !default;
+$navigation-item-1st-level-color: $font-color-theme !default;
+$navigation-item-disabled-color: color.adjust($font-color-theme, $lightness: -40%) !default;
+$navigation-item-1st-level-selected-bg-color: if($theme-dark, $gray-dark-3, $gray-light-3) !default;
 
 /* Fonts
  * ===== */

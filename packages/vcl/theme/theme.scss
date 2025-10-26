@@ -4,11 +4,13 @@
 $block-elem-vertical-gap: 1.3em !default;
 $form-control-vertical-gap: 1em !default;
 $input-elem-height: 2.65em !default;
-$text-primary-color: $gray-dark-3 !default;
-$text-secondary-color: $gray !default;
-$content-primary-bg-color: $white !default;
-$content-secondary-bg-color: $gray-light-5 !default;
-$content-ternary-bg-color: $gray-light-3 !default;
+
+// Text & background colors adapt to dark mode when `$theme-dark` is true.
+$text-primary-color: if($theme-dark, $gray-light-3, $gray-dark-3) !default;
+$text-secondary-color: if($theme-dark, $gray-light-2, $gray) !default;
+$content-primary-bg-color: if($theme-dark, $gray-dark-5, $white) !default;
+$content-secondary-bg-color: if($theme-dark, $gray-dark-4, $gray-light-5) !default;
+$content-ternary-bg-color: if($theme-dark, $gray-dark-3, $gray-light-3) !default;
 $layout-half-gutter-width: 0.5rem !default;
 
 $space: (
@@ -92,8 +94,8 @@ $typography-link-text-decoration: none !default;
 $typography-heading-color: $text-primary-color !default;
 $typography-mark-color: $black !default;
 $typography-mark-bg-color: yellow !default;
-$typography-code-border-color: $gray-light-3 !default;
-$typography-code-bg-color: $gray-light-4 !default;
+$typography-code-border-color: if($theme-dark, $gray-dark-2, $gray-light-3) !default;
+$typography-code-bg-color: if($theme-dark, $gray-dark-4, $gray-light-4) !default;
 $typography-selected-text-bg-color: $black !default;
 $typography-selected-text-color: $white !default;
 $typography-blockquote-border-color: $gray-light-3 !default;
@@ -446,7 +448,7 @@ $form-control-label-font-size: inherit !default;
 $form-control-label-font-weight: inherit !default;
 $form-control-focused-label-color: $brand-accent !default;
 $form-control-focused-sublabel-color: $brand-accent !default;
-$form-control-hint-color: $gray !default;
+$form-control-hint-color: if($theme-dark, $gray-light-2, $gray) !default;
 
 /* Fieldset */
 $fieldset-border-width: 1px !default;
@@ -466,11 +468,11 @@ $input-border-width: 1px !default;
 $input-border-color: $gray-light-1 !default;
 $input-border-focus-color: $brand-accent !default;
 $input-border-radius: 0 !default;
-$input-bg-color: $white !default;
-$input-bg-focus-color: $white !default;
+$input-bg-color: if($theme-dark, $gray-dark-4, $white) !default;
+$input-bg-focus-color: if($theme-dark, $gray-dark-3, $white) !default;
 $input-disabled-color: $gray-light-1 !default;
 $input-disabled-border-color: $gray-light-3 !default;
-$input-disabled-bg-color: $white !default;
+$input-disabled-bg-color: if($theme-dark, $gray-dark-2, $gray-light-6) !default;
 $input-field-text-color: $gray-dark-1 !default;
 $input-field-disabled-text-color: $gray-light-1 !default;
 
@@ -557,13 +559,13 @@ $flip-switch-disabled-active-bg-color: $brand-accent-lighter !default;
 /* Select List */
 $select-list-border-color: $glass-1 !default;
 $select-list-border-width: 1px !default;
-$select-list-bg-color: $white !default;
+$select-list-bg-color: if($theme-dark, $gray-dark-4, $white) !default;
 $select-list-item-color: $input-color !default;
 $select-list-item-sub-label-color: $text-secondary-color !default;
-$select-list-item-bg-hover-color: $gray-light-5 !default;
+$select-list-item-bg-hover-color: if($theme-dark, $gray-dark-3, $gray-light-5) !default;
 $select-list-item-hover-color: $black !default;
 $select-list-item-sub-label-hover-color: $gray-light-1 !default;
-$select-list-selected-item-bg-color: $gray-light-4 !default;
+$select-list-selected-item-bg-color: if($theme-dark, $gray-dark-2, $gray-light-4) !default;
 $select-list-selected-item-color: $brand-accent-dark !default;
 $select-list-highlighted-item-bg-color: $brand-accent !default;
 $select-list-highlighted-item-color: $white !default;

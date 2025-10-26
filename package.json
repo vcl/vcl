@@ -35,18 +35,17 @@
     }
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.2",
+    "@fortawesome/fontawesome-free": "7.1.0",
     "@mdi/font": "^7.4.47",
-    "browser-sync": "^3.0.2",
-    "chokidar": "^3.6.0",
-    "cross-env": "^7.0.3",
+    "browser-sync": "3.0.4",
+    "chokidar": "^4.0.3",
+    "cross-env": "10.1.0",
     "cz-conventional-changelog": "^3.3.0",
-    "lerna": "^8.1.5",
-    "normalize.css": "^8.0.1",
+    "lerna": "9.0.0",
     "npm-run-all": "^4.1.5",
-    "sass": "^1.77.6"
+    "sass": "1.93.2"
   },
   "dependencies": {
-    "yargs": "^17.7.2"
+    "yargs": "18.0.0"
   }
 }
