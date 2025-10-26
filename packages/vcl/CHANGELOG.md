@@ -3,20 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [3.3.0](https://github.com/vcl/vcl/compare/v3.2.1...v3.3.0) (2024-12-17)
+# [3.4.0](https://github.com/vcl/vcl/compare/v3.2.0...v3.4.0) (2025-10-26)
 
 
 ### Features
 
-* **gallery:** modifier to show nav buttons on gallery hover ([2ced171](https://github.com/vcl/vcl/commit/2ced1710188a2608fc7b248c473724af7d1e76b0))
-
-
-
-
-
-## [3.2.1](https://github.com/vcl/vcl/compare/v3.2.0...v3.2.1) (2024-09-23)
-
-**Note:** Version bump only for package @vcl/vcl
+* upgrade deps, initial support for a dark mode ([2201813](https://github.com/vcl/vcl/commit/2201813c75819a6862b2addfc2baac2b8f14f820))
 
 
 
