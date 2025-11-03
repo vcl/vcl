@@ -3,12 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.2.1](https://github.com/vcl/vcl/compare/v3.2.0...v3.2.1) (2024-09-23)
-
 **Note:** Version bump only for package @vcl/vcl
+# [3.4.0](https://github.com/vcl/vcl/compare/v3.2.0...v3.4.0) (2025-10-26)
 
 
+### Features
 
+* upgrade deps, initial support for a dark mode ([2201813](https://github.com/vcl/vcl/commit/2201813c75819a6862b2addfc2baac2b8f14f820))
+
+
+## [3.2.1](https://github.com/vcl/vcl/compare/v3.2.0...v3.2.1) (2024-09-23)
 
 
 # [3.2.0](https://github.com/vcl/vcl/compare/v3.0.0...v3.2.0) (2024-07-13)

@@ -16,40 +16,30 @@ if (!fs.existsSync(distFolder)){
 }
 
 function build({ source, target }) {
-  return new Promise((resolve, reject) => {
-    sass.render({
-      file: source,
-      sourceMap: false,
-      outFile: target,
-      outputStyle: 'compressed',
-      importer: (url, prev, done) => {
-        if (url[0] === '~') {
-          url = path.resolve(process.cwd(), 'node_modules', url.substr(1));
-        }
-        return { file: url };
-      }
-    }, function(error, result) {
-      if(!error){
-        fs.writeFileSync(target, result.css);
-        resolve(result);
-      } else {
-        reject(error);
-      }
+  try {
+    const result = sass.compile(source, {
+      style: "compressed",
+      loadPaths: [path.resolve(process.cwd(), 'node_modules'), pkgFolder],
+      // Dart Sass does not support custom importer in compile API
     });
-  });
+    fs.writeFileSync(target, result.css);
+    return result;
+  } catch (error) {
+    throw error;
+  }
 }
 
 (async function() {
   try {
     console.log('Building ' + vclDefaultIn);
-    await build({
+    build({
       source: vclDefaultIn,
       target: vclDefaultOut,
     });
     console.log('Created ' + vclDefaultOut);
 
     console.log('Building ' + vclCoreIn);
-    await build({
+    build({
       source: vclCoreIn,
       target: vclCoreOut,
     });

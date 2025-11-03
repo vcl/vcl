@@ -4,6 +4,7 @@ on:
     branches:
       - master
       - dev
+      - staged
 
 jobs:
   build:
@@ -11,7 +12,11 @@ jobs:
     environment: github-pages
     strategy:
       matrix:
+<<<<<<< HEAD
         node-version: [22.x]
+=======
+        node-version: [24.x]
+>>>>>>> dev
 
     steps:
       - uses: actions/checkout@v1
@@ -22,7 +27,7 @@ jobs:
         id: extract_branch
 
       - name: Cache node modules
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}

@@ -66,61 +66,32 @@ if (!fs.existsSync(outputFolder)) {
 }
 
 const sassOptions = {
-  includePaths: [baseModuleFolder],
-  silenceDeprecations: ['legacy-js-api'],
-  importer: (url, prev, done) => {
-    if (url[0] === '~') {
-      url = path.resolve(process.cwd(), 'node_modules', url.substr(1));
-    }
-
-    return { file: url };
-  },
+  style: "expanded",
+  loadPaths: [baseModuleFolder, path.resolve(process.cwd(), 'node_modules')],
 };
 
-const render = (data) => {
-  return new Promise((resolve, reject) => {
-    sass.render(
-      {
-        data,
-        ...sassOptions,
-      },
-      function (error, result) {
-        try {
-          if (!error) {
-            resolve(result);
-          } else {
-            console.error(error);
-            reject(error);
-          }
-        } catch (ex) {
-          console.error(ex);
-          reject(ex);
-        }
-      }
-    );
-  });
+const render = (dataOrFile) => {
+  try {
+    if (fs.existsSync(dataOrFile)) {
+      // Compile from file
+      const result = sass.compile(dataOrFile, sassOptions);
+      return result;
+    } else {
+      // Compile from string
+      const result = sass.compileString(dataOrFile, sassOptions);
+      return result;
+    }
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 };
 
 (async () => {
   try {
-    await new Promise((resolve, reject) => {
-      sass.render(
-        {
-          file: 'styles.scss',
-          sourceMap: false,
-          ...sassOptions,
-        },
-        (err, result) => {
-          if (err) {
-            console.error(err);
-            reject(err);
-          } else {
-            fs.writeFileSync('styles.css', result.css);
-            resolve();
-          }
-        }
-      );
-    });
+    // Compile from file and write CSS as string
+    const result = sass.compile('styles.scss', sassOptions);
+    fs.writeFileSync('styles.css', result.css);
 
     debug('using module folder', baseModuleFolder);
 
@@ -309,15 +280,17 @@ async function renderPart(docPart) {
   docPart.title = capitalize(docPart.name);
 
   if (docPart.styleFile) {
-    const data = `@import "${docPart.name}/${docPart.styleFile}";`;
 
-    debug('preprocessing %s with import %s', docPart.name);
+    // const data = `@import "${docPart.name}/${docPart.styleFile}";`;
 
-    debug(data);
+    // debug('preprocessing %s with import %s', docPart.name);
 
-    const result = await render(data);
+    // debug(data);
+    // console.log(data)
 
-    docPart.style = result.css.toString() || '';
+    // const result = await render(data);
+
+    // docPart.style = result.css.toString() || '';
   } else if (!docPart.styleFile) {
     docPart.style = '';
   }

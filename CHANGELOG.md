@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/vcl/vcl/compare/v3.2.0...v3.4.0) (2025-10-26)
+
+
+### Features
+
+* upgrade deps, initial support for a dark mode ([2201813](https://github.com/vcl/vcl/commit/2201813c75819a6862b2addfc2baac2b8f14f820))
+
+
+
 ## [3.2.1](https://github.com/vcl/vcl/compare/v3.2.0...v3.2.1) (2024-09-23)
 
 
@@ -13,9 +22,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * remove exess folder ([1945f58](https://github.com/vcl/vcl/commit/1945f58491af1ce6ef76ecc7aa514ac223363632))
 * rewrite lock files ([2f7a9b5](https://github.com/vcl/vcl/commit/2f7a9b5feecc26f09e4eed55b2d724a2c3c44c6b))
 * rewrite styles.css path for GH pages deployment ([bd63419](https://github.com/vcl/vcl/commit/bd634192462a5973d397c7212871376e34961af8))
-
-
-
 
 
 # [3.2.0](https://github.com/vcl/vcl/compare/v3.0.0...v3.2.0) (2024-07-13)
