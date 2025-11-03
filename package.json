@@ -29,7 +29,6 @@
     }
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "7.1.0",
     "@mdi/font": "^7.4.47",
     "browser-sync": "3.0.4",
     "chokidar": "^4.0.3",

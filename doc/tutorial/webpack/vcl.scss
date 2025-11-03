@@ -4,11 +4,6 @@
   $app-viewport-bg-color: #ffffff,
 );
 
-@use "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@use "~@fortawesome/fontawesome-free/scss/solid.scss" with (
-  $fa-font-path: "~@fortawesome/fontawesome-free/webfonts"
-);
-
 .article-text {
   color: color.grayscale(#6b717f);
 }
