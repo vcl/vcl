@@ -11077,6 +11077,7 @@ const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyl
       </template>
     </ul>
   </aside>`;}static get is(){return'doc-metadata';}static get properties(){return{package:{type:Object},hidden:{value:true}};}toggle(){this.hidden=!this.hidden;}getHidenCLass(hidden){return hidden?'hide':'';}}_exports.$docMetadataDefault=DocMetadata;customElements.define(DocMetadata.is,DocMetadata);var docMetadata={'default':DocMetadata};_exports.$docMetadata=docMetadata;class DocContent extends PolymerElement{static get template(){return html`
+    <base href="/vcl/">
     <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.1.0/css/all.css">
 
