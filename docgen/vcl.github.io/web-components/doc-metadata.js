@@ -7,7 +7,7 @@ import '@polymer/polymer/lib/elements/dom-if.js';
 export default class DocMetadata extends PolymerElement {
   static get template() {
     return html`
-    <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.1.0/css/all.css">
 
     <div class="docMetadataControls">

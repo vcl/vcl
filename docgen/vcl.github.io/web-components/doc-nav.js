@@ -10,7 +10,8 @@ const KEYCODE_ENTER = 13;
 export default class DocNav extends PolymerElement {
   static get template() {
     return html`
-    <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.1.0/css/all.css">
         <div class="form-control-group" style="margin-bottom: 0">
           <div class="input-field no-border">
             <div class="icon mdi mdi-magnify"></div>
