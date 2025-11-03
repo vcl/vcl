@@ -10996,210 +10996,356 @@ this.setProperties(propertyUpdates,true);}else{this.__setMulti(propertyUpdates);
 //
 //     Be ye so warned.
 for(var property in setObj){this._propertySetter(property,setObj[property]);}// notify in a specific order
-if(setObj.data!==undefined){this._pathEffector('data',this.data);this._notifyChange('data');}if(setObj.active!==undefined){this._pathEffector('active',this.active);this._notifyChange('active');}if(setObj.tail!==undefined){this._pathEffector('tail',this.tail);this._notifyChange('tail');}}});class DocDemo extends PolymerElement{static get template(){return html`
-    <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.1.0/css/all.css">
-    <div id="docDemo">
-      <div class="tabbable">
-        <div class="tabs tab-style-uni" role="tablist">
-          <div class$="tab {{getDemoTabClass(codeVisible)}}" on-click="showDemo" role="tab">
-            <div class="icogram">
-              <div class="icon icon fas fa-eye" aria-hidden="true" aria-label="account" role="img"></div>
-              <div class="text">Demo</div>
-            </div>
-          </div>
-          <div class$="tab {{getCodeTabClass(codeVisible)}}" on-click="showCode" role="tab">
-            <div class="icogram">
-              <div class="icon icon fas fa-code" aria-hidden="true" aria-label="account" role="img"></div>
-              <div class="text">Code</div>
-            </div>
-          </div>
-
-          <form class$="docEditDemoButton half-transparent {{getCodeTextClass(codeVisible)}}" action="https://codepen.io/pen/define" method="POST" target="_blank">
-            <input type="hidden" name="data" value$="{{codePen}}">
-            <button class="button half-transparent">
+if(setObj.data!==undefined){this._pathEffector('data',this.data);this._notifyChange('data');}if(setObj.active!==undefined){this._pathEffector('active',this.active);this._notifyChange('active');}if(setObj.tail!==undefined){this._pathEffector('tail',this.tail);this._notifyChange('tail');}}});class DocDemo extends PolymerElement{connectedCallback(){super.connectedCallback();const cssHref=new URL('styles.css',document.baseURI).href;this.shadowRoot.getElementById('siteStyles').setAttribute('href',cssHref);}static get template(){return html` <link
+        id="siteStyles"
+        rel="stylesheet"
+        media="screen"
+        href=""
+        charset="utf-8"
+      />
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
+      />
+      <div id="docDemo">
+        <div class="tabbable">
+          <div class="tabs tab-style-uni" role="tablist">
+            <div
+              class$="tab {{getDemoTabClass(codeVisible)}}"
+              on-click="showDemo"
+              role="tab"
+            >
               <div class="icogram">
-                <div class="icon fab fa-codepen" aria-hidden="true" role="img"></div>
-                <span class="text">Edit on CodePen</span>
+                <div
+                  class="icon icon fas fa-eye"
+                  aria-hidden="true"
+                  aria-label="account"
+                  role="img"
+                ></div>
+                <div class="text">Demo</div>
               </div>
-            </button>
-          </form>
-        </div>
-        <div class="tab-content">
-          <div id="ninja" name="ninja" role="tabpanel" class$="tab-panel docDemoContent transparent shadow {{getDemoClass(codeVisible)}}"></div>
-          <div role="tabpanel" class$="tab-panel code {{getCodeTextClass(codeVisible)}}">
-            <pre ref="source" name="source">[[markdown]]</pre>
+            </div>
+            <div
+              class$="tab {{getCodeTabClass(codeVisible)}}"
+              on-click="showCode"
+              role="tab"
+            >
+              <div class="icogram">
+                <div
+                  class="icon icon fas fa-code"
+                  aria-hidden="true"
+                  aria-label="account"
+                  role="img"
+                ></div>
+                <div class="text">Code</div>
+              </div>
+            </div>
+
+            <form
+              class$="docEditDemoButton half-transparent {{getCodeTextClass(codeVisible)}}"
+              action="https://codepen.io/pen/define"
+              method="POST"
+              target="_blank"
+            >
+              <input type="hidden" name="data" value$="{{codePen}}" />
+              <button class="button half-transparent">
+                <div class="icogram">
+                  <div
+                    class="icon fab fa-codepen"
+                    aria-hidden="true"
+                    role="img"
+                  ></div>
+                  <span class="text">Edit on CodePen</span>
+                </div>
+              </button>
+            </form>
+          </div>
+          <div class="tab-content">
+            <div
+              id="ninja"
+              name="ninja"
+              role="tabpanel"
+              class$="tab-panel docDemoContent transparent shadow {{getDemoClass(codeVisible)}}"
+            ></div>
+            <div
+              role="tabpanel"
+              class$="tab-panel code {{getCodeTextClass(codeVisible)}}"
+            >
+              <pre ref="source" name="source">[[markdown]]</pre>
+            </div>
           </div>
         </div>
-      </div>
-    </div>`;}static get is(){return'doc-demo';}static get properties(){return{markdown:{type:Object,observer:'renderNinja'},style:{observer:'updateCss'},codePen:{computed:'computeCodePen(markdown,style)'}};}constructor(){super();this.codeVisible=false;}computeCodePen(markdown,style){const codePen={html:markdown,css:style};return codePen;}updateCss(style){const celanStyle=this.removeBodyProps(style);// fix for firefox
-const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyle}</style> `;this.$.docDemo.appendChild(cont.content);}renderNinja(markdown){this.insertAndExecute(this.$.ninja,markdown);}getCodeTextClass(codeVisible){return!codeVisible?'hide':'';}getDemoClass(codeVisible){return codeVisible?'hide':'';}getDemoTabClass(codeVisible){return!codeVisible?'selected':'';}getCodeTabClass(codeVisible){return codeVisible?'selected':'';}showCode(){this.codeVisible=true;}showDemo(){this.codeVisible=false;}removeBodyProps(styles){const cleanStyles=styles.replace(/body {([\s\S]*?)}/g,'').replace(/.viewport {([\s\S]*?)}/g,'');return cleanStyles;}insertAndExecute(domelement,text){domelement.innerHTML=text;var scripts=[];var ret=domelement.childNodes;for(var i=0;ret[i];i++){if(scripts&&nodeName(ret[i],"script")&&(!ret[i].type||ret[i].type.toLowerCase()==="text/javascript")){scripts.push(ret[i].parentNode?ret[i].parentNode.removeChild(ret[i]):ret[i]);}}for(var script in scripts){var elem=scripts[script];var data=elem.text||elem.textContent||elem.innerHTML||"";try{document.demoShadowRoot=this.shadowRoot;eval(data);}catch(ex){console.error(ex);}}}}_exports.$docDemoDefault=DocDemo;customElements.define(DocDemo.is,DocDemo);function nodeName(elem,name){return elem.nodeName&&elem.nodeName.toUpperCase()===name.toUpperCase();}var docDemo={'default':DocDemo};_exports.$docDemo=docDemo;class DocMetadata extends PolymerElement{static get template(){return html`
-    <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.1.0/css/all.css">
+      </div>`;}connectedCallback(){super.connectedCallback();const cssHref=new URL('styles.css',document.baseURI).href;this.shadowRoot.getElementById('siteStyles').setAttribute('href',cssHref);}static get is(){return'doc-demo';}static get properties(){return{markdown:{type:Object,observer:'renderNinja'},style:{observer:'updateCss'},codePen:{computed:'computeCodePen(markdown,style)'}};}constructor(){super();this.codeVisible=false;}computeCodePen(markdown,style){const codePen={html:markdown,css:style};return codePen;}updateCss(style){const celanStyle=this.removeBodyProps(style);// fix for firefox
+const cont=document.createElement('template');cont.innerHTML=`<style>${celanStyle}</style> `;this.$.docDemo.appendChild(cont.content);}renderNinja(markdown){this.insertAndExecute(this.$.ninja,markdown);}getCodeTextClass(codeVisible){return!codeVisible?'hide':'';}getDemoClass(codeVisible){return codeVisible?'hide':'';}getDemoTabClass(codeVisible){return!codeVisible?'selected':'';}getCodeTabClass(codeVisible){return codeVisible?'selected':'';}showCode(){this.codeVisible=true;}showDemo(){this.codeVisible=false;}removeBodyProps(styles){const cleanStyles=styles.replace(/body {([\s\S]*?)}/g,'').replace(/.viewport {([\s\S]*?)}/g,'');return cleanStyles;}insertAndExecute(domelement,text){domelement.innerHTML=text;var scripts=[];var ret=domelement.childNodes;for(var i=0;ret[i];i++){if(scripts&&nodeName(ret[i],'script')&&(!ret[i].type||ret[i].type.toLowerCase()==='text/javascript')){scripts.push(ret[i].parentNode?ret[i].parentNode.removeChild(ret[i]):ret[i]);}}for(var script in scripts){var elem=scripts[script];var data=elem.text||elem.textContent||elem.innerHTML||'';try{document.demoShadowRoot=this.shadowRoot;eval(data);}catch(ex){console.error(ex);}}}}_exports.$docDemoDefault=DocDemo;customElements.define(DocDemo.is,DocDemo);function nodeName(elem,name){return elem.nodeName&&elem.nodeName.toUpperCase()===name.toUpperCase();}var docDemo={'default':DocDemo};_exports.$docDemo=docDemo;class DocMetadata extends PolymerElement{connectedCallback(){super.connectedCallback();const cssHref=new URL('styles.css',document.baseURI).href;this.shadowRoot.getElementById('siteStyles').setAttribute('href',cssHref);}static get template(){return html` <link
+        id="siteStyles"
+        rel="stylesheet"
+        media="screen"
+        href=""
+        charset="utf-8"
+      />
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
+      />
 
-    <div class="docMetadataControls">
-    <button on-click="toggle" class="button half-transparent" type="button" name="button" title="Component information">
-      <div class="icogram">
-        <template is="dom-if" if="{{hidden}}">
-          <span class="icon fas fa-chevron-left"></span>
-        </template >
-        <template is="dom-if" if="{{!hidden}}">
-          <span class="icon fas fa-chevron-right"></span>
-        </template >
-        <span class="icon fas fa-info"></span>
+      <div class="docMetadataControls">
+        <button
+          on-click="toggle"
+          class="button half-transparent"
+          type="button"
+          name="button"
+          title="Component information"
+        >
+          <div class="icogram">
+            <template is="dom-if" if="{{hidden}}">
+              <span class="icon fas fa-chevron-left"></span>
+            </template>
+            <template is="dom-if" if="{{!hidden}}">
+              <span class="icon fas fa-chevron-right"></span>
+            </template>
+            <span class="icon fas fa-info"></span>
+          </div>
+        </button>
       </div>
-    </button>
-  </div>
-  <aside class$="data-list docMetadata {{getHidenCLass(hidden)}}">
-    <header class="data-list-header p-0">
-      <h3>Component Information</h3>
-    </header>
-    <ul class="data-list-body" role="listbox">
-      <li class="data-list-item row justify-between flex-no-wrap">
-        <div class="w-gcb gutter-margin" role="gridcell"><b>Name</b></div>
-        <div class="w-gca gutter-margin" role="gridcell">[[package.name]]</div>
-      </li>
-      <template is="dom-if" if="{{package.docgen}}">
-      <li class="data-list-item row justify-between flex-no-wrap">
-        <div class="w-gcb gutter-margin" role="gridcell"><b>Categories</b></div>
-        <div class="w-gca gutter-margin" role="gridcell">
-          <template is="dom-repeat"  items="{{package.docgen.categories}}" as="category">
-            <span class="badge">[[category.title]]</span>
+      <aside class$="data-list docMetadata {{getHidenCLass(hidden)}}">
+        <header class="data-list-header p-0">
+          <h3>Component Information</h3>
+        </header>
+        <ul class="data-list-body" role="listbox">
+          <li class="data-list-item row justify-between flex-no-wrap">
+            <div class="w-gcb gutter-margin" role="gridcell"><b>Name</b></div>
+            <div class="w-gca gutter-margin" role="gridcell">
+              [[package.name]]
+            </div>
+          </li>
+          <template is="dom-if" if="{{package.docgen}}">
+            <li class="data-list-item row justify-between flex-no-wrap">
+              <div class="w-gcb gutter-margin" role="gridcell">
+                <b>Categories</b>
+              </div>
+              <div class="w-gca gutter-margin" role="gridcell">
+                <template
+                  is="dom-repeat"
+                  items="{{package.docgen.categories}}"
+                  as="category"
+                >
+                  <span class="badge">[[category.title]]</span>
+                </template>
+              </div>
+            </li>
           </template>
-        </div>
-      </li>
-      </template>
-      <template is="dom-if" if="{{false}}">
-        <li class="data-list-item row justify-between flex-no-wrap">
-          <div class="w-gcb gutter-margin" role="gridcell"><b>Description</b></div>
-          <div class="w-gca gutter-margin" role="gridcell">[[package.description]]</div>
-        </li>
-      </template>
-    </ul>
-  </aside>`;}static get is(){return'doc-metadata';}static get properties(){return{package:{type:Object},hidden:{value:true}};}toggle(){this.hidden=!this.hidden;}getHidenCLass(hidden){return hidden?'hide':'';}}_exports.$docMetadataDefault=DocMetadata;customElements.define(DocMetadata.is,DocMetadata);var docMetadata={'default':DocMetadata};_exports.$docMetadata=docMetadata;class DocContent extends PolymerElement{static get template(){return html`
-    <base href="/vcl/">
-    <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.1.0/css/all.css">
+          <template is="dom-if" if="{{false}}">
+            <li class="data-list-item row justify-between flex-no-wrap">
+              <div class="w-gcb gutter-margin" role="gridcell">
+                <b>Description</b>
+              </div>
+              <div class="w-gca gutter-margin" role="gridcell">
+                [[package.description]]
+              </div>
+            </li>
+          </template>
+        </ul>
+      </aside>`;}static get is(){return'doc-metadata';}static get properties(){return{package:{type:Object},hidden:{value:true}};}toggle(){this.hidden=!this.hidden;}getHidenCLass(hidden){return hidden?'hide':'';}}_exports.$docMetadataDefault=DocMetadata;customElements.define(DocMetadata.is,DocMetadata);var docMetadata={'default':DocMetadata};_exports.$docMetadata=docMetadata;class DocContent extends PolymerElement{connectedCallback(){super.connectedCallback();const cssHref=new URL('styles.css',document.baseURI).href;this.shadowRoot.getElementById('siteStyles').setAttribute('href',cssHref);}static get template(){return html` <link
+        id="siteStyles"
+        rel="stylesheet"
+        media="screen"
+        href=""
+        charset="utf-8"
+      />
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
+      />
 
-
-    <div class$="docPart row {{getContentClass(hasContent)}}">
-      <div class="flex">
-        <h2 id$="docpart-{{content.name}}" class="article-header">
+      <div class$="docPart row {{getContentClass(hasContent)}}">
+        <div class="flex">
+          <h2 id$="docpart-{{content.name}}" class="article-header">
             [[content.title]]
             <small class="article-sub-header">[[content.name]]</small>
-        </h2>
-        <div id="readme" name="readme" class="docText"></div>
-
-      </div>
-      <template is="dom-if" if="{{hasContent}}">
-        <doc-metadata class="docMetadata" package="{{content}}"></doc-metadata>
-      </template>
-    </div>
-
-    <div class$="docWelcome {{getDefTextClass(hasContent)}}">
-      <h3>Welcome to the doc client</h3>
-      <div>
-      If you see this, you have no package which provides
-      <code>doc-index</code>. The readme of this package would
-      be shown here otherwise.
-      </div>
-    </div>`;}static get is(){return'doc-content';}static get properties(){return{content:{type:Object,observer:'renderReadme'},hasContent:{computed:'computeHasContent(content)'}};}renderReadme(content){const{readme,demos,style}=content;this.$.readme.innerHTML=readme;Object.keys(demos).forEach(demoName=>{const markdown=demos[demoName];const demoNode=new DocDemo();demoNode.markdown=decodeURIComponent(markdown);demoNode.style=style;this.$.readme.querySelector(`#demo-${demoName}`).appendChild(demoNode);});const lists=this.$.readme.querySelectorAll('ul');lists.forEach(listElem=>{listElem.classList.add('list');const listItems=listElem.querySelectorAll('li');listItems.forEach(listItem=>{listItem.classList.add('list-item');});});const tables=this.$.readme.querySelectorAll('table');tables.forEach(table=>{table.classList.add('table');});}computeHasContent(content){const has=content!==undefined;return has;}getDefTextClass(hasContent){return hasContent?'hide':'';}getContentClass(hasContent){return!hasContent?'hide':'';}}_exports.$docContentDefault=DocContent;customElements.define(DocContent.is,DocContent);var docContent={'default':DocContent};_exports.$docContent=docContent;const KEYCODE_UP=38;const KEYCODE_DOWN=40;const KEYCODE_ENTER=13;class DocNav extends PolymerElement{static get template(){return html`
-    <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.1.0/css/all.css">
-        <div class="form-control-group" style="margin-bottom: 0">
-          <div class="input-field no-border">
-            <div class="icon fas fa-search"></div>
-            <input
-                type="search"
-                name="search"
-                id="search"
-                on-input="searchUpdate"
-                on-keydown="searchKey"
-                placeholder="Search Components"
-                class="input searchInput"
-                value=""
-                autocomplete="off"
-                autofocus />
-            <button on-click="clearSearch" class$="button transparent square appended {{getDisplayNoneClearBtn(searchedText)}} ">
-                <div class="icogram">
-                <div class="icon fas fa-times-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
-                </div>
-            </button>
-          </div>
+          </h2>
+          <div id="readme" name="readme" class="docText"></div>
         </div>
-        <nav class="docNav navigation vertical col flex scrollable y-on-hover">
-            <template is="dom-if" if="[[!searchedText]]">
-            <ul id="nav-items">
-              <template is="dom-repeat" items="{{groupedOnCategories}}" as="category">
+        <template is="dom-if" if="{{hasContent}}">
+          <doc-metadata
+            class="docMetadata"
+            package="{{content}}"
+          ></doc-metadata>
+        </template>
+      </div>
 
-                <li on-click="toggleCathegory" role="presentation" class="navigation-item docNavHeading" >
-                  <span class="navigation-item-label icogram" href="#">
-                    <span class$="icon fas {{getCathegoryClass(index,openedCathegories)}}" aria-hidden="true" aria-label="angle-right" role="img"></span>
-                    <span>[[category.title]]</span>
-                  </span>
-                </li>
-                <template is="dom-if" if="[[getCathegoryIsOpen(index,openedCathegories)]]">
-                  <nav class="navigation">
-                    <div class="anim-container" >
-                      <template is="dom-repeat" items="{{category.items}}" as="item">
-                        <li class$="navigation-item docNavItem {{getSelectedClass(item.name,selectedItem)}}" role="presentation">
-                        <a class="navigation-item-label icogram"  href$="#{{item.name}}">
+      <div class$="docWelcome {{getDefTextClass(hasContent)}}">
+        <h3>Welcome to the doc client</h3>
+        <div>
+          If you see this, you have no package which provides
+          <code>doc-index</code>. The readme of this package would be shown here
+          otherwise.
+        </div>
+      </div>`;}static get is(){return'doc-content';}static get properties(){return{content:{type:Object,observer:'renderReadme'},hasContent:{computed:'computeHasContent(content)'}};}renderReadme(content){const{readme,demos,style}=content;this.$.readme.innerHTML=readme;Object.keys(demos).forEach(demoName=>{const markdown=demos[demoName];const demoNode=new DocDemo();demoNode.markdown=decodeURIComponent(markdown);demoNode.style=style;this.$.readme.querySelector(`#demo-${demoName}`).appendChild(demoNode);});const lists=this.$.readme.querySelectorAll('ul');lists.forEach(listElem=>{listElem.classList.add('list');const listItems=listElem.querySelectorAll('li');listItems.forEach(listItem=>{listItem.classList.add('list-item');});});const tables=this.$.readme.querySelectorAll('table');tables.forEach(table=>{table.classList.add('table');});}computeHasContent(content){const has=content!==undefined;return has;}getDefTextClass(hasContent){return hasContent?'hide':'';}getContentClass(hasContent){return!hasContent?'hide':'';}}_exports.$docContentDefault=DocContent;customElements.define(DocContent.is,DocContent);var docContent={'default':DocContent};_exports.$docContent=docContent;const KEYCODE_UP=38;const KEYCODE_DOWN=40;const KEYCODE_ENTER=13;class DocNav extends PolymerElement{connectedCallback(){super.connectedCallback();const cssHref=new URL('styles.css',document.baseURI).href;this.shadowRoot.getElementById('siteStyles').setAttribute('href',cssHref);}static get template(){return html`
+      <link
+        id="siteStyles"
+        rel="stylesheet"
+        media="screen"
+        href=""
+        charset="utf-8"
+      />
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
+      />
+      <div class="form-control-group" style="margin-bottom: 0">
+        <div class="input-field no-border">
+          <div class="icon fas fa-search"></div>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            on-input="searchUpdate"
+            on-keydown="searchKey"
+            placeholder="Search Components"
+            class="input searchInput"
+            value=""
+            autocomplete="off"
+            autofocus
+          />
+          <button
+            on-click="clearSearch"
+            class$="button transparent square appended {{getDisplayNoneClearBtn(searchedText)}} "
+          >
+            <div class="icogram">
+              <div
+                class="icon fas fa-times-circle"
+                aria-hidden="true"
+                aria-label="Clear"
+                role="img"
+              ></div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <nav class="docNav navigation vertical col flex scrollable y-on-hover">
+        <template is="dom-if" if="[[!searchedText]]">
+          <ul id="nav-items">
+            <template
+              is="dom-repeat"
+              items="{{groupedOnCategories}}"
+              as="category"
+            >
+              <li
+                on-click="toggleCathegory"
+                role="presentation"
+                class="navigation-item docNavHeading"
+              >
+                <span class="navigation-item-label icogram" href="#">
+                  <span
+                    class$="icon fas {{getCathegoryClass(index,openedCathegories)}}"
+                    aria-hidden="true"
+                    aria-label="angle-right"
+                    role="img"
+                  ></span>
+                  <span>[[category.title]]</span>
+                </span>
+              </li>
+              <template
+                is="dom-if"
+                if="[[getCathegoryIsOpen(index,openedCathegories)]]"
+              >
+                <nav class="navigation">
+                  <div class="anim-container">
+                    <template
+                      is="dom-repeat"
+                      items="{{category.items}}"
+                      as="item"
+                    >
+                      <li
+                        class$="navigation-item docNavItem {{getSelectedClass(item.name,selectedItem)}}"
+                        role="presentation"
+                      >
+                        <a
+                          class="navigation-item-label icogram"
+                          href$="#{{item.name}}"
+                        >
                           <span class="text">[[item.title]]</span>
                         </a>
-                        </li>
-                      </template>
-                    </div>
-                  </nav>
-                </template>
-
+                      </li>
+                    </template>
+                  </div>
+                </nav>
               </template>
-            </ul>
             </template>
+          </ul>
+        </template>
 
-            <template is="dom-if" if="[[searchedText]]">
-              <ul class="scrollable y-on-hover flex"id="nav-items">
-                <template is="dom-repeat" items="{{searchResults}}" as="item">
-                  <li class$="navigation-item {{getSelectedClass(item.name,selectedItem)}}" role="presentation">
-                    <a class="navigation-item-label icogram"  href$="#{{item.name}}" >
-                      <span class="text">[[item.title]]</span>
-                    </a>
-                  </li>
-                </template>
-              </ul>
+        <template is="dom-if" if="[[searchedText]]">
+          <ul class="scrollable y-on-hover flex" id="nav-items">
+            <template is="dom-repeat" items="{{searchResults}}" as="item">
+              <li
+                class$="navigation-item {{getSelectedClass(item.name,selectedItem)}}"
+                role="presentation"
+              >
+                <a class="navigation-item-label icogram" href$="#{{item.name}}">
+                  <span class="text">[[item.title]]</span>
+                </a>
+              </li>
             </template>
+          </ul>
+        </template>
+      </nav>
+    `;}static get is(){return'doc-nav';}static get properties(){return{items:{type:Array},selectedItem:{type:String,notify:true},searchedText:{type:String,value:''},searchResults:{type:Array,readOnly:true,computed:'computeSearchResults(items,searchedText)'},groupedOnCategories:{type:Array,readOnly:true,computed:'computeGroupedOnCategories(items)'}};}constructor(){super();this.openedCathegories=[];}computeSearchResults(cats,searchedText){if(cats&&searchedText!==undefined){const searchResults=cats.filter(cat=>{const{title,description}=cat;const lowerCaseText=searchedText.toLowerCase();const descriptionMatchesSearch=description?description.toLowerCase().indexOf(lowerCaseText)>=0:false;const titleMatchesSearch=title.toLowerCase().indexOf(lowerCaseText)>=0;return descriptionMatchesSearch||titleMatchesSearch;}).sort((a,b)=>a.itemPriority-b.itemPriority);return searchResults;}return undefined;}computeGroupedOnCategories(initialItems){const categories=initialItems.reduce((grouped,item)=>{grouped[item.primaryCategory]=grouped[item.primaryCategory]||[];grouped[item.primaryCategory].push(item);return grouped;},{});const groupedOnCategories=Object.keys(categories).map(title=>{const items=categories[title].sort((a,b)=>a.itemPriority-b.itemPriority);const priority=Math.min(...items.map(i=>i.priority));return{title,priority,items};}).sort((a,b)=>a.priority-b.priority).map((elem,index)=>Object.assign({},elem,{index}));return groupedOnCategories;}getSelectedClass(itemName,selectedItem){return itemName===selectedItem?'selected':'';}getCathegoryClass(index,openedCathegories){return openedCathegories[index]?'fa-angle-down':'fa-angle-right';}getDisplayNoneClearBtn(searchedText){return!searchedText?'hide':'';}getCathegoryIsOpen(index,openedCathegories){return!!openedCathegories[index];}toggleCathegory(e){const{category}=e.model.__data;const{index}=category;this.openedCathegories[index]=!this.openedCathegories[index];this.openedCathegories=[...this.openedCathegories];}searchKey(e){const{keyCode}=e;if(keyCode===KEYCODE_DOWN){const selectedIndex=this.getSelectedItemIndex();const itsNotLast=selectedIndex!==this.searchResults.length-1;const nextIndex=selectedIndex!==undefined&&itsNotLast?selectedIndex+1:0;const nextItemName=this.searchResults[nextIndex].name;this.selectedItem=nextItemName;}else if(keyCode===KEYCODE_UP){const selectedIndex=this.getSelectedItemIndex();const prevIndex=selectedIndex!==undefined&&selectedIndex!==0?selectedIndex-1:this.searchResults.length-1;const prevItemName=this.searchResults[prevIndex].name;this.selectedItem=prevItemName;}else if(keyCode===KEYCODE_ENTER){const firstItemName=this.searchResults[0].name;this.selectedItem=firstItemName;}}getSelectedItemIndex(){return this.searchResults.map((item,index)=>{if(item.name===this.selectedItem){return index;}return undefined;}).filter(i=>i!==undefined)[0];}searchUpdate(e){this.searchedText=e.target.value;}clearSearch(){this.searchedText='';this.$.search.value='';}}_exports.$docNavDefault=DocNav;customElements.define(DocNav.is,DocNav);var docNav={'default':DocNav};_exports.$docNav=docNav;class DocTopbar extends PolymerElement{connectedCallback(){super.connectedCallback();const cssHref=new URL('styles.css',document.baseURI).href;this.shadowRoot.getElementById('siteStyles').setAttribute('href',cssHref);}static get template(){return html` <link
+        id="siteStyles"
+        rel="stylesheet"
+        media="screen"
+        href=""
+        charset="utf-8"
+      />
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
+      />
 
-        </nav>
-  `;}static get is(){return'doc-nav';}static get properties(){return{items:{type:Array},selectedItem:{type:String,notify:true},searchedText:{type:String,value:''},searchResults:{type:Array,readOnly:true,computed:'computeSearchResults(items,searchedText)'},groupedOnCategories:{type:Array,readOnly:true,computed:'computeGroupedOnCategories(items)'}};}constructor(){super();this.openedCathegories=[];}computeSearchResults(cats,searchedText){if(cats&&searchedText!==undefined){const searchResults=cats.filter(cat=>{const{title,description}=cat;const lowerCaseText=searchedText.toLowerCase();const descriptionMatchesSearch=description?description.toLowerCase().indexOf(lowerCaseText)>=0:false;const titleMatchesSearch=title.toLowerCase().indexOf(lowerCaseText)>=0;return descriptionMatchesSearch||titleMatchesSearch;}).sort((a,b)=>a.itemPriority-b.itemPriority);return searchResults;}return undefined;}computeGroupedOnCategories(initialItems){const categories=initialItems.reduce((grouped,item)=>{grouped[item.primaryCategory]=grouped[item.primaryCategory]||[];grouped[item.primaryCategory].push(item);return grouped;},{});const groupedOnCategories=Object.keys(categories).map(title=>{const items=categories[title].sort((a,b)=>a.itemPriority-b.itemPriority);const priority=Math.min(...items.map(i=>i.priority));return{title,priority,items};}).sort((a,b)=>a.priority-b.priority).map((elem,index)=>Object.assign({},elem,{index}));return groupedOnCategories;}getSelectedClass(itemName,selectedItem){return itemName===selectedItem?'selected':'';}getCathegoryClass(index,openedCathegories){return openedCathegories[index]?'fa-angle-down':'fa-angle-right';}getDisplayNoneClearBtn(searchedText){return!searchedText?'hide':'';}getCathegoryIsOpen(index,openedCathegories){return!!openedCathegories[index];}toggleCathegory(e){const{category}=e.model.__data;const{index}=category;this.openedCathegories[index]=!this.openedCathegories[index];this.openedCathegories=[...this.openedCathegories];}searchKey(e){const{keyCode}=e;if(keyCode===KEYCODE_DOWN){const selectedIndex=this.getSelectedItemIndex();const itsNotLast=selectedIndex!==this.searchResults.length-1;const nextIndex=selectedIndex!==undefined&&itsNotLast?selectedIndex+1:0;const nextItemName=this.searchResults[nextIndex].name;this.selectedItem=nextItemName;}else if(keyCode===KEYCODE_UP){const selectedIndex=this.getSelectedItemIndex();const prevIndex=selectedIndex!==undefined&&selectedIndex!==0?selectedIndex-1:this.searchResults.length-1;const prevItemName=this.searchResults[prevIndex].name;this.selectedItem=prevItemName;}else if(keyCode===KEYCODE_ENTER){const firstItemName=this.searchResults[0].name;this.selectedItem=firstItemName;}}getSelectedItemIndex(){return this.searchResults.map((item,index)=>{if(item.name===this.selectedItem){return index;}return undefined;}).filter(i=>i!==undefined)[0];}searchUpdate(e){this.searchedText=e.target.value;}clearSearch(){this.searchedText='';this.$.search.value='';}}_exports.$docNavDefault=DocNav;customElements.define(DocNav.is,DocNav);var docNav={'default':DocNav};_exports.$docNav=docNav;class DocTopbar extends PolymerElement{static get template(){return html`
-    <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.1.0/css/all.css">
+      <div class="row justify-between">
+        <h1 class="m-0">
+          <a href="#" title="to index">[[title]]</a>
+        </h1>
+        <div>
+          <a
+            href="https://github.com/vcl/vcl"
+            target="_blank"
+            title="The VCL on Github"
+          >
+            <span class="icon fab fa-github fa-3x"></span>
+          </a>
+        </div>
+      </div>`;}static get is(){return'doc-topbar';}static get properties(){return{title:{type:String}};}}_exports.$docTopbarDefault=DocTopbar;customElements.define(DocTopbar.is,DocTopbar);var docTopbar={'default':DocTopbar};_exports.$docTopbar=docTopbar;class DocIndex extends PolymerElement{connectedCallback(){super.connectedCallback();const cssHref=new URL('styles.css',document.baseURI).href;this.shadowRoot.getElementById('siteStyles').setAttribute('href',cssHref);}static get template(){return html`
+      <link
+        id="siteStyles"
+        rel="stylesheet"
+        media="screen"
+        href=""
+        charset="utf-8"
+      />
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
+      />
 
-    <div  class="row justify-between">
-      <h1 class="m-0">
-        <a href="#" title="to index">[[title]]</a>
-      </h1>
-      <div>
-        <a href="https://github.com/vcl/vcl" target="_blank" title="The VCL on Github">
-          <span class="icon fab fa-github fa-3x"></span>
-        </a>
-      </div>
-    </div>`;}static get is(){return'doc-topbar';}static get properties(){return{title:{type:String}};}}_exports.$docTopbarDefault=DocTopbar;customElements.define(DocTopbar.is,DocTopbar);var docTopbar={'default':DocTopbar};_exports.$docTopbar=docTopbar;class DocIndex extends PolymerElement{static get template(){return html`
-    <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.1.0/css/all.css">
-
-      <app-location route="{{route}}" use-hash-as-path ></app-location>
-      <app-route route="{{route}}" pattern=":#page" ></app-route>
+      <app-location route="{{route}}" use-hash-as-path></app-location>
+      <app-route route="{{route}}" pattern=":#page"></app-route>
       <div class="app col">
         <header class="toolbar">
           <doc-topbar title="{{pageTitle}}"></doc-topbar>
         </header>
         <div class="content-area row flex">
-          <doc-nav class="col" items="{{navItems}}" selected-item="{{route.path}}" ></doc-nav>
+          <doc-nav
+            class="col"
+            items="{{navItems}}"
+            selected-item="{{route.path}}"
+          ></doc-nav>
           <div class="docContent scrollable flex max-h-100p" id="elements">
             <doc-content content="[[content]]"></doc-content>
           </div>
         </div>
       </div>
-      `;}static get is(){return'doc-index';}static get properties(){return{doc:{type:Object,value:doc},pageTitle:{type:String,readOnly:true,computed:'computeTitle(doc.name, doc.version)'},navItems:{type:Array,readOnly:true,computed:'computeNavItems(doc)'},content:{type:Object,readOnly:true,computed:'computeContent(doc, route.path)'}};}computeTitle(name,version){return`${name} (v${version})`;}computeContent(doc,path){if(doc&&path!==undefined){const{parts}=doc;const itemsMatchingRoute=parts.filter(part=>{const name=part.name.split('@vcl/').pop();return name===path;});const itemsDocIndex=parts.filter(part=>{return part.docgen.docIndex;});const selectedItem=itemsMatchingRoute[0]?itemsMatchingRoute[0]:itemsDocIndex[0];return selectedItem;}return undefined;}computeNavItems(doc){const{parts}=doc;const navItems=parts.map(item=>{const itemIsCollection=item.docgen.categories===undefined;const itemIsDocIndex=item.docgen.docIndex===true;if(itemIsCollection||itemIsDocIndex)return undefined;const res={title:item.title||item.name,name:item.name,description:item.description};if(item.docgen.categories&&item.docgen.categories.length>0){res.primaryCategory=item.docgen.categories[0].title;res.priority=item.docgen.categories[0].priority;res.itemPriority=item.docgen.categories[0].itemPriority||0;}return res;}).filter(part=>part);return navItems;}}_exports.$docIndexDefault=DocIndex;customElements.define(DocIndex.is,DocIndex);var docIndex={'default':DocIndex};_exports.$docIndex=docIndex;});
+    `;}static get is(){return'doc-index';}static get properties(){return{doc:{type:Object,value:doc},pageTitle:{type:String,readOnly:true,computed:'computeTitle(doc.name, doc.version)'},navItems:{type:Array,readOnly:true,computed:'computeNavItems(doc)'},content:{type:Object,readOnly:true,computed:'computeContent(doc, route.path)'}};}computeTitle(name,version){return`${name} (v${version})`;}computeContent(doc,path){if(doc&&path!==undefined){const{parts}=doc;const itemsMatchingRoute=parts.filter(part=>{const name=part.name.split('@vcl/').pop();return name===path;});const itemsDocIndex=parts.filter(part=>{return part.docgen.docIndex;});const selectedItem=itemsMatchingRoute[0]?itemsMatchingRoute[0]:itemsDocIndex[0];return selectedItem;}return undefined;}computeNavItems(doc){const{parts}=doc;const navItems=parts.map(item=>{const itemIsCollection=item.docgen.categories===undefined;const itemIsDocIndex=item.docgen.docIndex===true;if(itemIsCollection||itemIsDocIndex)return undefined;const res={title:item.title||item.name,name:item.name,description:item.description};if(item.docgen.categories&&item.docgen.categories.length>0){res.primaryCategory=item.docgen.categories[0].title;res.priority=item.docgen.categories[0].priority;res.itemPriority=item.docgen.categories[0].itemPriority||0;}return res;}).filter(part=>part);return navItems;}}_exports.$docIndexDefault=DocIndex;customElements.define(DocIndex.is,DocIndex);var docIndex={'default':DocIndex};_exports.$docIndex=docIndex;});
 </script>
 
 <doc-index></doc-index>
