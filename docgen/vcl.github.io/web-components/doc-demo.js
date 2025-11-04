@@ -25,7 +25,7 @@ export default class DocDemo extends PolymerElement {
             >
               <div class="icogram">
                 <div
-                  class="icon icon fas fa-eye"
+                  class="icon mdi mdi-eye-circle"
                   aria-hidden="true"
                   aria-label="account"
                   role="img"
@@ -40,11 +40,11 @@ export default class DocDemo extends PolymerElement {
             >
               <div class="icogram">
                 <div
-                  class="icon mdi mdi-codepen"
+                  class="icon mdi mdi-xml"
                   aria-hidden="true"
                   role="img"
                 ></div>
-                <span class="text">Edit on CodePen</span>
+                <span class="text">Code</span>
               </div>
             </div>
 
@@ -58,7 +58,7 @@ export default class DocDemo extends PolymerElement {
               <button class="button half-transparent">
                 <div class="icogram">
                   <div
-                    class="icon fab fa-codepen"
+                    class="icon mdi mdi-codepen"
                     aria-hidden="true"
                     role="img"
                   ></div>

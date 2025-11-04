@@ -15,45 +15,86 @@ export default class DocNav extends PolymerElement {
 
   static get template() {
     return html`
-    <link rel="stylesheet" href="../styles.css" media="screen" charset="utf-8">
-        <div class="form-control-group" style="margin-bottom: 0">
-          <div class="input-field no-border">
-            <div class="icon mdi mdi-magnify"></div>
-            <input
-                type="search"
-                name="search"
-                id="search"
-                on-input="searchUpdate"
-                on-keydown="searchKey"
-                placeholder="Search Components"
-                class="input searchInput"
-                value=""
-                autocomplete="off"
-                autofocus />
-            <button on-click="clearSearch" class$="button transparent square appended {{getDisplayNoneClearBtn(searchedText)}} ">
-                <div class="icogram">
-                <div class="icon mdi mdi-close-circle" aria-hidden="true" aria-label="Clear" role="img"></div>
-                </div>
-            </button>
-          </div>
+      <link
+        id="siteStyles"
+        rel="stylesheet"
+        media="screen"
+        href=""
+        charset="utf-8"
+      />
+      
+      <div class="form-control-group" style="margin-bottom: 0">
+        <div class="input-field no-border">
+          <div class="icon mdi mdi-magnify"></div>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            on-input="searchUpdate"
+            on-keydown="searchKey"
+            placeholder="Search Components"
+            class="input searchInput"
+            value=""
+            autocomplete="off"
+            autofocus
+          />
+          <button
+            on-click="clearSearch"
+            class$="button transparent square appended {{getDisplayNoneClearBtn(searchedText)}} "
+          >
+            <div class="icogram">
+              <div
+                class="icon mdi mdi-close-circle"
+                aria-hidden="true"
+                aria-label="Clear"
+                role="img"
+              ></div>
+            </div>
+          </button>
         </div>
-        <nav class="docNav navigation vertical col flex scrollable y-on-hover">
-            <template is="dom-if" if="[[!searchedText]]">
-            <ul id="nav-items">
-              <template is="dom-repeat" items="{{groupedOnCategories}}" as="category">
-
-                <li on-click="toggleCathegory" role="presentation" class="navigation-item docNavHeading" >
-                  <span class="navigation-item-label icogram" href="#">
-                    <span class$="icon mdi {{getCathegoryClass(index,openedCathegories)}}" aria-hidden="true" aria-label="angle-right" role="img"></span>
-                    <span>[[category.title]]</span>
-                  </span>
-                </li>
-                <template is="dom-if" if="[[getCathegoryIsOpen(index,openedCathegories)]]">
-                  <nav class="navigation">
-                    <div class="anim-container" >
-                      <template is="dom-repeat" items="{{category.items}}" as="item">
-                        <li class$="navigation-item docNavItem {{getSelectedClass(item.name,selectedItem)}}" role="presentation">
-                        <a class="navigation-item-label icogram"  href$="#{{item.name}}">
+      </div>
+      <nav class="docNav navigation vertical col flex scrollable y-on-hover">
+        <template is="dom-if" if="[[!searchedText]]">
+          <ul id="nav-items">
+            <template
+              is="dom-repeat"
+              items="{{groupedOnCategories}}"
+              as="category"
+            >
+              <li
+                on-click="toggleCathegory"
+                role="presentation"
+                class="navigation-item docNavHeading"
+              >
+                <span class="navigation-item-label icogram" href="#">
+                  <span
+                    class$="icon mdi {{getCathegoryClass(index,openedCathegories)}}"
+                    aria-hidden="true"
+                    aria-label="angle-right"
+                    role="img"
+                  ></span>
+                  <span>[[category.title]]</span>
+                </span>
+              </li>
+              <template
+                is="dom-if"
+                if="[[getCathegoryIsOpen(index,openedCathegories)]]"
+              >
+                <nav class="navigation">
+                  <div class="anim-container">
+                    <template
+                      is="dom-repeat"
+                      items="{{category.items}}"
+                      as="item"
+                    >
+                      <li
+                        class$="navigation-item docNavItem {{getSelectedClass(item.name,selectedItem)}}"
+                        role="presentation"
+                      >
+                        <a
+                          class="navigation-item-label icogram"
+                          href$="#{{item.name}}"
+                        >
                           <span class="text">[[item.title]]</span>
                         </a>
                       </li>
@@ -169,7 +210,9 @@ export default class DocNav extends PolymerElement {
   }
 
   getCathegoryClass(index, openedCathegories) {
-    return openedCathegories[index] ? 'mdi mdi-menu-down' : 'mdi mdi-menu-right';
+    return openedCathegories[index]
+      ? 'mdi mdi-menu-down'
+      : 'mdi mdi-menu-right';
   }
 
   getDisplayNoneClearBtn(searchedText) {

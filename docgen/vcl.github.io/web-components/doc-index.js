@@ -22,11 +22,6 @@ export default class DocIndex extends PolymerElement {
         href=""
         charset="utf-8"
       />
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
-      />
-
       <app-location route="{{route}}" use-hash-as-path></app-location>
       <app-route route="{{route}}" pattern=":#page"></app-route>
       <div class="app col">

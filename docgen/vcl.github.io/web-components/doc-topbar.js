@@ -15,21 +15,20 @@ export default class DocTopbar extends PolymerElement {
         href=""
         charset="utf-8"
       />
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
-      />
-
-    <div  class="row justify-between">
-      <h1 class="m-0">
-        <a href="#" title="to index">[[title]]</a>
-      </h1>
-      <div>
-        <a href="https://github.com/vcl/vcl" target="_blank" title="The VCL on Github">
-          <span class="icon mdi mdi-github-circle mdi-3x"></span>
-        </a>
-      </div>
-    </div>`;
+      <div class="row justify-between">
+        <h1 class="m-0">
+          <a href="#" title="to index">[[title]]</a>
+        </h1>
+        <div>
+          <a
+            href="https://github.com/vcl/vcl"
+            target="_blank"
+            title="The VCL on Github"
+          >
+            <span class="icon mdi mdi-github-circle mdi-3x"></span>
+          </a>
+        </div>
+      </div>`;
   }
 
   static get is() {

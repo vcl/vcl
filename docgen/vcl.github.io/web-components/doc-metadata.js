@@ -17,61 +17,67 @@ export default class DocMetadata extends PolymerElement {
         href=""
         charset="utf-8"
       />
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
-      />
 
-    <div class="docMetadataControls">
-    <button on-click="toggle" class="button half-transparent" type="button" name="button" title="Component information">
-      <div class="icogram">
-        <template is="dom-if" if="{{hidden}}">
-          <span class="icon mdi mdi-chevron-left"></span>
-        </template >
-        <template is="dom-if" if="{{!hidden}}">
-          <span class="icon mdi mdi-chevron-right"></span>
-        </template >
-        <span class="icon mdi mdi-information"></span>
-      </div>
-      <aside class$="data-list docMetadata {{getHidenCLass(hidden)}}">
-        <header class="data-list-header p-0">
-          <h3>Component Information</h3>
-        </header>
-        <ul class="data-list-body" role="listbox">
-          <li class="data-list-item row justify-between flex-no-wrap">
-            <div class="w-gcb gutter-margin" role="gridcell"><b>Name</b></div>
-            <div class="w-gca gutter-margin" role="gridcell">
-              [[package.name]]
-            </div>
-          </li>
-          <template is="dom-if" if="{{package.docgen}}">
-            <li class="data-list-item row justify-between flex-no-wrap">
-              <div class="w-gcb gutter-margin" role="gridcell">
-                <b>Categories</b>
-              </div>
-              <div class="w-gca gutter-margin" role="gridcell">
-                <template
-                  is="dom-repeat"
-                  items="{{package.docgen.categories}}"
-                  as="category"
-                >
-                  <span class="badge">[[category.title]]</span>
-                </template>
-              </div>
-            </li>
-          </template>
-          <template is="dom-if" if="{{false}}">
-            <li class="data-list-item row justify-between flex-no-wrap">
-              <div class="w-gcb gutter-margin" role="gridcell">
-                <b>Description</b>
-              </div>
-              <div class="w-gca gutter-margin" role="gridcell">
-                [[package.description]]
-              </div>
-            </li>
-          </template>
-        </ul>
-      </aside>`;
+      <div class="docMetadataControls">
+        <button
+          on-click="toggle"
+          class="button half-transparent"
+          type="button"
+          name="button"
+          title="Component information"
+        >
+          <div class="icogram">
+            <template is="dom-if" if="{{hidden}}">
+              <span class="icon mdi mdi-chevron-left"></span>
+            </template>
+            <template is="dom-if" if="{{!hidden}}">
+              <span class="icon mdi mdi-chevron-right"></span>
+            </template>
+            <span class="icon mdi mdi-information"></span>
+          </div>
+          <aside class$="data-list docMetadata {{getHidenCLass(hidden)}}">
+            <header class="data-list-header p-0">
+              <h3>Component Information</h3>
+            </header>
+            <ul class="data-list-body" role="listbox">
+              <li class="data-list-item row justify-between flex-no-wrap">
+                <div class="w-gcb gutter-margin" role="gridcell">
+                  <b>Name</b>
+                </div>
+                <div class="w-gca gutter-margin" role="gridcell">
+                  [[package.name]]
+                </div>
+              </li>
+              <template is="dom-if" if="{{package.docgen}}">
+                <li class="data-list-item row justify-between flex-no-wrap">
+                  <div class="w-gcb gutter-margin" role="gridcell">
+                    <b>Categories</b>
+                  </div>
+                  <div class="w-gca gutter-margin" role="gridcell">
+                    <template
+                      is="dom-repeat"
+                      items="{{package.docgen.categories}}"
+                      as="category"
+                    >
+                      <span class="badge">[[category.title]]</span>
+                    </template>
+                  </div>
+                </li>
+              </template>
+              <template is="dom-if" if="{{false}}">
+                <li class="data-list-item row justify-between flex-no-wrap">
+                  <div class="w-gcb gutter-margin" role="gridcell">
+                    <b>Description</b>
+                  </div>
+                  <div class="w-gca gutter-margin" role="gridcell">
+                    [[package.description]]
+                  </div>
+                </li>
+              </template>
+            </ul>
+          </aside>
+        </button>
+      </div>`;
   }
 
   static get is() {
