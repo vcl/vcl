@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - master
-      - dev
-      - staged
 
 jobs:
   build:
@@ -12,11 +10,7 @@ jobs:
     environment: github-pages
     strategy:
       matrix:
-<<<<<<< HEAD
-        node-version: [22.x]
-=======
         node-version: [24.x]
->>>>>>> dev
 
     steps:
       - uses: actions/checkout@v1
