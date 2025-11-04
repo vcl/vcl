@@ -15,10 +15,6 @@ export default class DocDemo extends PolymerElement {
         href=""
         charset="utf-8"
       />
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
-      />
       <div id="docDemo">
         <div class="tabbable">
           <div class="tabs tab-style-uni" role="tablist">
@@ -43,7 +39,11 @@ export default class DocDemo extends PolymerElement {
               role="tab"
             >
               <div class="icogram">
-                <div class="icon mdi mdi-codepen" aria-hidden="true" role="img"></div>
+                <div
+                  class="icon mdi mdi-codepen"
+                  aria-hidden="true"
+                  role="img"
+                ></div>
                 <span class="text">Edit on CodePen</span>
               </div>
             </div>
