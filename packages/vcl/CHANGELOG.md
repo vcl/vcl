@@ -13,7 +13,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-
 # [3.2.0](https://github.com/vcl/vcl/compare/v3.0.0...v3.2.0) (2024-07-13)
 
 

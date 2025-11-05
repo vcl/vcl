@@ -213,7 +213,9 @@ export default class DocNav extends PolymerElement {
   }
 
   getCathegoryClass(index, openedCathegories) {
-    return openedCathegories[index] ? 'mdi mdi-menu-down' : 'mdi mdi-menu-right';
+    return openedCathegories[index]
+      ? 'mdi mdi-menu-down'
+      : 'mdi mdi-menu-right';
   }
 
   getDisplayNoneClearBtn(searchedText) {

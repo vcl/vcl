@@ -15,7 +15,6 @@ export default class DocDemo extends PolymerElement {
         href=""
         charset="utf-8"
       />
-
       <div id="docDemo">
         <div class="tabbable">
           <div class="tabs tab-style-uni" role="tablist">
