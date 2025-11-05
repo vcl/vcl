@@ -19,10 +19,6 @@ export default class DocContent extends PolymerElement {
         href=""
         charset="utf-8"
       />
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
-      />
 
       <div class$="docPart row {{getContentClass(hasContent)}}">
         <div class="flex">

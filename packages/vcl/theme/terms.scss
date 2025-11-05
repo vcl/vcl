@@ -8,8 +8,6 @@
  * stipulations like a color palette in a style guide.
  */
 
- @use "sass:color";
- 
 /* Colors */
 $black: black !default;
 $white: white !default;
@@ -63,11 +61,7 @@ $primary-dark-color: $black !default;
 $primary-medium-color: $gray-dark-2 !default;
 $primary-light-color: $white !default;
 
-<<<<<<< HEAD
-$success-dark-color: color.adjust($brand-success, $lightness: -25%) !default;
-=======
 $success-dark-color:  color.adjust($brand-success, $lightness: -25%) !default;
->>>>>>> 2201813c (feat: upgrade deps, initial support for a dark mode)
 $success-medium-color: $brand-success !default;
 $success-light-color: color.adjust($brand-success, $lightness: 30%) !default;
 
@@ -86,14 +80,11 @@ $error-light-color: color.adjust($brand-danger, $lightness: 30%) !default;
 $danger-dark-color: color.adjust($brand-danger, $lightness: -25%) !default;
 $danger-medium-color: $brand-danger !default;
 $danger-light-color: color.adjust($brand-danger, $lightness: 30%) !default;
-<<<<<<< HEAD
-=======
 
 $navigation-heading-color: $font-color-theme !default;
 $navigation-item-1st-level-color: $font-color-theme !default;
 $navigation-item-disabled-color: color.adjust($font-color-theme, $lightness: -40%) !default;
 $navigation-item-1st-level-selected-bg-color: if($theme-dark, $gray-dark-3, $gray-light-3) !default;
->>>>>>> 2201813c (feat: upgrade deps, initial support for a dark mode)
 
 /* Fonts
  * ===== */

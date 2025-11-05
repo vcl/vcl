@@ -17,10 +17,6 @@ export default class DocMetadata extends PolymerElement {
         href=""
         charset="utf-8"
       />
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
-      />
 
       <div class="docMetadataControls">
         <button
@@ -32,12 +28,12 @@ export default class DocMetadata extends PolymerElement {
         >
           <div class="icogram">
             <template is="dom-if" if="{{hidden}}">
-              <span class="icon fas fa-chevron-left"></span>
+              <span class="icon mdi mdi-chevron-left"></span>
             </template>
             <template is="dom-if" if="{{!hidden}}">
-              <span class="icon fas fa-chevron-right"></span>
+              <span class="icon mdi mdi-chevron-right"></span>
             </template>
-            <span class="icon fas fa-info"></span>
+            <span class="icon mdi mdi-information"></span>
           </div>
         </button>
       </div>

@@ -15,10 +15,6 @@ export default class DocTopbar extends PolymerElement {
         href=""
         charset="utf-8"
       />
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
-      />
 
       <div class="row justify-between">
         <h1 class="m-0">
@@ -30,7 +26,7 @@ export default class DocTopbar extends PolymerElement {
             target="_blank"
             title="The VCL on Github"
           >
-            <span class="icon fab fa-github fa-3x"></span>
+            <span class="icon mdi mdi-github-circle mdi-3x"></span>
           </a>
         </div>
       </div>`;

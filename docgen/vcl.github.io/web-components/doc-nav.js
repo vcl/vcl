@@ -28,7 +28,7 @@ export default class DocNav extends PolymerElement {
       />
       <div class="form-control-group" style="margin-bottom: 0">
         <div class="input-field no-border">
-          <div class="icon fas fa-search"></div>
+          <div class="icon mdi mdi-magnify"></div>
           <input
             type="search"
             name="search"
@@ -47,7 +47,7 @@ export default class DocNav extends PolymerElement {
           >
             <div class="icogram">
               <div
-                class="icon fas fa-times-circle"
+                class="icon mdi mdi-close-circle"
                 aria-hidden="true"
                 aria-label="Clear"
                 role="img"
@@ -71,7 +71,7 @@ export default class DocNav extends PolymerElement {
               >
                 <span class="navigation-item-label icogram" href="#">
                   <span
-                    class$="icon fas {{getCathegoryClass(index,openedCathegories)}}"
+                    class$="icon {{getCathegoryClass(index,openedCathegories)}}"
                     aria-hidden="true"
                     aria-label="angle-right"
                     role="img"

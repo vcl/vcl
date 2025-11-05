@@ -66,64 +66,7 @@ if (!fs.existsSync(outputFolder)) {
 }
 
 const sassOptions = {
-<<<<<<< HEAD
-  includePaths: [baseModuleFolder],
-  silenceDeprecations: ['legacy-js-api'],
-  importer: (url, prev, done) => {
-    if (url[0] === '~') {
-      url = path.resolve(process.cwd(), 'node_modules', url.substr(1));
-    }
-
-    return { file: url };
-  },
-};
-
-const render = (data) => {
-  return new Promise((resolve, reject) => {
-    sass.render(
-      {
-        data,
-        ...sassOptions,
-      },
-      function (error, result) {
-        try {
-          if (!error) {
-            resolve(result);
-          } else {
-            console.error(error);
-            reject(error);
-          }
-        } catch (ex) {
-          console.error(ex);
-          reject(ex);
-        }
-      }
-    );
-  });
-};
-
-(async () => {
-  try {
-    await new Promise((resolve, reject) => {
-      sass.render(
-        {
-          file: 'styles.scss',
-          sourceMap: false,
-          ...sassOptions,
-        },
-        (err, result) => {
-          if (err) {
-            console.error(err);
-            reject(err);
-          } else {
-            fs.writeFileSync('styles.css', result.css);
-            resolve();
-          }
-        }
-      );
-    });
-=======
-  style: "expanded",
+  style: 'expanded',
   loadPaths: [baseModuleFolder, path.resolve(process.cwd(), 'node_modules')],
 };
 
@@ -149,7 +92,6 @@ const render = (dataOrFile) => {
     // Compile from file and write CSS as string
     const result = sass.compile('styles.scss', sassOptions);
     fs.writeFileSync('styles.css', result.css);
->>>>>>> 2201813c (feat: upgrade deps, initial support for a dark mode)
 
     debug('using module folder', baseModuleFolder);
 
@@ -338,20 +280,11 @@ async function renderPart(docPart) {
   docPart.title = capitalize(docPart.name);
 
   if (docPart.styleFile) {
-<<<<<<< HEAD
-    const data = `@import "${docPart.name}/${docPart.styleFile}";`;
-=======
-
     // const data = `@import "${docPart.name}/${docPart.styleFile}";`;
->>>>>>> 2201813c (feat: upgrade deps, initial support for a dark mode)
-
     // debug('preprocessing %s with import %s', docPart.name);
-
     // debug(data);
     // console.log(data)
-
     // const result = await render(data);
-
     // docPart.style = result.css.toString() || '';
   } else if (!docPart.styleFile) {
     docPart.style = '';

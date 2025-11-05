@@ -15,10 +15,7 @@ export default class DocDemo extends PolymerElement {
         href=""
         charset="utf-8"
       />
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
-      />
+
       <div id="docDemo">
         <div class="tabbable">
           <div class="tabs tab-style-uni" role="tablist">
@@ -29,7 +26,7 @@ export default class DocDemo extends PolymerElement {
             >
               <div class="icogram">
                 <div
-                  class="icon icon fas fa-eye"
+                  class="icon mdi mdi-eye"
                   aria-hidden="true"
                   aria-label="account"
                   role="img"
@@ -44,7 +41,7 @@ export default class DocDemo extends PolymerElement {
             >
               <div class="icogram">
                 <div
-                  class="icon icon fas fa-code"
+                  class="icon mdi mdi-code-tags"
                   aria-hidden="true"
                   aria-label="account"
                   role="img"
@@ -63,7 +60,7 @@ export default class DocDemo extends PolymerElement {
               <button class="button half-transparent">
                 <div class="icogram">
                   <div
-                    class="icon fab fa-codepen"
+                    class="icon mdi mdi-codepen"
                     aria-hidden="true"
                     role="img"
                   ></div>
