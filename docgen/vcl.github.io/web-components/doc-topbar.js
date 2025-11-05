@@ -6,17 +6,6 @@ export default class DocTopbar extends PolymerElement {
     const cssHref = new URL('styles.css', document.baseURI).href;
     this.shadowRoot.getElementById('siteStyles').setAttribute('href', cssHref);
   }
-<<<<<<< HEAD
-
-  static get template() {
-    return html` <link
-        id="siteStyles"
-        rel="stylesheet"
-        media="screen"
-        href=""
-        charset="utf-8"
-      />
-=======
 
   static get template() {
     return html` <link
@@ -27,7 +16,6 @@ export default class DocTopbar extends PolymerElement {
         charset="utf-8"
       />
 
->>>>>>> master
       <div class="row justify-between">
         <h1 class="m-0">
           <a href="#" title="to index">[[title]]</a>
