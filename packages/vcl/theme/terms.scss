@@ -7,7 +7,6 @@
  * Typically these terms are derived from CI or design
  * stipulations like a color palette in a style guide.
  */
- 
 /* Colors */
 $black: black !default;
 $white: white !default;
@@ -61,7 +60,7 @@ $primary-dark-color: $black !default;
 $primary-medium-color: $gray-dark-2 !default;
 $primary-light-color: $white !default;
 
-$success-dark-color: color.adjust($brand-success, $lightness: -25%) !default;
+$success-dark-color:  color.adjust($brand-success, $lightness: -25%) !default;
 $success-medium-color: $brand-success !default;
 $success-light-color: color.adjust($brand-success, $lightness: 30%) !default;
 

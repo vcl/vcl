@@ -11,19 +11,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * upgrade deps, initial support for a dark mode ([2201813](https://github.com/vcl/vcl/commit/2201813c75819a6862b2addfc2baac2b8f14f820))
 
 
-
-## [3.2.1](https://github.com/vcl/vcl/compare/v3.2.0...v3.2.1) (2024-09-23)
-
-
-### Bug Fixes
-
-* correct current verion ([49ba919](https://github.com/vcl/vcl/commit/49ba91964b01c2fbc26d1736d43200571410172c))
-* **input:** use min-height instead of height ([fbf5bef](https://github.com/vcl/vcl/commit/fbf5bef1017121dea1cafbc6a2ff0a603db2ae71))
-* remove exess folder ([1945f58](https://github.com/vcl/vcl/commit/1945f58491af1ce6ef76ecc7aa514ac223363632))
-* rewrite lock files ([2f7a9b5](https://github.com/vcl/vcl/commit/2f7a9b5feecc26f09e4eed55b2d724a2c3c44c6b))
-* rewrite styles.css path for GH pages deployment ([bd63419](https://github.com/vcl/vcl/commit/bd634192462a5973d397c7212871376e34961af8))
-
-
 # [3.2.0](https://github.com/vcl/vcl/compare/v3.0.0...v3.2.0) (2024-07-13)
 
 

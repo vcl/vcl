@@ -66,7 +66,7 @@ if (!fs.existsSync(outputFolder)) {
 }
 
 const sassOptions = {
-  style: "expanded",
+  style: 'expanded',
   loadPaths: [baseModuleFolder, path.resolve(process.cwd(), 'node_modules')],
 };
 
@@ -280,16 +280,11 @@ async function renderPart(docPart) {
   docPart.title = capitalize(docPart.name);
 
   if (docPart.styleFile) {
-
     // const data = `@import "${docPart.name}/${docPart.styleFile}";`;
-
     // debug('preprocessing %s with import %s', docPart.name);
-
     // debug(data);
     // console.log(data)
-
     // const result = await render(data);
-
     // docPart.style = result.css.toString() || '';
   } else if (!docPart.styleFile) {
     docPart.style = '';

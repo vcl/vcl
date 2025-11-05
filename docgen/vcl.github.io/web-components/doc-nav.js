@@ -22,7 +22,14 @@ export default class DocNav extends PolymerElement {
         href=""
         charset="utf-8"
       />
+<<<<<<< HEAD
       
+=======
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v7.1.0/css/all.css"
+      />
+>>>>>>> master
       <div class="form-control-group" style="margin-bottom: 0">
         <div class="input-field no-border">
           <div class="icon mdi mdi-magnify"></div>
@@ -68,7 +75,11 @@ export default class DocNav extends PolymerElement {
               >
                 <span class="navigation-item-label icogram" href="#">
                   <span
+<<<<<<< HEAD
                     class$="icon mdi {{getCathegoryClass(index,openedCathegories)}}"
+=======
+                    class$="icon {{getCathegoryClass(index,openedCathegories)}}"
+>>>>>>> master
                     aria-hidden="true"
                     aria-label="angle-right"
                     role="img"

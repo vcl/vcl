@@ -23,7 +23,8 @@
 @use "typography";
 @use "utils";
 
-@use '@mdi/font/scss/materialdesignicons' with (
+
+@use '@mdi/font/scss/materialdesignicons.scss' with (
   $mdi-font-path: 'fonts'
 );
 
