@@ -70,23 +70,6 @@ const sassOptions = {
   loadPaths: [baseModuleFolder, path.resolve(process.cwd(), 'node_modules')],
 };
 
-const render = (dataOrFile) => {
-  try {
-    if (fs.existsSync(dataOrFile)) {
-      // Compile from file
-      const result = sass.compile(dataOrFile, sassOptions);
-      return result;
-    } else {
-      // Compile from string
-      const result = sass.compileString(dataOrFile, sassOptions);
-      return result;
-    }
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
-};
-
 (async () => {
   try {
     // Compile from file and write CSS as string
@@ -280,12 +263,11 @@ async function renderPart(docPart) {
   docPart.title = capitalize(docPart.name);
 
   if (docPart.styleFile) {
-    // const data = `@import "${docPart.name}/${docPart.styleFile}";`;
-    // debug('preprocessing %s with import %s', docPart.name);
-    // debug(data);
-    // console.log(data)
-    // const result = await render(data);
-    // docPart.style = result.css.toString() || '';
+    const data = `@use "${docPart.name}/${docPart.styleFile}";`;
+    debug('preprocessing %s with import %s', docPart.name);
+    debug(data);
+    const result = sass.compileString(data, sassOptions);
+    docPart.style = result.css.toString() || '';
   } else if (!docPart.styleFile) {
     docPart.style = '';
   }
