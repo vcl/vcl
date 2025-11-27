@@ -2365,7 +2365,7 @@ textarea::placeholder,
   list-style: none;
 }
 .navigation .navigation-heading, .navigation .navigation-heading:hover {
-  color: black;
+  color: rgb(38, 38, 38);
   background-color: transparent;
   padding: 0.85em 1em;
   overflow: hidden;
@@ -2380,7 +2380,7 @@ textarea::placeholder,
   outline: 0;
 }
 .navigation .navigation-item.disabled .navigation-item-label, .navigation .navigation-item:hover.disabled .navigation-item-label, .navigation .navigation-item:active.disabled .navigation-item-label {
-  color: hsl(0, 0%, -40%);
+  color: rgb(185, 185, 185);
   background-color: transparent;
   cursor: default;
 }
@@ -2422,7 +2422,7 @@ textarea::placeholder,
 }
 
 .navigation .navigation-item {
-  color: black;
+  color: rgb(38, 38, 38);
   background-color: transparent;
 }
 .navigation .navigation-item:focus-visible > .navigation-item-label {
@@ -2435,7 +2435,7 @@ textarea::placeholder,
 }
 .navigation .navigation-item.selected > .navigation-item-label {
   color: white;
-  background-color: rgb(221, 221, 221);
+  background-color: #00adef;
 }
 
 .notification {
