@@ -1,47 +1,46 @@
 <body class="viewport">
   <div class="app">
-    <header class="application-header row center justify-between">
-      <div role="banner">
+    <header class="application-header row center justify-between" role="banner">
+      <div>
         <a href="#" class="row center">
-          <img class="responsive-image logo" role="presentation" src="https://cdn.jsdelivr.net/gh/vcl/vcl/gfx/vcl_logo_square-bw.svg">
+          <img class="responsive-image logo" role="presentation" src="https://cdn.jsdelivr.net/gh/vcl/vcl/gfx/vcl_logo_square-bw.svg" alt="">
           <h1 class="app-name">Visual Component Library</h1>
         </a>
       </div>
-      <nav>
+      <nav role="navigation" aria-label="Main navigation">
         <div>
           Navigation area
         </div>
       </nav>
     </header>
-    <section class="content-area" role="main">
+    <section class="content-area" role="main" aria-label="Main content">
       <br>
       Main content area
       <br>
       <br>
     </section>
     <footer class="application-footer" role="contentinfo">
-      <div class="list list-custom-bullets list-horizontal" role="list">
-        <div class="list-item icogram" role="listitem">
+      <ul class="list list-custom-bullets list-horizontal">
+        <li class="list-item icogram">
           <div class="icon square mdi mdi-office-building" role="presentation"></div>
           <span class="text">Company Name</span>
-        </div>
-        <div class="list-separator" role="separator">|</div>
-        <div class="list-item icogram" role="listitem">
+        </li>
+        <li class="list-separator" role="separator">|</li>
+        <li class="list-item icogram">
           <div class="icon square mdi mdi-map-marker" role="presentation"></div>
           <span class="text">Location</span>
-        </div>
-        <div class="list-separator" role="separator">|</div>
-        <div class="list-item icogram" role="listitem">
+        </li>
+        <li class="list-separator" role="separator">|</li>
+        <li class="list-item icogram">
           <div class="icon square mdi mdi-email" role="presentation"></div>
           <span class="text">mail@company.com</span>
-        </div>
-        <div class="list-separator" role="separator">|</div>
-        <div class="list-item icogram" role="listitem">
+        </li>
+        <li class="list-separator" role="separator">|</li>
+        <li class="list-item icogram">
           <div class="icon square mdi mdi-link" role="presentation"></div>
           <span class="text">www.company.com</span>
-        </div>
-      </div>
+        </li>
+      </ul>
     </footer>
-    
   </div>
 </body>

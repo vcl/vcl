@@ -1,11 +1,11 @@
 <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
 
-<nav class="self-center">
+<nav class="self-center" aria-label="Pagination">
   <ul class="pagination">
     <li>
-      <button class="button transparent square" disabled="disabled">
+      <button class="button transparent square" disabled aria-label="Previous page">
         <div class="icogram">
-          <div class="icon mdi mdi-chevron-left" aria-hidden="true" aria-label="Previous page" role="img"></div>
+          <div class="icon mdi mdi-chevron-left" role="img"></div>
         </div>
       </button>
     </li>
@@ -13,7 +13,7 @@
       <a href="#" class="button transparent">1</a>
     </li>
     <li class="selected">
-     <div class="button-dim row align-items-center">2</div>
+      <button class="button-dim row align-items-center" aria-current="page">2</button>
     </li>
     <li>
       <a href="#" class="button transparent">3</a>
